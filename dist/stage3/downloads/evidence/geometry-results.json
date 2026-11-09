@@ -1,0 +1,67 @@
+{
+  "stage": 3,
+  "date": "2026-11-09",
+  "testCount": 54,
+  "clearance": 0.2,
+  "experiment": {
+    "size": "ring1",
+    "method": "cooperative"
+  },
+  "allProfilesPassed": true,
+  "transitions": [
+    {
+      "from": "A",
+      "to": "B",
+      "ok": true,
+      "stages": 13,
+      "checks": 1063,
+      "maxConcurrent": 3,
+      "duration": 17.266666666666666,
+      "clearance": 0.2,
+      "area": 1381.1200000000001,
+      "areaRatio": 1.6774193548387095,
+      "height": 18.8,
+      "decks": 1,
+      "emptyDockTransfers": 0,
+      "errors": []
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "ok": true,
+      "stages": 34,
+      "checks": 2749,
+      "maxConcurrent": 3,
+      "duration": 34.333333333333336,
+      "clearance": 0.2,
+      "area": 1381.1200000000001,
+      "areaRatio": 1.6774193548387095,
+      "height": 18.8,
+      "decks": 1,
+      "emptyDockTransfers": 1,
+      "errors": []
+    },
+    {
+      "from": "C",
+      "to": "A",
+      "ok": true,
+      "stages": 14,
+      "checks": 958,
+      "maxConcurrent": 4,
+      "duration": 17.333333333333332,
+      "clearance": 0.2,
+      "area": 1381.1200000000001,
+      "areaRatio": 1.6774193548387095,
+      "height": 18.8,
+      "decks": 1,
+      "emptyDockTransfers": 1,
+      "errors": []
+    }
+  ],
+  "browserQA": {
+    "verified": false,
+    "blocker": "sites-preview relay could not open browser port 4173: timed out waiting for relay readiness",
+    "status": "Sites preview stopped",
+    "meshQA": "CPU Three.js actual mesh bounds and ray intersection tests, not GPU visual playtesting"
+  }
+}

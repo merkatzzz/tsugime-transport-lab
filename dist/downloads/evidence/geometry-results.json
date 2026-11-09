@@ -1,57 +1,50 @@
 {
-  "stage": 3,
-  "date": "2026-11-09",
-  "testCount": 54,
-  "clearance": 0.2,
-  "experiment": {
-    "size": "ring1",
-    "method": "cooperative"
-  },
+  "stage": 4,
+  "bodies": 16,
+  "cells": 23,
+  "levels": [
+    0,
+    12.8
+  ],
   "allProfilesPassed": true,
-  "transitions": [
+  "adopted": [
     {
-      "from": "A",
-      "to": "B",
       "ok": true,
-      "stages": 13,
-      "checks": 1063,
-      "maxConcurrent": 3,
-      "duration": 17.266666666666666,
+      "stages": 21,
+      "checks": 2573,
+      "maxConcurrent": 4,
+      "duration": 23.366666666666667,
       "clearance": 0.2,
-      "area": 1381.1200000000001,
-      "areaRatio": 1.6774193548387095,
+      "area": 2778.88,
+      "areaRatio": 2.241032258064516,
       "height": 18.8,
       "decks": 1,
       "emptyDockTransfers": 0,
       "errors": []
     },
     {
-      "from": "B",
-      "to": "C",
       "ok": true,
-      "stages": 34,
-      "checks": 2749,
-      "maxConcurrent": 3,
+      "stages": 50,
+      "checks": 6267,
+      "maxConcurrent": 6,
       "duration": 34.333333333333336,
       "clearance": 0.2,
-      "area": 1381.1200000000001,
-      "areaRatio": 1.6774193548387095,
+      "area": 2778.88,
+      "areaRatio": 2.241032258064516,
       "height": 18.8,
       "decks": 1,
       "emptyDockTransfers": 1,
       "errors": []
     },
     {
-      "from": "C",
-      "to": "A",
       "ok": true,
-      "stages": 14,
-      "checks": 958,
-      "maxConcurrent": 4,
+      "stages": 19,
+      "checks": 1848,
+      "maxConcurrent": 6,
       "duration": 17.333333333333332,
       "clearance": 0.2,
-      "area": 1381.1200000000001,
-      "areaRatio": 1.6774193548387095,
+      "area": 2778.88,
+      "areaRatio": 2.241032258064516,
       "height": 18.8,
       "decks": 1,
       "emptyDockTransfers": 1,
@@ -60,8 +53,8 @@
   ],
   "browserQA": {
     "verified": false,
-    "blocker": "sites-preview relay could not open browser port 4173: timed out waiting for relay readiness",
-    "status": "Sites preview stopped",
-    "meshQA": "CPU Three.js actual mesh bounds and ray intersection tests, not GPU visual playtesting"
-  }
+    "blocker": "sites-preview: relay could not open browser port 4173: timed out waiting for relay readiness",
+    "audioHeard": false
+  },
+  "checks": "CPU real meshes, body controller routes, camera head visibility, continuous swept boxes. GPU and audible output unverified."
 }

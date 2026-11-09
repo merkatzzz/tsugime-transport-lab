@@ -1,7 +1,7 @@
 // Geometry conventions: east +X, south +Z, vertical +Y. Port intervals increase in X for N/S and Z for E/W.
 export const CELL=8,HEIGHT=6,DECK=6.4,LEVELS=[0,12.8],RADIUS=.35,CLEAR_WIDTH=.82,CLEARANCE=.2,EYE=1.81,WALK_SPEED=3.6,RUN_SPEED=5.2;
-export const LIFE_BOUNDS={x:0,z:0,w:33.2,d:24.8};
-export const SIZES={same:{label:'同程度',w:33.2,d:24.8},ring1:{label:'一回り',w:41.6,d:33.2},ring2:{label:'二回り',w:50,d:41.6}};
+export const LIFE_BOUNDS={x:0,z:0,w:50,d:24.8};
+export const SIZES={same:{label:'拡張・基本搬送域',w:58.4,d:33.2},ring1:{label:'拡張・一回り',w:66.8,d:41.6},ring2:{label:'拡張・二回り',w:75.2,d:50}};
 export const METHODS={serial:'空欄を再利用・順次',cooperative:'予約付き協調搬送'};
 export const DEFAULT_EXPERIMENT={size:'ring1',method:'cooperative'},NEXT={A:'B',B:'C',C:'A'};
 export const levelsFor=()=>LEVELS,decksFor=()=>[DECK],LANDING={x:-2.4,z:2,w:2,d:4},SHAFT={x:-6.8,z:1.8,w:4.4,d:4.4};
@@ -40,11 +40,18 @@ export const BODIES=[
  {id:'C0',name:'予備T字廊下・近道',use:'corridor',color:'#b7b56b',cells:[[0,0]],ceiling:2.4,
   ports:[port('W','W',3,5,2.2),port('E','E',3,5,2.2),port('S','S',3,5,2.2)],walls:[],doors:[],solids:[box(0,0,8,3,2.4,'concrete'),box(0,5,3,3,2.4,'concrete'),box(5,5,3,3,2.4,'concrete')],furniture:[],labels:[room('近道 C0',4,4)],roofAreas:[roof(0,0,8,8,2.4)]}
 ];
+// Four new one-cell bodies; each keeps its own room and bent entrance with it.
+for(const [id,name,color]of[['E1','東翼・個室401','#9aa58c'],['E2','東翼・読書室','#a8a08c'],['E3','東翼・個室402','#8da7a0'],['E4','東翼・作業室','#9b9eae']])BODIES.push({id,name,use:'residential',color,cells:[[0,0]],ceiling:2.7,ports:[port('W','W',3,5,2.3),port('E','E',3,5,2.3)],walls:[line([0,2.7],[4.5,2.7]),line([5.7,2.7],[8,2.7]),line([1.8,5.8],[4,7.2])],doors:[{id:id+'-door',a:[4.5,2.7],b:[5.7,2.7],open:false,label:name}],solids:[box(0,5.1,1.6,2.9,2.7,'concrete'),box(6,6,2,2,2.7,'concrete')],furniture:[box(.5,.5,1.4,1.8,.5),box(6.5,.4,1,.8,.9)],labels:[room(name,4,1.4),room('東翼通路',4,4.2)],roofAreas:[roof(0,0,8,2.7,2.7),roof(0,2.7,8,5.3,2.35)]});
+// Narrow visible booth opening: 0.50m < player's 0.70m diameter.
+const booth=BODIES.find(b=>b.id==='R3');
+booth.walls.push(line([2.8,5],[2.8,5.9]),line([2.8,6.4],[2.8,7.1]));
+booth.furniture.push(box(.4,6.85,2.2,.2,1.2));
+booth.labels.push(room('簡易個室・住人',1.5,6.2));
 export const BY_ID=Object.fromEntries(BODIES.map(b=>[b.id,b]));
 export const PHASES={A:{label:'密集建築・住戸から店舗へ迂回'},B:{label:'予備廊下C0を挿入・近道と環状路'},C:{label:'近道を撤収・別の南北経路へ'}};
 const dock=(x,z,level)=>({x:x*8.4,z:z*8.4,y:LEVELS[level]});
-export const storageFor=e=>e?.size==='same'?{x:25.2,y:DECK,z:16.8}:{x:33.6,y:DECK,z:0};
-export function placements(phase,e=DEFAULT_EXPERIMENT){const p={R1:dock(0,0,1),R2:dock(1,phase==='B'?2:0,1),R3:dock(0,phase==='C'?1:2,1),R4:dock(0,0,0),T1:dock(2,0,1),T2:dock(2,0,0),H1:phase==='B'?dock(0,1,0):dock(2,1,1),L1:phase==='B'?dock(2,1,1):dock(phase==='C'?1:2,1,0),J1:dock(0,phase==='C'?2:1,1),J2:dock(1,1,1),J3:phase==='C'?dock(0,1,0):dock(1,0,0),C0:phase==='B'?dock(1,0,1):storageFor(e)};return p;}
+export const storageFor=e=>({x:50.4,y:DECK,z:0});
+export function placements(phase,e=DEFAULT_EXPERIMENT){const p={R1:dock(0,0,1),R2:dock(1,phase==='B'?2:0,1),R3:dock(0,phase==='C'?1:2,1),R4:dock(0,0,0),T1:dock(2,0,1),T2:dock(2,0,0),H1:phase==='B'?dock(0,1,0):dock(2,1,1),L1:phase==='B'?dock(2,1,1):dock(phase==='C'?1:2,1,0),J1:dock(0,phase==='C'?2:1,1),J2:dock(1,1,1),J3:phase==='C'?dock(0,1,0):dock(1,0,0),C0:phase==='B'?dock(1,0,1):storageFor(e)};p.E1=dock(4,0,phase==='B'?0:1);p.E3=dock(4,0,phase==='B'?1:0);p.E2=dock(5,0,phase==='C'?0:1);p.E4=dock(5,0,phase==='C'?1:0);return p;}
 export const POINTS={home:{body:'R1',x:4,z:1.6,name:'住戸301'},shop:{body:'T1',x:7.2,z:5.4,name:'生活用品店'}};
 export const footprint=b=>({w:(Math.max(...b.cells.map(c=>c[0]))+1)*8,d:(Math.max(...b.cells.map(c=>c[1]))+1)*8});
 export const insideBody=(b,x,z)=>b.cells.some(([cx,cz])=>x>=cx*8-1e-8&&x<=cx*8+8+1e-8&&z>=cz*8-1e-8&&z<=cz*8+8+1e-8);
@@ -72,4 +79,4 @@ export const reachableBodies=(phase,e,doors)=>new Set([...reachable(phase,e,door
 export const isolated=(phase,e,doors)=>BODIES.filter(b=>LEVELS.some(y=>Math.abs(placements(phase,e)[b.id].y-y)<.01)&&!reachableBodies(phase,e,doors).has(b.id)).map(b=>b.id);
 export function portStates(phase,e,doors){const links=connections(phase,e,doors);return worldPorts(phase,e,doors).map(p=>{const matches=links.filter(c=>`${c.bodyA}:${c.portA}`===p.key||`${c.bodyB}:${c.portB}`===p.key),origin=p.start-p.a,openings=matches.filter(c=>c.status!=='blocked').map(c=>({a:c.start-origin,b:c.end-origin,height:c.height,status:c.status,id:c.id})).sort((a,b)=>a.a-b.a),masked=[];let at=p.a;for(const q of[...openings,{a:p.b,b:p.b}]){if(q.a>at+1e-7)masked.push({a:at,b:q.a});at=Math.max(at,q.b);}return {...p,status:matches.some(c=>c.status==='pass')?'pass':matches.some(c=>c.status==='view')?'view':'blocked',matches,openings,masked};});}
 export function emptyDocks(phase,e){const pos=placements(phase,e),out=[];for(const y of LEVELS){const cells=BODIES.filter(b=>Math.abs(pos[b.id].y-y)<.01).flatMap(b=>b.cells.map(([x,z])=>({x:pos[b.id].x+x*8,z:pos[b.id].z+z*8,w:8,d:8}))),xs=[...new Set([0,LIFE_BOUNDS.w,...cells.flatMap(c=>[c.x,c.x+c.w])])].sort((a,b)=>a-b),zs=[...new Set([0,LIFE_BOUNDS.d,...cells.flatMap(c=>[c.z,c.z+c.d])])].sort((a,b)=>a-b);for(let i=0;i<xs.length-1;i++)for(let j=0;j<zs.length-1;j++){const x=xs[i],z=zs[j],w=xs[i+1]-x,d=zs[j+1]-z;if(w<1e-6||d<1e-6)continue;if(!cells.some(c=>x+w/2>c.x&&x+w/2<c.x+c.w&&z+d/2>c.z&&z+d/2<c.z+c.d))out.push({x,y,z,w,d,floor:false,kind:Math.min(w,d)<.9?'mechanical-clearance':'empty-dock'});}}return out;}
-export function emptyDockCells(phase,e){const p=placements(phase,e),out=[];for(const y of LEVELS)for(let z=0;z<3;z++)for(let x=0;x<4;x++)if(!BODIES.some(b=>Math.abs(p[b.id].y-y)<.01&&insideBody(b,x*8.4+4-p[b.id].x,z*8.4+4-p[b.id].z)))out.push({col:x,row:z,x:x*8.4,z:z*8.4,y,w:8,d:8,floor:false});return out;}
+export function emptyDockCells(phase,e){const p=placements(phase,e),out=[];for(const y of LEVELS)for(let z=0;z<3;z++)for(let x=0;x<6;x++)if(!BODIES.some(b=>Math.abs(p[b.id].y-y)<.01&&insideBody(b,x*8.4+4-p[b.id].x,z*8.4+4-p[b.id].z)))out.push({col:x,row:z,x:x*8.4,z:z*8.4,y,w:8,d:8,floor:false});return out;}

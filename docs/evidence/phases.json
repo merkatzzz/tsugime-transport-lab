@@ -58,9 +58,29 @@
         "y": 0
       },
       "C0": {
-        "x": 33.6,
+        "x": 50.4,
         "y": 6.4,
         "z": 0
+      },
+      "E1": {
+        "x": 33.6,
+        "z": 0,
+        "y": 12.8
+      },
+      "E3": {
+        "x": 33.6,
+        "z": 0,
+        "y": 0
+      },
+      "E2": {
+        "x": 42,
+        "z": 0,
+        "y": 12.8
+      },
+      "E4": {
+        "x": 42,
+        "z": 0,
+        "y": 0
       }
     },
     "connections": [
@@ -200,6 +220,60 @@
         }
       },
       {
+        "id": "T1:E|E1:W",
+        "a": "T1/0",
+        "b": "E1/1",
+        "bodyA": "T1",
+        "bodyB": "E1",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.3,
+        "gap": 0.8000000000000043,
+        "start": 3,
+        "end": 5,
+        "y": 12.8,
+        "level": 1,
+        "status": "pass",
+        "bridge": {
+          "x": 32.8,
+          "z": 3,
+          "w": 0.8000000000000043,
+          "d": 2,
+          "orientation": "EW",
+          "y": 12.8
+        }
+      },
+      {
+        "id": "T2:E|E3:W",
+        "a": "T2/0",
+        "b": "E3/1",
+        "bodyA": "T2",
+        "bodyB": "E3",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.3,
+        "gap": 0.8000000000000043,
+        "start": 3,
+        "end": 5,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 32.8,
+          "z": 3,
+          "w": 0.8000000000000043,
+          "d": 2,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
         "id": "T2:S-west|L1:N-west",
         "a": "T2/0",
         "b": "L1/0",
@@ -329,6 +403,60 @@
           "x": 16.4,
           "z": 3,
           "w": 0.40000000000000213,
+          "d": 2,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
+        "id": "E1:E|E2:W",
+        "a": "E1/1",
+        "b": "E2/1",
+        "bodyA": "E1",
+        "bodyB": "E2",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.3,
+        "gap": 0.3999999999999986,
+        "start": 3,
+        "end": 5,
+        "y": 12.8,
+        "level": 1,
+        "status": "pass",
+        "bridge": {
+          "x": 41.6,
+          "z": 3,
+          "w": 0.3999999999999986,
+          "d": 2,
+          "orientation": "EW",
+          "y": 12.8
+        }
+      },
+      {
+        "id": "E3:E|E4:W",
+        "a": "E3/1",
+        "b": "E4/1",
+        "bodyA": "E3",
+        "bodyB": "E4",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.3,
+        "gap": 0.3999999999999986,
+        "start": 3,
+        "end": 5,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 41.6,
+          "z": 3,
+          "w": 0.3999999999999986,
           "d": 2,
           "orientation": "EW",
           "y": 0
@@ -1074,15 +1202,46 @@
         "plane": 32.8,
         "start": 3,
         "end": 5,
-        "status": "blocked",
-        "matches": [],
-        "openings": [],
-        "masked": [
+        "status": "pass",
+        "matches": [
+          {
+            "id": "T1:E|E1:W",
+            "a": "T1/0",
+            "b": "E1/1",
+            "bodyA": "T1",
+            "bodyB": "E1",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.8000000000000043,
+            "start": 3,
+            "end": 5,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 32.8,
+              "z": 3,
+              "w": 0.8000000000000043,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
           {
             "a": 3,
-            "b": 5
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "T1:E|E1:W"
           }
-        ]
+        ],
+        "masked": []
       },
       {
         "id": "S-east",
@@ -1177,15 +1336,46 @@
         "plane": 32.8,
         "start": 3,
         "end": 5,
-        "status": "blocked",
-        "matches": [],
-        "openings": [],
-        "masked": [
+        "status": "pass",
+        "matches": [
+          {
+            "id": "T2:E|E3:W",
+            "a": "T2/0",
+            "b": "E3/1",
+            "bodyA": "T2",
+            "bodyB": "E3",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.8000000000000043,
+            "start": 3,
+            "end": 5,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 32.8,
+              "z": 3,
+              "w": 0.8000000000000043,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
           {
             "a": 3,
-            "b": 5
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "T2:E|E3:W"
           }
-        ]
+        ],
+        "masked": []
       },
       {
         "id": "S-west",
@@ -2024,7 +2214,7 @@
         "node": "C0/0",
         "level": -1,
         "y": 6.4,
-        "plane": 33.6,
+        "plane": 50.4,
         "start": 3,
         "end": 5,
         "status": "blocked",
@@ -2048,7 +2238,7 @@
         "node": "C0/0",
         "level": -1,
         "y": 6.4,
-        "plane": 41.6,
+        "plane": 58.4,
         "start": 3,
         "end": 5,
         "status": "blocked",
@@ -2073,8 +2263,386 @@
         "level": -1,
         "y": 6.4,
         "plane": 8,
-        "start": 36.6,
-        "end": 38.6,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E1",
+        "key": "E1:W",
+        "node": "E1/1",
+        "level": 1,
+        "y": 12.8,
+        "plane": 33.6,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "T1:E|E1:W",
+            "a": "T1/0",
+            "b": "E1/1",
+            "bodyA": "T1",
+            "bodyB": "E1",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.8000000000000043,
+            "start": 3,
+            "end": 5,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 32.8,
+              "z": 3,
+              "w": 0.8000000000000043,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "T1:E|E1:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E1",
+        "key": "E1:E",
+        "node": "E1/1",
+        "level": 1,
+        "y": 12.8,
+        "plane": 41.6,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "E1:E|E2:W",
+            "a": "E1/1",
+            "b": "E2/1",
+            "bodyA": "E1",
+            "bodyB": "E2",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.3999999999999986,
+            "start": 3,
+            "end": 5,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 3,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "E1:E|E2:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E2",
+        "key": "E2:W",
+        "node": "E2/1",
+        "level": 1,
+        "y": 12.8,
+        "plane": 42,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "E1:E|E2:W",
+            "a": "E1/1",
+            "b": "E2/1",
+            "bodyA": "E1",
+            "bodyB": "E2",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.3999999999999986,
+            "start": 3,
+            "end": 5,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 3,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "E1:E|E2:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E2",
+        "key": "E2:E",
+        "node": "E2/1",
+        "level": 1,
+        "y": 12.8,
+        "plane": 50,
+        "start": 3,
+        "end": 5,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E3",
+        "key": "E3:W",
+        "node": "E3/1",
+        "level": 0,
+        "y": 0,
+        "plane": 33.6,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "T2:E|E3:W",
+            "a": "T2/0",
+            "b": "E3/1",
+            "bodyA": "T2",
+            "bodyB": "E3",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.8000000000000043,
+            "start": 3,
+            "end": 5,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 32.8,
+              "z": 3,
+              "w": 0.8000000000000043,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "T2:E|E3:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E3",
+        "key": "E3:E",
+        "node": "E3/1",
+        "level": 0,
+        "y": 0,
+        "plane": 41.6,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "E3:E|E4:W",
+            "a": "E3/1",
+            "b": "E4/1",
+            "bodyA": "E3",
+            "bodyB": "E4",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.3999999999999986,
+            "start": 3,
+            "end": 5,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 3,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "E3:E|E4:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E4",
+        "key": "E4:W",
+        "node": "E4/1",
+        "level": 0,
+        "y": 0,
+        "plane": 42,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "E3:E|E4:W",
+            "a": "E3/1",
+            "b": "E4/1",
+            "bodyA": "E3",
+            "bodyB": "E4",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.3999999999999986,
+            "start": 3,
+            "end": 5,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 3,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "E3:E|E4:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E4",
+        "key": "E4:E",
+        "node": "E4/1",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 3,
+        "end": 5,
         "status": "blocked",
         "matches": [],
         "openings": [],
@@ -2210,514 +2778,11 @@
       "T2/0",
       "R2/0",
       "T1/0",
-      "L1/0"
-    ],
-    "isolated": [],
-    "emptySpace": [
-      {
-        "x": 0,
-        "y": 0,
-        "z": 8,
-        "w": 8,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 0,
-        "y": 0,
-        "z": 8.4,
-        "w": 8,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 0,
-        "y": 0,
-        "z": 16.4,
-        "w": 8,
-        "d": 8,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 0,
-        "y": 0,
-        "z": 24.4,
-        "w": 8,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 0,
-        "w": 0.40000000000000036,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 8,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 8.4,
-        "w": 0.40000000000000036,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 16.4,
-        "w": 0.40000000000000036,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 24.4,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 0,
-        "z": 8,
-        "w": 7.999999999999998,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 0,
-        "z": 8.4,
-        "w": 7.999999999999998,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 8.4,
-        "y": 0,
-        "z": 16.4,
-        "w": 7.999999999999998,
-        "d": 8,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 8.4,
-        "y": 0,
-        "z": 24.4,
-        "w": 7.999999999999998,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 0,
-        "w": 0.40000000000000213,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 8,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 8.4,
-        "w": 0.40000000000000213,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 16.4,
-        "w": 0.40000000000000213,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 24.4,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.8,
-        "y": 0,
-        "z": 8,
-        "w": 8,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.8,
-        "y": 0,
-        "z": 24.4,
-        "w": 8,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 0,
-        "z": 8,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 0,
-        "z": 16.4,
-        "w": 7.9999999999999964,
-        "d": 8,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 24.8,
-        "y": 0,
-        "z": 24.4,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 0,
-        "w": 0.4000000000000057,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 8,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 8.4,
-        "w": 0.4000000000000057,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 16.4,
-        "w": 0.4000000000000057,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 24.4,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 0,
-        "y": 12.8,
-        "z": 8,
-        "w": 8,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 0,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 8,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 0,
-        "w": 0.40000000000000036,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 8,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 8.4,
-        "w": 0.40000000000000036,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 16.8,
-        "w": 0.40000000000000036,
-        "d": 7.599999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 12.8,
-        "z": 8,
-        "w": 7.999999999999998,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 7.999999999999998,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 12.8,
-        "z": 16.8,
-        "w": 7.999999999999998,
-        "d": 7.599999999999998,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 8.4,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 7.999999999999998,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 0,
-        "w": 0.40000000000000213,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 8,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 8.4,
-        "w": 0.40000000000000213,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 16.8,
-        "w": 0.40000000000000213,
-        "d": 7.599999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.8,
-        "y": 12.8,
-        "z": 8,
-        "w": 8,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.8,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 8,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 12.8,
-        "z": 8,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 0,
-        "w": 0.4000000000000057,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 8,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 8.4,
-        "w": 0.4000000000000057,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 16.8,
-        "w": 0.4000000000000057,
-        "d": 7.599999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      }
+      "E1/1",
+      "E3/1",
+      "L1/0",
+      "E2/1",
+      "E4/1"
     ],
     "emptyDockCells": [
       {
@@ -2734,6 +2799,26 @@
         "col": 1,
         "row": 1,
         "x": 8.4,
+        "z": 8.4,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 1,
+        "x": 33.6,
+        "z": 8.4,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 1,
+        "x": 42,
         "z": 8.4,
         "y": 0,
         "w": 8,
@@ -2771,6 +2856,46 @@
         "floor": false
       },
       {
+        "col": 4,
+        "row": 2,
+        "x": 33.6,
+        "z": 16.8,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 2,
+        "x": 42,
+        "z": 16.8,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 1,
+        "x": 33.6,
+        "z": 8.4,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 1,
+        "x": 42,
+        "z": 8.4,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
         "col": 1,
         "row": 2,
         "x": 8.4,
@@ -2779,22 +2904,26 @@
         "w": 8,
         "d": 8,
         "floor": false
-      }
-    ],
-    "cycles": [
-      {
-        "level": 0,
-        "edges": 4,
-        "nodes": 5,
-        "components": 1,
-        "cycles": 0
       },
       {
-        "level": 1,
-        "edges": 8,
-        "nodes": 9,
-        "components": 1,
-        "cycles": 0
+        "col": 4,
+        "row": 2,
+        "x": 33.6,
+        "z": 16.8,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 2,
+        "x": 42,
+        "z": 16.8,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
       }
     ]
   },
@@ -2860,6 +2989,26 @@
         "x": 8.4,
         "z": 0,
         "y": 12.8
+      },
+      "E1": {
+        "x": 33.6,
+        "z": 0,
+        "y": 0
+      },
+      "E3": {
+        "x": 33.6,
+        "z": 0,
+        "y": 12.8
+      },
+      "E2": {
+        "x": 42,
+        "z": 0,
+        "y": 12.8
+      },
+      "E4": {
+        "x": 42,
+        "z": 0,
+        "y": 0
       }
     },
     "connections": [
@@ -3026,6 +3175,33 @@
         }
       },
       {
+        "id": "T1:E|E3:W",
+        "a": "T1/0",
+        "b": "E3/1",
+        "bodyA": "T1",
+        "bodyB": "E3",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.3,
+        "gap": 0.8000000000000043,
+        "start": 3,
+        "end": 5,
+        "y": 12.8,
+        "level": 1,
+        "status": "pass",
+        "bridge": {
+          "x": 32.8,
+          "z": 3,
+          "w": 0.8000000000000043,
+          "d": 2,
+          "orientation": "EW",
+          "y": 12.8
+        }
+      },
+      {
         "id": "T1:S-east|L1:N-east",
         "a": "T1/0",
         "b": "L1/0",
@@ -3050,6 +3226,33 @@
           "d": 0.40000000000000036,
           "orientation": "NS",
           "y": 12.8
+        }
+      },
+      {
+        "id": "T2:E|E1:W",
+        "a": "T2/0",
+        "b": "E1/1",
+        "bodyA": "T2",
+        "bodyB": "E1",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.3,
+        "gap": 0.8000000000000043,
+        "start": 3,
+        "end": 5,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 32.8,
+          "z": 3,
+          "w": 0.8000000000000043,
+          "d": 2,
+          "orientation": "EW",
+          "y": 0
         }
       },
       {
@@ -3238,6 +3441,60 @@
           "w": 2,
           "d": 0.40000000000000036,
           "orientation": "NS",
+          "y": 12.8
+        }
+      },
+      {
+        "id": "E1:E|E4:W",
+        "a": "E1/1",
+        "b": "E4/1",
+        "bodyA": "E1",
+        "bodyB": "E4",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.3,
+        "gap": 0.3999999999999986,
+        "start": 3,
+        "end": 5,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 41.6,
+          "z": 3,
+          "w": 0.3999999999999986,
+          "d": 2,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
+        "id": "E3:E|E2:W",
+        "a": "E3/1",
+        "b": "E2/1",
+        "bodyA": "E3",
+        "bodyB": "E2",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.3,
+        "gap": 0.3999999999999986,
+        "start": 3,
+        "end": 5,
+        "y": 12.8,
+        "level": 1,
+        "status": "pass",
+        "bridge": {
+          "x": 41.6,
+          "z": 3,
+          "w": 0.3999999999999986,
+          "d": 2,
+          "orientation": "EW",
           "y": 12.8
         }
       },
@@ -4083,15 +4340,46 @@
         "plane": 32.8,
         "start": 3,
         "end": 5,
-        "status": "blocked",
-        "matches": [],
-        "openings": [],
-        "masked": [
+        "status": "pass",
+        "matches": [
+          {
+            "id": "T1:E|E3:W",
+            "a": "T1/0",
+            "b": "E3/1",
+            "bodyA": "T1",
+            "bodyB": "E3",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.8000000000000043,
+            "start": 3,
+            "end": 5,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 32.8,
+              "z": 3,
+              "w": 0.8000000000000043,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
           {
             "a": 3,
-            "b": 5
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "T1:E|E3:W"
           }
-        ]
+        ],
+        "masked": []
       },
       {
         "id": "S-east",
@@ -4217,15 +4505,46 @@
         "plane": 32.8,
         "start": 3,
         "end": 5,
-        "status": "blocked",
-        "matches": [],
-        "openings": [],
-        "masked": [
+        "status": "pass",
+        "matches": [
+          {
+            "id": "T2:E|E1:W",
+            "a": "T2/0",
+            "b": "E1/1",
+            "bodyA": "T2",
+            "bodyB": "E1",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.8000000000000043,
+            "start": 3,
+            "end": 5,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 32.8,
+              "z": 3,
+              "w": 0.8000000000000043,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
           {
             "a": 3,
-            "b": 5
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "T2:E|E1:W"
           }
-        ]
+        ],
+        "masked": []
       },
       {
         "id": "S-west",
@@ -5250,6 +5569,384 @@
         "masked": []
       },
       {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E1",
+        "key": "E1:W",
+        "node": "E1/1",
+        "level": 0,
+        "y": 0,
+        "plane": 33.6,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "T2:E|E1:W",
+            "a": "T2/0",
+            "b": "E1/1",
+            "bodyA": "T2",
+            "bodyB": "E1",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.8000000000000043,
+            "start": 3,
+            "end": 5,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 32.8,
+              "z": 3,
+              "w": 0.8000000000000043,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "T2:E|E1:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E1",
+        "key": "E1:E",
+        "node": "E1/1",
+        "level": 0,
+        "y": 0,
+        "plane": 41.6,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "E1:E|E4:W",
+            "a": "E1/1",
+            "b": "E4/1",
+            "bodyA": "E1",
+            "bodyB": "E4",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.3999999999999986,
+            "start": 3,
+            "end": 5,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 3,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "E1:E|E4:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E2",
+        "key": "E2:W",
+        "node": "E2/1",
+        "level": 1,
+        "y": 12.8,
+        "plane": 42,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "E3:E|E2:W",
+            "a": "E3/1",
+            "b": "E2/1",
+            "bodyA": "E3",
+            "bodyB": "E2",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.3999999999999986,
+            "start": 3,
+            "end": 5,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 3,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "E3:E|E2:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E2",
+        "key": "E2:E",
+        "node": "E2/1",
+        "level": 1,
+        "y": 12.8,
+        "plane": 50,
+        "start": 3,
+        "end": 5,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E3",
+        "key": "E3:W",
+        "node": "E3/1",
+        "level": 1,
+        "y": 12.8,
+        "plane": 33.6,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "T1:E|E3:W",
+            "a": "T1/0",
+            "b": "E3/1",
+            "bodyA": "T1",
+            "bodyB": "E3",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.8000000000000043,
+            "start": 3,
+            "end": 5,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 32.8,
+              "z": 3,
+              "w": 0.8000000000000043,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "T1:E|E3:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E3",
+        "key": "E3:E",
+        "node": "E3/1",
+        "level": 1,
+        "y": 12.8,
+        "plane": 41.6,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "E3:E|E2:W",
+            "a": "E3/1",
+            "b": "E2/1",
+            "bodyA": "E3",
+            "bodyB": "E2",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.3999999999999986,
+            "start": 3,
+            "end": 5,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 3,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "E3:E|E2:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E4",
+        "key": "E4:W",
+        "node": "E4/1",
+        "level": 0,
+        "y": 0,
+        "plane": 42,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "E1:E|E4:W",
+            "a": "E1/1",
+            "b": "E4/1",
+            "bodyA": "E1",
+            "bodyB": "E4",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.3999999999999986,
+            "start": 3,
+            "end": 5,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 3,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "E1:E|E4:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E4",
+        "key": "E4:E",
+        "node": "E4/1",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 3,
+        "end": 5,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
         "id": "E",
         "body": "F0",
         "key": "F0:E",
@@ -5375,523 +6072,11 @@
       "R2/0",
       "T2/0",
       "T1/0",
-      "R2/1"
-    ],
-    "isolated": [],
-    "emptySpace": [
-      {
-        "x": 0,
-        "y": 0,
-        "z": 8,
-        "w": 8,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 0,
-        "y": 0,
-        "z": 24.4,
-        "w": 8,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 0,
-        "w": 0.40000000000000036,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 8,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 24.4,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 0,
-        "z": 8,
-        "w": 7.6,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 0,
-        "z": 24.4,
-        "w": 7.6,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16,
-        "y": 0,
-        "z": 8,
-        "w": 0.3999999999999986,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16,
-        "y": 0,
-        "z": 8.4,
-        "w": 0.3999999999999986,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16,
-        "y": 0,
-        "z": 16.4,
-        "w": 0.3999999999999986,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16,
-        "y": 0,
-        "z": 24.4,
-        "w": 0.3999999999999986,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 0,
-        "w": 0.40000000000000213,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 8,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 8.4,
-        "w": 0.40000000000000213,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 16.4,
-        "w": 0.40000000000000213,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 24.4,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.8,
-        "y": 0,
-        "z": 8,
-        "w": 8,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.8,
-        "y": 0,
-        "z": 8.4,
-        "w": 8,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 16.8,
-        "y": 0,
-        "z": 16.4,
-        "w": 8,
-        "d": 8,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 16.8,
-        "y": 0,
-        "z": 24.4,
-        "w": 8,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 0,
-        "z": 8,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 0,
-        "z": 8.4,
-        "w": 7.9999999999999964,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 24.8,
-        "y": 0,
-        "z": 16.4,
-        "w": 7.9999999999999964,
-        "d": 8,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 24.8,
-        "y": 0,
-        "z": 24.4,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 0,
-        "w": 0.4000000000000057,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 8,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 8.4,
-        "w": 0.4000000000000057,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 16.4,
-        "w": 0.4000000000000057,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 24.4,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 0,
-        "y": 12.8,
-        "z": 8,
-        "w": 8,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 0,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 8,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 0,
-        "w": 0.40000000000000036,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 8,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 8.4,
-        "w": 0.40000000000000036,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 16.8,
-        "w": 0.40000000000000036,
-        "d": 7.599999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 12.8,
-        "z": 8,
-        "w": 7.999999999999998,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 7.999999999999998,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 0,
-        "w": 0.40000000000000213,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 8,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 8.4,
-        "w": 0.40000000000000213,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 16.8,
-        "w": 0.40000000000000213,
-        "d": 7.599999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.8,
-        "y": 12.8,
-        "z": 8,
-        "w": 8,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.8,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 8,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 12.8,
-        "z": 8,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 12.8,
-        "z": 16.8,
-        "w": 7.9999999999999964,
-        "d": 7.599999999999998,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 24.8,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 0,
-        "w": 0.4000000000000057,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 8,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 8.4,
-        "w": 0.4000000000000057,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 16.8,
-        "w": 0.4000000000000057,
-        "d": 7.599999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      }
+      "R2/1",
+      "E3/1",
+      "E1/1",
+      "E4/1",
+      "E2/1"
     ],
     "emptyDockCells": [
       {
@@ -5915,6 +6100,26 @@
         "floor": false
       },
       {
+        "col": 4,
+        "row": 1,
+        "x": 33.6,
+        "z": 8.4,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 1,
+        "x": 42,
+        "z": 8.4,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
         "col": 2,
         "row": 2,
         "x": 16.8,
@@ -5935,6 +6140,46 @@
         "floor": false
       },
       {
+        "col": 4,
+        "row": 2,
+        "x": 33.6,
+        "z": 16.8,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 2,
+        "x": 42,
+        "z": 16.8,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 1,
+        "x": 33.6,
+        "z": 8.4,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 1,
+        "x": 42,
+        "z": 8.4,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
         "col": 3,
         "row": 2,
         "x": 25.200000000000003,
@@ -5943,22 +6188,26 @@
         "w": 8,
         "d": 8,
         "floor": false
-      }
-    ],
-    "cycles": [
-      {
-        "level": 0,
-        "edges": 4,
-        "nodes": 5,
-        "components": 1,
-        "cycles": 0
       },
       {
-        "level": 1,
-        "edges": 11,
-        "nodes": 10,
-        "components": 1,
-        "cycles": 2
+        "col": 4,
+        "row": 2,
+        "x": 33.6,
+        "z": 16.8,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 2,
+        "x": 42,
+        "z": 16.8,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
       }
     ]
   },
@@ -6021,9 +6270,29 @@
         "y": 0
       },
       "C0": {
-        "x": 33.6,
+        "x": 50.4,
         "y": 6.4,
         "z": 0
+      },
+      "E1": {
+        "x": 33.6,
+        "z": 0,
+        "y": 12.8
+      },
+      "E3": {
+        "x": 33.6,
+        "z": 0,
+        "y": 0
+      },
+      "E2": {
+        "x": 42,
+        "z": 0,
+        "y": 0
+      },
+      "E4": {
+        "x": 42,
+        "z": 0,
+        "y": 12.8
       }
     },
     "connections": [
@@ -6190,6 +6459,60 @@
         }
       },
       {
+        "id": "T1:E|E1:W",
+        "a": "T1/0",
+        "b": "E1/1",
+        "bodyA": "T1",
+        "bodyB": "E1",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.3,
+        "gap": 0.8000000000000043,
+        "start": 3,
+        "end": 5,
+        "y": 12.8,
+        "level": 1,
+        "status": "pass",
+        "bridge": {
+          "x": 32.8,
+          "z": 3,
+          "w": 0.8000000000000043,
+          "d": 2,
+          "orientation": "EW",
+          "y": 12.8
+        }
+      },
+      {
+        "id": "T2:E|E3:W",
+        "a": "T2/0",
+        "b": "E3/1",
+        "bodyA": "T2",
+        "bodyB": "E3",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.3,
+        "gap": 0.8000000000000043,
+        "start": 3,
+        "end": 5,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 32.8,
+          "z": 3,
+          "w": 0.8000000000000043,
+          "d": 2,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
         "id": "T2:S-west|L1:N-east",
         "a": "T2/0",
         "b": "L1/0",
@@ -6265,6 +6588,60 @@
           "x": 8,
           "z": 11.4,
           "w": 0.40000000000000036,
+          "d": 2,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
+        "id": "E1:E|E4:W",
+        "a": "E1/1",
+        "b": "E4/1",
+        "bodyA": "E1",
+        "bodyB": "E4",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.3,
+        "gap": 0.3999999999999986,
+        "start": 3,
+        "end": 5,
+        "y": 12.8,
+        "level": 1,
+        "status": "pass",
+        "bridge": {
+          "x": 41.6,
+          "z": 3,
+          "w": 0.3999999999999986,
+          "d": 2,
+          "orientation": "EW",
+          "y": 12.8
+        }
+      },
+      {
+        "id": "E3:E|E2:W",
+        "a": "E3/1",
+        "b": "E2/1",
+        "bodyA": "E3",
+        "bodyB": "E2",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.3,
+        "gap": 0.3999999999999986,
+        "start": 3,
+        "end": 5,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 41.6,
+          "z": 3,
+          "w": 0.3999999999999986,
           "d": 2,
           "orientation": "EW",
           "y": 0
@@ -7041,15 +7418,46 @@
         "plane": 32.8,
         "start": 3,
         "end": 5,
-        "status": "blocked",
-        "matches": [],
-        "openings": [],
-        "masked": [
+        "status": "pass",
+        "matches": [
+          {
+            "id": "T1:E|E1:W",
+            "a": "T1/0",
+            "b": "E1/1",
+            "bodyA": "T1",
+            "bodyB": "E1",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.8000000000000043,
+            "start": 3,
+            "end": 5,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 32.8,
+              "z": 3,
+              "w": 0.8000000000000043,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
           {
             "a": 3,
-            "b": 5
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "T1:E|E1:W"
           }
-        ]
+        ],
+        "masked": []
       },
       {
         "id": "S-east",
@@ -7113,15 +7521,46 @@
         "plane": 32.8,
         "start": 3,
         "end": 5,
-        "status": "blocked",
-        "matches": [],
-        "openings": [],
-        "masked": [
+        "status": "pass",
+        "matches": [
+          {
+            "id": "T2:E|E3:W",
+            "a": "T2/0",
+            "b": "E3/1",
+            "bodyA": "T2",
+            "bodyB": "E3",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.8000000000000043,
+            "start": 3,
+            "end": 5,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 32.8,
+              "z": 3,
+              "w": 0.8000000000000043,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
           {
             "a": 3,
-            "b": 5
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "T2:E|E3:W"
           }
-        ]
+        ],
+        "masked": []
       },
       {
         "id": "S-west",
@@ -7898,7 +8337,7 @@
         "node": "C0/0",
         "level": -1,
         "y": 6.4,
-        "plane": 33.6,
+        "plane": 50.4,
         "start": 3,
         "end": 5,
         "status": "blocked",
@@ -7922,7 +8361,7 @@
         "node": "C0/0",
         "level": -1,
         "y": 6.4,
-        "plane": 41.6,
+        "plane": 58.4,
         "start": 3,
         "end": 5,
         "status": "blocked",
@@ -7947,8 +8386,386 @@
         "level": -1,
         "y": 6.4,
         "plane": 8,
-        "start": 36.6,
-        "end": 38.6,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E1",
+        "key": "E1:W",
+        "node": "E1/1",
+        "level": 1,
+        "y": 12.8,
+        "plane": 33.6,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "T1:E|E1:W",
+            "a": "T1/0",
+            "b": "E1/1",
+            "bodyA": "T1",
+            "bodyB": "E1",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.8000000000000043,
+            "start": 3,
+            "end": 5,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 32.8,
+              "z": 3,
+              "w": 0.8000000000000043,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "T1:E|E1:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E1",
+        "key": "E1:E",
+        "node": "E1/1",
+        "level": 1,
+        "y": 12.8,
+        "plane": 41.6,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "E1:E|E4:W",
+            "a": "E1/1",
+            "b": "E4/1",
+            "bodyA": "E1",
+            "bodyB": "E4",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.3999999999999986,
+            "start": 3,
+            "end": 5,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 3,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "E1:E|E4:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E2",
+        "key": "E2:W",
+        "node": "E2/1",
+        "level": 0,
+        "y": 0,
+        "plane": 42,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "E3:E|E2:W",
+            "a": "E3/1",
+            "b": "E2/1",
+            "bodyA": "E3",
+            "bodyB": "E2",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.3999999999999986,
+            "start": 3,
+            "end": 5,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 3,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "E3:E|E2:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E2",
+        "key": "E2:E",
+        "node": "E2/1",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 3,
+        "end": 5,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E3",
+        "key": "E3:W",
+        "node": "E3/1",
+        "level": 0,
+        "y": 0,
+        "plane": 33.6,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "T2:E|E3:W",
+            "a": "T2/0",
+            "b": "E3/1",
+            "bodyA": "T2",
+            "bodyB": "E3",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.8000000000000043,
+            "start": 3,
+            "end": 5,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 32.8,
+              "z": 3,
+              "w": 0.8000000000000043,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "T2:E|E3:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E3",
+        "key": "E3:E",
+        "node": "E3/1",
+        "level": 0,
+        "y": 0,
+        "plane": 41.6,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "E3:E|E2:W",
+            "a": "E3/1",
+            "b": "E2/1",
+            "bodyA": "E3",
+            "bodyB": "E2",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.3999999999999986,
+            "start": 3,
+            "end": 5,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 3,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "E3:E|E2:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E4",
+        "key": "E4:W",
+        "node": "E4/1",
+        "level": 1,
+        "y": 12.8,
+        "plane": 42,
+        "start": 3,
+        "end": 5,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "E1:E|E4:W",
+            "a": "E1/1",
+            "b": "E4/1",
+            "bodyA": "E1",
+            "bodyB": "E4",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.3,
+            "gap": 0.3999999999999986,
+            "start": 3,
+            "end": 5,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 3,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.3,
+            "status": "pass",
+            "id": "E1:E|E4:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.3,
+        "body": "E4",
+        "key": "E4:E",
+        "node": "E4/1",
+        "level": 1,
+        "y": 12.8,
+        "plane": 50,
+        "start": 3,
+        "end": 5,
         "status": "blocked",
         "matches": [],
         "openings": [],
@@ -8083,543 +8900,11 @@
       "L1/0",
       "R2/0",
       "T1/0",
-      "T2/0"
-    ],
-    "isolated": [
-      "J1"
-    ],
-    "emptySpace": [
-      {
-        "x": 0,
-        "y": 0,
-        "z": 8,
-        "w": 8,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 0,
-        "y": 0,
-        "z": 16.4,
-        "w": 8,
-        "d": 8,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 0,
-        "y": 0,
-        "z": 24.4,
-        "w": 8,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 0,
-        "w": 0.40000000000000036,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 8,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 8.4,
-        "w": 0.40000000000000036,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 16.4,
-        "w": 0.40000000000000036,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 0,
-        "z": 24.4,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 0,
-        "z": 0,
-        "w": 7.999999999999998,
-        "d": 8,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 8.4,
-        "y": 0,
-        "z": 8,
-        "w": 7.999999999999998,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 0,
-        "z": 24.4,
-        "w": 7.999999999999998,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 0,
-        "w": 0.40000000000000213,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 8,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 16.4,
-        "w": 0.40000000000000213,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 0,
-        "z": 24.4,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.8,
-        "y": 0,
-        "z": 8,
-        "w": 7.599999999999998,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.8,
-        "y": 0,
-        "z": 16.4,
-        "w": 7.599999999999998,
-        "d": 8,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 16.8,
-        "y": 0,
-        "z": 24.4,
-        "w": 7.599999999999998,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.4,
-        "y": 0,
-        "z": 8,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.4,
-        "y": 0,
-        "z": 8.4,
-        "w": 0.40000000000000213,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.4,
-        "y": 0,
-        "z": 16.4,
-        "w": 0.40000000000000213,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.4,
-        "y": 0,
-        "z": 24.4,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 0,
-        "z": 8,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 0,
-        "z": 8.4,
-        "w": 7.9999999999999964,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 24.8,
-        "y": 0,
-        "z": 16.4,
-        "w": 7.9999999999999964,
-        "d": 8,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 24.8,
-        "y": 0,
-        "z": 24.4,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 0,
-        "w": 0.4000000000000057,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 8,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 8.4,
-        "w": 0.4000000000000057,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 16.4,
-        "w": 0.4000000000000057,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 0,
-        "z": 24.4,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 0,
-        "y": 12.8,
-        "z": 8,
-        "w": 8,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 0,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 8,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 0,
-        "w": 0.40000000000000036,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 8,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 8.4,
-        "w": 0.40000000000000036,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 16.8,
-        "w": 0.40000000000000036,
-        "d": 7.599999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 0.40000000000000036,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 12.8,
-        "z": 8,
-        "w": 7.999999999999998,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 7.999999999999998,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 8.4,
-        "y": 12.8,
-        "z": 16.8,
-        "w": 7.999999999999998,
-        "d": 7.599999999999998,
-        "floor": false,
-        "kind": "empty-dock"
-      },
-      {
-        "x": 8.4,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 7.999999999999998,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 0,
-        "w": 0.40000000000000213,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 8,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 8.4,
-        "w": 0.40000000000000213,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 16.8,
-        "w": 0.40000000000000213,
-        "d": 7.599999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.4,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 0.40000000000000213,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.8,
-        "y": 12.8,
-        "z": 8,
-        "w": 8,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 16.8,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 8,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 12.8,
-        "z": 8,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 24.8,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 7.9999999999999964,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 0,
-        "w": 0.4000000000000057,
-        "d": 8,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 8,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000036,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 8.4,
-        "w": 0.4000000000000057,
-        "d": 7.999999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 16.4,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 16.8,
-        "w": 0.4000000000000057,
-        "d": 7.599999999999998,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      },
-      {
-        "x": 32.8,
-        "y": 12.8,
-        "z": 24.4,
-        "w": 0.4000000000000057,
-        "d": 0.40000000000000213,
-        "floor": false,
-        "kind": "mechanical-clearance"
-      }
+      "E1/1",
+      "T2/0",
+      "E4/1",
+      "E3/1",
+      "E2/1"
     ],
     "emptyDockCells": [
       {
@@ -8636,6 +8921,26 @@
         "col": 3,
         "row": 1,
         "x": 25.200000000000003,
+        "z": 8.4,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 1,
+        "x": 33.6,
+        "z": 8.4,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 1,
+        "x": 42,
         "z": 8.4,
         "y": 0,
         "w": 8,
@@ -8673,6 +8978,46 @@
         "floor": false
       },
       {
+        "col": 4,
+        "row": 2,
+        "x": 33.6,
+        "z": 16.8,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 2,
+        "x": 42,
+        "z": 16.8,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 1,
+        "x": 33.6,
+        "z": 8.4,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 1,
+        "x": 42,
+        "z": 8.4,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
         "col": 1,
         "row": 2,
         "x": 8.4,
@@ -8681,22 +9026,26 @@
         "w": 8,
         "d": 8,
         "floor": false
-      }
-    ],
-    "cycles": [
-      {
-        "level": 0,
-        "edges": 4,
-        "nodes": 5,
-        "components": 1,
-        "cycles": 0
       },
       {
-        "level": 1,
-        "edges": 7,
-        "nodes": 8,
-        "components": 1,
-        "cycles": 0
+        "col": 4,
+        "row": 2,
+        "x": 33.6,
+        "z": 16.8,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 2,
+        "x": 42,
+        "z": 16.8,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
       }
     ]
   }
