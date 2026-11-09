@@ -1,0 +1,1889 @@
+[
+  {
+    "phase": "A",
+    "placements": {
+      "R3": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "R4": {
+        "x": 8.4,
+        "y": 0,
+        "z": 0
+      },
+      "T2": {
+        "x": 16.8,
+        "y": 0,
+        "z": 0
+      },
+      "L1": {
+        "x": 33.2,
+        "y": 0,
+        "z": 0
+      },
+      "R1": {
+        "x": 0,
+        "y": 12.8,
+        "z": 0
+      },
+      "R2": {
+        "x": 8.4,
+        "y": 12.8,
+        "z": 0
+      },
+      "T1": {
+        "x": 16.8,
+        "y": 12.8,
+        "z": 0
+      },
+      "H1": {
+        "x": 33.2,
+        "y": 12.8,
+        "z": 0
+      }
+    },
+    "connections": [
+      {
+        "a": "R1",
+        "b": "R2",
+        "face": "E",
+        "width": 2,
+        "height": 2.1,
+        "status": "pass",
+        "level": 1,
+        "y": 12.8,
+        "bridge": {
+          "x": 8,
+          "z": 1,
+          "w": 0.4,
+          "d": 2
+        },
+        "ports": {
+          "R1": "E",
+          "R2": "W"
+        }
+      },
+      {
+        "a": "F1",
+        "b": "R1",
+        "face": "E",
+        "width": 2,
+        "height": 2.1,
+        "status": "pass",
+        "level": 1,
+        "y": 12.8,
+        "bridge": {
+          "x": -0.3999999999999999,
+          "z": 1,
+          "w": 0.4,
+          "d": 2
+        },
+        "ports": {
+          "F1": "E",
+          "R1": "W"
+        }
+      },
+      {
+        "a": "R2",
+        "b": "T1",
+        "face": "E",
+        "width": 2.4,
+        "height": 2.1,
+        "status": "pass",
+        "level": 1,
+        "y": 12.8,
+        "bridge": {
+          "x": 16.4,
+          "z": 0.9,
+          "w": 0.4,
+          "d": 2.4
+        },
+        "ports": {
+          "R2": "E",
+          "T1": "W"
+        }
+      },
+      {
+        "a": "R3",
+        "b": "R4",
+        "face": "E",
+        "width": 1.5,
+        "height": 2.1,
+        "status": "pass",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": 8,
+          "z": 1.4,
+          "w": 0.4,
+          "d": 1.5
+        },
+        "ports": {
+          "R3": "E",
+          "R4": "W"
+        }
+      },
+      {
+        "a": "F0",
+        "b": "R3",
+        "face": "E",
+        "width": 1.5,
+        "height": 2.1,
+        "status": "pass",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": -0.3999999999999999,
+          "z": 1.4,
+          "w": 0.4,
+          "d": 1.5
+        },
+        "ports": {
+          "F0": "E",
+          "R3": "W"
+        }
+      },
+      {
+        "a": "R4",
+        "b": "T2",
+        "face": "E",
+        "width": 1.8,
+        "height": 2.1,
+        "status": "pass",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": 16.4,
+          "z": 1.2,
+          "w": 0.4,
+          "d": 1.8
+        },
+        "ports": {
+          "R4": "E",
+          "T2": "W"
+        }
+      },
+      {
+        "a": "T1",
+        "b": "H1",
+        "face": "E",
+        "width": 2.6,
+        "height": 2.8,
+        "status": "pass",
+        "level": 1,
+        "y": 12.8,
+        "bridge": {
+          "x": 32.8,
+          "z": 1,
+          "w": 0.4,
+          "d": 2.6
+        },
+        "ports": {
+          "T1": "E",
+          "H1": "W"
+        }
+      },
+      {
+        "a": "T2",
+        "b": "L1",
+        "face": "E",
+        "width": 1.8,
+        "height": 2.5,
+        "status": "pass",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": 32.8,
+          "z": 1.2,
+          "w": 0.4,
+          "d": 1.8
+        },
+        "ports": {
+          "T2": "E",
+          "L1": "W"
+        }
+      },
+      {
+        "a": "L1",
+        "b": "ANNEX",
+        "face": "E",
+        "width": 0,
+        "height": 0,
+        "status": "blocked",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": 49.2,
+          "z": 0,
+          "w": 0.4,
+          "d": 0
+        },
+        "ports": {
+          "L1": "E",
+          "ANNEX": "W"
+        }
+      }
+    ],
+    "reachable": [
+      "F0",
+      "F1",
+      "R1",
+      "R3",
+      "R2",
+      "T1",
+      "R4",
+      "T2",
+      "H1",
+      "L1"
+    ],
+    "isolated": [
+      "ANNEX"
+    ],
+    "emptySpace": [
+      {
+        "x": 0,
+        "y": 0,
+        "z": 8,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "z": 0,
+        "w": 0.40000000000000036,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "z": 8,
+        "w": 0.40000000000000036,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "z": 16,
+        "w": 0.40000000000000036,
+        "d": 8.399999999999999,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 0,
+        "z": 8,
+        "w": 7.999999999999998,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 0,
+        "z": 16,
+        "w": 7.999999999999998,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 0,
+        "z": 0,
+        "w": 0.40000000000000213,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 0,
+        "z": 8,
+        "w": 0.40000000000000213,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 0,
+        "z": 16,
+        "w": 0.40000000000000213,
+        "d": 8.399999999999999,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 0,
+        "z": 8,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 0,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 0,
+        "z": 8,
+        "w": 7.9999999999999964,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 0,
+        "z": 16,
+        "w": 7.9999999999999964,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 0,
+        "z": 0,
+        "w": 0.4000000000000057,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 0,
+        "z": 8,
+        "w": 0.4000000000000057,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 0,
+        "z": 16,
+        "w": 0.4000000000000057,
+        "d": 8.399999999999999,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 33.2,
+        "y": 0,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 41.2,
+        "y": 0,
+        "z": 8,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 41.2,
+        "y": 0,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 0,
+        "y": 12.8,
+        "z": 8,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 0,
+        "y": 12.8,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 12.8,
+        "z": 0,
+        "w": 0.40000000000000036,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 12.8,
+        "z": 8,
+        "w": 0.40000000000000036,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 12.8,
+        "z": 16,
+        "w": 0.40000000000000036,
+        "d": 8.399999999999999,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 12.8,
+        "z": 8,
+        "w": 7.999999999999998,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 12.8,
+        "z": 16,
+        "w": 7.999999999999998,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 12.8,
+        "z": 0,
+        "w": 0.40000000000000213,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 12.8,
+        "z": 8,
+        "w": 0.40000000000000213,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 12.8,
+        "z": 16,
+        "w": 0.40000000000000213,
+        "d": 8.399999999999999,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 12.8,
+        "z": 8,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 12.8,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 12.8,
+        "z": 8,
+        "w": 7.9999999999999964,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 12.8,
+        "z": 16,
+        "w": 7.9999999999999964,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 12.8,
+        "z": 0,
+        "w": 0.4000000000000057,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 12.8,
+        "z": 8,
+        "w": 0.4000000000000057,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 12.8,
+        "z": 16,
+        "w": 0.4000000000000057,
+        "d": 8.399999999999999,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 33.2,
+        "y": 12.8,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 41.2,
+        "y": 12.8,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      }
+    ]
+  },
+  {
+    "phase": "B",
+    "placements": {
+      "R4": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "R2": {
+        "x": 8.4,
+        "y": 0,
+        "z": 0
+      },
+      "T1": {
+        "x": 16.8,
+        "y": 0,
+        "z": 0
+      },
+      "H1": {
+        "x": 33.2,
+        "y": 0,
+        "z": 0
+      },
+      "R3": {
+        "x": 0,
+        "y": 12.8,
+        "z": 0
+      },
+      "R1": {
+        "x": 8.4,
+        "y": 12.8,
+        "z": 0
+      },
+      "T2": {
+        "x": 16.8,
+        "y": 12.8,
+        "z": 0
+      },
+      "L1": {
+        "x": 33.2,
+        "y": 12.8,
+        "z": 8.4
+      }
+    },
+    "connections": [
+      {
+        "a": "R3",
+        "b": "R1",
+        "face": "E",
+        "width": 1.5,
+        "height": 2.1,
+        "status": "pass",
+        "level": 1,
+        "y": 12.8,
+        "bridge": {
+          "x": 8,
+          "z": 1.4,
+          "w": 0.4,
+          "d": 1.5
+        },
+        "ports": {
+          "R3": "E",
+          "R1": "W"
+        }
+      },
+      {
+        "a": "R1",
+        "b": "T2",
+        "face": "E",
+        "width": 1.8,
+        "height": 2.1,
+        "status": "pass",
+        "level": 1,
+        "y": 12.8,
+        "bridge": {
+          "x": 16.4,
+          "z": 1.2,
+          "w": 0.4,
+          "d": 1.8
+        },
+        "ports": {
+          "R1": "E",
+          "T2": "W"
+        }
+      },
+      {
+        "a": "R4",
+        "b": "R2",
+        "face": "E",
+        "width": 2,
+        "height": 2.1,
+        "status": "pass",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": 8,
+          "z": 1,
+          "w": 0.4,
+          "d": 2
+        },
+        "ports": {
+          "R4": "E",
+          "R2": "W"
+        }
+      },
+      {
+        "a": "R2",
+        "b": "T1",
+        "face": "E",
+        "width": 2.4,
+        "height": 2.1,
+        "status": "pass",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": 16.4,
+          "z": 0.9,
+          "w": 0.4,
+          "d": 2.4
+        },
+        "ports": {
+          "R2": "E",
+          "T1": "W"
+        }
+      },
+      {
+        "a": "F1",
+        "b": "R3",
+        "face": "E",
+        "width": 1.5,
+        "height": 2.1,
+        "status": "pass",
+        "level": 1,
+        "y": 12.8,
+        "bridge": {
+          "x": -0.3999999999999999,
+          "z": 1.4,
+          "w": 0.4,
+          "d": 1.5
+        },
+        "ports": {
+          "F1": "E",
+          "R3": "W"
+        }
+      },
+      {
+        "a": "F0",
+        "b": "R4",
+        "face": "E",
+        "width": 2,
+        "height": 2.1,
+        "status": "pass",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": -0.3999999999999999,
+          "z": 1,
+          "w": 0.4,
+          "d": 2
+        },
+        "ports": {
+          "F0": "E",
+          "R4": "W"
+        }
+      },
+      {
+        "a": "T1",
+        "b": "H1",
+        "face": "E",
+        "width": 2.6,
+        "height": 2.8,
+        "status": "pass",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": 32.8,
+          "z": 1,
+          "w": 0.4,
+          "d": 2.6
+        },
+        "ports": {
+          "T1": "E",
+          "H1": "W"
+        }
+      },
+      {
+        "a": "H1",
+        "b": "ANNEX",
+        "face": "E",
+        "width": 2,
+        "height": 2.5,
+        "status": "pass",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": 49.2,
+          "z": 1,
+          "w": 0.4,
+          "d": 2
+        },
+        "ports": {
+          "H1": "E",
+          "ANNEX": "W"
+        }
+      }
+    ],
+    "reachable": [
+      "F0",
+      "F1",
+      "R3",
+      "R4",
+      "R1",
+      "T2",
+      "R2",
+      "T1",
+      "H1",
+      "ANNEX"
+    ],
+    "isolated": [
+      "L1"
+    ],
+    "emptySpace": [
+      {
+        "x": 0,
+        "y": 0,
+        "z": 8,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "z": 0,
+        "w": 0.40000000000000036,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "z": 8,
+        "w": 0.40000000000000036,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "z": 16,
+        "w": 0.40000000000000036,
+        "d": 8.399999999999999,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 0,
+        "z": 8,
+        "w": 7.999999999999998,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 0,
+        "z": 16,
+        "w": 7.999999999999998,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 0,
+        "z": 0,
+        "w": 0.40000000000000213,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 0,
+        "z": 8,
+        "w": 0.40000000000000213,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 0,
+        "z": 16,
+        "w": 0.40000000000000213,
+        "d": 8.399999999999999,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 0,
+        "z": 8,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 0,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 0,
+        "z": 8,
+        "w": 7.9999999999999964,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 0,
+        "z": 16,
+        "w": 7.9999999999999964,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 0,
+        "z": 0,
+        "w": 0.4000000000000057,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 0,
+        "z": 8,
+        "w": 0.4000000000000057,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 0,
+        "z": 16,
+        "w": 0.4000000000000057,
+        "d": 8.399999999999999,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 33.2,
+        "y": 0,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 41.2,
+        "y": 0,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 0,
+        "y": 12.8,
+        "z": 8,
+        "w": 8,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 0,
+        "y": 12.8,
+        "z": 8.4,
+        "w": 8,
+        "d": 7.999999999999998,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 0,
+        "y": 12.8,
+        "z": 16.4,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 12.8,
+        "z": 0,
+        "w": 0.40000000000000036,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 12.8,
+        "z": 8,
+        "w": 0.40000000000000036,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 12.8,
+        "z": 8.4,
+        "w": 0.40000000000000036,
+        "d": 7.999999999999998,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 12.8,
+        "z": 16.4,
+        "w": 0.40000000000000036,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 12.8,
+        "z": 8,
+        "w": 7.999999999999998,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 12.8,
+        "z": 8.4,
+        "w": 7.999999999999998,
+        "d": 7.999999999999998,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 12.8,
+        "z": 16.4,
+        "w": 7.999999999999998,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 12.8,
+        "z": 0,
+        "w": 0.40000000000000213,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 12.8,
+        "z": 8,
+        "w": 0.40000000000000213,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 12.8,
+        "z": 8.4,
+        "w": 0.40000000000000213,
+        "d": 7.999999999999998,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 12.8,
+        "z": 16.4,
+        "w": 0.40000000000000213,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 12.8,
+        "z": 8,
+        "w": 8,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 12.8,
+        "z": 8.4,
+        "w": 8,
+        "d": 7.999999999999998,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 12.8,
+        "z": 16.4,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 12.8,
+        "z": 8,
+        "w": 7.9999999999999964,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 12.8,
+        "z": 8.4,
+        "w": 7.9999999999999964,
+        "d": 7.999999999999998,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 12.8,
+        "z": 16.4,
+        "w": 7.9999999999999964,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 12.8,
+        "z": 0,
+        "w": 0.4000000000000057,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 12.8,
+        "z": 8,
+        "w": 0.4000000000000057,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 12.8,
+        "z": 8.4,
+        "w": 0.4000000000000057,
+        "d": 7.999999999999998,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 12.8,
+        "z": 16.4,
+        "w": 0.4000000000000057,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 33.2,
+        "y": 12.8,
+        "z": 0,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 33.2,
+        "y": 12.8,
+        "z": 8,
+        "w": 8,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 41.2,
+        "y": 12.8,
+        "z": 0,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 41.2,
+        "y": 12.8,
+        "z": 8,
+        "w": 8,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 41.2,
+        "y": 12.8,
+        "z": 16.4,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      }
+    ]
+  },
+  {
+    "phase": "C",
+    "placements": {
+      "R1": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "R3": {
+        "x": 8.4,
+        "y": 0,
+        "z": 0
+      },
+      "T2": {
+        "x": 16.8,
+        "y": 0,
+        "z": 0
+      },
+      "H1": {
+        "x": 33.2,
+        "y": 0,
+        "z": 8.4
+      },
+      "R2": {
+        "x": 0,
+        "y": 12.8,
+        "z": 0
+      },
+      "R4": {
+        "x": 8.4,
+        "y": 12.8,
+        "z": 0
+      },
+      "T1": {
+        "x": 16.8,
+        "y": 12.8,
+        "z": 0
+      },
+      "L1": {
+        "x": 33.2,
+        "y": 12.8,
+        "z": 0
+      }
+    },
+    "connections": [
+      {
+        "a": "R1",
+        "b": "R3",
+        "face": "E",
+        "width": 1.5,
+        "height": 2.1,
+        "status": "pass",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": 8,
+          "z": 1.4,
+          "w": 0.4,
+          "d": 1.5
+        },
+        "ports": {
+          "R1": "E",
+          "R3": "W"
+        }
+      },
+      {
+        "a": "F0",
+        "b": "R1",
+        "face": "E",
+        "width": 2,
+        "height": 2.1,
+        "status": "pass",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": -0.3999999999999999,
+          "z": 1,
+          "w": 0.4,
+          "d": 2
+        },
+        "ports": {
+          "F0": "E",
+          "R1": "W"
+        }
+      },
+      {
+        "a": "R2",
+        "b": "R4",
+        "face": "E",
+        "width": 2,
+        "height": 2.1,
+        "status": "pass",
+        "level": 1,
+        "y": 12.8,
+        "bridge": {
+          "x": 8,
+          "z": 1,
+          "w": 0.4,
+          "d": 2
+        },
+        "ports": {
+          "R2": "E",
+          "R4": "W"
+        }
+      },
+      {
+        "a": "F1",
+        "b": "R2",
+        "face": "E",
+        "width": 2,
+        "height": 2.1,
+        "status": "pass",
+        "level": 1,
+        "y": 12.8,
+        "bridge": {
+          "x": -0.3999999999999999,
+          "z": 1,
+          "w": 0.4,
+          "d": 2
+        },
+        "ports": {
+          "F1": "E",
+          "R2": "W"
+        }
+      },
+      {
+        "a": "R3",
+        "b": "T2",
+        "face": "E",
+        "width": 1.5,
+        "height": 2.1,
+        "status": "pass",
+        "level": 0,
+        "y": 0,
+        "bridge": {
+          "x": 16.4,
+          "z": 1.4,
+          "w": 0.4,
+          "d": 1.5
+        },
+        "ports": {
+          "R3": "E",
+          "T2": "W"
+        }
+      },
+      {
+        "a": "R4",
+        "b": "T1",
+        "face": "E",
+        "width": 2,
+        "height": 2.1,
+        "status": "pass",
+        "level": 1,
+        "y": 12.8,
+        "bridge": {
+          "x": 16.4,
+          "z": 1,
+          "w": 0.4,
+          "d": 2
+        },
+        "ports": {
+          "R4": "E",
+          "T1": "W"
+        }
+      },
+      {
+        "a": "T1",
+        "b": "L1",
+        "face": "E",
+        "width": 2,
+        "height": 2.8,
+        "status": "pass",
+        "level": 1,
+        "y": 12.8,
+        "bridge": {
+          "x": 32.8,
+          "z": 1,
+          "w": 0.4,
+          "d": 2
+        },
+        "ports": {
+          "T1": "E",
+          "L1": "W"
+        }
+      }
+    ],
+    "reachable": [
+      "F0",
+      "F1",
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "T2",
+      "T1",
+      "L1"
+    ],
+    "isolated": [
+      "H1",
+      "ANNEX"
+    ],
+    "emptySpace": [
+      {
+        "x": 0,
+        "y": 0,
+        "z": 8,
+        "w": 8,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "z": 8.4,
+        "w": 8,
+        "d": 7.999999999999998,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "z": 16.4,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "z": 0,
+        "w": 0.40000000000000036,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "z": 8,
+        "w": 0.40000000000000036,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "z": 8.4,
+        "w": 0.40000000000000036,
+        "d": 7.999999999999998,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "z": 16.4,
+        "w": 0.40000000000000036,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 0,
+        "z": 8,
+        "w": 7.999999999999998,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 0,
+        "z": 8.4,
+        "w": 7.999999999999998,
+        "d": 7.999999999999998,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 0,
+        "z": 16.4,
+        "w": 7.999999999999998,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 0,
+        "z": 0,
+        "w": 0.40000000000000213,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 0,
+        "z": 8,
+        "w": 0.40000000000000213,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 0,
+        "z": 8.4,
+        "w": 0.40000000000000213,
+        "d": 7.999999999999998,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 0,
+        "z": 16.4,
+        "w": 0.40000000000000213,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 0,
+        "z": 8,
+        "w": 8,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 0,
+        "z": 8.4,
+        "w": 8,
+        "d": 7.999999999999998,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 0,
+        "z": 16.4,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 0,
+        "z": 8,
+        "w": 7.9999999999999964,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 0,
+        "z": 8.4,
+        "w": 7.9999999999999964,
+        "d": 7.999999999999998,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 0,
+        "z": 16.4,
+        "w": 7.9999999999999964,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 0,
+        "z": 0,
+        "w": 0.4000000000000057,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 0,
+        "z": 8,
+        "w": 0.4000000000000057,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 0,
+        "z": 8.4,
+        "w": 0.4000000000000057,
+        "d": 7.999999999999998,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 0,
+        "z": 16.4,
+        "w": 0.4000000000000057,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 33.2,
+        "y": 0,
+        "z": 0,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 33.2,
+        "y": 0,
+        "z": 8,
+        "w": 8,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 41.2,
+        "y": 0,
+        "z": 0,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 41.2,
+        "y": 0,
+        "z": 8,
+        "w": 8,
+        "d": 0.40000000000000036,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 0,
+        "y": 12.8,
+        "z": 8,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 0,
+        "y": 12.8,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 12.8,
+        "z": 0,
+        "w": 0.40000000000000036,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 12.8,
+        "z": 8,
+        "w": 0.40000000000000036,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8,
+        "y": 12.8,
+        "z": 16,
+        "w": 0.40000000000000036,
+        "d": 8.399999999999999,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 12.8,
+        "z": 8,
+        "w": 7.999999999999998,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 8.4,
+        "y": 12.8,
+        "z": 16,
+        "w": 7.999999999999998,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 12.8,
+        "z": 0,
+        "w": 0.40000000000000213,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 12.8,
+        "z": 8,
+        "w": 0.40000000000000213,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.4,
+        "y": 12.8,
+        "z": 16,
+        "w": 0.40000000000000213,
+        "d": 8.399999999999999,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 12.8,
+        "z": 8,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 16.8,
+        "y": 12.8,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 12.8,
+        "z": 8,
+        "w": 7.9999999999999964,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 24.8,
+        "y": 12.8,
+        "z": 16,
+        "w": 7.9999999999999964,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 12.8,
+        "z": 0,
+        "w": 0.4000000000000057,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 12.8,
+        "z": 8,
+        "w": 0.4000000000000057,
+        "d": 8,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 32.8,
+        "y": 12.8,
+        "z": 16,
+        "w": 0.4000000000000057,
+        "d": 8.399999999999999,
+        "kind": "mechanical-clearance",
+        "floor": false
+      },
+      {
+        "x": 33.2,
+        "y": 12.8,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 41.2,
+        "y": 12.8,
+        "z": 8,
+        "w": 8,
+        "d": 8,
+        "kind": "transfer-well",
+        "floor": false
+      },
+      {
+        "x": 41.2,
+        "y": 12.8,
+        "z": 16,
+        "w": 8,
+        "d": 8.399999999999999,
+        "kind": "transfer-well",
+        "floor": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "stage": 3,
+  "browserPlaytestVerified": false,
+  "managedPreviewAttempted": true,
+  "error": "relay could not open browser port 4173: timed out waiting for relay readiness",
+  "previewStatus": "Sites preview stopped",
+  "cpuChecks": ["actual Three.js mesh ray intersections", "finite mesh bounds and occupied envelopes", "body controller replay of all shortest routes", "UI module wiring with WebGL explicitly disabled"],
+  "limits": ["No GPU screenshot or first-person browser playtest", "No mobile device validation", "No visual proof of all viewpoints"]
+}

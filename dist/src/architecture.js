@@ -1,10 +1,11 @@
 // Geometry conventions: east +X, south +Z, vertical +Y. Port intervals increase in X for N/S and Z for E/W.
-export const CELL=8,HEIGHT=6,DECK=6.4,LEVELS=[0,12.8],RADIUS=.35,CLEAR_WIDTH=.82,CLEARANCE=.2,EYE=1.81,WALK_SPEED=3.6,RUN_SPEED=5.2;
+export const CELL=8,HEIGHT=6,DECK=6.4,LOWER_DECK=-6.4,LEVELS=[0,12.8,-12.8],RADIUS=.35,CLEAR_WIDTH=.82,CLEARANCE=.2,EYE=1.81,WALK_SPEED=3.6,RUN_SPEED=5.2;
 export const LIFE_BOUNDS={x:0,z:0,w:50,d:24.8};
 export const SIZES={same:{label:'拡張・基本搬送域',w:58.4,d:33.2},ring1:{label:'拡張・一回り',w:66.8,d:41.6},ring2:{label:'拡張・二回り',w:75.2,d:50}};
 export const METHODS={serial:'空欄を再利用・順次',cooperative:'予約付き協調搬送'};
 export const DEFAULT_EXPERIMENT={size:'ring1',method:'cooperative'},NEXT={A:'B',B:'C',C:'A'};
-export const levelsFor=()=>LEVELS,decksFor=()=>[DECK],LANDING={x:-2.4,z:2,w:2,d:4},SHAFT={x:-6.8,z:1.8,w:4.4,d:4.4};
+export const levelsFor=()=>LEVELS,decksFor=()=>[LOWER_DECK,DECK],LANDING={x:-2.4,z:2,w:2,d:4},SHAFT={x:-6.8,z:1.8,w:4.4,d:4.4};
+export const levelName=y=>y===12.8?'第三層':y===0?'第二層':y===-12.8?'第一層':'搬送空間';
 const line=(a,b)=>({a,b}),box=(x,z,w,d,h=1,color='wood')=>({x,z,w,d,h,color}),port=(id,face,a,b,height=2.1)=>({id,face,a,b,height}),room=(name,x,z)=>({name,x,z}),roof=(x,z,w,d,height)=>({x,z,w,d,height});
 const crossSolids=(height)=>[box(0,0,3,3,height,'concrete'),box(5,0,3,3,height,'concrete'),box(0,5,3,3,height,'concrete'),box(5,5,3,3,height,'concrete')];
 export const BODIES=[
@@ -47,11 +48,20 @@ const booth=BODIES.find(b=>b.id==='R3');
 booth.walls.push(line([2.8,5],[2.8,5.9]),line([2.8,6.4],[2.8,7.1]));
 booth.furniture.push(box(.4,6.85,2.2,.2,1.2));
 booth.labels.push(room('簡易個室・住人',1.5,6.2));
+// Stage 5: two independently enclosed two-cell halves of the former H1.
+const hall=BODIES.find(b=>b.id==='H1'),hallOriginal=structuredClone(hall);
+hall.name='共用広間・北半 H1';hall.cells=[[0,0],[1,0]];hall.furniture=hallOriginal.furniture.filter(f=>f.z<8);hall.labels=[room('広間 北半',8,4)];hall.roofAreas=[roof(0,0,16,8,5.4)];hall.ports=hallOriginal.ports.filter(p=>p.id!=='W-south');hall.ports.push(port('S-join','S',1,15,4.8));
+BODIES.push({...hallOriginal,id:'H2',name:'共用広間・南半 H2',cells:[[0,0],[1,0]],ports:[port('N-join','N',1,15,4.8),port('W-north','W',3,5,3),port('S','S',3,5,2.5)],furniture:hallOriginal.furniture.filter(f=>f.z>=8).map(f=>({...f,z:f.z-8})),labels:[room('広間 南半',8,4)],roofAreas:[roof(0,0,16,8,5.4)]});
+for(const id of ['E1','E3'])BODIES.find(b=>b.id===id).ports.push(port('S','S',4,6,2.5));
+// A small but walkable first layer: room, four-way branch, mobile landing room.
+BODIES.push({...structuredClone(BODIES.find(b=>b.id==='R4')),id:'K1',name:'第一層・小居室と前廊下',color:'#aa9d8d',doors:[{id:'K1-door',a:[2.8,2.9],b:[4,2.9],open:false,label:'第一層の小居室'}],labels:[room('第一層 小居室',5.4,1.5),room('EV前廊下',4,4.2)]});
+BODIES.push({...structuredClone(BODIES.find(b=>b.id==='J3')),id:'K2',name:'第一層・交差通路',color:'#a3b58d',labels:[room('第一層 分岐',4,4)]});
+BODIES.push({id:'M1',name:'上下搬送・小交流室',use:'common',color:'#bba58d',cells:[[0,0]],ceiling:3,ports:[port('W','W',3,5,2.5),port('N','N',3,5,2.5),port('E','E',3,5,2.5)],walls:[],doors:[],solids:[],furniture:[box(1,1,1.5,1,.5),box(6,6,1,1,.8)],labels:[room('上下搬送 M1',4,4)],roofAreas:[roof(0,0,8,8,3)]});
 export const BY_ID=Object.fromEntries(BODIES.map(b=>[b.id,b]));
 export const PHASES={A:{label:'密集建築・住戸から店舗へ迂回'},B:{label:'予備廊下C0を挿入・近道と環状路'},C:{label:'近道を撤収・別の南北経路へ'}};
 const dock=(x,z,level)=>({x:x*8.4,z:z*8.4,y:LEVELS[level]});
 export const storageFor=e=>({x:50.4,y:DECK,z:0});
-export function placements(phase,e=DEFAULT_EXPERIMENT){const p={R1:dock(0,0,1),R2:dock(1,phase==='B'?2:0,1),R3:dock(0,phase==='C'?1:2,1),R4:dock(0,0,0),T1:dock(2,0,1),T2:dock(2,0,0),H1:phase==='B'?dock(0,1,0):dock(2,1,1),L1:phase==='B'?dock(2,1,1):dock(phase==='C'?1:2,1,0),J1:dock(0,phase==='C'?2:1,1),J2:dock(1,1,1),J3:phase==='C'?dock(0,1,0):dock(1,0,0),C0:phase==='B'?dock(1,0,1):storageFor(e)};p.E1=dock(4,0,phase==='B'?0:1);p.E3=dock(4,0,phase==='B'?1:0);p.E2=dock(5,0,phase==='C'?0:1);p.E4=dock(5,0,phase==='C'?1:0);return p;}
+export function placements(phase,e=DEFAULT_EXPERIMENT){const p={R1:dock(0,0,1),R2:dock(1,phase==='B'?2:0,1),R3:dock(0,phase==='C'?1:2,1),R4:dock(0,0,0),T1:dock(2,0,1),T2:dock(2,0,0),H1:phase==='B'?dock(0,1,0):dock(2,1,1),L1:phase==='B'?dock(2,1,1):dock(phase==='C'?1:2,1,0),J1:dock(0,phase==='C'?2:1,1),J2:dock(1,1,1),J3:phase==='C'?dock(0,1,0):dock(1,0,0),C0:phase==='B'?dock(1,0,1):storageFor(e)};p.E1=dock(4,0,phase==='B'?0:1);p.E3=dock(4,0,phase==='B'?1:0);p.E2=dock(5,0,phase==='C'?0:1);p.E4=dock(5,0,phase==='C'?1:0);p.H2=phase==='B'?{x:33.6,y:0,z:8.4}:{x:16.8,y:12.8,z:16.8};p.K1=dock(0,0,2);p.K2=dock(1,0,2);p.M1=phase==='B'?dock(4,2,0):dock(2,0,2);return p;}
 export const POINTS={home:{body:'R1',x:4,z:1.6,name:'住戸301'},shop:{body:'T1',x:7.2,z:5.4,name:'生活用品店'}};
 export const footprint=b=>({w:(Math.max(...b.cells.map(c=>c[0]))+1)*8,d:(Math.max(...b.cells.map(c=>c[1]))+1)*8});
 export const insideBody=(b,x,z)=>b.cells.some(([cx,cz])=>x>=cx*8-1e-8&&x<=cx*8+8+1e-8&&z>=cz*8-1e-8&&z<=cz*8+8+1e-8);
@@ -71,10 +81,10 @@ export function localNavigation(b,doors=defaultDoors()){const key=b.id+b.doors.m
 export const regionAt=(id,x,z,doors)=>{const c=localNavigation(BY_ID[id],doors).componentAt(x,z);return c===null?null:`${id}/${c}`;};
 export const overlap=(a,b)=>Math.max(0,Math.min(a[1],b[1])-Math.max(a[0],b[0]));
 export function worldPorts(phase,e=DEFAULT_EXPERIMENT,doors=defaultDoors()){const pos=placements(phase,e),out=[];for(const b of BODIES){const q=pos[b.id],level=LEVELS.findIndex(y=>Math.abs(q.y-y)<.01),nav=localNavigation(b,doors);for(const p of b.ports){const ns=p.face==='N'||p.face==='S',comp=nav.ports[p.id];out.push({...p,body:b.id,key:`${b.id}:${p.id}`,node:comp===null?null:`${b.id}/${comp}`,level,y:q.y,plane:(ns?q.z:q.x)+planeFor(b,p),start:(ns?q.x:q.z)+p.a,end:(ns?q.x:q.z)+p.b});}}
- for(let level=0;level<2;level++)out.push({id:'E',body:`F${level}`,key:`F${level}:E`,face:'E',a:1,b:3,node:`F${level}`,level,y:LEVELS[level],height:2.5,plane:-.4,start:3,end:5});return out;}
+ for(let level=0;level<LEVELS.length;level++)out.push({id:'E',body:`F${level}`,key:`F${level}:E`,face:'E',a:1,b:3,node:`F${level}`,level,y:LEVELS[level],height:2.5,plane:-.4,start:3,end:5});return out;}
 const graphCache=new Map();
 export function connections(phase,e=DEFAULT_EXPERIMENT,doors=defaultDoors()){const key=phase+e.size+Object.entries(doors).sort().map(([k,v])=>k+v).join('');if(graphCache.has(key))return graphCache.get(key);const ports=worldPorts(phase,e,doors),out=[];for(const p of ports)for(const q of ports){if(p.body===q.body||p.level<0||p.level!==q.level)continue;const ew=p.face==='E'&&q.face==='W',ns=p.face==='S'&&q.face==='N';if(!ew&&!ns)continue;const gap=q.plane-p.plane;if(gap<.39||gap>.81)continue;const width=overlap([p.start,p.end],[q.start,q.end]);if(width<1e-7)continue;const start=Math.max(p.start,q.start),height=Math.min(p.height,q.height),status=p.node&&q.node?(width>=CLEAR_WIDTH&&height>=2?'pass':'view'):'blocked',bridge=ew?{x:p.plane,z:start,w:gap,d:width,orientation:'EW'}:{x:start,z:p.plane,w:width,d:gap,orientation:'NS'};out.push({id:`${p.key}|${q.key}`,a:p.node,b:q.node,bodyA:p.body,bodyB:q.body,portA:p.id,portB:q.id,faceA:p.face,faceB:q.face,width,height,gap,start,end:start+width,y:p.y,level:p.level,status,bridge:{...bridge,y:p.y}});}graphCache.set(key,out);return out;}
-export function reachable(phase,e,doors){const seen=new Set(['F0','F1']),edges=connections(phase,e,doors).filter(c=>c.status==='pass');let changed=true;while(changed){changed=false;for(const c of edges){if(seen.has(c.a)&&!seen.has(c.b)){seen.add(c.b);changed=true;}if(seen.has(c.b)&&!seen.has(c.a)){seen.add(c.a);changed=true;}}}return seen;}
+export function reachable(phase,e,doors){const seen=new Set(LEVELS.map((_,i)=>`F${i}`)),edges=connections(phase,e,doors).filter(c=>c.status==='pass');let changed=true;while(changed){changed=false;for(const c of edges){if(seen.has(c.a)&&!seen.has(c.b)){seen.add(c.b);changed=true;}if(seen.has(c.b)&&!seen.has(c.a)){seen.add(c.a);changed=true;}}}return seen;}
 export const reachableBodies=(phase,e,doors)=>new Set([...reachable(phase,e,doors)].filter(n=>n.includes('/')).map(n=>n.split('/')[0]));
 export const isolated=(phase,e,doors)=>BODIES.filter(b=>LEVELS.some(y=>Math.abs(placements(phase,e)[b.id].y-y)<.01)&&!reachableBodies(phase,e,doors).has(b.id)).map(b=>b.id);
 export function portStates(phase,e,doors){const links=connections(phase,e,doors);return worldPorts(phase,e,doors).map(p=>{const matches=links.filter(c=>`${c.bodyA}:${c.portA}`===p.key||`${c.bodyB}:${c.portB}`===p.key),origin=p.start-p.a,openings=matches.filter(c=>c.status!=='blocked').map(c=>({a:c.start-origin,b:c.end-origin,height:c.height,status:c.status,id:c.id})).sort((a,b)=>a.a-b.a),masked=[];let at=p.a;for(const q of[...openings,{a:p.b,b:p.b}]){if(q.a>at+1e-7)masked.push({a:at,b:q.a});at=Math.max(at,q.b);}return {...p,status:matches.some(c=>c.status==='pass')?'pass':matches.some(c=>c.status==='view')?'view':'blocked',matches,openings,masked};});}

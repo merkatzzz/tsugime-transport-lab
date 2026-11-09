@@ -1,14 +1,17 @@
 {
   "name": "tsugime-architecture-transport-lab",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
+    "verify": "node scripts/verify-stage5.mjs",
     "start": "python3 -m http.server 8000 --directory dist",
     "test:stage1": "node --test stage1/tests/*.test.mjs",
-    "evidence": "node scripts/export-stage4.mjs",
+    "evidence": "node scripts/export-stage5.mjs",
     "package": "python3 scripts/package.py",
+    "test:stage4": "node --test stage4/tests/*.test.mjs",
+    "check:seams": "node scripts/check-seams.mjs",
     "test:stage3": "node --test stage3/tests/*.test.mjs",
     "test:stage2": "node --test stage2/tests/*.test.mjs"
   }

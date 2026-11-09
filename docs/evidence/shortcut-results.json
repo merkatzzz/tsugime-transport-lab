@@ -875,8 +875,15 @@
         },
         {
           "level": 1,
-          "edges": 10,
-          "nodes": 11,
+          "edges": 11,
+          "nodes": 12,
+          "components": 1,
+          "cycles": 0
+        },
+        {
+          "level": 2,
+          "edges": 3,
+          "nodes": 4,
           "components": 1,
           "cycles": 0
         }
@@ -1475,8 +1482,8 @@
       "cycles": [
         {
           "level": 0,
-          "edges": 6,
-          "nodes": 8,
+          "edges": 8,
+          "nodes": 10,
           "components": 2,
           "cycles": 0
         },
@@ -1486,6 +1493,13 @@
           "nodes": 12,
           "components": 1,
           "cycles": 2
+        },
+        {
+          "level": 2,
+          "edges": 2,
+          "nodes": 3,
+          "components": 1,
+          "cycles": 0
         }
       ]
     },
@@ -2348,8 +2362,15 @@
         },
         {
           "level": 1,
-          "edges": 9,
-          "nodes": 10,
+          "edges": 10,
+          "nodes": 11,
+          "components": 1,
+          "cycles": 0
+        },
+        {
+          "level": 2,
+          "edges": 3,
+          "nodes": 4,
           "components": 1,
           "cycles": 0
         }

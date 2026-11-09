@@ -1,0 +1,32 @@
+✔ uniform occupied cells and independent interior dimensions, including an exact 3-cell L (2.505698ms)
+✔ A: all graph connections agree with an actual body-disc traversal through both built wall faces (20.532033ms)
+✔ B: all graph connections agree with an actual body-disc traversal through both built wall faces (16.081219ms)
+✔ C: all graph connections agree with an actual body-disc traversal through both built wall faces (11.061157ms)
+✔ A: geometry flood matches reachable bodies; closed rooms remain closed (159.475556ms)
+✔ B: geometry flood matches reachable bodies; closed rooms remain closed (143.527517ms)
+✔ C: geometry flood matches reachable bodies; closed rooms remain closed (115.812483ms)
+✔ B provides a 0.4m visible slit but rejects a 0.7m body, with no fallback side route (1.247978ms)
+✔ A→B: continuous envelopes clear fixed works and all other movers for the complete route (21.318954ms)
+✔ B→C: continuous envelopes clear fixed works and all other movers for the complete route (22.649362ms)
+✔ C→A: continuous envelopes clear fixed works and all other movers for the complete route (13.425009ms)
+✔ continuous collision rejects a crossing missed by endpoint-only testing (0.374421ms)
+✔ broken route and occupied destinations are refused rather than certified (3.02115ms)
+✔ real walking stops at walls, thick unused structure, locked doors and furniture (10.991115ms)
+✔ every moving passenger keeps its local position, while the fixed gallery stays fixed over a complete cycle (59.760224ms)
+✔ shutters close and exploration locks until docking; pause freezes even halfway through a route (3.727379ms)
+✔ normal mode waits for evacuation and blocks new admission; deliberate isolation reconnects in C (49.220719ms)
+✔ mechanical closure waits while a body disc straddles a detachable seam (5.486999ms)
+✔ fixed elevator travels continuously in both directions; absent cabin can be called without moving the caller (1.21159ms)
+✔ debug recovery is explicit and does not manufacture a physical exit (1.003133ms)
+✔ the fixed observation room becomes reachable in B, stays fixed in transfer, and requires evacuation before A (14.11146ms)
+✔ real meshes, including wall thickness and rolled shutters, remain inside every rigid transport envelope (96.493078ms)
+✔ real built meshes expose the B slit to an eye-height ray while the same position rejects a body (35.438937ms)
+✔ real fixed gallery walls, lintels and landing shutters stay on their own side of the detachable boundary (27.863549ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1046.493019

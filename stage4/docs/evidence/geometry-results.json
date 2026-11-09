@@ -1,0 +1,60 @@
+{
+  "stage": 4,
+  "bodies": 16,
+  "cells": 23,
+  "levels": [
+    0,
+    12.8
+  ],
+  "allProfilesPassed": true,
+  "adopted": [
+    {
+      "ok": true,
+      "stages": 21,
+      "checks": 2573,
+      "maxConcurrent": 4,
+      "duration": 23.366666666666667,
+      "clearance": 0.2,
+      "area": 2778.88,
+      "areaRatio": 2.241032258064516,
+      "height": 18.8,
+      "decks": 1,
+      "emptyDockTransfers": 0,
+      "errors": []
+    },
+    {
+      "ok": true,
+      "stages": 50,
+      "checks": 6267,
+      "maxConcurrent": 6,
+      "duration": 34.333333333333336,
+      "clearance": 0.2,
+      "area": 2778.88,
+      "areaRatio": 2.241032258064516,
+      "height": 18.8,
+      "decks": 1,
+      "emptyDockTransfers": 1,
+      "errors": []
+    },
+    {
+      "ok": true,
+      "stages": 19,
+      "checks": 1848,
+      "maxConcurrent": 6,
+      "duration": 17.333333333333332,
+      "clearance": 0.2,
+      "area": 2778.88,
+      "areaRatio": 2.241032258064516,
+      "height": 18.8,
+      "decks": 1,
+      "emptyDockTransfers": 1,
+      "errors": []
+    }
+  ],
+  "browserQA": {
+    "verified": false,
+    "blocker": "sites-preview: relay could not open browser port 4173: timed out waiting for relay readiness",
+    "audioHeard": false
+  },
+  "checks": "CPU real meshes, body controller routes, camera head visibility, continuous swept boxes. GPU and audible output unverified."
+}

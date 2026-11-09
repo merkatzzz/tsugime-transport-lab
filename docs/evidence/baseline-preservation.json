@@ -2,9 +2,11 @@
   "stage1": "2aea792d10900ace9197af41ea0d5f79b642866d",
   "stage2": "88c2c01d49ba34baad9a40936032c8b5f40c87fa",
   "stage3": "40f3202324e983908b4eaa907b3b3d3567c8d0a1",
+  "stage4": "dcebd2f0fb94a8df590ecb5ca4e74de697f97b6b",
   "routes": [
     "stage1/",
     "stage2/",
-    "stage3/"
+    "stage3/",
+    "stage4/"
   ]
 }

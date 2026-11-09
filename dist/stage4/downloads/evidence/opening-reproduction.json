@@ -1,0 +1,74 @@
+[
+  {
+    "label": "before",
+    "body": "R1",
+    "port": "W",
+    "depth": 0.13,
+    "y": 15.235000000000001,
+    "z": 3.025,
+    "hits": 0
+  },
+  {
+    "label": "before",
+    "body": "R1",
+    "port": "W",
+    "depth": 0.13,
+    "y": 15.235000000000001,
+    "z": 4.975,
+    "hits": 0
+  },
+  {
+    "label": "before",
+    "body": "R1",
+    "port": "W",
+    "depth": 0.13,
+    "y": 15.8,
+    "z": 3.025,
+    "hits": 0
+  },
+  {
+    "label": "before",
+    "body": "R1",
+    "port": "W",
+    "depth": 0.13,
+    "y": 15.8,
+    "z": 4.975,
+    "hits": 0
+  },
+  {
+    "label": "after",
+    "body": "R1",
+    "port": "W",
+    "depth": 0.13,
+    "y": 15.235000000000001,
+    "z": 3.025,
+    "hits": 1
+  },
+  {
+    "label": "after",
+    "body": "R1",
+    "port": "W",
+    "depth": 0.13,
+    "y": 15.235000000000001,
+    "z": 4.975,
+    "hits": 1
+  },
+  {
+    "label": "after",
+    "body": "R1",
+    "port": "W",
+    "depth": 0.13,
+    "y": 15.8,
+    "z": 3.025,
+    "hits": 1
+  },
+  {
+    "label": "after",
+    "body": "R1",
+    "port": "W",
+    "depth": 0.13,
+    "y": 15.8,
+    "z": 4.975,
+    "hits": 1
+  }
+]
