@@ -1,8 +1,8 @@
-import {BODIES,BY_ID,CELL,HEIGHT,DECK,LEVELS,RADIUS,NEXT,PHASES,SLOTS,SPINE_PORTS,placements,connections,isolated,insideBody,boundaryWalls,portSegment,segmentDistance} from './architecture.js';
+import {BODIES,BY_ID,CELL,HEIGHT,DECK,LEVELS,RADIUS,NEXT,PHASES,SLOTS,SPINE_PORTS,placements,connections,isolated,isolatedZones,insideBody,boundaryWalls,portSegment,segmentDistance} from './architecture.js';
 import {planTransfer,validatePlan,positionDuring} from './transport.js';
 export function spineWalls(){
- const result=[{a:[-2,-4],b:[48,-4]},{a:[48,-4],b:[48,0]},{a:[-2,-4],b:[-2,-3.6]},{a:[-2,-.4],b:[-2,0]}];
- let last=-2;for(let i=0;i<4;i++){const [a,b]=SPINE_PORTS[i].map(v=>v+SLOTS[i]);result.push({a:[last,0],b:[a,0]});last=b;}result.push({a:[last,0],b:[48,0]});return result;
+ const result=[{a:[-2,-3.94],b:[48,-3.94]},{a:[47.94,-4],b:[47.94,0]},{a:[-1.94,-4],b:[-1.94,-3.6]},{a:[-1.94,-.4],b:[-1.94,0]}];
+ let last=-2;for(let i=0;i<4;i++){const [a,b]=SPINE_PORTS[i].map(v=>v+SLOTS[i]);result.push({a:[last,-.06],b:[a,-.06]});last=b;}result.push({a:[last,-.06],b:[48,-.06]});return result;
 }
 export class Simulation{
  constructor(){this.reset();}
@@ -17,12 +17,13 @@ export class Simulation{
  get next(){return NEXT[this.phase];}
  get liveConnections(){return connections(this.phase).map(c=>this.shutter>.01?{...c,status:'blocked'}:c);}
  get liveReachable(){const seen=new Set(['F0','F1']);let changed=true;while(changed){changed=false;for(const c of this.liveConnections.filter(c=>c.status==='pass')){if(seen.has(c.a)&&!seen.has(c.b)){seen.add(c.b);changed=true;}if(seen.has(c.b)&&!seen.has(c.a)){seen.add(c.a);changed=true;}}}return seen;}
- get targetIsolated(){return isolated(this.next);}
+ get targetIsolated(){return isolatedZones(this.next);}
  portIsOpen(id,port){if(this.shutter>.01)return false;return connections(this.phase).some(c=>(c.a===id&&c.face===port.face||c.b===id&&c.face==='E'&&port.face==='W')&&c.status!=='blocked');}
  get owner(){return this.ownerAt(this.player.x,this.player.z,this.player.y);}
  ownerAt(x,z,y=this.player.y){
   if(x>=-6&&x<-2&&z>=-4&&z<=0&&Math.abs(y-this.liftY)<.01)return 'lift';
   for(const b of BODIES){const p=this.positions[b.id];if(Math.abs(p.y-y)<.01&&insideBody(b,x-p.x,z-p.z))return b.id;}
+  if(Math.abs(y)<.01&&x>=48&&x<=52&&z>=4&&z<=8)return 'ANNEX';
   if(x>=-2&&x<=48&&z>=-4&&z<=0&&LEVELS.some(v=>Math.abs(v-y)<.01))return 'fixed';return null;
  }
  floorSupports(x,z,y){return !!this.ownerAt(x,z,y);}
@@ -35,6 +36,8 @@ export class Simulation{
    if(this.liftActive||Math.abs(this.liftY-y)>.01)add({a:[-2,-3.6],b:[-2,-.4]},undefined,'fixed',y);
   }
   for(const l of [{a:[-6,-4],b:[-2,-4]},{a:[-6,0],b:[-2,0]},{a:[-6,-4],b:[-6,0]}])add(l,undefined,'lift',this.liftY);
+  for(const l of [{a:[48,4.06],b:[52,4.06]},{a:[48,7.94],b:[52,7.94]},{a:[51.94,4],b:[51.94,8]},{a:[48.06,4],b:[48.06,5]},{a:[48.06,7],b:[48.06,8]}])add(l,undefined,'ANNEX',0);
+  if(this.shutter>.01||!connections(this.phase).some(c=>c.b==='ANNEX'&&c.status==='pass'))add({a:[48.06,5],b:[48.06,7]},undefined,'ANNEX',0);
   for(const b of BODIES){const p=this.positions[b.id];for(const l of [...boundaryWalls(b),...b.walls])add(l,p,b.id,p.y);
    for(const d of b.doors)if(!this.doors[d.id])add(d,p,b.id,p.y);
    for(const port of b.ports)if(!this.portIsOpen(b.id,port))add(portSegment(b,port),p,b.id,p.y);
@@ -76,6 +79,7 @@ export class Simulation{
   if(!this.experimental&&this.targetIsolated.includes(own)){this.mode='evacuate';this.message='退避待ち：この区画は次周期で孤立します。固定回廊まで歩いて退避してください。';return;}
   // A body disc spanning a detachable seam must clear it before mechanical closure.
   if(this.player.z>-.46&&this.player.z<.46){this.mode='evacuate';this.message='継ぎ目上で待機中です。廊下または搬送体の内側へ移動してください。';return;}
+  if(own==='ANNEX'&&this.player.x<48.46){this.mode='evacuate';this.message='固定観察室の継ぎ目から離れてください。';return;}
   // Also protect lateral detachable seams (permanent internal chunk seams are safe).
   if(BY_ID[own]){const p=this.positions[own];for(const port of BY_ID[own].ports){if((port.face==='E'||port.face==='W')&&Math.abs(this.player.x-(p.x+(port.face==='E'?Math.max(...BY_ID[own].cells.map(c=>c[0]+1))*8:0)))<.46){this.mode='evacuate';this.message='側面継ぎ目から離れてください。';return;}}}
   this.passenger=BY_ID[own]?{id:own,x:this.player.x-this.positions[own].x,z:this.player.z-this.positions[own].z}:null;
@@ -100,7 +104,7 @@ export class Simulation{
     this.history.unshift(`${this.plan.from} → ${this.phase}：${this.lastCheck.checks}件の連続衝突検査、干渉0`);this.history=this.history.slice(0,6);
    }return;
   }
-  if(this.mode==='opening'){this.shutter=1-Math.min(1,this.elapsed/1.2);this.invalidate();if(this.elapsed>=1.3){this.mode='idle';this.shutter=0;this.invalidate();this.message=isolated(this.phase).includes(this.owner)?'意図的な孤立状態です。次の周期で物理的に再接続できます。':'搬送完了。新しい開口と到達範囲を探索できます。';}}
+  if(this.mode==='opening'){this.shutter=1-Math.min(1,this.elapsed/1.2);this.invalidate();if(this.elapsed>=1.3){this.mode='idle';this.shutter=0;this.invalidate();this.message=isolatedZones(this.phase).includes(this.owner)?'意図的な孤立状態です。次の周期で物理的に再接続できます。':'搬送完了。新しい開口と到達範囲を探索できます。';}}
  }
  useLift(){
   if(this.mode!=='idle'||this.liftActive)return false;

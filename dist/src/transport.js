@@ -2,7 +2,7 @@ import {BODIES,BY_ID,CELL,HEIGHT,DECK,LEVELS,placements} from './architecture.js
 export const mix=(a,b,t)=>({x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t,z:a.z+(b.z-a.z)*t});
 export function boxes(id,p){return BY_ID[id].cells.map(([x,z])=>({id,min:[p.x+x*CELL,p.y,p.z+z*CELL],max:[p.x+(x+1)*CELL,p.y+HEIGHT,p.z+(z+1)*CELL]}));}
 export const intersects=(a,b)=>a.min.every((v,i)=>v<b.max[i]-1e-7&&a.max[i]>b.min[i]+1e-7);
-export const FIXED=[{id:'EV',min:[-6,-1,-4],max:[-2,30,0]},...LEVELS.map((y,i)=>({id:`SPINE${i}`,min:[-2,y,-4],max:[48,y+HEIGHT,0]}))];
+export const FIXED=[{id:'EV',min:[-6,-1,-4],max:[-2,30,0]},{id:'ANNEX',min:[48,0,4],max:[52,5,8]},...LEVELS.map((y,i)=>({id:`SPINE${i}`,min:[-2,y,-4],max:[48,y+HEIGHT,0]}))];
 const swept=(a,b)=>({id:a.id,min:a.min.map((v,i)=>Math.min(v,b.min[i])),max:a.max.map((v,i)=>Math.max(v,b.max[i]))});
 // Exact continuous relative-motion slab test, including contact at ends.
 export function movingCollision(a0,a1,b0,b1){

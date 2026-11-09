@@ -4,6 +4,7 @@ import {BODIES,BY_ID,PHASES,NEXT,connections,isolated,reachable,footprint} from 
 import {planTransfer,validatePlan} from './transport.js';
 import {floorSVG,deckSVG} from './maps.js';
 const $=s=>document.querySelector(s),sim=new Simulation();let view=null;
+if(['localhost','127.0.0.1'].includes(location.hostname))document.querySelectorAll('[data-hosted-source]').forEach(a=>a.hidden=true);
 try{view=new View($('#viewport'),sim);}catch(e){$('#webgl-error').hidden=false;console.error('WebGL initialization failed',e);}
 let selected='R1',planPreview=null,mapView='floors',lastUI=0,keys=new Set(),dragging=false,lastPointer=null;
 const validations=Object.keys(PHASES).map(p=>({from:p,to:NEXT[p],...validatePlan(planTransfer(p,NEXT[p]))}));
@@ -31,7 +32,7 @@ const touchKeys={forward:'KeyW',back:'KeyS',left:'KeyA',right:'KeyD'};document.q
 function renderUI(){
  const active=sim.mode!=='idle',own=sim.owner,level=Math.abs(sim.player.y-24)<.1?'第三層':Math.abs(sim.player.y)<.1?'第二層':'搬送空間';
  $('#phase-badge').textContent=`周期 ${sim.phase}`;$('#phase-description').textContent=PHASES[sim.phase].label;$('#reachable-count').innerHTML=`${BODIES.filter(b=>sim.liveReachable.has(b.id)).length}<span>/ 8</span>`;
- $('#collision-count').textContent=sim.lastCheck?.errors.length??0;$('#player-location').textContent=`${level} / ${BY_ID[own]?.name??(own==='lift'?'固定エレベーター':'固定回廊')}`;$('#coordinates').textContent=`X ${sim.player.x.toFixed(1)}　Y ${sim.player.y.toFixed(1)}　Z ${sim.player.z.toFixed(1)}`;
+ $('#collision-count').textContent=sim.lastCheck?.errors.length??0;$('#player-location').textContent=`${level} / ${BY_ID[own]?.name??(own==='ANNEX'?'固定観察室':own==='lift'?'固定エレベーター':'固定回廊')}`;$('#coordinates').textContent=`X ${sim.player.x.toFixed(1)}　Y ${sim.player.y.toFixed(1)}　Z ${sim.player.z.toFixed(1)}`;
  $('#message').textContent=sim.message;$('#sequence').innerHTML=`${active?sim.plan?.from??sim.phase:sim.phase} <i>→</i> ${active?sim.plan?.to??sim.next:sim.next}`;
  $('#start').disabled=active||sim.liftActive;$('#start').innerHTML=`${sim.next} へ搬送 <span>→</span>`;$('#pause').disabled=!active&&!sim.liftActive;$('#pause').textContent=sim.paused?'▶':'Ⅱ';$('#pause').title=sim.paused?'再開':'一時停止';$('#cancel').hidden=!['warning','evacuate'].includes(sim.mode);
  const statuses={idle:'ドック固定・探索可能',warning:`退避警告 ${Math.max(0,5-sim.elapsed).toFixed(1)}秒`,evacuate:'安全確認・退避待ち',closing:'シャッター閉鎖・固定解除',moving:'搬送中・探索操作停止',opening:'再固定・シャッター開放'};

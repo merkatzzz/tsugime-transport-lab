@@ -32,11 +32,11 @@ export const BODIES=[
   doors:[{id:'T2-door',a:[8,4.7],b:[8,6],open:true,label:'奥の店舗入口'}],
   solids:[box(5.1,0,2.8,4.3,3.5,'concrete')],furniture:[box(.7,1,1,3.2,1.2),box(10,.7,4.7,1.2,1.1),box(10.5,3.2,3.4,1,1.1)],labels:[room('小売店',3,3),room('奥の店舗',12,5.5)]},
  {id:'H1',name:'四連結の共用広間',use:'common',color:'#839eb8',cells:[cell(0,0),cell(1,0),cell(0,1),cell(1,1)],ceiling:4.5,
-  ports:[port('N',2,6),port('W',5,7)],walls:[],doors:[],solids:[],
+  ports:[port('N',2,6),port('W',5,7),port('E',5,7)],walls:[],doors:[],solids:[],
   furniture:[box(2,4,2,1,.5),box(2,9,2,1,.5),box(10,4,4,1,.5),box(10,10,4,1,.5),box(6.5,6.5,2,2,.65)],labels:[room('共用広間',8,3),room('室内高 4.5m',8,12)]},
  {id:'L1',name:'三連結のL字集会室',use:'common',color:'#9796ae',cells:[cell(0,0),cell(1,0),cell(0,1)],ceiling:4.1,
   ports:[port('N',2,5),port('W',5,7)],
-  walls:[line([8,6],[13,1]),line([10,8],[15,3])],doors:[],solids:[],
+  walls:[line([8,6],[13,1]),line([10.1,7.9],[15,3])],doors:[],solids:[],
   furniture:[box(1,10,1.3,4,.6),box(4.8,11,2,1,.65)],labels:[room('集会室',4,4),room('45°通路',11.5,4.5),room('休憩翼',4.5,12)]}
 ];
 export const BY_ID=Object.fromEntries(BODIES.map(b=>[b.id,b]));
@@ -59,14 +59,15 @@ export function perimeter(b){
  }
  return edges;
 }
-export function portSegment(b,p){const f=footprint(b);return p.face==='N'?line([p.a,0],[p.b,0]):p.face==='S'?line([p.a,f.d],[p.b,f.d]):p.face==='W'?line([0,p.a],[0,p.b]):line([f.w,p.a],[f.w,p.b]);}
+// Mechanical frames sit 0.2m INSIDE the transport envelope, never across a detachable seam.
+export function portSegment(b,p){const f=footprint(b);return p.face==='N'?line([p.a,.2],[p.b,.2]):p.face==='S'?line([p.a,f.d-.2],[p.b,f.d-.2]):p.face==='W'?line([.2,p.a],[.2,p.b]):line([f.w-.2,p.a],[f.w-.2,p.b]);}
 export function boundaryWalls(b){
  const walls=[];
  for(const e of perimeter(b)){
   const axis=e.face==='N'||e.face==='S'?0:1,other=1-axis;
   const outer=e.face==='N'?0:e.face==='S'?footprint(b).d:e.face==='W'?0:footprint(b).w;
   const cuts=b.ports.filter(p=>p.face===e.face&&e.a[other]===outer).map(p=>[Math.max(e.a[axis],p.a),Math.min(e.b[axis],p.b)]).filter(([a,c])=>c>a).sort((a,c)=>a[0]-c[0]);
-  let at=e.a[axis];for(const [a,c] of [...cuts,[e.b[axis],e.b[axis]]]){if(a>at){let aa=[...e.a],bb=[...e.b];aa[axis]=at;bb[axis]=a;walls.push(line(aa,bb));}at=Math.max(at,c);}
+  let at=e.a[axis];for(const [a,c] of [...cuts,[e.b[axis],e.b[axis]]]){if(a>at){let aa=[...e.a],bb=[...e.b];aa[axis]=at;bb[axis]=a;const inset=e.face==='N'||e.face==='W'?.06:-.06;aa[other]+=inset;bb[other]+=inset;walls.push(line(aa,bb));}at=Math.max(at,c);}
  }
  return walls;
 }
@@ -86,10 +87,13 @@ export function connections(phase){
   const width=east&&west?overlap([east.a+pa.z,east.b+pa.z],[west.a+pb.z,west.b+pb.z]):0;
   result.push({a:a.id,b:b.id,face:'E',width,height:2.8,status:width>=CLEAR_WIDTH?'pass':width>0?'view':'blocked',level:LEVELS.indexOf(pa.y)});
  }
+ const east=PHASES[phase].floors[0][3],exit=BY_ID[east].ports.find(p=>p.face==='E'),width=exit?overlap([exit.a,exit.b],[5,7]):0;
+ result.push({a:east,b:'ANNEX',face:'E',width,height:2.8,status:width>=CLEAR_WIDTH?'pass':width>0?'view':'blocked',level:0});
  return result;
 }
 export function reachable(phase){const edges=connections(phase).filter(c=>c.status==='pass');const seen=new Set(['F0','F1']);let changed=true;while(changed){changed=false;for(const c of edges){if(seen.has(c.a)&&!seen.has(c.b)){seen.add(c.b);changed=true;}if(seen.has(c.b)&&!seen.has(c.a)){seen.add(c.a);changed=true;}}}return seen;}
 export const isolated=phase=>BODIES.filter(b=>!reachable(phase).has(b.id)).map(b=>b.id);
+export const isolatedZones=phase=>[...isolated(phase),...(!reachable(phase).has('ANNEX')?['ANNEX']:[])];
 export function segmentDistance(x,z,a,b){const dx=b[0]-a[0],dz=b[1]-a[1],t=Math.max(0,Math.min(1,((x-a[0])*dx+(z-a[1])*dz)/(dx*dx+dz*dz||1)));return Math.hypot(x-a[0]-t*dx,z-a[1]-t*dz);}
 export function localBlocked(body,x,z,doors={},portOpen=()=>true,radius=RADIUS){
  if(!insideBody(body,x,z))return true;

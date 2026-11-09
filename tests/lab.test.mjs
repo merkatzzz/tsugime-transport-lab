@@ -8,7 +8,7 @@ function runUntil(s,predicate,max=20000){for(let i=0;i<max&&!predicate();i++)s.t
 function place(s,id,x,z){const p=s.positions[id];s.player={x:p.x+x,y:p.y,z:p.z+z,yaw:0,pitch:0,owner:id};assert.ok(s.isFree(s.player.x,s.player.z),`invalid fixture ${id}`);}
 function flood(s,y){
  const step=.25,seen=new Set(),queue=[[24,-8]],key=(x,z)=>`${x},${z}`;
- for(let head=0;head<queue.length;head++){const [x,z]=queue[head],k=key(x,z);if(seen.has(k)||x< -24||x>192||z< -16||z>64||!s.isFree(x*step,z*step,y))continue;seen.add(k);queue.push([x+1,z],[x-1,z],[x,z+1],[x,z-1]);}
+ for(let head=0;head<queue.length;head++){const [x,z]=queue[head],k=key(x,z);if(seen.has(k)||x< -24||x>208||z< -16||z>64||!s.isFree(x*step,z*step,y))continue;seen.add(k);queue.push([x+1,z],[x-1,z],[x,z+1],[x,z-1]);}
  return {seen,has:(x,z)=>seen.has(key(Math.round(x/step),Math.round(z/step))),owners:new Set([...seen].map(k=>{const [x,z]=k.split(',').map(Number);return s.ownerAt(x*step,z*step,y);} ))};
 }
 test('uniform occupied cells and independent interior dimensions, including an exact 3-cell L',()=>{
@@ -26,7 +26,7 @@ for(const phase of ['A','B','C'])test(`${phase}: all graph connections agree wit
 });
 for(const phase of ['A','B','C'])test(`${phase}: geometry flood matches reachable bodies; closed rooms remain closed`,()=>{
  const s=atPhase(phase),found=new Set();
- for(const y of LEVELS){const f=flood(s,y);for(const id of f.owners)found.add(id);
+ for(const y of LEVELS){const f=flood(s,y);for(const id of f.owners)found.add(id);if(y===0)assert.equal(f.owners.has('ANNEX'),phase!=='A','newly accessible fixed observation room');
   const r2=s.positions.R2;if(r2.y===y){assert.equal(f.has(r2.x+3,1.25),true,'simple room 1 enterable');assert.equal(f.has(r2.x+2,4),false,'room 2 locked');assert.equal(f.has(r2.x+2,6.5),false,'room 3 glazed and blocked');}
   for(const id of ['R1','R3','T1','T2','H1','L1']){const p=s.positions[id];if(p.y!==y)continue;const label=BY_ID[id].labels[0];assert.equal(f.has(p.x+label.x,p.z+label.z),true,`${id} representative interior`);}
  }
@@ -60,7 +60,7 @@ test('every moving passenger keeps its local position, while the fixed gallery s
  const s=new Simulation(),start={...s.player};for(let i=0;i<3;i++){s.startTransfer();runUntil(s,()=>s.mode==='idle');assert.deepEqual(s.player,start);}assert.equal(s.phase,'A');assert.equal(s.completed,3);
 });
 test('shutters close and exploration locks until docking; pause freezes even halfway through a route',()=>{
- const s=new Simulation();s.startTransfer();runUntil(s,()=>s.mode==='moving');const p=structuredClone(s.positions);assert.equal(s.shutter,1);assert.equal(s.move(0,.5),false);assert.equal(s.isFree(6,0,24),false);s.paused=true;for(let i=0;i<100;i++)s.tick(.1);assert.deepEqual(s.positions,p);s.paused=false;runUntil(s,()=>s.mode==='idle');assert.equal(s.shutter,0);assert.equal(s.isFree(5.5,0,24),true);
+ const s=new Simulation();s.startTransfer();runUntil(s,()=>s.mode==='moving');const p=structuredClone(s.positions);assert.equal(s.shutter,1);assert.equal(s.liveConnections.filter(c=>c.status==='pass').length,0);assert.equal(s.liveReachable.size,2);assert.equal(s.move(0,.5),false);assert.equal(s.isFree(6,0,24),false);s.paused=true;for(let i=0;i<100;i++)s.tick(.1);assert.deepEqual(s.positions,p);s.paused=false;runUntil(s,()=>s.mode==='idle');assert.equal(s.shutter,0);assert.equal(s.isFree(5.5,0,24),true);
 });
 test('normal mode waits for evacuation and blocks new admission; deliberate isolation reconnects in C',()=>{
  const s=new Simulation();place(s,'R4',3.8,1.2);s.startTransfer();runUntil(s,()=>s.mode==='evacuate');assert.equal(s.phase,'A');assert.match(s.message,/退避待ち/);for(let i=0;i<50;i++)s.move(0,-.1);assert.equal(s.owner,'fixed');runUntil(s,()=>s.mode==='idle');assert.equal(s.phase,'B');
@@ -76,4 +76,7 @@ test('fixed elevator travels continuously in both directions; absent cabin can b
 });
 test('debug recovery is explicit and does not manufacture a physical exit',()=>{
  const s=atPhase('B');place(s,'R4',3.8,1.2);assert.ok(isolated(s.phase).includes(s.owner));s.rescue();assert.equal(s.owner,'fixed');assert.equal(s.phase,'B');assert.match(s.message,/デバッグ/);assert.deepEqual(isolated(s.phase),['R4']);
+});
+test('the fixed observation room becomes reachable in B, stays fixed in transfer, and requires evacuation before A',()=>{
+ const s=atPhase('B');assert.equal(atPhase('A').liveReachable.has('ANNEX'),false);assert.ok(s.liveReachable.has('ANNEX'));s.player={x:50,y:0,z:6,yaw:0,pitch:0};const before={...s.player};assert.ok(s.isFree(50,6,0));s.startTransfer();runUntil(s,()=>s.mode==='idle');assert.equal(s.phase,'C');assert.deepEqual(s.player,before);s.startTransfer();runUntil(s,()=>s.mode==='evacuate');assert.match(s.message,/退避待ち/);for(let i=0;i<35;i++)s.move(-.1,0);assert.equal(s.owner,'H1');runUntil(s,()=>s.mode==='idle');assert.equal(s.phase,'A');assert.equal(s.liveReachable.has('ANNEX'),false);
 });
