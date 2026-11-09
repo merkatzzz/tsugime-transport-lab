@@ -39,7 +39,7 @@
           4.6,
           3.2
         ],
-        "open": true,
+        "open": false,
         "label": "住戸301"
       },
       {
@@ -53,7 +53,7 @@
           6.2,
           2.8
         ],
-        "open": true,
+        "open": false,
         "label": "小住戸"
       },
       {
@@ -67,7 +67,7 @@
           5.8,
           5
         ],
-        "open": true,
+        "open": false,
         "label": "個室201"
       },
       {
@@ -81,7 +81,7 @@
           4,
           2.9
         ],
-        "open": true,
+        "open": false,
         "label": "小居室"
       },
       {
@@ -95,7 +95,7 @@
           11.2,
           3.4
         ],
-        "open": true,
+        "open": false,
         "label": "奥店舗"
       },
       {
@@ -196,7 +196,7 @@
           4.6,
           3.2
         ],
-        "open": true,
+        "open": false,
         "label": "住戸301"
       },
       {
@@ -210,7 +210,7 @@
           6.2,
           2.8
         ],
-        "open": true,
+        "open": false,
         "label": "小住戸"
       },
       {
@@ -224,7 +224,7 @@
           5.8,
           5
         ],
-        "open": true,
+        "open": false,
         "label": "個室201"
       },
       {
@@ -238,7 +238,7 @@
           4,
           2.9
         ],
-        "open": true,
+        "open": false,
         "label": "小居室"
       },
       {
@@ -252,7 +252,7 @@
           11.2,
           3.4
         ],
-        "open": true,
+        "open": false,
         "label": "奥店舗"
       },
       {
@@ -353,7 +353,7 @@
           4.6,
           3.2
         ],
-        "open": true,
+        "open": false,
         "label": "住戸301"
       },
       {
@@ -367,7 +367,7 @@
           6.2,
           2.8
         ],
-        "open": true,
+        "open": false,
         "label": "小住戸"
       },
       {
@@ -381,7 +381,7 @@
           5.8,
           5
         ],
-        "open": true,
+        "open": false,
         "label": "個室201"
       },
       {
@@ -395,7 +395,7 @@
           4,
           2.9
         ],
-        "open": true,
+        "open": false,
         "label": "小居室"
       },
       {
@@ -409,7 +409,7 @@
           11.2,
           3.4
         ],
-        "open": true,
+        "open": false,
         "label": "奥店舗"
       },
       {

@@ -869,8 +869,8 @@
         {
           "level": 0,
           "edges": 6,
-          "nodes": 7,
-          "components": 1,
+          "nodes": 8,
+          "components": 2,
           "cycles": 0
         },
         {
@@ -1476,8 +1476,8 @@
         {
           "level": 0,
           "edges": 6,
-          "nodes": 7,
-          "components": 1,
+          "nodes": 8,
+          "components": 2,
           "cycles": 0
         },
         {
@@ -2342,8 +2342,8 @@
         {
           "level": 0,
           "edges": 6,
-          "nodes": 7,
-          "components": 1,
+          "nodes": 8,
+          "components": 2,
           "cycles": 0
         },
         {

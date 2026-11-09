@@ -2,7 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as THREE from '../dist/vendor/three.module.js';
 import {View} from '../dist/src/view.js';
-import {Simulation} from '../dist/src/simulation.js';
+import {Simulation as BaseSimulation} from '../dist/src/simulation.js';
+// Geometry/transport fixtures explicitly open ordinary doors; startup is tested separately.
+class Simulation extends BaseSimulation{constructor(...args){super(...args);for(const id of Object.keys(this.doors)){this.doors[id]=true;this.experience.doorTargets[id]=true;this.experience.doorProgress[id]=1;}this.invalidate();}}
 import {BODIES,HEIGHT,LEVELS,placements,insideBody,NEXT} from '../dist/src/architecture.js';
 import {shortcutMeasurements} from '../dist/src/navigation.js';
 import {NPCS,worldPoint} from '../dist/src/experience.js';
