@@ -1,0 +1,12 @@
+{
+  "stage1": {
+    "commit": "2aea792d10900ace9197af41ea0d5f79b642866d",
+    "tests": 24,
+    "route": "stage1/"
+  },
+  "stage2": {
+    "commit": "88c2c01d49ba34baad9a40936032c8b5f40c87fa",
+    "tests": 44,
+    "route": "stage2/"
+  }
+}

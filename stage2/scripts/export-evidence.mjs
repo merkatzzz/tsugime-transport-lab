@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import {Simulation} from '../dist/src/simulation.js';
+import {floorSVG,deckSVG} from '../dist/src/maps.js';
+import {planTransfer,validatePlan,comparison} from '../dist/src/transport.js';
+import {BODIES,PHASES,NEXT,placements,connections,reachable,isolatedZones,emptyDocks,DEFAULT_EXPERIMENT} from '../dist/src/architecture.js';
+fs.mkdirSync('docs/evidence',{recursive:true});
+const write=(name,data)=>fs.writeFileSync(`docs/evidence/${name}`,typeof data==='string'?data:JSON.stringify(data,null,2));
+// Step 2 control: first check redesigned moving corridors with generous horizontal space.
+const baseline=['A','B','C'].map(from=>({from,to:NEXT[from],...validatePlan(planTransfer(from,NEXT[from],{size:'generous',method:'serial'}))}));
+const matrix=comparison();write('comparisons.json',{baselineWithGenerousSpace:baseline,experiments:matrix});
+const log=fs.readFileSync('docs/evidence/test-output.txt','utf8'),testCount=Number(log.match(/tests (\d+)/)?.[1]);
+const transitions=['A','B','C'].map(from=>({from,to:NEXT[from],...validatePlan(planTransfer(from,NEXT[from]))}));write('geometry-results.json',{stage:2,date:'2026-11-09',testCount,requiredClearance:.2,experiment:DEFAULT_EXPERIMENT,transitions});
+write('phases.json',Object.keys(PHASES).map(phase=>({phase,placements:placements(phase),connections:connections(phase),reachable:[...reachable(phase)],isolated:isolatedZones(phase),emptySpace:emptyDocks(phase)})));
+const s=new Simulation();for(const phase of['A','B','C'])for(let level=0;level<2;level++)write(`${phase}-level-${level+2}.svg`,floorSVG(s,level,{phase}));s.plan=planTransfer('A','B');write('transport-route.svg',deckSVG(s));
+write('adopted-plans.json',['A','B','C'].map(p=>planTransfer(p,NEXT[p])));
+const initial=placements('A'),target=structuredClone(initial);target.R1={...initial.R3};target.R3={...initial.R1};const direct={from:'A',to:'A',experiment:DEFAULT_EXPERIMENT,initial,target,stages:[{duration:5,motions:['R1','R3'].map(id=>({id,from:initial[id],to:target[id]}))}],duration:5};write('negative-controls.json',{directVerticalSwap:validatePlan(direct),rangeTooSmall:validatePlan(planTransfer('A','B',{bounds:{w:15,d:24.4}}))});
+write('stage1-baseline.json',{sourceCommit:'2aea792d10900ace9197af41ea0d5f79b642866d',envelope:[8,8,5],lifeUpper:24,upperEnvelopeTop:29,transportRange:[48,80],transportArea:3840,fixedCorridorArea:400,...JSON.parse(fs.readFileSync('stage1/docs/evidence/geometry-results.json','utf8'))});
+const rows=matrix.filter(r=>r.size!=='generous'),sizeLabel={same:'同程度',ring1:'一回り',ring2:'二回り'},methodLabel={serial:'順次',cooperative:'協調',vertical:'高さ退避'};let svg='<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="560" viewBox="0 0 1060 560"><rect width="1060" height="560" fill="#f1f2e9"/><g font-family="sans-serif" fill="#37513f"><text x="28" y="36" font-size="20">第二段階：同一の建築・目標配置による搬送比較</text>';
+const headers=['範囲／方式','平面 m²','面積比','生活階上端','段数','循環区間','循環秒','最大同時'];const xs=[28,225,375,485,625,710,835,950];headers.forEach((h,i)=>svg+=`<text x="${xs[i]}" y="76" font-size="13">${h}</text>`);
+rows.forEach((r,i)=>{const t=r.transitions,y=112+i*42;svg+=`<rect x="20" y="${y-23}" width="1020" height="37" fill="${r.size==='same'&&r.method==='cooperative'?'#d8e5cf':'#e7ebdf'}"/>`;const cols=[`${sizeLabel[r.size]}／${methodLabel[r.method]}`,t[0].area.toFixed(2),t[0].areaRatio.toFixed(2)+'×',t[0].height.toFixed(1)+'m',String(t[0].decks),String(t.reduce((a,x)=>a+x.stages,0)),t.reduce((a,x)=>a+x.duration,0).toFixed(1),String(Math.max(...t.map(x=>x.maxConcurrent)))];cols.forEach((c,j)=>svg+=`<text x="${xs[j]}" y="${y}" font-size="13">${c}</text>`);});svg+='<text x="28" y="518" font-size="12">全案：A→B→C→Aの3D連続検査成功、必要離隔0.2m。時間は警告・開閉を除く1倍速。</text><text x="28" y="540" font-size="12">面積基準は3周期共通の生活域外接矩形49.2×24.4m。実床面積との同面積を意味しない。</text></g></svg>';write('comparison.svg',svg);
+console.log(`Exported ${testCount} tests, ${matrix.length} profiles and ${matrix.length*3} transitions.`);

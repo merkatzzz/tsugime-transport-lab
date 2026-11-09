@@ -1,6 +1,6 @@
 {
   "name": "tsugime-architecture-transport-lab",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,6 +8,7 @@
     "start": "python3 -m http.server 8000 --directory dist",
     "test:stage1": "node --test stage1/tests/*.test.mjs",
     "evidence": "node scripts/export-evidence.mjs",
-    "package": "python3 scripts/package.py"
+    "package": "python3 scripts/package.py",
+    "test:stage2": "node --test stage2/tests/*.test.mjs"
   }
 }

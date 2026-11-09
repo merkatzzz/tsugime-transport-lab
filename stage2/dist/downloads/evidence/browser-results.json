@@ -1,0 +1,19 @@
+{
+  "stage": 2,
+  "date": "2026-11-09",
+  "environment": "ccarenv_b64_Y2NhcmVudl81ZDkxZWQyZjQzMTA4MTkxYTc3ODhkN2M1MTY2OGQwNw",
+  "browserQA": "unverified",
+  "webglInitialization": "unverified",
+  "localPreviewError": "relay could not open browser port 4173: timed out waiting for relay readiness",
+  "sharedChromeNavigationError": "Browser Use could not read requirements",
+  "nativeInputError": "AT-SPI provider is unavailable; no provider connections",
+  "observedPage": "about:blank / chrome new tab",
+  "actual3DScreenshot": false,
+  "automatedTestsPassed": 44,
+  "stage1RegressionTestsPassed": 24,
+  "substitutionsInMeshTests": [
+    "GPU renderer",
+    "text textures"
+  ],
+  "mobileRealDevice": "unverified"
+}

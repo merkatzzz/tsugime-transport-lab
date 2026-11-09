@@ -1,20 +1,33 @@
 {
-  "directVerticalSwap": {
+  "directSwap": {
     "ok": false,
     "stages": 1,
-    "checks": 35,
+    "checks": 258,
     "maxConcurrent": 2,
     "duration": 5,
     "clearance": 0.2,
-    "area": 1200.48,
-    "areaRatio": 1,
+    "area": 1381.1200000000001,
+    "areaRatio": 1.6774193548387095,
     "height": 18.8,
     "decks": 1,
+    "emptyDockTransfers": 0,
     "errors": [
       {
         "stage": 0,
         "id": "R1",
         "other": "R3",
+        "type": "body-clearance"
+      },
+      {
+        "stage": 0,
+        "id": "R1",
+        "other": "J1",
+        "type": "body-clearance"
+      },
+      {
+        "stage": 0,
+        "id": "R3",
+        "other": "J1",
         "type": "body-clearance"
       }
     ]
@@ -22,29 +35,86 @@
   "rangeTooSmall": {
     "ok": false,
     "stages": 0,
-    "checks": 0,
+    "checks": 217,
     "maxConcurrent": 0,
     "duration": 0,
     "clearance": 0.2,
-    "area": 366,
-    "areaRatio": 0.3048780487804878,
+    "area": 300,
+    "areaRatio": 0.3643606684803731,
     "height": 18.8,
     "decks": 1,
+    "emptyDockTransfers": 0,
     "errors": [
       {
         "type": "planning-failed",
-        "reason": "R4: 昇降・搬送デッキへ の掃引外形が干渉"
-      },
-      {
-        "id": "R4",
-        "type": "wrong-destination"
+        "reason": "R2: 昇降・デッキへ の掃引または離隔が不成立"
       },
       {
         "id": "R2",
-        "type": "wrong-destination"
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "R3",
+        "type": "initial-outside-range"
       },
       {
         "id": "T1",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "T1",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "T2",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "T2",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "H1",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "H1",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "H1",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "H1",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "L1",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "L1",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "L1",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "J2",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "J3",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "C0",
+        "type": "initial-outside-range"
+      },
+      {
+        "id": "R2",
         "type": "wrong-destination"
       },
       {
@@ -52,19 +122,11 @@
         "type": "wrong-destination"
       },
       {
-        "id": "R3",
-        "type": "wrong-destination"
-      },
-      {
-        "id": "R1",
-        "type": "wrong-destination"
-      },
-      {
-        "id": "T2",
-        "type": "wrong-destination"
-      },
-      {
         "id": "L1",
+        "type": "wrong-destination"
+      },
+      {
+        "id": "C0",
         "type": "wrong-destination"
       }
     ]

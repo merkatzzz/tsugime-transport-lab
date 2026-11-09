@@ -1,19 +1,9 @@
 {
-  "stage": 2,
-  "date": "2026-11-09",
-  "environment": "ccarenv_b64_Y2NhcmVudl81ZDkxZWQyZjQzMTA4MTkxYTc3ODhkN2M1MTY2OGQwNw",
-  "browserQA": "unverified",
-  "webglInitialization": "unverified",
-  "localPreviewError": "relay could not open browser port 4173: timed out waiting for relay readiness",
-  "sharedChromeNavigationError": "Browser Use could not read requirements",
-  "nativeInputError": "AT-SPI provider is unavailable; no provider connections",
-  "observedPage": "about:blank / chrome new tab",
-  "actual3DScreenshot": false,
-  "automatedTestsPassed": 44,
-  "stage1RegressionTestsPassed": 24,
-  "substitutionsInMeshTests": [
-    "GPU renderer",
-    "text textures"
-  ],
-  "mobileRealDevice": "unverified"
+  "stage": 3,
+  "browserPlaytestVerified": false,
+  "managedPreviewAttempted": true,
+  "error": "relay could not open browser port 4173: timed out waiting for relay readiness",
+  "previewStatus": "Sites preview stopped",
+  "cpuChecks": ["actual Three.js mesh ray intersections", "finite mesh bounds and occupied envelopes", "body controller replay of all shortest routes", "UI module wiring with WebGL explicitly disabled"],
+  "limits": ["No GPU screenshot or first-person browser playtest", "No mobile device validation", "No visual proof of all viewpoints"]
 }
