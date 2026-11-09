@@ -1,134 +1,37 @@
-import {BODIES,BY_ID,CELL,HEIGHT,DECK,LEVELS,RADIUS,NEXT,PHASES,SLOTS,SPINE_PORTS,placements,connections,isolated,isolatedZones,insideBody,boundaryWalls,portSegment,segmentDistance} from './architecture.js';
+import {BODIES,BY_ID,RADIUS,NEXT,DEFAULT_EXPERIMENT,SIZES,METHODS,levelsFor,placements,connections,isolatedZones,insideBody,boundaryWalls,portSegment,segmentDistance,LANDING,ANNEX} from './architecture.js';
 import {planTransfer,validatePlan,positionDuring} from './transport.js';
-export function spineWalls(){
- const result=[{a:[-2,-3.94],b:[48,-3.94]},{a:[47.94,-4],b:[47.94,0]},{a:[-1.94,-4],b:[-1.94,-3.6]},{a:[-1.94,-.4],b:[-1.94,0]}];
- let last=-2;for(let i=0;i<4;i++){const [a,b]=SPINE_PORTS[i].map(v=>v+SLOTS[i]);result.push({a:[last,-.06],b:[a,-.06]});last=b;}result.push({a:[last,-.06],b:[48,-.06]});return result;
-}
+export function fixedWalls(kind){const r=kind==='ANNEX'?ANNEX:LANDING,x=r.x,z=r.z,w=r.w,d=r.d;const out=[{a:[x,z+.06],b:[x+w,z+.06]},{a:[x,z+d-.06],b:[x+w,z+d-.06]}];if(kind==='ANNEX')out.push({a:[x+w-.06,z],b:[x+w-.06,z+d]},{a:[x+.06,z],b:[x+.06,z+1]},{a:[x+.06,z+3],b:[x+.06,z+d]});else out.push({a:[x+.06,z],b:[x+.06,z+.4]},{a:[x+.06,z+3.6],b:[x+.06,z+d]},{a:[x+w-.06,z],b:[x+w-.06,z+1]},{a:[x+w-.06,z+3],b:[x+w-.06,z+d]});return out;}
 export class Simulation{
- constructor(){this.reset();}
- reset(){
-  this.phase='A';this.positions=placements('A');this.player={x:6,y:24,z:-1.8,yaw:0,pitch:0,owner:'fixed'};
-  this.doors=Object.fromEntries(BODIES.flatMap(b=>b.doors.map(d=>[d.id,d.open])));
-  this.mode='idle';this.elapsed=0;this.plan=null;this.stageIndex=-1;this.paused=false;this.speed=2;this.experimental=false;this.shutter=0;
-  this.liftY=24;this.liftTarget=24;this.liftTime=0;this.liftFrom=24;this.liftActive=false;this.liftPassenger=false;this.message='第三層の固定回廊から探索を開始します。';
-  this.history=[];this.lastCheck=null;this.completed=0;this.clock=0;this.invalidate();
- }
- invalidate(){this._colliders=null;}
+ constructor(options=DEFAULT_EXPERIMENT){this.reset(options);}
+ reset(options=this.experiment??DEFAULT_EXPERIMENT){this.experiment={...DEFAULT_EXPERIMENT,...options};if(!SIZES[this.experiment.size]||!METHODS[this.experiment.method])throw Error('Unknown experiment');this.phase='A';this.positions=placements('A',this.experiment);this.player={x:-1.2,y:this.levels[1],z:2,yaw:Math.PI/2,pitch:0,owner:'F1'};this.doors=Object.fromEntries(BODIES.flatMap(b=>b.doors.map(d=>[d.id,d.open])));this.mode='idle';this.elapsed=0;this.plan=null;this.stageIndex=-1;this.paused=false;this.speed=2;this.experimental=false;this.shutter=0;this.passenger=null;this.evacuationActive=false;this.liftY=this.levels[1];this.liftTarget=this.liftY;this.liftFrom=this.liftY;this.liftTime=0;this.liftActive=false;this.liftPassenger=false;this.message='固定EVの乗場から、可動廊下を歩いて探索できます。';this.history=[];this.lastCheck=null;this.completed=0;this.clock=0;this.invalidate();}
+ get levels(){return levelsFor(this.experiment);}
  get next(){return NEXT[this.phase];}
- get liveConnections(){return connections(this.phase).map(c=>this.shutter>.01?{...c,status:'blocked'}:c);}
+ get liveConnections(){return this._links??=connections(this.phase,this.experiment).map(c=>this.shutter>.01?{...c,status:'blocked'}:c);}
  get liveReachable(){const seen=new Set(['F0','F1']);let changed=true;while(changed){changed=false;for(const c of this.liveConnections.filter(c=>c.status==='pass')){if(seen.has(c.a)&&!seen.has(c.b)){seen.add(c.b);changed=true;}if(seen.has(c.b)&&!seen.has(c.a)){seen.add(c.a);changed=true;}}}return seen;}
- get targetIsolated(){return isolatedZones(this.next);}
- portIsOpen(id,port){if(this.shutter>.01)return false;return connections(this.phase).some(c=>(c.a===id&&c.face===port.face||c.b===id&&c.face==='E'&&port.face==='W')&&c.status!=='blocked');}
+ get targetIsolated(){return isolatedZones(this.next,this.experiment);}
+ get bridges(){return this._bridges??=this.liveConnections.filter(c=>c.status==='pass').map(c=>({...c.bridge,y:c.y,a:c.a,b:c.b}));}
  get owner(){return this.ownerAt(this.player.x,this.player.z,this.player.y);}
- ownerAt(x,z,y=this.player.y){
-  if(x>=-6&&x<-2&&z>=-4&&z<=0&&Math.abs(y-this.liftY)<.01)return 'lift';
-  for(const b of BODIES){const p=this.positions[b.id];if(Math.abs(p.y-y)<.01&&insideBody(b,x-p.x,z-p.z))return b.id;}
-  if(Math.abs(y)<.01&&x>=48&&x<=52&&z>=4&&z<=8)return 'ANNEX';
-  if(x>=-2&&x<=48&&z>=-4&&z<=0&&LEVELS.some(v=>Math.abs(v-y)<.01))return 'fixed';return null;
+ invalidate(){this._colliders=null;this._links=null;this._bridges=null;}
+ portIsOpen(id,p){return this.liveConnections.some(c=>c.status!=='blocked'&&c.ports[id]===p.face);}
+ ownerAt(x,z,y=this.player.y){if(x>=-6.4&&x<-2.4&&z>=0&&z<=4&&Math.abs(y-this.liftY)<.01)return'lift';for(const b of BODIES){const p=this.positions[b.id];if(Math.abs(y-p.y)<.01&&insideBody(b,x-p.x,z-p.z))return b.id;}const level=this.levels.findIndex(v=>Math.abs(v-y)<.01);if(level>=0&&x>=LANDING.x&&x<=LANDING.x+LANDING.w&&z>=0&&z<=4)return`F${level}`;if(Math.abs(y)<.01&&x>=ANNEX.x&&x<=ANNEX.x+ANNEX.w&&z>=0&&z<=4)return'ANNEX';for(const q of this.bridges)if(Math.abs(y-q.y)<.01&&x>=q.x&&x<=q.x+q.w&&z>=q.z&&z<=q.z+q.d)return'joint';return null;}
+ floorSupports(x,z,y){return!!this.ownerAt(x,z,y);}
+ colliders(){if(this._colliders)return this._colliders;const lines=[],solids=[],add=(l,owner,y,p={x:0,z:0})=>lines.push({a:[l.a[0]+p.x,l.a[1]+p.z],b:[l.b[0]+p.x,l.b[1]+p.z],owner,y});
+  for(let i=0;i<2;i++){const y=this.levels[i];for(const l of fixedWalls('landing'))add(l,`F${i}`,y);if(this.liftActive||Math.abs(this.liftY-y)>.01)add({a:[-2.34,.4],b:[-2.34,3.6]},`F${i}`,y);if(!this.liveConnections.some(c=>c.status==='pass'&&(c.a===`F${i}`||c.b===`F${i}`)))add({a:[-.46,1],b:[-.46,3]},`F${i}`,y);}
+  for(const l of fixedWalls('ANNEX'))add(l,'ANNEX',0);if(!this.liveConnections.some(c=>c.b==='ANNEX'&&c.status==='pass'))add({a:[ANNEX.x+.06,1],b:[ANNEX.x+.06,3]},'ANNEX',0);
+  for(const l of[{a:[-6.34,0],b:[-6.34,4]},{a:[-6.4,.06],b:[-2.4,.06]},{a:[-6.4,3.94],b:[-2.4,3.94]}])add(l,'lift',this.liftY);
+  for(const b of BODIES){const p=this.positions[b.id];for(const l of[...boundaryWalls(b),...b.walls,...b.doors.filter(d=>!this.doors[d.id]),...b.ports.filter(q=>!this.portIsOpen(b.id,q)).map(q=>portSegment(b,q))])add(l,b.id,p.y,p);for(const s of[...b.solids,...b.furniture])solids.push({...s,x:s.x+p.x,z:s.z+p.z,y:p.y,owner:b.id});}return this._colliders={lines,solids};
  }
- floorSupports(x,z,y){return !!this.ownerAt(x,z,y);}
- colliders(){
-  if(this._colliders)return this._colliders;
-  const lines=[],solids=[];
-  const add=(l,p={x:0,z:0},owner='fixed',y=0)=>lines.push({a:[l.a[0]+p.x,l.a[1]+p.z],b:[l.b[0]+p.x,l.b[1]+p.z],owner,y,kind:l.kind??'wall'});
-  for(const y of LEVELS){for(const l of spineWalls())add(l,undefined,'fixed',y);
-   // Absent cabin is guarded by a real landing shutter.
-   if(this.liftActive||Math.abs(this.liftY-y)>.01)add({a:[-2,-3.6],b:[-2,-.4]},undefined,'fixed',y);
-  }
-  for(const l of [{a:[-6,-4],b:[-2,-4]},{a:[-6,0],b:[-2,0]},{a:[-6,-4],b:[-6,0]}])add(l,undefined,'lift',this.liftY);
-  for(const l of [{a:[48,4.06],b:[52,4.06]},{a:[48,7.94],b:[52,7.94]},{a:[51.94,4],b:[51.94,8]},{a:[48.06,4],b:[48.06,5]},{a:[48.06,7],b:[48.06,8]}])add(l,undefined,'ANNEX',0);
-  if(this.shutter>.01||!connections(this.phase).some(c=>c.b==='ANNEX'&&c.status==='pass'))add({a:[48.06,5],b:[48.06,7]},undefined,'ANNEX',0);
-  for(const b of BODIES){const p=this.positions[b.id];for(const l of [...boundaryWalls(b),...b.walls])add(l,p,b.id,p.y);
-   for(const d of b.doors)if(!this.doors[d.id])add(d,p,b.id,p.y);
-   for(const port of b.ports)if(!this.portIsOpen(b.id,port))add(portSegment(b,port),p,b.id,p.y);
-   for(const s of [...b.solids,...b.furniture])solids.push({...s,x:s.x+p.x,z:s.z+p.z,y:p.y,owner:b.id});
-  }
-  // Fixed side of every docking opening closes together with its moving partner.
-  if(this.shutter>.01)for(const y of LEVELS)for(let i=0;i<4;i++)add({a:[SLOTS[i]+SPINE_PORTS[i][0],0],b:[SLOTS[i]+SPINE_PORTS[i][1],0]},undefined,'fixed',y);
-  return this._colliders={lines,solids};
- }
- isFree(x,z,y=this.player.y,radius=RADIUS){
-  if(!this.floorSupports(x,z,y))return false;
-  // An entire body disc needs continuous supporting floor, also across a seam.
-  for(let i=0;i<12;i++){const a=i*Math.PI/6;if(!this.floorSupports(x+Math.cos(a)*radius,z+Math.sin(a)*radius,y))return false;}
-  const c=this.colliders();
-  for(const l of c.lines)if(Math.abs(l.y-y)<.01&&segmentDistance(x,z,l.a,l.b)<radius+.06-1e-7)return false;
-  for(const s of c.solids)if(Math.abs(s.y-y)<.01){const dx=Math.max(s.x-x,0,x-s.x-s.w),dz=Math.max(s.z-z,0,z-s.z-s.d);if(Math.hypot(dx,dz)<radius+.01)return false;}
-  return true;
- }
- move(dx,dz){
-  if(!['idle','warning','evacuate'].includes(this.mode)||this.liftActive)return false;
-  let moved=false;const steps=Math.max(1,Math.ceil(Math.hypot(dx,dz)/.12));
-  for(let i=0;i<steps;i++)for(const [ax,az] of [[dx/steps,0],[0,dz/steps]]){
-   const x=this.player.x+ax,z=this.player.z+az,nextOwner=this.ownerAt(x,z);
-   if((this.mode==='warning'||this.mode==='evacuate')&&!this.experimental&&this.targetIsolated.includes(nextOwner)&&this.owner!==nextOwner){this.message='閉鎖予定区画への新規入場を制限しています。';continue;}
-   if(this.isFree(x,z)){this.player.x=x;this.player.z=z;moved=true;}
-  }
-  this.player.owner=this.owner;return moved;
- }
- startTransfer(){
-  if(this.mode!=='idle'||this.liftActive)return false;
-  this.plan=planTransfer(this.phase,this.next);this.lastCheck=validatePlan(this.plan);
-  if(!this.lastCheck.ok){this.message='経路検証に失敗したため搬送を停止しました。';return false;}
-  this.mode='warning';this.elapsed=0;this.paused=false;
-  this.message=this.targetIsolated.length?`次周期で ${this.targetIsolated.join(', ')} が孤立します。5秒の退避時間。`:'搬送まで5秒。移動する搬送体に乗るか、固定回廊へ退避してください。';return true;
- }
+ isFree(x,z,y=this.player.y,radius=RADIUS){if(!this.floorSupports(x,z,y))return false;for(let i=0;i<16;i++){const a=i*Math.PI/8;if(!this.floorSupports(x+Math.cos(a)*radius,z+Math.sin(a)*radius,y))return false;}const c=this.colliders();for(const l of c.lines)if(Math.abs(l.y-y)<.01&&segmentDistance(x,z,l.a,l.b)<radius+.06-1e-7)return false;for(const s of c.solids)if(Math.abs(s.y-y)<.01){const dx=Math.max(s.x-x,0,x-s.x-s.w),dz=Math.max(s.z-z,0,z-s.z-s.d);if(Math.hypot(dx,dz)<radius+.01)return false;}return true;}
+ move(dx,dz){if(!['idle','warning','evacuate'].includes(this.mode)||this.liftActive)return false;let moved=false;const steps=Math.max(1,Math.ceil(Math.hypot(dx,dz)/.1));for(let i=0;i<steps;i++)for(const[ax,az]of[[dx/steps,0],[0,dz/steps]]){const x=this.player.x+ax,z=this.player.z+az,n=this.ownerAt(x,z);if(['warning','evacuate'].includes(this.mode)&&!this.experimental&&this.targetIsolated.includes(n)&&this.owner!==n&&!this.evacuationActive){this.message='次周期で出口がなくなる区画への新規入場を制限中です。';continue;}if(this.isFree(x,z)){this.player.x=x;this.player.z=z;moved=true;if((BY_ID[n]||n==='F0'||n==='F1')&&!this.targetIsolated.includes(n))this.evacuationActive=false;}}this.player.owner=this.owner;return moved;}
+ startTransfer(){if(this.mode!=='idle'||this.liftActive)return false;this.plan=planTransfer(this.phase,this.next,this.experiment);this.lastCheck=validatePlan(this.plan);if(!this.lastCheck.ok){this.message=`搬送不成立：${this.plan.planningError??this.lastCheck.errors[0]?.type}`;return false;}this.mode='warning';this.elapsed=0;this.paused=false;this.evacuationActive=this.targetIsolated.includes(this.owner)||this.owner==='joint';this.message=`5秒後に搬送。次周期の孤立予定：${this.targetIsolated.join('・')||'なし'}。可動廊下も移動します。`;return true;}
  cancelWarning(){if(['warning','evacuate'].includes(this.mode)){this.mode='idle';this.plan=null;this.elapsed=0;this.message='搬送準備を取り消しました。';}}
- beginClosing(){
-  const own=this.owner;
-  if(!this.experimental&&this.targetIsolated.includes(own)){this.mode='evacuate';this.message='退避待ち：この区画は次周期で孤立します。固定回廊まで歩いて退避してください。';return;}
-  // A body disc spanning a detachable seam must clear it before mechanical closure.
-  if(this.player.z>-.46&&this.player.z<.46){this.mode='evacuate';this.message='継ぎ目上で待機中です。廊下または搬送体の内側へ移動してください。';return;}
-  if(own==='ANNEX'&&this.player.x<48.46){this.mode='evacuate';this.message='固定観察室の継ぎ目から離れてください。';return;}
-  // Also protect lateral detachable seams (permanent internal chunk seams are safe).
-  if(BY_ID[own]){const p=this.positions[own];for(const port of BY_ID[own].ports){if((port.face==='E'||port.face==='W')&&Math.abs(this.player.x-(p.x+(port.face==='E'?Math.max(...BY_ID[own].cells.map(c=>c[0]+1))*8:0)))<.46){this.mode='evacuate';this.message='側面継ぎ目から離れてください。';return;}}}
-  this.passenger=BY_ID[own]?{id:own,x:this.player.x-this.positions[own].x,z:this.player.z-this.positions[own].z}:null;
-  this.fixedBefore={...this.player};this.mode='closing';this.elapsed=0;this.invalidate();
+ beginClosing(){const own=this.owner;if(!this.experimental&&this.targetIsolated.includes(own)){this.mode='evacuate';this.message='退避待ち：この区画は次周期で孤立します。安全な可動廊下またはEV乗場へ歩いて退避してください。';return;}let seam=own==='joint'||!own;for(let i=0;i<16&&!seam;i++){const a=i*Math.PI/8;if(this.ownerAt(this.player.x+Math.cos(a)*.46,this.player.z+Math.sin(a)*.46)!==own)seam=true;}if(seam){this.mode='evacuate';this.message='格納式継手をまたいでいます。搬送体または固定設備の内側へ移動してください。';return;}this.passenger=BY_ID[own]?{id:own,x:this.player.x-this.positions[own].x,z:this.player.z-this.positions[own].z}:null;this.mode='closing';this.elapsed=0;this.invalidate();}
+ tick(dt){this.clock+=dt;if(this.paused)return;const delta=Math.min(.1,dt)*this.speed;if(this.liftActive){this.liftTime+=delta;const t=Math.min(1,this.liftTime/5);this.liftY=this.liftFrom+(this.liftTarget-this.liftFrom)*t;if(this.liftPassenger)this.player.y=this.liftY;this.invalidate();if(t===1){this.liftActive=false;this.message=this.liftPassenger?'生活階に到着しました。乗場から可動廊下へ歩いて戻れます。':'かごが到着しました。中へ歩いて入り、Eで階を移動できます。';}}
+  if(this.mode==='idle')return;if(this.mode==='evacuate'){this.beginClosing();return;}this.elapsed+=delta;if(this.mode==='warning'){if(this.elapsed>=5)this.beginClosing();return;}if(this.mode==='closing'){this.shutter=Math.min(1,this.elapsed/1.2);this.invalidate();if(this.elapsed>=1.5){this.mode='moving';this.elapsed=0;this.shutter=1;}return;}
+  if(this.mode==='moving'){this.positions=positionDuring(this.plan,Math.min(this.elapsed,this.plan.duration));let sum=0;this.stageIndex=this.plan.stages.findIndex(s=>{sum+=s.duration;return this.elapsed<sum;});if(this.passenger){const p=this.positions[this.passenger.id];this.player.x=p.x+this.passenger.x;this.player.z=p.z+this.passenger.z;this.player.y=p.y;}this.invalidate();if(this.elapsed>=this.plan.duration){this.phase=this.plan.to;this.mode='opening';this.elapsed=0;this.completed++;this.history.unshift(`${this.plan.from}→${this.phase}：${this.lastCheck.checks}連続検査・離隔違反0`);this.history=this.history.slice(0,6);}return;}
+  if(this.mode==='opening'){this.shutter=1-Math.min(1,this.elapsed/1.2);this.invalidate();if(this.elapsed>=1.3){this.mode='idle';this.shutter=0;this.invalidate();this.message=isolatedZones(this.phase,this.experiment).includes(this.owner)?this.owner==='ANNEX'?'固定観察室で孤立中です。Bで再接続します。周期操作は開発用です。':'意図的な孤立状態です。次周期の実搬送で再接続できます。':'搬送完了。廊下の新しい終端・接続・空きドックを探索できます。';}}
  }
- tick(dt){
-  this.clock+=dt;if(this.paused)return;
-  const delta=Math.min(dt,.1)*this.speed;
-  if(this.liftActive){this.liftTime+=delta;const t=Math.min(1,this.liftTime/5);this.liftY=this.liftFrom+(this.liftTarget-this.liftFrom)*t;if(this.liftPassenger)this.player.y=this.liftY;this.invalidate();if(t===1){this.liftActive=false;this.message=this.liftPassenger?`${this.liftY===24?'第三層':'第二層'}に到着しました。固定回廊へ降りられます。`:'呼び出したかごが到着しました。中へ歩いて入り、Eで階を移動できます。';}}
-  if(this.mode==='idle')return;
-  if(this.mode==='evacuate'){this.beginClosing();return;}
-  this.elapsed+=delta;
-  if(this.mode==='warning'){if(this.elapsed>=5)this.beginClosing();return;}
-  if(this.mode==='closing'){this.shutter=Math.min(1,this.elapsed/1.2);this.invalidate();if(this.elapsed>=1.5){this.mode='moving';this.elapsed=0;this.shutter=1;}return;}
-  if(this.mode==='moving'){
-   this.positions=positionDuring(this.plan,Math.min(this.elapsed,this.plan.duration));
-   let sum=0;this.stageIndex=this.plan.stages.findIndex(s=>{sum+=s.duration;return this.elapsed<sum;});
-   if(this.passenger){const p=this.positions[this.passenger.id];this.player.x=p.x+this.passenger.x;this.player.z=p.z+this.passenger.z;this.player.y=p.y;}
-   this.invalidate();
-   if(this.elapsed>=this.plan.duration){
-    this.phase=this.plan.to;this.positions=placements(this.phase);this.mode='opening';this.elapsed=0;this.completed++;
-    this.history.unshift(`${this.plan.from} → ${this.phase}：${this.lastCheck.checks}件の連続衝突検査、干渉0`);this.history=this.history.slice(0,6);
-   }return;
-  }
-  if(this.mode==='opening'){this.shutter=1-Math.min(1,this.elapsed/1.2);this.invalidate();if(this.elapsed>=1.3){this.mode='idle';this.shutter=0;this.invalidate();this.message=isolatedZones(this.phase).includes(this.owner)?'意図的な孤立状態です。次の周期で物理的に再接続できます。':'搬送完了。新しい開口と到達範囲を探索できます。';}}
- }
- useLift(){
-  if(this.mode!=='idle'||this.liftActive)return false;
-  if(this.owner!=='lift'){
-   if(this.owner==='fixed'&&this.player.x<.5&&this.player.z<-0.5){
-    if(Math.abs(this.liftY-this.player.y)<.01){this.message='かごが到着しています。西側のかご内へ歩いて入ってください。';return false;}
-    this.liftFrom=this.liftY;this.liftTarget=this.player.y;this.liftTime=0;this.liftActive=true;this.liftPassenger=false;this.invalidate();this.message='固定エレベーターを呼び出しています。';return true;
-   }
-   this.message='西端の固定エレベーターの乗り場またはかご内で E を押してください。';return false;
-  }
-  if(this.player.x>-2.5){this.message='エレベーターの継ぎ目から離れ、かごの奥へ進んでください。';return false;}
-  this.liftFrom=this.liftY;this.liftTarget=this.liftY===24?0:24;this.liftTime=0;this.liftActive=true;this.liftPassenger=true;this.invalidate();this.message='固定エレベーターが生活階の間を移動しています。';return true;
- }
- interact(){
-  if(this.mode!=='idle'&&this.mode!=='warning'&&this.mode!=='evacuate')return;
-  if(this.owner==='lift'||(this.owner==='fixed'&&this.player.x<.5)){this.useLift();return;}
-  let near=null,dist=2.1;
-  for(const b of BODIES){const p=this.positions[b.id];if(Math.abs(p.y-this.player.y)>.01)continue;
-   for(const d of b.doors){const n=segmentDistance(this.player.x-p.x,this.player.z-p.z,d.a,d.b);if(n<dist){near=d;dist=n;}}
-  }
-  if(near){if(near.locked){this.message=`${near.label}：設計上の閉鎖です。${near.glass?'窓からの視認のみ可能。':'搬送による孤立とは異なります。'}`;return;}this.doors[near.id]=!this.doors[near.id];this.invalidate();
-   // Do not materialize a closed door through the player.
-   if(!this.isFree(this.player.x,this.player.z)){this.doors[near.id]=true;this.invalidate();this.message='扉から少し離れてください。';}else this.message=`${near.label}を${this.doors[near.id]?'開き':'閉じ'}ました。`;return;}
-  this.message='E：近くの通常扉を開閉／エレベーター内で階を移動。';
- }
- rescue(){this.player={x:6,y:24,z:-1.8,yaw:0,pitch:0,owner:'fixed'};this.passenger=null;if(this.liftActive){this.liftActive=false;this.liftY=this.liftTarget;}this.invalidate();this.message='デバッグ復帰：第三層の固定回廊へ移動しました。物理的な出口の証明には含めません。';}
+ useLift(){if(this.mode!=='idle'||this.liftActive)return false;const own=this.owner;if(own==='lift'){if(this.player.x>-2.9){this.message='かごの奥へ進んでください。';return false;}this.liftPassenger=true;this.liftTarget=this.liftY===0?this.levels[1]:0;}else if(own==='F0'||own==='F1'){if(Math.abs(this.liftY-this.player.y)<.01){this.message='かごは乗場の西側です。中へ歩いて入ってください。';return false;}this.liftPassenger=false;this.liftTarget=this.player.y;}else{this.message='西端の固定EVの乗場か、かご内で操作してください。';return false;}this.liftFrom=this.liftY;this.liftTime=0;this.liftActive=true;this.invalidate();this.message='固定EVを連続昇降中。';return true;}
+ interact(){if(!['idle','warning','evacuate'].includes(this.mode))return;if(['lift','F0','F1'].includes(this.owner)){this.useLift();return;}let near=null,dist=1.7;for(const b of BODIES){const p=this.positions[b.id];if(Math.abs(p.y-this.player.y)>.01)continue;for(const d of b.doors){const n=segmentDistance(this.player.x-p.x,this.player.z-p.z,d.a,d.b);if(n<dist){near=d;dist=n;}}}if(!near){this.message='E：近くの通常扉、または固定EVを操作。';return;}if(near.locked){this.message=`${near.label}：設計上の閉鎖。${near.glass?'視認だけが可能です。':'搬送による孤立とは区別します。'}`;return;}this.doors[near.id]=!this.doors[near.id];this.invalidate();if(!this.isFree(this.player.x,this.player.z)){this.doors[near.id]=true;this.invalidate();this.message='扉の閉鎖位置から離れてください。';}else this.message=`${near.label}を${this.doors[near.id]?'開き':'閉じ'}ました。`;}
+ rescue(){this.player={x:-1.2,y:this.levels[1],z:2,yaw:Math.PI/2,pitch:0,owner:'F1'};this.passenger=null;if(this.liftActive){this.liftActive=false;this.liftY=this.liftTarget;}this.invalidate();this.message='デバッグ復帰：第三層の固定EV乗場へ移動。通常の物理的出口には含めません。';}
 }

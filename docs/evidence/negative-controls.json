@@ -1,0 +1,72 @@
+{
+  "directVerticalSwap": {
+    "ok": false,
+    "stages": 1,
+    "checks": 35,
+    "maxConcurrent": 2,
+    "duration": 5,
+    "clearance": 0.2,
+    "area": 1200.48,
+    "areaRatio": 1,
+    "height": 18.8,
+    "decks": 1,
+    "errors": [
+      {
+        "stage": 0,
+        "id": "R1",
+        "other": "R3",
+        "type": "body-clearance"
+      }
+    ]
+  },
+  "rangeTooSmall": {
+    "ok": false,
+    "stages": 0,
+    "checks": 0,
+    "maxConcurrent": 0,
+    "duration": 0,
+    "clearance": 0.2,
+    "area": 366,
+    "areaRatio": 0.3048780487804878,
+    "height": 18.8,
+    "decks": 1,
+    "errors": [
+      {
+        "type": "planning-failed",
+        "reason": "R4: 昇降・搬送デッキへ の掃引外形が干渉"
+      },
+      {
+        "id": "R4",
+        "type": "wrong-destination"
+      },
+      {
+        "id": "R2",
+        "type": "wrong-destination"
+      },
+      {
+        "id": "T1",
+        "type": "wrong-destination"
+      },
+      {
+        "id": "H1",
+        "type": "wrong-destination"
+      },
+      {
+        "id": "R3",
+        "type": "wrong-destination"
+      },
+      {
+        "id": "R1",
+        "type": "wrong-destination"
+      },
+      {
+        "id": "T2",
+        "type": "wrong-destination"
+      },
+      {
+        "id": "L1",
+        "type": "wrong-destination"
+      }
+    ]
+  }
+}

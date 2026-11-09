@@ -1,60 +1,44 @@
-import {BODIES,BY_ID,CELL,HEIGHT,DECK,LEVELS,placements} from './architecture.js';
-export const mix=(a,b,t)=>({x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t,z:a.z+(b.z-a.z)*t});
-export function boxes(id,p){return BY_ID[id].cells.map(([x,z])=>({id,min:[p.x+x*CELL,p.y,p.z+z*CELL],max:[p.x+(x+1)*CELL,p.y+HEIGHT,p.z+(z+1)*CELL]}));}
+import {BODIES,BY_ID,CELL,HEIGHT,CLEARANCE,SIZES,DEFAULT_EXPERIMENT,levelsFor,placements,footprint,LANDING,ANNEX} from './architecture.js';
+export const mix=(a,b,t)=>t<=1e-9?{...a}:t>=1-1e-9?{...b}:({x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t,z:a.z+(b.z-a.z)*t});
+export const boxes=(id,p)=>BY_ID[id].cells.map(([x,z])=>({id,min:[p.x+x*8,p.y,p.z+z*8],max:[p.x+(x+1)*8,p.y+HEIGHT,p.z+(z+1)*8]}));
 export const intersects=(a,b)=>a.min.every((v,i)=>v<b.max[i]-1e-7&&a.max[i]>b.min[i]+1e-7);
-export const FIXED=[{id:'EV',min:[-6,-1,-4],max:[-2,30,0]},{id:'ANNEX',min:[48,0,4],max:[52,5,8]},...LEVELS.map((y,i)=>({id:`SPINE${i}`,min:[-2,y,-4],max:[48,y+HEIGHT,0]}))];
-const swept=(a,b)=>({id:a.id,min:a.min.map((v,i)=>Math.min(v,b.min[i])),max:a.max.map((v,i)=>Math.max(v,b.max[i]))});
-// Exact continuous relative-motion slab test, including contact at ends.
-export function movingCollision(a0,a1,b0,b1){
- let enter=0,exit=1;
- for(let k=0;k<3;k++){
-  const v=(a1.min[k]-a0.min[k])-(b1.min[k]-b0.min[k]);
-  if(Math.abs(v)<1e-10){if(a0.max[k]<=b0.min[k]+1e-7||a0.min[k]>=b0.max[k]-1e-7)return false;continue;}
-  let t1=(b0.min[k]-a0.max[k])/v,t2=(b0.max[k]-a0.min[k])/v;
-  if(t1>t2)[t1,t2]=[t2,t1];enter=Math.max(enter,t1);exit=Math.min(exit,t2);
-  if(enter>=exit-1e-8)return false;
- }
- return enter<exit-1e-8&&exit>0&&enter<1;
+const expand=(a,c)=>({min:a.min.map(v=>v-c),max:a.max.map(v=>v+c)});
+export function fixedBoxes(e=DEFAULT_EXPERIMENT){return [{id:'EV',min:[-6.4,-.2,0],max:[-2.4,levelsFor(e)[1]+HEIGHT,4]},{id:'ANNEX',min:[ANNEX.x,0,ANNEX.z],max:[ANNEX.x+ANNEX.w,HEIGHT,ANNEX.z+ANNEX.d]},...levelsFor(e).map((y,i)=>({id:`F${i}`,min:[LANDING.x,y,0],max:[LANDING.x+LANDING.w,y+HEIGHT,4]}))];}
+export const FIXED=fixedBoxes();
+// Exact relative-motion slab test. Expanding one body enforces an L-infinity mechanical separation.
+export function movingCollision(a0,a1,b0,b1,clearance=0){a0=expand(a0,clearance);a1=expand(a1,clearance);let enter=0,exit=1;for(let k=0;k<3;k++){const v=(a1.min[k]-a0.min[k])-(b1.min[k]-b0.min[k]);if(Math.abs(v)<1e-10){if(a0.max[k]<=b0.min[k]+1e-7||a0.min[k]>=b0.max[k]-1e-7)return false;continue;}let t1=(b0.min[k]-a0.max[k])/v,t2=(b0.max[k]-a0.min[k])/v;if(t1>t2)[t1,t2]=[t2,t1];enter=Math.max(enter,t1);exit=Math.min(exit,t2);if(enter>=exit-1e-8)return false;}return enter<exit-1e-8&&exit>0&&enter<1;}
+const equal=(a,b)=>['x','y','z'].every(k=>Math.abs(a[k]-b[k])<1e-6);
+function moveIsClear(id,from,to,pos,e){const bounds=e.bounds??SIZES[e.size],aa=boxes(id,from),ab=boxes(id,to);for(const p of[from,to])for(const a of boxes(id,p))if(a.min[0]<-1e-6||a.max[0]>bounds.w+1e-6||a.min[2]<-1e-6||a.max[2]>bounds.d+1e-6)return false;
+ for(let k=0;k<aa.length;k++){for(const f of fixedBoxes(e))if(movingCollision(aa[k],ab[k],f,f,CLEARANCE))return false;for(const b of BODIES)if(b.id!==id)for(const bb of boxes(b.id,pos[b.id]))if(movingCollision(aa[k],ab[k],bb,bb,CLEARANCE))return false;}return true;}
+// Axis-aligned visibility graph over obstacle boundaries. It checks the whole moving envelope on every edge.
+function horizontalPath(id,start,end,pos,e){if(equal(start,end))return[];const bound=e.bounds??SIZES[e.size],f=footprint(BY_ID[id]),xs=new Set([start.x,end.x,0,bound.w-f.w]),zs=new Set([start.z,end.z,0,bound.d-f.d]);for(const b of BODIES){if(b.id===id)continue;for(const q of boxes(b.id,pos[b.id]))if(q.max[1]+CLEARANCE>start.y&&q.min[1]-CLEARANCE<start.y+HEIGHT){xs.add(q.min[0]-f.w-.4);xs.add(q.max[0]+.4);zs.add(q.min[2]-f.d-.4);zs.add(q.max[2]+.4);}}
+ const normalized=set=>[...new Set([...set].map(v=>Math.round(v*1e6)/1e6))];const xx=normalized(xs).filter(x=>x>=-1e-6&&x+f.w<=bound.w+1e-6).sort((a,b)=>a-b),zz=normalized(zs).filter(z=>z>=-1e-6&&z+f.d<=bound.d+1e-6).sort((a,b)=>a-b),key=(x,z)=>`${x.toFixed(5)},${z.toFixed(5)}`,nodes=new Map();for(const x of xx)for(const z of zz){const p={x,y:start.y,z};if(moveIsClear(id,p,p,pos,e))nodes.set(key(x,z),p);}
+ const src=key(start.x,start.z),dst=key(end.x,end.z);if(!nodes.has(src)||!nodes.has(dst))throw Error(`${id}: デッキの開始／待機位置を占有できません`);const dist=new Map([[src,0]]),prev=new Map(),open=new Set([src]);
+ while(open.size){let k=[...open].sort((a,b)=>dist.get(a)-dist.get(b))[0];open.delete(k);if(k===dst)break;const p=nodes.get(k),xi=xx.indexOf(p.x),zi=zz.indexOf(p.z);for(const [nx,nz]of[[xi-1,zi],[xi+1,zi],[xi,zi-1],[xi,zi+1]]){if(nx<0||nx>=xx.length||nz<0||nz>=zz.length)continue;const nk=key(xx[nx],zz[nz]),q=nodes.get(nk);if(!q||!moveIsClear(id,p,q,pos,e))continue;const nd=dist.get(k)+Math.abs(q.x-p.x)+Math.abs(q.z-p.z);if(nd<(dist.get(nk)??Infinity)-1e-7){dist.set(nk,nd);prev.set(nk,k);open.add(nk);}}}
+ if(!dist.has(dst))throw Error(`${id}: 離隔を保つ水平経路がありません`);const route=[];for(let k=dst;k!==src;k=prev.get(k))route.unshift(nodes.get(k));return route;
 }
-export function planTransfer(from,to){
- const current=structuredClone(placements(from)),target=placements(to),stages=[];
- const add=(label,ends)=>{const motions=Object.entries(ends).map(([id,end])=>({id,from:{...current[id]},to:{...end}}));const distance=Math.max(0,...motions.map(m=>Math.hypot(m.to.x-m.from.x,m.to.y-m.from.y,m.to.z-m.from.z)));if(distance<1e-8)return;stages.push({label,motions,duration:Math.max(.4,distance/8)});for(const m of motions)current[m.id]={...m.to};};
- const groups=LEVELS.map(y=>BODIES.filter(b=>current[b.id].y===y).map(b=>b.id));
- // Far parking row first. Parallel envelopes occupy disjoint x intervals.
- for(let level=0;level<2;level++){
-  const ids=groups[level];add(`${level===0?'第二層':'第三層'}・4搬送体を降着デッキへ`,Object.fromEntries(ids.map(id=>[id,{...current[id],y:DECK}])));
-  add(`${level===0?'遠方64m':'近方40m'}退避ベイへ同時移動`,Object.fromEntries(ids.map(id=>[id,{...current[id],z:level===0?64:40}])));
+function groupPlan(ids,from,to,e,group){const pos=structuredClone(placements(from,e)),target=placements(to,e),stages=[],decks=e.method==='vertical'&&group===2?12.8:6.4,bound=e.bounds??SIZES[e.size];let held=null;
+ const add=(id,end,label)=>{const begin={...pos[id]};if(equal(begin,end))return;if(!moveIsClear(id,begin,end,pos,e))throw Error(`${id}: ${label} の掃引外形が干渉`);const axis=['x','y','z'].find(k=>Math.abs(begin[k]-end[k])>1e-7),distance=Math.abs(begin[axis]-end[axis]);stages.push({label:`${id}・${label}`,motions:[{id,from:begin,to:{...end}}],duration:Math.max(.1,distance/(axis==='y'?3:4))});pos[id]={...end};};
+ const route=(id,end,parking=false)=>{add(id,{...pos[id],y:decks},'昇降・搬送デッキへ');const dest={...end,y:decks};
+  // A high-level buffer crosses the other bands only BEHIND their 8m-deep vertical shafts.
+  if(group===2&&dest.x<pos[id].x){for(const p of horizontalPath(id,pos[id],{...pos[id],z:dest.z},pos,e))add(id,p,'後方の空欄へ');}
+  if(group===2&&pos[id].x<end.x){for(const p of horizontalPath(id,pos[id],{...pos[id],x:end.x},pos,e))add(id,p,'後方で横行');}
+  for(const p of horizontalPath(id,pos[id],dest,pos,e))add(id,p,parking?'一時退避':'空いたドックへ横行');if(!parking)add(id,end,'生活階に着床');};
+ let pending=ids.filter(id=>!equal(pos[id],target[id])),guard=0;
+ while(pending.length&&guard++<40){const free=pending.find(id=>moveIsClear(id,target[id],target[id],pos,e));if(free){route(free,target[free]);if(held===free)held=null;pending=pending.filter(id=>id!==free);continue;}
+  if(held)throw Error(`${group}: 一時退避後も循環待ちが解消しません`);const id=pending[0],f=footprint(BY_ID[id]);if(f.w>bound.w||f.d>bound.d)throw Error(`${id}: 外形が搬送範囲より大きい`);
+  const buffer=group===2?{x:e.method==='vertical'||bound.d<32.4?0:41.6,y:decks,z:e.method==='vertical'||bound.d<32.4?8.4:16.8}:{x:group===0?0:16.8,y:decks,z:8.4};route(id,buffer,true);held=id;
  }
- // Near row must clear before the far row can pass. Horizontal repositioning occurs at z=20.
- for(const id of [...groups[1],...groups[0]]){
-  add(`${id}・退避ベイから横行路へ`,{[id]:{...current[id],z:20}});
-  add(`${id}・横行位置合わせ`,{[id]:{...current[id],x:target[id].x}});
-  add(`${id}・目的ドックへ`,{[id]:{...current[id],z:0}});
-  add(`${id}・生活階へ固定`,{[id]:target[id]});
- }
- return {from,to,stages,duration:stages.reduce((s,x)=>s+x.duration,0)};
+ if(pending.length)throw Error('手順探索上限');return stages;
 }
-export function validatePlan(plan,initial=placements(plan.from)){
- const positions=structuredClone(initial),errors=[];let checks=0,maxConcurrent=0;
- for(let si=0;si<plan.stages.length;si++){
-  const stage=plan.stages[si],moving=new Map(stage.motions.map(m=>[m.id,m]));maxConcurrent=Math.max(maxConcurrent,moving.size);
-  for(const m of stage.motions){
-   if(['x','y','z'].some(k=>Math.abs(positions[m.id][k]-m.from[k])>1e-6))errors.push({stage:si,id:m.id,type:'discontinuous-start'});
-   if(['x','y','z'].filter(k=>Math.abs(m.from[k]-m.to[k])>1e-7).length!==1)errors.push({stage:si,id:m.id,type:'non-axis-route'});
-  }
-  const ids=BODIES.map(b=>b.id);
-  for(let i=0;i<ids.length;i++){
-   const id=ids[i],m=moving.get(id),a0=boxes(id,positions[id]),a1=boxes(id,m?.to??positions[id]);
-   if(m)for(let k=0;k<a0.length;k++)for(const f of FIXED){checks++;if(intersects(swept(a0[k],a1[k]),f))errors.push({stage:si,id,other:f.id,type:'fixed-collision'});}
-   for(let j=i+1;j<ids.length;j++){
-    const jd=ids[j],n=moving.get(jd);if(!m&&!n)continue;
-    const b0=boxes(jd,positions[jd]),b1=boxes(jd,n?.to??positions[jd]);
-    for(let a=0;a<a0.length;a++)for(let b=0;b<b0.length;b++){checks++;if(movingCollision(a0[a],a1[a],b0[b],b1[b]))errors.push({stage:si,id,other:jd,type:'body-collision'});}
-   }
-  }
-  for(const m of stage.motions)positions[m.id]={...m.to};
- }
- const final=placements(plan.to);for(const id of Object.keys(final))if(['x','y','z'].some(k=>Math.abs(final[id][k]-positions[id][k])>1e-7))errors.push({id,type:'wrong-destination'});
- return {ok:errors.length===0,stages:plan.stages.length,checks,maxConcurrent,duration:plan.duration,errors};
+function parallel(plans){const starts=plans.map(list=>{let t=0;return list.map(s=>{const x={...s,start:t,end:t+s.duration};t=x.end;return x;});}),cuts=[...new Set(starts.flat().flatMap(s=>[s.start,s.end]))].sort((a,b)=>a-b),out=[];
+ for(let i=0;i<cuts.length-1;i++){const a=cuts[i],b=cuts[i+1];if(b-a<1e-8)continue;const motions=[],labels=[];for(const list of starts){const s=list.find(s=>s.start<=a+1e-7&&s.end>=b-1e-7);if(s){labels.push(s.label);for(const m of s.motions)motions.push({id:m.id,from:mix(m.from,m.to,(a-s.start)/s.duration),to:mix(m.from,m.to,(b-s.start)/s.duration)});}}out.push({label:labels.join(' / '),motions,duration:b-a});}return out;
 }
-export function positionDuring(plan,time){const pos=placements(plan.from);let elapsed=0;for(const s of plan.stages){if(time>=elapsed+s.duration){for(const m of s.motions)pos[m.id]={...m.to};}else{const t=Math.max(0,(time-elapsed)/s.duration);for(const m of s.motions)pos[m.id]=mix(m.from,m.to,t);break;}elapsed+=s.duration;}return pos;}
+export function planTransfer(from,to,experiment=DEFAULT_EXPERIMENT){const e={...DEFAULT_EXPERIMENT,...experiment},base={from,to,experiment:e,initial:placements(from,e),target:placements(to,e)},groups=[['R1','R2','R3','R4'],['T1','T2'],['H1','L1']];try{const lists=groups.map((ids,i)=>groupPlan(ids,from,to,e,i));let stages;if(e.method==='serial')stages=lists.flat();else if(e.method==='vertical'||(e.bounds??SIZES[e.size]).d>=32.4)stages=parallel(lists);else stages=[...parallel(lists.slice(0,2)),...lists[2]];return {...base,stages,duration:stages.reduce((sum,s)=>sum+s.duration,0),planningError:null};}catch(error){return {...base,stages:[],duration:0,planningError:error.message};}}
+export function validatePlan(plan,initial=plan.initial??placements(plan.from,plan.experiment),clearance=CLEARANCE){const pos=structuredClone(initial),errors=[];let checks=0,maxConcurrent=0;const bound=plan.experiment?.bounds??SIZES[plan.experiment?.size??'same'];if(plan.planningError)errors.push({type:'planning-failed',reason:plan.planningError});
+ for(let si=0;si<plan.stages.length;si++){const s=plan.stages[si],moving=new Map(s.motions.map(m=>[m.id,m]));maxConcurrent=Math.max(maxConcurrent,moving.size);for(const m of s.motions){if(!equal(pos[m.id],m.from))errors.push({stage:si,id:m.id,type:'discontinuous-start'});if(['x','y','z'].filter(k=>Math.abs(m.from[k]-m.to[k])>1e-7).length!==1)errors.push({stage:si,id:m.id,type:'non-axis-route'});for(const p of[m.from,m.to])for(const a of boxes(m.id,p))if(a.min[0]<-1e-6||a.max[0]>bound.w+1e-6||a.min[2]<-1e-6||a.max[2]>bound.d+1e-6)errors.push({stage:si,id:m.id,type:'outside-range'});}
+  for(let i=0;i<BODIES.length;i++){const id=BODIES[i].id,m=moving.get(id),a0=boxes(id,pos[id]),a1=boxes(id,m?.to??pos[id]);if(m)for(let k=0;k<a0.length;k++)for(const f of fixedBoxes(plan.experiment)){checks++;if(movingCollision(a0[k],a1[k],f,f,clearance))errors.push({stage:si,id,other:f.id,type:'fixed-clearance'});}for(let j=i+1;j<BODIES.length;j++){const jd=BODIES[j].id,n=moving.get(jd);if(!m&&!n)continue;const b0=boxes(jd,pos[jd]),b1=boxes(jd,n?.to??pos[jd]);for(let a=0;a<a0.length;a++)for(let b=0;b<b0.length;b++){checks++;if(movingCollision(a0[a],a1[a],b0[b],b1[b],clearance))errors.push({stage:si,id,other:jd,type:'body-clearance'});}}}for(const m of s.motions)pos[m.id]={...m.to};
+ }
+ for(const id of Object.keys(plan.target))if(!equal(pos[id],plan.target[id]))errors.push({id,type:'wrong-destination'});return {ok:!errors.length,stages:plan.stages.length,checks,maxConcurrent,duration:plan.duration,clearance,area:bound.w*bound.d,areaRatio:bound.w*bound.d/(49.2*24.4),height:levelsFor(plan.experiment)[1]+HEIGHT,decks:plan.experiment?.method==='vertical'?2:1,errors};}
+export function positionDuring(plan,time){const pos=structuredClone(plan.initial);let elapsed=0;for(const s of plan.stages){if(time>=elapsed+s.duration-1e-8){for(const m of s.motions)pos[m.id]={...m.to};}else{const t=Math.max(0,(time-elapsed)/s.duration);for(const m of s.motions)pos[m.id]=mix(m.from,m.to,t);break;}elapsed+=s.duration;}return pos;}
+export function comparison(){return Object.keys(SIZES).flatMap(size=>Object.keys({serial:1,cooperative:1,vertical:1}).map(method=>({size,method,transitions:['A','B','C'].map(from=>{const to={A:'B',B:'C',C:'A'}[from];return {from,to,...validatePlan(planTransfer(from,to,{size,method}))};})})));}

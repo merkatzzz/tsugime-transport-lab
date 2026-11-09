@@ -1,100 +1,39 @@
 import * as THREE from '../vendor/three.module.js';
-import {BODIES,BY_ID,HEIGHT,CELL,LEVELS,EYE,footprint,boundaryWalls,portSegment,perimeter,SLOTS,SPINE_PORTS,connections} from './architecture.js';
-import {spineWalls} from './simulation.js';
+import {BODIES,BY_ID,HEIGHT,EYE,SIZES,levelsFor,decksFor,footprint,boundaryWalls,portSegment,connections,LANDING,ANNEX,LIFE_BOUNDS} from './architecture.js';
+import {fixedWalls} from './simulation.js';
 export class View{
- constructor(container,sim){
-  this.sim=sim;this.container=container;this.mode='overview';this.floor='all';this.envelopes=true;this.routes=true;
-  this.scene=new THREE.Scene();this.scene.background=new THREE.Color('#dde3df');this.scene.fog=new THREE.Fog('#dde3df',135,250);
-  this.camera=new THREE.PerspectiveCamera(54,1,.07,360);
-  this.renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});this.renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.15;
-  container.append(this.renderer.domElement);this.renderer.domElement.setAttribute('aria-label','建築と搬送体を観察する3D画面');this.renderer.domElement.tabIndex=0;
-  this.scene.add(new THREE.HemisphereLight(0xf3f4df,0x697c7e,2.5));const sun=new THREE.DirectionalLight(0xfff4d6,2.6);sun.position.set(-20,60,-30);this.scene.add(sun);const fill=new THREE.DirectionalLight(0xd4e5ed,1.1);fill.position.set(40,20,55);this.scene.add(fill);
-  this.mats={};this.groups={};this.roofs=[];this.shutters=[];this.doorMeshes=[];this.bounds=[];this.labels=[];this.fixedFloors=[];
-  this.material('wall','#c8c9bb');this.material('concrete','#949c95');this.material('metal','#435c5b');this.material('wood','#877052');this.material('lamp','#e7dd9c',.8);this.material('dark','#2d4142');
-  this.buildFacility();BODIES.forEach(b=>this.buildBody(b));this.buildPaths();
-  this.orbit={yaw:.62,pitch:.66,distance:88,target:new THREE.Vector3(22,14,17)};this.resize();new ResizeObserver(()=>this.resize()).observe(container);
-  this.marker=new THREE.Mesh(new THREE.ConeGeometry(.38,1,12),new THREE.MeshBasicMaterial({color:'#dc4b32'}));this.scene.add(this.marker);
- }
- material(name,color,emissive=0){if(!this.mats[name])this.mats[name]=new THREE.MeshStandardMaterial({color,roughness:.88,metalness:name==='metal'?.45:.06,emissive:color,emissiveIntensity:emissive});return this.mats[name];}
+ constructor(container,sim){this.container=container;this.sim=sim;this.mode='overview';this.floor='all';this.envelopes=true;this.routes=true;this.scene=new THREE.Scene();this.scene.background=new THREE.Color('#dde3df');this.scene.fog=new THREE.Fog('#dde3df',110,210);this.camera=new THREE.PerspectiveCamera(54,1,.06,250);this.renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});this.renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.15;container.append(this.renderer.domElement);this.renderer.domElement.tabIndex=0;this.renderer.domElement.setAttribute('aria-label','可動廊下・搬送空間の3D画面');this.scene.add(new THREE.HemisphereLight(0xf3f4df,0x697c7e,2.5));for(const [color,intensity,xyz]of [[0xfff4d6,2.6,[-20,60,-30]],[0xd4e5ed,1.1,[40,20,55]]]){const l=new THREE.DirectionalLight(color,intensity);l.position.set(...xyz);this.scene.add(l);}this.mats={};this.groups={};this.roofs=[];this.shutters=[];this.doorMeshes=[];this.bounds=[];this.labels=[];this.fixedFloors=[];for(const[name,c]of Object.entries({wall:'#c8c9bb',concrete:'#949c95',metal:'#435c5b',wood:'#877052',lamp:'#e7dd9c',dark:'#2d4142'}))this.material(name,c,name==='lamp'?.8:0);this.buildFacility();BODIES.forEach(b=>this.buildBody(b));this.buildPaths();this.bridges=new THREE.Group();this.scene.add(this.bridges);this.bridgeKey='';this.marker=new THREE.Mesh(new THREE.ConeGeometry(.32,.85,12),new THREE.MeshBasicMaterial({color:'#dc4b32'}));this.scene.add(this.marker);this.orbit={yaw:.55,pitch:.72,distance:66,target:new THREE.Vector3(23,8,9)};this.resize();this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(container);}
+ material(name,color,emissive=0){return this.mats[name]??=new THREE.MeshStandardMaterial({color,roughness:.88,metalness:name==='metal'?.45:.06,emissive:color,emissiveIntensity:emissive});}
  cube(group,x,y,z,w,h,d,mat){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),typeof mat==='string'?this.mats[mat]??this.material(mat,mat):mat);m.position.set(x+w/2,y+h/2,z+d/2);group.add(m);return m;}
- wall(group,l,height=3.2,mat='wall',thick=.12){const dx=l.b[0]-l.a[0],dz=l.b[1]-l.a[1],len=Math.hypot(dx,dz);if(!len)return;const m=new THREE.Mesh(new THREE.BoxGeometry(len,height,thick),this.mats[mat]);m.position.set((l.a[0]+l.b[0])/2,height/2+.16,(l.a[1]+l.b[1])/2);m.rotation.y=-Math.atan2(dz,dx);group.add(m);return m;}
- text(group,text,x,y,z,{size=1,color='#e6e8dd',background='#344b49',rotation=0}={}){
-  const c=document.createElement('canvas');c.width=768;c.height=160;const ctx=c.getContext('2d');ctx.fillStyle=background;ctx.fillRect(0,0,768,160);ctx.fillStyle=color;ctx.font='500 52px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(text,384,83,728);
-  const texture=new THREE.CanvasTexture(c);texture.colorSpace=THREE.SRGBColorSpace;const m=new THREE.Mesh(new THREE.PlaneGeometry(size*4.8,size),new THREE.MeshBasicMaterial({map:texture,side:THREE.DoubleSide}));m.position.set(x,y,z);m.rotation.y=rotation;group.add(m);return m;
+ wall(group,l,height=2.6,mat='wall',thick=.12,base=.16){const dx=l.b[0]-l.a[0],dz=l.b[1]-l.a[1],len=Math.hypot(dx,dz);if(len<1e-7)return null;const m=new THREE.Mesh(new THREE.BoxGeometry(len,height,thick),this.mats[mat]);m.position.set((l.a[0]+l.b[0])/2,base+height/2,(l.a[1]+l.b[1])/2);m.rotation.y=-Math.atan2(dz,dx);group.add(m);return m;}
+ text(group,label,x,y,z,{size=.5,color='#e6e8dd',background='#344b49',rotation=0}={}){const c=document.createElement('canvas');c.width=768;c.height=160;const ctx=c.getContext('2d');ctx.fillStyle=background;ctx.fillRect(0,0,768,160);ctx.fillStyle=color;ctx.font='500 48px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(label,384,82,730);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;const m=new THREE.Mesh(new THREE.PlaneGeometry(size*4.8,size),new THREE.MeshBasicMaterial({map:t,side:THREE.DoubleSide}));m.userData.annotation=true;m.position.set(x,y,z);m.rotation.y=rotation;group.add(m);return m;}
+ floorTile(g,x,z,c){this.cube(g,x,0,z,8,.16,8,this.material(`floor${c}`,c));for(let n=1;n<8;n++){this.cube(g,x+n,.161,z,.01,.003,8,'#83918a');this.cube(g,x,.161,z+n,8,.003,.01,'#83918a');}}
+ buildBody(b){const g=new THREE.Group();this.scene.add(g);this.groups[b.id]=g;for(const[cx,cz]of b.cells){this.floorTile(g,cx*8,cz*8,b.color);const edge=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(8,HEIGHT,8)),new THREE.LineBasicMaterial({color:b.color,transparent:true,opacity:.7}));edge.position.set(cx*8+4,HEIGHT/2,cz*8+4);g.add(edge);this.bounds.push(edge);}
+  for(const r of b.roofAreas){this.roofs.push(this.cube(g,r.x,r.height+.16,r.z,r.w,.16,r.d,'#cccdbf'));this.cube(g,r.x+Math.max(.2,(r.w-3)/2),r.height+.1,r.z+r.d/2,Math.min(3,r.w-.4),.045,.15,'lamp');}
+  // Close vertical steps between unequal ceilings; their fascia is above the walking head envelope.
+  for(let i=0;i<b.roofAreas.length;i++)for(let j=i+1;j<b.roofAreas.length;j++){const a=b.roofAreas[i],c=b.roofAreas[j],low=Math.min(a.height,c.height),dh=Math.abs(a.height-c.height);if(dh<.01)continue;let l;if(Math.abs(a.z+a.d-c.z)<1e-6||Math.abs(c.z+c.d-a.z)<1e-6){const x=Math.max(a.x,c.x),xx=Math.min(a.x+a.w,c.x+c.w),z=Math.abs(a.z+a.d-c.z)<1e-6?c.z:a.z;if(xx>x)l={a:[x,z],b:[xx,z]};}else if(Math.abs(a.x+a.w-c.x)<1e-6||Math.abs(c.x+c.w-a.x)<1e-6){const z=Math.max(a.z,c.z),zz=Math.min(a.z+a.d,c.z+c.d),x=Math.abs(a.x+a.w-c.x)<1e-6?c.x:a.x;if(zz>z)l={a:[x,z],b:[x,zz]};}if(l)this.roofs.push(this.wall(g,l,dh,'wall',.12,low+.16));}
+  for(const l of[...boundaryWalls(b),...b.walls]){this.wall(g,l,b.ceiling);this.wall(g,l,.1,'metal');}for(const s of b.solids)this.cube(g,s.x,.16,s.z,s.w,s.h,s.d,s.color);for(const s of b.furniture){this.cube(g,s.x,.16,s.z,s.w,s.h,s.d,'wood');this.cube(g,s.x+.03,.16+s.h,s.z+.03,s.w-.06,.06,s.d-.06,b.use==='residential'?'#c1c2a8':'#bba67d');}
+  for(const d of b.doors){const m=this.wall(g,d,2.05,d.glass?'dark':'wood',.1);this.wall(g,d,b.ceiling-2.05,'wall',.12,2.21);if(d.glass){m.material=new THREE.MeshStandardMaterial({color:'#91bab7',transparent:true,opacity:.35,roughness:.15});this.wall(g,d,.85,'wood',.1);}this.doorMeshes.push({mesh:m,id:d.id});this.text(g,d.label,(d.a[0]+d.b[0])/2,2.27,(d.a[1]+d.b[1])/2-.07,{size:.2,rotation:Math.PI});}
+  for(const p of b.ports){const l=portSegment(b,p),len=Math.hypot(l.b[0]-l.a[0],l.b[1]-l.a[1]),portal=new THREE.Group();portal.position.set((l.a[0]+l.b[0])/2,0,(l.a[1]+l.b[1])/2);portal.rotation.y=-Math.atan2(l.b[1]-l.a[1],l.b[0]-l.a[0]);g.add(portal);this.cube(portal,-len/2,p.height+.16,-.06,len,Math.max(.05,b.ceiling-p.height),.12,'wall');this.cube(portal,-len/2-.1,.16,-.14,.1,p.height,.28,'metal');this.cube(portal,len/2,.16,-.14,.1,p.height,.28,'metal');this.cube(portal,-len/2-.1,p.height+.16,-.18,len+.2,.15,.36,'metal');const roll=new THREE.Group();portal.add(roll);this.cube(roll,-len/2,.16,-.045,len,p.height,.09,'metal');for(let y=.25;y<p.height;y+=.28)this.cube(roll,-len/2,y,-.055,len,.022,.11,'#a2a17d');this.shutters.push({group:roll,id:b.id,port:p,height:p.height});}
+  this.text(g,b.id,.13,b.ports[0].height+.235,2,{size:.12,rotation:-Math.PI/2});const f=footprint(b),label=this.text(g,`${b.id} · ${b.cells.length} CHUNKS`,b.id==='L1'?4:f.w/2,.18,b.id==='L1'?6:f.d/2,{size:.65,color:'#34443f',background:b.color});label.rotation.x=-Math.PI/2;this.labels.push(label);
  }
- floorTile(group,x,z,color){this.cube(group,x,0,z,8,.16,8,this.material(`floor${color}`,color));
-  // Fine joints remain within a permanently joined carrier; no furniture crosses detachable seams.
-  for(let n=1;n<8;n++){this.cube(group,x+n,.161,z,.012,.004,8,'#83918a');this.cube(group,x,.161,z+n,8,.004,.012,'#83918a');}
+ buildFacility(){const upper=this.sim.levels[1],bound=SIZES[this.sim.experiment.size];this.fixed=new THREE.Group();this.scene.add(this.fixed);this.shell=new THREE.Group();this.scene.add(this.shell);const right=Math.max(bound.w,54)+2,back=bound.d+2,top=upper+HEIGHT+1;this.cube(this.shell,-8,-.7,-2,right+8,.3,back+2,'#87958f');this.cube(this.shell,-8,top,-2,right+8,.3,back+2,'#9ba59f');this.cube(this.shell,-8,0,-2,right+8,top,.25,'#a3ada5');this.cube(this.shell,right-.25,0,-2,.25,top,back+2,'#9fa9a2');this.cube(this.shell,-8,0,back-.25,right+8,top,.25,'#9fa9a2');this.cube(this.shell,-8,0,-2,.25,top,back+2,'#9fa9a2');
+  for(const[i,y]of this.sim.levels.entries()){const g=new THREE.Group();g.position.y=y;this.fixed.add(g);this.fixedFloors.push({g,y});this.cube(g,LANDING.x,0,0,LANDING.w,.16,4,'#b7c2aa');for(const l of fixedWalls('landing'))this.wall(g,l,2.8);this.roofs.push(this.cube(g,LANDING.x,2.96,0,LANDING.w,.16,4,'#c9d0ba'));this.wall(g,{a:[-.46,1],b:[-.46,3]},.3,'wall',.12,2.66);const gate=this.cube(g,-2.4,.16,.4,.12,2.5,3.2,'metal');this.shutters.push({mesh:gate,lift:true,y});const exit=this.cube(g,-.52,.16,1,.12,2.5,2,'metal');this.shutters.push({mesh:exit,landing:`F${i}`});}
+  this.cabin=new THREE.Group();this.scene.add(this.cabin);this.cube(this.cabin,-6.4,0,0,4,.16,4,'#b7ad82');for(const l of[{a:[-6.34,0],b:[-6.34,4]},{a:[-6.4,.06],b:[-2.4,.06]},{a:[-6.4,3.94],b:[-2.4,3.94]}])this.wall(this.cabin,l,2.8,'metal');this.roofs.push(this.cube(this.cabin,-6.4,2.96,0,4,.16,4,'#abb8a9'));this.text(this.cabin,'固定 EV  /  E',-6.25,2.25,2,{size:.4,rotation:Math.PI/2});for(const x of[-6.7,-2.15])for(const z of[-.3,4.2])this.cube(this.fixed,x,0,z,.18,upper+4,.18,'metal');
+  this.annex=new THREE.Group();this.scene.add(this.annex);this.cube(this.annex,ANNEX.x,0,0,4,.16,4,'#b5bfa5');for(const l of fixedWalls('ANNEX'))this.wall(this.annex,l,2.8);this.wall(this.annex,{a:[ANNEX.x+.06,1],b:[ANNEX.x+.06,3]},.3,'wall',.12,2.66);const ag=this.cube(this.annex,ANNEX.x,.16,1,.12,2.5,2,'metal');this.shutters.push({mesh:ag,annex:true});this.roofs.push(this.cube(this.annex,ANNEX.x,2.96,0,4,.16,4,'#c9d0ba'));this.text(this.annex,'固定観察室',ANNEX.x+3.85,2.3,2,{size:.35,rotation:-Math.PI/2});
+  this.deck=new THREE.Group();this.scene.add(this.deck);for(const y of decksFor(this.sim.experiment)){for(let x=0;x<bound.w+.01;x+=8.4)this.gridLine([x,y-.15,0],[x,y-.15,bound.d]);for(let z=0;z<bound.d+.01;z+=8.4)this.gridLine([0,y-.15,z],[bound.w,y-.15,z]);const t=this.text(this.deck,`搬送デッキ +${y}m`,25,y-.12,bound.d-2,{size:1});t.rotation.x=-Math.PI/2;}
+  // Guides are outside the permitted transport range. Empty docks have no floor.
+  for(const x of[-7.2,bound.w+1])for(const z of[-1,bound.d+1])this.cube(this.fixed,x,0,z,.2,top,.2,'metal');
  }
- buildBody(b){
-  const g=new THREE.Group();this.scene.add(g);this.groups[b.id]=g;
-  for(const [cx,cz] of b.cells){this.floorTile(g,cx*8,cz*8,b.color);const roof=this.cube(g,cx*8,b.ceiling+.16,cz*8,8,.16,8,'#cccdbf');this.roofs.push(roof);
-   this.cube(g,cx*8+1.3,b.ceiling-.035,cz*8+3.7,5.4,.045,.22,'lamp');
-   const edge=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(8,5,8)),new THREE.LineBasicMaterial({color:b.color,transparent:true,opacity:.75}));edge.position.set(cx*8+4,2.5,cz*8+4);g.add(edge);this.bounds.push(edge);
-  }
-  for(const l of [...boundaryWalls(b),...b.walls]){this.wall(g,l,b.ceiling);this.wall(g,l,.12,'metal',.12);}
-  for(const s of b.solids)this.cube(g,s.x,.16,s.z,s.w,s.h,s.d,s.color);
-  for(const s of b.furniture){this.cube(g,s.x,.16,s.z,s.w,s.h,s.d,'wood');if(b.use==='residential'&&s.h<.6){this.cube(g,s.x+.07,s.h+.16,s.z+.07,s.w-.14,.12,s.d-.14,'#c1c2a8');this.cube(g,s.x+.13,s.h+.29,s.z+.15,s.w-.26,.08,.4,'#d9d9c8');}else this.cube(g,s.x,s.h+.16,s.z,s.w,.06,s.d,'#bba67d');}
-  for(const d of b.doors){const mesh=this.wall(g,d,2.4,d.glass?'dark':'wood',.1);const lintel=this.wall(g,d,b.ceiling-2.4);lintel.position.y+=2.4;if(d.glass){mesh.material=new THREE.MeshStandardMaterial({color:'#91bab7',transparent:true,opacity:.36,roughness:.15});this.wall(g,d,.9,'wood',.1);}
-   this.doorMeshes.push({mesh,id:d.id,glass:d.glass});const mx=(d.a[0]+d.b[0])/2,mz=(d.a[1]+d.b[1])/2;this.text(g,d.label,mx+.075,2.77,mz,{size:.24,rotation:Math.PI/2});
-  }
-  for(const p of b.ports){const l=portSegment(b,p),dx=l.b[0]-l.a[0],dz=l.b[1]-l.a[1],len=Math.hypot(dx,dz),angle=-Math.atan2(dz,dx);
-   const portal=new THREE.Group();portal.position.set((l.a[0]+l.b[0])/2,0,(l.a[1]+l.b[1])/2);portal.rotation.y=angle;g.add(portal);
-   this.cube(portal,-len/2,2.96,-.06,len,b.ceiling-2.8,.12,'wall');this.cube(portal,-len/2-.11,.16,-.16,.16,2.9,.32,'metal');this.cube(portal,len/2-.05,.16,-.16,.16,2.9,.32,'metal');this.cube(portal,-len/2-.12,2.96,-.2,len+.24,.25,.4,'metal');
-   const shutter=new THREE.Group();portal.add(shutter);this.cube(shutter,-len/2,.16,-.045,len,2.8,.09,'metal');for(let n=0;n<9;n++)this.cube(shutter,-len/2,.3+n*.3,-.055,len,.024,.11,'#9d9d75');
-   this.shutters.push({group:shutter,id:b.id,port:p});this.cube(portal,-len/2,.17,-.11,len,.015,.22,'#d1b765');
-  }
-  const n=b.ports.find(p=>p.face==='N');this.text(g,`${b.id}  ${b.name}`,(n.a+n.b)/2,2.8,.12,{size:.43,rotation:Math.PI});
-  const f=footprint(b);const label=this.text(g,`${b.id} · ${b.cells.length} CHUNKS`,b.id==='L1'?4:f.w/2,.18,b.id==='L1'?6:f.d/2,{size:.7,color:'#34443f',background:b.color});label.rotation.x=-Math.PI/2;this.labels.push(label);
- }
- buildFacility(){
-  this.fixed=new THREE.Group();this.scene.add(this.fixed);
-  // Closed outer building. Its north wall and roof are removed only in developer cutaway views.
-  this.shell=new THREE.Group();this.scene.add(this.shell);
-  this.cube(this.shell,-10,-.6,-7,64,.4,94,'#8d9792');this.cube(this.shell,-10,33,-7,64,.5,94,'#9ba59f');this.cube(this.shell,-10,0,-7,64,33,.3,'#a3ada5');this.cube(this.shell,53.7,0,-7,.3,33,94,'#9fa9a2');this.cube(this.shell,-10,0,86.7,64,33,.3,'#9fa9a2');this.cube(this.shell,-10,0,-7,.3,33,94,'#9fa9a2');
-  for(const [level,y] of LEVELS.entries()){
-   const g=new THREE.Group();g.position.y=y;this.fixed.add(g);this.fixedFloors.push({g,y});this.cube(g,-2,0,-4,50,.16,4,'#bcc5b7');for(const l of spineWalls())this.wall(g,l,3.2);
-   const roof=this.cube(g,-2,3.36,-4,50,.16,4,'#d2d3c5');this.roofs.push(roof);
-   for(let x=0;x<48;x+=8){this.cube(g,x+1,3.25,-2.3,5,.06,.3,'lamp');this.text(g,`${level===1?'第三層':'第二層'}  ← 固定EV`,x+3,2.3,-3.9,{size:.4});}
-   for(let slot=0;slot<4;slot++){const [a,b]=SPINE_PORTS[slot],len=b-a;const portal=new THREE.Group();portal.position.x=SLOTS[slot]+a;g.add(portal);this.cube(portal,0,2.96,-.12,len,.4,.12,'wall');const shutter=this.cube(portal,0,.16,-.12,len,2.8,.12,'metal');this.shutters.push({mesh:shutter,fixed:true});}
-   const gate=this.cube(g,-2,.16,-3.6,.12,2.8,3.2,'metal');this.shutters.push({mesh:gate,lift:true,y});
-  }
-  // Fixed guide columns stay outside every carrier sweep.
-  for(const x of [-6.4,-1.9])for(const z of [-4.4,.4])this.cube(this.fixed,x,0,z,.25,30,.25,'metal');
-  this.cabin=new THREE.Group();this.scene.add(this.cabin);this.cube(this.cabin,-6,0,-4,4,.16,4,'#b7ad82');for(const l of [{a:[-6,-4],b:[-2,-4]},{a:[-6,0],b:[-2,0]},{a:[-6,-4],b:[-6,0]}])this.wall(this.cabin,l,3.2,'metal');const cr=this.cube(this.cabin,-6,3.36,-4,4,.15,4,'#adb9aa');this.roofs.push(cr);this.text(this.cabin,'固定 EV  /  E',-4,2.3,-3.9,{size:.5});
-  this.annex=new THREE.Group();this.scene.add(this.annex);this.cube(this.annex,48,0,4,4,.16,4,'#b5bfa5');
-  for(const l of [{a:[48,4.06],b:[52,4.06]},{a:[48,7.94],b:[52,7.94]},{a:[51.94,4],b:[51.94,8]},{a:[48.06,4],b:[48.06,5]},{a:[48.06,7],b:[48.06,8]}])this.wall(this.annex,l,3.2);
-  this.cube(this.annex,48,2.96,5,.12,.4,2,'wall');const annexGate=this.cube(this.annex,48,.16,5,.12,2.8,2,'metal');this.shutters.push({mesh:annexGate,annex:true});this.roofs.push(this.cube(this.annex,48,3.36,4,4,.16,4,'#d2d3c5'));this.text(this.annex,'固定観察室',51.85,2.3,6,{size:.4,rotation:-Math.PI/2});
-  // Gantry guide rails: no permanent hardware intrudes into the swept volume.
-  for(const x of [-8,51]){this.cube(this.fixed,x,10.6,-.2,.2,.25,83,'metal');for(const z of [0,20,40,64,82])this.cube(this.fixed,x,-.1,z,.4,32,.4,'metal');}
-  this.deck=new THREE.Group();this.scene.add(this.deck);
-  for(let z=0;z<=80;z+=8){const points=[new THREE.Vector3(-.2,10.9,z),new THREE.Vector3(48,10.9,z)];this.deck.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),new THREE.LineBasicMaterial({color:'#7b928b',transparent:true,opacity:.3})));}
-  for(let x=0;x<=48;x+=8){this.deck.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x,10.9,0),new THREE.Vector3(x,10.9,82)]),new THREE.LineBasicMaterial({color:'#7b928b',transparent:true,opacity:.3})));}
-  this.text(this.deck,'専用搬送空間  +11m',25,11.1,23,{size:1.4}).rotation.x=-Math.PI/2;
-  this.text(this.deck,'近方退避ベイ  z40',25,11.1,49,{size:1.3}).rotation.x=-Math.PI/2;
-  this.text(this.deck,'遠方退避ベイ  z64',25,11.1,74,{size:1.3}).rotation.x=-Math.PI/2;
- }
+ gridLine(a,b){this.deck.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(...a),new THREE.Vector3(...b)]),new THREE.LineBasicMaterial({color:'#7b928b',transparent:true,opacity:.35})));}
  buildPaths(){this.pathGroup=new THREE.Group();this.scene.add(this.pathGroup);this.pathKey='';}
- updatePaths(){
-  const plan=this.sim.plan;if(!plan||this.pathKey===plan.from+plan.to)return;
-  for(const c of [...this.pathGroup.children]){c.geometry?.dispose();c.material?.dispose();this.pathGroup.remove(c);}this.pathKey=plan.from+plan.to;
-  for(const s of plan.stages)for(const m of s.motions){const f=footprint(BY_ID[m.id]),points=[m.from,m.to].map(p=>new THREE.Vector3(p.x+f.w/2,p.y+2.5,p.z+f.d/2));const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),new THREE.LineDashedMaterial({color:BY_ID[m.id].color,dashSize:.6,gapSize:.5,transparent:true,opacity:.65}));line.computeLineDistances();this.pathGroup.add(line);}
- }
+ refreshBridges(){const key=`${this.sim.phase}-${this.sim.shutter>.01}-${this.floor}`;if(key===this.bridgeKey)return;this.bridgeKey=key;this.clearGroup(this.bridges);for(const b of this.sim.bridges){if(this.mode==='overview'&&this.floor!=='all'&&Math.abs(b.y-Number(this.floor))>.1)continue;this.cube(this.bridges,b.x, b.y,b.z,b.w,.16,b.d,'#b0a477');for(let z=b.z+.15;z<b.z+b.d;z+=.3)this.cube(this.bridges,b.x,b.y+.165,z,b.w,.01,.02,'metal');}}
+ clearGroup(g){for(const o of[...g.children]){o.traverse?.(m=>m.geometry?.dispose());g.remove(o);}}
+ updatePaths(){const p=this.sim.plan;if(!p||this.pathKey===p.from+p.to+this.sim.experiment.method+this.sim.experiment.size)return;this.clearGroup(this.pathGroup);this.pathKey=p.from+p.to+this.sim.experiment.method+this.sim.experiment.size;for(const s of p.stages)for(const m of s.motions){const f=footprint(BY_ID[m.id]),points=[m.from,m.to].map(p=>new THREE.Vector3(p.x+f.w/2,p.y+3,p.z+f.d/2)),l=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),new THREE.LineDashedMaterial({color:BY_ID[m.id].color,dashSize:.5,gapSize:.35,transparent:true,opacity:.6}));l.computeLineDistances();this.pathGroup.add(l);}}
  resize(){const w=this.container.clientWidth,h=this.container.clientHeight;if(!w||!h)return;this.camera.aspect=w/h;this.camera.updateProjectionMatrix();this.renderer.setSize(w,h,false);}
- setMode(mode){this.mode=mode;if(mode==='overview'){this.orbit.target.set(22,14,22);this.orbit.distance=96;}this.resize();}
- render(){
-  const sim=this.sim,overview=this.mode==='overview';this.shell.visible=!overview;
-  for(const b of BODIES){const g=this.groups[b.id],p=sim.positions[b.id];g.position.set(p.x,p.y,p.z);g.visible=!overview||this.floor==='all'||Math.abs(p.y-Number(this.floor))<.1||sim.mode==='moving';}
-  for(const {g,y} of this.fixedFloors)g.visible=!overview||this.floor==='all'||y===Number(this.floor);this.annex.visible=!overview||this.floor==='all'||this.floor==='0';
-  this.roofs.forEach(m=>m.visible=!overview);this.bounds.forEach(m=>m.visible=overview&&this.envelopes);this.labels.forEach(m=>m.visible=overview);this.cabin.position.y=sim.liftY;
-  const links=connections(sim.phase);
-  for(const s of this.shutters){if(s.annex){const amount=links.some(c=>c.b==='ANNEX'&&c.status==='pass')?sim.shutter:1;s.mesh.visible=amount>0;s.mesh.scale.y=Math.max(.001,amount);s.mesh.position.y=.16+2.8-1.4*amount;}else if(s.fixed){s.mesh.visible=sim.shutter>0;s.mesh.scale.y=Math.max(.001,sim.shutter);s.mesh.position.y=.16+2.8-1.4*sim.shutter;}else if(s.lift){s.mesh.visible=sim.liftActive||Math.abs(sim.liftY-s.y)>.01;}else{const connected=links.some(c=>(c.a===s.id&&c.face===s.port.face||c.b===s.id&&c.face==='E'&&s.port.face==='W')&&c.status!=='blocked');const amount=connected?sim.shutter:1;s.group.scale.y=Math.max(.001,amount);s.group.position.y=2.96*(1-amount);}}
-  for(const d of this.doorMeshes)d.mesh.visible=!sim.doors[d.id];
-  this.deck.visible=overview&&this.floor==='all';this.pathGroup.visible=overview&&this.routes;this.updatePaths();
-  const p=sim.player;this.marker.visible=overview;this.marker.position.set(p.x,p.y+2,p.z);this.marker.rotation.z=Math.PI;
-  if(!overview){this.camera.position.set(p.x,p.y+EYE,p.z);this.camera.rotation.order='YXZ';this.camera.rotation.set(p.pitch,p.yaw+Math.PI,0);}else{
-   const o=this.orbit,d=o.distance;this.camera.position.set(o.target.x+Math.sin(o.yaw)*Math.cos(o.pitch)*d,o.target.y+Math.sin(o.pitch)*d,o.target.z+Math.cos(o.yaw)*Math.cos(o.pitch)*d);this.camera.lookAt(o.target);
-  }
-  this.renderer.render(this.scene,this.camera);
- }
+ setMode(mode){this.mode=mode;this.bridgeKey='';this.resize();}
+ render(){const sim=this.sim,overview=this.mode==='overview';this.shell.visible=!overview;for(const b of BODIES){const p=sim.positions[b.id],g=this.groups[b.id];g.position.set(p.x,p.y,p.z);g.visible=!overview||this.floor==='all'||Math.abs(p.y-Number(this.floor))<.1||sim.mode==='moving';}for(const{g,y}of this.fixedFloors)g.visible=!overview||this.floor==='all'||Math.abs(y-Number(this.floor))<.1;this.annex.visible=!overview||this.floor==='all'||this.floor==='0';this.roofs.forEach(m=>m.visible=!overview);this.bounds.forEach(m=>m.visible=overview&&this.envelopes);this.labels.forEach(m=>m.visible=overview);this.cabin.position.y=sim.liftY;
+  const links=connections(sim.phase,sim.experiment);for(const s of this.shutters){if(s.lift)s.mesh.visible=sim.liftActive||Math.abs(sim.liftY-s.y)>.01;else if(s.annex||s.landing){const id=s.annex?'ANNEX':s.landing,amount=links.some(c=>(c.a===id||c.b===id)&&c.status==='pass')?sim.shutter:1;s.mesh.visible=amount>.001;s.mesh.scale.y=Math.max(.001,amount);s.mesh.position.y=.16+2.5-1.25*amount;}else{const amount=links.some(c=>c.ports[s.id]===s.port.face&&c.status!=='blocked')?sim.shutter:1;s.group.scale.y=Math.max(.001,amount);s.group.position.y=(s.height+.16)*(1-amount);}}
+  for(const d of this.doorMeshes)d.mesh.visible=!sim.doors[d.id];this.deck.visible=overview&&this.floor==='all';this.pathGroup.visible=overview&&this.routes;this.updatePaths();this.refreshBridges();const p=sim.player;this.marker.visible=overview;this.marker.position.set(p.x,p.y+2,p.z);this.marker.rotation.z=Math.PI;if(!overview){this.camera.position.set(p.x,p.y+EYE,p.z);this.camera.rotation.order='YXZ';this.camera.rotation.set(p.pitch,p.yaw+Math.PI,0);}else{const o=this.orbit,d=o.distance;this.camera.position.set(o.target.x+Math.sin(o.yaw)*Math.cos(o.pitch)*d,o.target.y+Math.sin(o.pitch)*d,o.target.z+Math.cos(o.yaw)*Math.cos(o.pitch)*d);this.camera.lookAt(o.target);}this.renderer.render(this.scene,this.camera);}
+ dispose(){this.observer?.disconnect();this.scene.traverse(m=>{m.geometry?.dispose();if(m.material&&!Object.values(this.mats).includes(m.material)){m.material.map?.dispose();m.material.dispose?.();}});Object.values(this.mats).forEach(m=>m.dispose());this.renderer.dispose();this.renderer.domElement.remove();}
 }

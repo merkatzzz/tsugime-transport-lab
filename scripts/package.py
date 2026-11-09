@@ -13,6 +13,14 @@ downloads.mkdir(parents=True, exist_ok=True)
 shutil.copy2(root/'README.md', downloads/'README.md')
 shutil.copy2(root/'docs/REPORT.md', downloads/'REPORT.md')
 shutil.copytree(root/'docs/evidence', downloads/'evidence', dirs_exist_ok=True)
+# Preserve the immutable Stage 1 app, reports and source as a working comparison route.
+shutil.copytree(root/'stage1/dist', root/'dist/stage1', dirs_exist_ok=True)
+baseline_archive = root/'dist/stage1/downloads/tsugime-lab-source.zip'
+baseline_archive.parent.mkdir(parents=True, exist_ok=True)
+with zipfile.ZipFile(baseline_archive, 'w', zipfile.ZIP_DEFLATED) as z:
+    for p in sorted((root/'stage1').rglob('*')):
+        if p.is_file() and p.suffix != '.zip':
+            z.write(p, Path('tsugime-stage1')/p.relative_to(root/'stage1'))
 
 def inline(text):
     s = html.escape(text)
@@ -48,7 +56,7 @@ while i < len(lines):
         parts.append('<p>'+inline(line)+'</p>')
     i += 1
 
-drawings = '<h2>各周期の平面図</h2>'
+drawings = '<h2>搬送範囲・方式の比較図</h2><img src="downloads/evidence/comparison.svg" alt="3方式と3搬送範囲の面積・高さ・循環時間比較"><h2>各周期の平面図</h2>'
 for phase in 'ABC':
     drawings += f'<h3>周期 {phase}</h3><div class="drawings">'
     for level in [3,2]:
@@ -57,7 +65,7 @@ for phase in 'ABC':
 drawings += '<h2>専用デッキと搬送経路</h2><img class="route" src="downloads/evidence/transport-route.svg" alt="退避ベイと横行路を使う搬送経路">'
 page = '''<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>検証報告｜継ぎ目の部屋 建築・搬送実験</title><style>
 body{background:#f1f2e9;color:#334d40;font:14px/1.9 sans-serif;margin:0}article{max-width:1030px;margin:auto;padding:45px 28px}nav{display:flex;flex-wrap:wrap;gap:25px;border-bottom:1px solid #ccd5c3;padding-bottom:20px;font-size:12px}a{color:#557c57;text-underline-offset:3px}h1{font:28px/1.5 serif;margin-top:40px}h2{font-size:19px;margin-top:45px;border-top:1px solid #ccd5c3;padding-top:25px}h3{font-size:15px;margin-top:30px}p{color:#61715b}.bullet{margin:10px 0}strong{color:#3b5641}code{background:#e0e6d7;padding:2px 5px;border-radius:3px}.table{overflow:auto}table{border-collapse:collapse;font-size:12px;width:100%;margin:20px 0}th,td{padding:10px;border:1px solid #d4dccb;text-align:left}th{background:#e1e7d8}.drawings{display:grid;grid-template-columns:1fr 1fr;gap:20px}figure{margin:0}img{width:100%;border:1px solid #ccd5c3;background:#e4eadc}figcaption{font-size:12px;margin-bottom:7px}.route{max-width:470px}footer{margin-top:40px;font-size:11px;color:#88937d}@media(max-width:650px){.drawings{grid-template-columns:1fr}article{padding:25px 18px}h1{font-size:24px}}
-</style><article><nav><a href="index.html">← 3D実験へ戻る</a><a data-hosted-source href="downloads/tsugime-lab-source.zip" download>ソース一式 ZIP</a><a href="downloads/REPORT.md" download>検証報告 Markdown</a><a href="downloads/README.md" download>起動・操作 README</a></nav>'''+''.join(parts)+drawings+'''<footer>検証済みの範囲はこの小規模計画です。ブラウザ描画の確認制約は本文に明記しています。</footer></article><script>if(['localhost','127.0.0.1'].includes(location.hostname))document.querySelectorAll('[data-hosted-source]').forEach(a=>a.hidden=true)</script></html>'''
+</style><article><nav><a href="index.html">← 第二段階の3D実験</a><a href="stage1/index.html">第一段階を比較</a><a data-hosted-source href="downloads/tsugime-lab-source.zip" download>第二段階ソース一式 ZIP</a><a href="downloads/REPORT.md" download>検証報告 Markdown</a><a href="downloads/README.md" download>起動・操作 README</a></nav>'''+''.join(parts)+drawings+'''<footer>検証済みの範囲はこの小規模計画です。ブラウザ描画の確認制約は本文に明記しています。</footer></article><script>if(['localhost','127.0.0.1'].includes(location.hostname))document.querySelectorAll('[data-hosted-source]').forEach(a=>a.hidden=true)</script></html>'''
 (root/'dist/report.html').write_text(page)
 
 archive = downloads/'tsugime-lab-source.zip'
