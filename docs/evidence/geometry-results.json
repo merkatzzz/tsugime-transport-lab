@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-09",
+  "testCount": 20,
+  "transitions": [
+    {
+      "from": "A",
+      "to": "B",
+      "ok": true,
+      "stages": 30,
+      "checks": 1123,
+      "maxConcurrent": 4,
+      "duration": 82,
+      "errors": []
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "ok": true,
+      "stages": 32,
+      "checks": 1157,
+      "maxConcurrent": 4,
+      "duration": 84,
+      "errors": []
+    },
+    {
+      "from": "C",
+      "to": "A",
+      "ok": true,
+      "stages": 30,
+      "checks": 1123,
+      "maxConcurrent": 4,
+      "duration": 82,
+      "errors": []
+    }
+  ]
+}
