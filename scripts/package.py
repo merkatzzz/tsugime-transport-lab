@@ -13,6 +13,7 @@ downloads.mkdir(parents=True, exist_ok=True)
 shutil.copy2(root/'README.md', downloads/'README.md')
 shutil.copy2(root/'docs/REPORT.md', downloads/'REPORT.md')
 shutil.copy2(root/'docs/SEAM-AUDIT.md', downloads/'SEAM-AUDIT.md')
+shutil.copy2(root/'docs/OPENING-SEALS.md', downloads/'OPENING-SEALS.md')
 if (downloads/'evidence').exists():
     shutil.rmtree(downloads/'evidence')
 shutil.copytree(root/'docs/evidence', downloads/'evidence')
