@@ -41,6 +41,8 @@ for archive in archives:
             assert 'tsugime-transport-lab/.openai/hosting.json' in z.namelist()
             assert 'tsugime-transport-lab/dist/src/stage7-layout.js' in z.namelist()
             assert 'tsugime-transport-lab/stage6/dist/assets/resident-room.svg' in z.namelist()
-result = {'ok':True, 'htmlPages':len(pages), 'localLinks':checked, 'moduleImports':modules, 'zipArchives':len(archives), 'gpuVerified':False}
+oversized = [str(p.relative_to(dist)) for p in dist.rglob('*') if p.is_file() and p.stat().st_size > 25*1024*1024]
+assert not oversized, oversized
+result = {'ok':True, 'assetSizeLimitBytes':25*1024*1024, 'oversizedFiles':0, 'htmlPages':len(pages), 'localLinks':checked, 'moduleImports':modules, 'zipArchives':len(archives), 'gpuVerified':False}
 print(json.dumps(result))
 (root/'docs/evidence/package-check.json').write_text(json.dumps(result, indent=2))

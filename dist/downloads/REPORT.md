@@ -8,6 +8,8 @@
 
 第六段階は `stage6-frozen` = `626e4cea2fa902f367e85ecfc4e0ea519f747705` をGitHubに固定。[完全ソースZIP](downloads/stage6-frozen-source.zip)と実ビルドTARを別途保存し、タグから独立展開して106件を再実行しました。[保存証跡](evidence/stage7-preservation.json)にハッシュ・構成・復元結果を記録。サイト保存版10も維持。比較用[第六段階](stage6/index.html)は古い保存版の入れ子を省いたコピーです。
 
+公開初回は、現行ZIPへ旧版完全ZIPを重複内包した結果、27,528,702bytesが1ファイル25MiBの配信上限を超えて失敗。重複を外して旧版完全ZIPを別配布にし、配布物のサイズ検査を追加しました。3D機能の変更はありません。
+
 現行の[ソースZIP](downloads/tsugime-lab-source.zip)、[設計・配置資料](downloads/STAGE7.md)、[復元・再開README](downloads/README.md)も同梱しています。公開版のソースSHAはSites保存版のprovenanceとGitHubのブランチで照合します。
 
 ## B. 実装結果

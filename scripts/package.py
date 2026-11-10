@@ -11,8 +11,9 @@ import zipfile
 root = Path(__file__).resolve().parent.parent
 downloads = root / 'dist/downloads'
 downloads.mkdir(parents=True, exist_ok=True)
-# A Git clone can reconstruct the exact frozen tracked tree; the distributed
-# Stage 7 ZIP already carries this canonical Stage 6 archive as an asset.
+# The exact Stage 6 archive is distributed separately, not nested inside the
+# current source ZIP (the hosting limit is 25 MiB per asset). A Git clone can
+# reconstruct it; ZIP-only users can place the separately supplied archive here.
 frozen_source = downloads/'stage6-frozen-source.zip'
 if not frozen_source.exists():
     subprocess.run(['git', 'archive', '--format=zip', '--output='+str(frozen_source), 'stage6-frozen'], cwd=root, check=True)
@@ -104,7 +105,7 @@ archive = downloads/'tsugime-lab-source.zip'
 with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
     for p in sorted(root.rglob('*')):
         rel = p.relative_to(root)
-        if not p.is_file() or any(part in {'.git','node_modules','__pycache__'} for part in rel.parts) or ('.openai' in rel.parts and p.name != 'hosting.json') or (p.suffix == '.zip' and rel != Path('dist/downloads/stage6-frozen-source.zip')):
+        if not p.is_file() or any(part in {'.git','node_modules','__pycache__'} for part in rel.parts) or ('.openai' in rel.parts and p.name != 'hosting.json') or p.suffix == '.zip':
             continue
         z.write(p, Path('tsugime-transport-lab')/rel)
 print(f'Packaged {archive.name}: {archive.stat().st_size} bytes')

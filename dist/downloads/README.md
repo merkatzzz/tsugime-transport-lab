@@ -26,7 +26,7 @@ npm start
 
 ローカルで http://localhost:8000 を開きます。`file://`は使いません。管理クラウドでは `sites-preview start <checkout絶対パス>` のみを使用し、中継障害を別サーバーで迂回しません。
 
-`verify`は現行と保存版1〜6、面重複・供給室歩行・第二EV候補を検査。`evidence`は18搬送計画、三層ABC図・接続グラフ・変更データを生成。`package`はHTML報告、比較版、自己完結ソースZIPを生成します。
+`verify`は現行と保存版1〜6、面重複・供給室歩行・第二EV候補を検査。`evidence`は18搬送計画、三層ABC図・接続グラフ・変更データを生成。`package`はHTML報告、比較版、起動・テストに必要なソースZIPを生成します。配信上限25MiBのため、第六段階完全ZIPを現行ZIPへ重複内包せず別配布します。ZIP展開からの起動・テストにGitは不要ですが、配布物を再生成する場合は固定Gitタグ、または別配布の完全ZIPを `dist/downloads/stage6-frozen-source.zip` に置いてから実行してください。
 
 ## 第六段階を壊さず復元する
 
