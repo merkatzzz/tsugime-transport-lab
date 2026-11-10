@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "method": "forced full brute-force CSG vs cached spatial CSG: local face areas and partition-cell coverage",
+  "rows": [
+    {
+      "phase": "A",
+      "doors": "closed",
+      "objects": 3362,
+      "faces": 10547,
+      "sampledCells": 36445,
+      "maxAreaDelta": 9.603429163007604e-15,
+      "ok": true
+    },
+    {
+      "phase": "A",
+      "doors": "open",
+      "objects": 3362,
+      "faces": 10547,
+      "sampledCells": 36445,
+      "maxAreaDelta": 9.603429163007604e-15,
+      "ok": true
+    },
+    {
+      "phase": "B",
+      "doors": "closed",
+      "objects": 3388,
+      "faces": 10672,
+      "sampledCells": 36691,
+      "maxAreaDelta": 7.993605777301127e-15,
+      "ok": true
+    },
+    {
+      "phase": "B",
+      "doors": "open",
+      "objects": 3388,
+      "faces": 10672,
+      "sampledCells": 36691,
+      "maxAreaDelta": 7.993605777301127e-15,
+      "ok": true
+    },
+    {
+      "phase": "C",
+      "doors": "closed",
+      "objects": 3351,
+      "faces": 10501,
+      "sampledCells": 36244,
+      "maxAreaDelta": 9.603429163007604e-15,
+      "ok": true
+    },
+    {
+      "phase": "C",
+      "doors": "open",
+      "objects": 3351,
+      "faces": 10501,
+      "sampledCells": 36244,
+      "maxAreaDelta": 9.603429163007604e-15,
+      "ok": true
+    }
+  ]
+}
