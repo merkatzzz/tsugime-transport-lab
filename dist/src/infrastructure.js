@@ -1,8 +1,8 @@
 // Dedicated fixed reservoirs, never walkable and never movable docking cells.
 export const SPRINGS=[
- {id:'P1',x:25.2,y:-12.8,z:10.9,w:3,d:3,face:'W',mouth:{x:25.2,z:12.4}},
+ {id:'P1',x:19.3,y:-12.8,z:16.8,w:3,d:3,face:'N',mouth:{x:20.8,z:16.8}},
  {id:'P2',x:67.2,y:0,z:19.3,w:3,d:3,face:'W',mouth:{x:67.2,z:20.8}},
- {id:'P3',x:58.8,y:12.8,z:19.3,w:3,d:3,face:'W',mouth:{x:58.8,z:20.8}},
+ {id:'P3',x:5,y:12.8,z:36.1,w:3,d:3,face:'E',mouth:{x:8,z:37.6}},
  {id:'PA',x:67.2,y:12.8,z:2.5,w:3,d:3,face:'W',mouth:{x:67.2,z:4}},
  {id:'PB',x:61.3,y:0,z:8.4,w:3,d:3,face:'N',mouth:{x:62.8,z:8.4}}
 ];

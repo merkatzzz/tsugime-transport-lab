@@ -1,0 +1,41 @@
+
+> tsugime-architecture-transport-lab@6.0.0 test:stage1
+> node --test stage1/tests/*.test.mjs
+
+✔ uniform occupied cells and independent interior dimensions, including an exact 3-cell L (3.671092ms)
+✔ A: all graph connections agree with an actual body-disc traversal through both built wall faces (41.796041ms)
+✔ B: all graph connections agree with an actual body-disc traversal through both built wall faces (15.213824ms)
+✔ C: all graph connections agree with an actual body-disc traversal through both built wall faces (16.982463ms)
+✔ A: geometry flood matches reachable bodies; closed rooms remain closed (192.775585ms)
+✔ B: geometry flood matches reachable bodies; closed rooms remain closed (164.500057ms)
+✔ C: geometry flood matches reachable bodies; closed rooms remain closed (127.107342ms)
+✔ B provides a 0.4m visible slit but rejects a 0.7m body, with no fallback side route (0.667862ms)
+✔ A→B: continuous envelopes clear fixed works and all other movers for the complete route (19.063682ms)
+✔ B→C: continuous envelopes clear fixed works and all other movers for the complete route (13.98688ms)
+✔ C→A: continuous envelopes clear fixed works and all other movers for the complete route (5.481657ms)
+✔ continuous collision rejects a crossing missed by endpoint-only testing (0.225087ms)
+✔ broken route and occupied destinations are refused rather than certified (1.836189ms)
+✔ real walking stops at walls, thick unused structure, locked doors and furniture (10.10384ms)
+✔ every moving passenger keeps its local position, while the fixed gallery stays fixed over a complete cycle (57.142069ms)
+✔ shutters close and exploration locks until docking; pause freezes even halfway through a route (5.180547ms)
+✔ normal mode waits for evacuation and blocks new admission; deliberate isolation reconnects in C (76.565688ms)
+✔ mechanical closure waits while a body disc straddles a detachable seam (2.073865ms)
+✔ fixed elevator travels continuously in both directions; absent cabin can be called without moving the caller (0.835877ms)
+✔ debug recovery is explicit and does not manufacture a physical exit (0.438503ms)
+✔ the fixed observation room becomes reachable in B, stays fixed in transfer, and requires evacuation before A (13.658994ms)
+✔ real meshes, including wall thickness and rolled shutters, remain inside every rigid transport envelope (137.533926ms)
+✔ real built meshes expose the B slit to an eye-height ray while the same position rejects a body (53.825641ms)
+✔ real fixed gallery walls, lintels and landing shutters stay on their own side of the detachable boundary (41.576221ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1363.220433
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

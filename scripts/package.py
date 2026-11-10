@@ -5,33 +5,43 @@ from pathlib import Path
 import html
 import re
 import shutil
+import subprocess
 import zipfile
 
 root = Path(__file__).resolve().parent.parent
 downloads = root / 'dist/downloads'
 downloads.mkdir(parents=True, exist_ok=True)
+# A Git clone can reconstruct the exact frozen tracked tree; the distributed
+# Stage 7 ZIP already carries this canonical Stage 6 archive as an asset.
+frozen_source = downloads/'stage6-frozen-source.zip'
+if not frozen_source.exists():
+    subprocess.run(['git', 'archive', '--format=zip', '--output='+str(frozen_source), 'stage6-frozen'], cwd=root, check=True)
 shutil.copy2(root/'README.md', downloads/'README.md')
 shutil.copy2(root/'docs/REPORT.md', downloads/'REPORT.md')
 shutil.copy2(root/'docs/SEAM-AUDIT.md', downloads/'SEAM-AUDIT.md')
 shutil.copy2(root/'docs/OPENING-SEALS.md', downloads/'OPENING-SEALS.md')
 shutil.copy2(root/'docs/STAGE5.md', downloads/'STAGE5.md')
 shutil.copy2(root/'docs/STAGE6.md', downloads/'STAGE6.md')
+shutil.copy2(root/'docs/STAGE7.md', downloads/'STAGE7.md')
 if (downloads/'evidence').exists():
     shutil.rmtree(downloads/'evidence')
 shutil.copytree(root/'docs/evidence', downloads/'evidence')
 # Frozen prior stages are published and packaged independently.
-for stage in ['stage1', 'stage2', 'stage3', 'stage4', 'stage5']:
+for stage in ['stage1', 'stage2', 'stage3', 'stage4', 'stage5', 'stage6']:
     shutil.copytree(root/stage/'dist', root/'dist'/stage, dirs_exist_ok=True)
-    if stage == 'stage5':
-        old_downloads = root/'dist/stage5/downloads'
+    if stage in {'stage5', 'stage6'}:
+        old_downloads = root/'dist'/stage/'downloads'
         old_downloads.mkdir(parents=True, exist_ok=True)
-        for name in ['README.md', 'REPORT.md', 'STAGE5.md', 'SEAM-AUDIT.md', 'OPENING-SEALS.md']:
-            source = root/'stage5'/('docs/'+name if name != 'README.md' else name)
+        for name in ['README.md', 'REPORT.md', 'STAGE5.md', 'SEAM-AUDIT.md', 'OPENING-SEALS.md', 'STAGE6.md']:
+            source = root/stage/('docs/'+name if name != 'README.md' else name)
             if source.exists():
                 shutil.copy2(source, old_downloads/name)
-        shutil.copytree(root/'stage5/docs/evidence', old_downloads/'evidence', dirs_exist_ok=True)
-        for page in (root/'dist/stage5').glob('*.html'):
-            page.write_text(re.sub(r'href="stage([1-4])/', r'href="../stage\1/', page.read_text()))
+        shutil.copytree(root/stage/'docs/evidence', old_downloads/'evidence', dirs_exist_ok=True)
+        for page in (root/'dist'/stage).glob('*.html'):
+            text = re.sub(r'href="stage([1-5])/', r'href="../stage\1/', page.read_text())
+            if stage == 'stage6':
+                text = text.replace('href="downloads/tsugime-lab-source.zip"', 'href="../downloads/stage6-frozen-source.zip"')
+            page.write_text(text)
     if stage == 'stage2':
         shutil.copytree(root/'stage1/dist', root/'dist/stage2/stage1', dirs_exist_ok=True)
     archive = root/'dist'/stage/'downloads/tsugime-lab-source.zip'
@@ -82,19 +92,19 @@ for phase in 'ABC':
     drawings += f'<h3>周期 {phase}</h3><div class="drawings">'
     for level in [3,2,1]:
         drawings += f'<figure><figcaption>第{level}層</figcaption><img src="downloads/evidence/{phase}-level-{level}.svg" alt="周期{phase} 第{level}層の平面図"></figure>'
-    drawings += '</div><div class="drawings">'+''.join(f'<figure><figcaption>第{level}層の通路成分グラフ</figcaption><img src="downloads/evidence/{phase}-graph-{level}.svg" alt="周期{phase} 通路接続図"></figure>' for level in [3,2])+'</div>'
+    drawings += '</div><div class="drawings">'+''.join(f'<figure><figcaption>第{level}層の通路成分グラフ</figcaption><img src="downloads/evidence/{phase}-graph-{level}.svg" alt="周期{phase} 通路接続図"></figure>' for level in [3,2,1])+'</div>'
 drawings += '<h2>遠隔区域と泉の配置</h2>'+''.join(f'<h3>周期 {phase}</h3><img src="downloads/evidence/{phase}-main.svg" alt="生活区域と泉"><img src="downloads/evidence/{phase}-remote.svg" alt="遠隔区域">' for phase in 'ABC')
 drawings += '<h2>各遷移の搬送経路・保管と一時退避</h2>'+''.join(f'<h3>{phase}→'+{'A':'B','B':'C','C':'A'}[phase]+f'</h3><img class="route" src="downloads/evidence/{phase}-transport.svg" alt="{phase}からの搬送経路">' for phase in 'ABC')
 page = '''<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>検証報告｜継ぎ目の部屋 建築・搬送実験</title><style>
 body{background:#f1f2e9;color:#334d40;font:14px/1.9 sans-serif;margin:0}article{max-width:1030px;margin:auto;padding:45px 28px}nav{display:flex;flex-wrap:wrap;gap:25px;border-bottom:1px solid #ccd5c3;padding-bottom:20px;font-size:12px}a{color:#557c57;text-underline-offset:3px}h1{font:28px/1.5 serif;margin-top:40px}h2{font-size:19px;margin-top:45px;border-top:1px solid #ccd5c3;padding-top:25px}h3{font-size:15px;margin-top:30px}p{color:#61715b}.bullet{margin:10px 0}strong{color:#3b5641}code{background:#e0e6d7;padding:2px 5px;border-radius:3px}.table{overflow:auto}table{border-collapse:collapse;font-size:12px;width:100%;margin:20px 0}th,td{padding:10px;border:1px solid #d4dccb;text-align:left}th{background:#e1e7d8}.drawings{display:grid;grid-template-columns:1fr 1fr;gap:20px}figure{margin:0}img{width:100%;border:1px solid #ccd5c3;background:#e4eadc}figcaption{font-size:12px;margin-bottom:7px}.route{max-width:470px}footer{margin-top:40px;font-size:11px;color:#88937d}@media(max-width:650px){.drawings{grid-template-columns:1fr}article{padding:25px 18px}h1{font-size:24px}}
-</style><article><nav><a href="index.html">← 第六段階の3D実験</a><a href="stage5/index.html">第五段階を比較</a><a href="stage4/index.html">第四段階を比較</a><a href="stage3/index.html">第三段階を比較</a><a href="stage2/index.html">第二段階を比較</a><a href="stage1/index.html">第一段階を比較</a><a data-hosted-source href="downloads/tsugime-lab-source.zip" download>第六段階ソース一式 ZIP</a><a href="downloads/REPORT.md" download>検証報告 Markdown</a><a href="downloads/README.md" download>起動・操作 README</a></nav>'''+''.join(parts)+drawings+'''<footer>検証済みの範囲はこの小規模計画です。ブラウザ描画の確認制約は本文に明記しています。</footer></article><script>if(['localhost','127.0.0.1'].includes(location.hostname))document.querySelectorAll('[data-hosted-source]').forEach(a=>a.hidden=true)</script></html>'''
+</style><article><nav><a href="index.html">← 第七段階の3D実験</a><a href="stage6/index.html">第六段階を比較</a><a href="stage5/index.html">第五段階を比較</a><a href="stage4/index.html">第四段階を比較</a><a href="stage3/index.html">第三段階を比較</a><a href="stage2/index.html">第二段階を比較</a><a href="stage1/index.html">第一段階を比較</a><a data-hosted-source href="downloads/tsugime-lab-source.zip" download>第七段階ソース一式 ZIP</a><a href="downloads/REPORT.md" download>検証報告 Markdown</a><a href="downloads/README.md" download>起動・操作 README</a></nav>'''+''.join(parts)+drawings+'''<footer>検証済みの範囲はこの小規模計画です。ブラウザ描画の確認制約は本文に明記しています。</footer></article><script>if(['localhost','127.0.0.1'].includes(location.hostname))document.querySelectorAll('[data-hosted-source]').forEach(a=>a.hidden=true)</script></html>'''
 (root/'dist/report.html').write_text(page)
 
 archive = downloads/'tsugime-lab-source.zip'
 with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
     for p in sorted(root.rglob('*')):
         rel = p.relative_to(root)
-        if not p.is_file() or any(part in {'.git','node_modules','.openai','__pycache__'} for part in rel.parts) or p.suffix == '.zip':
+        if not p.is_file() or any(part in {'.git','node_modules','__pycache__'} for part in rel.parts) or ('.openai' in rel.parts and p.name != 'hosting.json') or (p.suffix == '.zip' and rel != Path('dist/downloads/stage6-frozen-source.zip')):
             continue
         z.write(p, Path('tsugime-transport-lab')/rel)
 print(f'Packaged {archive.name}: {archive.stat().st_size} bytes')

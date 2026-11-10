@@ -829,7 +829,7 @@
           }
         ],
         "step": 0.2,
-        "expanded": 2839,
+        "expanded": 2812,
         "start": {
           "x": 4,
           "y": 12.8,
@@ -868,22 +868,22 @@
       "cycles": [
         {
           "level": 0,
-          "edges": 9,
-          "nodes": 11,
+          "edges": 10,
+          "nodes": 12,
           "components": 2,
           "cycles": 0
         },
         {
           "level": 1,
-          "edges": 20,
-          "nodes": 21,
+          "edges": 24,
+          "nodes": 23,
           "components": 2,
-          "cycles": 1
+          "cycles": 3
         },
         {
           "level": 2,
-          "edges": 6,
-          "nodes": 6,
+          "edges": 7,
+          "nodes": 7,
           "components": 1,
           "cycles": 1
         }
@@ -1447,7 +1447,7 @@
           }
         ],
         "step": 0.2,
-        "expanded": 950,
+        "expanded": 922,
         "start": {
           "x": 4,
           "y": 12.8,
@@ -1489,17 +1489,17 @@
         },
         {
           "level": 1,
-          "edges": 20,
-          "nodes": 20,
+          "edges": 22,
+          "nodes": 22,
           "components": 2,
           "cycles": 2
         },
         {
           "level": 2,
-          "edges": 4,
-          "nodes": 5,
+          "edges": 9,
+          "nodes": 9,
           "components": 1,
-          "cycles": 0
+          "cycles": 1
         }
       ]
     },
@@ -2316,7 +2316,7 @@
           }
         ],
         "step": 0.2,
-        "expanded": 2935,
+        "expanded": 2893,
         "start": {
           "x": 4,
           "y": 12.8,
@@ -2355,22 +2355,22 @@
       "cycles": [
         {
           "level": 0,
-          "edges": 9,
-          "nodes": 11,
+          "edges": 10,
+          "nodes": 12,
           "components": 2,
           "cycles": 0
         },
         {
           "level": 1,
-          "edges": 19,
-          "nodes": 20,
+          "edges": 22,
+          "nodes": 22,
           "components": 2,
-          "cycles": 1
+          "cycles": 2
         },
         {
           "level": 2,
-          "edges": 6,
-          "nodes": 6,
+          "edges": 7,
+          "nodes": 7,
           "components": 1,
           "cycles": 1
         }

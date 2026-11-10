@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "rows": [
+    {
+      "stage": "stage6",
+      "exit": 0,
+      "tests": 106,
+      "passed": 106,
+      "failed": 0
+    },
+    {
+      "stage": "stage1",
+      "exit": 0,
+      "tests": 24,
+      "passed": 24,
+      "failed": 0
+    },
+    {
+      "stage": "stage2",
+      "exit": 0,
+      "tests": 44,
+      "passed": 44,
+      "failed": 0
+    },
+    {
+      "stage": "stage3",
+      "exit": 0,
+      "tests": 54,
+      "passed": 54,
+      "failed": 0
+    },
+    {
+      "stage": "stage4",
+      "exit": 0,
+      "tests": 70,
+      "passed": 70,
+      "failed": 0
+    },
+    {
+      "stage": "stage5",
+      "exit": 0,
+      "tests": 92,
+      "passed": 92,
+      "failed": 0
+    }
+  ],
+  "total": 390,
+  "seamsExit": 0,
+  "browserQA": {
+    "verified": false,
+    "reason": "Managed preview relay port 4173 readiness timeout",
+    "audioHeard": false
+  }
+}

@@ -1,3 +1,5 @@
+import {BODIES} from './architecture.js';
+import {doorSweepDistance} from './doors.js';
 import {toWorld,toLocal} from './pose.js';
 // All character and camera coordinates are local to their rigid transport body.
 export const NPCS=[
@@ -18,10 +20,10 @@ export class Experience{
  toggleDoor(b,d){const s=this.sim;if(d.id==='R3-door'&&!this.visit){const p=s.positions.R3;if(s.owner!=='R3'||s.player.z-p.z>=5)return false;this.visit={body:'R3',npc:'resident',player:{...s.player},local:{x:s.player.x-p.x,z:s.player.z-p.z}};this.doorTargets[d.id]=true;this.transitionTo('enter');this.event('door',b.id);return true;}if(this.blocking)return false;const target=!(this.doorTargets[d.id]??s.doors[d.id]);
   // Closing is refused anywhere in the complete leaf sweep, not just at its endpoint.
   const {x,z}=toLocal(s.positions[b.id],s.player),len=Math.hypot(d.b[0]-d.a[0],d.b[1]-d.a[1]),ux=(d.b[0]-d.a[0])/len,uz=(d.b[1]-d.a[1])/len;
-  if(!target){const t=(x-d.a[0])*ux+(z-d.a[1])*uz,perp=Math.abs((x-d.a[0])*uz-(z-d.a[1])*ux);if(t>-.46&&t<len*2+.55&&perp<.48){s.message='扉の動く範囲から離れてください。';return false;}}
+  if(d.kind==='hinge'){if(doorSweepDistance(d,{x,z},this.doorProgress[d.id],target?1:0)<.4){s.message='扉の開閉範囲から少し離れてください。';return false;}}else if(!target){const t=(x-d.a[0])*ux+(z-d.a[1])*uz,perp=Math.abs((x-d.a[0])*uz-(z-d.a[1])*ux);if(t>-.46&&t<len*2+.55&&perp<.48){s.message='扉の動く範囲から離れてください。';return false;}}
   this.doorTargets[d.id]=target;this.event('door',b.id);s.message=d.label+(target?'を開きます。':'を閉じます。');return true;}
  tick(dt){const s=this.sim;if(this.transition){this.transition.elapsed+=dt;if(this.transition.elapsed>=this.transition.duration)this.transition=null;}this.blend=Math.max(0,Math.min(1,this.blend+(this.dialogue&&this.focus?1:-1)*dt/0.32));if(this.blend===0&&!this.dialogue)this.focus=null;
-  for(const [id,target] of Object.entries(this.doorTargets)){const p=this.doorProgress[id],v=Math.max(0,Math.min(1,p+(target?1:-1)*dt/.65));if(v!==p){this.doorProgress[id]=v;s.doors[id]=v>=1-1e-8;s.invalidate();}}
+  for(const [id,target] of Object.entries(this.doorTargets)){const p=this.doorProgress[id],v=Math.max(0,Math.min(1,p+(target?1:-1)*dt/.65));if(v!==p){const body=BODIES.find(b=>b.doors.some(d=>d.id===id)),door=body?.doors.find(d=>d.id===id);if(door&&s.owner===body.id&&doorSweepDistance(door,toLocal(s.positions[body.id],s.player),p,v)<.4){s.message='扉の動く範囲から離れてください。';continue;}this.doorProgress[id]=v;s.doors[id]=v>=1-1e-8;s.invalidate();}}
  }
  camera(){if(!this.focus||this.blend===0)return null;const n=this.focus;return{position:n.camera?worldPoint(this.sim,n.body,n.camera):{x:this.sim.player.x,y:this.sim.player.y+1.81,z:this.sim.player.z},look:worldPoint(this.sim,n.body,n.look??{x:n.x,y:1.56,z:n.z}),blend:this.blend*this.blend*(3-2*this.blend)};}
 }

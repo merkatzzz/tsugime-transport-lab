@@ -10,3 +10,5 @@
 @media(prefers-reduced-motion:reduce){#screen-transition{background:#081110!important}}
 
 .bio-inspector table{font-size:10px;width:100%;border-collapse:collapse}.bio-inspector td,.bio-inspector th{border-bottom:1px solid #ccd4c3;padding:6px;text-align:left}.bio-inspector p,.remote-guide p{font-size:11px;line-height:1.8}.remote-guide{padding:18px 0;border-top:1px solid #cbd4c1}.map-scope{display:flex;gap:12px;align-items:center;font-size:11px;padding:10px 0}.view-options select{max-width:150px}#lift-status{font-variant-numeric:tabular-nums}
+
+#lift-menu{position:absolute;left:25%;right:25%;top:25%;z-index:8;background:#213a36f5;color:#e2eadc;border:1px solid #a0b09b;padding:22px;border-radius:5px;text-align:center}#lift-menu[hidden]{display:none}#lift-menu p{color:#cad7c2}#lift-menu button{display:block;width:100%;margin:9px 0}#lift-menu button:disabled{opacity:.4}@media(max-width:650px){#lift-menu{left:8%;right:8%;top:20%}}

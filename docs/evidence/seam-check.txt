@@ -2,43 +2,43 @@
   {
     "phase": "A",
     "doors": "closed",
-    "same": 5,
-    "contacts": 5,
+    "same": 13,
+    "contacts": 13,
     "exposed": []
   },
   {
     "phase": "A",
     "doors": "open",
-    "same": 5,
-    "contacts": 5,
+    "same": 13,
+    "contacts": 13,
     "exposed": []
   },
   {
     "phase": "B",
     "doors": "closed",
-    "same": 4,
-    "contacts": 4,
+    "same": 6,
+    "contacts": 6,
     "exposed": []
   },
   {
     "phase": "B",
     "doors": "open",
-    "same": 4,
-    "contacts": 4,
+    "same": 6,
+    "contacts": 6,
     "exposed": []
   },
   {
     "phase": "C",
     "doors": "closed",
-    "same": 4,
-    "contacts": 4,
+    "same": 13,
+    "contacts": 13,
     "exposed": []
   },
   {
     "phase": "C",
     "doors": "open",
-    "same": 4,
-    "contacts": 4,
+    "same": 13,
+    "contacts": 13,
     "exposed": []
   }
 ]
