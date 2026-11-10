@@ -153,6 +153,30 @@
       "solidMin": 0.20000000000000018,
       "hinge": "b",
       "swing": -90
+    },
+    {
+      "body": "G1",
+      "door": "G1-west",
+      "wallMin": 0.10199999999999987,
+      "solidMin": 1.700000000000002,
+      "hinge": "a",
+      "swing": -90
+    },
+    {
+      "body": "G1",
+      "door": "G1-east",
+      "wallMin": 0.10200000000000031,
+      "solidMin": 0.9377558326431958,
+      "hinge": "a",
+      "swing": -90
+    },
+    {
+      "body": "G5",
+      "door": "G5-door",
+      "wallMin": 0.10175000000000001,
+      "solidMin": 0.5117242768623695,
+      "hinge": "b",
+      "swing": 90
     }
   ]
 }

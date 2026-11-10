@@ -1,13 +1,11 @@
 {
   "ok": true,
-  "liftStudyExit": 0,
-  "walksExit": 0,
   "rows": [
     {
-      "stage": "stage7",
+      "stage": "stage8",
       "exit": 0,
-      "tests": 121,
-      "passed": 121,
+      "tests": 146,
+      "passed": 146,
       "failed": 0
     },
     {
@@ -51,19 +49,41 @@
       "tests": 106,
       "passed": 106,
       "failed": 0
+    },
+    {
+      "stage": "stage7",
+      "exit": 0,
+      "tests": 121,
+      "passed": 121,
+      "failed": 0
     }
   ],
-  "total": 511,
-  "seamsExit": 0,
+  "checks": [
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "walks",
+      "exit": 0
+    },
+    {
+      "name": "doors",
+      "exit": 0
+    },
+    {
+      "name": "local-lift",
+      "exit": 0
+    },
+    {
+      "name": "surface-equivalence",
+      "exit": 0
+    }
+  ],
+  "total": 657,
   "browserQA": {
     "verified": false,
-    "reason": "Managed preview relay port 4173 readiness timeout",
+    "reason": "Managed Sites preview relay port 4173 readiness timeout also occurs on exact frozen Stage 7",
     "audioHeard": false
-  },
-  "doorSweepExit": 0,
-  "additionalAudit": {
-    "doors": 19,
-    "method": "scripts/check-stage7-doors.mjs",
-    "passed": true
   }
 }

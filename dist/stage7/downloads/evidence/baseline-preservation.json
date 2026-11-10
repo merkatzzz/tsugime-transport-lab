@@ -1,0 +1,16 @@
+{
+  "stage1": "2aea792d10900ace9197af41ea0d5f79b642866d",
+  "stage2": "88c2c01d49ba34baad9a40936032c8b5f40c87fa",
+  "stage3": "40f3202324e983908b4eaa907b3b3d3567c8d0a1",
+  "stage4": "dcebd2f0fb94a8df590ecb5ca4e74de697f97b6b",
+  "stage5": "6dc2039eb030e6b0a946d3f83141cf1db8e4921c",
+  "stage6": "626e4cea2fa902f367e85ecfc4e0ea519f747705",
+  "routes": [
+    "stage6/",
+    "stage1/",
+    "stage2/",
+    "stage3/",
+    "stage4/",
+    "stage5/"
+  ]
+}

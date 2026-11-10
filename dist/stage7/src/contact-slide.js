@@ -1,0 +1,3 @@
+// Project a blocked small movement onto the tangent of a rounded wall endpoint.
+// The caller rechecks complete collision and floor support for every candidate.
+export function slideCandidates(player,dx,dz,lines){const candidates=[];for(const l of lines){if(Math.abs(l.y-player.y)>.01)continue;const vx=l.b[0]-l.a[0],vz=l.b[1]-l.a[1],t=Math.max(0,Math.min(1,((player.x-l.a[0])*vx+(player.z-l.a[1])*vz)/(vx*vx+vz*vz||1))),qx=l.a[0]+vx*t,qz=l.a[1]+vz*t,nx=player.x-qx,nz=player.z-qz,d=Math.hypot(nx,nz);if(d<1e-8||d>.5)continue;const ax=nx/d,az=nz/d,dot=dx*ax+dz*az;if(dot>=0)continue;const x=dx-dot*ax,z=dz-dot*az;if(Math.hypot(x,z)>.00001)candidates.push({x,z});}return candidates.sort((a,b)=>Math.hypot(b.x,b.z)-Math.hypot(a.x,a.z));}

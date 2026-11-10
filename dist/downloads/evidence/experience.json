@@ -33,11 +33,11 @@
         "id": "R1-door",
         "a": [
           3.4,
-          3.2
+          2.6
         ],
         "b": [
           4.6,
-          3.2
+          2.6
         ],
         "open": false,
         "label": "住戸301",
@@ -49,18 +49,18 @@
         "body": "R2",
         "id": "R2-door",
         "a": [
-          5,
-          2.8
+          5.8,
+          2.2
         ],
         "b": [
-          6.2,
-          2.8
+          5.8,
+          3.4
         ],
         "open": false,
         "label": "小住戸",
         "kind": "hinge",
         "hinge": "b",
-        "swing": 90
+        "swing": -90
       },
       {
         "body": "R3",
@@ -271,14 +271,14 @@
         "id": "V1-door",
         "a": [
           2.8,
-          1
+          10
         ],
         "b": [
           2.8,
-          2.2
+          11.2
         ],
         "open": false,
-        "label": "小居室",
+        "label": "西の居室",
         "kind": "hinge",
         "hinge": "b",
         "swing": -90
@@ -338,11 +338,11 @@
         "body": "V3",
         "id": "V3-door",
         "a": [
-          3.4,
+          2.6,
           1
         ],
         "b": [
-          3.4,
+          2.6,
           2.2
         ],
         "open": false,
@@ -350,6 +350,57 @@
         "kind": "hinge",
         "hinge": "b",
         "swing": -90
+      },
+      {
+        "body": "G1",
+        "id": "G1-west",
+        "a": [
+          3.4,
+          2.5
+        ],
+        "b": [
+          4.6,
+          2.5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false,
+        "label": "北の西住戸"
+      },
+      {
+        "body": "G1",
+        "id": "G1-east",
+        "a": [
+          11.4,
+          2.5
+        ],
+        "b": [
+          12.6,
+          2.5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false,
+        "label": "北の東住戸"
+      },
+      {
+        "body": "G5",
+        "id": "G5-door",
+        "a": [
+          4.8,
+          1.2
+        ],
+        "b": [
+          4.8,
+          2.4
+        ],
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90,
+        "open": false,
+        "label": "EV脇の住戸"
       }
     ]
   },
@@ -387,11 +438,11 @@
         "id": "R1-door",
         "a": [
           3.4,
-          3.2
+          2.6
         ],
         "b": [
           4.6,
-          3.2
+          2.6
         ],
         "open": false,
         "label": "住戸301",
@@ -403,18 +454,18 @@
         "body": "R2",
         "id": "R2-door",
         "a": [
-          5,
-          2.8
+          5.8,
+          2.2
         ],
         "b": [
-          6.2,
-          2.8
+          5.8,
+          3.4
         ],
         "open": false,
         "label": "小住戸",
         "kind": "hinge",
         "hinge": "b",
-        "swing": 90
+        "swing": -90
       },
       {
         "body": "R3",
@@ -625,14 +676,14 @@
         "id": "V1-door",
         "a": [
           2.8,
-          1
+          10
         ],
         "b": [
           2.8,
-          2.2
+          11.2
         ],
         "open": false,
-        "label": "小居室",
+        "label": "西の居室",
         "kind": "hinge",
         "hinge": "b",
         "swing": -90
@@ -692,11 +743,11 @@
         "body": "V3",
         "id": "V3-door",
         "a": [
-          3.4,
+          2.6,
           1
         ],
         "b": [
-          3.4,
+          2.6,
           2.2
         ],
         "open": false,
@@ -704,6 +755,57 @@
         "kind": "hinge",
         "hinge": "b",
         "swing": -90
+      },
+      {
+        "body": "G1",
+        "id": "G1-west",
+        "a": [
+          3.4,
+          2.5
+        ],
+        "b": [
+          4.6,
+          2.5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false,
+        "label": "北の西住戸"
+      },
+      {
+        "body": "G1",
+        "id": "G1-east",
+        "a": [
+          11.4,
+          2.5
+        ],
+        "b": [
+          12.6,
+          2.5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false,
+        "label": "北の東住戸"
+      },
+      {
+        "body": "G5",
+        "id": "G5-door",
+        "a": [
+          4.8,
+          1.2
+        ],
+        "b": [
+          4.8,
+          2.4
+        ],
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90,
+        "open": false,
+        "label": "EV脇の住戸"
       }
     ]
   },
@@ -741,11 +843,11 @@
         "id": "R1-door",
         "a": [
           3.4,
-          3.2
+          2.6
         ],
         "b": [
           4.6,
-          3.2
+          2.6
         ],
         "open": false,
         "label": "住戸301",
@@ -757,18 +859,18 @@
         "body": "R2",
         "id": "R2-door",
         "a": [
-          5,
-          2.8
+          5.8,
+          2.2
         ],
         "b": [
-          6.2,
-          2.8
+          5.8,
+          3.4
         ],
         "open": false,
         "label": "小住戸",
         "kind": "hinge",
         "hinge": "b",
-        "swing": 90
+        "swing": -90
       },
       {
         "body": "R3",
@@ -979,14 +1081,14 @@
         "id": "V1-door",
         "a": [
           2.8,
-          1
+          10
         ],
         "b": [
           2.8,
-          2.2
+          11.2
         ],
         "open": false,
-        "label": "小居室",
+        "label": "西の居室",
         "kind": "hinge",
         "hinge": "b",
         "swing": -90
@@ -1046,11 +1148,11 @@
         "body": "V3",
         "id": "V3-door",
         "a": [
-          3.4,
+          2.6,
           1
         ],
         "b": [
-          3.4,
+          2.6,
           2.2
         ],
         "open": false,
@@ -1058,6 +1160,57 @@
         "kind": "hinge",
         "hinge": "b",
         "swing": -90
+      },
+      {
+        "body": "G1",
+        "id": "G1-west",
+        "a": [
+          3.4,
+          2.5
+        ],
+        "b": [
+          4.6,
+          2.5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false,
+        "label": "北の西住戸"
+      },
+      {
+        "body": "G1",
+        "id": "G1-east",
+        "a": [
+          11.4,
+          2.5
+        ],
+        "b": [
+          12.6,
+          2.5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false,
+        "label": "北の東住戸"
+      },
+      {
+        "body": "G5",
+        "id": "G5-door",
+        "a": [
+          4.8,
+          1.2
+        ],
+        "b": [
+          4.8,
+          2.4
+        ],
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90,
+        "open": false,
+        "label": "EV脇の住戸"
       }
     ]
   }

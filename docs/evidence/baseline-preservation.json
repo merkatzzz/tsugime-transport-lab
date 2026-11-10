@@ -5,7 +5,9 @@
   "stage4": "dcebd2f0fb94a8df590ecb5ca4e74de697f97b6b",
   "stage5": "6dc2039eb030e6b0a946d3f83141cf1db8e4921c",
   "stage6": "626e4cea2fa902f367e85ecfc4e0ea519f747705",
+  "stage7": "835c2efe63ad0645324236a5274bbfb588d2068f",
   "routes": [
+    "stage7/",
     "stage6/",
     "stage1/",
     "stage2/",

@@ -1,7 +1,7 @@
 {
-  "stage": 7,
-  "bodies": 40,
-  "cells": 50,
+  "stage": 8,
+  "bodies": 45,
+  "cells": 59,
   "levels": [
     0,
     12.8,
@@ -11,10 +11,10 @@
   "adopted": [
     {
       "ok": true,
-      "stages": 54,
-      "checks": 26064,
-      "maxConcurrent": 9,
-      "duration": 54.733333333333334,
+      "stages": 62,
+      "checks": 45882,
+      "maxConcurrent": 11,
+      "duration": 23.366666666666664,
       "clearance": 0.2,
       "area": 6700,
       "areaRatio": 1.3611246546400129,
@@ -25,10 +25,10 @@
     },
     {
       "ok": true,
-      "stages": 89,
-      "checks": 38165,
+      "stages": 91,
+      "checks": 59651,
       "maxConcurrent": 10,
-      "duration": 70.73333333333335,
+      "duration": 36.86666666666667,
       "clearance": 0.2,
       "area": 6700,
       "areaRatio": 1.3611246546400129,
@@ -39,8 +39,8 @@
     },
     {
       "ok": true,
-      "stages": 20,
-      "checks": 6029,
+      "stages": 21,
+      "checks": 8702,
       "maxConcurrent": 7,
       "duration": 17.333333333333332,
       "clearance": 0.2,
