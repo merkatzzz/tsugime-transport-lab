@@ -1,0 +1,44 @@
+[
+  {
+    "phase": "A",
+    "doors": "closed",
+    "same": 1,
+    "contacts": 1,
+    "exposed": []
+  },
+  {
+    "phase": "A",
+    "doors": "open",
+    "same": 1,
+    "contacts": 1,
+    "exposed": []
+  },
+  {
+    "phase": "B",
+    "doors": "closed",
+    "same": 0,
+    "contacts": 0,
+    "exposed": []
+  },
+  {
+    "phase": "B",
+    "doors": "open",
+    "same": 0,
+    "contacts": 0,
+    "exposed": []
+  },
+  {
+    "phase": "C",
+    "doors": "closed",
+    "same": 0,
+    "contacts": 0,
+    "exposed": []
+  },
+  {
+    "phase": "C",
+    "doors": "open",
+    "same": 0,
+    "contacts": 0,
+    "exposed": []
+  }
+]

@@ -2,10 +2,10 @@
   "ok": true,
   "rows": [
     {
-      "stage": "stage5",
+      "stage": "stage6",
       "exit": 0,
-      "tests": 92,
-      "passed": 92,
+      "tests": 106,
+      "passed": 106,
       "failed": 0
     },
     {
@@ -35,9 +35,16 @@
       "tests": 70,
       "passed": 70,
       "failed": 0
+    },
+    {
+      "stage": "stage5",
+      "exit": 0,
+      "tests": 92,
+      "passed": 92,
+      "failed": 0
     }
   ],
-  "total": 284,
+  "total": 390,
   "seamsExit": 0,
   "browserQA": {
     "verified": false,

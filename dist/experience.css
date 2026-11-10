@@ -4,7 +4,9 @@
 #screen-transition,#evacuation-screen{position:absolute;inset:0;z-index:9;pointer-events:none}#screen-transition[hidden],#evacuation-screen[hidden]{display:none}
 /* Wide radial gradient: no hard circular wipe edge. JS updates progress each frame. */
 #screen-transition{background:radial-gradient(ellipse at center,transparent 0%,transparent var(--clear,0%),rgba(8,17,16,.7) var(--soft,8%),#081110 var(--edge,16%));opacity:var(--opacity,1)}
-#screen-transition.exit{background:#081110}
+#screen-transition.exit{background:inherit}
 #evacuation-screen{background:#111c1b;display:flex;align-items:center;justify-content:center;color:#d9e2d7;font-size:13px;letter-spacing:.08em;pointer-events:auto}
 .automation-controls{display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:12px;padding:12px 0}.automation-controls input[type=number]{width:70px}.exception-row{font-size:12px;line-height:1.8}.exception-row button{margin:5px 4px 5px 0}#exception-list{word-break:break-word}.lift-target{max-width:100px}
 @media(prefers-reduced-motion:reduce){#screen-transition{background:#081110!important}}
+
+.bio-inspector table{font-size:10px;width:100%;border-collapse:collapse}.bio-inspector td,.bio-inspector th{border-bottom:1px solid #ccd4c3;padding:6px;text-align:left}.bio-inspector p,.remote-guide p{font-size:11px;line-height:1.8}.remote-guide{padding:18px 0;border-top:1px solid #cbd4c1}.map-scope{display:flex;gap:12px;align-items:center;font-size:11px;padding:10px 0}.view-options select{max-width:150px}#lift-status{font-variant-numeric:tabular-nums}
