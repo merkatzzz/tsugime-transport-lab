@@ -1,3 +1,4 @@
+import {TRANSPORT_POLICY} from './transport-policy.js';
 const line=(a,b)=>({a,b}),port=(face,a=3,b=5,more={})=>({id:face,face,a,b,height:2.4,...more}),box=(x,z,w,d,h=.6)=>({x,z,w,d,h,color:'wood'});
 const root=(id,name,cells=[[0,0]])=>({id,name,use:'residential',family:'R7',color:'#9cae9c',cells,ceiling:2.7,ports:[],walls:[],doors:[],solids:[],furniture:[],labels:[],roofAreas:cells.map(([x,z])=>({x:x*8,z:z*8,w:8,d:8,height:2.7}))});
 const adapter=(profiles)=>({adaptive:true,profiles});
@@ -20,5 +21,5 @@ export function redesign(bodies){
  // Every ordinary door gets an explicit safe inward hinge, not an exposed sliding leaf.
  for(const b of bodies)for(const d of b.doors){d.kind='hinge';d.hinge='a';d.swing=-90;if(d.id==='R2-door'||d.id==='T2-door'||/^E[1-4]-/.test(d.id)||/^D[23]-/.test(d.id)||d.id==='V1-wing'){d.hinge='b';d.swing=90;}if(d.id==='R3-door')d.swing=90;if(d.a[0]===d.b[0]){d.hinge='b';d.swing=-90;if(d.id==='V2-east')d.swing=90;}}
 }
-export const Q_STORAGE={x:117.6,y:6.4,z:0};
+export const Q_STORAGE=TRANSPORT_POLICY.qStorage;
 export function redesignPlacements(phase,p){p.N1={...p.N1,angle:90};p.N3={x:8.4,y:12.8,z:33.6,angle:180};return Object.assign(p,{V1:{x:8.4,y:-12.8,z:phase==='B'?25.2:16.8},V2:{x:phase==='C'?8.4:16.8,y:phase==='B'?12.8:0,z:25.2},V3:phase==='B'?{x:0,y:-12.8,z:8.4}:{x:8.4,y:12.8,z:16.8},A3:{x:8.4,y:12.8,z:25.2},Q1:phase==='B'?{x:0,y:-12.8,z:16.8}:{...Q_STORAGE},W1:{x:0,y:-12.8,z:33.6}});}
