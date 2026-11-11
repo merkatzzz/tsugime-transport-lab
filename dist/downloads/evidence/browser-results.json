@@ -1,5 +1,9 @@
 {
-  "stage": 9,
+  "stage": 11,
   "verified": false,
-  "reason": "Managed preview relay readiness timed out. No GPU playtest or audio listening claim."
+  "attempted": true,
+  "cli": "sites-preview start /workspace/work/tsugime-stage4",
+  "error": "relay could not open browser port 4173: timed out waiting for relay readiness",
+  "status": "Sites preview stopped",
+  "scope": "No exact preview URL was returned. Did not bypass infrastructure or start another browser/server."
 }

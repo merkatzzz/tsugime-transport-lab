@@ -1,0 +1,1046 @@
+{
+  "ok": true,
+  "clearance": 0.2,
+  "storageArea": {
+    "body": 128,
+    "safetyEnvelope": 137.76,
+    "note": "8×16m occupied footprint; 0.2m on each side = 8.4×16.4m; unchanged"
+  },
+  "conflictDefinition": "Rejected 0.5s scheduling candidates, not physical collisions. Wait sum is per reservation, not whole-cycle elapsed time.",
+  "rows": [
+    {
+      "from": "A",
+      "to": "B",
+      "before": {
+        "duration": 54.733333333333334,
+        "Q1": {
+          "distance": 153.60000000000002,
+          "angleDegrees": 0,
+          "activeSeconds": 40,
+          "reservations": [
+            {
+              "id": "Q1",
+              "start": 0,
+              "end": 40,
+              "tag": "居住区・予備通路の再配置",
+              "from": {
+                "x": 117.6,
+                "y": 6.4,
+                "z": 0
+              },
+              "to": {
+                "x": 0,
+                "y": -12.8,
+                "z": 16.8
+              }
+            }
+          ]
+        },
+        "N4": {
+          "distance": 96.8,
+          "angleDegrees": 90,
+          "activeSeconds": 28.266666666666666,
+          "reservations": [
+            {
+              "id": "N4",
+              "start": 8.5,
+              "end": 36.766666666666666,
+              "tag": "回転ベイ経由・泉の向きを変更",
+              "from": {
+                "x": 58.8,
+                "y": 12.8,
+                "z": 0,
+                "angle": 0
+              },
+              "to": {
+                "x": 58.8,
+                "y": 0,
+                "z": 0,
+                "angle": 90
+              }
+            }
+          ]
+        }
+      },
+      "after": {
+        "duration": 23.366666666666664,
+        "validation": {
+          "ok": true,
+          "stages": 62,
+          "checks": 45882,
+          "maxConcurrent": 11,
+          "duration": 23.366666666666664,
+          "clearance": 0.2,
+          "area": 6700,
+          "areaRatio": 1.3611246546400129,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 0,
+          "errors": []
+        },
+        "Q1": {
+          "distance": 14.799999999999999,
+          "angleDegrees": 0,
+          "activeSeconds": 4.2333333333333325,
+          "reservations": [
+            {
+              "id": "Q1",
+              "start": 0,
+              "end": 4.233333333333333,
+              "tag": "居住区・予備通路の再配置",
+              "from": {
+                "x": 0,
+                "y": -6.4,
+                "z": 25.2
+              },
+              "to": {
+                "x": 0,
+                "y": -12.8,
+                "z": 16.8
+              },
+              "verticalColumn": null,
+              "rotation": null,
+              "conflicts": 0,
+              "waitSeconds": 0
+            }
+          ]
+        },
+        "N4": {
+          "distance": 16.8,
+          "angleDegrees": 90,
+          "activeSeconds": 8.266666666666666,
+          "reservations": [
+            {
+              "id": "N4",
+              "start": 0,
+              "end": 8.266666666666666,
+              "tag": "回転ベイ経由・泉の向きを変更",
+              "from": {
+                "x": 58.8,
+                "y": 12.8,
+                "z": 0,
+                "angle": 0
+              },
+              "to": {
+                "x": 58.8,
+                "y": 0,
+                "z": 0,
+                "angle": 90
+              },
+              "verticalColumn": null,
+              "rotation": {
+                "slot": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 2,
+                  "angle": 0
+                },
+                "kind": "nearby",
+                "radius": 5.656854249492381,
+                "rejected": [
+                  {
+                    "slot": {
+                      "x": 58.8,
+                      "y": 6.4,
+                      "z": 0,
+                      "angle": 0
+                    },
+                    "kind": "onsite",
+                    "reason": "continuous-sweep-or-clearance"
+                  }
+                ],
+                "begin": 2.6333333333333333,
+                "end": 5.633333333333333,
+                "reservedFrom": 2.6333333333333333,
+                "reservedTo": 5.633333333333333
+              },
+              "conflicts": 0,
+              "waitSeconds": 0
+            }
+          ]
+        },
+        "G2": {
+          "distance": 21.200000000000003,
+          "angleDegrees": 90,
+          "activeSeconds": 9.366666666666664,
+          "reservations": [
+            {
+              "id": "G2",
+              "start": 12.5,
+              "end": 21.866666666666667,
+              "tag": "北の生活区域の再配置",
+              "from": {
+                "x": 42,
+                "y": -12.8,
+                "z": 0,
+                "angle": 0
+              },
+              "to": {
+                "x": 42,
+                "y": -12.8,
+                "z": 8.4,
+                "angle": 90
+              },
+              "verticalColumn": null,
+              "rotation": {
+                "slot": {
+                  "x": 42,
+                  "y": -6.4,
+                  "z": 2,
+                  "angle": 0
+                },
+                "kind": "nearby",
+                "radius": 5.656854249492381,
+                "rejected": [
+                  {
+                    "slot": {
+                      "x": 42,
+                      "y": -6.4,
+                      "z": 0,
+                      "angle": 0
+                    },
+                    "kind": "onsite",
+                    "reason": "continuous-sweep-or-clearance"
+                  }
+                ],
+                "begin": 2.6333333333333333,
+                "end": 5.633333333333333,
+                "reservedFrom": 15.133333333333333,
+                "reservedTo": 18.133333333333333
+              },
+              "conflicts": 25,
+              "waitSeconds": 12.5
+            }
+          ]
+        },
+        "totalConflictCandidates": 150,
+        "sumReservationWaitSeconds": 75
+      },
+      "bayAlternative": {
+        "duration": 36.56666666666666,
+        "validation": {
+          "ok": true,
+          "stages": 66,
+          "checks": 47294,
+          "maxConcurrent": 12,
+          "duration": 36.56666666666666,
+          "clearance": 0.2,
+          "area": 6700,
+          "areaRatio": 1.3611246546400129,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 0,
+          "errors": []
+        },
+        "N4": {
+          "distance": 96.79999999999998,
+          "angleDegrees": 90,
+          "activeSeconds": 28.266666666666662,
+          "reservations": [
+            {
+              "id": "N4",
+              "start": 0,
+              "end": 28.266666666666662,
+              "tag": "回転ベイ経由・泉の向きを変更",
+              "from": {
+                "x": 58.8,
+                "y": 12.8,
+                "z": 0,
+                "angle": 0
+              },
+              "to": {
+                "x": 58.8,
+                "y": 0,
+                "z": 0,
+                "angle": 90
+              },
+              "verticalColumn": null,
+              "rotation": {
+                "slot": {
+                  "x": 75.6,
+                  "y": 6.4,
+                  "z": 25.2,
+                  "angle": 0
+                },
+                "kind": "dedicated-upper",
+                "radius": 5.656854249492381,
+                "rejected": [],
+                "begin": 12.633333333333333,
+                "end": 15.633333333333333,
+                "reservedFrom": 12.633333333333333,
+                "reservedTo": 15.633333333333333
+              },
+              "conflicts": 0,
+              "waitSeconds": 0
+            }
+          ]
+        },
+        "G2": {
+          "distance": 121.99999999999999,
+          "angleDegrees": 90,
+          "activeSeconds": 34.56666666666666,
+          "reservations": [
+            {
+              "id": "G2",
+              "start": 2,
+              "end": 36.56666666666666,
+              "tag": "北の生活区域の再配置",
+              "from": {
+                "x": 42,
+                "y": -12.8,
+                "z": 0,
+                "angle": 0
+              },
+              "to": {
+                "x": 42,
+                "y": -12.8,
+                "z": 8.4,
+                "angle": 90
+              },
+              "verticalColumn": null,
+              "rotation": {
+                "slot": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 25.2,
+                  "angle": 0
+                },
+                "kind": "reserved-lower",
+                "radius": 5.656854249492381,
+                "rejected": [],
+                "begin": 16.833333333333332,
+                "end": 19.833333333333332,
+                "reservedFrom": 18.833333333333332,
+                "reservedTo": 21.833333333333332
+              },
+              "conflicts": 4,
+              "waitSeconds": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "before": {
+        "duration": 70.73333333333335,
+        "Q1": {
+          "distance": 153.6,
+          "angleDegrees": 0,
+          "activeSeconds": 40,
+          "reservations": [
+            {
+              "id": "Q1",
+              "start": 28.5,
+              "end": 68.5,
+              "tag": "居住区・予備通路の再配置",
+              "from": {
+                "x": 0,
+                "y": -12.8,
+                "z": 16.8
+              },
+              "to": {
+                "x": 117.6,
+                "y": 6.4,
+                "z": 0
+              }
+            }
+          ]
+        },
+        "N4": {
+          "distance": 96.8,
+          "angleDegrees": 90,
+          "activeSeconds": 28.266666666666666,
+          "reservations": [
+            {
+              "id": "N4",
+              "start": 0,
+              "end": 28.266666666666666,
+              "tag": "回転ベイ経由・泉の向きを変更",
+              "from": {
+                "x": 58.8,
+                "y": 0,
+                "z": 0,
+                "angle": 90
+              },
+              "to": {
+                "x": 58.8,
+                "y": 12.8,
+                "z": 0,
+                "angle": 0
+              }
+            }
+          ]
+        }
+      },
+      "after": {
+        "duration": 36.86666666666667,
+        "validation": {
+          "ok": true,
+          "stages": 91,
+          "checks": 59651,
+          "maxConcurrent": 10,
+          "duration": 36.86666666666667,
+          "clearance": 0.2,
+          "area": 6700,
+          "areaRatio": 1.3611246546400129,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        },
+        "Q1": {
+          "distance": 14.799999999999999,
+          "angleDegrees": 0,
+          "activeSeconds": 4.2333333333333325,
+          "reservations": [
+            {
+              "id": "Q1",
+              "start": 0,
+              "end": 4.233333333333333,
+              "tag": "居住区・予備通路の再配置",
+              "from": {
+                "x": 0,
+                "y": -12.8,
+                "z": 16.8
+              },
+              "to": {
+                "x": 0,
+                "y": -6.4,
+                "z": 25.2
+              },
+              "verticalColumn": null,
+              "rotation": null,
+              "conflicts": 0,
+              "waitSeconds": 0
+            }
+          ]
+        },
+        "N4": {
+          "distance": 20.800000000000004,
+          "angleDegrees": 90,
+          "activeSeconds": 9.266666666666666,
+          "reservations": [
+            {
+              "id": "N4",
+              "start": 0,
+              "end": 9.266666666666666,
+              "tag": "回転ベイ経由・泉の向きを変更",
+              "from": {
+                "x": 58.8,
+                "y": 0,
+                "z": 0,
+                "angle": 90
+              },
+              "to": {
+                "x": 58.8,
+                "y": 12.8,
+                "z": 0,
+                "angle": 0
+              },
+              "verticalColumn": null,
+              "rotation": {
+                "slot": {
+                  "x": 60.8,
+                  "y": 6.4,
+                  "z": 2,
+                  "angle": 90
+                },
+                "kind": "nearby",
+                "radius": 5.656854249492381,
+                "rejected": [
+                  {
+                    "slot": {
+                      "x": 58.8,
+                      "y": 6.4,
+                      "z": 0,
+                      "angle": 90
+                    },
+                    "kind": "onsite",
+                    "reason": "continuous-sweep-or-clearance"
+                  },
+                  {
+                    "slot": {
+                      "x": 58.8,
+                      "y": 6.4,
+                      "z": 2,
+                      "angle": 90
+                    },
+                    "kind": "nearby",
+                    "reason": "continuous-sweep-or-clearance"
+                  }
+                ],
+                "begin": 3.1333333333333333,
+                "end": 6.133333333333333,
+                "reservedFrom": 3.1333333333333333,
+                "reservedTo": 6.133333333333333
+              },
+              "conflicts": 0,
+              "waitSeconds": 0
+            }
+          ]
+        },
+        "G2": {
+          "distance": 21.200000000000003,
+          "angleDegrees": 90,
+          "activeSeconds": 9.366666666666664,
+          "reservations": [
+            {
+              "id": "G2",
+              "start": 13,
+              "end": 22.366666666666667,
+              "tag": "北の生活区域の再配置",
+              "from": {
+                "x": 42,
+                "y": -12.8,
+                "z": 8.4,
+                "angle": 90
+              },
+              "to": {
+                "x": 42,
+                "y": -12.8,
+                "z": 0,
+                "angle": 0
+              },
+              "verticalColumn": null,
+              "rotation": {
+                "slot": {
+                  "x": 42,
+                  "y": -6.4,
+                  "z": 8.4,
+                  "angle": 90
+                },
+                "kind": "onsite",
+                "radius": 5.656854249492381,
+                "rejected": [],
+                "begin": 2.1333333333333333,
+                "end": 5.133333333333333,
+                "reservedFrom": 15.133333333333333,
+                "reservedTo": 18.133333333333333
+              },
+              "conflicts": 26,
+              "waitSeconds": 13
+            }
+          ]
+        },
+        "totalConflictCandidates": 450,
+        "sumReservationWaitSeconds": 224.73333333333335
+      },
+      "bayAlternative": {
+        "duration": 36.86666666666667,
+        "validation": {
+          "ok": true,
+          "stages": 97,
+          "checks": 68308,
+          "maxConcurrent": 12,
+          "duration": 36.86666666666667,
+          "clearance": 0.2,
+          "area": 6700,
+          "areaRatio": 1.3611246546400129,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        },
+        "N4": {
+          "distance": 96.79999999999997,
+          "angleDegrees": 90,
+          "activeSeconds": 28.266666666666662,
+          "reservations": [
+            {
+              "id": "N4",
+              "start": 0,
+              "end": 28.266666666666662,
+              "tag": "回転ベイ経由・泉の向きを変更",
+              "from": {
+                "x": 58.8,
+                "y": 0,
+                "z": 0,
+                "angle": 90
+              },
+              "to": {
+                "x": 58.8,
+                "y": 12.8,
+                "z": 0,
+                "angle": 0
+              },
+              "verticalColumn": null,
+              "rotation": {
+                "slot": {
+                  "x": 75.6,
+                  "y": 6.4,
+                  "z": 25.2,
+                  "angle": 90
+                },
+                "kind": "dedicated-upper",
+                "radius": 5.656854249492381,
+                "rejected": [],
+                "begin": 12.633333333333333,
+                "end": 15.633333333333333,
+                "reservedFrom": 12.633333333333333,
+                "reservedTo": 15.633333333333333
+              },
+              "conflicts": 0,
+              "waitSeconds": 0
+            }
+          ]
+        },
+        "G2": {
+          "distance": 121.99999999999997,
+          "angleDegrees": 90,
+          "activeSeconds": 34.56666666666666,
+          "reservations": [
+            {
+              "id": "G2",
+              "start": 0,
+              "end": 34.56666666666666,
+              "tag": "北の生活区域の再配置",
+              "from": {
+                "x": 42,
+                "y": -12.8,
+                "z": 8.4,
+                "angle": 90
+              },
+              "to": {
+                "x": 42,
+                "y": -12.8,
+                "z": 0,
+                "angle": 0
+              },
+              "verticalColumn": null,
+              "rotation": {
+                "slot": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 25.2,
+                  "angle": 90
+                },
+                "kind": "reserved-lower",
+                "radius": 5.656854249492381,
+                "rejected": [],
+                "begin": 14.73333333333333,
+                "end": 17.73333333333333,
+                "reservedFrom": 14.73333333333333,
+                "reservedTo": 17.73333333333333
+              },
+              "conflicts": 0,
+              "waitSeconds": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "from": "C",
+      "to": "A",
+      "before": {
+        "duration": 17.333333333333332,
+        "Q1": {
+          "distance": 0,
+          "angleDegrees": 0,
+          "activeSeconds": 0,
+          "reservations": []
+        },
+        "N4": {
+          "distance": 0,
+          "angleDegrees": 0,
+          "activeSeconds": 0,
+          "reservations": []
+        }
+      },
+      "after": {
+        "duration": 17.333333333333332,
+        "validation": {
+          "ok": true,
+          "stages": 21,
+          "checks": 8702,
+          "maxConcurrent": 7,
+          "duration": 17.333333333333332,
+          "clearance": 0.2,
+          "area": 6700,
+          "areaRatio": 1.3611246546400129,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        },
+        "Q1": {
+          "distance": 0,
+          "angleDegrees": 0,
+          "activeSeconds": 0,
+          "reservations": []
+        },
+        "N4": {
+          "distance": 0,
+          "angleDegrees": 0,
+          "activeSeconds": 0,
+          "reservations": []
+        },
+        "G2": {
+          "distance": 0,
+          "angleDegrees": 0,
+          "activeSeconds": 0,
+          "reservations": []
+        },
+        "totalConflictCandidates": 24,
+        "sumReservationWaitSeconds": 12
+      },
+      "bayAlternative": {
+        "duration": 17.333333333333332,
+        "validation": {
+          "ok": true,
+          "stages": 21,
+          "checks": 8702,
+          "maxConcurrent": 7,
+          "duration": 17.333333333333332,
+          "clearance": 0.2,
+          "area": 6700,
+          "areaRatio": 1.3611246546400129,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        },
+        "N4": {
+          "distance": 0,
+          "angleDegrees": 0,
+          "activeSeconds": 0,
+          "reservations": []
+        },
+        "G2": {
+          "distance": 0,
+          "angleDegrees": 0,
+          "activeSeconds": 0,
+          "reservations": []
+        }
+      }
+    }
+  ],
+  "matrix": [
+    {
+      "size": "same",
+      "method": "serial",
+      "transitions": [
+        {
+          "from": "A",
+          "to": "B",
+          "ok": true,
+          "stages": 75,
+          "checks": 10016,
+          "maxConcurrent": 1,
+          "duration": 170.36666666666667,
+          "clearance": 0.2,
+          "area": 5224.96,
+          "areaRatio": 1.0614659515683404,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 0,
+          "errors": []
+        },
+        {
+          "from": "B",
+          "to": "C",
+          "ok": true,
+          "stages": 107,
+          "checks": 12726,
+          "maxConcurrent": 1,
+          "duration": 226.43333333333322,
+          "clearance": 0.2,
+          "area": 5224.96,
+          "areaRatio": 1.0614659515683404,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 2,
+          "errors": []
+        },
+        {
+          "from": "C",
+          "to": "A",
+          "ok": true,
+          "stages": 30,
+          "checks": 5108,
+          "maxConcurrent": 1,
+          "duration": 59.333333333333336,
+          "clearance": 0.2,
+          "area": 5224.96,
+          "areaRatio": 1.0614659515683404,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "transitions": [
+        {
+          "from": "A",
+          "to": "B",
+          "ok": true,
+          "stages": 62,
+          "checks": 45882,
+          "maxConcurrent": 11,
+          "duration": 23.366666666666664,
+          "clearance": 0.2,
+          "area": 5224.96,
+          "areaRatio": 1.0614659515683404,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 0,
+          "errors": []
+        },
+        {
+          "from": "B",
+          "to": "C",
+          "ok": true,
+          "stages": 100,
+          "checks": 67667,
+          "maxConcurrent": 11,
+          "duration": 32.86666666666667,
+          "clearance": 0.2,
+          "area": 5224.96,
+          "areaRatio": 1.0614659515683404,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 2,
+          "errors": []
+        },
+        {
+          "from": "C",
+          "to": "A",
+          "ok": true,
+          "stages": 21,
+          "checks": 8702,
+          "maxConcurrent": 7,
+          "duration": 17.333333333333332,
+          "clearance": 0.2,
+          "area": 5224.96,
+          "areaRatio": 1.0614659515683404,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "transitions": [
+        {
+          "from": "A",
+          "to": "B",
+          "ok": true,
+          "stages": 75,
+          "checks": 10016,
+          "maxConcurrent": 1,
+          "duration": 170.36666666666667,
+          "clearance": 0.2,
+          "area": 6700,
+          "areaRatio": 1.3611246546400129,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 0,
+          "errors": []
+        },
+        {
+          "from": "B",
+          "to": "C",
+          "ok": true,
+          "stages": 109,
+          "checks": 12936,
+          "maxConcurrent": 1,
+          "duration": 230.96666666666655,
+          "clearance": 0.2,
+          "area": 6700,
+          "areaRatio": 1.3611246546400129,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        },
+        {
+          "from": "C",
+          "to": "A",
+          "ok": true,
+          "stages": 30,
+          "checks": 5108,
+          "maxConcurrent": 1,
+          "duration": 59.333333333333336,
+          "clearance": 0.2,
+          "area": 6700,
+          "areaRatio": 1.3611246546400129,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "transitions": [
+        {
+          "from": "A",
+          "to": "B",
+          "ok": true,
+          "stages": 62,
+          "checks": 45882,
+          "maxConcurrent": 11,
+          "duration": 23.366666666666664,
+          "clearance": 0.2,
+          "area": 6700,
+          "areaRatio": 1.3611246546400129,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 0,
+          "errors": []
+        },
+        {
+          "from": "B",
+          "to": "C",
+          "ok": true,
+          "stages": 91,
+          "checks": 59651,
+          "maxConcurrent": 10,
+          "duration": 36.86666666666667,
+          "clearance": 0.2,
+          "area": 6700,
+          "areaRatio": 1.3611246546400129,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        },
+        {
+          "from": "C",
+          "to": "A",
+          "ok": true,
+          "stages": 21,
+          "checks": 8702,
+          "maxConcurrent": 7,
+          "duration": 17.333333333333332,
+          "clearance": 0.2,
+          "area": 6700,
+          "areaRatio": 1.3611246546400129,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "transitions": [
+        {
+          "from": "A",
+          "to": "B",
+          "ok": true,
+          "stages": 75,
+          "checks": 10016,
+          "maxConcurrent": 1,
+          "duration": 170.36666666666667,
+          "clearance": 0.2,
+          "area": 8316.16,
+          "areaRatio": 1.6894522996912074,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 0,
+          "errors": []
+        },
+        {
+          "from": "B",
+          "to": "C",
+          "ok": true,
+          "stages": 109,
+          "checks": 12936,
+          "maxConcurrent": 1,
+          "duration": 230.96666666666655,
+          "clearance": 0.2,
+          "area": 8316.16,
+          "areaRatio": 1.6894522996912074,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        },
+        {
+          "from": "C",
+          "to": "A",
+          "ok": true,
+          "stages": 30,
+          "checks": 5108,
+          "maxConcurrent": 1,
+          "duration": 59.333333333333336,
+          "clearance": 0.2,
+          "area": 8316.16,
+          "areaRatio": 1.6894522996912074,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "transitions": [
+        {
+          "from": "A",
+          "to": "B",
+          "ok": true,
+          "stages": 62,
+          "checks": 45882,
+          "maxConcurrent": 11,
+          "duration": 23.366666666666664,
+          "clearance": 0.2,
+          "area": 8316.16,
+          "areaRatio": 1.6894522996912074,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 0,
+          "errors": []
+        },
+        {
+          "from": "B",
+          "to": "C",
+          "ok": true,
+          "stages": 91,
+          "checks": 59651,
+          "maxConcurrent": 10,
+          "duration": 36.86666666666667,
+          "clearance": 0.2,
+          "area": 8316.16,
+          "areaRatio": 1.6894522996912074,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        },
+        {
+          "from": "C",
+          "to": "A",
+          "ok": true,
+          "stages": 21,
+          "checks": 8702,
+          "maxConcurrent": 7,
+          "duration": 17.333333333333332,
+          "clearance": 0.2,
+          "area": 8316.16,
+          "areaRatio": 1.6894522996912074,
+          "height": 31.6,
+          "decks": 2,
+          "emptyDockTransfers": 1,
+          "errors": []
+        }
+      ]
+    }
+  ]
+}

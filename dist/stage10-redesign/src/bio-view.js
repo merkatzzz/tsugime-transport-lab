@@ -1,0 +1,25 @@
+import {updateTentacleGeometry} from './tentacle-geometry.js';
+import * as THREE from '../vendor/three.module.js';import {SPRINGS,BIOS,ROTATION_BAY} from './infrastructure.js';import {toWorld} from './pose.js';
+export function installBioView(View){
+ View.prototype.buildAnimal=function(g,bio){const rig=new THREE.Group();rig.userData.target='supply:'+bio.id;g.add(rig);const skin=this.material('bio-skin','#708d75'),shell=this.material('bio-shell','#3e6057'),warm=this.material('bio-supply','#c7b786');
+  const body=new THREE.Mesh(new THREE.SphereGeometry(.64,16,12),skin);body.position.set(7.35,1.35,4);body.scale.set(.75,1.28,1);rig.add(body);
+  for(const z of[3.5,3.75,4,4.25,4.5]){const rib=new THREE.Mesh(new THREE.SphereGeometry(.22,12,8),shell);rib.position.set(7.2,1.35,z);rib.scale.set(.8,2.5,.65);rig.add(rib);}
+  for(const z of[3.36,4.64])this.cube(rig,7.15,.3,z,.6,1.6,.09,'bio-shell');
+  const supply=new THREE.Mesh(new THREE.SphereGeometry(.2,12,8),warm);supply.position.set(6.65,1,4);supply.scale.set(1.6,.65,1);rig.add(supply);
+  this.text(g,bio.id+' / 中和・供給',6.7,2.2,4,{size:.16,rotation:-Math.PI/2});
+ };
+ View.prototype.buildSprings=function(){this.springGroups=[];this.springCovers=[];this.springGates=[];this.springLabels=[];this.waterMeshes=[];this.bioGroup=new THREE.Group();this.scene.add(this.bioGroup);this.tentacleMeshes={};const ring=[];for(let i=0;i<=64;i++){const a=i*Math.PI/32;ring.push(new THREE.Vector3(ROTATION_BAY.x+4+Math.cos(a)*(ROTATION_BAY.radius+.2),ROTATION_BAY.y-.14,ROTATION_BAY.z+4+Math.sin(a)*(ROTATION_BAY.radius+.2)));}this.deck.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(ring),new THREE.LineBasicMaterial({color:'#b39057'})));this.text(this.deck,'90° / ROTATION BAY',ROTATION_BAY.x+4,ROTATION_BAY.y-.13,ROTATION_BAY.z+11,{size:.4}).rotation.x=-Math.PI/2;
+  for(const p of SPRINGS){const g=new THREE.Group();g.position.set(p.x,p.y,p.z);this.fixed.add(g);this.springGroups.push({g,y:p.y});g.userData.spring=p.id;this.cube(g,0,0,0,3,.16,3,'concrete');const cover=(...a)=>{const m=this.cube(g,...a,'concrete');this.springCovers.push(m);return m;};
+   // Local mouth is west-facing; PB rotates its entire fixed enclosure by -90°.
+   const angle=({W:0,N:90,E:180,S:270}[p.face])*Math.PI/180,c=Math.cos(angle),sn=Math.sin(angle);g.rotation.y=-angle;g.position.set(p.x+1.5-c*1.5+sn*1.5,p.y,p.z+1.5-sn*1.5-c*1.5);
+   cover(0,.16,0,.12,5.84,1);cover(0,.16,2,.12,5.84,1);cover(0,1.26,1,.12,4.74,1);cover(2.88,.16,0,.12,5.84,3);cover(.12,.16,0,2.76,5.84,.12);cover(.12,.16,2.88,2.76,5.84,.12);cover(0,5.84,0,3,.16,3);
+   const gate=this.cube(g,.02,.16,1,.08,1.1,1,'metal');this.springGates.push({id:p.id,mesh:gate});
+   const water=new THREE.Mesh(new THREE.PlaneGeometry(2.65,2.65),new THREE.MeshStandardMaterial({color:'#a3b271',roughness:.27,transparent:true,opacity:.87,side:THREE.DoubleSide}));water.position.set(1.5,.9,1.5);water.rotation.x=-Math.PI/2;g.add(water);this.waterMeshes.push({id:p.id,mesh:water});
+   const edge=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(3,6,3)),new THREE.LineBasicMaterial({color:'#598d7e'}));edge.position.set(1.5,3,1.5);g.add(edge);this.springLabels.push(this.text(g,p.id+' / FIXED',1.5,6.3,1.5,{size:.28}));
+  }
+ };
+ View.prototype.renderBiology=function(overview){const s=this.sim;for(const {g,y}of this.springGroups??[])g.visible=!overview||this.floor==='all'||Math.abs(y-Number(this.floor))<.1;for(const m of this.springCovers??[])m.visible=!overview&&!m.userData.internalSurface;for(const m of this.springLabels??[])m.visible=overview;for(const w of this.waterMeshes??[])w.mesh.material.color.set(s.biology.wells[w.id].toxicity<=.2?'#7cc3b2':'#b7a465');
+  for(const gate of this.springGates??[]){const a=Object.values(s.biology.animals).find(a=>a.connection?.spring===gate.id),amount=1-(a?.gate??0);gate.mesh.visible=amount>.001;gate.mesh.scale.y=Math.max(.001,amount);gate.mesh.position.y=.16+1.1-.55*amount;}
+  for(const bio of BIOS){const a=s.biology.animals[bio.id],key=JSON.stringify([a.progress,s.positions[bio.body],a.connection?.spring]),prior=this.tentacleKeys??={};if(prior[bio.id]===key){const m=this.tentacleMeshes[bio.id];if(m)m.visible=!!a.connection&&a.progress>=.001&&(!overview||this.floor==='all'||Math.abs(s.positions[bio.body].y-Number(this.floor))<.1);continue;}prior[bio.id]=key;let mesh=this.tentacleMeshes?.[bio.id];if(!a.connection||a.progress<.001){if(mesh)mesh.visible=false;continue;}if(!mesh){const unit=new THREE.CatmullRomCurve3([new THREE.Vector3(0,0,0),new THREE.Vector3(0,0,1)]);mesh=new THREE.Mesh(new THREE.TubeGeometry(unit,24,.075,8,false),this.material('tentacle','#8baf91'));mesh.userData.tentacle=bio.id;this.bioGroup.add(mesh);this.tentacleMeshes[bio.id]=mesh;}const start=toWorld(s.positions[bio.body],bio.anchor),end=a.connection.to;updateTentacleGeometry(mesh.geometry,start,end,a.progress);mesh.visible=!overview||this.floor==='all'||Math.abs(s.positions[bio.body].y-Number(this.floor))<.1;}
+ };
+}

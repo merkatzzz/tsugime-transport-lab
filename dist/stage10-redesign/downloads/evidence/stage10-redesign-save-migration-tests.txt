@@ -1,0 +1,34 @@
+✔ all 47 transportable bodies have a phase purpose; 10 fixed systems are counted separately and the next new body cannot silently be omitted (357.608941ms)
+✔ new phase roles change real neighbours: life wing changes host floor; east room changes entrance; northern residential order changes (114.955069ms)
+✔ adopted plans really use the expanded southern slots, and all target changes are physically covered (244.621374ms)
+✔ new movers carry a passenger and the same full rigid building through repeated physical ABC cycles (1540.524174ms)
+✔ W2 closes in B and its visitor evacuates by walking into the moving P9, with no water or fixed-equipment motion (191.185937ms)
+✔ old stage10 saves migrate in body-local coordinates; new saves retain exact phase anchors, NPC state and inventory (106.805288ms)
+✔ two-cell boundary supports exact 3m wall / 2m door / 3m wall, without a transport shutter (1.313925ms)
+✔ room envelopes cross cell seams in 3-cell, 4-cell and L-shaped bodies; authored openings remain exact under rotation (2298.81552ms)
+✔ V1 reproduces and closes the missing five-metre internal west wall while the common seam stays walkable (956.689012ms)
+✔ both recessed canal exteriors are opaque below floor, including their four sides and culvert boundaries (840.702906ms)
+✔ shop walls terminate at the small roof, and normal/talking shopkeepers face customers with bounded head motion (1258.513374ms)
+✔ diagnostic overlays reuse their geometry and never change exploration materials or physics (1269.266862ms)
+✔ four-cell P9 carries player and home NPC through genuine complete ABC transport without local drift (4748.703973ms)
+✔ exact configurable 60 second schedule is 15 home / 45 work, with staggered phase and event override (1.75875ms)
+✔ two distinct NPCs each have exactly one location, with fully closed cover required for every commute (183.992452ms)
+✔ room presence opens a live 3D camera; absence reports the correct next home time and never unlocks a room (30.687019ms)
+✔ visits restore corridor body-local position and gaze after the hosting body moves (0.824319ms)
+✔ seen shopkeeper stays during conversation and a pending close refuses new transactions (52.971895ms)
+✔ player inside shop or overhead observation defers warp; transport closes covers without relocating NPCs (42.857456ms)
+✔ inventory browsing and wrong targets do not consume; correct use consumes exactly once with an auditable result (1.254485ms)
+✔ an already open transaction can finish after closing time without removing its NPC (38.621918ms)
+✔ versioned save restores actual whereabouts/covers/clock/flags/items/phase; old inventory and bad data are non-destructive (29.963247ms)
+✔ browser storage uses a dedicated new slot without clearing unrelated saves (4.704727ms)
+✔ new 4-cell common facility retains fixed private walls and no transport shutters on internal cell borders (8.929702ms)
+✔ sign normals point from private rooms toward the corridor and follow rigid body rotation (0.741514ms)
+✔ closed metal and curtain stalls actually hide the NPC from front, sides, rear and above (936.239793ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16399.534539

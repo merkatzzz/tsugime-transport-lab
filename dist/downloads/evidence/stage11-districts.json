@@ -1,0 +1,6273 @@
+{
+  "stage": 11,
+  "summary": {
+    "bodies": 53,
+    "cells": 72,
+    "transportable": 53,
+    "fixedEquipment": 10,
+    "moved": 32,
+    "waiting": 21,
+    "duration": 88.0667,
+    "transitions": [
+      {
+        "from": "A",
+        "to": "B",
+        "duration": 29.866666666666664,
+        "ok": true
+      },
+      {
+        "from": "B",
+        "to": "C",
+        "duration": 40.86666666666667,
+        "ok": true
+      },
+      {
+        "from": "C",
+        "to": "A",
+        "duration": 17.333333333333332,
+        "ok": true
+      }
+    ]
+  },
+  "baseline": {
+    "bodies": 47,
+    "cells": 64,
+    "transportable": 47,
+    "fixedEquipment": 10,
+    "moved": 27,
+    "waiting": 20,
+    "duration": 88.0667,
+    "transitions": [
+      {
+        "from": "A",
+        "to": "B",
+        "duration": 29.866666666666664,
+        "ok": true
+      },
+      {
+        "from": "B",
+        "to": "C",
+        "duration": 40.86666666666667,
+        "ok": true
+      },
+      {
+        "from": "C",
+        "to": "A",
+        "duration": 17.333333333333332,
+        "ok": true
+      }
+    ]
+  },
+  "oldTargetChanges": [],
+  "bodies": [
+    {
+      "id": "RH1",
+      "name": "居住街・六つの扉と共用廊下",
+      "generation": 11,
+      "use": "residential",
+      "zone": "housing",
+      "color": "#a6b29e",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "ceiling": 2.8,
+      "ports": [
+        {
+          "id": "entry",
+          "face": "N",
+          "a": 0.3,
+          "b": 1.9,
+          "height": 2.5,
+          "role": "boundary-connector"
+        },
+        {
+          "id": "capsule",
+          "face": "E",
+          "a": 3,
+          "b": 5,
+          "height": 2.5,
+          "role": "boundary-connector"
+        },
+        {
+          "id": "shops",
+          "face": "S",
+          "a": 0.3,
+          "b": 1.9,
+          "height": 2.5,
+          "role": "boundary-connector"
+        }
+      ],
+      "walls": [
+        {
+          "a": [
+            2.6,
+            0.2
+          ],
+          "b": [
+            6.9,
+            0.2
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            6.9,
+            0.2
+          ],
+          "b": [
+            6.9,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            2.6,
+            2.7
+          ],
+          "b": [
+            3.7,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            4.800000000000001,
+            2.7
+          ],
+          "b": [
+            6.9,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            2.6,
+            0.2
+          ],
+          "b": [
+            2.6,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            2.6,
+            5.3
+          ],
+          "b": [
+            3.7,
+            5.3
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            4.800000000000001,
+            5.3
+          ],
+          "b": [
+            6.9,
+            5.3
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            6.9,
+            5.3
+          ],
+          "b": [
+            6.9,
+            7.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            2.6,
+            7.8
+          ],
+          "b": [
+            6.9,
+            7.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            2.6,
+            5.3
+          ],
+          "b": [
+            2.6,
+            7.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            6.9,
+            0.2
+          ],
+          "b": [
+            11.2,
+            0.2
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            11.2,
+            0.2
+          ],
+          "b": [
+            11.2,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            6.9,
+            2.7
+          ],
+          "b": [
+            8,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            9.100000000000001,
+            2.7
+          ],
+          "b": [
+            11.2,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            6.9,
+            5.3
+          ],
+          "b": [
+            8,
+            5.3
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            9.100000000000001,
+            5.3
+          ],
+          "b": [
+            11.2,
+            5.3
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            11.2,
+            5.3
+          ],
+          "b": [
+            11.2,
+            7.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            6.9,
+            7.8
+          ],
+          "b": [
+            11.2,
+            7.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            11.2,
+            0.2
+          ],
+          "b": [
+            16,
+            0.2
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 4,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            11.2,
+            2.7
+          ],
+          "b": [
+            12.299999999999999,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 4,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            13.399999999999999,
+            2.7
+          ],
+          "b": [
+            16,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 4,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            11.2,
+            5.3
+          ],
+          "b": [
+            12.299999999999999,
+            5.3
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 5,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            13.399999999999999,
+            5.3
+          ],
+          "b": [
+            16,
+            5.3
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 5,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            11.2,
+            7.8
+          ],
+          "b": [
+            16,
+            7.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 5,
+          "floor": 0,
+          "height": 2.8
+        }
+      ],
+      "doors": [
+        {
+          "id": "RH1-101",
+          "a": [
+            3.7,
+            2.7
+          ],
+          "b": [
+            4.800000000000001,
+            2.7
+          ],
+          "label": "101号室",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": -90,
+          "open": false
+        },
+        {
+          "id": "RH1-104",
+          "a": [
+            3.7,
+            5.3
+          ],
+          "b": [
+            4.800000000000001,
+            5.3
+          ],
+          "label": "104号室",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": 90,
+          "open": false
+        },
+        {
+          "id": "RH1-102",
+          "a": [
+            8,
+            2.7
+          ],
+          "b": [
+            9.100000000000001,
+            2.7
+          ],
+          "label": "102号室",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": -90,
+          "open": false
+        },
+        {
+          "id": "RH1-105",
+          "a": [
+            8,
+            5.3
+          ],
+          "b": [
+            9.100000000000001,
+            5.3
+          ],
+          "label": "105号室",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": 90,
+          "open": false
+        },
+        {
+          "id": "RH1-103",
+          "a": [
+            12.299999999999999,
+            2.7
+          ],
+          "b": [
+            13.399999999999999,
+            2.7
+          ],
+          "label": "103号室",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": -90,
+          "open": false
+        },
+        {
+          "id": "RH1-106",
+          "a": [
+            12.299999999999999,
+            5.3
+          ],
+          "b": [
+            13.399999999999999,
+            5.3
+          ],
+          "label": "106号室",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": 90,
+          "open": false
+        }
+      ],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 5.6000000000000005,
+          "z": 0.4,
+          "w": 1,
+          "d": 1.3,
+          "h": 0.5,
+          "color": "wood"
+        },
+        {
+          "x": 5.6000000000000005,
+          "z": 6.05,
+          "w": 1,
+          "d": 1.3,
+          "h": 0.5,
+          "color": "wood"
+        },
+        {
+          "x": 9.899999999999999,
+          "z": 0.4,
+          "w": 1,
+          "d": 1.3,
+          "h": 0.5,
+          "color": "wood"
+        },
+        {
+          "x": 9.899999999999999,
+          "z": 6.05,
+          "w": 1,
+          "d": 1.3,
+          "h": 0.5,
+          "color": "wood"
+        },
+        {
+          "x": 14.7,
+          "z": 0.4,
+          "w": 1,
+          "d": 1.3,
+          "h": 0.5,
+          "color": "wood"
+        },
+        {
+          "x": 14.7,
+          "z": 6.05,
+          "w": 1,
+          "d": 1.3,
+          "h": 0.5,
+          "color": "wood"
+        }
+      ],
+      "privateRooms": [
+        {
+          "x": 2.6,
+          "z": 0.2,
+          "w": 4.3,
+          "d": 2.5
+        },
+        {
+          "x": 2.6,
+          "z": 5.3,
+          "w": 4.3,
+          "d": 2.5
+        },
+        {
+          "x": 6.9,
+          "z": 0.2,
+          "w": 4.3,
+          "d": 2.5
+        },
+        {
+          "x": 6.9,
+          "z": 5.3,
+          "w": 4.3,
+          "d": 2.5
+        },
+        {
+          "x": 11.2,
+          "z": 0.2,
+          "w": 4.8,
+          "d": 2.5
+        },
+        {
+          "x": 11.2,
+          "z": 5.3,
+          "w": 4.8,
+          "d": 2.5
+        }
+      ],
+      "labels": [
+        {
+          "name": "101号",
+          "x": 4.75,
+          "z": 1.3
+        },
+        {
+          "name": "104号",
+          "x": 4.75,
+          "z": 6.8
+        },
+        {
+          "name": "102号",
+          "x": 9.05,
+          "z": 1.3
+        },
+        {
+          "name": "105号",
+          "x": 9.05,
+          "z": 6.8
+        },
+        {
+          "name": "103号",
+          "x": 13.6,
+          "z": 1.3
+        },
+        {
+          "name": "106号",
+          "x": 13.6,
+          "z": 6.8
+        },
+        {
+          "name": "居住街・共用廊下",
+          "x": 9,
+          "z": 4
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.8
+        },
+        {
+          "x": 8,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.8
+        }
+      ],
+      "mobility": {
+        "generation": 11,
+        "kind": "transportable",
+        "purpose": "六室と廊下を持つ二連結住宅。Bで東へ移り共有廊下SH2を経由する居住街へ"
+      },
+      "partitionRepairs": [
+        {
+          "a": [
+            2.6,
+            0.2
+          ],
+          "b": [
+            6.9,
+            0.2
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            6.9,
+            0.2
+          ],
+          "b": [
+            6.9,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            2.6,
+            2.7
+          ],
+          "b": [
+            3.7,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            4.800000000000001,
+            2.7
+          ],
+          "b": [
+            6.9,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            2.6,
+            0.2
+          ],
+          "b": [
+            2.6,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            2.6,
+            5.3
+          ],
+          "b": [
+            3.7,
+            5.3
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            4.800000000000001,
+            5.3
+          ],
+          "b": [
+            6.9,
+            5.3
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            6.9,
+            5.3
+          ],
+          "b": [
+            6.9,
+            7.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            2.6,
+            7.8
+          ],
+          "b": [
+            6.9,
+            7.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            2.6,
+            5.3
+          ],
+          "b": [
+            2.6,
+            7.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            6.9,
+            0.2
+          ],
+          "b": [
+            11.2,
+            0.2
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            11.2,
+            0.2
+          ],
+          "b": [
+            11.2,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            6.9,
+            2.7
+          ],
+          "b": [
+            8,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            9.100000000000001,
+            2.7
+          ],
+          "b": [
+            11.2,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            6.9,
+            5.3
+          ],
+          "b": [
+            8,
+            5.3
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            9.100000000000001,
+            5.3
+          ],
+          "b": [
+            11.2,
+            5.3
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            11.2,
+            5.3
+          ],
+          "b": [
+            11.2,
+            7.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            6.9,
+            7.8
+          ],
+          "b": [
+            11.2,
+            7.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            11.2,
+            0.2
+          ],
+          "b": [
+            16,
+            0.2
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 4,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            11.2,
+            2.7
+          ],
+          "b": [
+            12.299999999999999,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 4,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            13.399999999999999,
+            2.7
+          ],
+          "b": [
+            16,
+            2.7
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 4,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            11.2,
+            5.3
+          ],
+          "b": [
+            12.299999999999999,
+            5.3
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 5,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            13.399999999999999,
+            5.3
+          ],
+          "b": [
+            16,
+            5.3
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 5,
+          "floor": 0,
+          "height": 2.8
+        },
+        {
+          "a": [
+            11.2,
+            7.8
+          ],
+          "b": [
+            16,
+            7.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 5,
+          "floor": 0,
+          "height": 2.8
+        }
+      ],
+      "audit": {
+        "id": "RH1",
+        "name": "居住街・六つの扉と共用廊下",
+        "cells": 2,
+        "generation": 11,
+        "kind": "transportable",
+        "classification": "moving",
+        "poses": {
+          "A": {
+            "x": 50.4,
+            "y": 12.8,
+            "z": 16.8,
+            "angle": 0
+          },
+          "B": {
+            "x": 58.8,
+            "y": 12.8,
+            "z": 16.8,
+            "angle": 0
+          },
+          "C": {
+            "x": 50.4,
+            "y": 12.8,
+            "z": 16.8,
+            "angle": 0
+          }
+        },
+        "transitions": {
+          "A": {
+            "to": "B",
+            "distance": 21.2,
+            "horizontal": 8.4,
+            "vertical": 12.8,
+            "rotation": 0,
+            "dockDisplacement": 8.4,
+            "legs": [
+              {
+                "stage": 0,
+                "from": {
+                  "x": 50.4,
+                  "y": 12.8,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 6.800000000000001,
+                  "z": 16.8
+                },
+                "duration": 2
+              },
+              {
+                "stage": 1,
+                "from": {
+                  "x": 50.4,
+                  "y": 6.800000000000001,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 6.5,
+                  "z": 16.8
+                },
+                "duration": 0.10000000000000009
+              },
+              {
+                "stage": 2,
+                "from": {
+                  "x": 50.4,
+                  "y": 6.5,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.033333333333333215
+              },
+              {
+                "stage": 3,
+                "from": {
+                  "x": 50.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.8,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.10000000000000009
+              },
+              {
+                "stage": 4,
+                "from": {
+                  "x": 50.8,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 52.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.3999999999999999
+              },
+              {
+                "stage": 5,
+                "from": {
+                  "x": 52.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 55.599999999999994,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.7999999999999989
+              },
+              {
+                "stage": 6,
+                "from": {
+                  "x": 55.599999999999994,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 56.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.20000000000000107
+              },
+              {
+                "stage": 7,
+                "from": {
+                  "x": 56.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 57,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.1499999999999999
+              },
+              {
+                "stage": 8,
+                "from": {
+                  "x": 57,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.34999999999999964
+              },
+              {
+                "stage": 9,
+                "from": {
+                  "x": 58.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.09999999999999787
+              },
+              {
+                "stage": 10,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.500000000000003,
+                  "z": 16.8
+                },
+                "duration": 0.03333333333333588
+              },
+              {
+                "stage": 11,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.500000000000003,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.699999999999999,
+                  "z": 16.8
+                },
+                "duration": 0.06666666666666554
+              },
+              {
+                "stage": 12,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.699999999999999,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 7.200000000000003,
+                  "z": 16.8
+                },
+                "duration": 0.16666666666666785
+              },
+              {
+                "stage": 13,
+                "from": {
+                  "x": 58.8,
+                  "y": 7.200000000000003,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 10.600000000000001,
+                  "z": 16.8
+                },
+                "duration": 1.1333333333333329
+              },
+              {
+                "stage": 14,
+                "from": {
+                  "x": 58.8,
+                  "y": 10.600000000000001,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 10.900000000000006,
+                  "z": 16.8
+                },
+                "duration": 0.10000000000000142
+              },
+              {
+                "stage": 15,
+                "from": {
+                  "x": 58.8,
+                  "y": 10.900000000000006,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.100000000000001,
+                  "z": 16.8
+                },
+                "duration": 0.3999999999999986
+              },
+              {
+                "stage": 16,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.100000000000001,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.250000000000002,
+                  "z": 16.8
+                },
+                "duration": 0.04999999999999982
+              },
+              {
+                "stage": 17,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.250000000000002,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.600000000000003,
+                  "z": 16.8
+                },
+                "duration": 0.11666666666666714
+              },
+              {
+                "stage": 18,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.600000000000003,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.700000000000005,
+                  "z": 16.8
+                },
+                "duration": 0.0333333333333341
+              },
+              {
+                "stage": 19,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.700000000000005,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.8,
+                  "z": 16.8
+                },
+                "duration": 0.03333333333332966
+              }
+            ]
+          },
+          "B": {
+            "to": "C",
+            "distance": 21.2,
+            "horizontal": 8.4,
+            "vertical": 12.8,
+            "rotation": 0,
+            "dockDisplacement": 8.4,
+            "legs": [
+              {
+                "stage": 0,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.8,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 2.1333333333333333
+              },
+              {
+                "stage": 1,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 58.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.10000000000000009
+              },
+              {
+                "stage": 2,
+                "from": {
+                  "x": 58.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 53.6,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 1.1999999999999993
+              },
+              {
+                "stage": 3,
+                "from": {
+                  "x": 53.6,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 52.8,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.20000000000000062
+              },
+              {
+                "stage": 4,
+                "from": {
+                  "x": 52.8,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 52.199999999999996,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.1499999999999999
+              },
+              {
+                "stage": 5,
+                "from": {
+                  "x": 52.199999999999996,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.8,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.34999999999999964
+              },
+              {
+                "stage": 6,
+                "from": {
+                  "x": 50.8,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.09999999999999787
+              },
+              {
+                "stage": 7,
+                "from": {
+                  "x": 50.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 6.500000000000003,
+                  "z": 16.8
+                },
+                "duration": 0.03333333333333588
+              },
+              {
+                "stage": 8,
+                "from": {
+                  "x": 50.4,
+                  "y": 6.500000000000003,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 6.700000000000002,
+                  "z": 16.8
+                },
+                "duration": 0.06666666666666643
+              },
+              {
+                "stage": 9,
+                "from": {
+                  "x": 50.4,
+                  "y": 6.700000000000002,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 7.200000000000003,
+                  "z": 16.8
+                },
+                "duration": 0.16666666666666696
+              },
+              {
+                "stage": 10,
+                "from": {
+                  "x": 50.4,
+                  "y": 7.200000000000003,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 7.7500000000000036,
+                  "z": 16.8
+                },
+                "duration": 0.18333333333333357
+              },
+              {
+                "stage": 11,
+                "from": {
+                  "x": 50.4,
+                  "y": 7.7500000000000036,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 10.900000000000006,
+                  "z": 16.8
+                },
+                "duration": 1.0500000000000007
+              },
+              {
+                "stage": 12,
+                "from": {
+                  "x": 50.4,
+                  "y": 10.900000000000006,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 12.7,
+                  "z": 16.8
+                },
+                "duration": 0.5999999999999979
+              },
+              {
+                "stage": 13,
+                "from": {
+                  "x": 50.4,
+                  "y": 12.7,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 12.8,
+                  "z": 16.8
+                },
+                "duration": 0.03333333333333144
+              }
+            ]
+          },
+          "C": {
+            "to": "A",
+            "distance": 0,
+            "horizontal": 0,
+            "vertical": 0,
+            "rotation": 0,
+            "dockDisplacement": 0,
+            "legs": []
+          }
+        },
+        "moved": true,
+        "dockMoved": true,
+        "purpose": "六室と廊下を持つ二連結住宅。Bで東へ移り共有廊下SH2を経由する居住街へ",
+        "connections": {
+          "A": [
+            {
+              "body": "U2",
+              "port": "entry",
+              "otherPort": "district",
+              "width": 1.6
+            },
+            {
+              "body": "CP1",
+              "port": "capsule",
+              "otherPort": "entry",
+              "width": 2
+            },
+            {
+              "body": "MK1",
+              "port": "shops",
+              "otherPort": "north",
+              "width": 1.6
+            }
+          ],
+          "B": [
+            {
+              "body": "CP1",
+              "port": "capsule",
+              "otherPort": "entry",
+              "width": 2
+            },
+            {
+              "body": "MK1",
+              "port": "shops",
+              "otherPort": "north",
+              "width": 1.6
+            },
+            {
+              "body": "SH2",
+              "port": "entry",
+              "otherPort": "end",
+              "width": 1.6
+            }
+          ],
+          "C": [
+            {
+              "body": "U2",
+              "port": "entry",
+              "otherPort": "district",
+              "width": 1.6
+            },
+            {
+              "body": "CP1",
+              "port": "capsule",
+              "otherPort": "entry",
+              "width": 2
+            },
+            {
+              "body": "MK1",
+              "port": "shops",
+              "otherPort": "north",
+              "width": 1.6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "CP1",
+      "name": "二階建てカプセル棟",
+      "generation": 11,
+      "use": "residential",
+      "zone": "housing",
+      "color": "#a6b29e",
+      "cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "ceiling": 5.6,
+      "ports": [
+        {
+          "id": "entry",
+          "face": "W",
+          "a": 3,
+          "b": 5,
+          "height": 2.5,
+          "role": "boundary-connector"
+        }
+      ],
+      "walls": [
+        {
+          "a": [
+            0.2,
+            0.2
+          ],
+          "b": [
+            2.9000000000000004,
+            0.2
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            0.2
+          ],
+          "b": [
+            2.9000000000000004,
+            0.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            1.9000000000000001
+          ],
+          "b": [
+            2.9000000000000004,
+            2.6
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            0.2,
+            2.6
+          ],
+          "b": [
+            2.9000000000000004,
+            2.6
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            0.2,
+            0.2
+          ],
+          "b": [
+            0.2,
+            2.6
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            0.2,
+            5.4
+          ],
+          "b": [
+            2.9000000000000004,
+            5.4
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            5.4
+          ],
+          "b": [
+            2.9000000000000004,
+            5.9
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            7
+          ],
+          "b": [
+            2.9000000000000004,
+            7.800000000000001
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            0.2,
+            7.800000000000001
+          ],
+          "b": [
+            2.9000000000000004,
+            7.800000000000001
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            0.2,
+            5.4
+          ],
+          "b": [
+            0.2,
+            7.800000000000001
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            0.2,
+            0.2
+          ],
+          "b": [
+            2.9000000000000004,
+            0.2
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            0.2
+          ],
+          "b": [
+            2.9000000000000004,
+            0.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            1.9000000000000001
+          ],
+          "b": [
+            2.9000000000000004,
+            2.6
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            0.2,
+            2.6
+          ],
+          "b": [
+            2.9000000000000004,
+            2.6
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            0.2,
+            0.2
+          ],
+          "b": [
+            0.2,
+            2.6
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            0.2,
+            5.4
+          ],
+          "b": [
+            2.9000000000000004,
+            5.4
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            5.4
+          ],
+          "b": [
+            2.9000000000000004,
+            5.9
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            7
+          ],
+          "b": [
+            2.9000000000000004,
+            7.800000000000001
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            0.2,
+            7.800000000000001
+          ],
+          "b": [
+            2.9000000000000004,
+            7.800000000000001
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            0.2,
+            5.4
+          ],
+          "b": [
+            0.2,
+            7.800000000000001
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 3,
+          "height": 2.6
+        }
+      ],
+      "doors": [
+        {
+          "id": "CP1-101",
+          "a": [
+            2.9,
+            0.8
+          ],
+          "b": [
+            2.9,
+            1.9000000000000001
+          ],
+          "label": "101 カプセル",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": 90,
+          "open": false,
+          "floor": 0,
+          "capsuleView": {
+            "camera": {
+              "x": 2.5,
+              "y": 1.65,
+              "z": 1.35
+            },
+            "look": {
+              "x": 1.65,
+              "y": 1.25,
+              "z": 1.35
+            },
+            "model": {
+              "x": 1.65,
+              "y": 0,
+              "z": 1.35
+            }
+          }
+        },
+        {
+          "id": "CP1-102",
+          "a": [
+            2.9,
+            5.9
+          ],
+          "b": [
+            2.9,
+            7
+          ],
+          "label": "102 カプセル",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": 90,
+          "open": false,
+          "floor": 0,
+          "capsuleView": {
+            "camera": {
+              "x": 2.5,
+              "y": 1.65,
+              "z": 6.45
+            },
+            "look": {
+              "x": 1.65,
+              "y": 1.25,
+              "z": 6.45
+            },
+            "model": {
+              "x": 1.65,
+              "y": 0,
+              "z": 6.45
+            }
+          }
+        },
+        {
+          "id": "CP1-201",
+          "a": [
+            2.9,
+            0.8
+          ],
+          "b": [
+            2.9,
+            1.9000000000000001
+          ],
+          "label": "201 カプセル",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": 90,
+          "open": false,
+          "floor": 3,
+          "capsuleView": {
+            "camera": {
+              "x": 2.5,
+              "y": 4.65,
+              "z": 1.35
+            },
+            "look": {
+              "x": 1.65,
+              "y": 4.25,
+              "z": 1.35
+            },
+            "model": {
+              "x": 1.65,
+              "y": 3,
+              "z": 1.35
+            }
+          }
+        },
+        {
+          "id": "CP1-202",
+          "a": [
+            2.9,
+            5.9
+          ],
+          "b": [
+            2.9,
+            7
+          ],
+          "label": "202 カプセル",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": 90,
+          "open": false,
+          "floor": 3,
+          "capsuleView": {
+            "camera": {
+              "x": 2.5,
+              "y": 4.65,
+              "z": 6.45
+            },
+            "look": {
+              "x": 1.65,
+              "y": 4.25,
+              "z": 6.45
+            },
+            "model": {
+              "x": 1.65,
+              "y": 3,
+              "z": 6.45
+            }
+          }
+        }
+      ],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 0.35,
+          "z": 0.45,
+          "w": 1,
+          "d": 1.4,
+          "h": 0.4,
+          "color": "wood",
+          "floor": 0
+        },
+        {
+          "x": 0.35,
+          "z": 5.65,
+          "w": 1,
+          "d": 1.4,
+          "h": 0.4,
+          "color": "wood",
+          "floor": 0
+        },
+        {
+          "x": 0.35,
+          "z": 0.45,
+          "w": 1,
+          "d": 1.4,
+          "h": 0.4,
+          "color": "wood",
+          "floor": 3
+        },
+        {
+          "x": 0.35,
+          "z": 5.65,
+          "w": 1,
+          "d": 1.4,
+          "h": 0.4,
+          "color": "wood",
+          "floor": 3
+        }
+      ],
+      "privateRooms": [
+        {
+          "x": 0.2,
+          "z": 0.2,
+          "w": 2.7,
+          "d": 2.4,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "x": 0.2,
+          "z": 5.4,
+          "w": 2.7,
+          "d": 2.4,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "x": 0.2,
+          "z": 0.2,
+          "w": 2.7,
+          "d": 2.4,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "x": 0.2,
+          "z": 5.4,
+          "w": 2.7,
+          "d": 2.4,
+          "floor": 3,
+          "height": 2.6
+        }
+      ],
+      "labels": [
+        {
+          "name": "101 カプセル",
+          "x": 1.45,
+          "z": 1.4,
+          "floor": 0
+        },
+        {
+          "name": "102 カプセル",
+          "x": 1.45,
+          "z": 6.6000000000000005,
+          "floor": 0
+        },
+        {
+          "name": "201 カプセル",
+          "x": 1.45,
+          "z": 1.4,
+          "floor": 3
+        },
+        {
+          "name": "202 カプセル",
+          "x": 1.45,
+          "z": 6.6000000000000005,
+          "floor": 3
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 5.6
+        }
+      ],
+      "capsule": true,
+      "mobility": {
+        "generation": 11,
+        "kind": "transportable",
+        "purpose": "内部二層のカプセル棟。RH1と別々に搬送し上階の乗員も保持"
+      },
+      "partitionRepairs": [
+        {
+          "a": [
+            0.2,
+            0.2
+          ],
+          "b": [
+            2.9000000000000004,
+            0.2
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            0.2
+          ],
+          "b": [
+            2.9000000000000004,
+            0.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            1.9000000000000001
+          ],
+          "b": [
+            2.9000000000000004,
+            2.6
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            0.2,
+            2.6
+          ],
+          "b": [
+            2.9000000000000004,
+            2.6
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            0.2,
+            0.2
+          ],
+          "b": [
+            0.2,
+            2.6
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 0,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            0.2,
+            5.4
+          ],
+          "b": [
+            2.9000000000000004,
+            5.4
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            5.4
+          ],
+          "b": [
+            2.9000000000000004,
+            5.9
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            7
+          ],
+          "b": [
+            2.9000000000000004,
+            7.800000000000001
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            0.2,
+            7.800000000000001
+          ],
+          "b": [
+            2.9000000000000004,
+            7.800000000000001
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            0.2,
+            5.4
+          ],
+          "b": [
+            0.2,
+            7.800000000000001
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1,
+          "floor": 0,
+          "height": 2.84
+        },
+        {
+          "a": [
+            0.2,
+            0.2
+          ],
+          "b": [
+            2.9000000000000004,
+            0.2
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            0.2
+          ],
+          "b": [
+            2.9000000000000004,
+            0.8
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            1.9000000000000001
+          ],
+          "b": [
+            2.9000000000000004,
+            2.6
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            0.2,
+            2.6
+          ],
+          "b": [
+            2.9000000000000004,
+            2.6
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            0.2,
+            0.2
+          ],
+          "b": [
+            0.2,
+            2.6
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 2,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            0.2,
+            5.4
+          ],
+          "b": [
+            2.9000000000000004,
+            5.4
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            5.4
+          ],
+          "b": [
+            2.9000000000000004,
+            5.9
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            2.9000000000000004,
+            7
+          ],
+          "b": [
+            2.9000000000000004,
+            7.800000000000001
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            0.2,
+            7.800000000000001
+          ],
+          "b": [
+            2.9000000000000004,
+            7.800000000000001
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 3,
+          "height": 2.6
+        },
+        {
+          "a": [
+            0.2,
+            5.4
+          ],
+          "b": [
+            0.2,
+            7.800000000000001
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 3,
+          "floor": 3,
+          "height": 2.6
+        }
+      ],
+      "audit": {
+        "id": "CP1",
+        "name": "二階建てカプセル棟",
+        "cells": 1,
+        "generation": 11,
+        "kind": "transportable",
+        "classification": "moving",
+        "poses": {
+          "A": {
+            "x": 67.2,
+            "y": 12.8,
+            "z": 16.8,
+            "angle": 0
+          },
+          "B": {
+            "x": 75.6,
+            "y": 12.8,
+            "z": 16.8,
+            "angle": 0
+          },
+          "C": {
+            "x": 67.2,
+            "y": 12.8,
+            "z": 16.8,
+            "angle": 0
+          }
+        },
+        "transitions": {
+          "A": {
+            "to": "B",
+            "distance": 21.2,
+            "horizontal": 8.4,
+            "vertical": 12.8,
+            "rotation": 0,
+            "dockDisplacement": 8.4,
+            "legs": [
+              {
+                "stage": 0,
+                "from": {
+                  "x": 67.2,
+                  "y": 12.8,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.800000000000001,
+                  "z": 16.8
+                },
+                "duration": 2
+              },
+              {
+                "stage": 1,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.800000000000001,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.5,
+                  "z": 16.8
+                },
+                "duration": 0.10000000000000009
+              },
+              {
+                "stage": 2,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.5,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.033333333333333215
+              },
+              {
+                "stage": 3,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.60000000000001,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.10000000000000009
+              },
+              {
+                "stage": 4,
+                "from": {
+                  "x": 67.60000000000001,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 69.2,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.3999999999999999
+              },
+              {
+                "stage": 5,
+                "from": {
+                  "x": 69.2,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 72.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.7999999999999989
+              },
+              {
+                "stage": 6,
+                "from": {
+                  "x": 72.4,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 73.2,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.20000000000000107
+              },
+              {
+                "stage": 7,
+                "from": {
+                  "x": 73.2,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 73.8,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.1499999999999999
+              },
+              {
+                "stage": 8,
+                "from": {
+                  "x": 73.8,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.2,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.34999999999999964
+              },
+              {
+                "stage": 9,
+                "from": {
+                  "x": 75.2,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.09999999999999787
+              },
+              {
+                "stage": 10,
+                "from": {
+                  "x": 75.6,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 6.500000000000008,
+                  "z": 16.8
+                },
+                "duration": 0.03333333333333588
+              },
+              {
+                "stage": 11,
+                "from": {
+                  "x": 75.6,
+                  "y": 6.500000000000008,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 6.700000000000005,
+                  "z": 16.8
+                },
+                "duration": 0.06666666666666554
+              },
+              {
+                "stage": 12,
+                "from": {
+                  "x": 75.6,
+                  "y": 6.700000000000005,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 7.200000000000008,
+                  "z": 16.8
+                },
+                "duration": 0.16666666666666785
+              },
+              {
+                "stage": 13,
+                "from": {
+                  "x": 75.6,
+                  "y": 7.200000000000008,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 10.600000000000007,
+                  "z": 16.8
+                },
+                "duration": 1.1333333333333329
+              },
+              {
+                "stage": 14,
+                "from": {
+                  "x": 75.6,
+                  "y": 10.600000000000007,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 10.900000000000011,
+                  "z": 16.8
+                },
+                "duration": 0.10000000000000142
+              },
+              {
+                "stage": 15,
+                "from": {
+                  "x": 75.6,
+                  "y": 10.900000000000011,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 12.100000000000007,
+                  "z": 16.8
+                },
+                "duration": 0.3999999999999986
+              },
+              {
+                "stage": 16,
+                "from": {
+                  "x": 75.6,
+                  "y": 12.100000000000007,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 12.250000000000007,
+                  "z": 16.8
+                },
+                "duration": 0.04999999999999982
+              },
+              {
+                "stage": 17,
+                "from": {
+                  "x": 75.6,
+                  "y": 12.250000000000007,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 12.600000000000009,
+                  "z": 16.8
+                },
+                "duration": 0.11666666666666714
+              },
+              {
+                "stage": 18,
+                "from": {
+                  "x": 75.6,
+                  "y": 12.600000000000009,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 12.70000000000001,
+                  "z": 16.8
+                },
+                "duration": 0.0333333333333341
+              },
+              {
+                "stage": 19,
+                "from": {
+                  "x": 75.6,
+                  "y": 12.70000000000001,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 12.8,
+                  "z": 16.8
+                },
+                "duration": 0.03333333333332966
+              }
+            ]
+          },
+          "B": {
+            "to": "C",
+            "distance": 21.2,
+            "horizontal": 8.4,
+            "vertical": 12.8,
+            "rotation": 0,
+            "dockDisplacement": 8.4,
+            "legs": [
+              {
+                "stage": 0,
+                "from": {
+                  "x": 75.6,
+                  "y": 12.8,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 2.1333333333333333
+              },
+              {
+                "stage": 1,
+                "from": {
+                  "x": 75.6,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 75.19999999999999,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.10000000000000009
+              },
+              {
+                "stage": 2,
+                "from": {
+                  "x": 75.19999999999999,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 70.39999999999999,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 1.1999999999999993
+              },
+              {
+                "stage": 3,
+                "from": {
+                  "x": 70.39999999999999,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 69.6,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.20000000000000062
+              },
+              {
+                "stage": 4,
+                "from": {
+                  "x": 69.6,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 69,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.1499999999999999
+              },
+              {
+                "stage": 5,
+                "from": {
+                  "x": 69,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.6,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.34999999999999964
+              },
+              {
+                "stage": 6,
+                "from": {
+                  "x": 67.6,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "duration": 0.09999999999999787
+              },
+              {
+                "stage": 7,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.500000000000008,
+                  "z": 16.8
+                },
+                "duration": 0.03333333333333588
+              },
+              {
+                "stage": 8,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.500000000000008,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.700000000000007,
+                  "z": 16.8
+                },
+                "duration": 0.06666666666666643
+              },
+              {
+                "stage": 9,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.700000000000007,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 7.200000000000008,
+                  "z": 16.8
+                },
+                "duration": 0.16666666666666696
+              },
+              {
+                "stage": 10,
+                "from": {
+                  "x": 67.2,
+                  "y": 7.200000000000008,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 7.750000000000009,
+                  "z": 16.8
+                },
+                "duration": 0.18333333333333357
+              },
+              {
+                "stage": 11,
+                "from": {
+                  "x": 67.2,
+                  "y": 7.750000000000009,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 10.900000000000011,
+                  "z": 16.8
+                },
+                "duration": 1.0500000000000007
+              },
+              {
+                "stage": 12,
+                "from": {
+                  "x": 67.2,
+                  "y": 10.900000000000011,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 12.700000000000005,
+                  "z": 16.8
+                },
+                "duration": 0.5999999999999979
+              },
+              {
+                "stage": 13,
+                "from": {
+                  "x": 67.2,
+                  "y": 12.700000000000005,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 12.8,
+                  "z": 16.8
+                },
+                "duration": 0.03333333333333144
+              }
+            ]
+          },
+          "C": {
+            "to": "A",
+            "distance": 0,
+            "horizontal": 0,
+            "vertical": 0,
+            "rotation": 0,
+            "dockDisplacement": 0,
+            "legs": []
+          }
+        },
+        "moved": true,
+        "dockMoved": true,
+        "purpose": "内部二層のカプセル棟。RH1と別々に搬送し上階の乗員も保持",
+        "connections": {
+          "A": [
+            {
+              "body": "RH1",
+              "port": "entry",
+              "otherPort": "capsule",
+              "width": 2
+            }
+          ],
+          "B": [
+            {
+              "body": "RH1",
+              "port": "entry",
+              "otherPort": "capsule",
+              "width": 2
+            }
+          ],
+          "C": [
+            {
+              "body": "RH1",
+              "port": "entry",
+              "otherPort": "capsule",
+              "width": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MK1",
+      "name": "小商店通り・三店舗と折れた共用廊下",
+      "generation": 11,
+      "use": "commerce",
+      "zone": "commerce",
+      "color": "#c2ad88",
+      "cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "ceiling": 2.8,
+      "ports": [
+        {
+          "id": "north",
+          "face": "N",
+          "a": 0.3,
+          "b": 1.9,
+          "height": 2.5,
+          "role": "boundary-connector"
+        }
+      ],
+      "walls": [
+        {
+          "a": [
+            2.6,
+            0.3
+          ],
+          "b": [
+            2.6,
+            2.7
+          ],
+          "role": "room-fixed",
+          "height": 2.3
+        },
+        {
+          "a": [
+            2.6,
+            0.3
+          ],
+          "b": [
+            5.8,
+            0.3
+          ],
+          "role": "room-fixed",
+          "height": 2.3
+        },
+        {
+          "a": [
+            5.8,
+            0.3
+          ],
+          "b": [
+            5.8,
+            2.7
+          ],
+          "role": "room-fixed",
+          "height": 2.3
+        },
+        {
+          "a": [
+            0.3,
+            5.3
+          ],
+          "b": [
+            1.3,
+            5.3
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            2.4,
+            5.3
+          ],
+          "b": [
+            3.4,
+            5.3
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            3.4,
+            5.3
+          ],
+          "b": [
+            3.4,
+            7.8
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            3.6,
+            5.3
+          ],
+          "b": [
+            3.6,
+            7.7
+          ],
+          "role": "room-fixed",
+          "height": 2.3
+        },
+        {
+          "a": [
+            5.8,
+            5.3
+          ],
+          "b": [
+            5.8,
+            7.7
+          ],
+          "role": "room-fixed",
+          "height": 2.3
+        }
+      ],
+      "doors": [
+        {
+          "id": "MK1-room",
+          "a": [
+            1.3,
+            5.3
+          ],
+          "b": [
+            2.4,
+            5.3
+          ],
+          "label": "小店舗・室内へ",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": 90,
+          "open": false
+        }
+      ],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 2.8,
+          "z": 2.25,
+          "w": 2.8,
+          "d": 0.4,
+          "h": 0.9,
+          "color": "wood"
+        },
+        {
+          "x": 3.8,
+          "z": 5.3,
+          "w": 1.8,
+          "d": 0.4,
+          "h": 0.9,
+          "color": "wood"
+        },
+        {
+          "x": 0.5,
+          "z": 7,
+          "w": 1.5,
+          "d": 0.5,
+          "h": 0.8,
+          "color": "wood"
+        },
+        {
+          "x": 2.8,
+          "z": 0.5,
+          "w": 2.8,
+          "d": 0.35,
+          "h": 0.8,
+          "color": "wood"
+        },
+        {
+          "x": 3.8,
+          "z": 7.2,
+          "w": 1.8,
+          "d": 0.35,
+          "h": 0.8,
+          "color": "wood"
+        }
+      ],
+      "privateRooms": [],
+      "labels": [
+        {
+          "name": "カウンター店",
+          "x": 4.2,
+          "z": 1.5
+        },
+        {
+          "name": "室内店舗",
+          "x": 1.7,
+          "z": 6.6
+        },
+        {
+          "name": "小売台",
+          "x": 4.7,
+          "z": 6.5
+        },
+        {
+          "name": "商店通り",
+          "x": 4,
+          "z": 4
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.8
+        }
+      ],
+      "mobility": {
+        "generation": 11,
+        "kind": "transportable",
+        "purpose": "一チャンク三店舗・東西廊下と南北枝。Bでは住宅棟と別々に東へ搬送"
+      },
+      "partitionRepairs": [],
+      "audit": {
+        "id": "MK1",
+        "name": "小商店通り・三店舗と折れた共用廊下",
+        "cells": 1,
+        "generation": 11,
+        "kind": "transportable",
+        "classification": "moving",
+        "poses": {
+          "A": {
+            "x": 50.4,
+            "y": 12.8,
+            "z": 25.2,
+            "angle": 0
+          },
+          "B": {
+            "x": 58.8,
+            "y": 12.8,
+            "z": 25.2,
+            "angle": 0
+          },
+          "C": {
+            "x": 50.4,
+            "y": 12.8,
+            "z": 25.2,
+            "angle": 0
+          }
+        },
+        "transitions": {
+          "A": {
+            "to": "B",
+            "distance": 21.2,
+            "horizontal": 8.4,
+            "vertical": 12.8,
+            "rotation": 0,
+            "dockDisplacement": 8.4,
+            "legs": [
+              {
+                "stage": 0,
+                "from": {
+                  "x": 50.4,
+                  "y": 12.8,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 6.800000000000001,
+                  "z": 25.2
+                },
+                "duration": 2
+              },
+              {
+                "stage": 1,
+                "from": {
+                  "x": 50.4,
+                  "y": 6.800000000000001,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 6.5,
+                  "z": 25.2
+                },
+                "duration": 0.10000000000000009
+              },
+              {
+                "stage": 2,
+                "from": {
+                  "x": 50.4,
+                  "y": 6.5,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.033333333333333215
+              },
+              {
+                "stage": 3,
+                "from": {
+                  "x": 50.4,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.8,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.10000000000000009
+              },
+              {
+                "stage": 4,
+                "from": {
+                  "x": 50.8,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 52.4,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.3999999999999999
+              },
+              {
+                "stage": 5,
+                "from": {
+                  "x": 52.4,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 55.599999999999994,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.7999999999999989
+              },
+              {
+                "stage": 6,
+                "from": {
+                  "x": 55.599999999999994,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 56.4,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.20000000000000107
+              },
+              {
+                "stage": 7,
+                "from": {
+                  "x": 56.4,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 57,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.1499999999999999
+              },
+              {
+                "stage": 8,
+                "from": {
+                  "x": 57,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.4,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.34999999999999964
+              },
+              {
+                "stage": 9,
+                "from": {
+                  "x": 58.4,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.09999999999999787
+              },
+              {
+                "stage": 10,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.500000000000003,
+                  "z": 25.2
+                },
+                "duration": 0.03333333333333588
+              },
+              {
+                "stage": 11,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.500000000000003,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.699999999999999,
+                  "z": 25.2
+                },
+                "duration": 0.06666666666666554
+              },
+              {
+                "stage": 12,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.699999999999999,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 7.200000000000003,
+                  "z": 25.2
+                },
+                "duration": 0.16666666666666785
+              },
+              {
+                "stage": 13,
+                "from": {
+                  "x": 58.8,
+                  "y": 7.200000000000003,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 10.600000000000001,
+                  "z": 25.2
+                },
+                "duration": 1.1333333333333329
+              },
+              {
+                "stage": 14,
+                "from": {
+                  "x": 58.8,
+                  "y": 10.600000000000001,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 10.900000000000006,
+                  "z": 25.2
+                },
+                "duration": 0.10000000000000142
+              },
+              {
+                "stage": 15,
+                "from": {
+                  "x": 58.8,
+                  "y": 10.900000000000006,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.100000000000001,
+                  "z": 25.2
+                },
+                "duration": 0.3999999999999986
+              },
+              {
+                "stage": 16,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.100000000000001,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.250000000000002,
+                  "z": 25.2
+                },
+                "duration": 0.04999999999999982
+              },
+              {
+                "stage": 17,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.250000000000002,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.600000000000003,
+                  "z": 25.2
+                },
+                "duration": 0.11666666666666714
+              },
+              {
+                "stage": 18,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.600000000000003,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.700000000000005,
+                  "z": 25.2
+                },
+                "duration": 0.0333333333333341
+              },
+              {
+                "stage": 19,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.700000000000005,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.8,
+                  "z": 25.2
+                },
+                "duration": 0.03333333333332966
+              }
+            ]
+          },
+          "B": {
+            "to": "C",
+            "distance": 21.2,
+            "horizontal": 8.4,
+            "vertical": 12.8,
+            "rotation": 0,
+            "dockDisplacement": 8.4,
+            "legs": [
+              {
+                "stage": 0,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.8,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 2.1333333333333333
+              },
+              {
+                "stage": 1,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 58.4,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.10000000000000009
+              },
+              {
+                "stage": 2,
+                "from": {
+                  "x": 58.4,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 53.6,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 1.1999999999999993
+              },
+              {
+                "stage": 3,
+                "from": {
+                  "x": 53.6,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 52.8,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.20000000000000062
+              },
+              {
+                "stage": 4,
+                "from": {
+                  "x": 52.8,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 52.199999999999996,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.1499999999999999
+              },
+              {
+                "stage": 5,
+                "from": {
+                  "x": 52.199999999999996,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.8,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.34999999999999964
+              },
+              {
+                "stage": 6,
+                "from": {
+                  "x": 50.8,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "duration": 0.09999999999999787
+              },
+              {
+                "stage": 7,
+                "from": {
+                  "x": 50.4,
+                  "y": 6.4,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 6.500000000000003,
+                  "z": 25.2
+                },
+                "duration": 0.03333333333333588
+              },
+              {
+                "stage": 8,
+                "from": {
+                  "x": 50.4,
+                  "y": 6.500000000000003,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 6.700000000000002,
+                  "z": 25.2
+                },
+                "duration": 0.06666666666666643
+              },
+              {
+                "stage": 9,
+                "from": {
+                  "x": 50.4,
+                  "y": 6.700000000000002,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 7.200000000000003,
+                  "z": 25.2
+                },
+                "duration": 0.16666666666666696
+              },
+              {
+                "stage": 10,
+                "from": {
+                  "x": 50.4,
+                  "y": 7.200000000000003,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 7.7500000000000036,
+                  "z": 25.2
+                },
+                "duration": 0.18333333333333357
+              },
+              {
+                "stage": 11,
+                "from": {
+                  "x": 50.4,
+                  "y": 7.7500000000000036,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 10.900000000000006,
+                  "z": 25.2
+                },
+                "duration": 1.0500000000000007
+              },
+              {
+                "stage": 12,
+                "from": {
+                  "x": 50.4,
+                  "y": 10.900000000000006,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 12.7,
+                  "z": 25.2
+                },
+                "duration": 0.5999999999999979
+              },
+              {
+                "stage": 13,
+                "from": {
+                  "x": 50.4,
+                  "y": 12.7,
+                  "z": 25.2
+                },
+                "to": {
+                  "x": 50.4,
+                  "y": 12.8,
+                  "z": 25.2
+                },
+                "duration": 0.03333333333333144
+              }
+            ]
+          },
+          "C": {
+            "to": "A",
+            "distance": 0,
+            "horizontal": 0,
+            "vertical": 0,
+            "rotation": 0,
+            "dockDisplacement": 0,
+            "legs": []
+          }
+        },
+        "moved": true,
+        "dockMoved": true,
+        "purpose": "一チャンク三店舗・東西廊下と南北枝。Bでは住宅棟と別々に東へ搬送",
+        "connections": {
+          "A": [
+            {
+              "body": "RH1",
+              "port": "north",
+              "otherPort": "shops",
+              "width": 1.6
+            }
+          ],
+          "B": [
+            {
+              "body": "RH1",
+              "port": "north",
+              "otherPort": "shops",
+              "width": 1.6
+            }
+          ],
+          "C": [
+            {
+              "body": "RH1",
+              "port": "north",
+              "otherPort": "shops",
+              "width": 1.6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SH1",
+      "name": "共有街路・西半と店舗",
+      "generation": 11,
+      "use": "commerce",
+      "zone": "commerce",
+      "color": "#c2ad88",
+      "cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "ceiling": 2.8,
+      "ports": [
+        {
+          "id": "shared",
+          "face": "E",
+          "a": 0.8,
+          "b": 7.4,
+          "height": 2.5,
+          "role": "boundary-connector"
+        },
+        {
+          "id": "end",
+          "face": "S",
+          "a": 6.1,
+          "b": 7.7,
+          "height": 2.5,
+          "role": "boundary-connector"
+        },
+        {
+          "id": "entry",
+          "face": "W",
+          "a": 2.1,
+          "b": 4.1,
+          "height": 2.5,
+          "role": "boundary-connector"
+        }
+      ],
+      "walls": [
+        {
+          "a": [
+            5.8,
+            0.6
+          ],
+          "b": [
+            5.8,
+            1.9
+          ],
+          "role": "room-fixed",
+          "height": 2.35
+        },
+        {
+          "a": [
+            5.8,
+            4.3
+          ],
+          "b": [
+            5.8,
+            5.3
+          ],
+          "role": "room-fixed",
+          "height": 2.35
+        }
+      ],
+      "doors": [],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 4.9,
+          "z": 0.8,
+          "w": 0.65,
+          "d": 0.8,
+          "h": 0.9,
+          "color": "wood"
+        },
+        {
+          "x": 4.9,
+          "z": 4.5,
+          "w": 0.65,
+          "d": 0.7,
+          "h": 0.9,
+          "color": "wood"
+        }
+      ],
+      "privateRooms": [],
+      "labels": [
+        {
+          "name": "西半・片寄せ廊下",
+          "x": 6.9,
+          "z": 4
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.8
+        }
+      ],
+      "sharedHalf": true,
+      "mobility": {
+        "generation": 11,
+        "kind": "transportable",
+        "purpose": "共有街路の西半。商業区の二経路を維持する可動設備の待機"
+      },
+      "partitionRepairs": [],
+      "audit": {
+        "id": "SH1",
+        "name": "共有街路・西半と店舗",
+        "cells": 1,
+        "generation": 11,
+        "kind": "transportable",
+        "classification": "waiting",
+        "poses": {
+          "A": {
+            "x": 58.8,
+            "y": 0,
+            "z": 11.8,
+            "angle": 0
+          },
+          "B": {
+            "x": 58.8,
+            "y": 0,
+            "z": 11.8,
+            "angle": 0
+          },
+          "C": {
+            "x": 58.8,
+            "y": 0,
+            "z": 11.8,
+            "angle": 0
+          }
+        },
+        "transitions": {
+          "A": {
+            "to": "B",
+            "distance": 0,
+            "horizontal": 0,
+            "vertical": 0,
+            "rotation": 0,
+            "dockDisplacement": 0,
+            "legs": []
+          },
+          "B": {
+            "to": "C",
+            "distance": 0,
+            "horizontal": 0,
+            "vertical": 0,
+            "rotation": 0,
+            "dockDisplacement": 0,
+            "legs": []
+          },
+          "C": {
+            "to": "A",
+            "distance": 0,
+            "horizontal": 0,
+            "vertical": 0,
+            "rotation": 0,
+            "dockDisplacement": 0,
+            "legs": []
+          }
+        },
+        "moved": false,
+        "dockMoved": false,
+        "purpose": "共有街路の西半。商業区の二経路を維持する可動設備の待機",
+        "connections": {
+          "A": [
+            {
+              "body": "U4",
+              "port": "entry",
+              "otherPort": "market",
+              "width": 2
+            },
+            {
+              "body": "SH2",
+              "port": "shared",
+              "otherPort": "shared",
+              "width": 5.6
+            }
+          ],
+          "B": [
+            {
+              "body": "U4",
+              "port": "entry",
+              "otherPort": "market",
+              "width": 2
+            }
+          ],
+          "C": [
+            {
+              "body": "U4",
+              "port": "entry",
+              "otherPort": "market",
+              "width": 2
+            },
+            {
+              "body": "SH2",
+              "port": "shared",
+              "otherPort": "shared",
+              "width": 5.6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SH2",
+      "name": "共有街路・東半と店舗",
+      "generation": 11,
+      "use": "commerce",
+      "zone": "commerce",
+      "color": "#c2ad88",
+      "cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "ceiling": 2.8,
+      "ports": [
+        {
+          "id": "shared",
+          "face": "W",
+          "a": 0.8,
+          "b": 7.4,
+          "height": 2.5,
+          "role": "boundary-connector"
+        },
+        {
+          "id": "end",
+          "face": "S",
+          "a": 0.3,
+          "b": 1.9,
+          "height": 2.5,
+          "role": "boundary-connector"
+        },
+        {
+          "id": "north",
+          "face": "N",
+          "a": 0.3,
+          "b": 1.9,
+          "height": 2.5,
+          "role": "boundary-connector"
+        },
+        {
+          "id": "lab",
+          "face": "E",
+          "a": 5.5,
+          "b": 7.5,
+          "height": 2.5,
+          "role": "boundary-connector"
+        }
+      ],
+      "walls": [
+        {
+          "a": [
+            2.2,
+            0.9
+          ],
+          "b": [
+            2.2,
+            5.3
+          ],
+          "role": "room-fixed",
+          "height": 2.35
+        },
+        {
+          "a": [
+            2.2,
+            0.9
+          ],
+          "b": [
+            7.6,
+            0.9
+          ],
+          "role": "room-fixed",
+          "height": 2.35
+        }
+      ],
+      "doors": [],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 2.45,
+          "z": 1.2,
+          "w": 0.65,
+          "d": 3.8,
+          "h": 0.9,
+          "color": "wood"
+        },
+        {
+          "x": 6.7,
+          "z": 1.3,
+          "w": 0.5,
+          "d": 3.5,
+          "h": 0.75,
+          "color": "wood"
+        }
+      ],
+      "privateRooms": [],
+      "labels": [
+        {
+          "name": "東半・片寄せ廊下",
+          "x": 1.1,
+          "z": 4
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.8
+        }
+      ],
+      "sharedHalf": true,
+      "mobility": {
+        "generation": 11,
+        "kind": "transportable",
+        "purpose": "共有街路の東半。Bで第三層へ独立搬送して住宅群へ接続"
+      },
+      "partitionRepairs": [],
+      "audit": {
+        "id": "SH2",
+        "name": "共有街路・東半と店舗",
+        "cells": 1,
+        "generation": 11,
+        "kind": "transportable",
+        "classification": "moving",
+        "poses": {
+          "A": {
+            "x": 67.2,
+            "y": 0,
+            "z": 10.8,
+            "angle": 0
+          },
+          "B": {
+            "x": 58.8,
+            "y": 12.8,
+            "z": 8.4,
+            "angle": 0
+          },
+          "C": {
+            "x": 67.2,
+            "y": 0,
+            "z": 10.8,
+            "angle": 0
+          }
+        },
+        "transitions": {
+          "A": {
+            "to": "B",
+            "distance": 23.6,
+            "horizontal": 10.8,
+            "vertical": 12.8,
+            "rotation": 0,
+            "dockDisplacement": 15.4971,
+            "legs": [
+              {
+                "stage": 43,
+                "from": {
+                  "x": 67.2,
+                  "y": 0,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 0.3999999999999986,
+                  "z": 10.8
+                },
+                "duration": 0.13333333333333286
+              },
+              {
+                "stage": 44,
+                "from": {
+                  "x": 67.2,
+                  "y": 0.3999999999999986,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 0.4999999999999982,
+                  "z": 10.8
+                },
+                "duration": 0.033333333333333215
+              },
+              {
+                "stage": 45,
+                "from": {
+                  "x": 67.2,
+                  "y": 0.4999999999999982,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 0.6999999999999975,
+                  "z": 10.8
+                },
+                "duration": 0.06666666666666643
+              },
+              {
+                "stage": 46,
+                "from": {
+                  "x": 67.2,
+                  "y": 0.6999999999999975,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 1.3000000000000007,
+                  "z": 10.8
+                },
+                "duration": 0.20000000000000107
+              },
+              {
+                "stage": 47,
+                "from": {
+                  "x": 67.2,
+                  "y": 1.3000000000000007,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 1.4000000000000004,
+                  "z": 10.8
+                },
+                "duration": 0.033333333333333215
+              },
+              {
+                "stage": 48,
+                "from": {
+                  "x": 67.2,
+                  "y": 1.4000000000000004,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 1.5,
+                  "z": 10.8
+                },
+                "duration": 0.033333333333333215
+              },
+              {
+                "stage": 49,
+                "from": {
+                  "x": 67.2,
+                  "y": 1.5,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 2.5999999999999908,
+                  "z": 10.8
+                },
+                "duration": 0.3666666666666636
+              },
+              {
+                "stage": 50,
+                "from": {
+                  "x": 67.2,
+                  "y": 2.5999999999999908,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "duration": 1.2666666666666693
+              },
+              {
+                "stage": 51,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 10.000000000000004
+                },
+                "duration": 0.1999999999999993
+              },
+              {
+                "stage": 52,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 10.000000000000004
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 9.866666666666664
+                },
+                "duration": 0.03333333333333499
+              },
+              {
+                "stage": 53,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 9.866666666666664
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 9.066666666666666
+                },
+                "duration": 0.1999999999999993
+              },
+              {
+                "stage": 54,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 9.066666666666666
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 8.8
+                },
+                "duration": 0.06666666666666643
+              },
+              {
+                "stage": 55,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 8.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "duration": 0.09999999999999964
+              },
+              {
+                "stage": 56,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 61.199999999999996,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "duration": 1.5000000000000018
+              },
+              {
+                "stage": 57,
+                "from": {
+                  "x": 61.199999999999996,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 61.00000000000001,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "duration": 0.04999999999999716
+              },
+              {
+                "stage": 58,
+                "from": {
+                  "x": 61.00000000000001,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 60.26666666666667,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "duration": 0.18333333333333357
+              },
+              {
+                "stage": 59,
+                "from": {
+                  "x": 60.26666666666667,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 59.20000000000001,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "duration": 0.2666666666666657
+              },
+              {
+                "stage": 60,
+                "from": {
+                  "x": 59.20000000000001,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 59.06666666666667,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "duration": 0.03333333333333499
+              },
+              {
+                "stage": 61,
+                "from": {
+                  "x": 59.06666666666667,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "duration": 0.06666666666666998
+              },
+              {
+                "stage": 62,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.899999999999993,
+                  "z": 8.4
+                },
+                "duration": 0.1666666666666643
+              },
+              {
+                "stage": 63,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.899999999999993,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 8.799999999999992,
+                  "z": 8.4
+                },
+                "duration": 0.6333333333333329
+              },
+              {
+                "stage": 64,
+                "from": {
+                  "x": 58.8,
+                  "y": 8.799999999999992,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 10.999999999999995,
+                  "z": 8.4
+                },
+                "duration": 0.7333333333333343
+              },
+              {
+                "stage": 65,
+                "from": {
+                  "x": 58.8,
+                  "y": 10.999999999999995,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.249999999999988,
+                  "z": 8.4
+                },
+                "duration": 0.4166666666666643
+              },
+              {
+                "stage": 66,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.249999999999988,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.8,
+                  "z": 8.4
+                },
+                "duration": 0.18333333333333712
+              }
+            ]
+          },
+          "B": {
+            "to": "C",
+            "distance": 23.6,
+            "horizontal": 10.8,
+            "vertical": 12.8,
+            "rotation": 0,
+            "dockDisplacement": 15.4971,
+            "legs": [
+              {
+                "stage": 43,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.8,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 12.400000000000002,
+                  "z": 8.4
+                },
+                "duration": 0.13333333333333286
+              },
+              {
+                "stage": 44,
+                "from": {
+                  "x": 58.8,
+                  "y": 12.400000000000002,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 11.3,
+                  "z": 8.4
+                },
+                "duration": 0.36666666666666714
+              },
+              {
+                "stage": 45,
+                "from": {
+                  "x": 58.8,
+                  "y": 11.3,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 11.050000000000004,
+                  "z": 8.4
+                },
+                "duration": 0.08333333333333215
+              },
+              {
+                "stage": 46,
+                "from": {
+                  "x": 58.8,
+                  "y": 11.050000000000004,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 10.900000000000002,
+                  "z": 8.4
+                },
+                "duration": 0.05000000000000071
+              },
+              {
+                "stage": 47,
+                "from": {
+                  "x": 58.8,
+                  "y": 10.900000000000002,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 10.30000000000001,
+                  "z": 8.4
+                },
+                "duration": 0.1999999999999975
+              },
+              {
+                "stage": 48,
+                "from": {
+                  "x": 58.8,
+                  "y": 10.30000000000001,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 10.2,
+                  "z": 8.4
+                },
+                "duration": 0.03333333333333677
+              },
+              {
+                "stage": 49,
+                "from": {
+                  "x": 58.8,
+                  "y": 10.2,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 9.900000000000006,
+                  "z": 8.4
+                },
+                "duration": 0.09999999999999787
+              },
+              {
+                "stage": 50,
+                "from": {
+                  "x": 58.8,
+                  "y": 9.900000000000006,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 9.400000000000002,
+                  "z": 8.4
+                },
+                "duration": 0.16666666666666785
+              },
+              {
+                "stage": 51,
+                "from": {
+                  "x": 58.8,
+                  "y": 9.400000000000002,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 8.70000000000001,
+                  "z": 8.4
+                },
+                "duration": 0.23333333333333073
+              },
+              {
+                "stage": 52,
+                "from": {
+                  "x": 58.8,
+                  "y": 8.70000000000001,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 7.5000000000000036,
+                  "z": 8.4
+                },
+                "duration": 0.40000000000000213
+              },
+              {
+                "stage": 53,
+                "from": {
+                  "x": 58.8,
+                  "y": 7.5000000000000036,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "duration": 0.36666666666666714
+              },
+              {
+                "stage": 54,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 8.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 8.799999999999999
+                },
+                "duration": 0.09999999999999964
+              },
+              {
+                "stage": 55,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 8.799999999999999
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 9.000000000000002
+                },
+                "duration": 0.05000000000000071
+              },
+              {
+                "stage": 56,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 9.000000000000002
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 10.4
+                },
+                "duration": 0.34999999999999964
+              },
+              {
+                "stage": 57,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 10.4
+                },
+                "to": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "duration": 0.09999999999999964
+              },
+              {
+                "stage": 58,
+                "from": {
+                  "x": 58.8,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 58.93333333333334,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "duration": 0.03333333333333499
+              },
+              {
+                "stage": 59,
+                "from": {
+                  "x": 58.93333333333334,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 59.20000000000001,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "duration": 0.0666666666666682
+              },
+              {
+                "stage": 60,
+                "from": {
+                  "x": 59.20000000000001,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 59.73333333333332,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "duration": 0.13333333333332753
+              },
+              {
+                "stage": 61,
+                "from": {
+                  "x": 59.73333333333332,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 59.86666666666667,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "duration": 0.03333333333333677
+              },
+              {
+                "stage": 62,
+                "from": {
+                  "x": 59.86666666666667,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 60.26666666666666,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "duration": 0.09999999999999787
+              },
+              {
+                "stage": 63,
+                "from": {
+                  "x": 60.26666666666666,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 60.8,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "duration": 0.13333333333333464
+              },
+              {
+                "stage": 64,
+                "from": {
+                  "x": 60.8,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 65.33333333333334,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "duration": 1.1333333333333346
+              },
+              {
+                "stage": 65,
+                "from": {
+                  "x": 65.33333333333334,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 66.80000000000001,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "duration": 0.36666666666666714
+              },
+              {
+                "stage": 66,
+                "from": {
+                  "x": 66.80000000000001,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "duration": 0.10000000000000142
+              },
+              {
+                "stage": 67,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 6.099999999999996,
+                  "z": 10.8
+                },
+                "duration": 0.10000000000000142
+              },
+              {
+                "stage": 68,
+                "from": {
+                  "x": 67.2,
+                  "y": 6.099999999999996,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 5.600000000000003,
+                  "z": 10.8
+                },
+                "duration": 0.1666666666666643
+              },
+              {
+                "stage": 69,
+                "from": {
+                  "x": 67.2,
+                  "y": 5.600000000000003,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 5.500000000000009,
+                  "z": 10.8
+                },
+                "duration": 0.03333333333333144
+              },
+              {
+                "stage": 70,
+                "from": {
+                  "x": 67.2,
+                  "y": 5.500000000000009,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 5.30000000000002,
+                  "z": 10.8
+                },
+                "duration": 0.06666666666666288
+              },
+              {
+                "stage": 71,
+                "from": {
+                  "x": 67.2,
+                  "y": 5.30000000000002,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 4.800000000000006,
+                  "z": 10.8
+                },
+                "duration": 0.1666666666666714
+              },
+              {
+                "stage": 72,
+                "from": {
+                  "x": 67.2,
+                  "y": 4.800000000000006,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 0.30000000000000604,
+                  "z": 10.8
+                },
+                "duration": 1.5
+              },
+              {
+                "stage": 73,
+                "from": {
+                  "x": 67.2,
+                  "y": 0.30000000000000604,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 0.10000000000000675,
+                  "z": 10.8
+                },
+                "duration": 0.06666666666666643
+              },
+              {
+                "stage": 74,
+                "from": {
+                  "x": 67.2,
+                  "y": 0.10000000000000675,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 67.2,
+                  "y": 0,
+                  "z": 10.8
+                },
+                "duration": 0.03333333333333499
+              }
+            ]
+          },
+          "C": {
+            "to": "A",
+            "distance": 0,
+            "horizontal": 0,
+            "vertical": 0,
+            "rotation": 0,
+            "dockDisplacement": 0,
+            "legs": []
+          }
+        },
+        "moved": true,
+        "dockMoved": true,
+        "purpose": "共有街路の東半。Bで第三層へ独立搬送して住宅群へ接続",
+        "connections": {
+          "A": [
+            {
+              "body": "SH1",
+              "port": "shared",
+              "otherPort": "shared",
+              "width": 5.6
+            },
+            {
+              "body": "LB1",
+              "port": "lab",
+              "otherPort": "entry",
+              "width": 2
+            }
+          ],
+          "B": [
+            {
+              "body": "U2",
+              "port": "north",
+              "otherPort": "district",
+              "width": 1.6
+            },
+            {
+              "body": "RH1",
+              "port": "end",
+              "otherPort": "entry",
+              "width": 1.6
+            }
+          ],
+          "C": [
+            {
+              "body": "SH1",
+              "port": "shared",
+              "otherPort": "shared",
+              "width": 5.6
+            },
+            {
+              "body": "LB1",
+              "port": "lab",
+              "otherPort": "entry",
+              "width": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "LB1",
+      "name": "通り沿いの二連結研究所",
+      "generation": 11,
+      "use": "research",
+      "zone": "research",
+      "color": "#95aeb5",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "ceiling": 3.4,
+      "ports": [
+        {
+          "id": "entry",
+          "face": "W",
+          "a": 5.5,
+          "b": 7.5,
+          "height": 2.5,
+          "role": "boundary-connector",
+          "navInset": 0.55
+        }
+      ],
+      "walls": [
+        {
+          "a": [
+            1.2,
+            0
+          ],
+          "b": [
+            1.2,
+            5.5
+          ],
+          "role": "room-fixed",
+          "exterior": true
+        },
+        {
+          "a": [
+            1.2,
+            7.5
+          ],
+          "b": [
+            1.2,
+            8
+          ],
+          "role": "room-fixed",
+          "exterior": true
+        },
+        {
+          "a": [
+            1.2,
+            3.1
+          ],
+          "b": [
+            5.2,
+            3.1
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            6.3,
+            3.1
+          ],
+          "b": [
+            10.8,
+            3.1
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            11.9,
+            3.1
+          ],
+          "b": [
+            16,
+            3.1
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            10,
+            0
+          ],
+          "b": [
+            10,
+            3.1
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            3.2,
+            5.2
+          ],
+          "b": [
+            5.3,
+            5.2
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            6.4,
+            5.2
+          ],
+          "b": [
+            11.4,
+            5.2
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            12.5,
+            5.2
+          ],
+          "b": [
+            16,
+            5.2
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            10,
+            5.2
+          ],
+          "b": [
+            10,
+            8
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            3.2,
+            5.2
+          ],
+          "b": [
+            3.2,
+            8
+          ],
+          "role": "room-fixed"
+        }
+      ],
+      "doors": [
+        {
+          "id": "LB1-left",
+          "a": [
+            1.2,
+            5.5
+          ],
+          "b": [
+            1.2,
+            6.5
+          ],
+          "label": "研究所・二枚扉",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": -90,
+          "open": false,
+          "entrance": true
+        },
+        {
+          "id": "LB1-right",
+          "a": [
+            1.2,
+            6.5
+          ],
+          "b": [
+            1.2,
+            7.5
+          ],
+          "label": "研究所・二枚扉",
+          "kind": "hinge",
+          "hinge": "b",
+          "swing": 90,
+          "open": false,
+          "entrance": true
+        },
+        {
+          "id": "LB1-main",
+          "a": [
+            5.2,
+            3.1
+          ],
+          "b": [
+            6.3,
+            3.1
+          ],
+          "label": "主研究室",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": -90,
+          "open": false
+        },
+        {
+          "id": "LB1-small",
+          "a": [
+            10.8,
+            3.1
+          ],
+          "b": [
+            11.9,
+            3.1
+          ],
+          "label": "小実験室",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": -90,
+          "open": false
+        },
+        {
+          "id": "LB1-work",
+          "a": [
+            5.3,
+            5.2
+          ],
+          "b": [
+            6.4,
+            5.2
+          ],
+          "label": "分析室",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": 90,
+          "open": false
+        },
+        {
+          "id": "LB1-store",
+          "a": [
+            11.4,
+            5.2
+          ],
+          "b": [
+            12.5,
+            5.2
+          ],
+          "label": "保管室",
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": 90,
+          "open": false
+        }
+      ],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 3,
+          "z": 0.4,
+          "w": 3,
+          "d": 0.7,
+          "h": 0.9,
+          "color": "wood"
+        },
+        {
+          "x": 11,
+          "z": 0.4,
+          "w": 3,
+          "d": 0.7,
+          "h": 0.9,
+          "color": "wood"
+        },
+        {
+          "x": 7,
+          "z": 6.7,
+          "w": 2,
+          "d": 0.7,
+          "h": 0.9,
+          "color": "wood"
+        },
+        {
+          "x": 14,
+          "z": 6,
+          "w": 1,
+          "d": 1.5,
+          "h": 1.1,
+          "color": "wood"
+        }
+      ],
+      "privateRooms": [],
+      "labels": [
+        {
+          "name": "前室",
+          "x": 2.2,
+          "z": 6.5
+        },
+        {
+          "name": "主研究室",
+          "x": 6,
+          "z": 1.7
+        },
+        {
+          "name": "小実験室",
+          "x": 13,
+          "z": 1.7
+        },
+        {
+          "name": "分析室",
+          "x": 6,
+          "z": 6.6
+        },
+        {
+          "name": "保管室",
+          "x": 13,
+          "z": 6.6
+        },
+        {
+          "name": "研究所・内部廊下",
+          "x": 8,
+          "z": 4.2
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 16,
+          "d": 8,
+          "height": 3.4
+        }
+      ],
+      "loadedInterior": true,
+      "mobility": {
+        "generation": 11,
+        "kind": "transportable",
+        "purpose": "二連結研究所。Bでは東南へ運び入口を閉鎖し、Cで商店街へ再接続"
+      },
+      "partitionRepairs": [],
+      "audit": {
+        "id": "LB1",
+        "name": "通り沿いの二連結研究所",
+        "cells": 2,
+        "generation": 11,
+        "kind": "transportable",
+        "classification": "moving",
+        "poses": {
+          "A": {
+            "x": 75.6,
+            "y": 0,
+            "z": 10.8,
+            "angle": 0
+          },
+          "B": {
+            "x": 84,
+            "y": 0,
+            "z": 16.8,
+            "angle": 0
+          },
+          "C": {
+            "x": 75.6,
+            "y": 0,
+            "z": 10.8,
+            "angle": 0
+          }
+        },
+        "transitions": {
+          "A": {
+            "to": "B",
+            "distance": 27.2,
+            "horizontal": 14.4,
+            "vertical": 12.8,
+            "rotation": 0,
+            "dockDisplacement": 10.3228,
+            "legs": [
+              {
+                "stage": 0,
+                "from": {
+                  "x": 75.6,
+                  "y": 0,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -6,
+                  "z": 10.8
+                },
+                "duration": 2
+              },
+              {
+                "stage": 1,
+                "from": {
+                  "x": 75.6,
+                  "y": -6,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -6.300000000000001,
+                  "z": 10.8
+                },
+                "duration": 0.10000000000000009
+              },
+              {
+                "stage": 2,
+                "from": {
+                  "x": 75.6,
+                  "y": -6.300000000000001,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "duration": 0.033333333333333215
+              },
+              {
+                "stage": 3,
+                "from": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 11.200000000000001
+                },
+                "duration": 0.10000000000000009
+              },
+              {
+                "stage": 4,
+                "from": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 11.200000000000001
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 12.8
+                },
+                "duration": 0.3999999999999999
+              },
+              {
+                "stage": 5,
+                "from": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 12.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 15.999999999999996
+                },
+                "duration": 0.7999999999999989
+              },
+              {
+                "stage": 6,
+                "from": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 15.999999999999996
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "duration": 0.20000000000000107
+              },
+              {
+                "stage": 7,
+                "from": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 76.19999999999999,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "duration": 0.1499999999999999
+              },
+              {
+                "stage": 8,
+                "from": {
+                  "x": 76.19999999999999,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 77.6,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "duration": 0.34999999999999964
+              },
+              {
+                "stage": 9,
+                "from": {
+                  "x": 77.6,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 77.99999999999999,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "duration": 0.09999999999999787
+              },
+              {
+                "stage": 10,
+                "from": {
+                  "x": 77.99999999999999,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 78.13333333333333,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "duration": 0.03333333333333588
+              },
+              {
+                "stage": 11,
+                "from": {
+                  "x": 78.13333333333333,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 78.39999999999999,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "duration": 0.06666666666666554
+              },
+              {
+                "stage": 12,
+                "from": {
+                  "x": 78.39999999999999,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 79.06666666666666,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "duration": 0.16666666666666785
+              },
+              {
+                "stage": 13,
+                "from": {
+                  "x": 79.06666666666666,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 83.6,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "duration": 1.1333333333333329
+              },
+              {
+                "stage": 14,
+                "from": {
+                  "x": 83.6,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "duration": 0.10000000000000142
+              },
+              {
+                "stage": 15,
+                "from": {
+                  "x": 84,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": -5.200000000000005,
+                  "z": 16.8
+                },
+                "duration": 0.3999999999999986
+              },
+              {
+                "stage": 16,
+                "from": {
+                  "x": 84,
+                  "y": -5.200000000000005,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": -5.050000000000005,
+                  "z": 16.8
+                },
+                "duration": 0.04999999999999982
+              },
+              {
+                "stage": 17,
+                "from": {
+                  "x": 84,
+                  "y": -5.050000000000005,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": -4.700000000000004,
+                  "z": 16.8
+                },
+                "duration": 0.11666666666666714
+              },
+              {
+                "stage": 18,
+                "from": {
+                  "x": 84,
+                  "y": -4.700000000000004,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": -4.600000000000001,
+                  "z": 16.8
+                },
+                "duration": 0.0333333333333341
+              },
+              {
+                "stage": 19,
+                "from": {
+                  "x": 84,
+                  "y": -4.600000000000001,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": -4.500000000000012,
+                  "z": 16.8
+                },
+                "duration": 0.03333333333332966
+              },
+              {
+                "stage": 20,
+                "from": {
+                  "x": 84,
+                  "y": -4.500000000000012,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": -4.400000000000002,
+                  "z": 16.8
+                },
+                "duration": 0.03333333333333677
+              },
+              {
+                "stage": 21,
+                "from": {
+                  "x": 84,
+                  "y": -4.400000000000002,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": -4.300000000000008,
+                  "z": 16.8
+                },
+                "duration": 0.03333333333333144
+              },
+              {
+                "stage": 22,
+                "from": {
+                  "x": 84,
+                  "y": -4.300000000000008,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": -3.7000000000000046,
+                  "z": 16.8
+                },
+                "duration": 0.20000000000000107
+              },
+              {
+                "stage": 23,
+                "from": {
+                  "x": 84,
+                  "y": -3.7000000000000046,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": -2.8000000000000074,
+                  "z": 16.8
+                },
+                "duration": 0.29999999999999893
+              },
+              {
+                "stage": 24,
+                "from": {
+                  "x": 84,
+                  "y": -2.8000000000000074,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": 0,
+                  "z": 16.8
+                },
+                "duration": 0.9333333333333353
+              }
+            ]
+          },
+          "B": {
+            "to": "C",
+            "distance": 27.2,
+            "horizontal": 14.4,
+            "vertical": 12.8,
+            "rotation": 0,
+            "dockDisplacement": 10.3228,
+            "legs": [
+              {
+                "stage": 0,
+                "from": {
+                  "x": 84,
+                  "y": 0,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "duration": 2.1333333333333333
+              },
+              {
+                "stage": 1,
+                "from": {
+                  "x": 84,
+                  "y": -6.4,
+                  "z": 16.8
+                },
+                "to": {
+                  "x": 84,
+                  "y": -6.4,
+                  "z": 16.4
+                },
+                "duration": 0.10000000000000009
+              },
+              {
+                "stage": 2,
+                "from": {
+                  "x": 84,
+                  "y": -6.4,
+                  "z": 16.4
+                },
+                "to": {
+                  "x": 84,
+                  "y": -6.4,
+                  "z": 11.600000000000003
+                },
+                "duration": 1.1999999999999993
+              },
+              {
+                "stage": 3,
+                "from": {
+                  "x": 84,
+                  "y": -6.4,
+                  "z": 11.600000000000003
+                },
+                "to": {
+                  "x": 84,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "duration": 0.20000000000000062
+              },
+              {
+                "stage": 4,
+                "from": {
+                  "x": 84,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 83.4,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "duration": 0.1499999999999999
+              },
+              {
+                "stage": 5,
+                "from": {
+                  "x": 83.4,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 82,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "duration": 0.34999999999999964
+              },
+              {
+                "stage": 6,
+                "from": {
+                  "x": 82,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 81.60000000000001,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "duration": 0.09999999999999787
+              },
+              {
+                "stage": 7,
+                "from": {
+                  "x": 81.60000000000001,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 81.46666666666667,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "duration": 0.03333333333333588
+              },
+              {
+                "stage": 8,
+                "from": {
+                  "x": 81.46666666666667,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 81.2,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "duration": 0.06666666666666643
+              },
+              {
+                "stage": 9,
+                "from": {
+                  "x": 81.2,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 80.53333333333333,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "duration": 0.16666666666666696
+              },
+              {
+                "stage": 10,
+                "from": {
+                  "x": 80.53333333333333,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 79.8,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "duration": 0.18333333333333357
+              },
+              {
+                "stage": 11,
+                "from": {
+                  "x": 79.8,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "duration": 1.0500000000000007
+              },
+              {
+                "stage": 12,
+                "from": {
+                  "x": 75.6,
+                  "y": -6.4,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -4.600000000000007,
+                  "z": 10.8
+                },
+                "duration": 0.5999999999999979
+              },
+              {
+                "stage": 13,
+                "from": {
+                  "x": 75.6,
+                  "y": -4.600000000000007,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -4.500000000000012,
+                  "z": 10.8
+                },
+                "duration": 0.03333333333333144
+              },
+              {
+                "stage": 14,
+                "from": {
+                  "x": 75.6,
+                  "y": -4.500000000000012,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -4.300000000000004,
+                  "z": 10.8
+                },
+                "duration": 0.0666666666666691
+              },
+              {
+                "stage": 15,
+                "from": {
+                  "x": 75.6,
+                  "y": -4.300000000000004,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -4.100000000000003,
+                  "z": 10.8
+                },
+                "duration": 0.06666666666666732
+              },
+              {
+                "stage": 16,
+                "from": {
+                  "x": 75.6,
+                  "y": -4.100000000000003,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -3.7000000000000046,
+                  "z": 10.8
+                },
+                "duration": 0.13333333333333286
+              },
+              {
+                "stage": 17,
+                "from": {
+                  "x": 75.6,
+                  "y": -3.7000000000000046,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -2.800000000000005,
+                  "z": 10.8
+                },
+                "duration": 0.2999999999999998
+              },
+              {
+                "stage": 18,
+                "from": {
+                  "x": 75.6,
+                  "y": -2.800000000000005,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -2.600000000000003,
+                  "z": 10.8
+                },
+                "duration": 0.06666666666666732
+              },
+              {
+                "stage": 19,
+                "from": {
+                  "x": 75.6,
+                  "y": -2.600000000000003,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -2.2000000000000046,
+                  "z": 10.8
+                },
+                "duration": 0.13333333333333286
+              },
+              {
+                "stage": 20,
+                "from": {
+                  "x": 75.6,
+                  "y": -2.2000000000000046,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": -0.7000000000000046,
+                  "z": 10.8
+                },
+                "duration": 0.5
+              },
+              {
+                "stage": 21,
+                "from": {
+                  "x": 75.6,
+                  "y": -0.7000000000000046,
+                  "z": 10.8
+                },
+                "to": {
+                  "x": 75.6,
+                  "y": 0,
+                  "z": 10.8
+                },
+                "duration": 0.23333333333333428
+              }
+            ]
+          },
+          "C": {
+            "to": "A",
+            "distance": 0,
+            "horizontal": 0,
+            "vertical": 0,
+            "rotation": 0,
+            "dockDisplacement": 0,
+            "legs": []
+          }
+        },
+        "moved": true,
+        "dockMoved": true,
+        "purpose": "二連結研究所。Bでは東南へ運び入口を閉鎖し、Cで商店街へ再接続",
+        "connections": {
+          "A": [
+            {
+              "body": "SH2",
+              "port": "entry",
+              "otherPort": "lab",
+              "width": 2
+            }
+          ],
+          "B": [],
+          "C": [
+            {
+              "body": "SH2",
+              "port": "entry",
+              "otherPort": "lab",
+              "width": 2
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "capsule": {
+    "floors": [
+      0,
+      3
+    ],
+    "stairs": {
+      "steps": 20,
+      "rise": 0.15,
+      "run": 0.27,
+      "width": 2.4
+    },
+    "slabs": [
+      {
+        "x": 0,
+        "z": 0,
+        "w": 5.4,
+        "d": 8
+      },
+      {
+        "x": 7.8,
+        "z": 0,
+        "w": 0.2,
+        "d": 8
+      },
+      {
+        "x": 5.4,
+        "z": 0,
+        "w": 2.4,
+        "d": 1.2
+      },
+      {
+        "x": 5.4,
+        "z": 6.6,
+        "w": 2.4,
+        "d": 1.4
+      }
+    ],
+    "outerHeight": 6
+  },
+  "lab": {
+    "scene": "separate and lazily built; global simulation still runs",
+    "width": 16,
+    "depth": 8,
+    "entryLocal": {
+      "x": 1.2,
+      "z": 6.5
+    },
+    "duration": 0.5,
+    "unconnectedPhase": "B",
+    "reconnect": "C",
+    "cpuValidated": true,
+    "webglVerified": false
+  },
+  "shared": {
+    "pair": [
+      "SH1",
+      "SH2"
+    ],
+    "joined": [
+      "A",
+      "C"
+    ],
+    "separate": [
+      "B"
+    ],
+    "bodyGap": 0.4,
+    "halfNominalWidth": 2.2,
+    "separatedClearApprox": 1.9,
+    "commonLength": 5.6,
+    "shutterBeforeMotion": true
+  }
+}

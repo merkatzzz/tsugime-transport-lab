@@ -2,3 +2,6 @@ const distance=(p,l)=>{const dx=l.b[0]-l.a[0],dz=l.b[1]-l.a[1],t=Math.max(0,Math
 export function doorLeaf(d,t){if(d.kind!=='hinge')return{a:d.a,b:d.b};const a=d.hinge==='b'?d.b:d.a,end=d.hinge==='b'?d.a:d.b,dx=end[0]-a[0],dz=end[1]-a[1],angle=d.swing*Math.PI/180*t,c=Math.cos(angle),s=Math.sin(angle);return{a,b:[a[0]+c*dx-s*dz,a[1]+s*dx+c*dz]};}
 // Exact distance to the circular sector swept by a hinged zero-width leaf.
 export function doorSweepDistance(d,p,from=0,to=1){if(d.kind!=='hinge')return distance(p,d);const start=doorLeaf(d,0),dx=start.b[0]-start.a[0],dz=start.b[1]-start.a[1],px=p.x-start.a[0],pz=p.z-start.a[1],angle=Math.atan2(dx*pz-dz*px,dx*px+dz*pz),a=d.swing*Math.PI/180*from,b=d.swing*Math.PI/180*to;let best=Math.min(distance(p,doorLeaf(d,from)),distance(p,doorLeaf(d,to)));if(angle>=Math.min(a,b)-1e-9&&angle<=Math.max(a,b)+1e-9)best=Math.min(best,Math.max(0,Math.hypot(px,pz)-Math.hypot(dx,dz)));return best;}
+
+// A double entrance has two outer jambs, never a fixed post at the meeting edges.
+export function doorJambEnds(body,door){return[door.a,door.b].filter(end=>!door.entrance||!body.doors.some(other=>other!==door&&other.entrance&&[other.a,other.b].some(p=>Math.hypot(p[0]-end[0],p[1]-end[1])<1e-7)));}

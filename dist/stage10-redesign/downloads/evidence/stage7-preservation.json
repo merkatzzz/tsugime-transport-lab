@@ -1,0 +1,32 @@
+{
+  "base": "626e4cea2fa902f367e85ecfc4e0ea519f747705",
+  "tag": "stage6-frozen",
+  "github": "https://github.com/merkatzzz/tsugime-transport-lab",
+  "branch": "stage7-development",
+  "frozenSiteVersion": 10,
+  "source": {
+    "url": "downloads/stage6-frozen-source.zip",
+    "sha256": "d0ea064c1a4dae1a5bc9fbfabea734545dff506d1d49a9c15741ca31020416f5",
+    "bytes": 13155090,
+    "contains": "All git-tracked files at frozen commit, including prior snapshots, assets, docs, tests and .openai/hosting.json",
+    "exactTreeMatchedFiles": 1430
+  },
+  "build": {
+    "path": "/workspace/work/stage6-frozen-build.tar.gz",
+    "sha256": "19d10d9d2e6e1ff1faea2af227cfe93a0c111df2929fa956132adc4386e7b2bb",
+    "bytes": 25582299
+  },
+  "restore": {
+    "checkout": "/workspace/work/stage6-restore-check",
+    "tests": 106,
+    "passed": 106,
+    "failed": 0,
+    "preview": "relay could not open browser port 4173: timed out waiting for relay readiness",
+    "gpuVerified": false
+  },
+  "comparison": {
+    "route": "stage6/",
+    "compact": true,
+    "note": "Prior nested snapshots/downloads omitted from comparison copy; use tag or full ZIP for exact reconstruction."
+  }
+}

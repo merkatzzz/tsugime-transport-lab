@@ -1,0 +1,27 @@
+✔ districts are six explicitly registered small buildings, not a rigid district; old 1/2/3/4-cell forms and two NPCs remain (2.813985ms)
+✔ A/C shared street really joins, B east half joins housing while laboratory seals; no fourth phase or fixed relocation (654.087409ms)
+✔ residential hallway and all six numbered rooms are walkable using the animated real doors; closed walls stop walking (4479.794781ms)
+✔ one-cell marketplace supports an open counter, room shop, stall and real transverse corridors (531.412919ms)
+✔ both shared halves remain independently walkable in B; A shared floor supports an actual cross-boundary walk (182.616902ms)
+✔ shared-half passengers survive two full split/rejoin cycles; boundary closes before any motion and transport gap remains .4m (2701.253333ms)
+✔ a passenger standing on the shared seam walks away before closure; no coordinate rescue is used (487.604211ms)
+✔ capsule has twenty real stairs, upper support, rails and no fourth facility floor; ascent and descent use normal movement (112.404257ms)
+✔ upper capsule visits use the reused 3D model, correct local camera/floor, save and exact return to the original upper door (1986.196577ms)
+✔ upper capsule rider keeps relative height through real ABC motion and save/load on every phase (306.395752ms)
+✔ double-door transition loads a bounded freely walkable laboratory with four inner rooms, real animated doors and no outside walk-through (860.302057ms)
+✔ laboratory resident stays aboard in B, cannot exit sealed/moving entry, saves locally, reconnects C and exits at the current entrance (214.464141ms)
+✔ real generated meshes remain within the 6m transport envelope; laboratory renders a separate lazily built scene of the same 16×8m building (1302.283246ms)
+✔ new movers have real validated routes, 18 supported configurations and intentional SH1 wait; no new target is omitted (1094.267605ms)
+✔ separated shared boundary really occludes eye rays while the joined street has no central wall (1662.32112ms)
+✔ independent laboratory scene has no coplanar same-normal overlaps; exterior transition backing prevents an unloaded-space view (2483.818562ms)
+✔ district graph connections are backed by actual walks from existing U2/U4 corridors in each phase, not just adjacent floor plans (4739.915463ms)
+✔ an upper stairwell edge is an internal supported floor, not a detachable external seam; stair and rail-side riders do not deadlock transport (344.108352ms)
+✔ HTML controls and module initialization work with explicitly unavailable WebGL (36625.631982ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 63373.969403

@@ -1,19 +1,20 @@
 {
-  "stage": 9,
-  "bodies": 47,
-  "cells": 64,
+  "stage": 11,
+  "bodies": 53,
+  "cells": 72,
   "levels": [
     0,
     12.8,
     -12.8
   ],
+  "profiles": 18,
   "allProfilesPassed": true,
   "adopted": [
     {
       "ok": true,
-      "stages": 70,
-      "checks": 60679,
-      "maxConcurrent": 13,
+      "stages": 76,
+      "checks": 83362,
+      "maxConcurrent": 17,
       "duration": 29.866666666666664,
       "clearance": 0.2,
       "area": 8316.16,
@@ -25,9 +26,9 @@
     },
     {
       "ok": true,
-      "stages": 109,
-      "checks": 80729,
-      "maxConcurrent": 12,
+      "stages": 115,
+      "checks": 105657,
+      "maxConcurrent": 15,
       "duration": 40.86666666666667,
       "clearance": 0.2,
       "area": 8316.16,
@@ -40,7 +41,7 @@
     {
       "ok": true,
       "stages": 33,
-      "checks": 18099,
+      "checks": 20389,
       "maxConcurrent": 8,
       "duration": 17.333333333333332,
       "clearance": 0.2,
@@ -57,5 +58,5 @@
     "blocker": "sites-preview: relay could not open browser port 4173: timed out waiting for relay readiness",
     "audioHeard": false
   },
-  "checks": "CPU real meshes, body controller routes, camera head visibility, continuous swept boxes. GPU and audible output unverified."
+  "checks": "Actual Three.js geometry, CPU controller, continuous swept transport, stairs, loaded scene bounds; no GPU/FPS/audio listening claim."
 }

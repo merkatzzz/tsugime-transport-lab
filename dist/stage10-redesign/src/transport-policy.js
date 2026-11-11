@@ -1,0 +1,1 @@
+export const TRANSPORT_POLICY={version:'stage8-near-storage-rotation-1',qStorage:{x:0,y:-6.4,z:25.2},nearRotationOffsets:[[0,0],[0,2],[2,2],[-2,2],[0,8.4],[8.4,8.4]],fallbackRotation:{x:75.6,z:25.2},verticalFallback:{x:84,z:0}};

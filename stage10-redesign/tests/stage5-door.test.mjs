@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {BY_ID} from '../dist/src/architecture.js';
+import {Simulation} from '../dist/src/simulation.js';
+for(const x of[4,4.2,4.3])test('held forward resumes through opening door from x='+x,()=>{const s=new Simulation(),p=s.positions.R1,doorZ=BY_ID.R1.doors[0].a[1];s.player={...s.player,x:p.x+x,y:p.y,z:p.z+doorZ+1.4,yaw:Math.PI};s.interact();for(let i=0;i<180;i++){s.walk(1,0,1/60);s.tick(1/60);}assert.equal(s.doors['R1-door'],true);assert.ok(s.player.z<p.z+doorZ-.5,JSON.stringify(s.player));});
+for(const angle of[-.12,.12])test('held oblique approach remains blocked when closed and resumes after opening '+angle,()=>{const s=new Simulation(),p=s.positions.R1,doorZ=BY_ID.R1.doors[0].a[1];s.player={...s.player,x:p.x+4,y:p.y,z:p.z+doorZ+1.4,yaw:Math.PI+angle};for(let i=0;i<30;i++)s.walk(1,0,1/60);assert.ok(s.player.z>p.z+doorZ+.39);s.interact();for(let i=0;i<90;i++){s.walk(1,0,1/60);s.tick(1/60);}assert.equal(s.doors['R1-door'],true);assert.ok(s.player.z<p.z+doorZ-.5,JSON.stringify(s.player));});

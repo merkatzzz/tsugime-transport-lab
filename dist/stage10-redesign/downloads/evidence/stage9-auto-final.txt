@@ -1,0 +1,15 @@
+✔ automatic operation repeats cycles without duplicate transfers (3654.51806ms)
+✔ J1 occupant follows collision-checked evacuation route rather than preventing B to C (189.948929ms)
+✔ exception flag applies only to the named component (1.184593ms)
+✔ stationary EV occupant does not stop the automatic facility schedule (45.232034ms)
+✔ no physical escape route produces an explicit safe error and never warps coordinates (61.212085ms)
+✔ an exception in the current room cannot authorise entry into another unflagged closing component (64.815379ms)
+✔ isolated spare can request real two-leg reconnection without a long idle wait or a debug warp (75.964165ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4224.180696

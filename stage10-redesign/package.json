@@ -1,0 +1,25 @@
+{
+  "name": "tsugime-architecture-transport-lab",
+  "version": "10.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "precompute": "node scripts/precompute-stage8.mjs",
+    "audit": "node scripts/audit-transport.mjs",
+    "benchmark:diagnostics": "node scripts/benchmark-diagnostics.mjs",
+    "verify": "node scripts/verify-stage10-redesign.mjs",
+    "start": "python3 -m http.server 8000 --directory dist",
+    "test:stage1": "node --test stage1/tests/*.test.mjs",
+    "evidence": "node scripts/export-stage9.mjs",
+    "package": "python3 scripts/package.py",
+    "test:stage8": "node --test stage8/tests/*.test.mjs",
+    "test:stage7": "node --test stage7/tests/*.test.mjs",
+    "test:stage6": "node --test stage6/tests/*.test.mjs",
+    "test:stage5": "node --test stage5/tests/*.test.mjs",
+    "test:stage4": "node --test stage4/tests/*.test.mjs",
+    "check:seams": "node scripts/check-seams.mjs",
+    "test:stage3": "node --test stage3/tests/*.test.mjs",
+    "test:stage2": "node --test stage2/tests/*.test.mjs"
+  }
+}

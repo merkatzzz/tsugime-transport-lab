@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "rows": [
+    {
+      "name": "plans",
+      "exit": 0
+    },
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "surfaces",
+      "exit": 0
+    },
+    {
+      "name": "doors",
+      "exit": 0
+    },
+    {
+      "name": "walks",
+      "exit": 0
+    },
+    {
+      "name": "evidence",
+      "exit": 0
+    }
+  ],
+  "testCounts": {"total": 200, "passed": 200, "failed": 0},
+  "baselineRestore": {"total": 182, "passed": 182, "failed": 0},
+  "zipRestore": {"total": 19, "passed": 19, "failed": 0},
+  "browserVerified": false
+}

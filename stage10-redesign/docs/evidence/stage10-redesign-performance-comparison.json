@@ -1,0 +1,223 @@
+{
+  "updates": {
+    "before": {
+      "adapters": {
+        "calls": 1483,
+        "regenerated": 11,
+        "ms": 14.387803000014173
+      },
+      "joints": {
+        "calls": 1483,
+        "regenerated": 31,
+        "ms": 17.10218800002258
+      }
+    },
+    "after": {
+      "adapters": {
+        "calls": 1492,
+        "regenerated": 11,
+        "ms": 13.813957000014852
+      },
+      "joints": {
+        "calls": 1492,
+        "regenerated": 31,
+        "ms": 19.741606000050524
+      }
+    },
+    "staticBefore": {
+      "adapterBuilt": 73,
+      "jointBuilt": 96,
+      "surfacePasses": 6,
+      "surfaceCachedStates": 6,
+      "surfaceRestores": 22
+    },
+    "staticAfter": {
+      "adapterBuilt": 75,
+      "jointBuilt": 100,
+      "surfacePasses": 6,
+      "surfaceCachedStates": 6,
+      "surfaceRestores": 22
+    }
+  },
+  "kind": "CPU-only; no WebGL, FPS or heard audio",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "viewport": [
+      1280,
+      720
+    ],
+    "transportSpeed": 8,
+    "dt": 0.1,
+    "cycles": 3
+  },
+  "buildMs": {
+    "before": 692.1114630000011,
+    "after": 676.8422369999989
+  },
+  "coldPlanning": [
+    {
+      "phase": "A",
+      "beforeMs": 944.9357970000001,
+      "afterMs": 1134.332492
+    },
+    {
+      "phase": "B",
+      "beforeMs": 1977.426254,
+      "afterMs": 2318.9925279999998
+    },
+    {
+      "phase": "C",
+      "beforeMs": 103.7068360000003,
+      "afterMs": 222.83775800000012
+    }
+  ],
+  "rows": [
+    {
+      "name": "explore:normal-exploration",
+      "label": "通常探索",
+      "before": {
+        "mean": 1.543468274999941,
+        "max": 9.147903000000952,
+        "p95": 2.38543799999934,
+        "p99": 6.681666000000405,
+        "geometryDisposals": 0
+      },
+      "after": {
+        "mean": 1.736237225000059,
+        "max": 8.650445999999647,
+        "p95": 3.3930309999996098,
+        "p99": 6.066826000000219,
+        "geometryDisposals": 0
+      }
+    },
+    {
+      "name": "explore:large-body-movement",
+      "label": "大型搬送中",
+      "before": {
+        "mean": 2.7783558859648525,
+        "max": 118.3912479999999,
+        "p95": 8.061555000000226,
+        "p99": 9.828403999999864,
+        "geometryDisposals": 10
+      },
+      "after": {
+        "mean": 1.783245862903113,
+        "max": 14.98892799999885,
+        "p95": 8.021683999999368,
+        "p99": 8.621750999998767,
+        "geometryDisposals": 0
+      }
+    },
+    {
+      "name": "explore:rotation",
+      "label": "回転中",
+      "before": {
+        "mean": 2.5468918125000073,
+        "max": 12.761243000000832,
+        "p95": 8.445397999999841,
+        "p99": 8.625989000000118,
+        "geometryDisposals": 0
+      },
+      "after": {
+        "mean": 2.751171821428865,
+        "max": 11.135325000001103,
+        "p95": 8.365396000001056,
+        "p99": 10.762323000000833,
+        "geometryDisposals": 0
+      }
+    },
+    {
+      "name": "explore:shutter-closing",
+      "label": "シャッター閉鎖・切替",
+      "before": {
+        "mean": 6.49291333333323,
+        "max": 174.16084299999966,
+        "p95": 9.916698999999426,
+        "p99": 13.046854999998686,
+        "geometryDisposals": 6
+      },
+      "after": {
+        "mean": 7.106964309523825,
+        "max": 208.19921299999987,
+        "p95": 9.030209999998988,
+        "p99": 10.143130000000383,
+        "geometryDisposals": 3
+      }
+    },
+    {
+      "name": "explore:simultaneous-movement",
+      "label": "同時搬送中",
+      "before": {
+        "mean": 1.9521673000000495,
+        "max": 11.230216999998447,
+        "p95": 8.707476999999926,
+        "p99": 9.116970999999467,
+        "geometryDisposals": 0
+      },
+      "after": {
+        "mean": 2.42895278947349,
+        "max": 15.9056070000006,
+        "p95": 8.566302999999607,
+        "p99": 9.766077999998743,
+        "geometryDisposals": 0
+      }
+    },
+    {
+      "name": "explore:just-arrived",
+      "label": "到着・開放時",
+      "before": {
+        "mean": 8.691561407407384,
+        "max": 194.07535199999984,
+        "p95": 11.356281000000308,
+        "p99": 162.24402100000043,
+        "geometryDisposals": 194
+      },
+      "after": {
+        "mean": 9.599120574074092,
+        "max": 186.93868900000052,
+        "p95": 12.825788000000102,
+        "p99": 179.94950299999982,
+        "geometryDisposals": 192
+      }
+    },
+    {
+      "name": "explore:after-three-cycles",
+      "label": "3周期後の安定時",
+      "before": {
+        "mean": 0.7726140499999474,
+        "max": 1.4011520000003657,
+        "p95": 1.2083219999985886,
+        "p99": 1.3295390000002953,
+        "geometryDisposals": 0
+      },
+      "after": {
+        "mean": 0.855520599999636,
+        "max": 1.807199999999284,
+        "p95": 1.4006569999983185,
+        "p99": 1.6549529999974766,
+        "geometryDisposals": 0
+      }
+    }
+  ],
+  "diagnostic": {
+    "kind": "CPU-only, renderer stub; no browser DOM layout/GPU/FPS",
+    "auditFirstOpenMs": 361.277873,
+    "tableAndDetailStringMs": 1.2520130000000336,
+    "htmlBytes": 12386,
+    "updatePolicy": "audit cached by experiment; table cached by phase; detail cached by selection; only moving-ID text updated each UI tick",
+    "off": {
+      "frames": 120,
+      "mean": 0.9483658166666676,
+      "p95": 1.621588999999858,
+      "max": 6.782941999999821
+    },
+    "on": {
+      "frames": 120,
+      "mean": 0.7509052249999665,
+      "p95": 1.2090140000000247,
+      "max": 1.8443169999995916
+    },
+    "overlays": 57
+  }
+}

@@ -9,9 +9,9 @@ export function compilePartitions(body){
  const walls=[...body.walls],repairs=[],outer=outerEdges(body.cells);
  for(const [room,r]of (body.privateRooms??[]).entries()){
   const edges=[{a:[r.x,r.z],b:[r.x+r.w,r.z]},{a:[r.x+r.w,r.z],b:[r.x+r.w,r.z+r.d]},{a:[r.x,r.z+r.d],b:[r.x+r.w,r.z+r.d]},{a:[r.x,r.z],b:[r.x,r.z+r.d]}];
-  for(const l of edges){const e=axisLine(l),cuts=[];for(const q of[...walls,...outer,...body.doors,...(r.openings??[])]){const v=axisLine(q);if(v&&v.axis===e.axis&&Math.abs(v.plane-e.plane)<eps)cuts.push([v.a,v.b]);}
-   for(const s of body.solids??[]){if(s.h<body.ceiling-eps)continue;const lo=e.axis===0?s.z:s.x,hi=lo+(e.axis===0?s.d:s.w);if(e.plane>=lo-eps&&e.plane<=hi+eps)cuts.push(e.axis===0?[s.x,s.x+s.w]:[s.z,s.z+s.d]);}
-   for(const[a,b]of subtract([e.a,e.b],cuts)){const aa=[...l.a],bb=[...l.b];aa[e.axis]=a;bb[e.axis]=b;const w={a:aa,b:bb,role:WALL_ROLE.ROOM,source:'room-envelope',room};walls.push(w);repairs.push(w);}
+  for(const l of edges){const e=axisLine(l),cuts=[];for(const q of[...walls,...outer,...body.doors,...(r.openings??[])]){if(!outer.includes(q)&&(q.floor??0)!==(r.floor??0))continue;const v=axisLine(q);if(v&&v.axis===e.axis&&Math.abs(v.plane-e.plane)<eps)cuts.push([v.a,v.b]);}
+   for(const s of body.solids??[]){if((s.floor??0)!==(r.floor??0))continue;if(s.h<body.ceiling-eps)continue;const lo=e.axis===0?s.z:s.x,hi=lo+(e.axis===0?s.d:s.w);if(e.plane>=lo-eps&&e.plane<=hi+eps)cuts.push(e.axis===0?[s.x,s.x+s.w]:[s.z,s.z+s.d]);}
+   for(const[a,b]of subtract([e.a,e.b],cuts)){const aa=[...l.a],bb=[...l.b];aa[e.axis]=a;bb[e.axis]=b;const w={a:aa,b:bb,role:WALL_ROLE.ROOM,source:'room-envelope',room,floor:r.floor??0,height:r.height??body.ceiling};walls.push(w);repairs.push(w);}
   }
  }
  body.walls=walls;body.partitionRepairs=repairs;return body;

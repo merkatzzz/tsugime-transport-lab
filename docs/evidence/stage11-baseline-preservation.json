@@ -1,0 +1,16 @@
+{
+  "tag": "stage10-redesign-frozen",
+  "commit": "1fb5db3e8e1b907efc69d34af028c67e4c488732",
+  "archive": "stage10-redesign-frozen-source.zip",
+  "sha256": "c62bb44bf47359c374409d62ced4ac7228567c7403afb58e297a4183b0220b8a",
+  "compactFiles": 295,
+  "restoreTests": {
+    "passed": 182,
+    "failed": 0
+  },
+  "siteVersion": 16,
+  "siteSourceCommit": "1fb5db3e8e1b907efc69d34af028c67e4c488732",
+  "buildInputPreservedOutsideGit": "/workspace/work/stage10-redesign-frozen-input-build.tar.gz",
+  "note": "The full archive contains all tracked baseline files. Compact comparison source omits recursive generated routes/download copies; the tag and full archive preserve them.",
+  "buildInputSha256": "7843098961ac31548ab96225444715bb8db0fa016812cb1680ce8193cdd8c423"
+}

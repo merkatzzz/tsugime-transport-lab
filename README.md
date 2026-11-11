@@ -1,3 +1,21 @@
+# 『継ぎ目の部屋』独立建築・搬送実験 — 第十一段階
+
+再開は `stage11-development`。53可動設備・72チャンク（実搬送32／待機21）、固定設備10。廊下沿い六室の二連結住宅、複合小店舗、一組の分離共有街路、内部二階建てカプセル棟、独立Sceneの自由探索研究所を追加。旧47体のABC完成座標と既存機構は維持しました。
+
+[設計・操作・復元・制約](docs/STAGE11.md) ／ [検証報告](docs/REPORT.md) ／ [CPU性能と測定限界](docs/PERFORMANCE-STAGE11.md) ／ [全53体の実経路・接続](docs/evidence/stage11-facility-audit.json)。独立実験であり本編ではありません。新NPC・アイテム・経済は追加していません。
+
+着手前の正本は `stage10-redesign-frozen` = `1fb5db3e8e1b907efc69d34af028c67e4c488732`。復元worktreeで旧182テスト通過。完全ZIPとSite16を残し、比較配信は `stage10-redesign/`。GitHub mainや旧開発ブランチは変更しません。
+
+Node 22+／Python 3、依存の追加インストール・ビルド不要。`npm test`、`npm start` で http://localhost:8000 。再生成は `npm run precompute` → `npm run evidence` → `npm run package`、配布チェックは `python3 scripts/check-package.py`。`npm run verify` は全テスト・18計画・面処理・扉・歩行・図面の一括検証で数分かかります。
+
+ZIPには正本ソースと比較元を含み、再生成可能な `dist/stage*/`・`dist/downloads/` を重複収録しません。再梱包時は旧完全ZIP6〜10/redesignも別ダウンロードして配置するか、保存タグのあるGit cloneを使います。起動・テストにはGitや旧ZIPは不要です。
+
+A/C：第三層U2南→RH1（六室）、東→CP1、南→MK1。CP1東側階段を北へ上ると内部+3m、201/202扉で既存モデルの構図試験。第二層U4東→SH1↔SH2→LB1研究所。二枚扉でE、内部はWASD/Shiftで探索。BはSH2が第三層の住宅入口へ移り、研究所は未接続で退出禁止。内部ボタンでCへ再接続してから入口へ戻ります。
+
+サイト： https://tsugime-architecture-transport-lab.merkatzzz.chatgpt.site （従来の所有者限定）。実WebGLと聴感は、管理プレビューの4173中継準備タイムアウトにより未確認です。CPUの実形状・移動・描画呼出先の検査を目視済みとは扱いません。
+
+以下は着手前までの履歴です。旧ブランチ・件数・性能・仕様は当時の情報です。
+
 # 『継ぎ目の部屋』独立建築・搬送実験 — 第十段階・搬送再設計版
 
 再開ブランチ：stage10-redesign。47可動設備・64チャンク、固定設備10。全体のABC設計と診断を集約し、J9/U2を搬送対象へ、P9をBで第一層へ移します。G1/M1のC配置、南の実退避、室内部分壁、水路断面、店舗高と店主の向きも修正しました。

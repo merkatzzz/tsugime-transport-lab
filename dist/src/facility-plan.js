@@ -1,12 +1,13 @@
+import {DISTRICT_PURPOSE,districtPlacements} from './stage11-layout.js';
 // Facility-wide phase design. Every body needs an explicit purpose, including deliberate waits.
 // A transportable body is not fixed hardware merely because its three docking poses coincide.
 const groups=[
  [1,['R1','R2','R3','R4','T1','T2','H1','L1']], [3,['J1','J2','J3','C0']],
  [4,['E1','E2','E3','E4']], [5,['H2','K1','K2','M1']],
  [6,['U1','U2','U3','U4','U5','N1','N2','N3','N4','S1','D1','D2','D3','D4']],
- [7,['V1','V2','V3','A3','Q1','W1']], [8,['G1','G2','G3','G4','G5']], [9,['J9','P9']]
+ [7,['V1','V2','V3','A3','Q1','W1']], [8,['G1','G2','G3','G4','G5']], [9,['J9','P9']], [11,['RH1','CP1','MK1','SH1','SH2','LB1']]
 ];
-const purpose={
+const purpose={...DISTRICT_PURPOSE,
  R1:'同じ住戸からの近道比較の基準として待機',R4:'第二層主EVの着床先と生活通路を維持',
  T1:'生活用品店と参照経路の目的地として待機',T2:'第二層店舗・東翼への接続を維持',
  J2:'C0挿入・撤収に対する分岐の基準点として待機',K1:'第一層主EVの着床先として待機',K2:'第一層探索水路・生活通路の基準点として待機',
@@ -30,9 +31,9 @@ export function redesignFacility(bodies){
 export function facilityPlacements(phase,p){
  if(phase==='B'){p.P9={x:58.8,y:-12.8,z:25.2};p.J9={x:50.4,y:-12.8,z:33.2};p.U2={x:58.8,y:12.8,z:0};}
  if(phase==='C'){p.G1={x:16.8,y:-12.8,z:0};p.M1={x:33.6,y:-12.8,z:0};}
- return p;
+ return districtPlacements(phase,p);
 }
-export const transitDeck=(id,start)=>['M1','V1','Q1','G1','G2','G3','G4','G5','J9','P9'].includes(id)?-6.4:id==='V3'&&start.y<0?-6.4:6.4;
+export const transitDeck=(id,start)=>['M1','V1','Q1','G1','G2','G3','G4','G5','J9','P9','LB1'].includes(id)?-6.4:id==='V3'&&start.y<0?-6.4:6.4;
 export function facilityJobs(from,to,e,initial,target){
  if(!({A:'B',B:'C',C:'A'}[from]===to))throw Error('Supported sequence is A→B→C→A');
  for(const id of Object.keys(target))if(!BODY_POLICY[id]?.purpose)throw Error(id+': 施設全体の設計方針なし');
@@ -53,6 +54,7 @@ export function facilityJobs(from,to,e,initial,target){
  }else{
   at('G1',{x:16.8,y:-6.4,z:8.4},'住宅と交流室の順序交換・近傍の空欄に退避');run(['M1','G1','L1','J3']);at('J1',{x:0,y:12.8,z:25.2},'南の空欄で通路交換');run(['R3','J1']);swap('E4','E2');
  }
+ if(from==='A')run(['CP1','RH1','MK1','SH2','LB1']);else if(from==='B')run(['RH1','CP1','MK1','SH2','LB1']);
  // Target coverage is automatic, not a list appended for each historical stage.
  // Newly added bodies still need policy and explicit phase design above.
  for(const id of Object.keys(target)){if(!BODY_POLICY[id]?.purpose)throw Error(id+': 施設全体の設計方針なし');add(id);}

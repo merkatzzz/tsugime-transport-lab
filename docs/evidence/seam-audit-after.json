@@ -2,7 +2,7 @@
   {
     "phase": "A",
     "doors": "closed",
-    "meshes": 1576,
+    "meshes": 1714,
     "sameNormal": 9,
     "floorContacts": [
       {
@@ -308,7 +308,7 @@
   {
     "phase": "A",
     "doors": "open",
-    "meshes": 1576,
+    "meshes": 1714,
     "sameNormal": 9,
     "floorContacts": [
       {
@@ -614,7 +614,7 @@
   {
     "phase": "B",
     "doors": "closed",
-    "meshes": 1534,
+    "meshes": 1686,
     "sameNormal": 6,
     "floorContacts": [
       {
@@ -821,7 +821,7 @@
   {
     "phase": "B",
     "doors": "open",
-    "meshes": 1534,
+    "meshes": 1686,
     "sameNormal": 6,
     "floorContacts": [
       {
@@ -1028,7 +1028,7 @@
   {
     "phase": "C",
     "doors": "closed",
-    "meshes": 1605,
+    "meshes": 1743,
     "sameNormal": 9,
     "floorContacts": [
       {
@@ -1334,7 +1334,7 @@
   {
     "phase": "C",
     "doors": "open",
-    "meshes": 1605,
+    "meshes": 1743,
     "sameNormal": 9,
     "floorContacts": [
       {

@@ -193,6 +193,142 @@
       "solidMin": 1.8000000000000043,
       "hinge": "a",
       "swing": -90
+    },
+    {
+      "body": "RH1",
+      "door": "RH1-101",
+      "wallMin": 0.10175000000000001,
+      "solidMin": 1.0470910553583894,
+      "hinge": "a",
+      "swing": -90
+    },
+    {
+      "body": "RH1",
+      "door": "RH1-104",
+      "wallMin": 0.10175000000000001,
+      "solidMin": 0.9426698215815494,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "RH1",
+      "door": "RH1-102",
+      "wallMin": 0.10175000000000001,
+      "solidMin": 1.0470910553583872,
+      "hinge": "a",
+      "swing": -90
+    },
+    {
+      "body": "RH1",
+      "door": "RH1-105",
+      "wallMin": 0.10175000000000001,
+      "solidMin": 0.9426698215815472,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "RH1",
+      "door": "RH1-103",
+      "wallMin": 0.10174999999999912,
+      "solidMin": 1.3999999999999861,
+      "hinge": "a",
+      "swing": -90
+    },
+    {
+      "body": "RH1",
+      "door": "RH1-106",
+      "wallMin": 0.10174999999999912,
+      "solidMin": 1.3999999999999861,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "MK1",
+      "door": "MK1-room",
+      "wallMin": 0.10250000000000004,
+      "solidMin": 0.6000000000000003,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "CP1",
+      "door": "CP1-101",
+      "wallMin": 0.10149999999999992,
+      "solidMin": 0.4500000000000006,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "CP1",
+      "door": "CP1-102",
+      "wallMin": 0.10125000000000028,
+      "solidMin": 0.45000000000000107,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "CP1",
+      "door": "CP1-201",
+      "wallMin": 0.10149999999999992,
+      "solidMin": 0.4500000000000006,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "CP1",
+      "door": "CP1-202",
+      "wallMin": 0.10125000000000028,
+      "solidMin": 0.45000000000000107,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "LB1",
+      "door": "LB1-left",
+      "wallMin": 0.11000000000000032,
+      "solidMin": 4.47213595499958,
+      "hinge": "a",
+      "swing": -90
+    },
+    {
+      "body": "LB1",
+      "door": "LB1-right",
+      "wallMin": 0.10125000000000028,
+      "solidMin": 4.80086200490927,
+      "hinge": "b",
+      "swing": 90
+    },
+    {
+      "body": "LB1",
+      "door": "LB1-main",
+      "wallMin": 0.10125000000000028,
+      "solidMin": 0.9000000000000004,
+      "hinge": "a",
+      "swing": -90
+    },
+    {
+      "body": "LB1",
+      "door": "LB1-small",
+      "wallMin": 0.10125000000000028,
+      "solidMin": 0.9099751242241783,
+      "hinge": "a",
+      "swing": -90
+    },
+    {
+      "body": "LB1",
+      "door": "LB1-work",
+      "wallMin": 0.10499999999999954,
+      "solidMin": 1.1671568097509262,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "LB1",
+      "door": "LB1-store",
+      "wallMin": 0.10500000000000043,
+      "solidMin": 1.6202941017470889,
+      "hinge": "a",
+      "swing": 90
     }
   ]
 }

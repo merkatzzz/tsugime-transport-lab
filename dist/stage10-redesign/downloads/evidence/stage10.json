@@ -1,0 +1,270 @@
+{
+  "stage": 10,
+  "water": [
+    {
+      "id": "W0",
+      "name": "北探索水路",
+      "x": 8.4,
+      "y": -12.8,
+      "z": -8.4,
+      "w": 48,
+      "d": 8,
+      "h": 6.2,
+      "tunnel": true,
+      "face": "S",
+      "a": 3,
+      "b": 5,
+      "height": 2.8
+    },
+    {
+      "id": "W2",
+      "name": "第二層 用水路",
+      "x": 75.6,
+      "y": 0,
+      "z": 33.6,
+      "w": 8,
+      "d": 8,
+      "h": 6,
+      "face": "W",
+      "a": 3,
+      "b": 5,
+      "height": 2.5
+    },
+    {
+      "id": "W3",
+      "name": "第三層 用水路",
+      "x": 16.8,
+      "y": 12.8,
+      "z": 33.6,
+      "w": 8,
+      "d": 8,
+      "h": 6,
+      "face": "W",
+      "a": 3,
+      "b": 5,
+      "height": 2.5
+    }
+  ],
+  "waterReservations": [
+    {
+      "id": "W0",
+      "min": [
+        8.4,
+        -14,
+        -8.4
+      ],
+      "max": [
+        56.4,
+        -6.6000000000000005,
+        -0.40000000000000036
+      ]
+    },
+    {
+      "id": "W2",
+      "min": [
+        75.6,
+        -0.85,
+        33.6
+      ],
+      "max": [
+        83.6,
+        6,
+        41.6
+      ]
+    },
+    {
+      "id": "W3",
+      "min": [
+        16.8,
+        11.950000000000001,
+        33.6
+      ],
+      "max": [
+        24.8,
+        18.8,
+        41.6
+      ]
+    }
+  ],
+  "deck": {
+    "before": {
+      "w": 134,
+      "d": 50
+    },
+    "current": {
+      "label": "拡張・一回り",
+      "w": 142.4,
+      "d": 58.4
+    },
+    "east": 8.4,
+    "south": 8.4,
+    "upperEmptyCells": [
+      {
+        "phase": "A",
+        "old": 94,
+        "current": 117
+      },
+      {
+        "phase": "B",
+        "old": 95,
+        "current": 118
+      },
+      {
+        "phase": "C",
+        "old": 94,
+        "current": 117
+      }
+    ]
+  },
+  "plans": [
+    {
+      "size": "same",
+      "method": "serial",
+      "from": "A",
+      "duration": 174.73333333333332,
+      "checks": 12733,
+      "ok": true
+    },
+    {
+      "size": "same",
+      "method": "serial",
+      "from": "B",
+      "duration": 230.79999999999987,
+      "checks": 15755,
+      "ok": true
+    },
+    {
+      "size": "same",
+      "method": "serial",
+      "from": "C",
+      "duration": 59.333333333333336,
+      "checks": 5971,
+      "ok": true
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "from": "A",
+      "duration": 29.866666666666664,
+      "checks": 52573,
+      "ok": true
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "from": "B",
+      "duration": 32.86666666666667,
+      "checks": 80352,
+      "ok": true
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "from": "C",
+      "duration": 17.333333333333332,
+      "checks": 10005,
+      "ok": true
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "from": "A",
+      "duration": 174.73333333333332,
+      "checks": 12733,
+      "ok": true
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "from": "B",
+      "duration": 235.3333333333332,
+      "checks": 16297,
+      "ok": true
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "from": "C",
+      "duration": 59.333333333333336,
+      "checks": 5971,
+      "ok": true
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "from": "A",
+      "duration": 29.866666666666664,
+      "checks": 52573,
+      "ok": true
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "from": "B",
+      "duration": 39.06666666666667,
+      "checks": 76484,
+      "ok": true
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "from": "C",
+      "duration": 17.333333333333332,
+      "checks": 10005,
+      "ok": true
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "from": "A",
+      "duration": 174.73333333333332,
+      "checks": 12733,
+      "ok": true
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "from": "B",
+      "duration": 235.3333333333332,
+      "checks": 16297,
+      "ok": true
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "from": "C",
+      "duration": 59.333333333333336,
+      "checks": 5971,
+      "ok": true
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "from": "A",
+      "duration": 29.866666666666664,
+      "checks": 52573,
+      "ok": true
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "from": "B",
+      "duration": 39.06666666666667,
+      "checks": 76484,
+      "ok": true
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "from": "C",
+      "duration": 17.333333333333332,
+      "checks": 10005,
+      "ok": true
+    }
+  ],
+  "preview": {
+    "verified": false,
+    "error": "relay could not open browser port 4173: timed out waiting for relay readiness"
+  },
+  "sourceTag": "stage9-frozen"
+}

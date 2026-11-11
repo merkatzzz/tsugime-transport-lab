@@ -2,9 +2,9 @@
   "ok": true,
   "assetSizeLimitBytes": 26214400,
   "oversizedFiles": 0,
-  "htmlPages": 22,
-  "localLinks": 588,
-  "moduleImports": 704,
-  "zipArchives": 16,
+  "htmlPages": 24,
+  "localLinks": 695,
+  "moduleImports": 868,
+  "zipArchives": 18,
   "gpuVerified": false
 }

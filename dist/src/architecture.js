@@ -1,3 +1,4 @@
+import {expandStage11} from './stage11-layout.js';
 import {compilePartitions} from './partitions.js';
 import {redesignFacility,facilityPlacements} from './facility-plan.js';
 import {WATER,waterPort,waterBoxes} from './water.js';
@@ -71,7 +72,7 @@ for(const id of ['E1','E3'])BODIES.find(b=>b.id===id).ports.push(port('S','S',4,
 BODIES.push({...structuredClone(BODIES.find(b=>b.id==='R4')),id:'K1',name:'第一層・小居室と前廊下',color:'#aa9d8d',doors:[{id:'K1-door',a:[2.8,2.9],b:[4,2.9],open:false,label:'第一層の小居室'}],labels:[room('第一層 小居室',5.4,1.5),room('EV前廊下',4,4.2)]});
 BODIES.push({...structuredClone(BODIES.find(b=>b.id==='J3')),id:'K2',name:'第一層・交差通路',color:'#a3b58d',labels:[room('第一層 分岐',4,4)]});
 BODIES.push({id:'M1',name:'上下搬送・小交流室',use:'common',color:'#bba58d',cells:[[0,0]],ceiling:3,ports:[port('W','W',3,5,2.5),port('N','N',3,5,2.5),port('E','E',3,5,2.5)],walls:[],doors:[],solids:[],furniture:[box(1,1,1.5,1,.5),box(6,6,1,1,.8)],labels:[room('上下搬送 M1',4,4)],roofAreas:[roof(0,0,8,8,3)]});
-extendBodies(BODIES);redesign(BODIES);repairResidentialWalls(BODIES);expandStage8(BODIES);expandStage9(BODIES);furnishShops(BODIES);redesignFacility(BODIES);BODIES.forEach(compilePartitions);
+extendBodies(BODIES);redesign(BODIES);repairResidentialWalls(BODIES);expandStage8(BODIES);expandStage9(BODIES);furnishShops(BODIES);expandStage11(BODIES);redesignFacility(BODIES);BODIES.forEach(compilePartitions);
 BODIES.find(b=>b.id==='P9').ports.push(port('water-east','E',11.6,14,2.5));
 BODIES.find(b=>b.id==='N3').ports.push(port('water-west','W',3,5,2.5));
 export const BY_ID=Object.fromEntries(BODIES.map(b=>[b.id,b]));
@@ -91,12 +92,12 @@ export function boundaryWalls(b){const walls=[];for(const edge of perimeter(b)){
 export function segmentDistance(x,z,a,b){const dx=b[0]-a[0],dz=b[1]-a[1],t=Math.max(0,Math.min(1,((x-a[0])*dx+(z-a[1])*dz)/(dx*dx+dz*dz||1)));return Math.hypot(x-a[0]-t*dx,z-a[1]-t*dz);}
 export const defaultDoors=()=>Object.fromEntries(BODIES.flatMap(b=>b.doors.map(d=>[d.id,d.open])));
 const localCollisionCache=new Map();
-export function localClear(b,x,z,doors=defaultDoors(),radius=RADIUS){if(!insideBody(b,x,z))return false;const key=b.id+b.doors.map(d=>doors[d.id]??d.open).join('');let colliders=localCollisionCache.get(key);if(!colliders){colliders={lines:[...boundaryWalls(b),...b.ports.flatMap(p=>portalJambs(b,p)),...b.walls,...b.doors.map(d=>doorLeaf(d,(doors[d.id]??d.open)?1:0))],solids:[...b.solids,...b.furniture]};localCollisionCache.set(key,colliders);}for(const l of colliders.lines)if(segmentDistance(x,z,l.a,l.b)<radius+.06-1e-7)return false;for(const s of colliders.solids)if(Math.hypot(Math.max(s.x-x,0,x-s.x-s.w),Math.max(s.z-z,0,z-s.z-s.d))<radius+.01)return false;return true;}
+export function localClear(b,x,z,doors=defaultDoors(),radius=RADIUS){if(!insideBody(b,x,z))return false;const key=b.id+b.doors.map(d=>doors[d.id]??d.open).join('');let colliders=localCollisionCache.get(key);if(!colliders){colliders={lines:[...boundaryWalls(b),...b.ports.flatMap(p=>portalJambs(b,p)),...b.walls.filter(l=>!(l.floor>0)),...b.doors.filter(d=>!(d.floor>0)).map(d=>doorLeaf(d,(doors[d.id]??d.open)?1:0))],solids:[...b.solids,...b.furniture].filter(s=>!(s.floor>0))};localCollisionCache.set(key,colliders);}for(const l of colliders.lines)if(segmentDistance(x,z,l.a,l.b)<radius+.06-1e-7)return false;for(const s of colliders.solids)if(Math.hypot(Math.max(s.x-x,0,x-s.x-s.w),Math.max(s.z-z,0,z-s.z-s.d))<radius+.01)return false;return true;}
 const navCache=new Map();
 export function localNavigation(b,doors=defaultDoors()){const key=b.id+b.doors.map(d=>doors[d.id]??d.open).join('');if(navCache.has(key))return navCache.get(key);const step=.25,f=footprint(b),nx=f.w/step,nz=f.d/step,labels=new Int16Array(nx*nz).fill(-1),free=new Uint8Array(nx*nz),components=[];for(let z=0;z<nz;z++)for(let x=0;x<nx;x++)free[z*nx+x]=localClear(b,(x+.5)*step,(z+.5)*step,doors)?1:0;
  for(let start=0;start<free.length;start++)if(free[start]&&labels[start]===-1){const id=components.length,q=[start];labels[start]=id;for(let h=0;h<q.length;h++){const k=q[h],x=k%nx,z=Math.floor(k/nx);for(const[xx,zz]of[[x-1,z],[x+1,z],[x,z-1],[x,z+1]]){const j=zz*nx+xx;if(xx>=0&&xx<nx&&zz>=0&&zz<nz&&free[j]&&labels[j]===-1){labels[j]=id;q.push(j);}}}components.push({id,cells:q.length});}
  const componentAt=(x,z)=>{let best=null,d=Infinity;const gx=Math.floor(x/step),gz=Math.floor(z/step);for(let dz=-2;dz<=2;dz++)for(let dx=-2;dx<=2;dx++){const xx=gx+dx,zz=gz+dz;if(xx<0||xx>=nx||zz<0||zz>=nz)continue;const k=zz*nx+xx;if(labels[k]<0)continue;const dd=Math.hypot((xx+.5)*step-x,(zz+.5)*step-z);if(dd<d){d=dd;best=labels[k];}}return d<.6?best:null;};
- const ports={};for(const p of b.ports){const components=new Set((p.profiles??[[p.a,p.b]]).map(([a,c])=>{const l=portSegment(b,{...p,a,b:c},.9),x=(l.a[0]+l.b[0])/2,z=(l.a[1]+l.b[1])/2;return localClear(b,x,z,doors)?componentAt(x,z):null;}).filter(c=>c!==null));ports[p.id]=components.size===1?[...components][0]:null;}const result={step,nx,nz,labels,components,ports,componentAt};navCache.set(key,result);return result;
+ const ports={};for(const p of b.ports){const components=new Set((p.profiles??[[p.a,p.b]]).map(([a,c])=>{const l=portSegment(b,{...p,a,b:c},p.navInset??.9),x=(l.a[0]+l.b[0])/2,z=(l.a[1]+l.b[1])/2;return localClear(b,x,z,doors)?componentAt(x,z):null;}).filter(c=>c!==null));ports[p.id]=components.size===1?[...components][0]:null;}const result={step,nx,nz,labels,components,ports,componentAt};navCache.set(key,result);return result;
 }
 export const regionAt=(id,x,z,doors)=>{const c=localNavigation(BY_ID[id],doors).componentAt(x,z);return c===null?null:`${id}/${c}`;};
 export const overlap=(a,b)=>Math.max(0,Math.min(a[1],b[1])-Math.max(a[0],b[0]));

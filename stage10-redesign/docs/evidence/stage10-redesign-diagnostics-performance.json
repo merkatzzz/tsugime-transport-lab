@@ -1,0 +1,20 @@
+{
+  "kind": "CPU-only, renderer stub; no browser DOM layout/GPU/FPS",
+  "auditFirstOpenMs": 361.277873,
+  "tableAndDetailStringMs": 1.2520130000000336,
+  "htmlBytes": 12386,
+  "updatePolicy": "audit cached by experiment; table cached by phase; detail cached by selection; only moving-ID text updated each UI tick",
+  "off": {
+    "frames": 120,
+    "mean": 0.9483658166666676,
+    "p95": 1.621588999999858,
+    "max": 6.782941999999821
+  },
+  "on": {
+    "frames": 120,
+    "mean": 0.7509052249999665,
+    "p95": 1.2090140000000247,
+    "max": 1.8443169999995916
+  },
+  "overlays": 57
+}

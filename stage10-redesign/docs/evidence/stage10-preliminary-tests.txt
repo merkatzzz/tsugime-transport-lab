@@ -1,0 +1,27 @@
+✔ manual requests persist over automatic schedule and are saved without bypassing cover closure (654.760942ms)
+✔ manual departure waits for a 3D visit and never starts the ordinary swinging leaf afterward (11.798848ms)
+✔ special-event override still takes priority over debugging requests (3.520774ms)
+✔ both stalls have volumetric counters and rear shelves with separation from front cover (0.773713ms)
+✔ four-cell P9 carries player and home NPC through genuine complete ABC transport without local drift (6591.047769ms)
+✔ exact configurable 60 second schedule is 15 home / 45 work, with staggered phase and event override (2.891858ms)
+✔ two distinct NPCs each have exactly one location, with fully closed cover required for every commute (724.099975ms)
+✔ room presence opens a live 3D camera; absence reports the correct next home time and never unlocks a room (133.600611ms)
+✔ visits restore corridor body-local position and gaze after the hosting body moves (4.916851ms)
+✔ seen shopkeeper stays during conversation and a pending close refuses new transactions (251.68866ms)
+✔ player inside shop or overhead observation defers warp; transport closes covers without relocating NPCs (165.188163ms)
+✔ inventory browsing and wrong targets do not consume; correct use consumes exactly once with an auditable result (5.98969ms)
+✔ an already open transaction can finish after closing time without removing its NPC (160.862452ms)
+✔ versioned save restores actual whereabouts/covers/clock/flags/items/phase; old inventory and bad data are non-destructive (63.453192ms)
+✔ browser storage uses a dedicated new slot without clearing unrelated saves (6.982934ms)
+✔ new 4-cell common facility retains fixed private walls and no transport shutters on internal cell borders (35.282232ms)
+✔ sign normals point from private rooms toward the corridor and follow rigid body rotation (10.046675ms)
+✔ closed metal and curtain stalls actually hide the NPC from front, sides, rear and above (3522.228626ms)
+✔ HTML controls and module initialization work with explicitly unavailable WebGL (15184.097609ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 28248.150972
