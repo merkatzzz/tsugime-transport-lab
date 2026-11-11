@@ -1,0 +1,23 @@
+✔ four-cell P9 carries player and home NPC through genuine complete ABC transport without local drift (7534.385845ms)
+✔ exact configurable 60 second schedule is 15 home / 45 work, with staggered phase and event override (1.780597ms)
+✔ two distinct NPCs each have exactly one location, with fully closed cover required for every commute (567.220764ms)
+✔ room presence opens a live 3D camera; absence reports the correct next home time and never unlocks a room (164.415108ms)
+✔ visits restore corridor body-local position and gaze after the hosting body moves (5.233881ms)
+✔ seen shopkeeper stays during conversation and a pending close refuses new transactions (276.299938ms)
+✔ player inside shop or overhead observation defers warp; transport closes covers without relocating NPCs (189.608198ms)
+✔ inventory browsing and wrong targets do not consume; correct use consumes exactly once with an auditable result (2.779456ms)
+✔ an already open transaction can finish after closing time without removing its NPC (234.776739ms)
+✔ versioned save restores actual whereabouts/covers/clock/flags/items/phase; old inventory and bad data are non-destructive (87.200633ms)
+✔ browser storage uses a dedicated new slot without clearing unrelated saves (6.728419ms)
+✔ new 4-cell common facility retains fixed private walls and no transport shutters on internal cell borders (37.752287ms)
+✔ sign normals point from private rooms toward the corridor and follow rigid body rotation (2.815038ms)
+✔ closed metal and curtain stalls actually hide the NPC from front, sides, rear and above (4969.533448ms)
+✔ HTML controls and module initialization work with explicitly unavailable WebGL (29314.213896ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 44221.333344

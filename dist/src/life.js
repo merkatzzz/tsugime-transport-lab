@@ -8,7 +8,8 @@ export const scheduleAt=(time,n,config=LIFE_CONFIG)=>((time+n.offset)%config.per
 export class Life{
  constructor(sim){this.sim=sim;this.time=0;this.config={...LIFE_CONFIG};this.states=Object.fromEntries(PEOPLE.map(n=>[n.id,{location:'home',cover:1,stage:'closed',event:null,changes:0}]));this.events=[];}
  person(id){return PEOPLE.find(n=>n.id===id);}
- desired(id){const n=this.person(id),state=this.states[id];return state.event==='stay-home'?'home':scheduleAt(this.time,n,this.config);}
+ requestLocation(id,mode){if(!this.person(id)||!['home','work','auto'].includes(mode))return false;this.states[id].manual=mode==='auto'?null:mode;return true;}
+ desired(id){const n=this.person(id),state=this.states[id];return state.event==='stay-home'?'home':state.manual??scheduleAt(this.time,n,this.config);}
  location(id){const n=this.person(id);return n[this.states[id].location];}
  nextHome(id){const n=this.person(id),q=((this.time+n.offset)%this.config.period+this.config.period)%this.config.period;return this.time+(q<this.config.homeSeconds?0:this.config.period-q);}
  pinned(id){const e=this.sim.experience;return e.visit?.npc===id||e.dialogue?.npc.id===id||e.trade===id;}
