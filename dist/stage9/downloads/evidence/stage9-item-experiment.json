@@ -1,0 +1,30 @@
+{
+  "wrong": {
+    "ok": false,
+    "item": "parcel",
+    "target": "door:P9-home",
+    "message": "この対象には使えません。品物は消費しません。",
+    "time": 0
+  },
+  "right": {
+    "ok": true,
+    "item": "parcel",
+    "target": "npc:shopkeeper",
+    "message": "店主「届けてくれたのか。ありがとう。」",
+    "time": 0
+  },
+  "again": {
+    "ok": false,
+    "item": "parcel",
+    "target": "npc:shopkeeper",
+    "message": "この品物は所持していません。",
+    "time": 0
+  },
+  "counts": {
+    "parcel": 0
+  },
+  "flags": {
+    "received": true,
+    "delivered": true
+  }
+}

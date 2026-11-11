@@ -868,22 +868,22 @@
       "cycles": [
         {
           "level": 0,
-          "edges": 13,
-          "nodes": 16,
+          "edges": 14,
+          "nodes": 17,
           "components": 3,
           "cycles": 0
         },
         {
           "level": 1,
-          "edges": 24,
-          "nodes": 23,
+          "edges": 25,
+          "nodes": 24,
           "components": 2,
           "cycles": 3
         },
         {
           "level": 2,
-          "edges": 12,
-          "nodes": 12,
+          "edges": 13,
+          "nodes": 13,
           "components": 1,
           "cycles": 1
         }
@@ -1467,22 +1467,22 @@
       "cycles": [
         {
           "level": 0,
-          "edges": 17,
-          "nodes": 18,
+          "edges": 18,
+          "nodes": 19,
           "components": 2,
           "cycles": 1
         },
         {
           "level": 1,
-          "edges": 22,
-          "nodes": 22,
+          "edges": 23,
+          "nodes": 23,
           "components": 2,
           "cycles": 2
         },
         {
           "level": 2,
-          "edges": 13,
-          "nodes": 14,
+          "edges": 14,
+          "nodes": 15,
           "components": 2,
           "cycles": 1
         }
@@ -2340,22 +2340,22 @@
       "cycles": [
         {
           "level": 0,
-          "edges": 13,
-          "nodes": 16,
+          "edges": 14,
+          "nodes": 17,
           "components": 3,
           "cycles": 0
         },
         {
           "level": 1,
-          "edges": 22,
-          "nodes": 22,
+          "edges": 23,
+          "nodes": 23,
           "components": 2,
           "cycles": 2
         },
         {
           "level": 2,
-          "edges": 12,
-          "nodes": 12,
+          "edges": 13,
+          "nodes": 13,
           "components": 1,
           "cycles": 1
         }

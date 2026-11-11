@@ -1,0 +1,1 @@
+[{"name":"中央交差部・三層","stable":22,"swept":188,"viable":false},{"name":"南側中央・三層","stable":2,"swept":40,"viable":false},{"name":"東側中央・三層","stable":2,"swept":109,"viable":false},{"name":"G3欠けセルの居住区EV・二層","stable":0,"swept":0,"viable":true}]

@@ -1,0 +1,82 @@
+
+> tsugime-architecture-transport-lab@4.0.0 test
+> node --test tests/*.test.mjs
+
+✔ extension keeps two levels, adds four mobile rooms and creates physically walkable east paths (1991.967543ms)
+✔ every added room has a usable animated door in all phases and cannot be entered when closed (285.423582ms)
+✔ all added bodies carry a rider through complete physical cycle with no final coordinate replacement (1284.47264ms)
+✔ surface partition removes overlaps without deleting non-overlapping floor area (1.283882ms)
+✔ ordinary doors start closed and reset closes them (2.176919ms)
+✔ booth image visit separates conversation and exit in all three phases (320.40531ms)
+✔ normal room door opens into 3D space (27.89845ms)
+✔ shop conversation stays in 3D (0.779335ms)
+✔ mechanical audio retains transfer and pause synchronization (1.172375ms)
+✔ dense expanded architecture contains 16 bodies, 23 cells, corridor-only bodies and large permanent unions (2.461343ms)
+✔ four directions match, north-south edges exist, B has two true independent loops (2339.492182ms)
+✔ same-face west A and B shutters are independent; R2 has three disconnected intrinsic components (1.58911ms)
+✔ partial 0.5m slit is visible but cannot pass the body; closed complementary widths remain blocked (0.982594ms)
+✔ all passable joints can actually be crossed by the body controller in their normal direction (56.931989ms)
+✔ same physical reference points and A/B/C shortest grid routes replay through movement collisions (1.538021ms)
+✔ 0.1m finer walking grid confirms shortcut size within 0.6m of 0.2m grid (7491.592395ms)
+✔ ordinary door changes intrinsic components and physical route together (58.814967ms)
+✔ large H1 and L1 move in plan, R2 and J1 change XY while remaining on their life floor (0.279153ms)
+✔ same/serial A→B continuous 0.2m full-envelope validation (17.91567ms)
+✔ same/serial B→C continuous 0.2m full-envelope validation (23.136553ms)
+✔ same/serial C→A continuous 0.2m full-envelope validation (13.660303ms)
+✔ same/cooperative A→B continuous 0.2m full-envelope validation (174.973922ms)
+✔ same/cooperative B→C continuous 0.2m full-envelope validation (693.957081ms)
+✔ same/cooperative C→A continuous 0.2m full-envelope validation (38.078623ms)
+✔ ring1/serial A→B continuous 0.2m full-envelope validation (5.488157ms)
+✔ ring1/serial B→C continuous 0.2m full-envelope validation (24.023006ms)
+✔ ring1/serial C→A continuous 0.2m full-envelope validation (6.814848ms)
+✔ ring1/cooperative A→B continuous 0.2m full-envelope validation (146.593013ms)
+✔ ring1/cooperative B→C continuous 0.2m full-envelope validation (721.49975ms)
+✔ ring1/cooperative C→A continuous 0.2m full-envelope validation (48.359569ms)
+✔ ring2/serial A→B continuous 0.2m full-envelope validation (5.359807ms)
+✔ ring2/serial B→C continuous 0.2m full-envelope validation (20.197941ms)
+✔ ring2/serial C→A continuous 0.2m full-envelope validation (7.011501ms)
+✔ ring2/cooperative A→B continuous 0.2m full-envelope validation (115.097688ms)
+✔ ring2/cooperative B→C continuous 0.2m full-envelope validation (811.685416ms)
+✔ ring2/cooperative C→A continuous 0.2m full-envelope validation (47.246228ms)
+✔ real temporary docks and separate C0 storage are used; second expansion gives no duration improvement (4.398955ms)
+✔ continuous collision rejects paths crossing between clear endpoints and enforces clearance (0.293667ms)
+✔ small bounds fail with concrete errors (0.85617ms)
+✔ cooperative reservations perform simultaneous physical moves and finish whole cycle without snapping (29.08261ms)
+✔ rider stays local to large H1 through temporary deck storage and final XY relocation (17.777257ms)
+✔ normal component-based evacuation waits in J1; experimental isolation reconnects in A (22.865469ms)
+✔ stored spare remains physical and isolated through C and A, reinserted in B with rider (21.205826ms)
+✔ joint straddling waits for safety and debug rescue is explicitly distinct (6.464683ms)
+✔ empty docks have no walkable support; rolling shutters close all joint floors (2.577175ms)
+✔ walk 3.6m/s, shift 5.2m/s independently of transport speed; diagonal normalized (41.3486ms)
+✔ high speed cannot tunnel through ordinary walls or closed individual shutters (24.259584ms)
+✔ fixed EV continuously moves inside shaft and landing gates block absent cabin (2.16672ms)
+✔ all phase maps and deck render data are generated from live geometry with port IDs and routes (90.384722ms)
+✔ normal warning blocks new entry into J1 but lets an existing occupant walk out (22.902773ms)
+✔ even a stationary invalid initial overlap is rejected (2.767325ms)
+✔ resident fixed camera fits the room and sees the real head through the narrow booth opening in every phase (2316.112045ms)
+✔ all real body meshes fit cell unions and six metre envelope, including rolled shutters and per-port adapters (4828.394008ms)
+✔ real joint floors retract, empty docks have no rendered life floor (1501.828734ms)
+✔ all open joint tunnels are enclosed above and on both sides by actual meshes (1413.459645ms)
+✔ varied low and high ceilings remain real and unequal port heights receive solid reducers (604.439663ms)
+✔ view slit passes eye ray but the same physical opening blocks body (703.227449ms)
+✔ EV cabin and fixed shaft occlude transport space at every sampled travel height (964.758994ms)
+✔ landing doors open only for stationary cabin at that landing (515.061377ms)
+✔ adopted transport sweeps clear all rendered fixed hardware, shaft, enclosure and stationary cabin by 0.2m (1648.227978ms)
+✔ all fixed and moving rendered mesh bounds are finite (1486.545478ms)
+✔ joint collars enclose oblique eye rays at inset port boundaries, without seam leaks (4855.059538ms)
+✔ shortest paths also clear the actual visible 3D meshes at body height (4523.717895ms)
+✔ world-level union handles perpendicular walls across groups and remains stable on rebuild (7.159081ms)
+✔ HTML controls and module initialization work with explicitly unavailable WebGL (8725.5746ms)
+ℹ tests 65
+ℹ suites 0
+ℹ pass 65
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 52209.23505
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

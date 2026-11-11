@@ -1,3 +1,4 @@
+import {WATER,waterPort,waterBoxes} from './water.js';
 import {furnishShops} from './stage10-shops.js';
 import {expandStage9,stage9Placements} from './stage9-layout.js';
 import {expandStage8,stage8Placements} from './stage8-layout.js';
@@ -8,11 +9,11 @@ import {redesign,redesignPlacements} from './stage7-layout.js';
 import {doorLeaf} from './doors.js';
 import {SPRINGS} from './infrastructure.js';
 import {extendBodies,extensionPlacements} from './stage6-layout.js';
-import {toWorld,toLocal,rotateFace} from './pose.js';
+import {toWorld,toLocal,rotateFace,worldRect} from './pose.js';
 // Geometry conventions: east +X, south +Z, vertical +Y. Port intervals increase in X for N/S and Z for E/W.
 export const CELL=8,HEIGHT=6,DECK=6.4,LOWER_DECK=-6.4,LEVELS=[0,12.8,-12.8],RADIUS=.35,CLEAR_WIDTH=.82,CLEARANCE=.2,EYE=1.81,WALK_SPEED=3.6,RUN_SPEED=5.2;
 export const LIFE_BOUNDS={x:0,z:0,w:117.2,d:42};
-export const SIZES={same:{label:'拡張・基本搬送域',w:125.6,d:41.6},ring1:{label:'拡張・一回り',w:134,d:50},ring2:{label:'拡張・二回り',w:142.4,d:58.4}};
+export const SIZES={same:{label:'拡張・基本搬送域',w:134,d:50},ring1:{label:'拡張・一回り',w:142.4,d:58.4},ring2:{label:'拡張・二回り',w:150.8,d:66.8}};
 export const METHODS={serial:'空欄を再利用・順次',cooperative:'予約付き協調搬送'};
 export const DEFAULT_EXPERIMENT={size:'ring1',method:'cooperative'},NEXT={A:'B',B:'C',C:'A'};
 export const levelsFor=()=>LEVELS,decksFor=()=>[LOWER_DECK,DECK],LANDING={x:-2.4,z:2,w:2,d:4},SHAFT={x:-6.8,z:1.8,w:4.4,d:4.4};
@@ -69,6 +70,8 @@ BODIES.push({...structuredClone(BODIES.find(b=>b.id==='R4')),id:'K1',name:'第�
 BODIES.push({...structuredClone(BODIES.find(b=>b.id==='J3')),id:'K2',name:'第一層・交差通路',color:'#a3b58d',labels:[room('第一層 分岐',4,4)]});
 BODIES.push({id:'M1',name:'上下搬送・小交流室',use:'common',color:'#bba58d',cells:[[0,0]],ceiling:3,ports:[port('W','W',3,5,2.5),port('N','N',3,5,2.5),port('E','E',3,5,2.5)],walls:[],doors:[],solids:[],furniture:[box(1,1,1.5,1,.5),box(6,6,1,1,.8)],labels:[room('上下搬送 M1',4,4)],roofAreas:[roof(0,0,8,8,3)]});
 extendBodies(BODIES);redesign(BODIES);repairResidentialWalls(BODIES);expandStage8(BODIES);expandStage9(BODIES);furnishShops(BODIES);
+BODIES.find(b=>b.id==='P9').ports.push(port('water-east','E',11.6,14,2.5));
+BODIES.find(b=>b.id==='N3').ports.push(port('water-west','W',3,5,2.5));
 export const BY_ID=Object.fromEntries(BODIES.map(b=>[b.id,b]));
 export const PHASES={A:{label:'密集建築・住戸から店舗へ迂回'},B:{label:'予備廊下C0を挿入・近道と環状路'},C:{label:'近道を撤収・別の南北経路へ'}};
 const dock=(x,z,level)=>({x:x*8.4,z:z*8.4,y:LEVELS[level]});
@@ -94,7 +97,7 @@ export function localNavigation(b,doors=defaultDoors()){const key=b.id+b.doors.m
 }
 export const regionAt=(id,x,z,doors)=>{const c=localNavigation(BY_ID[id],doors).componentAt(x,z);return c===null?null:`${id}/${c}`;};
 export const overlap=(a,b)=>Math.max(0,Math.min(a[1],b[1])-Math.max(a[0],b[0]));
-export function worldPorts(phase,e=DEFAULT_EXPERIMENT,doors=defaultDoors()){const pos=placements(phase,e),out=[];for(const b of BODIES){const q=pos[b.id],level=LEVELS.findIndex(y=>Math.abs(q.y-y)<.01),nav=localNavigation(b,doors);for(const p of b.ports){const comp=nav.ports[p.id],l=portSegment(b,p,0),aa=toWorld(q,{x:l.a[0],z:l.a[1]}),bb=toWorld(q,{x:l.b[0],z:l.b[1]}),face=rotateFace(p.face,q.angle),ns=['N','S'].includes(face),v1=ns?aa.x:aa.z,v2=ns?bb.x:bb.z;out.push({...p,localFace:p.face,face,reversed:v2<v1,body:b.id,key:`${b.id}:${p.id}`,node:comp===null?null:`${b.id}/${comp}`,level,y:q.y,plane:ns?aa.z:aa.x,start:Math.min(v1,v2),end:Math.max(v1,v2)});}}
+export function worldPorts(phase,e=DEFAULT_EXPERIMENT,doors=defaultDoors()){const pos=placements(phase,e),out=WATER.map(waterPort);for(const b of BODIES){const q=pos[b.id],level=LEVELS.findIndex(y=>Math.abs(q.y-y)<.01),nav=localNavigation(b,doors);for(const p of b.ports){const comp=nav.ports[p.id],l=portSegment(b,p,0),aa=toWorld(q,{x:l.a[0],z:l.a[1]}),bb=toWorld(q,{x:l.b[0],z:l.b[1]}),face=rotateFace(p.face,q.angle),ns=['N','S'].includes(face),v1=ns?aa.x:aa.z,v2=ns?bb.x:bb.z;out.push({...p,localFace:p.face,face,reversed:v2<v1,body:b.id,key:`${b.id}:${p.id}`,node:comp===null?null:`${b.id}/${comp}`,level,y:q.y,plane:ns?aa.z:aa.x,start:Math.min(v1,v2),end:Math.max(v1,v2)});}}
  for(const y of LOCAL_LIFT.levels){const i=LEVELS.indexOf(y);out.push({id:'E',body:'LF'+i,key:'LF'+i+':E',face:'E',a:1,b:3,node:'LF'+i,level:i,y,height:2.5,plane:-.4+LOCAL_LIFT.offset.x,start:3+LOCAL_LIFT.offset.z,end:5+LOCAL_LIFT.offset.z});}
  for(let level=0;level<LEVELS.length;level++)out.push({id:'E',body:`F${level}`,key:`F${level}:E`,face:'E',a:1,b:3,node:`F${level}`,level,y:LEVELS[level],height:2.5,plane:-.4,start:3,end:5});return out;}
 export const localInterval=(p,start,end)=>p.reversed?[p.b-(end-p.start),p.b-(start-p.start)]:[p.a+start-p.start,p.a+end-p.start];
@@ -119,3 +122,6 @@ export function serviceReachable(phase,e=DEFAULT_EXPERIMENT,doors=defaultDoors()
  if(phase==='B'&&edges.some(c=>[c.bodyA,c.bodyB].includes('S1')&&[c.bodyA,c.bodyB].includes('D1'))){const returnWalk=reachable('C',e,doors);if([...returnWalk].some(n=>n.startsWith('S1/')))for(const c of localNavigation(BY_ID.S1,doors).components)seen.add('S1/'+c.id);}
  let changed=true;while(changed){changed=false;for(const c of edges){if(seen.has(c.a)&&!seen.has(c.b)){seen.add(c.b);changed=true;}if(seen.has(c.b)&&!seen.has(c.a)){seen.add(c.a);changed=true;}}}return seen;
 }
+
+// Real deck slots, not inhabited floor. Fixed water reservations are excluded at each elevation.
+export function emptyTransportCells(phase,e=DEFAULT_EXPERIMENT,y=DECK){const p=placements(phase,e),b=e.bounds??SIZES[e.size],out=[];for(let z=0;z+8<=b.d+.001;z+=8.4)for(let x=0;x+8<=b.w+.001;x+=8.4){if(waterBoxes().some(q=>q.min[1]<y+6&&q.max[1]>y&&x<q.max[0]&&x+8>q.min[0]&&z<q.max[2]&&z+8>q.min[2]))continue;if([...SPRINGS.map(q=>({...q,h:6})),{...SHAFT,y:-13,h:32},...LOCAL_LIFT.levels.map(yy=>({...LOCAL_LIFT.shaft,y:yy,h:6})),...LEVELS.map(yy=>({...LANDING,y:yy,h:6})),...BODIES.flatMap(q=>q.cells.map(([cx,cz])=>({...worldRect(p[q.id],{x:cx*8,z:cz*8,w:8,d:8}),y:p[q.id].y,h:6})))].some(q=>q.y<y+6-.001&&q.y+q.h>y+.001&&x<q.x+q.w-.001&&x+8>q.x+.001&&z<q.z+q.d-.001&&z+8>q.z+.001))continue;out.push({x,y,z,w:8,d:8,floor:false});}return out;}

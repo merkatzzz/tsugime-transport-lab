@@ -15,7 +15,7 @@ class Links(HTMLParser):
                 links.append(value)
 
 pages = [dist/'index.html', dist/'report.html']
-pages += [dist/s/p for s in ['stage1','stage2','stage3','stage4','stage5','stage6','stage7','stage8'] for p in ['index.html','report.html']]
+pages += [dist/s/p for s in ['stage1','stage2','stage3','stage4','stage5','stage6','stage7','stage8','stage9'] for p in ['index.html','report.html']]
 checked = 0
 for page in pages:
     links.clear()
@@ -27,13 +27,13 @@ for page in pages:
         assert target.exists(), (str(page.relative_to(root)), link)
         checked += 1
 modules = 0
-for directory in [dist/'src'] + [dist/s/'src' for s in ['stage1','stage2','stage3','stage4','stage5','stage6','stage7','stage8']]:
+for directory in [dist/'src'] + [dist/s/'src' for s in ['stage1','stage2','stage3','stage4','stage5','stage6','stage7','stage8','stage9']]:
     for module in directory.glob('*.js'):
         for link in re.findall(r"(?:from\s*|import\s*)['\"]([.][^'\"]+)['\"]", module.read_text()):
             assert (module.parent/link).exists(), (str(module), link)
             modules += 1
-archives = [dist/'downloads/tsugime-lab-source.zip', dist/'downloads/stage6-frozen-source.zip', dist/'downloads/stage7-frozen-source.zip', dist/'downloads/stage8-frozen-source.zip']
-archives += [dist/s/'downloads/tsugime-lab-source.zip' for s in ['stage1','stage2','stage3','stage4','stage5','stage6','stage7','stage8']]
+archives = [dist/'downloads/tsugime-lab-source.zip', dist/'downloads/stage6-frozen-source.zip', dist/'downloads/stage7-frozen-source.zip', dist/'downloads/stage8-frozen-source.zip', dist/'downloads/stage9-frozen-source.zip']
+archives += [dist/s/'downloads/tsugime-lab-source.zip' for s in ['stage1','stage2','stage3','stage4','stage5','stage6','stage7','stage8','stage9']]
 for archive in archives:
     with zipfile.ZipFile(archive) as z:
         assert z.testzip() is None, str(archive)

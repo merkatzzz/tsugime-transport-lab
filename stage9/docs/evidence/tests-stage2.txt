@@ -1,0 +1,61 @@
+
+> tsugime-architecture-transport-lab@8.0.0 test:stage2
+> node --test stage2/tests/*.test.mjs
+
+✔ unified 8×8×6 envelopes contain small rooms, several ceiling heights and indivisible 1/2/3/4-cell architecture (9.681954ms)
+✔ fixed corridor area falls from 400m² to two 2×4m EV landings; the main chain has no fixed bypass (3.830952ms)
+✔ A: opening graph agrees with actual body-disc traversal across both shutters and a 0.4m bridge (49.10224ms)
+✔ B: opening graph agrees with actual body-disc traversal across both shutters and a 0.4m bridge (24.17241ms)
+✔ C: opening graph agrees with actual body-disc traversal across both shutters and a 0.4m bridge (18.133977ms)
+✔ A: built-floor flood agrees with reachable bodies, room locks and intentional isolation (130.53093ms)
+✔ B: built-floor flood agrees with reachable bodies, room locks and intentional isolation (103.678011ms)
+✔ C: built-floor flood agrees with reachable bodies, room locks and intentional isolation (60.731078ms)
+✔ the main walk route itself changes: A reaches the upper wide hall, B stops at the moved corridor and leaves a real well (252.202617ms)
+✔ empty-space metadata covers the exact unsupported floor, including the missing L quadrant (1.897067ms)
+✔ deployed bridges support a body; closure retracts them and never leaves an invisible floor over a well (1.335393ms)
+✔ generous/serial: the same architecture completes all three transitions with ≥0.2m continuous separation (33.684696ms)
+✔ generous/cooperative: the same architecture completes all three transitions with ≥0.2m continuous separation (18.80408ms)
+✔ generous/vertical: the same architecture completes all three transitions with ≥0.2m continuous separation (26.781764ms)
+✔ same/serial: the same architecture completes all three transitions with ≥0.2m continuous separation (16.645087ms)
+✔ same/cooperative: the same architecture completes all three transitions with ≥0.2m continuous separation (12.484661ms)
+✔ same/vertical: the same architecture completes all three transitions with ≥0.2m continuous separation (20.267477ms)
+✔ ring1/serial: the same architecture completes all three transitions with ≥0.2m continuous separation (18.665179ms)
+✔ ring1/cooperative: the same architecture completes all three transitions with ≥0.2m continuous separation (17.487095ms)
+✔ ring1/vertical: the same architecture completes all three transitions with ≥0.2m continuous separation (16.378734ms)
+✔ ring2/serial: the same architecture completes all three transitions with ≥0.2m continuous separation (16.747594ms)
+✔ ring2/cooperative: the same architecture completes all three transitions with ≥0.2m continuous separation (50.235802ms)
+✔ ring2/vertical: the same architecture completes all three transitions with ≥0.2m continuous separation (18.059084ms)
+✔ independent intermediate sampling also rejects no intersections for the adopted compact cooperative plan (39.185846ms)
+✔ compact coordination reaches two simultaneous movers; one expansion permits three without adding height (10.024502ms)
+✔ a simultaneous vertical swap without an empty buffer is refused even though both destinations look valid (0.515497ms)
+✔ a route that only fits with zero clearance is distinguished from a mechanically acceptable route (0.189276ms)
+✔ continuous relative motion detects a crossing missed by endpoint-only checks (0.146216ms)
+✔ range overflow, discontinuous starts and impossible narrow-range proposals cannot be certified (5.086454ms)
+✔ every moving corridor carries its passenger in the same local position, including L1 into the isolated rear dock (78.030351ms)
+✔ the fixed landing passenger stays fixed while A→B→C→A physically runs (22.386981ms)
+✔ normal mode waits for evacuation; deliberate L1 isolation reconnects in C and H1 isolation reconnects in A (91.915676ms)
+✔ new admission to a closing corridor is blocked, and a passenger spanning a joint postpones closure (24.732393ms)
+✔ pause freezes intermediate occupancy; walking remains locked until physical docking (8.679485ms)
+✔ fixed EV moves continuously at both vertical specifications, and can be called with its landing gate closed (0.748061ms)
+✔ debug rescue preserves the disconnected plan instead of pretending that a physical exit exists (0.82056ms)
+✔ evacuation can cross a closing hall from the annex, then admission is blocked after reaching safety (116.776058ms)
+✔ real meshes and winding shutters remain inside every 8×8×6 occupied cell union, including the L concavity (165.130787ms)
+✔ fixed landings and annex stay behind their boundaries; retractable floor joints disappear before transport (26.11574ms)
+✔ real 3D floor ray hits the deployed 0.4m bridge and cannot hit an invisible floor after closure (28.248848ms)
+✔ B contains an actual unsupported upper dock in the rendered meshes, matching navigation (21.638625ms)
+✔ the ordinary observation window transmits sight at eye height but the same path blocks a body (23.606307ms)
+✔ ceiling meshes express low corridors and high rooms independently of the common outer height (21.30183ms)
+✔ adopted continuous sweeps also clear the actual rendered enclosure, guide columns, landing hardware and stationary EV (58.639933ms)
+ℹ tests 44
+ℹ suites 0
+ℹ pass 44
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1940.785559
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

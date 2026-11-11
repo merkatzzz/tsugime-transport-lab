@@ -1,3 +1,13 @@
+# 『継ぎ目の部屋』独立建築・搬送実験 — 第十段階
+
+固定水路3か所、東南各8.4mの搬送域拡張、店舗カウンター、NPC手動指定と訪問扉修正を実装。47搬送体・64可動チャンクと8×8×6mを維持。
+
+再開ブランチは stage10-development。第九段階は stage9-frozen（24d1881）と完全ZIPで保存しています。npm test で自動検証、npm start で localhost:8000 を開きます。ビルド不要の同梱Three.js構成です。
+
+[第十段階報告・復元・検証制約](docs/STAGE10.md) ／ [サイト](https://tsugime-architecture-transport-lab.merkatzzz.chatgpt.site) ／ [ソースZIP](https://tsugime-architecture-transport-lab.merkatzzz.chatgpt.site/downloads/tsugime-lab-source.zip)。実WebGL・聴感は4173中継障害により未確認。
+
+以下は第九段階の引き継ぎ・操作資料です。旧性能値・保存版番号・再開ブランチは当時の記録として参照してください。
+
 # 『継ぎ目の部屋』独立建築・搬送実験 — 第九段階
 
 47搬送体・64基本チャンク。第八段階の三層・完全物理搬送・二EV・描画cacheを維持し、2人の住民の生活、3D個室訪問、店舗遮蔽、所持品/使用と保存を追加しました。本編とは別の実験です。

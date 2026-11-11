@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "rows": [
+    {
+      "name": "current-stage9",
+      "tests": 160,
+      "pass": 160,
+      "fail": 0
+    },
+    {
+      "name": "saved-stage8",
+      "tests": 146,
+      "pass": 146,
+      "fail": 0
+    },
+    {
+      "name": "post-inventory-evacuation-guard",
+      "tests": 7,
+      "pass": 7,
+      "fail": 0
+    }
+  ],
+  "checks": {
+    "plans": 18,
+    "seamConditions": 6,
+    "exposedCoplanarFaces": 0,
+    "surfaceConditions": 24,
+    "doors": 24,
+    "supplyWalks": 12,
+    "inventoryEvacuation": true
+  },
+  "previousFrozenStages": {
+    "tests": 511,
+    "note": "Earlier successful evidence for unchanged stages1..7 retained; not counted as rerun in this session."
+  },
+  "browserQA": {
+    "webgl": false,
+    "fps": false,
+    "reason": "sites-preview relay port 4173 readiness timeout",
+    "audioHeard": false
+  }
+}

@@ -1,0 +1,1 @@
+[{"name":"中央交差部","stable":22,"swept":147,"viable":false},{"name":"南側中央・住宅前","stable":2,"swept":37,"viable":false},{"name":"東側中央・店舗脇","stable":1,"swept":57,"viable":false}]

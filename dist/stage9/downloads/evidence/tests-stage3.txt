@@ -1,0 +1,71 @@
+
+> tsugime-architecture-transport-lab@8.0.0 test:stage3
+> node --test stage3/tests/*.test.mjs
+
+✔ dense 4×3 architecture contains 12 bodies, 19 cells, corridor-only bodies and large permanent unions (2.069549ms)
+✔ four directions match, north-south edges exist, B has two true independent loops (1479.557725ms)
+✔ same-face west A and B shutters are independent; R2 has three disconnected intrinsic components (0.92822ms)
+✔ partial 0.5m slit is visible but cannot pass the body; closed complementary widths remain blocked (0.515774ms)
+✔ all passable joints can actually be crossed by the body controller in their normal direction (35.06483ms)
+✔ same physical reference points and A/B/C shortest grid routes replay through movement collisions (0.605311ms)
+✔ 0.1m finer walking grid confirms shortcut size within 0.6m of 0.2m grid (5195.740394ms)
+✔ ordinary door changes intrinsic components and physical route together (51.746293ms)
+✔ large H1 and L1 move in plan, R2 and J1 change XY while remaining on their life floor (0.746844ms)
+✔ same/serial A→B continuous 0.2m full-envelope validation (11.455338ms)
+✔ same/serial B→C continuous 0.2m full-envelope validation (8.659344ms)
+✔ same/serial C→A continuous 0.2m full-envelope validation (8.555307ms)
+✔ same/cooperative A→B continuous 0.2m full-envelope validation (76.317426ms)
+✔ same/cooperative B→C continuous 0.2m full-envelope validation (189.917753ms)
+✔ same/cooperative C→A continuous 0.2m full-envelope validation (18.525482ms)
+✔ ring1/serial A→B continuous 0.2m full-envelope validation (5.214914ms)
+✔ ring1/serial B→C continuous 0.2m full-envelope validation (17.683354ms)
+✔ ring1/serial C→A continuous 0.2m full-envelope validation (7.073293ms)
+✔ ring1/cooperative A→B continuous 0.2m full-envelope validation (58.07311ms)
+✔ ring1/cooperative B→C continuous 0.2m full-envelope validation (279.574593ms)
+✔ ring1/cooperative C→A continuous 0.2m full-envelope validation (13.097597ms)
+✔ ring2/serial A→B continuous 0.2m full-envelope validation (2.908537ms)
+✔ ring2/serial B→C continuous 0.2m full-envelope validation (18.525722ms)
+✔ ring2/serial C→A continuous 0.2m full-envelope validation (6.802826ms)
+✔ ring2/cooperative A→B continuous 0.2m full-envelope validation (44.492151ms)
+✔ ring2/cooperative B→C continuous 0.2m full-envelope validation (220.631259ms)
+✔ ring2/cooperative C→A continuous 0.2m full-envelope validation (12.836597ms)
+✔ real temporary docks and separate C0 storage are used; second expansion gives no duration improvement (2.510153ms)
+✔ continuous collision rejects paths crossing between clear endpoints and enforces clearance (0.426581ms)
+✔ small bounds fail with concrete errors (1.217706ms)
+✔ cooperative reservations perform simultaneous physical moves and finish whole cycle without snapping (11.520298ms)
+✔ rider stays local to large H1 through temporary deck storage and final XY relocation (6.9749ms)
+✔ normal component-based evacuation waits in J1; experimental isolation reconnects in A (9.359118ms)
+✔ stored spare remains physical and isolated through C and A, reinserted in B with rider (10.684743ms)
+✔ joint straddling waits for safety and debug rescue is explicitly distinct (3.836055ms)
+✔ empty docks have no walkable support; rolling shutters close all joint floors (0.969785ms)
+✔ walk 3.6m/s, shift 5.2m/s independently of transport speed; diagonal normalized (14.217649ms)
+✔ high speed cannot tunnel through ordinary walls or closed individual shutters (18.773034ms)
+✔ fixed EV continuously moves inside shaft and landing gates block absent cabin (2.046543ms)
+✔ all phase maps and deck render data are generated from live geometry with port IDs and routes (48.851303ms)
+✔ normal warning blocks new entry into J1 but lets an existing occupant walk out (39.412241ms)
+✔ even a stationary invalid initial overlap is rejected (1.799419ms)
+✔ all real body meshes fit cell unions and six metre envelope, including rolled shutters and per-port adapters (408.587786ms)
+✔ real joint floors retract, empty docks have no rendered life floor (50.13954ms)
+✔ all open joint tunnels are enclosed above and on both sides by actual meshes (94.193399ms)
+✔ varied low and high ceilings remain real and unequal port heights receive solid reducers (46.674533ms)
+✔ view slit passes eye ray but the same physical opening blocks body (38.561092ms)
+✔ EV cabin and fixed shaft occlude transport space at every sampled travel height (178.448189ms)
+✔ landing doors open only for stationary cabin at that landing (38.509066ms)
+✔ adopted transport sweeps clear all rendered fixed hardware, shaft, enclosure and stationary cabin by 0.2m (472.470345ms)
+✔ all fixed and moving rendered mesh bounds are finite (49.987901ms)
+✔ joint collars enclose oblique eye rays at inset port boundaries, without seam leaks (1185.115192ms)
+✔ shortest paths also clear the actual visible 3D meshes at body height (2015.093203ms)
+✔ HTML controls and module initialization work with explicitly unavailable WebGL (3691.798454ms)
+ℹ tests 54
+ℹ suites 0
+ℹ pass 54
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16595.563756
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

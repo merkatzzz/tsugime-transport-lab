@@ -244,6 +244,35 @@
     },
     "connections": [
       {
+        "id": "W0:entry|K2:N",
+        "a": "W0",
+        "b": "K2/0",
+        "bodyA": "W0",
+        "bodyB": "K2",
+        "portA": "entry",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.2,
+        "gap": 0.40000000000000036,
+        "permanent": false,
+        "reason": "",
+        "start": 11.4,
+        "end": 13.4,
+        "y": -12.8,
+        "level": 2,
+        "status": "pass",
+        "bridge": {
+          "x": 11.4,
+          "z": -0.40000000000000036,
+          "w": 2,
+          "d": 0.40000000000000036,
+          "orientation": "NS",
+          "y": -12.8
+        }
+      },
+      {
         "id": "R1:E|R2:W-A",
         "a": "R1/1",
         "b": "R2/2",
@@ -477,7 +506,7 @@
       },
       {
         "id": "T2:E|E3:W",
-        "a": "T2/1",
+        "a": "T2/2",
         "b": "E3/1",
         "bodyA": "T2",
         "bodyB": "E3",
@@ -1201,6 +1230,35 @@
         }
       },
       {
+        "id": "N3:water-west|W3:entry",
+        "a": "N3/0",
+        "b": "W3",
+        "bodyA": "N3",
+        "bodyB": "W3",
+        "portA": "water-west",
+        "portB": "entry",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.40000000000000213,
+        "permanent": false,
+        "reason": "",
+        "start": 36.6,
+        "end": 38.6,
+        "y": 12.8,
+        "level": 1,
+        "status": "pass",
+        "bridge": {
+          "x": 16.4,
+          "z": 36.6,
+          "w": 0.40000000000000213,
+          "d": 2,
+          "orientation": "EW",
+          "y": 12.8
+        }
+      },
+      {
         "id": "S1:E|U2:W",
         "a": "S1/0",
         "b": "U2/0",
@@ -1549,6 +1607,35 @@
         }
       },
       {
+        "id": "P9:water-east|W2:entry",
+        "a": "P9/2",
+        "b": "W2",
+        "bodyA": "P9",
+        "bodyB": "W2",
+        "portA": "water-east",
+        "portB": "entry",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 1.8000000000000043,
+        "height": 2.5,
+        "gap": 0.7999999999999972,
+        "permanent": false,
+        "reason": "",
+        "start": 36.8,
+        "end": 38.6,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 74.8,
+          "z": 36.8,
+          "w": 0.7999999999999972,
+          "d": 1.8000000000000043,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
         "id": "LF2:E|G3:W-lift",
         "a": "LF2",
         "b": "G3/0",
@@ -1695,6 +1782,182 @@
       }
     ],
     "ports": [
+      {
+        "id": "entry",
+        "body": "W0",
+        "key": "W0:entry",
+        "node": "W0",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.8,
+        "level": 2,
+        "y": -12.8,
+        "plane": -0.40000000000000036,
+        "start": 11.4,
+        "end": 13.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "W0:entry|K2:N",
+            "a": "W0",
+            "b": "K2/0",
+            "bodyA": "W0",
+            "bodyB": "K2",
+            "portA": "entry",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.2,
+            "gap": 0.40000000000000036,
+            "permanent": false,
+            "reason": "",
+            "start": 11.4,
+            "end": 13.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 11.4,
+              "z": -0.40000000000000036,
+              "w": 2,
+              "d": 0.40000000000000036,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.2,
+            "status": "pass",
+            "id": "W0:entry|K2:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "entry",
+        "body": "W2",
+        "key": "W2:entry",
+        "node": "W2",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "level": 0,
+        "y": 0,
+        "plane": 75.6,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "P9:water-east|W2:entry",
+            "a": "P9/2",
+            "b": "W2",
+            "bodyA": "P9",
+            "bodyB": "W2",
+            "portA": "water-east",
+            "portB": "entry",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 1.8000000000000043,
+            "height": 2.5,
+            "gap": 0.7999999999999972,
+            "permanent": false,
+            "reason": "",
+            "start": 36.8,
+            "end": 38.6,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 74.8,
+              "z": 36.8,
+              "w": 0.7999999999999972,
+              "d": 1.8000000000000043,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3.1999999999999957,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "P9:water-east|W2:entry"
+          }
+        ],
+        "masked": [
+          {
+            "a": 3,
+            "b": 3.1999999999999957
+          }
+        ]
+      },
+      {
+        "id": "entry",
+        "body": "W3",
+        "key": "W3:entry",
+        "node": "W3",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "level": 1,
+        "y": 12.8,
+        "plane": 16.8,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "N3:water-west|W3:entry",
+            "a": "N3/0",
+            "b": "W3",
+            "bodyA": "N3",
+            "bodyB": "W3",
+            "portA": "water-west",
+            "portB": "entry",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.40000000000000213,
+            "permanent": false,
+            "reason": "",
+            "start": 36.6,
+            "end": 38.6,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 16.4,
+              "z": 36.6,
+              "w": 0.40000000000000213,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "N3:water-west|W3:entry"
+          }
+        ],
+        "masked": []
+      },
       {
         "id": "W",
         "face": "W",
@@ -2651,7 +2914,7 @@
         "reversed": false,
         "body": "T2",
         "key": "T2:E",
-        "node": "T2/1",
+        "node": "T2/2",
         "level": 0,
         "y": 0,
         "plane": 32.8,
@@ -2661,7 +2924,7 @@
         "matches": [
           {
             "id": "T2:E|E3:W",
-            "a": "T2/1",
+            "a": "T2/2",
             "b": "E3/1",
             "bodyA": "T2",
             "bodyB": "E3",
@@ -4136,7 +4399,7 @@
         "matches": [
           {
             "id": "T2:E|E3:W",
-            "a": "T2/1",
+            "a": "T2/2",
             "b": "E3/1",
             "bodyA": "T2",
             "bodyB": "E3",
@@ -4720,15 +4983,48 @@
         "plane": 0,
         "start": 11.4,
         "end": 13.4,
-        "status": "blocked",
-        "matches": [],
-        "openings": [],
-        "masked": [
+        "status": "pass",
+        "matches": [
+          {
+            "id": "W0:entry|K2:N",
+            "a": "W0",
+            "b": "K2/0",
+            "bodyA": "W0",
+            "bodyB": "K2",
+            "portA": "entry",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.2,
+            "gap": 0.40000000000000036,
+            "permanent": false,
+            "reason": "",
+            "start": 11.4,
+            "end": 13.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 11.4,
+              "z": -0.40000000000000036,
+              "w": 2,
+              "d": 0.40000000000000036,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
           {
             "a": 3,
-            "b": 5
+            "b": 5,
+            "height": 2.2,
+            "status": "pass",
+            "id": "W0:entry|K2:N"
           }
-        ]
+        ],
+        "masked": []
       },
       {
         "id": "S",
@@ -6257,6 +6553,65 @@
             "b": 4.5
           }
         ]
+      },
+      {
+        "id": "water-west",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "localFace": "W",
+        "reversed": true,
+        "body": "N3",
+        "key": "N3:water-west",
+        "node": "N3/0",
+        "level": 1,
+        "y": 12.8,
+        "plane": 16.4,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "N3:water-west|W3:entry",
+            "a": "N3/0",
+            "b": "W3",
+            "bodyA": "N3",
+            "bodyB": "W3",
+            "portA": "water-west",
+            "portB": "entry",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.40000000000000213,
+            "permanent": false,
+            "reason": "",
+            "start": 36.6,
+            "end": 38.6,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 16.4,
+              "z": 36.6,
+              "w": 0.40000000000000213,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "N3:water-west|W3:entry"
+          }
+        ],
+        "masked": []
       },
       {
         "id": "N",
@@ -8683,6 +9038,70 @@
         ]
       },
       {
+        "id": "water-east",
+        "face": "E",
+        "a": 11.6,
+        "b": 14,
+        "height": 2.5,
+        "localFace": "E",
+        "reversed": false,
+        "body": "P9",
+        "key": "P9:water-east",
+        "node": "P9/2",
+        "level": 0,
+        "y": 0,
+        "plane": 74.8,
+        "start": 36.8,
+        "end": 39.2,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "P9:water-east|W2:entry",
+            "a": "P9/2",
+            "b": "W2",
+            "bodyA": "P9",
+            "bodyB": "W2",
+            "portA": "water-east",
+            "portB": "entry",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 1.8000000000000043,
+            "height": 2.5,
+            "gap": 0.7999999999999972,
+            "permanent": false,
+            "reason": "",
+            "start": 36.8,
+            "end": 38.6,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 74.8,
+              "z": 36.8,
+              "w": 0.7999999999999972,
+              "d": 1.8000000000000043,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 11.600000000000001,
+            "b": 13.400000000000006,
+            "height": 2.5,
+            "status": "pass",
+            "id": "P9:water-east|W2:entry"
+          }
+        ],
+        "masked": [
+          {
+            "a": 13.400000000000006,
+            "b": 14
+          }
+        ]
+      },
+      {
         "id": "E",
         "body": "LF2",
         "key": "LF2:E",
@@ -8997,6 +9416,7 @@
       "G3/0",
       "LF2",
       "LF0",
+      "W0",
       "R2/0",
       "T1/0",
       "E1/1",
@@ -9007,9 +9427,11 @@
       "S1/0",
       "N4/0",
       "U2/0",
+      "W3",
       "G5/0",
       "J9/0",
-      "P9/2"
+      "P9/2",
+      "W2"
     ],
     "emptyDockCells": [
       {
@@ -10679,6 +11101,35 @@
     },
     "connections": [
       {
+        "id": "W0:entry|K2:N",
+        "a": "W0",
+        "b": "K2/0",
+        "bodyA": "W0",
+        "bodyB": "K2",
+        "portA": "entry",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.2,
+        "gap": 0.40000000000000036,
+        "permanent": false,
+        "reason": "",
+        "start": 11.4,
+        "end": 13.4,
+        "y": -12.8,
+        "level": 2,
+        "status": "pass",
+        "bridge": {
+          "x": 11.4,
+          "z": -0.40000000000000036,
+          "w": 2,
+          "d": 0.40000000000000036,
+          "orientation": "NS",
+          "y": -12.8
+        }
+      },
+      {
         "id": "R1:E|C0:W",
         "a": "R1/1",
         "b": "C0/0",
@@ -10941,7 +11392,7 @@
       },
       {
         "id": "T2:E|E1:W",
-        "a": "T2/1",
+        "a": "T2/2",
         "b": "E1/1",
         "bodyA": "T2",
         "bodyB": "E1",
@@ -11694,6 +12145,35 @@
         }
       },
       {
+        "id": "N3:water-west|W3:entry",
+        "a": "N3/0",
+        "b": "W3",
+        "bodyA": "N3",
+        "bodyB": "W3",
+        "portA": "water-west",
+        "portB": "entry",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.40000000000000213,
+        "permanent": false,
+        "reason": "",
+        "start": 36.6,
+        "end": 38.6,
+        "y": 12.8,
+        "level": 1,
+        "status": "pass",
+        "bridge": {
+          "x": 16.4,
+          "z": 36.6,
+          "w": 0.40000000000000213,
+          "d": 2,
+          "orientation": "EW",
+          "y": 12.8
+        }
+      },
+      {
         "id": "S1:E|D1:W",
         "a": "S1/0",
         "b": "D1/0",
@@ -12100,6 +12580,35 @@
         }
       },
       {
+        "id": "P9:water-east|W2:entry",
+        "a": "P9/2",
+        "b": "W2",
+        "bodyA": "P9",
+        "bodyB": "W2",
+        "portA": "water-east",
+        "portB": "entry",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 1.3999999999999986,
+        "height": 2.5,
+        "gap": 0.7999999999999972,
+        "permanent": false,
+        "reason": "",
+        "start": 37.2,
+        "end": 38.6,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 74.8,
+          "z": 37.2,
+          "w": 0.7999999999999972,
+          "d": 1.3999999999999986,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
         "id": "LF2:E|G5:W",
         "a": "LF2",
         "b": "G5/0",
@@ -12246,6 +12755,182 @@
       }
     ],
     "ports": [
+      {
+        "id": "entry",
+        "body": "W0",
+        "key": "W0:entry",
+        "node": "W0",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.8,
+        "level": 2,
+        "y": -12.8,
+        "plane": -0.40000000000000036,
+        "start": 11.4,
+        "end": 13.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "W0:entry|K2:N",
+            "a": "W0",
+            "b": "K2/0",
+            "bodyA": "W0",
+            "bodyB": "K2",
+            "portA": "entry",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.2,
+            "gap": 0.40000000000000036,
+            "permanent": false,
+            "reason": "",
+            "start": 11.4,
+            "end": 13.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 11.4,
+              "z": -0.40000000000000036,
+              "w": 2,
+              "d": 0.40000000000000036,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.2,
+            "status": "pass",
+            "id": "W0:entry|K2:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "entry",
+        "body": "W2",
+        "key": "W2:entry",
+        "node": "W2",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "level": 0,
+        "y": 0,
+        "plane": 75.6,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "P9:water-east|W2:entry",
+            "a": "P9/2",
+            "b": "W2",
+            "bodyA": "P9",
+            "bodyB": "W2",
+            "portA": "water-east",
+            "portB": "entry",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 1.3999999999999986,
+            "height": 2.5,
+            "gap": 0.7999999999999972,
+            "permanent": false,
+            "reason": "",
+            "start": 37.2,
+            "end": 38.6,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 74.8,
+              "z": 37.2,
+              "w": 0.7999999999999972,
+              "d": 1.3999999999999986,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3.6000000000000014,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "P9:water-east|W2:entry"
+          }
+        ],
+        "masked": [
+          {
+            "a": 3,
+            "b": 3.6000000000000014
+          }
+        ]
+      },
+      {
+        "id": "entry",
+        "body": "W3",
+        "key": "W3:entry",
+        "node": "W3",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "level": 1,
+        "y": 12.8,
+        "plane": 16.8,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "N3:water-west|W3:entry",
+            "a": "N3/0",
+            "b": "W3",
+            "bodyA": "N3",
+            "bodyB": "W3",
+            "portA": "water-west",
+            "portB": "entry",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.40000000000000213,
+            "permanent": false,
+            "reason": "",
+            "start": 36.6,
+            "end": 38.6,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 16.4,
+              "z": 36.6,
+              "w": 0.40000000000000213,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "N3:water-west|W3:entry"
+          }
+        ],
+        "masked": []
+      },
       {
         "id": "W",
         "face": "W",
@@ -13310,7 +13995,7 @@
         "reversed": false,
         "body": "T2",
         "key": "T2:E",
-        "node": "T2/1",
+        "node": "T2/2",
         "level": 0,
         "y": 0,
         "plane": 32.8,
@@ -13320,7 +14005,7 @@
         "matches": [
           {
             "id": "T2:E|E1:W",
-            "a": "T2/1",
+            "a": "T2/2",
             "b": "E1/1",
             "bodyA": "T2",
             "bodyB": "E1",
@@ -14534,7 +15219,7 @@
         "matches": [
           {
             "id": "T2:E|E1:W",
-            "a": "T2/1",
+            "a": "T2/2",
             "b": "E1/1",
             "bodyA": "T2",
             "bodyB": "E1",
@@ -15560,15 +16245,48 @@
         "plane": 0,
         "start": 11.4,
         "end": 13.4,
-        "status": "blocked",
-        "matches": [],
-        "openings": [],
-        "masked": [
+        "status": "pass",
+        "matches": [
+          {
+            "id": "W0:entry|K2:N",
+            "a": "W0",
+            "b": "K2/0",
+            "bodyA": "W0",
+            "bodyB": "K2",
+            "portA": "entry",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.2,
+            "gap": 0.40000000000000036,
+            "permanent": false,
+            "reason": "",
+            "start": 11.4,
+            "end": 13.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 11.4,
+              "z": -0.40000000000000036,
+              "w": 2,
+              "d": 0.40000000000000036,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
           {
             "a": 3,
-            "b": 5
+            "b": 5,
+            "height": 2.2,
+            "status": "pass",
+            "id": "W0:entry|K2:N"
           }
-        ]
+        ],
+        "masked": []
       },
       {
         "id": "S",
@@ -16998,6 +17716,65 @@
             "b": 4.5
           }
         ]
+      },
+      {
+        "id": "water-west",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "localFace": "W",
+        "reversed": true,
+        "body": "N3",
+        "key": "N3:water-west",
+        "node": "N3/0",
+        "level": 1,
+        "y": 12.8,
+        "plane": 16.4,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "N3:water-west|W3:entry",
+            "a": "N3/0",
+            "b": "W3",
+            "bodyA": "N3",
+            "bodyB": "W3",
+            "portA": "water-west",
+            "portB": "entry",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.40000000000000213,
+            "permanent": false,
+            "reason": "",
+            "start": 36.6,
+            "end": 38.6,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 16.4,
+              "z": 36.6,
+              "w": 0.40000000000000213,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "N3:water-west|W3:entry"
+          }
+        ],
+        "masked": []
       },
       {
         "id": "N",
@@ -19524,6 +20301,70 @@
         ]
       },
       {
+        "id": "water-east",
+        "face": "E",
+        "a": 11.6,
+        "b": 14,
+        "height": 2.5,
+        "localFace": "E",
+        "reversed": false,
+        "body": "P9",
+        "key": "P9:water-east",
+        "node": "P9/2",
+        "level": 0,
+        "y": 0,
+        "plane": 74.8,
+        "start": 37.2,
+        "end": 39.6,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "P9:water-east|W2:entry",
+            "a": "P9/2",
+            "b": "W2",
+            "bodyA": "P9",
+            "bodyB": "W2",
+            "portA": "water-east",
+            "portB": "entry",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 1.3999999999999986,
+            "height": 2.5,
+            "gap": 0.7999999999999972,
+            "permanent": false,
+            "reason": "",
+            "start": 37.2,
+            "end": 38.6,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 74.8,
+              "z": 37.2,
+              "w": 0.7999999999999972,
+              "d": 1.3999999999999986,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 11.600000000000001,
+            "b": 13,
+            "height": 2.5,
+            "status": "pass",
+            "id": "P9:water-east|W2:entry"
+          }
+        ],
+        "masked": [
+          {
+            "a": 13,
+            "b": 14
+          }
+        ]
+      },
+      {
         "id": "E",
         "body": "LF2",
         "key": "LF2:E",
@@ -19836,6 +20677,7 @@
       "V1/0",
       "G2/0",
       "G4/0",
+      "W0",
       "R2/2",
       "E3/1",
       "V2/0",
@@ -19843,7 +20685,8 @@
       "A3/0",
       "N3/0",
       "U1/0",
-      "U2/0"
+      "U2/0",
+      "W3"
     ],
     "emptyDockCells": [
       {
@@ -21483,6 +22326,35 @@
     },
     "connections": [
       {
+        "id": "W0:entry|K2:N",
+        "a": "W0",
+        "b": "K2/0",
+        "bodyA": "W0",
+        "bodyB": "K2",
+        "portA": "entry",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.2,
+        "gap": 0.40000000000000036,
+        "permanent": false,
+        "reason": "",
+        "start": 11.4,
+        "end": 13.4,
+        "y": -12.8,
+        "level": 2,
+        "status": "pass",
+        "bridge": {
+          "x": 11.4,
+          "z": -0.40000000000000036,
+          "w": 2,
+          "d": 0.40000000000000036,
+          "orientation": "NS",
+          "y": -12.8
+        }
+      },
+      {
         "id": "R1:E|R2:W-A",
         "a": "R1/1",
         "b": "R2/2",
@@ -21687,7 +22559,7 @@
       },
       {
         "id": "T2:E|E3:W",
-        "a": "T2/1",
+        "a": "T2/2",
         "b": "E3/1",
         "bodyA": "T2",
         "bodyB": "E3",
@@ -22382,6 +23254,35 @@
         }
       },
       {
+        "id": "N3:water-west|W3:entry",
+        "a": "N3/0",
+        "b": "W3",
+        "bodyA": "N3",
+        "bodyB": "W3",
+        "portA": "water-west",
+        "portB": "entry",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.40000000000000213,
+        "permanent": false,
+        "reason": "",
+        "start": 36.6,
+        "end": 38.6,
+        "y": 12.8,
+        "level": 1,
+        "status": "pass",
+        "bridge": {
+          "x": 16.4,
+          "z": 36.6,
+          "w": 0.40000000000000213,
+          "d": 2,
+          "orientation": "EW",
+          "y": 12.8
+        }
+      },
+      {
         "id": "S1:E|U2:W",
         "a": "S1/0",
         "b": "U2/0",
@@ -22730,6 +23631,35 @@
         }
       },
       {
+        "id": "P9:water-east|W2:entry",
+        "a": "P9/2",
+        "b": "W2",
+        "bodyA": "P9",
+        "bodyB": "W2",
+        "portA": "water-east",
+        "portB": "entry",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 1.8000000000000043,
+        "height": 2.5,
+        "gap": 0.7999999999999972,
+        "permanent": false,
+        "reason": "",
+        "start": 36.8,
+        "end": 38.6,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 74.8,
+          "z": 36.8,
+          "w": 0.7999999999999972,
+          "d": 1.8000000000000043,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
         "id": "LF2:E|G3:W-lift",
         "a": "LF2",
         "b": "G3/0",
@@ -22876,6 +23806,182 @@
       }
     ],
     "ports": [
+      {
+        "id": "entry",
+        "body": "W0",
+        "key": "W0:entry",
+        "node": "W0",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.8,
+        "level": 2,
+        "y": -12.8,
+        "plane": -0.40000000000000036,
+        "start": 11.4,
+        "end": 13.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "W0:entry|K2:N",
+            "a": "W0",
+            "b": "K2/0",
+            "bodyA": "W0",
+            "bodyB": "K2",
+            "portA": "entry",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.2,
+            "gap": 0.40000000000000036,
+            "permanent": false,
+            "reason": "",
+            "start": 11.4,
+            "end": 13.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 11.4,
+              "z": -0.40000000000000036,
+              "w": 2,
+              "d": 0.40000000000000036,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.2,
+            "status": "pass",
+            "id": "W0:entry|K2:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "entry",
+        "body": "W2",
+        "key": "W2:entry",
+        "node": "W2",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "level": 0,
+        "y": 0,
+        "plane": 75.6,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "P9:water-east|W2:entry",
+            "a": "P9/2",
+            "b": "W2",
+            "bodyA": "P9",
+            "bodyB": "W2",
+            "portA": "water-east",
+            "portB": "entry",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 1.8000000000000043,
+            "height": 2.5,
+            "gap": 0.7999999999999972,
+            "permanent": false,
+            "reason": "",
+            "start": 36.8,
+            "end": 38.6,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 74.8,
+              "z": 36.8,
+              "w": 0.7999999999999972,
+              "d": 1.8000000000000043,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3.1999999999999957,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "P9:water-east|W2:entry"
+          }
+        ],
+        "masked": [
+          {
+            "a": 3,
+            "b": 3.1999999999999957
+          }
+        ]
+      },
+      {
+        "id": "entry",
+        "body": "W3",
+        "key": "W3:entry",
+        "node": "W3",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "level": 1,
+        "y": 12.8,
+        "plane": 16.8,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "N3:water-west|W3:entry",
+            "a": "N3/0",
+            "b": "W3",
+            "bodyA": "N3",
+            "bodyB": "W3",
+            "portA": "water-west",
+            "portB": "entry",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.40000000000000213,
+            "permanent": false,
+            "reason": "",
+            "start": 36.6,
+            "end": 38.6,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 16.4,
+              "z": 36.6,
+              "w": 0.40000000000000213,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "N3:water-west|W3:entry"
+          }
+        ],
+        "masked": []
+      },
       {
         "id": "W",
         "face": "W",
@@ -23769,7 +24875,7 @@
         "reversed": false,
         "body": "T2",
         "key": "T2:E",
-        "node": "T2/1",
+        "node": "T2/2",
         "level": 0,
         "y": 0,
         "plane": 32.8,
@@ -23779,7 +24885,7 @@
         "matches": [
           {
             "id": "T2:E|E3:W",
-            "a": "T2/1",
+            "a": "T2/2",
             "b": "E3/1",
             "bodyA": "T2",
             "bodyB": "E3",
@@ -25185,7 +26291,7 @@
         "matches": [
           {
             "id": "T2:E|E3:W",
-            "a": "T2/1",
+            "a": "T2/2",
             "b": "E3/1",
             "bodyA": "T2",
             "bodyB": "E3",
@@ -25802,15 +26908,48 @@
         "plane": 0,
         "start": 11.4,
         "end": 13.4,
-        "status": "blocked",
-        "matches": [],
-        "openings": [],
-        "masked": [
+        "status": "pass",
+        "matches": [
+          {
+            "id": "W0:entry|K2:N",
+            "a": "W0",
+            "b": "K2/0",
+            "bodyA": "W0",
+            "bodyB": "K2",
+            "portA": "entry",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.2,
+            "gap": 0.40000000000000036,
+            "permanent": false,
+            "reason": "",
+            "start": 11.4,
+            "end": 13.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 11.4,
+              "z": -0.40000000000000036,
+              "w": 2,
+              "d": 0.40000000000000036,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
           {
             "a": 3,
-            "b": 5
+            "b": 5,
+            "height": 2.2,
+            "status": "pass",
+            "id": "W0:entry|K2:N"
           }
-        ]
+        ],
+        "masked": []
       },
       {
         "id": "S",
@@ -27339,6 +28478,65 @@
             "b": 4.5
           }
         ]
+      },
+      {
+        "id": "water-west",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "localFace": "W",
+        "reversed": true,
+        "body": "N3",
+        "key": "N3:water-west",
+        "node": "N3/0",
+        "level": 1,
+        "y": 12.8,
+        "plane": 16.4,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "N3:water-west|W3:entry",
+            "a": "N3/0",
+            "b": "W3",
+            "bodyA": "N3",
+            "bodyB": "W3",
+            "portA": "water-west",
+            "portB": "entry",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.40000000000000213,
+            "permanent": false,
+            "reason": "",
+            "start": 36.6,
+            "end": 38.6,
+            "y": 12.8,
+            "level": 1,
+            "status": "pass",
+            "bridge": {
+              "x": 16.4,
+              "z": 36.6,
+              "w": 0.40000000000000213,
+              "d": 2,
+              "orientation": "EW",
+              "y": 12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "N3:water-west|W3:entry"
+          }
+        ],
+        "masked": []
       },
       {
         "id": "N",
@@ -29724,6 +30922,70 @@
         ]
       },
       {
+        "id": "water-east",
+        "face": "E",
+        "a": 11.6,
+        "b": 14,
+        "height": 2.5,
+        "localFace": "E",
+        "reversed": false,
+        "body": "P9",
+        "key": "P9:water-east",
+        "node": "P9/2",
+        "level": 0,
+        "y": 0,
+        "plane": 74.8,
+        "start": 36.8,
+        "end": 39.2,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "P9:water-east|W2:entry",
+            "a": "P9/2",
+            "b": "W2",
+            "bodyA": "P9",
+            "bodyB": "W2",
+            "portA": "water-east",
+            "portB": "entry",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 1.8000000000000043,
+            "height": 2.5,
+            "gap": 0.7999999999999972,
+            "permanent": false,
+            "reason": "",
+            "start": 36.8,
+            "end": 38.6,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 74.8,
+              "z": 36.8,
+              "w": 0.7999999999999972,
+              "d": 1.8000000000000043,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 11.600000000000001,
+            "b": 13.400000000000006,
+            "height": 2.5,
+            "status": "pass",
+            "id": "P9:water-east|W2:entry"
+          }
+        ],
+        "masked": [
+          {
+            "a": 13.400000000000006,
+            "b": 14
+          }
+        ]
+      },
+      {
         "id": "E",
         "body": "LF2",
         "key": "LF2:E",
@@ -30037,6 +31299,7 @@
       "G3/0",
       "LF2",
       "LF0",
+      "W0",
       "R2/0",
       "T1/0",
       "E1/1",
@@ -30047,9 +31310,11 @@
       "S1/0",
       "N4/0",
       "U2/0",
+      "W3",
       "G5/0",
       "J9/0",
-      "P9/2"
+      "P9/2",
+      "W2"
     ],
     "emptyDockCells": [
       {

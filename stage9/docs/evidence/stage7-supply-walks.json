@@ -1,0 +1,395 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "phase": "A",
+      "bio": "BN1",
+      "from": {
+        "x": -1.2,
+        "y": -12.8,
+        "z": 4
+      },
+      "to": {
+        "x": 20.8,
+        "y": -12.8,
+        "z": 14.2
+      },
+      "distance": 27.982337649086233,
+      "frames": 1144,
+      "bodies": [
+        "F2",
+        "joint:F2:E|K1:W",
+        "K1",
+        "joint:K1:E|K2:W",
+        "K2",
+        "joint:K2:S|U5:N",
+        "U5",
+        "joint:U5:E|N1:S",
+        "N1"
+      ]
+    },
+    {
+      "phase": "A",
+      "bio": "BN2",
+      "from": {
+        "x": -1.2,
+        "y": 0,
+        "z": 4
+      },
+      "to": {
+        "x": 56.199999999999996,
+        "y": 0,
+        "z": 20.8
+      },
+      "distance": 72.0308657865105,
+      "frames": 2908,
+      "bodies": [
+        "F0",
+        "joint:F0:E|R4:W",
+        "R4",
+        "joint:R4:E|J3:W",
+        "J3",
+        "joint:J3:E|T2:W",
+        "T2",
+        "joint:T2:E|E3:W",
+        "E3",
+        "joint:E3:E|E4:W",
+        "E4",
+        "joint:E4:E|U3:W",
+        "U3",
+        "joint:U3:S|U4:N",
+        "U4",
+        "joint:U4:S|N2:N",
+        "N2"
+      ]
+    },
+    {
+      "phase": "A",
+      "bio": "BN3",
+      "from": {
+        "x": -1.2,
+        "y": 12.8,
+        "z": 4
+      },
+      "to": {
+        "x": 10.600000000000001,
+        "y": 12.8,
+        "z": 37.6
+      },
+      "distance": 43.748023074035586,
+      "frames": 1776,
+      "bodies": [
+        "F1",
+        "joint:F1:E|R1:W",
+        "R1",
+        "joint:R1:S|J1:N",
+        "J1",
+        "joint:J1:S|R3:N",
+        "R3",
+        "joint:R3:E|V3:W",
+        "V3",
+        "joint:V3:S|A3:N",
+        "A3",
+        "joint:A3:S|N3:S",
+        "N3"
+      ]
+    },
+    {
+      "phase": "A",
+      "bio": "BN4",
+      "from": {
+        "x": -1.2,
+        "y": 12.8,
+        "z": 4
+      },
+      "to": {
+        "x": 64.6,
+        "y": 12.8,
+        "z": 4
+      },
+      "distance": 77.2308657865107,
+      "frames": 3116,
+      "bodies": [
+        "F1",
+        "joint:F1:E|R1:W",
+        "R1",
+        "joint:R1:S|J1:N",
+        "J1",
+        "joint:J1:E|J2:W",
+        "J2",
+        "joint:R2:S|J2:N",
+        "R2",
+        "joint:R2:E|T1:W",
+        "T1",
+        "joint:T1:E|E1:W",
+        "E1",
+        "joint:E1:E|E2:W",
+        "E2",
+        "joint:E2:E|U1:W",
+        "U1",
+        "joint:U1:E|N4:W",
+        "N4"
+      ]
+    },
+    {
+      "phase": "B",
+      "bio": "BN1",
+      "from": {
+        "x": -1.2,
+        "y": -12.8,
+        "z": 4
+      },
+      "to": {
+        "x": 20.8,
+        "y": -12.8,
+        "z": 14.2
+      },
+      "distance": 27.982337649086233,
+      "frames": 1144,
+      "bodies": [
+        "F2",
+        "joint:F2:E|K1:W",
+        "K1",
+        "joint:K1:E|K2:W",
+        "K2",
+        "joint:K2:S|U5:N",
+        "U5",
+        "joint:U5:E|N1:S",
+        "N1"
+      ]
+    },
+    {
+      "phase": "B",
+      "bio": "BN2",
+      "from": {
+        "x": -1.2,
+        "y": 0,
+        "z": 4
+      },
+      "to": {
+        "x": 56.199999999999996,
+        "y": 0,
+        "z": 20.8
+      },
+      "distance": 72.0308657865105,
+      "frames": 2908,
+      "bodies": [
+        "F0",
+        "joint:F0:E|R4:W",
+        "R4",
+        "joint:R4:E|J3:W",
+        "J3",
+        "joint:J3:E|T2:W",
+        "T2",
+        "joint:T2:E|E1:W",
+        "E1",
+        "joint:E1:E|E4:W",
+        "E4",
+        "joint:E4:E|U3:W",
+        "U3",
+        "joint:U3:S|U4:N",
+        "U4",
+        "joint:U4:S|N2:N",
+        "N2"
+      ]
+    },
+    {
+      "phase": "B",
+      "bio": "BN3",
+      "from": {
+        "x": -1.2,
+        "y": 12.8,
+        "z": 4
+      },
+      "to": {
+        "x": 10.600000000000001,
+        "y": 12.8,
+        "z": 37.6
+      },
+      "distance": 56.564675298172695,
+      "frames": 2312,
+      "bodies": [
+        "F1",
+        "joint:F1:E|R1:W",
+        "R1",
+        "joint:R1:E|C0:W",
+        "C0",
+        "joint:C0:S|J2:N",
+        "J2",
+        "joint:J2:E|L1:W",
+        "L1",
+        "joint:L1:S|V2:N",
+        "V2",
+        "joint:A3:E|V2:W",
+        "A3",
+        "joint:A3:S|N3:S",
+        "N3"
+      ]
+    },
+    {
+      "phase": "B",
+      "bio": "BN4",
+      "from": {
+        "x": -1.2,
+        "y": 0,
+        "z": 4
+      },
+      "to": {
+        "x": 62.8,
+        "y": 0,
+        "z": 5.8
+      },
+      "distance": 65.97401153701813,
+      "frames": 2652,
+      "bodies": [
+        "F0",
+        "joint:F0:E|R4:W",
+        "R4",
+        "joint:R4:E|J3:W",
+        "J3",
+        "joint:J3:E|T2:W",
+        "T2",
+        "joint:T2:E|E1:W",
+        "E1",
+        "joint:E1:E|E4:W",
+        "E4",
+        "joint:E4:E|U3:W",
+        "U3",
+        "joint:U3:E|N4:S",
+        "N4"
+      ]
+    },
+    {
+      "phase": "C",
+      "bio": "BN1",
+      "from": {
+        "x": -1.2,
+        "y": -12.8,
+        "z": 4
+      },
+      "to": {
+        "x": 20.8,
+        "y": -12.8,
+        "z": 14.2
+      },
+      "distance": 27.982337649086233,
+      "frames": 1144,
+      "bodies": [
+        "F2",
+        "joint:F2:E|K1:W",
+        "K1",
+        "joint:K1:E|K2:W",
+        "K2",
+        "joint:K2:S|U5:N",
+        "U5",
+        "joint:U5:E|N1:S",
+        "N1"
+      ]
+    },
+    {
+      "phase": "C",
+      "bio": "BN2",
+      "from": {
+        "x": -1.2,
+        "y": 0,
+        "z": 4
+      },
+      "to": {
+        "x": 56.199999999999996,
+        "y": 0,
+        "z": 20.8
+      },
+      "distance": 83.34457428549536,
+      "frames": 3388,
+      "bodies": [
+        "F0",
+        "joint:F0:E|R4:W",
+        "R4",
+        "joint:R4:S|J3:N",
+        "J3",
+        "joint:J3:E|L1:W",
+        "L1",
+        "joint:T2:S-west|L1:N-east",
+        "T2",
+        "joint:T2:E|E3:W",
+        "E3",
+        "joint:E3:E|E2:W",
+        "E2",
+        "joint:E2:E|U3:W",
+        "U3",
+        "joint:U3:S|U4:N",
+        "U4",
+        "joint:U4:S|N2:N",
+        "N2"
+      ]
+    },
+    {
+      "phase": "C",
+      "bio": "BN3",
+      "from": {
+        "x": -1.2,
+        "y": 12.8,
+        "z": 4
+      },
+      "to": {
+        "x": 10.600000000000001,
+        "y": 12.8,
+        "z": 37.6
+      },
+      "distance": 47.51370849898484,
+      "frames": 1928,
+      "bodies": [
+        "F1",
+        "joint:F1:E|R1:W",
+        "R1",
+        "joint:R1:S|R3:N",
+        "R3",
+        "joint:R3:E|J2:W",
+        "J2",
+        "joint:J2:S|V3:N",
+        "V3",
+        "joint:V3:S|A3:N",
+        "A3",
+        "joint:A3:S|N3:S",
+        "N3"
+      ]
+    },
+    {
+      "phase": "C",
+      "bio": "BN4",
+      "from": {
+        "x": -1.2,
+        "y": 12.8,
+        "z": 4
+      },
+      "to": {
+        "x": 64.6,
+        "y": 12.8,
+        "z": 4
+      },
+      "distance": 76.99655121145994,
+      "frames": 3108,
+      "bodies": [
+        "F1",
+        "joint:F1:E|R1:W",
+        "R1",
+        "joint:R1:S|R3:N",
+        "R3",
+        "joint:R3:E|J2:W",
+        "J2",
+        "joint:R2:S|J2:N",
+        "R2",
+        "joint:R2:E|T1:W",
+        "T1",
+        "joint:T1:E|E1:W",
+        "E1",
+        "joint:E1:E|E4:W",
+        "E4",
+        "joint:E4:E|U1:W",
+        "U1",
+        "joint:U1:E|N4:W",
+        "N4"
+      ]
+    }
+  ]
+}

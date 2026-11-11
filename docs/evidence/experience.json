@@ -4,13 +4,17 @@
     "npcs": [
       {
         "id": "shopkeeper",
-        "body": "T1",
+        "body": "P9",
         "position": {
-          "x": 28.8,
-          "y": 12.8,
-          "z": 1.9
+          "x": 61.8,
+          "y": 0,
+          "z": 27.2
         },
-        "camera": null
+        "camera": {
+          "x": 62.8,
+          "y": 1.7,
+          "z": 29.299999999999997
+        }
       },
       {
         "id": "resident",
@@ -443,13 +447,17 @@
     "npcs": [
       {
         "id": "shopkeeper",
-        "body": "T1",
+        "body": "P9",
         "position": {
-          "x": 28.8,
-          "y": 12.8,
-          "z": 1.9
+          "x": 61.8,
+          "y": 0,
+          "z": 27.6
         },
-        "camera": null
+        "camera": {
+          "x": 62.8,
+          "y": 1.7,
+          "z": 29.700000000000003
+        }
       },
       {
         "id": "resident",
@@ -882,13 +890,17 @@
     "npcs": [
       {
         "id": "shopkeeper",
-        "body": "T1",
+        "body": "P9",
         "position": {
-          "x": 28.8,
-          "y": 12.8,
-          "z": 1.9
+          "x": 61.8,
+          "y": 0,
+          "z": 27.2
         },
-        "camera": null
+        "camera": {
+          "x": 62.8,
+          "y": 1.7,
+          "z": 29.299999999999997
+        }
       },
       {
         "id": "resident",
