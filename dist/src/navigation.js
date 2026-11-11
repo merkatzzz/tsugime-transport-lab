@@ -18,7 +18,7 @@ const cache=new Map();
 export function shortcutMeasurements(e=DEFAULT_EXPERIMENT,step=.2,withReplay=true){const key=JSON.stringify([e.size,step,withReplay]);if(cache.has(key))return structuredClone(cache.get(key));const rows=['A','B','C'].map(phase=>{const sim=new Simulation(e);for(const id of Object.keys(sim.doors))sim.doors[id]=true;sim.phase=phase;sim.positions=placements(phase,e);sim.invalidate();const start=sim.referencePoint('home'),goal=sim.referencePoint('shop'),route=shortestWalk(sim,start,goal,step),replay=withReplay?replayWalk(sim,route):null;return{phase,route,replay,cycles:cycleRank(phase,e)};});const result={referenceBodies:[POINTS.home.body,POINTS.shop.body],shortcutBody:'C0',step,rows,reduction:rows[0].route.distance-rows[1].route.distance,reductionRatio:1-rows[1].route.distance/rows[0].route.distance};cache.set(key,result);return structuredClone(result);}
 
 const referenceCache=new Map();
-export const referenceRouteKey=s=>JSON.stringify([architectureRevision,s.phase,s.experiment.size,s.doors,s.positions]);
+export const referenceRouteKey=s=>JSON.stringify([architectureRevision,s.phase,s.experiment.size,s.doors,s.positions,s.life?Object.entries(s.life.states).map(([id,r])=>[id,r.location,r.cover>.001]):null]);
 export function primeReferenceRoute(key,route){referenceCache.set(key,route);if(referenceCache.size>24)referenceCache.delete(referenceCache.keys().next().value);}
 const referenceTemplates=new Map();
 export function primeReferenceTemplates(rows){for(const row of rows)if(row.route?.ok)referenceTemplates.set(row.phase,row.route);}

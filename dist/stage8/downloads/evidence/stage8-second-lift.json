@@ -1,0 +1,1909 @@
+{
+  "decision": "adopt-two-floor-housing-lift",
+  "levels": [
+    -12.8,
+    0
+  ],
+  "mainLift": "Unchanged three-floor western lift",
+  "scope": "Actual occupied cell union, full-height shaft and every continuous adopted sweep at 0.2m clearance; local landing hardware is included in all 18 plan validations.",
+  "shaft": {
+    "x": 34.8,
+    "z": 33.6,
+    "w": 4.4,
+    "d": 4.4
+  },
+  "landing": {
+    "x": 39.2,
+    "z": 33.8,
+    "w": 2,
+    "d": 4
+  },
+  "rows": [
+    {
+      "name": "中央交差部・三層",
+      "x": 12.6,
+      "z": 12.6,
+      "minY": -13,
+      "maxY": 19,
+      "shaft": {
+        "min": [
+          12.6,
+          -13,
+          12.6
+        ],
+        "max": [
+          17,
+          19,
+          17
+        ]
+      },
+      "stable": [
+        {
+          "phase": "A",
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "id": "L1"
+        },
+        {
+          "phase": "A",
+          "id": "J2"
+        },
+        {
+          "phase": "A",
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "id": "U5"
+        },
+        {
+          "phase": "A",
+          "id": "N1"
+        },
+        {
+          "phase": "A",
+          "id": "V1"
+        },
+        {
+          "phase": "A",
+          "id": "V3"
+        },
+        {
+          "phase": "B",
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "id": "J2"
+        },
+        {
+          "phase": "B",
+          "id": "U5"
+        },
+        {
+          "phase": "B",
+          "id": "N1"
+        },
+        {
+          "phase": "C",
+          "id": "H1"
+        },
+        {
+          "phase": "C",
+          "id": "L1"
+        },
+        {
+          "phase": "C",
+          "id": "J2"
+        },
+        {
+          "phase": "C",
+          "id": "H2"
+        },
+        {
+          "phase": "C",
+          "id": "U5"
+        },
+        {
+          "phase": "C",
+          "id": "N1"
+        },
+        {
+          "phase": "C",
+          "id": "V1"
+        },
+        {
+          "phase": "C",
+          "id": "V3"
+        }
+      ],
+      "swept": [
+        {
+          "phase": "A",
+          "stage": 0,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 0,
+          "id": "V1"
+        },
+        {
+          "phase": "A",
+          "stage": 1,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 1,
+          "id": "V1"
+        },
+        {
+          "phase": "A",
+          "stage": 2,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 2,
+          "id": "V1"
+        },
+        {
+          "phase": "A",
+          "stage": 3,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 3,
+          "id": "V1"
+        },
+        {
+          "phase": "A",
+          "stage": 4,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 5,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 5,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 5,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 6,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 6,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 6,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 7,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 7,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 8,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 8,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 9,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 9,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 10,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 10,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 10,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 11,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 11,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 11,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 12,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 12,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 12,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 13,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 13,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 13,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 14,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 14,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 14,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 15,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 15,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 15,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 16,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 16,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 16,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 17,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 17,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 17,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 18,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 18,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 18,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 19,
+          "id": "V3"
+        },
+        {
+          "phase": "A",
+          "stage": 19,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 19,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 20,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 20,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 21,
+          "id": "R2"
+        },
+        {
+          "phase": "A",
+          "stage": 21,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 22,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 23,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 23,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 24,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 24,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 25,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 25,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 26,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 26,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 27,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 27,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 28,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 28,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 29,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 29,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 30,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 30,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 31,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 31,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 32,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 32,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 33,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 33,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 34,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 34,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 35,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 35,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 36,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 36,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 37,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 37,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 38,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 38,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 39,
+          "id": "H1"
+        },
+        {
+          "phase": "A",
+          "stage": 39,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 51,
+          "id": "L1"
+        },
+        {
+          "phase": "A",
+          "stage": 52,
+          "id": "L1"
+        },
+        {
+          "phase": "A",
+          "stage": 53,
+          "id": "L1"
+        },
+        {
+          "phase": "A",
+          "stage": 54,
+          "id": "L1"
+        },
+        {
+          "phase": "A",
+          "stage": 55,
+          "id": "L1"
+        },
+        {
+          "phase": "A",
+          "stage": 56,
+          "id": "L1"
+        },
+        {
+          "phase": "A",
+          "stage": 57,
+          "id": "L1"
+        },
+        {
+          "phase": "A",
+          "stage": 58,
+          "id": "L1"
+        },
+        {
+          "phase": "A",
+          "stage": 59,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 0,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 1,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 2,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 3,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 4,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 4,
+          "id": "J3"
+        },
+        {
+          "phase": "B",
+          "stage": 5,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 5,
+          "id": "J3"
+        },
+        {
+          "phase": "B",
+          "stage": 6,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 6,
+          "id": "J3"
+        },
+        {
+          "phase": "B",
+          "stage": 6,
+          "id": "V1"
+        },
+        {
+          "phase": "B",
+          "stage": 7,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 7,
+          "id": "J3"
+        },
+        {
+          "phase": "B",
+          "stage": 7,
+          "id": "V1"
+        },
+        {
+          "phase": "B",
+          "stage": 8,
+          "id": "J3"
+        },
+        {
+          "phase": "B",
+          "stage": 8,
+          "id": "V1"
+        },
+        {
+          "phase": "B",
+          "stage": 9,
+          "id": "J3"
+        },
+        {
+          "phase": "B",
+          "stage": 9,
+          "id": "V1"
+        },
+        {
+          "phase": "B",
+          "stage": 10,
+          "id": "J3"
+        },
+        {
+          "phase": "B",
+          "stage": 10,
+          "id": "V1"
+        },
+        {
+          "phase": "B",
+          "stage": 11,
+          "id": "V1"
+        },
+        {
+          "phase": "B",
+          "stage": 12,
+          "id": "V1"
+        },
+        {
+          "phase": "B",
+          "stage": 27,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 28,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 29,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 30,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 31,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 32,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 33,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 34,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 35,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 36,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 37,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 38,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 39,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 40,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 41,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 41,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 42,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 42,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 43,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 43,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 44,
+          "id": "L1"
+        },
+        {
+          "phase": "B",
+          "stage": 44,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 45,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 46,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 47,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 48,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 49,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 50,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 51,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 51,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 52,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 52,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 53,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 53,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 54,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 54,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 55,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 55,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 56,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 56,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 57,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 57,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 58,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 58,
+          "id": "R2"
+        },
+        {
+          "phase": "B",
+          "stage": 59,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 60,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 61,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 68,
+          "id": "V3"
+        },
+        {
+          "phase": "B",
+          "stage": 69,
+          "id": "V3"
+        },
+        {
+          "phase": "B",
+          "stage": 70,
+          "id": "V3"
+        },
+        {
+          "phase": "B",
+          "stage": 71,
+          "id": "V3"
+        },
+        {
+          "phase": "B",
+          "stage": 72,
+          "id": "V3"
+        },
+        {
+          "phase": "B",
+          "stage": 73,
+          "id": "V3"
+        },
+        {
+          "phase": "B",
+          "stage": 74,
+          "id": "V3"
+        },
+        {
+          "phase": "B",
+          "stage": 75,
+          "id": "V3"
+        },
+        {
+          "phase": "B",
+          "stage": 76,
+          "id": "V3"
+        },
+        {
+          "phase": "B",
+          "stage": 79,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 80,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 81,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 82,
+          "id": "H2"
+        },
+        {
+          "phase": "C",
+          "stage": 0,
+          "id": "L1"
+        },
+        {
+          "phase": "C",
+          "stage": 1,
+          "id": "L1"
+        },
+        {
+          "phase": "C",
+          "stage": 2,
+          "id": "L1"
+        },
+        {
+          "phase": "C",
+          "stage": 3,
+          "id": "L1"
+        },
+        {
+          "phase": "C",
+          "stage": 4,
+          "id": "L1"
+        },
+        {
+          "phase": "C",
+          "stage": 5,
+          "id": "L1"
+        },
+        {
+          "phase": "C",
+          "stage": 6,
+          "id": "L1"
+        }
+      ],
+      "viable": false
+    },
+    {
+      "name": "南側中央・三層",
+      "x": 25.2,
+      "z": 25.2,
+      "minY": -13,
+      "maxY": 19,
+      "shaft": {
+        "min": [
+          25.2,
+          -13,
+          25.2
+        ],
+        "max": [
+          29.6,
+          19,
+          29.6
+        ]
+      },
+      "stable": [
+        {
+          "phase": "A",
+          "id": "V2"
+        },
+        {
+          "phase": "B",
+          "id": "V2"
+        }
+      ],
+      "swept": [
+        {
+          "phase": "A",
+          "stage": 0,
+          "id": "V2"
+        },
+        {
+          "phase": "A",
+          "stage": 1,
+          "id": "V2"
+        },
+        {
+          "phase": "A",
+          "stage": 2,
+          "id": "V2"
+        },
+        {
+          "phase": "A",
+          "stage": 3,
+          "id": "V2"
+        },
+        {
+          "phase": "A",
+          "stage": 4,
+          "id": "V2"
+        },
+        {
+          "phase": "A",
+          "stage": 5,
+          "id": "V2"
+        },
+        {
+          "phase": "A",
+          "stage": 6,
+          "id": "V2"
+        },
+        {
+          "phase": "A",
+          "stage": 7,
+          "id": "V2"
+        },
+        {
+          "phase": "A",
+          "stage": 8,
+          "id": "V2"
+        },
+        {
+          "phase": "B",
+          "stage": 15,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 16,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 17,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 18,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 19,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 20,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 21,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 22,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 23,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 24,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 25,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 26,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 36,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 37,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 41,
+          "id": "V2"
+        },
+        {
+          "phase": "B",
+          "stage": 42,
+          "id": "V2"
+        },
+        {
+          "phase": "B",
+          "stage": 43,
+          "id": "V2"
+        },
+        {
+          "phase": "B",
+          "stage": 44,
+          "id": "V2"
+        },
+        {
+          "phase": "B",
+          "stage": 45,
+          "id": "V2"
+        },
+        {
+          "phase": "B",
+          "stage": 46,
+          "id": "V2"
+        },
+        {
+          "phase": "B",
+          "stage": 47,
+          "id": "V2"
+        },
+        {
+          "phase": "B",
+          "stage": 48,
+          "id": "V2"
+        },
+        {
+          "phase": "B",
+          "stage": 49,
+          "id": "V2"
+        },
+        {
+          "phase": "B",
+          "stage": 50,
+          "id": "V2"
+        },
+        {
+          "phase": "B",
+          "stage": 51,
+          "id": "V2"
+        },
+        {
+          "phase": "C",
+          "stage": 1,
+          "id": "V2"
+        },
+        {
+          "phase": "C",
+          "stage": 2,
+          "id": "V2"
+        },
+        {
+          "phase": "C",
+          "stage": 3,
+          "id": "V2"
+        },
+        {
+          "phase": "C",
+          "stage": 4,
+          "id": "V2"
+        },
+        {
+          "phase": "C",
+          "stage": 5,
+          "id": "V2"
+        },
+        {
+          "phase": "C",
+          "stage": 6,
+          "id": "V2"
+        }
+      ],
+      "viable": false
+    },
+    {
+      "name": "東側中央・三層",
+      "x": 33.6,
+      "z": 8.4,
+      "minY": -13,
+      "maxY": 19,
+      "shaft": {
+        "min": [
+          33.6,
+          -13,
+          8.4
+        ],
+        "max": [
+          38,
+          19,
+          12.8
+        ]
+      },
+      "stable": [
+        {
+          "phase": "B",
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "id": "G1"
+        }
+      ],
+      "swept": [
+        {
+          "phase": "A",
+          "stage": 11,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 12,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 13,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 14,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 15,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 16,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 17,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 18,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 19,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 20,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 21,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 22,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 23,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 24,
+          "id": "E1"
+        },
+        {
+          "phase": "A",
+          "stage": 24,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 25,
+          "id": "E1"
+        },
+        {
+          "phase": "A",
+          "stage": 25,
+          "id": "M1"
+        },
+        {
+          "phase": "A",
+          "stage": 26,
+          "id": "E1"
+        },
+        {
+          "phase": "A",
+          "stage": 27,
+          "id": "E1"
+        },
+        {
+          "phase": "A",
+          "stage": 28,
+          "id": "E1"
+        },
+        {
+          "phase": "A",
+          "stage": 29,
+          "id": "E1"
+        },
+        {
+          "phase": "A",
+          "stage": 30,
+          "id": "E1"
+        },
+        {
+          "phase": "A",
+          "stage": 30,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 31,
+          "id": "E1"
+        },
+        {
+          "phase": "A",
+          "stage": 31,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 32,
+          "id": "E1"
+        },
+        {
+          "phase": "A",
+          "stage": 32,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 33,
+          "id": "E1"
+        },
+        {
+          "phase": "A",
+          "stage": 33,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 34,
+          "id": "E1"
+        },
+        {
+          "phase": "A",
+          "stage": 34,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 35,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 36,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 37,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 38,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 39,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 39,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 40,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 40,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 41,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 41,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 42,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 42,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 43,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 43,
+          "id": "G1"
+        },
+        {
+          "phase": "A",
+          "stage": 44,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 45,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 46,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 47,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 48,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 49,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 50,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 51,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 52,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 53,
+          "id": "H2"
+        },
+        {
+          "phase": "A",
+          "stage": 54,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 1,
+          "id": "E3"
+        },
+        {
+          "phase": "B",
+          "stage": 2,
+          "id": "E3"
+        },
+        {
+          "phase": "B",
+          "stage": 3,
+          "id": "E3"
+        },
+        {
+          "phase": "B",
+          "stage": 3,
+          "id": "M1"
+        },
+        {
+          "phase": "B",
+          "stage": 4,
+          "id": "E3"
+        },
+        {
+          "phase": "B",
+          "stage": 4,
+          "id": "M1"
+        },
+        {
+          "phase": "B",
+          "stage": 5,
+          "id": "E3"
+        },
+        {
+          "phase": "B",
+          "stage": 5,
+          "id": "M1"
+        },
+        {
+          "phase": "B",
+          "stage": 6,
+          "id": "E3"
+        },
+        {
+          "phase": "B",
+          "stage": 6,
+          "id": "M1"
+        },
+        {
+          "phase": "B",
+          "stage": 7,
+          "id": "E3"
+        },
+        {
+          "phase": "B",
+          "stage": 7,
+          "id": "M1"
+        },
+        {
+          "phase": "B",
+          "stage": 8,
+          "id": "E3"
+        },
+        {
+          "phase": "B",
+          "stage": 8,
+          "id": "M1"
+        },
+        {
+          "phase": "B",
+          "stage": 9,
+          "id": "E3"
+        },
+        {
+          "phase": "B",
+          "stage": 9,
+          "id": "M1"
+        },
+        {
+          "phase": "B",
+          "stage": 10,
+          "id": "E3"
+        },
+        {
+          "phase": "B",
+          "stage": 10,
+          "id": "M1"
+        },
+        {
+          "phase": "B",
+          "stage": 11,
+          "id": "M1"
+        },
+        {
+          "phase": "B",
+          "stage": 21,
+          "id": "G1"
+        },
+        {
+          "phase": "B",
+          "stage": 22,
+          "id": "G1"
+        },
+        {
+          "phase": "B",
+          "stage": 23,
+          "id": "G1"
+        },
+        {
+          "phase": "B",
+          "stage": 24,
+          "id": "G1"
+        },
+        {
+          "phase": "B",
+          "stage": 25,
+          "id": "G1"
+        },
+        {
+          "phase": "B",
+          "stage": 26,
+          "id": "G1"
+        },
+        {
+          "phase": "B",
+          "stage": 27,
+          "id": "G1"
+        },
+        {
+          "phase": "B",
+          "stage": 28,
+          "id": "G1"
+        },
+        {
+          "phase": "B",
+          "stage": 29,
+          "id": "G1"
+        },
+        {
+          "phase": "B",
+          "stage": 30,
+          "id": "G1"
+        },
+        {
+          "phase": "B",
+          "stage": 42,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 43,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 44,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 45,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 46,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 47,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 48,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 49,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 50,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 51,
+          "id": "H1"
+        },
+        {
+          "phase": "B",
+          "stage": 56,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 57,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 58,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 59,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 60,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 61,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 62,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 63,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 64,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 65,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 66,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 67,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 68,
+          "id": "H2"
+        },
+        {
+          "phase": "B",
+          "stage": 69,
+          "id": "H2"
+        }
+      ],
+      "viable": false
+    },
+    {
+      "name": "G3欠けセルの居住区EV・二層",
+      "x": 34.8,
+      "z": 33.6,
+      "w": 4.4,
+      "d": 4.4,
+      "minY": -13,
+      "maxY": 6.2,
+      "adopted": true,
+      "shaft": {
+        "min": [
+          34.8,
+          -13,
+          33.6
+        ],
+        "max": [
+          39.199999999999996,
+          6.2,
+          38
+        ]
+      },
+      "stable": [],
+      "swept": [],
+      "viable": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "base": "835c2efe63ad0645324236a5274bbfb588d2068f",
+  "tag": "stage7-frozen",
+  "github": "https://github.com/merkatzzz/tsugime-transport-lab",
+  "branch": "stage8-development",
+  "frozenSiteVersion": 12,
+  "source": {
+    "url": "downloads/stage7-frozen-source.zip",
+    "sha256": "c23864156fb462f7c42ad4bff1e7e3baadd727878b8b1d7d05b74e09538bdd92",
+    "bytes": 14654257,
+    "matchedFiles": 1686,
+    "zipCRC": true,
+    "gitBlobHashes": true,
+    "contains": "Every tracked file: assets, source, prior snapshots, docs, experiment evidence, tests, hosting config"
+  },
+  "build": {
+    "path": "/workspace/work/stage7-frozen-build.tar.gz",
+    "sha256": "fedd3de0c6532466573f86210f520bb1abb3d3d4997aa51666451b0f7bed284b",
+    "bytes": 41237102,
+    "publicAsset": false,
+    "reason": "40 MiB build TAR exceeds per-asset hosting limit; preserved separately in workspace, Site version 12 also remains"
+  },
+  "restore": {
+    "checkout": "/workspace/work/stage7-restore-check",
+    "tests": 121,
+    "passed": 121,
+    "failed": 0,
+    "gpuVerified": false,
+    "preview": "relay could not open browser port 4173: timed out waiting for relay readiness"
+  },
+  "comparison": {
+    "route": "stage7/",
+    "compact": true,
+    "canonical": "Use fixed tag/full ZIP, not the comparison copy, for exact reconstruction"
+  },
+  "unchanged": "stage6-frozen and all original stage1..6 source and served files unchanged"
+}

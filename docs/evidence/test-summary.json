@@ -2,88 +2,41 @@
   "ok": true,
   "rows": [
     {
-      "stage": "stage8",
-      "exit": 0,
+      "name": "current-stage9",
+      "tests": 160,
+      "pass": 160,
+      "fail": 0
+    },
+    {
+      "name": "saved-stage8",
       "tests": 146,
-      "passed": 146,
-      "failed": 0
+      "pass": 146,
+      "fail": 0
     },
     {
-      "stage": "stage1",
-      "exit": 0,
-      "tests": 24,
-      "passed": 24,
-      "failed": 0
-    },
-    {
-      "stage": "stage2",
-      "exit": 0,
-      "tests": 44,
-      "passed": 44,
-      "failed": 0
-    },
-    {
-      "stage": "stage3",
-      "exit": 0,
-      "tests": 54,
-      "passed": 54,
-      "failed": 0
-    },
-    {
-      "stage": "stage4",
-      "exit": 0,
-      "tests": 70,
-      "passed": 70,
-      "failed": 0
-    },
-    {
-      "stage": "stage5",
-      "exit": 0,
-      "tests": 92,
-      "passed": 92,
-      "failed": 0
-    },
-    {
-      "stage": "stage6",
-      "exit": 0,
-      "tests": 106,
-      "passed": 106,
-      "failed": 0
-    },
-    {
-      "stage": "stage7",
-      "exit": 0,
-      "tests": 121,
-      "passed": 121,
-      "failed": 0
+      "name": "post-inventory-evacuation-guard",
+      "tests": 7,
+      "pass": 7,
+      "fail": 0
     }
   ],
-  "checks": [
-    {
-      "name": "seams",
-      "exit": 0
-    },
-    {
-      "name": "walks",
-      "exit": 0
-    },
-    {
-      "name": "doors",
-      "exit": 0
-    },
-    {
-      "name": "local-lift",
-      "exit": 0
-    },
-    {
-      "name": "surface-equivalence",
-      "exit": 0
-    }
-  ],
-  "total": 657,
+  "checks": {
+    "plans": 18,
+    "seamConditions": 6,
+    "exposedCoplanarFaces": 0,
+    "surfaceConditions": 24,
+    "doors": 24,
+    "supplyWalks": 12,
+    "inventoryEvacuation": true
+  },
+  "previousFrozenStages": {
+    "tests": 511,
+    "note": "Earlier successful evidence for unchanged stages1..7 retained; not counted as rerun in this session."
+  },
   "browserQA": {
-    "verified": false,
-    "reason": "Managed Sites preview relay port 4173 readiness timeout also occurs on exact frozen Stage 7",
+    "webgl": false,
+    "fps": false,
+    "reason": "sites-preview relay port 4173 readiness timeout",
     "audioHeard": false
   }
 }

@@ -1,0 +1,32 @@
+{
+  "base": "159673a79b1dd6a18b149d2e0bb95d16792c257a",
+  "tag": "stage8-frozen",
+  "branch": "stage9-development",
+  "siteVersion": 13,
+  "source": {
+    "bytes": 16551498,
+    "sha256": "80a5de7eb4d7bdf2d35c9f43527fd4f735436bf4e2ec1fad73d31e61d6c3f1bd",
+    "matchedTrackedFiles": 2020,
+    "zipCRC": true,
+    "gitBlobHashes": true,
+    "url": "downloads/stage8-frozen-source.zip"
+  },
+  "build": {
+    "path": "/workspace/work/stage8-frozen-build.tar.gz",
+    "bytes": 59045122,
+    "sha256": "151cfa1b5058766ce0d7383ea8a5940c7c2fb8a66c1dcb45b3a4dba0d53ac15d",
+    "note": "Retained separately; too large for one hosted static asset"
+  },
+  "restore": {
+    "checkout": "/workspace/work/stage8-restore-check",
+    "passed": 146,
+    "failed": 0,
+    "webgl": false,
+    "preview": "relay port 4173 readiness timeout"
+  },
+  "comparison": {
+    "route": "stage8/",
+    "compact": true,
+    "canonical": "Exact tag or complete source ZIP, not compact comparison copy"
+  }
+}

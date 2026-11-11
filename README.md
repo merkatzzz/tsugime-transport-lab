@@ -1,22 +1,21 @@
-# 『継ぎ目の部屋』独立建築・搬送実験 — 第八段階
+# 『継ぎ目の部屋』独立建築・搬送実験 — 第九段階
 
-45搬送体・59基本チャンク（第七段階40体・50セルから＋5体・9セル）。独立実験の既存施設を継続し、本編・GitHub main・保存版は変更しません。主題は軽量化、個室固定壁の修正、近距離保管・近傍/現地回転、混成多セル住宅と二層の居住区EVです。
+47搬送体・64基本チャンク。第八段階の三層・完全物理搬送・二EV・描画cacheを維持し、2人の住民の生活、3D個室訪問、店舗遮蔽、所持品/使用と保存を追加しました。本編とは別の実験です。
 
 - 実験サイト：https://tsugime-architecture-transport-lab.merkatzzz.chatgpt.site
-- GitHub：https://github.com/merkatzzz/tsugime-transport-lab/tree/stage8-development
-- 再開ブランチ：`stage8-development`。配信元SiteのmainとGitHubのmainは別物です。
-- [検証報告](docs/REPORT.md) ／ [設計・制約](docs/STAGE8.md)
-- 保存第七段階：`stage7-frozen` = `835c2efe63ad0645324236a5274bbfb588d2068f`、Site保存版12。
-- [第七段階の完全ソースZIP](https://tsugime-architecture-transport-lab.merkatzzz.chatgpt.site/downloads/stage7-frozen-source.zip)。1686追跡ファイルをGit blobハッシュ・ZIP CRCで照合し、独立復元で121件通過。
-- 同規模比較タグ：`stage8-same-size` = `d92a643`（133件）、ABC形状キャッシュ追加後の比較タグ `stage8-optimized-reference` = `b9e57b9`（134件）。どちらも40体50セル・旧搬送経路。
-- 比較版 `stage1/`〜`stage7/`。6/7の比較コピーは古い入れ子・ZIPを省いたもの。完全復元の正本は固定タグ・完全ZIPです。
+- 再開ブランチ：`stage9-development`（GitHub main・本編は変更しない）。
+- [検証報告](docs/REPORT.md) ／ [設計・制約](docs/STAGE9.md)
+- 第八段階正本：`stage8-frozen` = `159673a79b1dd6a18b149d2e0bb95d16792c257a`、Site保存版13。
+- [完全保存ZIP](https://tsugime-architecture-transport-lab.merkatzzz.chatgpt.site/downloads/stage8-frozen-source.zip)：2020追跡ファイル・Git blobハッシュ/ZIP CRC照合済み。復元先で146テスト通過。SHA-256 `80a5de7eb4d7bdf2d35c9f43527fd4f735436bf4e2ec1fad73d31e61d6c3f1bd`。
+- 実ビルドは `/workspace/work/stage8-frozen-build.tar.gz` に別保存。59,045,122bytes、SHA-256 `151cfa1b5058766ce0d7383ea8a5940c7c2fb8a66c1dcb45b3a4dba0d53ac15d`。Site13も残す。
+- 比較用 `stage1/`〜`stage8/`。6以降は旧版の入れ子/ZIPを省いた比較コピー。完全復元は固定タグまたは完全ZIPを使う。
 
 ## 起動・検証
 
-Node.js 22以上、Python 3。標準ライブラリと同梱Three.jsのみ、依存インストール・コンパイルは不要です。
+Node.js 22以上とPython 3。Three.js同梱、外部依存の追加インストール不要。
 
 ```sh
-git clone --branch stage8-development https://github.com/merkatzzz/tsugime-transport-lab.git
+git clone --branch stage9-development https://github.com/merkatzzz/tsugime-transport-lab.git
 cd tsugime-transport-lab
 npm test
 npm run verify
@@ -26,55 +25,39 @@ python3 scripts/check-package.py
 npm start
 ```
 
-ローカルで http://localhost:8000 を開きます。file://は使いません。管理クラウドのブラウザ確認には `sites-preview start <checkout絶対パス>` を使用し、中継障害を別サーバーで迂回しません。
+ローカルは http://localhost:8000 。file://は使用しない。管理クラウドのQAは `sites-preview start <checkout絶対パス>` のみ。4173中継準備タイムアウトのため実WebGLは未確認で、別サーバーで迂回していません。
 
-`verify` は現行146件と保存版1〜7、面重複・供給室12歩行・22扉掃引・第二EV候補・24条件の全体/局所CSG一致を検査します。`evidence` は18計画とABC三層図・通路グラフを出力。`package` は配布HTML・比較版・完全起動用ソースZIPを生成します。
+`verify` は現行・保存版1〜8と面重複/供給室12歩行/扉掃引/EV/24条件CSG一致を再実行（数分以上）。`evidence` は18計画とABC三層図を出力します。構成変更時は `node scripts/precompute-stage8.mjs` で現在構成の18計画・歩行テンプレートを再生成。命名は互換維持で、前提ハッシュが不一致ならアプリは再計算します。
 
-`dist/assets/transport-plans.json` は18計画と参照歩行の事前計算データです。構造変更時は `node scripts/precompute-stage8.mjs` で再生成。前提ハッシュ不一致ならアプリは無条件再利用せず、再計画します。採用計画も実位置に対して搬送開始時に連続再検証します。
+再梱包では別配布の完全ZIP6・7・8を `dist/downloads/stageN-frozen-source.zip` へ置くか、Gitタグから再生成してください。25MiB/asset制限のため現行ZIPへ旧完全ZIPを入れ子にはしません。起動・テストにGitは不要です。
 
-## 第七段階を非破壊で復元
-
-既存作業ツリーのcheckout/resetではなく、別ディレクトリに展開します。
+## 第八段階へ非破壊で戻す
 
 ```sh
 git fetch origin --tags
-git worktree add --detach ../tsugime-stage7 stage7-frozen
-cd ../tsugime-stage7
+git worktree add --detach ../tsugime-stage8 stage8-frozen
+cd ../tsugime-stage8
 npm test
 npm start
 ```
 
-GitHubをoriginでcloneした場合も上記で復元可能。完全ZIPは新しい空ディレクトリへ展開して起動します。ZIP-only環境の再梱包には、別配布の完全保存ZIP6/7を `dist/downloads/stage6-frozen-source.zip` と `dist/downloads/stage7-frozen-source.zip` に置いてください。通常の起動・テストにGitは不要です。25MiB/asset制限のため、完全保存ZIPを現行ZIPへ入れ子にはしていません。
+現行作業ツリーをreset/checkoutで潰しません。ZIPは別の空ディレクトリへ展開。保存タグ1〜7・既存本編も変更しません。
 
-第七段階ZIP SHA-256：`c23864156fb462f7c42ad4bff1e7e3baadd727878b8b1d7d05b74e09538bdd92`。
-保全ビルド：`/workspace/work/stage7-frozen-build.tar.gz`（41,237,102bytes、配信上限を超えるため別保存）。
-SHA-256：`fedd3de0c6532466573f86210f520bb1abb3d3d4997aa51666451b0f7bed284b`。
-詳細は [保全証跡](docs/evidence/stage8-preservation.json)。
+## 操作と試験場所
 
-第六段階タグ `stage6-frozen` = `626e4cea2fa902f367e85ecfc4e0ea519f747705` は変更しません。以前の全保存版も残します。
+- WASD 3.6m/s、Shift 5.2m/s、ドラッグ/矢印で視線、Eまたは近距離クリックで扉/会話。
+- 生活時計は搬送倍率と独立。店主は0〜15秒にP9住戸、15〜60秒にT1。住人は8秒ずらし、R3↔T2。名目在室15/勤務45秒。会話/訪問/取引・遮蔽・観察で所在確定を保留できます。
+- R3の住人扉、P9の住戸901：在室時は同じ施設の3D固定視点へ。不在時は画面下に次の在室時刻。訪問中は「話しかける」、終了はS/「廊下へ戻る」。旧SVGは保存版に残し、現行訪問には重ねません。
+- T1は布カーテン、T2は金属営業シャッター。開店後は近くで会話/取引。閉店後の新取引は不可、進行中の取引は完了可。店内にいるときや俯瞰で観察中はワープを保留します。
+- 「仮の届け物を受け取る」→「所持品」で閲覧→「品物を使う」で品と対象を選択。店主へ正しく渡せば一度だけ消費。扉/別NPCへの誤使用は消費しません。店主在室中の訪問でも手渡せます。
+- 「保存/読込」はブラウザ内の専用slot。搬送・EV移動中は保存不可、完了後に保存。時計・NPC所在・遮蔽物・訪問/会話/取引・品物・使用結果・ABC配置を復元します。
+- 新施設：第二層G5東（A/C）またはG3東（B）→J9単独廊下→P9四連結共同棟。北側2室と南側の一続きの共用室を持ち、P9はBで0.4mのドック整列、Cで復帰します。
+- 既存H1/H2・C0/Q1・N4/G2回転・S1遠隔往復・泉/生物・両EV・自動退避は維持。全層俯瞰で完全な物理搬送を表示できます。
 
-## 操作と新区域
+## 保存互換性と再開注意
 
-- WASD 3.6m/s、Shift 5.2m/s、矢印/ドラッグ視線、Eで扉・EV・会話。搬送速度と歩行速度は独立。
-- 既存のH1/H2分離・C0近道・Q1斜行点検通路・S1遠隔往復・5泉/4生物・NPC2体/R3一枚絵・自動退避・音声制御を維持。
-- A：第一層M1東→G1（二連結住宅）→G2（洗濯待合）→G4（二連結折れ通路）→G3（三連結L型居間）。G3南西の居住区EVで第二層G5へ。
-- B：G1はN1側、G3は第二層M1南、G5は第一層へ入替。G2は90度回転しG4へ接続。CでA配置へ戻り、C→Aでは新区域の不要搬送をしません。
-- 両EV：乗場E呼出→歩いてかご奥へ→E閉扉→閉鎖完了後だけ行先メニュー→昇降→開扉。Esc/取消は同階で開扉。西側EVは三層、居住区EVは第一・第二層。
-- 俯瞰＋全層で全搬送体の完全な連続移動を表示。見えない区画も物理計算からは除外しません。
-- 「性能ログ保存」は実ブラウザのrAF/CPUとrenderer.infoをJSON保存します。CPU計測資料の数値はFPSではありません。
+独立実験の旧ソースには本編の所持品/回収売却・順応度・永続セーブは存在しません。新しい `tsugime.transport.stage9.v1` だけを書き、他slotを消さず、本編から移植しません。通常使用品と回収試料をkindで区別。未知の品IDは保持し、schema0の単純inventoryを取り込めるAPIを設けています。任意の本編セーブの互換性を保証するものではありません。
 
-## 性能比較の再実行
+life.jsが所在の唯一の情報源、life-viewが各NPCを一つだけ生成/付替。items/save-life/experience/mainと関連テストを一組で評価してください。営業用パネルは移動用shuttersと独立し、固定壁・物理経路・cacheの削除で負荷を逃がしません。
 
-`stage7-frozen`、`stage8-optimized-reference` を別worktreeへ展開し、同じ現行ハーネスを各checkoutへ順番に実行します。
-
-```sh
-node --expose-gc scripts/benchmark-stage8.mjs <比較checkout絶対パス> <結果JSON>
-```
-
-同じ1280×720/FOV54、速度8、dt0.1、三周・9遷移。WebGLレンダラー/Canvasラベルはstubです。FPS・実draw calls・GPU時間は未測定。Three.js実形状・可視候補数、CPU処理・p95/p99/最大、再生成・破棄、GC後メモリ、計画時間を記録します。CPU比較中に重い別テストを実行しないでください。
-
-## 再開時の注意・限界
-
-固定壁/開口規則はwall-roles/stage8-walls/architecture、描画はsurfaces/diagonal-caps/static-batches/surface-variants/view、計画はtransport-policy/transport/stage8-layout、EVはlocal-lift-*/lift/simulation/main/mapsを関連テストと一組で扱います。局所的な変更でも全18計画・形状一致・歩行を再確認してください。
-
-管理プレビューは正確な第七段階復元でも4173中継準備タイムアウト。実WebGL目視、視点移動・操作感・実音量/ミュート/聴感は未確認。CPU試験を試遊成功として報告しません。初回ABC形状生成のピーク、キャッシュの追加メモリ、実GPU性能が次の検証課題です。EVを使う階またぎ自動退避、複数セル回転、任意連続幅のドッキングは対象外。故障・本編経済・新長編シナリオは追加していません。
+見た目の自然さ、実FPS・操作感・聴感は未確認。CPUの実形状・光線・保存・操作・搬送試験と区別します。所持品美術・経済・故障・長編イベント・徒歩通勤・多数の鍵・盗難は追加していません。

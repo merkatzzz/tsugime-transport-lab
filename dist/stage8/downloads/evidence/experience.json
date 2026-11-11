@@ -1,0 +1,1217 @@
+[
+  {
+    "phase": "A",
+    "npcs": [
+      {
+        "id": "shopkeeper",
+        "body": "T1",
+        "position": {
+          "x": 28.8,
+          "y": 12.8,
+          "z": 1.9
+        },
+        "camera": null
+      },
+      {
+        "id": "resident",
+        "body": "R3",
+        "position": {
+          "x": 1.55,
+          "y": 12.8,
+          "z": 23.05
+        },
+        "camera": {
+          "x": 3.55,
+          "y": 14.5,
+          "z": 22.950000000000003
+        }
+      }
+    ],
+    "doors": [
+      {
+        "body": "R1",
+        "id": "R1-door",
+        "a": [
+          3.4,
+          2.6
+        ],
+        "b": [
+          4.6,
+          2.6
+        ],
+        "open": false,
+        "label": "住戸301",
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90
+      },
+      {
+        "body": "R2",
+        "id": "R2-door",
+        "a": [
+          5.8,
+          2.2
+        ],
+        "b": [
+          5.8,
+          3.4
+        ],
+        "open": false,
+        "label": "小住戸",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "R3",
+        "id": "R3-door",
+        "a": [
+          4.6,
+          5
+        ],
+        "b": [
+          5.8,
+          5
+        ],
+        "open": false,
+        "label": "個室201",
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": 90
+      },
+      {
+        "body": "R4",
+        "id": "R4-door",
+        "a": [
+          2.8,
+          2.9
+        ],
+        "b": [
+          4,
+          2.9
+        ],
+        "open": false,
+        "label": "小居室",
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90
+      },
+      {
+        "body": "T2",
+        "id": "T2-door",
+        "a": [
+          10,
+          3.4
+        ],
+        "b": [
+          11.2,
+          3.4
+        ],
+        "open": false,
+        "label": "奥店舗",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "E1",
+        "id": "E1-door",
+        "a": [
+          4.5,
+          2.7
+        ],
+        "b": [
+          5.7,
+          2.7
+        ],
+        "open": false,
+        "label": "東翼・個室401",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "E2",
+        "id": "E2-door",
+        "a": [
+          4.5,
+          2.7
+        ],
+        "b": [
+          5.7,
+          2.7
+        ],
+        "open": false,
+        "label": "東翼・読書室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "E3",
+        "id": "E3-door",
+        "a": [
+          4.5,
+          2.7
+        ],
+        "b": [
+          5.7,
+          2.7
+        ],
+        "open": false,
+        "label": "東翼・個室402",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "E4",
+        "id": "E4-door",
+        "a": [
+          4.5,
+          2.7
+        ],
+        "b": [
+          5.7,
+          2.7
+        ],
+        "open": false,
+        "label": "東翼・作業室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "K1",
+        "id": "K1-door",
+        "a": [
+          2.8,
+          2.9
+        ],
+        "b": [
+          4,
+          2.9
+        ],
+        "open": false,
+        "label": "第一層の小居室",
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90
+      },
+      {
+        "body": "U2",
+        "id": "U2-door",
+        "a": [
+          2.8,
+          1
+        ],
+        "b": [
+          2.8,
+          2.2
+        ],
+        "open": false,
+        "label": "空室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "U4",
+        "id": "U4-door",
+        "a": [
+          2.8,
+          1
+        ],
+        "b": [
+          2.8,
+          2.2
+        ],
+        "open": false,
+        "label": "物置",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "D2",
+        "id": "D2-door",
+        "a": [
+          3.2,
+          2.6
+        ],
+        "b": [
+          4.4,
+          2.6
+        ],
+        "open": false,
+        "label": "遠隔区域の小部屋",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "D3",
+        "id": "D3-door",
+        "a": [
+          3.2,
+          2.6
+        ],
+        "b": [
+          4.4,
+          2.6
+        ],
+        "open": false,
+        "label": "遠隔区域の小部屋",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "V1",
+        "id": "V1-door",
+        "a": [
+          2.8,
+          10
+        ],
+        "b": [
+          2.8,
+          11.2
+        ],
+        "open": false,
+        "label": "西の居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "V1",
+        "id": "V1-wing",
+        "a": [
+          12.8,
+          11
+        ],
+        "b": [
+          14,
+          11
+        ],
+        "open": false,
+        "label": "奥の居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "V2",
+        "id": "V2-west",
+        "a": [
+          3,
+          1
+        ],
+        "b": [
+          3,
+          2.2
+        ],
+        "open": false,
+        "label": "西居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "V2",
+        "id": "V2-east",
+        "a": [
+          11,
+          1
+        ],
+        "b": [
+          11,
+          2.2
+        ],
+        "open": false,
+        "label": "東居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "V3",
+        "id": "V3-door",
+        "a": [
+          2.6,
+          1
+        ],
+        "b": [
+          2.6,
+          2.2
+        ],
+        "open": false,
+        "label": "仮の居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "G1",
+        "id": "G1-west",
+        "a": [
+          3.4,
+          2.5
+        ],
+        "b": [
+          4.6,
+          2.5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false,
+        "label": "北の西住戸"
+      },
+      {
+        "body": "G1",
+        "id": "G1-east",
+        "a": [
+          11.4,
+          2.5
+        ],
+        "b": [
+          12.6,
+          2.5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false,
+        "label": "北の東住戸"
+      },
+      {
+        "body": "G5",
+        "id": "G5-door",
+        "a": [
+          4.8,
+          1.2
+        ],
+        "b": [
+          4.8,
+          2.4
+        ],
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90,
+        "open": false,
+        "label": "EV脇の住戸"
+      }
+    ]
+  },
+  {
+    "phase": "B",
+    "npcs": [
+      {
+        "id": "shopkeeper",
+        "body": "T1",
+        "position": {
+          "x": 28.8,
+          "y": 12.8,
+          "z": 1.9
+        },
+        "camera": null
+      },
+      {
+        "id": "resident",
+        "body": "R3",
+        "position": {
+          "x": 1.55,
+          "y": 12.8,
+          "z": 23.05
+        },
+        "camera": {
+          "x": 3.55,
+          "y": 14.5,
+          "z": 22.950000000000003
+        }
+      }
+    ],
+    "doors": [
+      {
+        "body": "R1",
+        "id": "R1-door",
+        "a": [
+          3.4,
+          2.6
+        ],
+        "b": [
+          4.6,
+          2.6
+        ],
+        "open": false,
+        "label": "住戸301",
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90
+      },
+      {
+        "body": "R2",
+        "id": "R2-door",
+        "a": [
+          5.8,
+          2.2
+        ],
+        "b": [
+          5.8,
+          3.4
+        ],
+        "open": false,
+        "label": "小住戸",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "R3",
+        "id": "R3-door",
+        "a": [
+          4.6,
+          5
+        ],
+        "b": [
+          5.8,
+          5
+        ],
+        "open": false,
+        "label": "個室201",
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": 90
+      },
+      {
+        "body": "R4",
+        "id": "R4-door",
+        "a": [
+          2.8,
+          2.9
+        ],
+        "b": [
+          4,
+          2.9
+        ],
+        "open": false,
+        "label": "小居室",
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90
+      },
+      {
+        "body": "T2",
+        "id": "T2-door",
+        "a": [
+          10,
+          3.4
+        ],
+        "b": [
+          11.2,
+          3.4
+        ],
+        "open": false,
+        "label": "奥店舗",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "E1",
+        "id": "E1-door",
+        "a": [
+          4.5,
+          2.7
+        ],
+        "b": [
+          5.7,
+          2.7
+        ],
+        "open": false,
+        "label": "東翼・個室401",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "E2",
+        "id": "E2-door",
+        "a": [
+          4.5,
+          2.7
+        ],
+        "b": [
+          5.7,
+          2.7
+        ],
+        "open": false,
+        "label": "東翼・読書室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "E3",
+        "id": "E3-door",
+        "a": [
+          4.5,
+          2.7
+        ],
+        "b": [
+          5.7,
+          2.7
+        ],
+        "open": false,
+        "label": "東翼・個室402",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "E4",
+        "id": "E4-door",
+        "a": [
+          4.5,
+          2.7
+        ],
+        "b": [
+          5.7,
+          2.7
+        ],
+        "open": false,
+        "label": "東翼・作業室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "K1",
+        "id": "K1-door",
+        "a": [
+          2.8,
+          2.9
+        ],
+        "b": [
+          4,
+          2.9
+        ],
+        "open": false,
+        "label": "第一層の小居室",
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90
+      },
+      {
+        "body": "U2",
+        "id": "U2-door",
+        "a": [
+          2.8,
+          1
+        ],
+        "b": [
+          2.8,
+          2.2
+        ],
+        "open": false,
+        "label": "空室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "U4",
+        "id": "U4-door",
+        "a": [
+          2.8,
+          1
+        ],
+        "b": [
+          2.8,
+          2.2
+        ],
+        "open": false,
+        "label": "物置",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "D2",
+        "id": "D2-door",
+        "a": [
+          3.2,
+          2.6
+        ],
+        "b": [
+          4.4,
+          2.6
+        ],
+        "open": false,
+        "label": "遠隔区域の小部屋",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "D3",
+        "id": "D3-door",
+        "a": [
+          3.2,
+          2.6
+        ],
+        "b": [
+          4.4,
+          2.6
+        ],
+        "open": false,
+        "label": "遠隔区域の小部屋",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "V1",
+        "id": "V1-door",
+        "a": [
+          2.8,
+          10
+        ],
+        "b": [
+          2.8,
+          11.2
+        ],
+        "open": false,
+        "label": "西の居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "V1",
+        "id": "V1-wing",
+        "a": [
+          12.8,
+          11
+        ],
+        "b": [
+          14,
+          11
+        ],
+        "open": false,
+        "label": "奥の居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "V2",
+        "id": "V2-west",
+        "a": [
+          3,
+          1
+        ],
+        "b": [
+          3,
+          2.2
+        ],
+        "open": false,
+        "label": "西居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "V2",
+        "id": "V2-east",
+        "a": [
+          11,
+          1
+        ],
+        "b": [
+          11,
+          2.2
+        ],
+        "open": false,
+        "label": "東居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "V3",
+        "id": "V3-door",
+        "a": [
+          2.6,
+          1
+        ],
+        "b": [
+          2.6,
+          2.2
+        ],
+        "open": false,
+        "label": "仮の居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "G1",
+        "id": "G1-west",
+        "a": [
+          3.4,
+          2.5
+        ],
+        "b": [
+          4.6,
+          2.5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false,
+        "label": "北の西住戸"
+      },
+      {
+        "body": "G1",
+        "id": "G1-east",
+        "a": [
+          11.4,
+          2.5
+        ],
+        "b": [
+          12.6,
+          2.5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false,
+        "label": "北の東住戸"
+      },
+      {
+        "body": "G5",
+        "id": "G5-door",
+        "a": [
+          4.8,
+          1.2
+        ],
+        "b": [
+          4.8,
+          2.4
+        ],
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90,
+        "open": false,
+        "label": "EV脇の住戸"
+      }
+    ]
+  },
+  {
+    "phase": "C",
+    "npcs": [
+      {
+        "id": "shopkeeper",
+        "body": "T1",
+        "position": {
+          "x": 28.8,
+          "y": 12.8,
+          "z": 1.9
+        },
+        "camera": null
+      },
+      {
+        "id": "resident",
+        "body": "R3",
+        "position": {
+          "x": 1.55,
+          "y": 12.8,
+          "z": 14.65
+        },
+        "camera": {
+          "x": 3.55,
+          "y": 14.5,
+          "z": 14.55
+        }
+      }
+    ],
+    "doors": [
+      {
+        "body": "R1",
+        "id": "R1-door",
+        "a": [
+          3.4,
+          2.6
+        ],
+        "b": [
+          4.6,
+          2.6
+        ],
+        "open": false,
+        "label": "住戸301",
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90
+      },
+      {
+        "body": "R2",
+        "id": "R2-door",
+        "a": [
+          5.8,
+          2.2
+        ],
+        "b": [
+          5.8,
+          3.4
+        ],
+        "open": false,
+        "label": "小住戸",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "R3",
+        "id": "R3-door",
+        "a": [
+          4.6,
+          5
+        ],
+        "b": [
+          5.8,
+          5
+        ],
+        "open": false,
+        "label": "個室201",
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": 90
+      },
+      {
+        "body": "R4",
+        "id": "R4-door",
+        "a": [
+          2.8,
+          2.9
+        ],
+        "b": [
+          4,
+          2.9
+        ],
+        "open": false,
+        "label": "小居室",
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90
+      },
+      {
+        "body": "T2",
+        "id": "T2-door",
+        "a": [
+          10,
+          3.4
+        ],
+        "b": [
+          11.2,
+          3.4
+        ],
+        "open": false,
+        "label": "奥店舗",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "E1",
+        "id": "E1-door",
+        "a": [
+          4.5,
+          2.7
+        ],
+        "b": [
+          5.7,
+          2.7
+        ],
+        "open": false,
+        "label": "東翼・個室401",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "E2",
+        "id": "E2-door",
+        "a": [
+          4.5,
+          2.7
+        ],
+        "b": [
+          5.7,
+          2.7
+        ],
+        "open": false,
+        "label": "東翼・読書室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "E3",
+        "id": "E3-door",
+        "a": [
+          4.5,
+          2.7
+        ],
+        "b": [
+          5.7,
+          2.7
+        ],
+        "open": false,
+        "label": "東翼・個室402",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "E4",
+        "id": "E4-door",
+        "a": [
+          4.5,
+          2.7
+        ],
+        "b": [
+          5.7,
+          2.7
+        ],
+        "open": false,
+        "label": "東翼・作業室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "K1",
+        "id": "K1-door",
+        "a": [
+          2.8,
+          2.9
+        ],
+        "b": [
+          4,
+          2.9
+        ],
+        "open": false,
+        "label": "第一層の小居室",
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90
+      },
+      {
+        "body": "U2",
+        "id": "U2-door",
+        "a": [
+          2.8,
+          1
+        ],
+        "b": [
+          2.8,
+          2.2
+        ],
+        "open": false,
+        "label": "空室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "U4",
+        "id": "U4-door",
+        "a": [
+          2.8,
+          1
+        ],
+        "b": [
+          2.8,
+          2.2
+        ],
+        "open": false,
+        "label": "物置",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "D2",
+        "id": "D2-door",
+        "a": [
+          3.2,
+          2.6
+        ],
+        "b": [
+          4.4,
+          2.6
+        ],
+        "open": false,
+        "label": "遠隔区域の小部屋",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "D3",
+        "id": "D3-door",
+        "a": [
+          3.2,
+          2.6
+        ],
+        "b": [
+          4.4,
+          2.6
+        ],
+        "open": false,
+        "label": "遠隔区域の小部屋",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "V1",
+        "id": "V1-door",
+        "a": [
+          2.8,
+          10
+        ],
+        "b": [
+          2.8,
+          11.2
+        ],
+        "open": false,
+        "label": "西の居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "V1",
+        "id": "V1-wing",
+        "a": [
+          12.8,
+          11
+        ],
+        "b": [
+          14,
+          11
+        ],
+        "open": false,
+        "label": "奥の居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "V2",
+        "id": "V2-west",
+        "a": [
+          3,
+          1
+        ],
+        "b": [
+          3,
+          2.2
+        ],
+        "open": false,
+        "label": "西居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "V2",
+        "id": "V2-east",
+        "a": [
+          11,
+          1
+        ],
+        "b": [
+          11,
+          2.2
+        ],
+        "open": false,
+        "label": "東居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90
+      },
+      {
+        "body": "V3",
+        "id": "V3-door",
+        "a": [
+          2.6,
+          1
+        ],
+        "b": [
+          2.6,
+          2.2
+        ],
+        "open": false,
+        "label": "仮の居室",
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": -90
+      },
+      {
+        "body": "G1",
+        "id": "G1-west",
+        "a": [
+          3.4,
+          2.5
+        ],
+        "b": [
+          4.6,
+          2.5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false,
+        "label": "北の西住戸"
+      },
+      {
+        "body": "G1",
+        "id": "G1-east",
+        "a": [
+          11.4,
+          2.5
+        ],
+        "b": [
+          12.6,
+          2.5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false,
+        "label": "北の東住戸"
+      },
+      {
+        "body": "G5",
+        "id": "G5-door",
+        "a": [
+          4.8,
+          1.2
+        ],
+        "b": [
+          4.8,
+          2.4
+        ],
+        "kind": "hinge",
+        "hinge": "b",
+        "swing": 90,
+        "open": false,
+        "label": "EV脇の住戸"
+      }
+    ]
+  }
+]

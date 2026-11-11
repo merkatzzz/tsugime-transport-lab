@@ -1,0 +1,1399 @@
+{
+  "units": [
+    {
+      "id": "V1",
+      "name": "三連結L型住宅・共用翼",
+      "use": "residential",
+      "family": "R7",
+      "color": "#9cae9c",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ceiling": 2.7,
+      "ports": [
+        {
+          "id": "N",
+          "face": "N",
+          "a": 1,
+          "b": 7,
+          "height": 2.4,
+          "adaptive": true,
+          "profiles": [
+            [
+              1,
+              7
+            ]
+          ],
+          "role": "boundary-connector"
+        },
+        {
+          "id": "W",
+          "face": "W",
+          "a": 3,
+          "b": 5,
+          "height": 2.4,
+          "adaptive": true,
+          "profiles": [
+            [
+              3.25,
+              4.75
+            ]
+          ],
+          "role": "boundary-connector"
+        }
+      ],
+      "walls": [
+        {
+          "a": [
+            0,
+            8.8
+          ],
+          "b": [
+            2.8,
+            8.8
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            0,
+            12.2
+          ],
+          "b": [
+            2.8,
+            12.2
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            2.8,
+            8.8
+          ],
+          "b": [
+            2.8,
+            10
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            2.8,
+            11.2
+          ],
+          "b": [
+            2.8,
+            12.2
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            8,
+            11
+          ],
+          "b": [
+            12.8,
+            11
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            14,
+            11
+          ],
+          "b": [
+            16,
+            11
+          ],
+          "role": "room-fixed"
+        }
+      ],
+      "doors": [
+        {
+          "id": "V1-door",
+          "a": [
+            2.8,
+            10
+          ],
+          "b": [
+            2.8,
+            11.2
+          ],
+          "open": false,
+          "label": "西の居室",
+          "kind": "hinge",
+          "hinge": "b",
+          "swing": -90
+        },
+        {
+          "id": "V1-wing",
+          "a": [
+            12.8,
+            11
+          ],
+          "b": [
+            14,
+            11
+          ],
+          "open": false,
+          "label": "奥の居室",
+          "kind": "hinge",
+          "hinge": "b",
+          "swing": 90
+        }
+      ],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 0.4,
+          "z": 9.1,
+          "w": 1.1,
+          "d": 1.9,
+          "h": 0.6,
+          "color": "wood"
+        },
+        {
+          "x": 10,
+          "z": 13,
+          "w": 2,
+          "d": 1,
+          "h": 0.6,
+          "color": "wood"
+        },
+        {
+          "x": 1,
+          "z": 14,
+          "w": 1.4,
+          "d": 0.6,
+          "h": 0.6,
+          "color": "wood"
+        }
+      ],
+      "labels": [
+        {
+          "name": "共用廊下",
+          "x": 4,
+          "z": 6
+        },
+        {
+          "name": "居室と談話翼",
+          "x": 11,
+          "z": 13
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.7
+        },
+        {
+          "x": 0,
+          "z": 8,
+          "w": 8,
+          "d": 8,
+          "height": 2.7
+        },
+        {
+          "x": 8,
+          "z": 8,
+          "w": 8,
+          "d": 8,
+          "height": 2.7
+        }
+      ],
+      "privateRooms": [
+        {
+          "x": 0,
+          "z": 8.8,
+          "w": 2.8,
+          "d": 3.4,
+          "role": "room-fixed"
+        },
+        {
+          "x": 8,
+          "z": 11,
+          "w": 8,
+          "d": 5,
+          "role": "room-fixed"
+        }
+      ]
+    },
+    {
+      "id": "V2",
+      "name": "二連結住宅・ふたつの居室",
+      "use": "residential",
+      "family": "R7",
+      "color": "#9cae9c",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "ceiling": 2.7,
+      "ports": [
+        {
+          "id": "N",
+          "face": "N",
+          "a": 1,
+          "b": 7,
+          "height": 2.4,
+          "adaptive": true,
+          "profiles": [
+            [
+              3,
+              5
+            ]
+          ],
+          "role": "boundary-connector"
+        },
+        {
+          "id": "W",
+          "face": "W",
+          "a": 3,
+          "b": 5,
+          "height": 2.4,
+          "role": "boundary-connector"
+        }
+      ],
+      "walls": [
+        {
+          "a": [
+            3,
+            0
+          ],
+          "b": [
+            3,
+            1
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            3,
+            2.2
+          ],
+          "b": [
+            3,
+            3
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            0,
+            3
+          ],
+          "b": [
+            3,
+            3
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            11,
+            0
+          ],
+          "b": [
+            11,
+            1
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            11,
+            2.2
+          ],
+          "b": [
+            11,
+            3
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            11,
+            3
+          ],
+          "b": [
+            16,
+            3
+          ],
+          "role": "room-fixed"
+        }
+      ],
+      "doors": [
+        {
+          "id": "V2-west",
+          "a": [
+            3,
+            1
+          ],
+          "b": [
+            3,
+            2.2
+          ],
+          "open": false,
+          "label": "西居室",
+          "kind": "hinge",
+          "hinge": "b",
+          "swing": -90
+        },
+        {
+          "id": "V2-east",
+          "a": [
+            11,
+            1
+          ],
+          "b": [
+            11,
+            2.2
+          ],
+          "open": false,
+          "label": "東居室",
+          "kind": "hinge",
+          "hinge": "b",
+          "swing": 90
+        }
+      ],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 0.4,
+          "z": 1.2,
+          "w": 1.1,
+          "d": 1.1,
+          "h": 0.6,
+          "color": "wood"
+        },
+        {
+          "x": 13,
+          "z": 0.6,
+          "w": 1.5,
+          "d": 1.5,
+          "h": 0.6,
+          "color": "wood"
+        },
+        {
+          "x": 8,
+          "z": 6,
+          "w": 2,
+          "d": 0.6,
+          "h": 0.6,
+          "color": "wood"
+        }
+      ],
+      "labels": [
+        {
+          "name": "一体の生活廊下",
+          "x": 8,
+          "z": 4.2
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.7
+        },
+        {
+          "x": 8,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.7
+        }
+      ],
+      "privateRooms": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 3,
+          "d": 3,
+          "role": "room-fixed"
+        },
+        {
+          "x": 11,
+          "z": 0,
+          "w": 5,
+          "d": 3,
+          "role": "room-fixed"
+        }
+      ]
+    },
+    {
+      "id": "V3",
+      "name": "単独住宅・片寄せ前廊下",
+      "use": "residential",
+      "family": "R7",
+      "color": "#9cae9c",
+      "cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "ceiling": 2.7,
+      "ports": [
+        {
+          "id": "N",
+          "face": "N",
+          "a": 3,
+          "b": 7,
+          "height": 2.4,
+          "adaptive": true,
+          "profiles": [
+            [
+              3,
+              5
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "role": "boundary-connector"
+        },
+        {
+          "id": "W",
+          "face": "W",
+          "a": 1,
+          "b": 7,
+          "height": 2.4,
+          "adaptive": true,
+          "profiles": [
+            [
+              3,
+              5
+            ]
+          ],
+          "cycles": [
+            "A"
+          ],
+          "role": "boundary-connector"
+        },
+        {
+          "id": "E",
+          "face": "E",
+          "a": 1,
+          "b": 7,
+          "height": 2.4,
+          "adaptive": true,
+          "profiles": [
+            [
+              3,
+              5
+            ]
+          ],
+          "role": "boundary-connector"
+        },
+        {
+          "id": "S",
+          "face": "S",
+          "a": 3,
+          "b": 5,
+          "height": 2.4,
+          "role": "boundary-connector"
+        }
+      ],
+      "walls": [
+        {
+          "a": [
+            0,
+            2.7
+          ],
+          "b": [
+            2.6,
+            2.7
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            2.6,
+            0
+          ],
+          "b": [
+            2.6,
+            1
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            2.6,
+            2.2
+          ],
+          "b": [
+            2.6,
+            2.7
+          ],
+          "role": "room-fixed"
+        }
+      ],
+      "doors": [
+        {
+          "id": "V3-door",
+          "a": [
+            2.6,
+            1
+          ],
+          "b": [
+            2.6,
+            2.2
+          ],
+          "open": false,
+          "label": "仮の居室",
+          "kind": "hinge",
+          "hinge": "b",
+          "swing": -90
+        }
+      ],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 0.4,
+          "z": 0.4,
+          "w": 0.8,
+          "d": 1.8,
+          "h": 0.6,
+          "color": "wood"
+        },
+        {
+          "x": 1,
+          "z": 6,
+          "w": 1.4,
+          "d": 0.6,
+          "h": 0.8,
+          "color": "wood"
+        }
+      ],
+      "labels": [
+        {
+          "name": "片寄せ生活廊下",
+          "x": 5.5,
+          "z": 4
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.7
+        }
+      ],
+      "privateRooms": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 2.6,
+          "d": 2.7,
+          "role": "room-fixed"
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "name": "中央の共用玄関",
+      "use": "common",
+      "family": "R7",
+      "color": "#9cae9c",
+      "cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "ceiling": 2.7,
+      "ports": [
+        {
+          "id": "N",
+          "face": "N",
+          "a": 1,
+          "b": 7,
+          "height": 2.4,
+          "adaptive": true,
+          "profiles": [
+            [
+              3,
+              5
+            ]
+          ],
+          "role": "boundary-connector"
+        },
+        {
+          "id": "E",
+          "face": "E",
+          "a": 3,
+          "b": 5,
+          "height": 2.4,
+          "role": "boundary-connector"
+        },
+        {
+          "id": "S",
+          "face": "S",
+          "a": 3,
+          "b": 5,
+          "height": 2.4,
+          "permanent": true,
+          "role": "boundary-connector"
+        }
+      ],
+      "walls": [],
+      "doors": [],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 1,
+          "z": 1,
+          "w": 1.2,
+          "d": 1,
+          "h": 0.6,
+          "color": "wood"
+        },
+        {
+          "x": 6,
+          "z": 6,
+          "w": 1,
+          "d": 0.7,
+          "h": 0.6,
+          "color": "wood"
+        }
+      ],
+      "labels": [
+        {
+          "name": "中央共用部",
+          "x": 4,
+          "z": 4
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.7
+        }
+      ]
+    },
+    {
+      "id": "Q1",
+      "name": "二連結の予備点検廊下",
+      "use": "corridor",
+      "family": "R7",
+      "color": "#a3a58b",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "ceiling": 2.3,
+      "ports": [
+        {
+          "id": "N",
+          "face": "N",
+          "a": 3.25,
+          "b": 4.75,
+          "height": 2.15,
+          "role": "boundary-connector"
+        },
+        {
+          "id": "S",
+          "face": "S",
+          "a": 3.25,
+          "b": 4.75,
+          "height": 2.15,
+          "role": "boundary-connector"
+        },
+        {
+          "id": "E",
+          "face": "E",
+          "a": 11.65,
+          "b": 13.15,
+          "height": 2.15,
+          "role": "boundary-connector"
+        }
+      ],
+      "walls": [
+        {
+          "a": [
+            4.75,
+            0
+          ],
+          "b": [
+            4.75,
+            5.689339828220179
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            4.75,
+            5.689339828220179
+          ],
+          "b": [
+            6.15,
+            7.089339828220179
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            6.15,
+            7.089339828220179
+          ],
+          "b": [
+            6.15,
+            10.310660171779821
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            6.15,
+            10.310660171779821
+          ],
+          "b": [
+            4.75,
+            11.710660171779821
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            4.75,
+            11.710660171779821
+          ],
+          "b": [
+            4.75,
+            11.65
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            4.75,
+            13.15
+          ],
+          "b": [
+            4.75,
+            16
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            3.25,
+            0
+          ],
+          "b": [
+            3.25,
+            6.310660171779821
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            3.25,
+            6.310660171779821
+          ],
+          "b": [
+            4.65,
+            7.710660171779821
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            4.65,
+            7.710660171779821
+          ],
+          "b": [
+            4.65,
+            9.689339828220179
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            4.65,
+            9.689339828220179
+          ],
+          "b": [
+            3.25,
+            11.08933982822018
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            3.25,
+            11.08933982822018
+          ],
+          "b": [
+            3.25,
+            16
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            4.75,
+            11.65
+          ],
+          "b": [
+            8,
+            11.65
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            4.75,
+            13.15
+          ],
+          "b": [
+            8,
+            13.15
+          ],
+          "role": "room-fixed"
+        }
+      ],
+      "doors": [],
+      "solids": [],
+      "furniture": [],
+      "labels": [
+        {
+          "name": "幅1.38m・点検通路",
+          "x": 4,
+          "z": 4
+        },
+        {
+          "name": "斜行区間",
+          "x": 4.7,
+          "z": 9
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.3
+        },
+        {
+          "x": 0,
+          "z": 8,
+          "w": 8,
+          "d": 8,
+          "height": 2.3
+        }
+      ]
+    },
+    {
+      "id": "W1",
+      "name": "南端の旧設備室",
+      "use": "common",
+      "family": "R7",
+      "color": "#9cae9c",
+      "cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "ceiling": 2.7,
+      "ports": [
+        {
+          "id": "N",
+          "face": "N",
+          "a": 3.25,
+          "b": 4.75,
+          "height": 2.4,
+          "role": "boundary-connector"
+        }
+      ],
+      "walls": [],
+      "doors": [],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 0.6,
+          "z": 0.6,
+          "w": 1.7,
+          "d": 2,
+          "h": 1.6,
+          "color": "wood"
+        },
+        {
+          "x": 5,
+          "z": 4,
+          "w": 2,
+          "d": 1,
+          "h": 1,
+          "color": "wood"
+        }
+      ],
+      "labels": [
+        {
+          "name": "旧設備室",
+          "x": 4,
+          "z": 4
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.7
+        }
+      ]
+    }
+  ],
+  "housingFamily": [
+    "R1",
+    "R4",
+    "K1",
+    "V1",
+    "V2",
+    "V3",
+    "A3",
+    "Q1",
+    "W1",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5"
+  ],
+  "fixedPorts": [
+    {
+      "body": "U1",
+      "id": "S",
+      "face": "S",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "U2",
+      "id": "N",
+      "face": "N",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "U3",
+      "id": "S",
+      "face": "S",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "U4",
+      "id": "N",
+      "face": "N",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "U4",
+      "id": "S",
+      "face": "S",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "U5",
+      "id": "E",
+      "face": "E",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "N1",
+      "id": "S",
+      "face": "S",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "N2",
+      "id": "N",
+      "face": "N",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "N3",
+      "id": "S",
+      "face": "S",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "D1",
+      "id": "E",
+      "face": "E",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "D2",
+      "id": "S",
+      "face": "S",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "D2",
+      "id": "W",
+      "face": "W",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "D3",
+      "id": "E",
+      "face": "E",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "D4",
+      "id": "N",
+      "face": "N",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "D4",
+      "id": "W",
+      "face": "W",
+      "a": 3,
+      "b": 5,
+      "height": 2.3,
+      "permanent": true,
+      "role": "boundary-connector"
+    },
+    {
+      "body": "A3",
+      "id": "S",
+      "face": "S",
+      "a": 3,
+      "b": 5,
+      "height": 2.4,
+      "permanent": true,
+      "role": "boundary-connector"
+    }
+  ],
+  "adapterProfiles": [
+    {
+      "body": "U5",
+      "id": "S",
+      "face": "S",
+      "a": 1,
+      "b": 7,
+      "height": 2.4,
+      "adaptive": true,
+      "profiles": [
+        [
+          1,
+          7
+        ]
+      ],
+      "role": "boundary-connector"
+    },
+    {
+      "body": "V1",
+      "id": "N",
+      "face": "N",
+      "a": 1,
+      "b": 7,
+      "height": 2.4,
+      "adaptive": true,
+      "profiles": [
+        [
+          1,
+          7
+        ]
+      ],
+      "role": "boundary-connector"
+    },
+    {
+      "body": "V1",
+      "id": "W",
+      "face": "W",
+      "a": 3,
+      "b": 5,
+      "height": 2.4,
+      "adaptive": true,
+      "profiles": [
+        [
+          3.25,
+          4.75
+        ]
+      ],
+      "role": "boundary-connector"
+    },
+    {
+      "body": "V2",
+      "id": "N",
+      "face": "N",
+      "a": 1,
+      "b": 7,
+      "height": 2.4,
+      "adaptive": true,
+      "profiles": [
+        [
+          3,
+          5
+        ]
+      ],
+      "role": "boundary-connector"
+    },
+    {
+      "body": "V3",
+      "id": "N",
+      "face": "N",
+      "a": 3,
+      "b": 7,
+      "height": 2.4,
+      "adaptive": true,
+      "profiles": [
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "role": "boundary-connector"
+    },
+    {
+      "body": "V3",
+      "id": "W",
+      "face": "W",
+      "a": 1,
+      "b": 7,
+      "height": 2.4,
+      "adaptive": true,
+      "profiles": [
+        [
+          3,
+          5
+        ]
+      ],
+      "cycles": [
+        "A"
+      ],
+      "role": "boundary-connector"
+    },
+    {
+      "body": "V3",
+      "id": "E",
+      "face": "E",
+      "a": 1,
+      "b": 7,
+      "height": 2.4,
+      "adaptive": true,
+      "profiles": [
+        [
+          3,
+          5
+        ]
+      ],
+      "role": "boundary-connector"
+    },
+    {
+      "body": "A3",
+      "id": "N",
+      "face": "N",
+      "a": 1,
+      "b": 7,
+      "height": 2.4,
+      "adaptive": true,
+      "profiles": [
+        [
+          3,
+          5
+        ]
+      ],
+      "role": "boundary-connector"
+    }
+  ],
+  "springsBefore": [
+    {
+      "id": "P1",
+      "x": 25.2,
+      "y": -12.8,
+      "z": 10.9,
+      "face": "W"
+    },
+    {
+      "id": "P3",
+      "x": 58.8,
+      "y": 12.8,
+      "z": 19.3,
+      "face": "W"
+    }
+  ],
+  "springsAfter": [
+    {
+      "id": "P1",
+      "x": 19.3,
+      "y": -12.8,
+      "z": 16.8,
+      "w": 3,
+      "d": 3,
+      "face": "N",
+      "mouth": {
+        "x": 20.8,
+        "z": 16.8
+      }
+    },
+    {
+      "id": "P2",
+      "x": 67.2,
+      "y": 0,
+      "z": 19.3,
+      "w": 3,
+      "d": 3,
+      "face": "W",
+      "mouth": {
+        "x": 67.2,
+        "z": 20.8
+      }
+    },
+    {
+      "id": "P3",
+      "x": 5,
+      "y": 12.8,
+      "z": 36.1,
+      "w": 3,
+      "d": 3,
+      "face": "E",
+      "mouth": {
+        "x": 8,
+        "z": 37.6
+      }
+    },
+    {
+      "id": "PA",
+      "x": 67.2,
+      "y": 12.8,
+      "z": 2.5,
+      "w": 3,
+      "d": 3,
+      "face": "W",
+      "mouth": {
+        "x": 67.2,
+        "z": 4
+      }
+    },
+    {
+      "id": "PB",
+      "x": 61.3,
+      "y": 0,
+      "z": 8.4,
+      "w": 3,
+      "d": 3,
+      "face": "N",
+      "mouth": {
+        "x": 62.8,
+        "z": 8.4
+      }
+    }
+  ],
+  "warning": {
+    "remoteRealSeconds": 8,
+    "otherRealSeconds": 5
+  },
+  "liftWorkflow": [
+    "board",
+    "closing",
+    "selecting",
+    "moving",
+    "opening",
+    "open"
+  ],
+  "secondLift": "adopted two-floor local lift; see stage9-second-lift.json"
+}

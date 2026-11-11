@@ -177,6 +177,22 @@
       "solidMin": 0.5117242768623695,
       "hinge": "b",
       "swing": 90
+    },
+    {
+      "body": "P9",
+      "door": "P9-home",
+      "wallMin": 0.10199999999999987,
+      "solidMin": 1.9104973174542856,
+      "hinge": "a",
+      "swing": -90
+    },
+    {
+      "body": "P9",
+      "door": "P9-study",
+      "wallMin": 0.10200000000000031,
+      "solidMin": 1.8000000000000043,
+      "hinge": "a",
+      "swing": -90
     }
   ]
 }

@@ -1,0 +1,2 @@
+import {Simulation} from './simulation.js';import {placements} from './architecture.js';import {referenceRoute,referenceRouteKey} from './navigation.js';
+self.onmessage=event=>{const {id,phase,experiment,doors}=event.data;try{const s=new Simulation(experiment);s.phase=phase;s.positions=placements(phase,experiment);s.doors=doors;s.invalidate();const route=referenceRoute(s);self.postMessage({id,key:referenceRouteKey(s),route});}catch(error){self.postMessage({id,error:String(error)});}};

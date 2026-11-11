@@ -1,0 +1,2 @@
+// PlaneGeometry faces +Z. Place signs on the corridor side, in body-local coordinates.
+export function doorSign(b,d){const x=(d.a[0]+d.b[0])/2,z=(d.a[1]+d.b[1])/2,dx=d.b[0]-d.a[0],dz=d.b[1]-d.a[1],len=Math.hypot(dx,dz),n={x:-dz/len,z:dx/len};const room=b.privateRooms??(b.id==='R3'?[{x:0,z:5,w:8,d:2.2}]:[]),inside=(x,z)=>room.some(r=>x>r.x&&x<r.x+r.w&&z>r.z&&z<r.z+r.d);let sign=inside(x+n.x*.2,z+n.z*.2)?-1:1;if(!room.length)sign=dx>=0?-1:1;const nx=n.x*sign,nz=n.z*sign;return{x:x+nx*.13,z:z+nz*.13,rotation:Math.atan2(nx,nz),normal:{x:nx,z:nz}};}

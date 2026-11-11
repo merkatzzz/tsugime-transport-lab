@@ -401,6 +401,40 @@
         "swing": 90,
         "open": false,
         "label": "EV脇の住戸"
+      },
+      {
+        "body": "P9",
+        "id": "P9-home",
+        "label": "店主の住戸901",
+        "a": [
+          3.4,
+          5
+        ],
+        "b": [
+          4.6,
+          5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false
+      },
+      {
+        "body": "P9",
+        "id": "P9-study",
+        "label": "共同作業室",
+        "a": [
+          11.4,
+          5
+        ],
+        "b": [
+          12.6,
+          5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false
       }
     ]
   },
@@ -806,6 +840,40 @@
         "swing": 90,
         "open": false,
         "label": "EV脇の住戸"
+      },
+      {
+        "body": "P9",
+        "id": "P9-home",
+        "label": "店主の住戸901",
+        "a": [
+          3.4,
+          5
+        ],
+        "b": [
+          4.6,
+          5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false
+      },
+      {
+        "body": "P9",
+        "id": "P9-study",
+        "label": "共同作業室",
+        "a": [
+          11.4,
+          5
+        ],
+        "b": [
+          12.6,
+          5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false
       }
     ]
   },
@@ -1211,6 +1279,40 @@
         "swing": 90,
         "open": false,
         "label": "EV脇の住戸"
+      },
+      {
+        "body": "P9",
+        "id": "P9-home",
+        "label": "店主の住戸901",
+        "a": [
+          3.4,
+          5
+        ],
+        "b": [
+          4.6,
+          5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false
+      },
+      {
+        "body": "P9",
+        "id": "P9-study",
+        "label": "共同作業室",
+        "a": [
+          11.4,
+          5
+        ],
+        "b": [
+          12.6,
+          5
+        ],
+        "kind": "hinge",
+        "hinge": "a",
+        "swing": -90,
+        "open": false
       }
     ]
   }

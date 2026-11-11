@@ -1,0 +1,743 @@
+{
+  "clock": "Independent game seconds; transport multiplier does not change life clock",
+  "config": {
+    "period": 60,
+    "homeSeconds": 15,
+    "workSeconds": 45,
+    "coverSeconds": 0.8
+  },
+  "people": [
+    {
+      "id": "shopkeeper",
+      "name": "生活用品店の店主",
+      "offset": 0,
+      "home": {
+        "body": "P9",
+        "x": 3,
+        "y": 0,
+        "z": 2,
+        "door": "P9-home",
+        "camera": {
+          "x": 4,
+          "y": 1.7,
+          "z": 4.1
+        },
+        "look": {
+          "x": 3,
+          "y": 1.3,
+          "z": 2
+        }
+      },
+      "work": {
+        "body": "T1",
+        "x": 12,
+        "y": 0,
+        "z": 1.9
+      },
+      "shop": {
+        "x": 10,
+        "z": 0.8,
+        "w": 4,
+        "d": 2.2,
+        "h": 2.4,
+        "kind": "curtain"
+      },
+      "lines": [
+        "生活用品の店です。営業中はここで作業しています。",
+        "届け物なら、宛名を確かめて渡してください。"
+      ]
+    },
+    {
+      "id": "resident",
+      "name": "簡易個室の住人",
+      "offset": 8,
+      "home": {
+        "body": "R3",
+        "x": 1.55,
+        "y": 0,
+        "z": 6.25,
+        "door": "R3-door",
+        "camera": {
+          "x": 3.55,
+          "y": 1.7,
+          "z": 6.15
+        },
+        "look": {
+          "x": 1.5,
+          "y": 1.35,
+          "z": 6.25
+        }
+      },
+      "work": {
+        "body": "T2",
+        "x": 3,
+        "y": 0,
+        "z": 1.9
+      },
+      "shop": {
+        "x": 1,
+        "z": 0.8,
+        "w": 4,
+        "d": 2.2,
+        "h": 2.4,
+        "kind": "metal"
+      },
+      "lines": [
+        "部品の整理を手伝っています。",
+        "部屋にいない間はこちらで働いています。"
+      ]
+    }
+  ],
+  "schedule": [
+    {
+      "time": 0,
+      "locations": [
+        {
+          "id": "shopkeeper",
+          "desired": "home"
+        },
+        {
+          "id": "resident",
+          "desired": "home"
+        }
+      ]
+    },
+    {
+      "time": 7,
+      "locations": [
+        {
+          "id": "shopkeeper",
+          "desired": "home"
+        },
+        {
+          "id": "resident",
+          "desired": "work"
+        }
+      ]
+    },
+    {
+      "time": 15,
+      "locations": [
+        {
+          "id": "shopkeeper",
+          "desired": "work"
+        },
+        {
+          "id": "resident",
+          "desired": "work"
+        }
+      ]
+    },
+    {
+      "time": 52,
+      "locations": [
+        {
+          "id": "shopkeeper",
+          "desired": "work"
+        },
+        {
+          "id": "resident",
+          "desired": "home"
+        }
+      ]
+    },
+    {
+      "time": 60,
+      "locations": [
+        {
+          "id": "shopkeeper",
+          "desired": "home"
+        },
+        {
+          "id": "resident",
+          "desired": "home"
+        }
+      ]
+    },
+    {
+      "time": 75,
+      "locations": [
+        {
+          "id": "shopkeeper",
+          "desired": "work"
+        },
+        {
+          "id": "resident",
+          "desired": "work"
+        }
+      ]
+    },
+    {
+      "time": 120,
+      "locations": [
+        {
+          "id": "shopkeeper",
+          "desired": "home"
+        },
+        {
+          "id": "resident",
+          "desired": "home"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "generation": 9,
+      "ceiling": 2.8,
+      "color": "#a9aa8c",
+      "use": "common",
+      "walls": [],
+      "doors": [],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 1,
+          "z": 1,
+          "w": 2,
+          "d": 1,
+          "h": 0.6,
+          "color": "wood"
+        }
+      ],
+      "labels": [
+        {
+          "name": "生活施設へ",
+          "x": 4,
+          "z": 5
+        }
+      ],
+      "id": "J9",
+      "name": "生活施設への接続廊下",
+      "cells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "ports": [
+        {
+          "id": "W",
+          "face": "W",
+          "a": 4,
+          "b": 6,
+          "height": 2.4,
+          "role": "boundary-connector"
+        },
+        {
+          "id": "E",
+          "face": "E",
+          "a": 4,
+          "b": 6,
+          "height": 2.4,
+          "role": "boundary-connector"
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 8,
+          "height": 2.8
+        }
+      ]
+    },
+    {
+      "generation": 9,
+      "ceiling": 2.8,
+      "color": "#a9aa8c",
+      "use": "common",
+      "walls": [
+        {
+          "a": [
+            0,
+            5
+          ],
+          "b": [
+            3.4,
+            5
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            4.6,
+            5
+          ],
+          "b": [
+            11.4,
+            5
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            12.6,
+            5
+          ],
+          "b": [
+            16,
+            5
+          ],
+          "role": "room-fixed"
+        },
+        {
+          "a": [
+            8,
+            0
+          ],
+          "b": [
+            8,
+            5
+          ],
+          "role": "room-fixed"
+        }
+      ],
+      "doors": [
+        {
+          "id": "P9-home",
+          "label": "店主の住戸901",
+          "a": [
+            3.4,
+            5
+          ],
+          "b": [
+            4.6,
+            5
+          ],
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": -90,
+          "open": false
+        },
+        {
+          "id": "P9-study",
+          "label": "共同作業室",
+          "a": [
+            11.4,
+            5
+          ],
+          "b": [
+            12.6,
+            5
+          ],
+          "kind": "hinge",
+          "hinge": "a",
+          "swing": -90,
+          "open": false
+        }
+      ],
+      "solids": [],
+      "furniture": [
+        {
+          "x": 0.5,
+          "z": 0.5,
+          "w": 1.5,
+          "d": 2,
+          "h": 0.5,
+          "color": "wood"
+        },
+        {
+          "x": 10,
+          "z": 1,
+          "w": 3,
+          "d": 1,
+          "h": 0.8,
+          "color": "wood"
+        },
+        {
+          "x": 5,
+          "z": 9,
+          "w": 5,
+          "d": 1.5,
+          "h": 0.7,
+          "color": "wood"
+        },
+        {
+          "x": 12,
+          "z": 12,
+          "w": 2,
+          "d": 1,
+          "h": 0.5,
+          "color": "wood"
+        }
+      ],
+      "labels": [
+        {
+          "name": "住戸と共同生活室",
+          "x": 8,
+          "z": 13
+        }
+      ],
+      "id": "P9",
+      "name": "四連結の生活共同棟",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ports": [
+        {
+          "id": "W",
+          "face": "W",
+          "a": 11.6,
+          "b": 14,
+          "height": 2.4,
+          "role": "boundary-connector"
+        }
+      ],
+      "privateRooms": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 8,
+          "d": 5,
+          "role": "room-fixed"
+        }
+      ],
+      "roofAreas": [
+        {
+          "x": 0,
+          "z": 0,
+          "w": 16,
+          "d": 8,
+          "height": 2.8
+        },
+        {
+          "x": 0,
+          "z": 8,
+          "w": 16,
+          "d": 8,
+          "height": 3.6
+        }
+      ]
+    }
+  ],
+  "signs": [
+    {
+      "body": "R1",
+      "door": "R1-door",
+      "x": 4,
+      "z": 2.73,
+      "rotation": 0,
+      "normal": {
+        "x": 0,
+        "z": 1
+      }
+    },
+    {
+      "body": "R2",
+      "door": "R2-door",
+      "x": 5.93,
+      "z": 2.8,
+      "rotation": 1.5707963267948966,
+      "normal": {
+        "x": 1,
+        "z": 0
+      }
+    },
+    {
+      "body": "R3",
+      "door": "R3-door",
+      "x": 5.199999999999999,
+      "z": 4.87,
+      "rotation": 3.141592653589793,
+      "normal": {
+        "x": 0,
+        "z": -1
+      }
+    },
+    {
+      "body": "R4",
+      "door": "R4-door",
+      "x": 3.4,
+      "z": 3.03,
+      "rotation": 0,
+      "normal": {
+        "x": 0,
+        "z": 1
+      }
+    },
+    {
+      "body": "T2",
+      "door": "T2-door",
+      "x": 10.6,
+      "z": 3.27,
+      "rotation": 3.141592653589793,
+      "normal": {
+        "x": 0,
+        "z": -1
+      }
+    },
+    {
+      "body": "E1",
+      "door": "E1-door",
+      "x": 5.1,
+      "z": 2.5700000000000003,
+      "rotation": 3.141592653589793,
+      "normal": {
+        "x": 0,
+        "z": -1
+      }
+    },
+    {
+      "body": "E2",
+      "door": "E2-door",
+      "x": 5.1,
+      "z": 2.5700000000000003,
+      "rotation": 3.141592653589793,
+      "normal": {
+        "x": 0,
+        "z": -1
+      }
+    },
+    {
+      "body": "E3",
+      "door": "E3-door",
+      "x": 5.1,
+      "z": 2.5700000000000003,
+      "rotation": 3.141592653589793,
+      "normal": {
+        "x": 0,
+        "z": -1
+      }
+    },
+    {
+      "body": "E4",
+      "door": "E4-door",
+      "x": 5.1,
+      "z": 2.5700000000000003,
+      "rotation": 3.141592653589793,
+      "normal": {
+        "x": 0,
+        "z": -1
+      }
+    },
+    {
+      "body": "K1",
+      "door": "K1-door",
+      "x": 3.4,
+      "z": 3.03,
+      "rotation": 0,
+      "normal": {
+        "x": 0,
+        "z": 1
+      }
+    },
+    {
+      "body": "U2",
+      "door": "U2-door",
+      "x": 2.9299999999999997,
+      "z": 1.6,
+      "rotation": 1.5707963267948966,
+      "normal": {
+        "x": 1,
+        "z": 0
+      }
+    },
+    {
+      "body": "U4",
+      "door": "U4-door",
+      "x": 2.9299999999999997,
+      "z": 1.6,
+      "rotation": 1.5707963267948966,
+      "normal": {
+        "x": 1,
+        "z": 0
+      }
+    },
+    {
+      "body": "D2",
+      "door": "D2-door",
+      "x": 3.8000000000000003,
+      "z": 2.47,
+      "rotation": 3.141592653589793,
+      "normal": {
+        "x": 0,
+        "z": -1
+      }
+    },
+    {
+      "body": "D3",
+      "door": "D3-door",
+      "x": 3.8000000000000003,
+      "z": 2.47,
+      "rotation": 3.141592653589793,
+      "normal": {
+        "x": 0,
+        "z": -1
+      }
+    },
+    {
+      "body": "V1",
+      "door": "V1-door",
+      "x": 2.9299999999999997,
+      "z": 10.6,
+      "rotation": 1.5707963267948966,
+      "normal": {
+        "x": 1,
+        "z": 0
+      }
+    },
+    {
+      "body": "V1",
+      "door": "V1-wing",
+      "x": 13.4,
+      "z": 10.87,
+      "rotation": 3.141592653589793,
+      "normal": {
+        "x": 0,
+        "z": -1
+      }
+    },
+    {
+      "body": "V2",
+      "door": "V2-west",
+      "x": 3.13,
+      "z": 1.6,
+      "rotation": 1.5707963267948966,
+      "normal": {
+        "x": 1,
+        "z": 0
+      }
+    },
+    {
+      "body": "V2",
+      "door": "V2-east",
+      "x": 10.87,
+      "z": 1.6,
+      "rotation": -1.5707963267948966,
+      "normal": {
+        "x": -1,
+        "z": 0
+      }
+    },
+    {
+      "body": "V3",
+      "door": "V3-door",
+      "x": 2.73,
+      "z": 1.6,
+      "rotation": 1.5707963267948966,
+      "normal": {
+        "x": 1,
+        "z": 0
+      }
+    },
+    {
+      "body": "G1",
+      "door": "G1-west",
+      "x": 4,
+      "z": 2.63,
+      "rotation": 0,
+      "normal": {
+        "x": 0,
+        "z": 1
+      }
+    },
+    {
+      "body": "G1",
+      "door": "G1-east",
+      "x": 12,
+      "z": 2.63,
+      "rotation": 0,
+      "normal": {
+        "x": 0,
+        "z": 1
+      }
+    },
+    {
+      "body": "G5",
+      "door": "G5-door",
+      "x": 4.67,
+      "z": 1.7999999999999998,
+      "rotation": -1.5707963267948966,
+      "normal": {
+        "x": -1,
+        "z": 0
+      }
+    },
+    {
+      "body": "P9",
+      "door": "P9-home",
+      "x": 4,
+      "z": 5.13,
+      "rotation": 0,
+      "normal": {
+        "x": 0,
+        "z": 1
+      }
+    },
+    {
+      "body": "P9",
+      "door": "P9-study",
+      "x": 12,
+      "z": 5.13,
+      "rotation": 0,
+      "normal": {
+        "x": 0,
+        "z": 1
+      }
+    }
+  ],
+  "phases": [
+    {
+      "phase": "A",
+      "P9": {
+        "x": 58.8,
+        "y": 0,
+        "z": 25.2
+      },
+      "J9": {
+        "x": 50.4,
+        "y": 0,
+        "z": 33.2
+      }
+    },
+    {
+      "phase": "B",
+      "P9": {
+        "x": 58.8,
+        "y": 0,
+        "z": 25.6
+      },
+      "J9": {
+        "x": 50.4,
+        "y": 0,
+        "z": 33.2
+      }
+    },
+    {
+      "phase": "C",
+      "P9": {
+        "x": 58.8,
+        "y": 0,
+        "z": 25.2
+      },
+      "J9": {
+        "x": 50.4,
+        "y": 0,
+        "z": 33.2
+      }
+    }
+  ],
+  "browserQA": {
+    "verified": false,
+    "reason": "Managed preview relay port 4173 readiness timeout",
+    "screenshots": [],
+    "audioHeard": false
+  }
+}

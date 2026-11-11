@@ -1,0 +1,5 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {Simulation} from '../dist/src/simulation.js';import {placements} from '../dist/src/architecture.js';import {BIOS} from '../dist/src/infrastructure.js';import {toWorld} from '../dist/src/pose.js';import {shortestWalk,replayWalk} from '../dist/src/navigation.js';
+const results=[];for(const phase of ['A','B','C'])for(const bio of BIOS){const s=new Simulation();s.phase=phase;s.positions=placements(phase);s.doors={...s.safetyDoors};s.invalidate();const q=s.positions[bio.body],start={x:-1.2,y:q.y,z:4},goal=toWorld(q,{x:5.8,z:4}),route=shortestWalk(s,start,goal);assert.ok(route.ok,phase+' '+bio.id);const replay=replayWalk(s,route);assert.ok(replay.ok);results.push({phase,bio:bio.id,from:start,to:goal,distance:route.distance,frames:replay.frames,bodies:replay.bodies});}
+fs.mkdirSync('docs/evidence',{recursive:true});fs.writeFileSync('docs/evidence/stage7-supply-walks.json',JSON.stringify({ok:true,results},null,2));console.log(JSON.stringify({supplyWalks:results.length,ok:true}));
+
