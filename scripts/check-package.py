@@ -33,7 +33,6 @@ for directory in [dist/'src'] + [dist/s/'src' for s in ['stage1','stage2','stage
             assert (module.parent/link).exists(), (str(module), link)
             modules += 1
 archives = [dist/'downloads/tsugime-lab-source.zip', dist/'downloads/stage6-frozen-source.zip', dist/'downloads/stage7-frozen-source.zip', dist/'downloads/stage8-frozen-source.zip', dist/'downloads/stage9-frozen-source.zip', dist/'downloads/stage10-frozen-source.zip', dist/'downloads/stage10-redesign-frozen-source.zip']
-archives += [dist/'downloads/stage11-before-stabilization-source.zip']
 archives += [dist/s/'downloads/tsugime-lab-source.zip' for s in ['stage1','stage2','stage3','stage4','stage5','stage6','stage7','stage8','stage9','stage10','stage10-redesign']]
 for archive in archives:
     with zipfile.ZipFile(archive) as z:

@@ -24,7 +24,9 @@
 
 全203テスト成功（失敗0）。18搬送計画の連続検証、39扉の検査、泉への12歩行、24条件の面処理オラクル照合に成功。ABC・扉開閉6条件で露出した同法線重複面0。実WebGLの目視成功とは区別する。
 
-[検証記録](evidence/stabilization-verification.json) ／ [全テスト](evidence/stabilization-tests.txt) ／ [着手前ソースZIP](https://tsugime-architecture-transport-lab.merkatzzz.chatgpt.site/downloads/stage11-before-stabilization-source.zip)。
+[検証記録](evidence/stabilization-verification.json) ／ [全テスト](evidence/stabilization-tests.txt) ／ [着手前のGit保存版](https://github.com/merkatzzz/tsugime-transport-lab/tree/stage11-before-stabilization)。
+
+配信アーカイブの展開後256MiB上限のため、今回新設した未公開の旧版ZIPコピーだけ配信対象から外した。旧版ソースZIPと完全Gitアーカイブは実行環境の/workspace/work/stage11-before-stabilization-source.zipおよびstage11-before-stabilization-full.zipへ別保全。以前から公開されている保存版ZIPは削除しない。
 
 ## 復元
 
