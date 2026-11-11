@@ -1,42 +1,50 @@
 {
   "ok": true,
+  "stage": 10,
   "rows": [
     {
-      "name": "current-stage9",
-      "tests": 160,
-      "pass": 160,
+      "name": "current-stage10",
+      "tests": 170,
+      "pass": 170,
       "fail": 0
     },
     {
-      "name": "saved-stage8",
-      "tests": 146,
-      "pass": 146,
+      "name": "final-mesh-and-water",
+      "tests": 18,
+      "pass": 18,
       "fail": 0
     },
     {
-      "name": "post-inventory-evacuation-guard",
-      "tests": 7,
-      "pass": 7,
+      "name": "stage9-restoration-basic",
+      "tests": 15,
+      "pass": 15,
       "fail": 0
     }
   ],
-  "checks": {
-    "plans": 18,
-    "seamConditions": 6,
-    "exposedCoplanarFaces": 0,
-    "surfaceConditions": 24,
-    "doors": 24,
-    "supplyWalks": 12,
-    "inventoryEvacuation": true
+  "plans": {
+    "profiles": 6,
+    "validated": 18
   },
-  "previousFrozenStages": {
-    "tests": 511,
-    "note": "Earlier successful evidence for unchanged stages1..7 retained; not counted as rerun in this session."
+  "surfaceEquivalence": {
+    "conditions": 24,
+    "ok": true
   },
+  "package": {
+    "htmlPages": 20,
+    "localLinks": 501,
+    "archives": 14,
+    "ok": true
+  },
+  "logs": [
+    "tests-stage10.txt",
+    "stage10-final-geometry.txt",
+    "stage10-restore-basic.txt",
+    "stage10-surface-equivalence.txt"
+  ],
+  "historical": "Prior-stage results remain in the frozen stage9 evidence. They were not rerun as part of this stage10 release.",
   "browserQA": {
-    "webgl": false,
-    "fps": false,
-    "reason": "sites-preview relay port 4173 readiness timeout",
-    "audioHeard": false
+    "verified": false,
+    "audioHeard": false,
+    "reason": "Managed preview relay port 4173 readiness timeout"
   }
 }
