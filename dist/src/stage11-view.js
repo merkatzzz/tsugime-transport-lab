@@ -5,7 +5,7 @@ export function buildStage11Body(v,b,g){
   for(let i=0;i<20;i++){const h=(i+1)*.15,z=6.6-(i+1)*.27;v.cube(g,5.4,.16,z,2.4,h,.27,'#9ca99e');}
   const rail=(a,b,base,h=.9)=>{const group=new THREE.Group();g.add(group);const n=8;for(let i=0;i<=n;i++){const t=i/n,x=a[0]+(b[0]-a[0])*t,z=a[1]+(b[1]-a[1])*t,y=typeof base==='function'?base(t):base;v.cube(group,x-.025,y,z-.025,.05,h,.05,'metal');}const points=Array.from({length:21},(_,i)=>{const t=i/20;return new THREE.Vector3(a[0]+(b[0]-a[0])*t,(typeof base==='function'?base(t):base)+h,a[1]+(b[1]-a[1])*t);});const tube=new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points),20,.028,5,false),v.mats.metal);group.add(tube);};
   for(const x of[5.4,7.8]){rail([x,1.2],[x,6.6],3.16);rail([x,1.2],[x,6.6],t=>3.16-3*t);}rail([5.4,6.6],[7.8,6.6],3.16);
-  v.text(g,'内部上階 +3m / 階段 ↑',4.4,1.8,6.6,{size:.22});
+  v.text(g,'内部上階 +3m / 階段 ↑',4.6,2.35,7.81,{size:.18,rotation:Math.PI});
  }
  if(b.loadedInterior){v.cube(g,1.25,.16,5.5,.03,2.05,2,'dark');v.text(g,'研究所 / 二枚扉 E',1.1,2.55,6.5,{size:.26,rotation:-Math.PI/2});}
  if(b.id==='MK1'){for(const r of[{x:2.6,z:.3,w:3.2,d:2.4},{x:3.6,z:5.3,w:2.2,d:2.4}])v.cube(g,r.x,2.46,r.z,r.w,.12,r.d,'#9c8b71');}
