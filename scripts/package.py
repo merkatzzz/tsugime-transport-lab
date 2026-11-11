@@ -32,6 +32,7 @@ if not frozen10.exists():
 frozen_redesign = downloads/'stage10-redesign-frozen-source.zip'
 if not frozen_redesign.exists():
     subprocess.run(['git','archive','--format=zip','--output='+str(frozen_redesign),'stage10-redesign-frozen'],cwd=root,check=True)
+shutil.copy2(root/'docs/STAGE11-STABILIZATION.md', downloads/'STAGE11-STABILIZATION.md')
 shutil.copy2(root/'docs/STAGE11.md', downloads/'STAGE11.md')
 shutil.copy2(root/'docs/PERFORMANCE-STAGE11.md', downloads/'PERFORMANCE-STAGE11.md')
 shutil.copy2(root/'README.md', downloads/'README.md')
@@ -89,10 +90,11 @@ def inline(text):
     s = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', s)
     s = re.sub(r'`([^`]+)`', r'<code>\1</code>', s)
     s = s.replace('href="FACILITY-DESIGN.md"', 'href="downloads/FACILITY-DESIGN.md"').replace('href="PERFORMANCE-REDESIGN.md"', 'href="downloads/PERFORMANCE-REDESIGN.md"')
+    s = s.replace('href="STAGE11-STABILIZATION.md"', 'href="downloads/STAGE11-STABILIZATION.md"')
     s = s.replace('href="STAGE11.md"', 'href="downloads/STAGE11.md"').replace('href="PERFORMANCE-STAGE11.md"', 'href="downloads/PERFORMANCE-STAGE11.md"')
     return s
 
-lines = ((root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
+lines = ((root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
 parts = []
 i = 0
 while i < len(lines):

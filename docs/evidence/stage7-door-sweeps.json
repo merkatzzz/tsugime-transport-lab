@@ -37,10 +37,8 @@
     {
       "body": "T2",
       "door": "T2-door",
-      "wallMin": 0.10500000000000043,
-      "solidMin": 1.4000000000000004,
-      "hinge": "b",
-      "swing": 90
+      "kind": "slide",
+      "pocketTravel": 1.32
     },
     {
       "body": "E1",
@@ -286,7 +284,7 @@
       "body": "LB1",
       "door": "LB1-left",
       "wallMin": 0.11000000000000032,
-      "solidMin": 4.47213595499958,
+      "solidMin": 3.4409301068170524,
       "hinge": "a",
       "swing": -90
     },
@@ -294,39 +292,23 @@
       "body": "LB1",
       "door": "LB1-right",
       "wallMin": 0.10125000000000028,
-      "solidMin": 4.80086200490927,
+      "solidMin": 4.51724568965349,
       "hinge": "b",
       "swing": 90
     },
     {
       "body": "LB1",
-      "door": "LB1-main",
-      "wallMin": 0.10125000000000028,
-      "solidMin": 0.9000000000000004,
-      "hinge": "a",
-      "swing": -90
-    },
-    {
-      "body": "LB1",
-      "door": "LB1-small",
-      "wallMin": 0.10125000000000028,
-      "solidMin": 0.9099751242241783,
-      "hinge": "a",
-      "swing": -90
-    },
-    {
-      "body": "LB1",
       "door": "LB1-work",
-      "wallMin": 0.10499999999999954,
-      "solidMin": 1.1671568097509262,
+      "wallMin": 0.10200000000000031,
+      "solidMin": 0.7999999999999998,
       "hinge": "a",
       "swing": 90
     },
     {
       "body": "LB1",
       "door": "LB1-store",
-      "wallMin": 0.10500000000000043,
-      "solidMin": 1.6202941017470889,
+      "wallMin": 0.10125000000000028,
+      "solidMin": 0.7999999999999998,
       "hinge": "a",
       "swing": 90
     }

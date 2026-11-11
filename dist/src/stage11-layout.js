@@ -1,3 +1,4 @@
+import {stabilizeBuildings} from './stabilization-layout.js';
 import {WALL_ROLE} from './wall-roles.js';
 const port=(id,face,a=3,b=5,height=2.5)=>({id,face,a,b,height,role:WALL_ROLE.CONNECTOR});
 const wall=(a,b,extra={})=>({a,b,role:WALL_ROLE.ROOM,...extra});
@@ -21,6 +22,7 @@ export function expandStage11(bodies){
  l.walls=[wall([1.2,0],[1.2,5.5],{exterior:true}),wall([1.2,7.5],[1.2,8],{exterior:true}),wall([1.2,3.1],[5.2,3.1]),wall([6.3,3.1],[10.8,3.1]),wall([11.9,3.1],[16,3.1]),wall([10,0],[10,3.1]),wall([3.2,5.2],[5.3,5.2]),wall([6.4,5.2],[11.4,5.2]),wall([12.5,5.2],[16,5.2]),wall([10,5.2],[10,8]),wall([3.2,5.2],[3.2,8])];
  l.doors=[door('LB1-left',[1.2,5.5],[1.2,6.5],'研究所・二枚扉',-90,{entrance:true}),door('LB1-right',[1.2,6.5],[1.2,7.5],'研究所・二枚扉',90,{hinge:'b',entrance:true}),door('LB1-main',[5.2,3.1],[6.3,3.1],'主研究室'),door('LB1-small',[10.8,3.1],[11.9,3.1],'小実験室'),door('LB1-work',[5.3,5.2],[6.4,5.2],'分析室',90),door('LB1-store',[11.4,5.2],[12.5,5.2],'保管室',90)];l.furniture=[box(3,.4,3,.7,.9),box(11,.4,3,.7,.9),box(7,6.7,2,.7,.9),box(14,6,1,1.5,1.1)];l.labels=[{name:'前室',x:2.2,z:6.5},{name:'主研究室',x:6,z:1.7},{name:'小実験室',x:13,z:1.7},{name:'分析室',x:6,z:6.6},{name:'保管室',x:13,z:6.6},{name:'研究所・内部廊下',x:8,z:4.2}];bodies.push(l);
  // Existing large rooms and stores remain; their area membership is descriptive, never a rigid transport group.
+ stabilizeBuildings(bodies);
  for(const b of bodies)if(!b.zone)b.zone=b.use==='commerce'?'commerce':b.use==='residential'||['G3','A3','P9'].includes(b.id)?'housing':'service';
 }
 export function districtPlacements(phase,p){const b=phase==='B';return Object.assign(p,{MK1:{x:b?58.8:50.4,y:12.8,z:25.2},SH1:{x:58.8,y:0,z:11.8},SH2:b?{x:58.8,y:12.8,z:8.4}:{x:67.2,y:0,z:10.8},RH1:{x:b?58.8:50.4,y:12.8,z:16.8},CP1:{x:b?75.6:67.2,y:12.8,z:16.8},LB1:b?{x:84,y:0,z:16.8}:{x:75.6,y:0,z:10.8}});}
