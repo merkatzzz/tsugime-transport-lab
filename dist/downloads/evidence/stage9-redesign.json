@@ -119,6 +119,19 @@
             11
           ],
           "role": "room-fixed"
+        },
+        {
+          "a": [
+            8,
+            11
+          ],
+          "b": [
+            8,
+            16
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1
         }
       ],
       "doors": [
@@ -231,6 +244,26 @@
           "w": 8,
           "d": 5,
           "role": "room-fixed"
+        }
+      ],
+      "mobility": {
+        "generation": 7,
+        "kind": "transportable",
+        "purpose": "幅広共用前室と点検廊下の接続を変更"
+      },
+      "partitionRepairs": [
+        {
+          "a": [
+            8,
+            11
+          ],
+          "b": [
+            8,
+            16
+          ],
+          "role": "room-fixed",
+          "source": "room-envelope",
+          "room": 1
         }
       ]
     },
@@ -443,7 +476,13 @@
           "d": 3,
           "role": "room-fixed"
         }
-      ]
+      ],
+      "mobility": {
+        "generation": 7,
+        "kind": "transportable",
+        "purpose": "二連結住戸の階と西側接続を変更"
+      },
+      "partitionRepairs": []
     },
     {
       "id": "V3",
@@ -616,7 +655,13 @@
           "d": 2.7,
           "role": "room-fixed"
         }
-      ]
+      ],
+      "mobility": {
+        "generation": 7,
+        "kind": "transportable",
+        "purpose": "階間搬送で居住区域への入口を変更"
+      },
+      "partitionRepairs": []
     },
     {
       "id": "A3",
@@ -701,7 +746,13 @@
           "d": 8,
           "height": 2.7
         }
-      ]
+      ],
+      "mobility": {
+        "generation": 7,
+        "kind": "transportable",
+        "purpose": "N3・住宅・固定用水路に至る共用玄関を維持"
+      },
+      "partitionRepairs": []
     },
     {
       "id": "Q1",
@@ -921,7 +972,13 @@
           "d": 8,
           "height": 2.3
         }
-      ]
+      ],
+      "mobility": {
+        "generation": 7,
+        "kind": "transportable",
+        "purpose": "予備点検廊下をBで挿入し旧設備室を開く"
+      },
+      "partitionRepairs": []
     },
     {
       "id": "W1",
@@ -982,7 +1039,13 @@
           "d": 8,
           "height": 2.7
         }
-      ]
+      ],
+      "mobility": {
+        "generation": 7,
+        "kind": "transportable",
+        "purpose": "Bの予備点検廊下で開く探索目的地として待機"
+      },
+      "partitionRepairs": []
     }
   ],
   "housingFamily": [
@@ -1002,26 +1065,6 @@
     "G5"
   ],
   "fixedPorts": [
-    {
-      "body": "U1",
-      "id": "S",
-      "face": "S",
-      "a": 3,
-      "b": 5,
-      "height": 2.3,
-      "permanent": true,
-      "role": "boundary-connector"
-    },
-    {
-      "body": "U2",
-      "id": "N",
-      "face": "N",
-      "a": 3,
-      "b": 5,
-      "height": 2.3,
-      "permanent": true,
-      "role": "boundary-connector"
-    },
     {
       "body": "U3",
       "id": "S",

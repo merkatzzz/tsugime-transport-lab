@@ -1,0 +1,26 @@
+✔ resident fixed camera fits the room and sees the real head through the narrow booth opening in every phase (2375.234127ms)
+✔ all real vertices fit cell unions and six metre envelope, including merged L-shaped render batches (2797.607087ms)
+✔ real joint floors retract, empty docks have no rendered life floor (1875.628462ms)
+✔ all open joint tunnels are enclosed above and on both sides by actual meshes (1815.019223ms)
+✔ varied low and high ceilings remain real and unequal port heights receive solid reducers (952.645047ms)
+✔ view slit passes eye ray but the same physical opening blocks body (1020.043679ms)
+✔ EV cabin and fixed shaft occlude transport space at every sampled travel height (1304.965738ms)
+✔ landing doors open only for stationary cabin at that landing (886.668376ms)
+✔ adopted transport sweeps clear all rendered fixed hardware, shaft, enclosure and stationary cabin by 0.2m (14413.438562ms)
+✔ all fixed and moving rendered mesh bounds are finite (5902.622607ms)
+✔ joint collars enclose oblique eye rays at inset port boundaries, without seam leaks (22129.854818ms)
+✔ shortest paths also clear the actual visible 3D meshes at body height (6205.027753ms)
+✔ all fixed waterways have real walking connections in ABC, with no wall or water penetration (6559.946289ms)
+✔ closed transport gates block entrance, while fixed tunnel stays safe through a full ABC cycle (16616.309442ms)
+✔ fixed water reservations reject both swept horizontal crossing and vertical crossing (0.918048ms)
+✔ expanded east and south margins accept an actual two-cell rigid transport route (86.216441ms)
+✔ water meshes are fixed, curved and do not intersect the walking route at body height; render reuses geometry (1740.361505ms)
+✔ water sound attenuates with distance and pauses (0.813654ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 87173.209348

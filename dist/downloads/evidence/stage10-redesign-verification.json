@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "rows": [
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "plans",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "surfaces",
+      "exit": 0
+    },
+    {
+      "name": "doors",
+      "exit": 0
+    },
+    {
+      "name": "walks",
+      "exit": 0
+    }
+  ],
+  "browserVerified": false
+}

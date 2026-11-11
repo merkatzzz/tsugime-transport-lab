@@ -1,0 +1,435 @@
+{
+  "status": "candidate-only",
+  "notImplemented": [
+    "walkable ownership",
+    "entrance graph/gates",
+    "curved mesh",
+    "fluid surface",
+    "water collision",
+    "maps",
+    "save integration"
+  ],
+  "candidates": [
+    {
+      "id": "north-exploration",
+      "length": 48,
+      "min": [
+        8.4,
+        -14,
+        -8.4
+      ],
+      "max": [
+        56.4,
+        -7.8,
+        -0.4
+      ]
+    },
+    {
+      "id": "second-open",
+      "min": [
+        75.6,
+        0,
+        33.6
+      ],
+      "max": [
+        83.6,
+        6,
+        41.6
+      ]
+    },
+    {
+      "id": "third-open",
+      "min": [
+        16.8,
+        12.8,
+        33.6
+      ],
+      "max": [
+        24.8,
+        18.8,
+        41.6
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "size": "same",
+      "method": "serial",
+      "phase": "A",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "serial",
+      "phase": "A",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "serial",
+      "phase": "A",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "serial",
+      "phase": "B",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "serial",
+      "phase": "B",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "serial",
+      "phase": "B",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "serial",
+      "phase": "C",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "serial",
+      "phase": "C",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "serial",
+      "phase": "C",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "phase": "A",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "phase": "A",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "phase": "A",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "phase": "B",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "phase": "B",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "phase": "B",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "phase": "C",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "phase": "C",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "same",
+      "method": "cooperative",
+      "phase": "C",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "phase": "A",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "phase": "A",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "phase": "A",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "phase": "B",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "phase": "B",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "phase": "B",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "phase": "C",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "phase": "C",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "serial",
+      "phase": "C",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "phase": "A",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "phase": "A",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "phase": "A",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "phase": "B",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "phase": "B",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "phase": "B",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "phase": "C",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "phase": "C",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring1",
+      "method": "cooperative",
+      "phase": "C",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "phase": "A",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "phase": "A",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "phase": "A",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "phase": "B",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "phase": "B",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "phase": "B",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "phase": "C",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "phase": "C",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "serial",
+      "phase": "C",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "phase": "A",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "phase": "A",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "phase": "A",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "phase": "B",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "phase": "B",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "phase": "B",
+      "water": "third-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "phase": "C",
+      "water": "north-exploration",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "phase": "C",
+      "water": "second-open",
+      "conflicts": []
+    },
+    {
+      "size": "ring2",
+      "method": "cooperative",
+      "phase": "C",
+      "water": "third-open",
+      "conflicts": []
+    }
+  ],
+  "allSweepsClear": true
+}

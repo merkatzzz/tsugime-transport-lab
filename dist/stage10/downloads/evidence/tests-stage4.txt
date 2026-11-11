@@ -1,0 +1,87 @@
+
+> tsugime-architecture-transport-lab@8.0.0 test:stage4
+> node --test stage4/tests/*.test.mjs
+
+✔ extension keeps two levels, adds four mobile rooms and creates physically walkable east paths (1290.272419ms)
+✔ every added room has a usable animated door in all phases and cannot be entered when closed (174.668475ms)
+✔ all added bodies carry a rider through complete physical cycle with no final coordinate replacement (988.711757ms)
+✔ surface partition removes overlaps without deleting non-overlapping floor area (0.293408ms)
+✔ ordinary doors start closed and reset closes them (1.40193ms)
+✔ booth image visit separates conversation and exit in all three phases (266.271752ms)
+✔ normal room door opens into 3D space (20.794393ms)
+✔ shop conversation stays in 3D (0.320181ms)
+✔ mechanical audio retains transfer and pause synchronization (0.34761ms)
+✔ dense expanded architecture contains 16 bodies, 23 cells, corridor-only bodies and large permanent unions (6.071738ms)
+✔ four directions match, north-south edges exist, B has two true independent loops (2005.485722ms)
+✔ same-face west A and B shutters are independent; R2 has three disconnected intrinsic components (1.369218ms)
+✔ partial 0.5m slit is visible but cannot pass the body; closed complementary widths remain blocked (0.730386ms)
+✔ all passable joints can actually be crossed by the body controller in their normal direction (61.497997ms)
+✔ same physical reference points and A/B/C shortest grid routes replay through movement collisions (1.34798ms)
+✔ 0.1m finer walking grid confirms shortcut size within 0.6m of 0.2m grid (6083.398093ms)
+✔ ordinary door changes intrinsic components and physical route together (85.063027ms)
+✔ large H1 and L1 move in plan, R2 and J1 change XY while remaining on their life floor (0.407264ms)
+✔ same/serial A→B continuous 0.2m full-envelope validation (18.852914ms)
+✔ same/serial B→C continuous 0.2m full-envelope validation (87.61408ms)
+✔ same/serial C→A continuous 0.2m full-envelope validation (9.580305ms)
+✔ same/cooperative A→B continuous 0.2m full-envelope validation (322.929259ms)
+✔ same/cooperative B→C continuous 0.2m full-envelope validation (614.779816ms)
+✔ same/cooperative C→A continuous 0.2m full-envelope validation (28.753227ms)
+✔ ring1/serial A→B continuous 0.2m full-envelope validation (5.983696ms)
+✔ ring1/serial B→C continuous 0.2m full-envelope validation (15.142684ms)
+✔ ring1/serial C→A continuous 0.2m full-envelope validation (7.891618ms)
+✔ ring1/cooperative A→B continuous 0.2m full-envelope validation (136.534146ms)
+✔ ring1/cooperative B→C continuous 0.2m full-envelope validation (616.041146ms)
+✔ ring1/cooperative C→A continuous 0.2m full-envelope validation (44.527243ms)
+✔ ring2/serial A→B continuous 0.2m full-envelope validation (4.050011ms)
+✔ ring2/serial B→C continuous 0.2m full-envelope validation (15.91048ms)
+✔ ring2/serial C→A continuous 0.2m full-envelope validation (6.042069ms)
+✔ ring2/cooperative A→B continuous 0.2m full-envelope validation (102.725026ms)
+✔ ring2/cooperative B→C continuous 0.2m full-envelope validation (643.63332ms)
+✔ ring2/cooperative C→A continuous 0.2m full-envelope validation (33.557998ms)
+✔ real temporary docks and separate C0 storage are used; second expansion gives no duration improvement (4.957165ms)
+✔ continuous collision rejects paths crossing between clear endpoints and enforces clearance (0.361041ms)
+✔ small bounds fail with concrete errors (1.309152ms)
+✔ cooperative reservations perform simultaneous physical moves and finish whole cycle without snapping (18.760604ms)
+✔ rider stays local to large H1 through temporary deck storage and final XY relocation (10.362624ms)
+✔ normal component-based evacuation waits in J1; experimental isolation reconnects in A (16.39691ms)
+✔ stored spare remains physical and isolated through C and A, reinserted in B with rider (10.578861ms)
+✔ joint straddling waits for safety and debug rescue is explicitly distinct (3.467356ms)
+✔ empty docks have no walkable support; rolling shutters close all joint floors (1.316075ms)
+✔ walk 3.6m/s, shift 5.2m/s independently of transport speed; diagonal normalized (15.279082ms)
+✔ high speed cannot tunnel through ordinary walls or closed individual shutters (35.946341ms)
+✔ fixed EV continuously moves inside shaft and landing gates block absent cabin (1.570653ms)
+✔ all phase maps and deck render data are generated from live geometry with port IDs and routes (20.446292ms)
+✔ normal warning blocks new entry into J1 but lets an existing occupant walk out (17.638408ms)
+✔ even a stationary invalid initial overlap is rejected (2.421637ms)
+✔ resident fixed camera fits the room and sees the real head through the narrow booth opening in every phase (825.015475ms)
+✔ all real body meshes fit cell unions and six metre envelope, including rolled shutters and per-port adapters (785.563641ms)
+✔ real joint floors retract, empty docks have no rendered life floor (387.248125ms)
+✔ all open joint tunnels are enclosed above and on both sides by actual meshes (456.02877ms)
+✔ varied low and high ceilings remain real and unequal port heights receive solid reducers (227.097624ms)
+✔ view slit passes eye ray but the same physical opening blocks body (206.05705ms)
+✔ EV cabin and fixed shaft occlude transport space at every sampled travel height (329.797563ms)
+✔ landing doors open only for stationary cabin at that landing (221.507194ms)
+✔ adopted transport sweeps clear all rendered fixed hardware, shaft, enclosure and stationary cabin by 0.2m (1110.356558ms)
+✔ all fixed and moving rendered mesh bounds are finite (419.720477ms)
+✔ joint collars enclose oblique eye rays at inset port boundaries, without seam leaks (1738.047369ms)
+✔ shortest paths also clear the actual visible 3D meshes at body height (2800.627117ms)
+✔ R1 W reveal also seals below the interior ceiling, not only in the upper shell (578.737787ms)
+✔ opening side reveals seal the 20mm wall-to-recess gap above shutter headers in every face and phase (821.033105ms)
+✔ floor grid is one filtered texture with UVs, never a layer of coplanar thin boxes (642.756352ms)
+✔ joint floors exactly span mechanical gaps with flush top; local sides and roof seal every live joint in A/B/C (952.189185ms)
+✔ cutaway, exploration and shutter reconnection invalidate geometry together (612.624072ms)
+✔ world-level union handles perpendicular walls across groups and remains stable on rebuild (5.659345ms)
+✔ HTML controls and module initialization work with explicitly unavailable WebGL (3707.039663ms)
+ℹ tests 70
+ℹ suites 0
+ℹ pass 70
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31673.582936
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

@@ -1,3 +1,13 @@
+# 『継ぎ目の部屋』独立建築・搬送実験 — 第十段階・搬送再設計版
+
+再開ブランチ：stage10-redesign。47可動設備・64チャンク、固定設備10。全体のABC設計と診断を集約し、J9/U2を搬送対象へ、P9をBで第一層へ移します。G1/M1のC配置、南の実退避、室内部分壁、水路断面、店舗高と店主の向きも修正しました。
+
+[修正版の報告・操作・復元方法](docs/STAGE10-REDESIGN.md) ／ [全47体の比較表](docs/TRANSPORT-COMPARISON.md) ／ [今後の増築ルール](docs/FACILITY-DESIGN.md)。npm test、npm run verify、npm run audit、npm start。サイトの右側「搬送診断」でABCと固定/待機の理由を確認できます。
+
+改修前はstage10-frozen（6ec6640）と完全ZIPで保存。現在のサイト：https://tsugime-architecture-transport-lab.merkatzzz.chatgpt.site 。WebGL目視・聴取は管理プレビューの4173中継障害により未確認です。
+
+以下は旧第十段階までの記録です。旧配置・保存版・再開ブランチ・性能値は当時の情報として参照してください。
+
 # 『継ぎ目の部屋』独立建築・搬送実験 — 第十段階
 
 固定水路3か所、東南各8.4mの搬送域拡張、店舗カウンター、NPC手動指定と訪問扉修正を実装。47搬送体・64可動チャンクと8×8×6mを維持。

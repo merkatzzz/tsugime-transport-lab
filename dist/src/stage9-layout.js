@@ -2,7 +2,7 @@ import {PEOPLE} from './life.js';
 import {WALL_ROLE} from './wall-roles.js';
 const wall=(a,b)=>({a,b,role:WALL_ROLE.ROOM}),port=(id,face,a,b)=>({id,face,a,b,height:2.4,role:WALL_ROLE.CONNECTOR});
 export function expandStage9(bodies){
- for(const n of PEOPLE){const r=n.shop,b=bodies.find(b=>b.id===n.work.body);b.walls.push(wall([r.x,r.z],[r.x+r.w,r.z]),wall([r.x,r.z],[r.x,r.z+r.d]),wall([r.x+r.w,r.z],[r.x+r.w,r.z+r.d]));}
+ for(const n of PEOPLE){const r=n.shop,b=bodies.find(b=>b.id===n.work.body);b.walls.push(...[wall([r.x,r.z],[r.x+r.w,r.z]),wall([r.x,r.z],[r.x,r.z+r.d]),wall([r.x+r.w,r.z],[r.x+r.w,r.z+r.d])].map((l,i)=>({...l,id:'shop:'+n.id+':'+i,height:r.h})));}
  const get=id=>bodies.find(b=>b.id===id);get('G5').ports.push(port('E-life','E',4,6));get('G3').ports.push(port('E-life','E',12,14));
  const base={generation:9,ceiling:2.8,color:'#a9aa8c',use:'common',walls:[],doors:[],solids:[],furniture:[],labels:[]};
  bodies.push({...structuredClone(base),id:'J9',name:'生活施設への接続廊下',cells:[[0,0]],ports:[port('W','W',4,6),port('E','E',4,6)],roofAreas:[{x:0,z:0,w:8,d:8,height:2.8}],furniture:[{x:1,z:1,w:2,d:1,h:.6,color:'wood'}],labels:[{name:'生活施設へ',x:4,z:5}]});

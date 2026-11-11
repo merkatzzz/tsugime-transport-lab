@@ -1,50 +1,116 @@
 {
   "ok": true,
-  "stage": 10,
+  "stage": "stage10-redesign",
   "rows": [
     {
-      "name": "current-stage10",
+      "name": "current-stage10-redesign",
+      "tests": 182,
+      "pass": 182,
+      "fail": 0
+    },
+    {
+      "name": "frozen-stage10-restoration",
       "tests": 170,
       "pass": 170,
       "fail": 0
-    },
-    {
-      "name": "final-mesh-and-water",
-      "tests": 18,
-      "pass": 18,
-      "fail": 0
-    },
-    {
-      "name": "stage9-restoration-basic",
-      "tests": 15,
-      "pass": 15,
-      "fail": 0
     }
   ],
-  "plans": {
-    "profiles": 6,
-    "validated": 18
-  },
-  "surfaceEquivalence": {
-    "conditions": 24,
-    "ok": true
-  },
-  "package": {
-    "htmlPages": 20,
-    "localLinks": 501,
-    "archives": 14,
-    "ok": true
-  },
-  "logs": [
-    "tests-stage10.txt",
-    "stage10-final-geometry.txt",
-    "stage10-restore-basic.txt",
-    "stage10-surface-equivalence.txt"
+  "checks": [
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "plans",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "surfaces",
+      "exit": 0
+    },
+    {
+      "name": "doors",
+      "exit": 0
+    },
+    {
+      "name": "walks",
+      "exit": 0
+    }
   ],
-  "historical": "Prior-stage results remain in the frozen stage9 evidence. They were not rerun as part of this stage10 release.",
+  "transport": {
+    "bodies": 47,
+    "cells": 64,
+    "transportable": 47,
+    "fixedEquipment": 10,
+    "moved": 27,
+    "waiting": 20,
+    "duration": 88.0667,
+    "transitions": [
+      {
+        "from": "A",
+        "to": "B",
+        "duration": 29.866666666666664,
+        "ok": true
+      },
+      {
+        "from": "B",
+        "to": "C",
+        "duration": 40.86666666666667,
+        "ok": true
+      },
+      {
+        "from": "C",
+        "to": "A",
+        "duration": 17.333333333333332,
+        "ok": true
+      }
+    ]
+  },
+  "baseline": {
+    "bodies": 47,
+    "cells": 64,
+    "transportable": 47,
+    "fixedEquipment": 10,
+    "moved": 25,
+    "waiting": 22,
+    "duration": 86.2667,
+    "transitions": [
+      {
+        "from": "A",
+        "to": "B",
+        "duration": 29.866666666666664,
+        "ok": true
+      },
+      {
+        "from": "B",
+        "to": "C",
+        "duration": 39.06666666666667,
+        "ok": true
+      },
+      {
+        "from": "C",
+        "to": "A",
+        "duration": 17.333333333333332,
+        "ok": true
+      }
+    ]
+  },
   "browserQA": {
     "verified": false,
     "audioHeard": false,
     "reason": "Managed preview relay port 4173 readiness timeout"
-  }
+  },
+  "historical": "Earlier-stage evidence remains in frozen tags/comparison copies; do not mix it with this release.",
+  "targeted": [
+    {
+      "name": "save-layout-migration-and-life",
+      "tests": 26,
+      "pass": 26,
+      "fail": 0
+    }
+  ]
 }

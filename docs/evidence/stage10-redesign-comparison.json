@@ -1,0 +1,2276 @@
+{
+  "before": {
+    "bodies": 47,
+    "cells": 64,
+    "transportable": 47,
+    "fixedEquipment": 10,
+    "moved": 25,
+    "waiting": 22,
+    "duration": 86.2667,
+    "transitions": [
+      {
+        "from": "A",
+        "to": "B",
+        "duration": 29.866666666666664,
+        "ok": true
+      },
+      {
+        "from": "B",
+        "to": "C",
+        "duration": 39.06666666666667,
+        "ok": true
+      },
+      {
+        "from": "C",
+        "to": "A",
+        "duration": 17.333333333333332,
+        "ok": true
+      }
+    ]
+  },
+  "after": {
+    "bodies": 47,
+    "cells": 64,
+    "transportable": 47,
+    "fixedEquipment": 10,
+    "moved": 27,
+    "waiting": 20,
+    "duration": 88.0667,
+    "transitions": [
+      {
+        "from": "A",
+        "to": "B",
+        "duration": 29.866666666666664,
+        "ok": true
+      },
+      {
+        "from": "B",
+        "to": "C",
+        "duration": 40.86666666666667,
+        "ok": true
+      },
+      {
+        "from": "C",
+        "to": "A",
+        "duration": 17.333333333333332,
+        "ok": true
+      }
+    ]
+  },
+  "newMovers": [
+    "U2",
+    "J9"
+  ],
+  "changedTargets": [
+    {
+      "id": "M1",
+      "phases": [
+        "C"
+      ]
+    },
+    {
+      "id": "U2",
+      "phases": [
+        "B"
+      ]
+    },
+    {
+      "id": "G1",
+      "phases": [
+        "C"
+      ]
+    },
+    {
+      "id": "J9",
+      "phases": [
+        "B"
+      ]
+    },
+    {
+      "id": "P9",
+      "phases": [
+        "B"
+      ]
+    }
+  ],
+  "reducedPath": [
+    "G5",
+    "P9"
+  ],
+  "generations": [
+    {
+      "generation": 1,
+      "bodies": 8,
+      "before": 4,
+      "after": 4
+    },
+    {
+      "generation": 3,
+      "bodies": 4,
+      "before": 3,
+      "after": 3
+    },
+    {
+      "generation": 4,
+      "bodies": 4,
+      "before": 4,
+      "after": 4
+    },
+    {
+      "generation": 5,
+      "bodies": 4,
+      "before": 2,
+      "after": 2
+    },
+    {
+      "generation": 6,
+      "bodies": 14,
+      "before": 2,
+      "after": 3
+    },
+    {
+      "generation": 7,
+      "bodies": 6,
+      "before": 4,
+      "after": 4
+    },
+    {
+      "generation": 8,
+      "bodies": 5,
+      "before": 5,
+      "after": 5
+    },
+    {
+      "generation": 9,
+      "bodies": 2,
+      "before": 1,
+      "after": 2
+    }
+  ],
+  "rows": [
+    {
+      "id": "R1",
+      "name": "住戸301・参照地点",
+      "generation": 1,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "R2",
+            "J1",
+            "F1"
+          ],
+          "after": [
+            "R2",
+            "J1",
+            "F1"
+          ]
+        },
+        "B": {
+          "before": [
+            "C0",
+            "J1",
+            "F1"
+          ],
+          "after": [
+            "C0",
+            "J1",
+            "F1"
+          ]
+        },
+        "C": {
+          "before": [
+            "R2",
+            "R3",
+            "F1"
+          ],
+          "after": [
+            "R2",
+            "R3",
+            "F1"
+          ]
+        }
+      },
+      "reason": "同じ住戸からの近道比較の基準として待機"
+    },
+    {
+      "id": "R2",
+      "name": "住戸・分離した西通路",
+      "generation": 1,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "16.8m / 16.8m / 0.0m",
+      "afterNet": "16.8m / 16.8m / 0.0m",
+      "beforePath": "29.6 / 29.6 / 0.0",
+      "afterPath": "29.6 / 29.6 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "R1",
+            "J2",
+            "T1"
+          ],
+          "after": [
+            "R1",
+            "J2",
+            "T1"
+          ]
+        },
+        "B": {
+          "before": [
+            "R3",
+            "J2"
+          ],
+          "after": [
+            "R3",
+            "J2"
+          ]
+        },
+        "C": {
+          "before": [
+            "R1",
+            "J2",
+            "T1"
+          ],
+          "after": [
+            "R1",
+            "J2",
+            "T1"
+          ]
+        }
+      },
+      "reason": "C0の挿入・撤収で参照経路を変更"
+    },
+    {
+      "id": "R3",
+      "name": "個室201・南北通路",
+      "generation": 1,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 8.4m / 8.4m",
+      "afterNet": "0.0m / 8.4m / 8.4m",
+      "beforePath": "0.0 / 21.2 / 21.2",
+      "afterPath": "0.0 / 21.2 / 21.2",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "V3",
+            "J1"
+          ],
+          "after": [
+            "V3",
+            "J1"
+          ]
+        },
+        "B": {
+          "before": [
+            "R2",
+            "J1"
+          ],
+          "after": [
+            "R2",
+            "J1"
+          ]
+        },
+        "C": {
+          "before": [
+            "R1",
+            "J2"
+          ],
+          "after": [
+            "R1",
+            "J2"
+          ]
+        }
+      },
+      "reason": "J1と位置を交換し南北通路を変更"
+    },
+    {
+      "id": "R4",
+      "name": "低天井の居室・分岐",
+      "generation": 1,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "J3",
+            "F0"
+          ],
+          "after": [
+            "J3",
+            "F0"
+          ]
+        },
+        "B": {
+          "before": [
+            "J3",
+            "H1",
+            "F0"
+          ],
+          "after": [
+            "J3",
+            "H1",
+            "F0"
+          ]
+        },
+        "C": {
+          "before": [
+            "J3",
+            "F0"
+          ],
+          "after": [
+            "J3",
+            "F0"
+          ]
+        }
+      },
+      "reason": "第二層主EVの着床先と生活通路を維持"
+    },
+    {
+      "id": "T1",
+      "name": "生活用品店・参照目的地",
+      "generation": 1,
+      "cells": 2,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "R2",
+            "E1"
+          ],
+          "after": [
+            "R2",
+            "E1"
+          ]
+        },
+        "B": {
+          "before": [
+            "E3",
+            "L1",
+            "C0"
+          ],
+          "after": [
+            "E3",
+            "L1",
+            "C0"
+          ]
+        },
+        "C": {
+          "before": [
+            "R2",
+            "E1"
+          ],
+          "after": [
+            "R2",
+            "E1"
+          ]
+        }
+      },
+      "reason": "生活用品店と参照経路の目的地として待機"
+    },
+    {
+      "id": "T2",
+      "name": "小売店・奥店舗",
+      "generation": 1,
+      "cells": 2,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "E3",
+            "L1",
+            "J3"
+          ],
+          "after": [
+            "E3",
+            "L1",
+            "J3"
+          ]
+        },
+        "B": {
+          "before": [
+            "E1",
+            "J3"
+          ],
+          "after": [
+            "E1",
+            "J3"
+          ]
+        },
+        "C": {
+          "before": [
+            "E3",
+            "L1"
+          ],
+          "after": [
+            "E3",
+            "L1"
+          ]
+        }
+      },
+      "reason": "第二層店舗・東翼への接続を維持"
+    },
+    {
+      "id": "H1",
+      "name": "共用広間・北半 H1",
+      "generation": 1,
+      "cells": 2,
+      "kind": "transportable",
+      "beforeNet": "21.1m / 21.1m / 0.0m",
+      "afterNet": "21.1m / 21.1m / 0.0m",
+      "beforePath": "29.6 / 64.8 / 0.0",
+      "afterPath": "29.6 / 64.8 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "H2",
+            "J2"
+          ],
+          "after": [
+            "H2",
+            "J2"
+          ]
+        },
+        "B": {
+          "before": [
+            "R4"
+          ],
+          "after": [
+            "R4"
+          ]
+        },
+        "C": {
+          "before": [
+            "H2",
+            "J2"
+          ],
+          "after": [
+            "H2",
+            "J2"
+          ]
+        }
+      },
+      "reason": "広間北半を別階・西側へ運びH2との連結を変更"
+    },
+    {
+      "id": "L1",
+      "name": "三連結L字集会室",
+      "generation": 1,
+      "cells": 3,
+      "kind": "transportable",
+      "beforeNet": "12.8m / 15.3m / 8.4m",
+      "afterNet": "12.8m / 15.3m / 8.4m",
+      "beforePath": "12.8 / 21.2 / 21.2",
+      "afterPath": "12.8 / 21.2 / 21.2",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "T2",
+            "V2"
+          ],
+          "after": [
+            "T2",
+            "V2"
+          ]
+        },
+        "B": {
+          "before": [
+            "T1",
+            "V2",
+            "J2"
+          ],
+          "after": [
+            "T1",
+            "V2",
+            "J2"
+          ]
+        },
+        "C": {
+          "before": [
+            "T2",
+            "V2",
+            "J3"
+          ],
+          "after": [
+            "T2",
+            "V2",
+            "J3"
+          ]
+        }
+      },
+      "reason": "L字集会室が階と平面位置を変更"
+    },
+    {
+      "id": "J1",
+      "name": "単独T字廊下・南北枝",
+      "generation": 3,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 8.4m / 8.4m",
+      "afterNet": "0.0m / 8.4m / 8.4m",
+      "beforePath": "0.0 / 50.8 / 50.8",
+      "afterPath": "0.0 / 50.8 / 50.8",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "R1",
+            "J2",
+            "R3"
+          ],
+          "after": [
+            "R1",
+            "J2",
+            "R3"
+          ]
+        },
+        "B": {
+          "before": [
+            "R1",
+            "J2",
+            "R3"
+          ],
+          "after": [
+            "R1",
+            "J2",
+            "R3"
+          ]
+        },
+        "C": {
+          "before": [],
+          "after": []
+        }
+      },
+      "reason": "南北枝の接続先を変更"
+    },
+    {
+      "id": "J2",
+      "name": "単独分岐廊下・環状路節点",
+      "generation": 3,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "R2",
+            "J1",
+            "H1",
+            "V3"
+          ],
+          "after": [
+            "R2",
+            "J1",
+            "H1",
+            "V3"
+          ]
+        },
+        "B": {
+          "before": [
+            "J1",
+            "L1",
+            "R2",
+            "C0"
+          ],
+          "after": [
+            "J1",
+            "L1",
+            "R2",
+            "C0"
+          ]
+        },
+        "C": {
+          "before": [
+            "R2",
+            "R3",
+            "H1",
+            "V3"
+          ],
+          "after": [
+            "R2",
+            "R3",
+            "H1",
+            "V3"
+          ]
+        }
+      },
+      "reason": "C0挿入・撤収に対する分岐の基準点として待機"
+    },
+    {
+      "id": "J3",
+      "name": "単独交差廊下・配置可変",
+      "generation": 3,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 11.9m / 11.9m",
+      "afterNet": "0.0m / 11.9m / 11.9m",
+      "beforePath": "0.0 / 29.6 / 29.6",
+      "afterPath": "0.0 / 29.6 / 29.6",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "R4",
+            "T2"
+          ],
+          "after": [
+            "R4",
+            "T2"
+          ]
+        },
+        "B": {
+          "before": [
+            "R4",
+            "T2"
+          ],
+          "after": [
+            "R4",
+            "T2"
+          ]
+        },
+        "C": {
+          "before": [
+            "R4",
+            "L1"
+          ],
+          "after": [
+            "R4",
+            "L1"
+          ]
+        }
+      },
+      "reason": "交差部の階と位置を変更"
+    },
+    {
+      "id": "C0",
+      "name": "予備T字廊下・近道",
+      "generation": 3,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "42.5m / 42.5m / 0.0m",
+      "afterNet": "42.5m / 42.5m / 0.0m",
+      "beforePath": "48.4 / 48.4 / 0.0",
+      "afterPath": "48.4 / 48.4 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [],
+          "after": []
+        },
+        "B": {
+          "before": [
+            "R1",
+            "T1",
+            "J2"
+          ],
+          "after": [
+            "R1",
+            "T1",
+            "J2"
+          ]
+        },
+        "C": {
+          "before": [],
+          "after": []
+        }
+      },
+      "reason": "保管位置から近道へ挿入・撤収"
+    },
+    {
+      "id": "E1",
+      "name": "東翼・個室401",
+      "generation": 4,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "12.8m / 12.8m / 0.0m",
+      "afterNet": "12.8m / 12.8m / 0.0m",
+      "beforePath": "63.2 / 12.8 / 0.0",
+      "afterPath": "63.2 / 12.8 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "T1",
+            "E2"
+          ],
+          "after": [
+            "T1",
+            "E2"
+          ]
+        },
+        "B": {
+          "before": [
+            "T2",
+            "E4",
+            "H2"
+          ],
+          "after": [
+            "T2",
+            "E4",
+            "H2"
+          ]
+        },
+        "C": {
+          "before": [
+            "T1",
+            "E4"
+          ],
+          "after": [
+            "T1",
+            "E4"
+          ]
+        }
+      },
+      "reason": "東翼居室の階を交換"
+    },
+    {
+      "id": "E2",
+      "name": "東翼・読書室",
+      "generation": 4,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 12.8m / 12.8m",
+      "afterNet": "0.0m / 12.8m / 12.8m",
+      "beforePath": "0.0 / 46.4 / 12.8",
+      "afterPath": "0.0 / 46.4 / 12.8",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "E1",
+            "U1",
+            "S1"
+          ],
+          "after": [
+            "E1",
+            "U1",
+            "S1"
+          ]
+        },
+        "B": {
+          "before": [
+            "U1",
+            "E3"
+          ],
+          "after": [
+            "U1",
+            "E3"
+          ]
+        },
+        "C": {
+          "before": [
+            "U3",
+            "E3"
+          ],
+          "after": [
+            "U3",
+            "E3"
+          ]
+        }
+      },
+      "reason": "東翼居室の階を交換"
+    },
+    {
+      "id": "E3",
+      "name": "東翼・個室402",
+      "generation": 4,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "12.8m / 12.8m / 0.0m",
+      "afterNet": "12.8m / 12.8m / 0.0m",
+      "beforePath": "12.8 / 63.2 / 0.0",
+      "afterPath": "12.8 / 63.2 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "T2",
+            "E4"
+          ],
+          "after": [
+            "T2",
+            "E4"
+          ]
+        },
+        "B": {
+          "before": [
+            "T1",
+            "E2"
+          ],
+          "after": [
+            "T1",
+            "E2"
+          ]
+        },
+        "C": {
+          "before": [
+            "T2",
+            "E2"
+          ],
+          "after": [
+            "T2",
+            "E2"
+          ]
+        }
+      },
+      "reason": "東翼居室の階を交換"
+    },
+    {
+      "id": "E4",
+      "name": "東翼・作業室",
+      "generation": 4,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 12.8m / 12.8m",
+      "afterNet": "0.0m / 12.8m / 12.8m",
+      "beforePath": "0.0 / 12.8 / 46.4",
+      "afterPath": "0.0 / 12.8 / 46.4",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "E3",
+            "U3"
+          ],
+          "after": [
+            "E3",
+            "U3"
+          ]
+        },
+        "B": {
+          "before": [
+            "E1",
+            "U3",
+            "H2"
+          ],
+          "after": [
+            "E1",
+            "U3",
+            "H2"
+          ]
+        },
+        "C": {
+          "before": [
+            "E1",
+            "U1",
+            "S1"
+          ],
+          "after": [
+            "E1",
+            "U1",
+            "S1"
+          ]
+        }
+      },
+      "reason": "東翼居室の階を交換"
+    },
+    {
+      "id": "H2",
+      "name": "共用広間・南半 H2",
+      "generation": 5,
+      "cells": 2,
+      "kind": "transportable",
+      "beforeNet": "22.7m / 22.7m / 0.0m",
+      "afterNet": "22.7m / 22.7m / 0.0m",
+      "beforePath": "38.0 / 38.0 / 0.0",
+      "afterPath": "38.0 / 38.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "H1",
+            "V3"
+          ],
+          "after": [
+            "H1",
+            "V3"
+          ]
+        },
+        "B": {
+          "before": [
+            "E1",
+            "E4",
+            "M1"
+          ],
+          "after": [
+            "E1",
+            "E4",
+            "M1"
+          ]
+        },
+        "C": {
+          "before": [
+            "H1",
+            "V3"
+          ],
+          "after": [
+            "H1",
+            "V3"
+          ]
+        }
+      },
+      "reason": "広間南半を別経路へ分離・再連結"
+    },
+    {
+      "id": "K1",
+      "name": "第一層・小居室と前廊下",
+      "generation": 5,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "K2",
+            "F2"
+          ],
+          "after": [
+            "K2",
+            "F2"
+          ]
+        },
+        "B": {
+          "before": [
+            "K2",
+            "V3",
+            "F2"
+          ],
+          "after": [
+            "K2",
+            "V3",
+            "F2"
+          ]
+        },
+        "C": {
+          "before": [
+            "K2",
+            "F2"
+          ],
+          "after": [
+            "K2",
+            "F2"
+          ]
+        }
+      },
+      "reason": "第一層主EVの着床先として待機"
+    },
+    {
+      "id": "K2",
+      "name": "第一層・交差通路",
+      "generation": 5,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "W0",
+            "K1",
+            "U5",
+            "M1"
+          ],
+          "after": [
+            "W0",
+            "K1",
+            "U5",
+            "M1"
+          ]
+        },
+        "B": {
+          "before": [
+            "W0",
+            "K1",
+            "U5"
+          ],
+          "after": [
+            "W0",
+            "K1",
+            "U5"
+          ]
+        },
+        "C": {
+          "before": [
+            "W0",
+            "K1",
+            "U5",
+            "M1"
+          ],
+          "after": [
+            "W0",
+            "K1",
+            "U5",
+            "G1"
+          ]
+        }
+      },
+      "reason": "第一層探索水路・生活通路の基準点として待機"
+    },
+    {
+      "id": "M1",
+      "name": "上下搬送・小交流室",
+      "generation": 5,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "27.0m / 27.0m / 0.0m",
+      "afterNet": "27.0m / 21.1m / 16.8m",
+      "beforePath": "46.4 / 46.4 / 0.0",
+      "afterPath": "46.4 / 29.6 / 29.6",
+      "changedPhases": [
+        "C"
+      ],
+      "connections": {
+        "A": {
+          "before": [
+            "K2",
+            "G1",
+            "N1"
+          ],
+          "after": [
+            "K2",
+            "G1",
+            "N1"
+          ]
+        },
+        "B": {
+          "before": [
+            "H2",
+            "G3"
+          ],
+          "after": [
+            "H2",
+            "G3"
+          ]
+        },
+        "C": {
+          "before": [
+            "K2",
+            "G1",
+            "N1"
+          ],
+          "after": [
+            "G2",
+            "G1"
+          ]
+        }
+      },
+      "reason": "上下交流室。CではG1の東に着床して住宅と待合の接続順を変更"
+    },
+    {
+      "id": "U1",
+      "name": "東翼迂回通路",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "E2",
+            "N4",
+            "U2"
+          ],
+          "after": [
+            "E2",
+            "N4",
+            "U2"
+          ]
+        },
+        "B": {
+          "before": [
+            "E2",
+            "U2"
+          ],
+          "after": [
+            "E2",
+            "U2"
+          ]
+        },
+        "C": {
+          "before": [
+            "E4",
+            "N4",
+            "U2"
+          ],
+          "after": [
+            "E4",
+            "N4",
+            "U2"
+          ]
+        }
+      },
+      "reason": "第三層東翼の入口を維持し、U2との接続方向を切り替える"
+    },
+    {
+      "id": "U2",
+      "name": "旧設備前の分岐",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "11.9m / 11.9m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "29.6 / 29.6 / 0.0",
+      "changedPhases": [
+        "B"
+      ],
+      "connections": {
+        "A": {
+          "before": [
+            "U1",
+            "S1"
+          ],
+          "after": [
+            "U1",
+            "S1"
+          ]
+        },
+        "B": {
+          "before": [
+            "U1"
+          ],
+          "after": [
+            "U1"
+          ]
+        },
+        "C": {
+          "before": [
+            "U1",
+            "S1"
+          ],
+          "after": [
+            "U1",
+            "S1"
+          ]
+        }
+      },
+      "reason": "BではN4が空ける場所へ移り、U1の南口から東口へ接続を変更"
+    },
+    {
+      "id": "U3",
+      "name": "第二層の空室前",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "E4",
+            "U4"
+          ],
+          "after": [
+            "E4",
+            "U4"
+          ]
+        },
+        "B": {
+          "before": [
+            "E4",
+            "N4",
+            "U4"
+          ],
+          "after": [
+            "E4",
+            "N4",
+            "U4"
+          ]
+        },
+        "C": {
+          "before": [
+            "E2",
+            "U4"
+          ],
+          "after": [
+            "E2",
+            "U4"
+          ]
+        }
+      },
+      "reason": "第二層東翼入口を維持"
+    },
+    {
+      "id": "U4",
+      "name": "物置と奥通路",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "U3",
+            "N2"
+          ],
+          "after": [
+            "U3",
+            "N2"
+          ]
+        },
+        "B": {
+          "before": [
+            "U3",
+            "N2"
+          ],
+          "after": [
+            "U3",
+            "N2"
+          ]
+        },
+        "C": {
+          "before": [
+            "U3",
+            "N2"
+          ],
+          "after": [
+            "U3",
+            "N2"
+          ]
+        }
+      },
+      "reason": "N2前室への恒常経路を維持"
+    },
+    {
+      "id": "U5",
+      "name": "居住区の共用前室",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "K2",
+            "N1",
+            "V1"
+          ],
+          "after": [
+            "K2",
+            "N1",
+            "V1"
+          ]
+        },
+        "B": {
+          "before": [
+            "K2",
+            "N1",
+            "V3"
+          ],
+          "after": [
+            "K2",
+            "N1",
+            "V3"
+          ]
+        },
+        "C": {
+          "before": [
+            "K2",
+            "N1",
+            "V1"
+          ],
+          "after": [
+            "K2",
+            "N1",
+            "V1"
+          ]
+        }
+      },
+      "reason": "第一層住宅群への六メートル共用入口を維持"
+    },
+    {
+      "id": "N1",
+      "name": "中和供給室 BN1",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "M1",
+            "U5"
+          ],
+          "after": [
+            "M1",
+            "U5"
+          ]
+        },
+        "B": {
+          "before": [
+            "U5",
+            "G1"
+          ],
+          "after": [
+            "U5",
+            "G1"
+          ]
+        },
+        "C": {
+          "before": [
+            "M1",
+            "U5"
+          ],
+          "after": [
+            "U5"
+          ]
+        }
+      },
+      "reason": "固定泉P1に対する供給室の向きを維持"
+    },
+    {
+      "id": "N2",
+      "name": "中和供給室 BN2",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "U4"
+          ],
+          "after": [
+            "U4"
+          ]
+        },
+        "B": {
+          "before": [
+            "U4"
+          ],
+          "after": [
+            "U4"
+          ]
+        },
+        "C": {
+          "before": [
+            "U4"
+          ],
+          "after": [
+            "U4"
+          ]
+        }
+      },
+      "reason": "固定泉P2と供給器官への到達を維持"
+    },
+    {
+      "id": "N3",
+      "name": "中和供給室 BN3",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "W3",
+            "A3"
+          ],
+          "after": [
+            "W3",
+            "A3"
+          ]
+        },
+        "B": {
+          "before": [
+            "W3",
+            "A3"
+          ],
+          "after": [
+            "W3",
+            "A3"
+          ]
+        },
+        "C": {
+          "before": [
+            "W3",
+            "A3"
+          ],
+          "after": [
+            "W3",
+            "A3"
+          ]
+        }
+      },
+      "reason": "固定泉P3と第三層用水路への入口を維持"
+    },
+    {
+      "id": "N4",
+      "name": "中和供給室 BN4",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "12.8m / 90° / 12.8m / 90° / 0.0m",
+      "afterNet": "12.8m / 90° / 12.8m / 90° / 0.0m",
+      "beforePath": "16.8 / 20.8 / 0.0",
+      "afterPath": "16.8 / 20.8 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "U1"
+          ],
+          "after": [
+            "U1"
+          ]
+        },
+        "B": {
+          "before": [
+            "U3"
+          ],
+          "after": [
+            "U3"
+          ]
+        },
+        "C": {
+          "before": [
+            "U1"
+          ],
+          "after": [
+            "U1"
+          ]
+        }
+      },
+      "reason": "回転と上下搬送で泉PA/PBへの供給方向を変更"
+    },
+    {
+      "id": "S1",
+      "name": "遠隔区域への搬送室",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "50.4m / 50.4m / 0.0m",
+      "afterNet": "50.4m / 50.4m / 0.0m",
+      "beforePath": "63.2 / 63.2 / 0.0",
+      "afterPath": "63.2 / 63.2 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "E2",
+            "U2"
+          ],
+          "after": [
+            "E2",
+            "U2"
+          ]
+        },
+        "B": {
+          "before": [
+            "D1"
+          ],
+          "after": [
+            "D1"
+          ]
+        },
+        "C": {
+          "before": [
+            "E4",
+            "U2"
+          ],
+          "after": [
+            "E4",
+            "U2"
+          ]
+        }
+      },
+      "reason": "遠隔区域へ渡り帰還する搬送室"
+    },
+    {
+      "id": "D1",
+      "name": "遠隔区域・到着通路",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "D2"
+          ],
+          "after": [
+            "D2"
+          ]
+        },
+        "B": {
+          "before": [
+            "S1",
+            "D2"
+          ],
+          "after": [
+            "S1",
+            "D2"
+          ]
+        },
+        "C": {
+          "before": [
+            "D2"
+          ],
+          "after": [
+            "D2"
+          ]
+        }
+      },
+      "reason": "S1の遠隔着床先。恒久連結した遠隔区域の入口"
+    },
+    {
+      "id": "D2",
+      "name": "遠隔区域・空き工房",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "D1",
+            "D4"
+          ],
+          "after": [
+            "D1",
+            "D4"
+          ]
+        },
+        "B": {
+          "before": [
+            "D1",
+            "D4"
+          ],
+          "after": [
+            "D1",
+            "D4"
+          ]
+        },
+        "C": {
+          "before": [
+            "D1",
+            "D4"
+          ],
+          "after": [
+            "D1",
+            "D4"
+          ]
+        }
+      },
+      "reason": "遠隔工房の恒久通路を維持"
+    },
+    {
+      "id": "D3",
+      "name": "遠隔区域・物置",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "D4"
+          ],
+          "after": [
+            "D4"
+          ]
+        },
+        "B": {
+          "before": [
+            "D4"
+          ],
+          "after": [
+            "D4"
+          ]
+        },
+        "C": {
+          "before": [
+            "D4"
+          ],
+          "after": [
+            "D4"
+          ]
+        }
+      },
+      "reason": "遠隔物置の恒久通路を維持"
+    },
+    {
+      "id": "D4",
+      "name": "遠隔区域・休憩通路",
+      "generation": 6,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "D2",
+            "D3"
+          ],
+          "after": [
+            "D2",
+            "D3"
+          ]
+        },
+        "B": {
+          "before": [
+            "D2",
+            "D3"
+          ],
+          "after": [
+            "D2",
+            "D3"
+          ]
+        },
+        "C": {
+          "before": [
+            "D2",
+            "D3"
+          ],
+          "after": [
+            "D2",
+            "D3"
+          ]
+        }
+      },
+      "reason": "遠隔区域の環状通路を維持"
+    },
+    {
+      "id": "V1",
+      "name": "三連結L型住宅・共用翼",
+      "generation": 7,
+      "cells": 3,
+      "kind": "transportable",
+      "beforeNet": "8.4m / 8.4m / 0.0m",
+      "afterNet": "8.4m / 8.4m / 0.0m",
+      "beforePath": "21.2 / 21.2 / 0.0",
+      "afterPath": "21.2 / 21.2 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "U5"
+          ],
+          "after": [
+            "U5"
+          ]
+        },
+        "B": {
+          "before": [
+            "Q1"
+          ],
+          "after": [
+            "Q1"
+          ]
+        },
+        "C": {
+          "before": [
+            "U5"
+          ],
+          "after": [
+            "U5"
+          ]
+        }
+      },
+      "reason": "幅広共用前室と点検廊下の接続を変更"
+    },
+    {
+      "id": "V2",
+      "name": "二連結住宅・ふたつの居室",
+      "generation": 7,
+      "cells": 2,
+      "kind": "transportable",
+      "beforeNet": "12.8m / 15.3m / 8.4m",
+      "afterNet": "12.8m / 15.3m / 8.4m",
+      "beforePath": "12.8 / 21.2 / 21.2",
+      "afterPath": "12.8 / 21.2 / 21.2",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "L1"
+          ],
+          "after": [
+            "L1"
+          ]
+        },
+        "B": {
+          "before": [
+            "L1",
+            "A3"
+          ],
+          "after": [
+            "L1",
+            "A3"
+          ]
+        },
+        "C": {
+          "before": [
+            "L1"
+          ],
+          "after": [
+            "L1"
+          ]
+        }
+      },
+      "reason": "二連結住戸の階と西側接続を変更"
+    },
+    {
+      "id": "V3",
+      "name": "単独住宅・片寄せ前廊下",
+      "generation": 7,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "28.2m / 28.2m / 0.0m",
+      "afterNet": "28.2m / 28.2m / 0.0m",
+      "beforePath": "42.4 / 42.4 / 0.0",
+      "afterPath": "42.4 / 42.4 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "R3",
+            "J2",
+            "H2",
+            "A3"
+          ],
+          "after": [
+            "R3",
+            "J2",
+            "H2",
+            "A3"
+          ]
+        },
+        "B": {
+          "before": [
+            "K1",
+            "U5",
+            "Q1"
+          ],
+          "after": [
+            "K1",
+            "U5",
+            "Q1"
+          ]
+        },
+        "C": {
+          "before": [
+            "J2",
+            "H2",
+            "A3"
+          ],
+          "after": [
+            "J2",
+            "H2",
+            "A3"
+          ]
+        }
+      },
+      "reason": "階間搬送で居住区域への入口を変更"
+    },
+    {
+      "id": "A3",
+      "name": "中央の共用玄関",
+      "generation": 7,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "V3",
+            "N3"
+          ],
+          "after": [
+            "V3",
+            "N3"
+          ]
+        },
+        "B": {
+          "before": [
+            "V2",
+            "N3"
+          ],
+          "after": [
+            "V2",
+            "N3"
+          ]
+        },
+        "C": {
+          "before": [
+            "V3",
+            "N3"
+          ],
+          "after": [
+            "V3",
+            "N3"
+          ]
+        }
+      },
+      "reason": "N3・住宅・固定用水路に至る共用玄関を維持"
+    },
+    {
+      "id": "Q1",
+      "name": "二連結の予備点検廊下",
+      "generation": 7,
+      "cells": 2,
+      "kind": "transportable",
+      "beforeNet": "10.6m / 10.6m / 0.0m",
+      "afterNet": "10.6m / 10.6m / 0.0m",
+      "beforePath": "14.8 / 14.8 / 0.0",
+      "afterPath": "14.8 / 14.8 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [],
+          "after": []
+        },
+        "B": {
+          "before": [
+            "V3",
+            "W1",
+            "V1"
+          ],
+          "after": [
+            "V3",
+            "W1",
+            "V1"
+          ]
+        },
+        "C": {
+          "before": [],
+          "after": []
+        }
+      },
+      "reason": "予備点検廊下をBで挿入し旧設備室を開く"
+    },
+    {
+      "id": "W1",
+      "name": "南端の旧設備室",
+      "generation": 7,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "0.0m / 0.0m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "0.0 / 0.0 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [],
+          "after": []
+        },
+        "B": {
+          "before": [
+            "Q1"
+          ],
+          "after": [
+            "Q1"
+          ]
+        },
+        "C": {
+          "before": [],
+          "after": []
+        }
+      },
+      "reason": "Bの予備点検廊下で開く探索目的地として待機"
+    },
+    {
+      "id": "G1",
+      "name": "北の二連結住宅・生活廊下",
+      "generation": 8,
+      "cells": 2,
+      "kind": "transportable",
+      "beforeNet": "8.4m / 8.4m / 0.0m",
+      "afterNet": "8.4m / 11.9m / 8.4m",
+      "beforePath": "21.2 / 21.2 / 0.0",
+      "afterPath": "21.2 / 29.6 / 38.0",
+      "changedPhases": [
+        "C"
+      ],
+      "connections": {
+        "A": {
+          "before": [
+            "M1",
+            "G2"
+          ],
+          "after": [
+            "M1",
+            "G2"
+          ]
+        },
+        "B": {
+          "before": [
+            "N1",
+            "G2"
+          ],
+          "after": [
+            "N1",
+            "G2"
+          ]
+        },
+        "C": {
+          "before": [
+            "M1",
+            "G2"
+          ],
+          "after": [
+            "K2",
+            "M1"
+          ]
+        }
+      },
+      "reason": "CではM1と順序を交換し、K2から直接入る二連結住宅に変更"
+    },
+    {
+      "id": "G2",
+      "name": "現地回転する洗濯待合",
+      "generation": 8,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "8.4m / 90° / 8.4m / 90° / 0.0m",
+      "afterNet": "8.4m / 90° / 8.4m / 90° / 0.0m",
+      "beforePath": "21.2 / 21.2 / 0.0",
+      "afterPath": "21.2 / 21.2 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "G1",
+            "G4"
+          ],
+          "after": [
+            "G1",
+            "G4"
+          ]
+        },
+        "B": {
+          "before": [
+            "G1",
+            "G4"
+          ],
+          "after": [
+            "G1",
+            "G4"
+          ]
+        },
+        "C": {
+          "before": [
+            "G1",
+            "G4"
+          ],
+          "after": [
+            "M1",
+            "G4"
+          ]
+        }
+      },
+      "reason": "現地・近傍回転で住宅と生活通路を接続"
+    },
+    {
+      "id": "G3",
+      "name": "三連結L型の共用居間",
+      "generation": 8,
+      "cells": 3,
+      "kind": "transportable",
+      "beforeNet": "12.8m / 12.8m / 0.0m",
+      "afterNet": "12.8m / 12.8m / 0.0m",
+      "beforePath": "12.8 / 12.8 / 0.0",
+      "afterPath": "12.8 / 12.8 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "G4",
+            "LF2"
+          ],
+          "after": [
+            "G4",
+            "LF2"
+          ]
+        },
+        "B": {
+          "before": [
+            "M1",
+            "J9",
+            "LF0"
+          ],
+          "after": [
+            "M1",
+            "LF0"
+          ]
+        },
+        "C": {
+          "before": [
+            "G4",
+            "LF2"
+          ],
+          "after": [
+            "G4",
+            "LF2"
+          ]
+        }
+      },
+      "reason": "三連結居間を二つの階へ運び居住区EVと生活棟を接続"
+    },
+    {
+      "id": "G4",
+      "name": "二連結の折れた生活通路",
+      "generation": 8,
+      "cells": 2,
+      "kind": "transportable",
+      "beforeNet": "8.4m / 8.4m / 0.0m",
+      "afterNet": "8.4m / 8.4m / 0.0m",
+      "beforePath": "21.2 / 21.2 / 0.0",
+      "afterPath": "21.2 / 21.2 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "G2",
+            "G3"
+          ],
+          "after": [
+            "G2",
+            "G3"
+          ]
+        },
+        "B": {
+          "before": [
+            "G2"
+          ],
+          "after": [
+            "G2"
+          ]
+        },
+        "C": {
+          "before": [
+            "G2",
+            "G3"
+          ],
+          "after": [
+            "G2",
+            "G3"
+          ]
+        }
+      },
+      "reason": "折れ通路の平面位置を変更して北住宅を再接続"
+    },
+    {
+      "id": "G5",
+      "name": "居住区EV脇の小住戸",
+      "generation": 8,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "12.8m / 12.8m / 0.0m",
+      "afterNet": "12.8m / 12.8m / 0.0m",
+      "beforePath": "48.0 / 48.0 / 0.0",
+      "afterPath": "47.2 / 47.2 / 0.0",
+      "changedPhases": [],
+      "connections": {
+        "A": {
+          "before": [
+            "J9",
+            "LF0"
+          ],
+          "after": [
+            "J9",
+            "LF0"
+          ]
+        },
+        "B": {
+          "before": [
+            "LF2"
+          ],
+          "after": [
+            "J9",
+            "LF2"
+          ]
+        },
+        "C": {
+          "before": [
+            "J9",
+            "LF0"
+          ],
+          "after": [
+            "J9",
+            "LF0"
+          ]
+        }
+      },
+      "reason": "居住区EVの住戸を階交換。南の増設空欄を実際に退避利用"
+    },
+    {
+      "id": "J9",
+      "name": "生活施設への接続廊下",
+      "generation": 9,
+      "cells": 1,
+      "kind": "transportable",
+      "beforeNet": "0.0m / 0.0m / 0.0m",
+      "afterNet": "12.8m / 12.8m / 0.0m",
+      "beforePath": "0.0 / 0.0 / 0.0",
+      "afterPath": "12.8 / 12.8 / 0.0",
+      "changedPhases": [
+        "B"
+      ],
+      "connections": {
+        "A": {
+          "before": [
+            "G5",
+            "P9"
+          ],
+          "after": [
+            "G5",
+            "P9"
+          ]
+        },
+        "B": {
+          "before": [
+            "G3",
+            "P9"
+          ],
+          "after": [
+            "G5",
+            "P9"
+          ]
+        },
+        "C": {
+          "before": [
+            "G5",
+            "P9"
+          ],
+          "after": [
+            "G5",
+            "P9"
+          ]
+        }
+      },
+      "reason": "G5に接続する生活廊下をBで第一層へ移す"
+    },
+    {
+      "id": "P9",
+      "name": "四連結の生活共同棟",
+      "generation": 9,
+      "cells": 4,
+      "kind": "transportable",
+      "beforeNet": "0.4m / 0.4m / 0.0m",
+      "afterNet": "12.8m / 12.8m / 0.0m",
+      "beforePath": "13.2 / 13.2 / 0.0",
+      "afterPath": "12.8 / 12.8 / 0.0",
+      "changedPhases": [
+        "B"
+      ],
+      "connections": {
+        "A": {
+          "before": [
+            "J9",
+            "W2"
+          ],
+          "after": [
+            "J9",
+            "W2"
+          ]
+        },
+        "B": {
+          "before": [
+            "J9",
+            "W2"
+          ],
+          "after": [
+            "J9"
+          ]
+        },
+        "C": {
+          "before": [
+            "J9",
+            "W2"
+          ],
+          "after": [
+            "J9",
+            "W2"
+          ]
+        }
+      },
+      "reason": "四連結生活棟をBで第一層へ運び、接続相手をG3からG5へ変更"
+    }
+  ]
+}

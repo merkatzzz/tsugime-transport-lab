@@ -1,3 +1,4 @@
+import {canalSection} from './water-section.js';
 import * as THREE from '../vendor/three.module.js';
 import {WATER,waterWalkRects,waterWalls} from './water.js';
 export function buildWater(view){
@@ -23,9 +24,9 @@ export function buildWater(view){
    view.roofs.push(view.cube(g,q.x,5.8,q.z,8,.16,8,'#a6b3a8'));
    view.cube(g,q.x+7.85,.16,q.z,.15,5.64,8,'#637e76');
    for(const z of[q.z,q.z+7.85])view.cube(g,q.x,.16,z,2.7,5.64,.15,'#637e76');
-   view.cube(g,q.x+2.5,-.65,q.z,5.5,.2,8,'#425d59');
+   for(const r of canalSection()){const m=view.cube(g,q.x+r.x,r.y,q.z+r.z,r.w,r.h,r.d,r.dark?'#182e2c':'#637e76');m.userData.waterSection=r.id;}
    // 4m wide dark culverts, 1.8m clear above the flow; logical pipes continue unseen.
-   for(const z of[q.z,q.z+6.8]){view.cube(g,q.x+3,1.5,z,4,.3,1.2,'#667f78');for(const x of[q.x+2.7,q.x+7])view.cube(g,x,-.5,z,.3,2.3,1.2,'#667f78');view.cube(g,q.x+3,-.5,z===q.z?z:z+1.15,4,2,.05,'#182e2c');}
+   for(const z of[q.z,q.z+6.8]){view.cube(g,q.x+3,1.5,z,4,.3,1.2,'#667f78');for(const x of[q.x+2.7,q.x+7])view.cube(g,x,-.5,z,.3,2.3,1.2,'#667f78');}
   }
   const r=q.tunnel?{x:q.x+.2,z:-6.5,w:q.w-.4,d:2.6}:{x:q.x+2.6,z:q.z,w:5.2,d:8};
   const material=new THREE.MeshStandardMaterial({color:'#438f99',roughness:.32,metalness:.2,side:THREE.DoubleSide});
@@ -35,4 +36,4 @@ export function buildWater(view){
   const gate=new THREE.Group();g.add(gate);view.waterRows.push({q,g,gate,streaks});view.text(g,q.name,q.x+1,1.8,q.tunnel?-2.4:q.z+1,{size:.3});
  }
 }
-export function renderWater(view){for(const m of view.waterSurfaces??[])if(m.userData.shader)m.userData.shader.uniforms.waterTime.value=view.sim.clock;for(const r of view.waterRows??[]){r.streaks.position[r.q.tunnel?'x':'z']=(view.sim.clock*.22)%.4-.2;const s=view.sim.livePorts.find(p=>p.body===r.q.id),key=JSON.stringify([s.status,s.masked]);if(r.key===key)continue;r.key=key;view.clearGroup(r.gate);const ranges=s.status==='blocked'?[{a:r.q.a,b:r.q.b}]:s.masked;for(const m of ranges){const q=r.q,l=q.tunnel?{a:[q.x+m.a,-.46],b:[q.x+m.b,-.46]}:{a:[q.x+.06,q.z+m.a],b:[q.x+.06,q.z+m.b]};view.wall(r.gate,l,q.height,'metal',.12,.16);}}}
+export function renderWater(view){for(const m of view.waterSurfaces??[])if(m.userData.shader)m.userData.shader.uniforms.waterTime.value=view.sim.clock;for(const r of view.waterRows??[]){r.streaks.position[r.q.tunnel?'x':'z']=(view.sim.clock*.22)%.4-.2;const s=view.sim.livePorts.find(p=>p.body===r.q.id),key=JSON.stringify([s.status,s.masked]);if(r.key===key)continue;r.key=key;r.gateCache??=new Map();for(const child of [...r.gate.children])r.gate.remove(child);let built=r.gateCache.get(key);if(built){r.gate.add(built);continue;}built=new THREE.Group();r.gateCache.set(key,built);r.gate.add(built);const ranges=s.status==='blocked'?[{a:r.q.a,b:r.q.b}]:s.masked;for(const m of ranges){const q=r.q,l=q.tunnel?{a:[q.x+m.a,-.46],b:[q.x+m.b,-.46]}:{a:[q.x+.06,q.z+m.a],b:[q.x+.06,q.z+m.b]};view.wall(built,l,q.height,'metal',.12,.16);}}}

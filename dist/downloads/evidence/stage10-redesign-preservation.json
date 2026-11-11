@@ -1,0 +1,30 @@
+{
+  "tag": "stage10-frozen",
+  "commit": "6ec66400d618a2f99a11f7de605cc557bdff24db",
+  "branch": "stage10-development",
+  "source": {
+    "file": "downloads/stage10-frozen-source.zip",
+    "sha256": "7df16300d2bd7105baa2b3ffdaf589784a458bca9a6f9affe0cb61e02aa85186",
+    "trackedFiles": 2877,
+    "gitArchiveRecreatedHashMatches": true
+  },
+  "build": {
+    "file": "/workspace/work/stage10-frozen-deployed-build.tar.gz",
+    "gzipSha256": "d7b792dca3450c47874a84ebda8f9243a10d4ae2bd5f57d784282c257cc1fd32",
+    "inputTarSha256": "2987499c3afd8fce4ab51ee07864e251104463695b532a6dd19c0315054270a9",
+    "siteStoredTarSha256": "49dd75347ea95240ffcd1b8b58cc66a4d618a1aaa4733c4c069589fda5d2c47e",
+    "byteEqualityToSiteStoredArchive": false,
+    "siteVersion": 15,
+    "siteCommit": "6ec66400d618a2f99a11f7de605cc557bdff24db",
+    "staticFiles": 1289,
+    "trackedOnlyBuild": "/workspace/work/stage10-frozen-build.tar.gz"
+  },
+  "restore": {
+    "tests": 170,
+    "pass": 170,
+    "fail": 0,
+    "appInitialization": "CPU UI test with explicitly unavailable WebGL"
+  },
+  "comparison": "stage10/",
+  "webgl": false
+}
