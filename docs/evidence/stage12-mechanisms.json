@@ -1,0 +1,1466 @@
+{
+  "ok": true,
+  "states": 81,
+  "rows": [
+    {
+      "progress": 0,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.0125,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.0125,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.0125,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.025,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.025,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.025,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.0375,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.0375,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.0375,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.05,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.05,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.05,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.0625,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.0625,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.0625,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.075,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.075,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.075,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.0875,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.0875,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.0875,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.1,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.1,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.1,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.1125,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.1125,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.1125,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.125,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.125,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.125,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.1375,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.1375,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.1375,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.15,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.15,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.15,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.1625,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.1625,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.1625,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.175,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.175,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.175,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.1875,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.1875,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.1875,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.2,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.2,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.2,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.2125,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.2125,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.2125,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.225,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.225,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.225,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.2375,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.2375,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.2375,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.25,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.25,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.25,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.2625,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.2625,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.2625,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.275,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.275,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.275,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.2875,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.2875,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.2875,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.3,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.3,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.3,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.3125,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.3125,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.3125,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.325,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.325,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.325,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.3375,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.3375,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.3375,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.35,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.35,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.35,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.3625,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.3625,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.3625,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.375,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.375,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.375,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.3875,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.3875,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.3875,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.4,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.4,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.4,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.4125,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.4125,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.4125,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.425,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.425,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.425,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.4375,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.4375,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.4375,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.45,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.45,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.45,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.4625,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.4625,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.4625,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.475,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.475,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.475,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.4875,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.4875,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.4875,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.5,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.5,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.5,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.5125,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.5125,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.5125,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.525,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.525,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.525,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.5375,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.5375,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.5375,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.55,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.55,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.55,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.5625,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.5625,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.5625,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.575,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.575,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.575,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.5875,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.5875,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.5875,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.6,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.6,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.6,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.6125,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.6125,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.6125,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.625,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.625,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.625,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.6375,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.6375,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.6375,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.65,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.65,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.65,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.6625,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.6625,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.6625,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.675,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.675,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.675,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.6875,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.6875,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.6875,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.7,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.7,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.7,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.7125,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.7125,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.7125,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.725,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.725,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.725,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.7375,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.7375,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.7375,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.75,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.75,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.75,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.7625,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.7625,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.7625,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.775,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.775,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.775,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.7875,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.7875,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.7875,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.8,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.8,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.8,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.8125,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.8125,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.8125,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.825,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.825,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.825,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.8375,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.8375,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.8375,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.85,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.85,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.85,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.8625,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.8625,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.8625,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.875,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.875,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.875,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.8875,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.8875,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.8875,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.9,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.9,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.9,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.9125,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.9125,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.9125,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.925,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.925,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.925,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.9375,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.9375,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.9375,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.95,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.95,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.95,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.9625,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.9625,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.9625,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.975,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.975,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.975,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 0.9875,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 0.9875,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 0.9875,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    },
+    {
+      "progress": 1,
+      "id": "AT0",
+      "staticBoxes": 150,
+      "movingBoxes": 13
+    },
+    {
+      "progress": 1,
+      "id": "AT1",
+      "staticBoxes": 169,
+      "movingBoxes": 46
+    },
+    {
+      "progress": 1,
+      "id": "AT2",
+      "staticBoxes": 60,
+      "movingBoxes": 33
+    }
+  ],
+  "collisions": [],
+  "scope": "Exact AABB for translating solid panels/treads against fixed solids and each other, 0.0125 progress steps; glass fold is not an axis-aligned sweep oracle. CPU geometry, not a WebGL playtest."
+}

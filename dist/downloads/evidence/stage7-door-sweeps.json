@@ -311,6 +311,54 @@
       "solidMin": 0.7999999999999998,
       "hinge": "a",
       "swing": 90
+    },
+    {
+      "body": "AT0",
+      "door": "AT0-0.8",
+      "wallMin": 0.10175000000000001,
+      "solidMin": 1.5000000000000033,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "AT0",
+      "door": "AT0-11",
+      "wallMin": 0.10174999999999912,
+      "solidMin": 1.5000000000000018,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "AT1",
+      "door": "AT1-0.8",
+      "wallMin": 0.10175000000000001,
+      "solidMin": 1.5000000000000033,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "AT1",
+      "door": "AT1-11",
+      "wallMin": 0.10174999999999912,
+      "solidMin": 1.5000000000000018,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "AT2",
+      "door": "AT2-0.8",
+      "wallMin": 0.10175000000000001,
+      "solidMin": 1.5000000000000033,
+      "hinge": "a",
+      "swing": 90
+    },
+    {
+      "body": "AT2",
+      "door": "AT2-11",
+      "wallMin": 0.10174999999999912,
+      "solidMin": 1.5000000000000018,
+      "hinge": "a",
+      "swing": 90
     }
   ]
 }

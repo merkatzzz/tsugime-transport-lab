@@ -1,0 +1,22 @@
+✔ shared street entrance reaches both half-corridors without crossing either shop; the permitted Z stagger and independent docking survive (857.270962ms)
+✔ three four-cell rigid bodies add twelve atrium cells without a global fourth floor, and the B middle deck has a real independently validated round trip (952.080088ms)
+✔ P9 new entrance is separate from the canal, AC1 is walkable, and the real controller climbs the entry ramp (214.345652ms)
+✔ both forty-step stair flights are traversed up and down by normal movement, with no change to X or discontinuous floor jump (78.513265ms)
+✔ closed floors support standing, opened central floors have no support, guards reject every edge/corner, lowest floor and top roof remain closed (1577.682652ms)
+✔ occupants pause opening and closure, can walk away without teleport, then mechanisms finish before any transport (188.038558ms)
+✔ unconnected flights end behind real gates; the walking controller cannot advance past them (56.795035ms)
+✔ actual moving floor/ceiling panels, glass and stairs retain geometry, keep distinct storage bands and retract inside six-metre envelopes (1225.570964ms)
+✔ atrium storage and glass corners use disjoint pockets; actual unfolded glass continuously closes all four corners (795.978204ms)
+✔ normal atrium doors keep animation and collision; live three-tier maps and schema-4 save restore floors, height and retained interior anchors (55.846807ms)
+✔ safe interior riders can take a full ABC cycle; the assembled body closes and the source doorway reconnects at C (277.106003ms)
+✔ the edge of the storage sweep includes the player radius, so a partial foot over a glass well pauses opening and can retreat (25.82993ms)
+✔ real central and stair collars seal all horizontal viewing directions through both 0.4m transport gaps, with underfloor reveals (681.96688ms)
+✔ both stair flights have real head clearance at every tread and a supported incoming rail blocks sideways movement (980.04317ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9595.572091

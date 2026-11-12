@@ -1,0 +1,200 @@
+{
+  "scope": "All three assembly choices: actual default cooperative continuous plans. Only selected B also checked on all 18 size/method/phase profiles.",
+  "choices": [
+    {
+      "assembly": "A",
+      "configuration": {
+        "size": "ring1",
+        "method": "cooperative"
+      },
+      "valid": true,
+      "cycle": 84.56666666666666,
+      "transitions": [
+        {
+          "from": "A",
+          "to": "B",
+          "seconds": 29.866666666666664,
+          "valid": true,
+          "error": null,
+          "middleFrom": {
+            "x": 92.4,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleTo": {
+            "x": 117.6,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleLegs": 18
+        },
+        {
+          "from": "B",
+          "to": "C",
+          "seconds": 37.36666666666667,
+          "valid": true,
+          "error": null,
+          "middleFrom": {
+            "x": 117.6,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleTo": {
+            "x": 117.6,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleLegs": 0
+        },
+        {
+          "from": "C",
+          "to": "A",
+          "seconds": 17.333333333333332,
+          "valid": true,
+          "error": null,
+          "middleFrom": {
+            "x": 117.6,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleTo": {
+            "x": 92.4,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleLegs": 10
+        }
+      ]
+    },
+    {
+      "assembly": "B",
+      "configuration": {
+        "size": "ring1",
+        "method": "cooperative"
+      },
+      "valid": true,
+      "cycle": 84.56666666666666,
+      "transitions": [
+        {
+          "from": "A",
+          "to": "B",
+          "seconds": 29.866666666666664,
+          "valid": true,
+          "error": null,
+          "middleFrom": {
+            "x": 117.6,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleTo": {
+            "x": 92.4,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleLegs": 18
+        },
+        {
+          "from": "B",
+          "to": "C",
+          "seconds": 37.36666666666667,
+          "valid": true,
+          "error": null,
+          "middleFrom": {
+            "x": 92.4,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleTo": {
+            "x": 117.6,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleLegs": 17
+        },
+        {
+          "from": "C",
+          "to": "A",
+          "seconds": 17.333333333333332,
+          "valid": true,
+          "error": null,
+          "middleFrom": {
+            "x": 117.6,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleTo": {
+            "x": 117.6,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleLegs": 0
+        }
+      ]
+    },
+    {
+      "assembly": "C",
+      "configuration": {
+        "size": "ring1",
+        "method": "cooperative"
+      },
+      "valid": true,
+      "cycle": 84.56666666666666,
+      "transitions": [
+        {
+          "from": "A",
+          "to": "B",
+          "seconds": 29.866666666666664,
+          "valid": true,
+          "error": null,
+          "middleFrom": {
+            "x": 117.6,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleTo": {
+            "x": 117.6,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleLegs": 0
+        },
+        {
+          "from": "B",
+          "to": "C",
+          "seconds": 37.36666666666667,
+          "valid": true,
+          "error": null,
+          "middleFrom": {
+            "x": 117.6,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleTo": {
+            "x": 92.4,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleLegs": 17
+        },
+        {
+          "from": "C",
+          "to": "A",
+          "seconds": 17.333333333333332,
+          "valid": true,
+          "error": null,
+          "middleFrom": {
+            "x": 92.4,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleTo": {
+            "x": 117.6,
+            "y": 6.4,
+            "z": 25.2
+          },
+          "middleLegs": 10
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {addAtrium} from './atrium-layout.js';
 import {expandStage11} from './stage11-layout.js';
 import {compilePartitions} from './partitions.js';
 import {redesignFacility,facilityPlacements} from './facility-plan.js';
@@ -72,7 +73,7 @@ for(const id of ['E1','E3'])BODIES.find(b=>b.id===id).ports.push(port('S','S',4,
 BODIES.push({...structuredClone(BODIES.find(b=>b.id==='R4')),id:'K1',name:'第一層・小居室と前廊下',color:'#aa9d8d',doors:[{id:'K1-door',a:[2.8,2.9],b:[4,2.9],open:false,label:'第一層の小居室'}],labels:[room('第一層 小居室',5.4,1.5),room('EV前廊下',4,4.2)]});
 BODIES.push({...structuredClone(BODIES.find(b=>b.id==='J3')),id:'K2',name:'第一層・交差通路',color:'#a3b58d',labels:[room('第一層 分岐',4,4)]});
 BODIES.push({id:'M1',name:'上下搬送・小交流室',use:'common',color:'#bba58d',cells:[[0,0]],ceiling:3,ports:[port('W','W',3,5,2.5),port('N','N',3,5,2.5),port('E','E',3,5,2.5)],walls:[],doors:[],solids:[],furniture:[box(1,1,1.5,1,.5),box(6,6,1,1,.8)],labels:[room('上下搬送 M1',4,4)],roofAreas:[roof(0,0,8,8,3)]});
-extendBodies(BODIES);redesign(BODIES);repairResidentialWalls(BODIES);expandStage8(BODIES);expandStage9(BODIES);furnishShops(BODIES);expandStage11(BODIES);redesignFacility(BODIES);BODIES.forEach(compilePartitions);
+extendBodies(BODIES);redesign(BODIES);repairResidentialWalls(BODIES);expandStage8(BODIES);expandStage9(BODIES);furnishShops(BODIES);expandStage11(BODIES);addAtrium(BODIES);redesignFacility(BODIES);BODIES.forEach(compilePartitions);
 BODIES.find(b=>b.id==='P9').ports.push(port('water-east','E',11.6,14,2.5));
 BODIES.find(b=>b.id==='N3').ports.push(port('water-west','W',3,5,2.5));
 export const BY_ID=Object.fromEntries(BODIES.map(b=>[b.id,b]));

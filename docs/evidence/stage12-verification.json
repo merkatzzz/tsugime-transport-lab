@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "rows": [
+    {
+      "name": "plans",
+      "exit": 0
+    },
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "mechanisms",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "surfaces",
+      "exit": 0
+    },
+    {
+      "name": "doors",
+      "exit": 0
+    },
+    {
+      "name": "walks",
+      "exit": 0
+    },
+    {
+      "name": "evidence-base",
+      "exit": 0
+    },
+    {
+      "name": "evidence",
+      "exit": 0
+    }
+  ],
+  "testCounts": {
+    "total": 217,
+    "passed": 217,
+    "failed": 0
+  },
+  "browserVerified": false,
+  "previewFailure": "sites-preview relay port 4173 readiness timeout; no preview URL returned; stopped",
+  "postChecks": [
+    {
+      "name": "final-atrium-tests",
+      "passed": 14,
+      "failed": 0,
+      "log": "stage12-final-atrium-tests.txt",
+      "reason": "Keep the entrance seam subject to normal evacuation checks."
+    },
+    {
+      "name": "final-checks",
+      "passed": 31,
+      "failed": 0,
+      "log": "stage12-final-checks.txt",
+      "reason": "Atrium, shared street, NPC life and schema-4 endpoint normalization after the final safety change."
+    }
+  ]
+}

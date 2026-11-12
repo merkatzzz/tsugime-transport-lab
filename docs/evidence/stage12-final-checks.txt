@@ -1,0 +1,39 @@
+✔ shared storefront walls and furnishings are exact local mirrors (2.327666ms)
+✔ T2 slide opens from either approach, permits actual crossing and refuses closing on occupant (614.480251ms)
+✔ lab entry sees a continuous main room, with two auxiliary rooms inside unchanged exterior (5.031078ms)
+✔ shared street entrance reaches both half-corridors without crossing either shop; the permitted Z stagger and independent docking survive (908.316729ms)
+✔ three four-cell rigid bodies add twelve atrium cells without a global fourth floor, and the B middle deck has a real independently validated round trip (962.614333ms)
+✔ P9 new entrance is separate from the canal, AC1 is walkable, and the real controller climbs the entry ramp (224.950816ms)
+✔ both forty-step stair flights are traversed up and down by normal movement, with no change to X or discontinuous floor jump (81.616418ms)
+✔ closed floors support standing, opened central floors have no support, guards reject every edge/corner, lowest floor and top roof remain closed (1584.535632ms)
+✔ occupants pause opening and closure, can walk away without teleport, then mechanisms finish before any transport (218.544756ms)
+✔ unconnected flights end behind real gates; the walking controller cannot advance past them (75.40813ms)
+✔ actual moving floor/ceiling panels, glass and stairs retain geometry, keep distinct storage bands and retract inside six-metre envelopes (1416.438133ms)
+✔ atrium storage and glass corners use disjoint pockets; actual unfolded glass continuously closes all four corners (835.773318ms)
+✔ normal atrium doors keep animation and collision; live three-tier maps and schema-4 save restore floors, height and retained interior anchors (47.476077ms)
+✔ safe interior riders can take a full ABC cycle; the assembled body closes and the source doorway reconnects at C (294.18101ms)
+✔ the edge of the storage sweep includes the player radius, so a partial foot over a glass well pauses opening and can retreat (17.045453ms)
+✔ real central and stair collars seal all horizontal viewing directions through both 0.4m transport gaps, with underfloor reveals (779.522363ms)
+✔ both stair flights have real head clearance at every tread and a supported incoming rail blocks sideways movement (840.234105ms)
+✔ four-cell P9 carries player and home NPC through genuine complete ABC transport without local drift (6943.016449ms)
+✔ exact configurable 60 second schedule is 15 home / 45 work, with staggered phase and event override (0.832928ms)
+✔ two distinct NPCs each have exactly one location, with fully closed cover required for every commute (206.201859ms)
+✔ room presence opens a live 3D camera; absence reports the correct next home time and never unlocks a room (38.429435ms)
+✔ visits restore corridor body-local position and gaze after the hosting body moves (0.966076ms)
+✔ seen shopkeeper stays during conversation and a pending close refuses new transactions (64.972319ms)
+✔ player inside shop or overhead observation defers warp; transport closes covers without relocating NPCs (44.29216ms)
+✔ inventory browsing and wrong targets do not consume; correct use consumes exactly once with an auditable result (1.227895ms)
+✔ an already open transaction can finish after closing time without removing its NPC (44.615829ms)
+✔ versioned save restores actual whereabouts/covers/clock/flags/items/phase; old inventory and bad data are non-destructive (31.723668ms)
+✔ browser storage uses a dedicated new slot without clearing unrelated saves (5.796769ms)
+✔ new 4-cell common facility retains fixed private walls and no transport shutters on internal cell borders (14.80475ms)
+✔ sign normals point from private rooms toward the corridor and follow rigid body rotation (0.784931ms)
+✔ closed metal and curtain stalls actually hide the NPC from front, sides, rear and above (1430.982959ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19421.183389
