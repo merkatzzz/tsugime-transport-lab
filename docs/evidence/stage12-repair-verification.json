@@ -1,0 +1,53 @@
+{
+  "cpuChecksPassed": true,
+  "rows": [
+    {
+      "name": "plans",
+      "exit": 0
+    },
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "mechanisms",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "surfaces",
+      "exit": 0
+    },
+    {
+      "name": "doors",
+      "exit": 0
+    },
+    {
+      "name": "walks",
+      "exit": 0
+    },
+    {
+      "name": "plans-and-maps",
+      "exit": 0
+    },
+    {
+      "name": "repair-maps",
+      "exit": 0
+    },
+    {
+      "name": "entry-plan",
+      "exit": 0
+    }
+  ],
+  "testCounts": {
+    "total": 225,
+    "passed": 225,
+    "failed": 0
+  },
+  "webglRendered": false,
+  "humanFirstPersonWalkVerified": false,
+  "completion": "CPU checks and input replay only; actual WebGL route validation remains open."
+}

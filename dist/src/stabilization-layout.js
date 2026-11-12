@@ -1,11 +1,12 @@
-import {marketPlan} from './market-plan.js';
+import {marketPlan,marketPorts} from './market-plan.js';
 import {WALL_ROLE} from './wall-roles.js';
 const wall=(a,b)=>({a,b,role:WALL_ROLE.ROOM,height:2.35});
 export function stabilizeBuildings(bodies){
  for(const id of ['SH1','SH2']){const b=bodies.find(b=>b.id===id),right=id==='SH2';
-  b.walls=marketPlan(right).walls;
+  b.walls=marketPlan(right).walls;b.ports=marketPorts(right);
   b.furniture=marketPlan(right).furniture;
  }
+ bodies.find(b=>b.id==='U4').ports=bodies.find(b=>b.id==='U4').ports.filter(p=>p.id!=='market');bodies.find(b=>b.id==='P9').ports.push({id:'market-south',face:'S',a:6.1,b:7.7,height:2.5,role:WALL_ROLE.CONNECTOR});
  const b=bodies.find(b=>b.id==='LB1');
  b.walls=b.walls.filter(w=>w.exterior).concat([wall([10,5.2],[10.8,5.2]),wall([11.9,5.2],[14,5.2]),wall([15.1,5.2],[16,5.2]),wall([13.1,5.2],[13.1,8])].map(w=>({...w,height:3.4})));
  b.doors=b.doors.filter(d=>d.entrance).concat([{id:'LB1-work',a:[10.8,5.2],b:[11.9,5.2],label:'補助実験室'},{id:'LB1-store',a:[14,5.2],b:[15.1,5.2],label:'保管室'}].map(d=>({...d,kind:'hinge',hinge:'a',swing:90,open:false})));

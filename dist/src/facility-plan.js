@@ -34,7 +34,7 @@ export function facilityPlacements(phase,p){
  if(phase==='C'){p.G1={x:16.8,y:-12.8,z:0};p.M1={x:33.6,y:-12.8,z:0};}
  return atriumPlacements(phase,districtPlacements(phase,p));
 }
-export const transitDeck=(id,start)=>['M1','V1','Q1','G1','G2','G3','G4','G5','J9','P9','LB1'].includes(id)?-6.4:id==='V3'&&start.y<0?-6.4:6.4;
+export const transitDeck=(id,start)=>['M1','V1','Q1','G1','G2','G3','G4','G5','J9','P9','LB1','SH1'].includes(id)?-6.4:id==='V3'&&start.y<0?-6.4:6.4;
 export function facilityJobs(from,to,e,initial,target){
  if(!({A:'B',B:'C',C:'A'}[from]===to))throw Error('Supported sequence is A→B→C→A');
  for(const id of Object.keys(target))if(!BODY_POLICY[id]?.purpose)throw Error(id+': 施設全体の設計方針なし');

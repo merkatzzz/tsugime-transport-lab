@@ -32,6 +32,8 @@ if not frozen10.exists():
 frozen_redesign = downloads/'stage10-redesign-frozen-source.zip'
 if not frozen_redesign.exists():
     subprocess.run(['git','archive','--format=zip','--output='+str(frozen_redesign),'stage10-redesign-frozen'],cwd=root,check=True)
+shutil.copy2(root/'docs/STAGE12-REPAIR.md', downloads/'STAGE12-REPAIR.md')
+shutil.copy2(root/'docs/OPEN-ISSUES.md', downloads/'OPEN-ISSUES.md')
 shutil.copy2(root/'docs/STAGE12.md', downloads/'STAGE12.md')
 shutil.copy2(root/'docs/STAGE11-STABILIZATION.md', downloads/'STAGE11-STABILIZATION.md')
 shutil.copy2(root/'docs/STAGE11.md', downloads/'STAGE11.md')
@@ -91,12 +93,13 @@ def inline(text):
     s = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', s)
     s = re.sub(r'`([^`]+)`', r'<code>\1</code>', s)
     s = s.replace('href="FACILITY-DESIGN.md"', 'href="downloads/FACILITY-DESIGN.md"').replace('href="PERFORMANCE-REDESIGN.md"', 'href="downloads/PERFORMANCE-REDESIGN.md"')
+    s = s.replace('href="STAGE12-REPAIR.md"', 'href="downloads/STAGE12-REPAIR.md"').replace('href="OPEN-ISSUES.md"', 'href="downloads/OPEN-ISSUES.md"')
     s = s.replace('href="STAGE12.md"', 'href="downloads/STAGE12.md"')
     s = s.replace('href="STAGE11-STABILIZATION.md"', 'href="downloads/STAGE11-STABILIZATION.md"')
     s = s.replace('href="STAGE11.md"', 'href="downloads/STAGE11.md"').replace('href="PERFORMANCE-STAGE11.md"', 'href="downloads/PERFORMANCE-STAGE11.md"')
     return s
 
-lines = ((root/'docs/STAGE12.md').read_text()+'\n\n'+(root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
+lines = ((root/'docs/STAGE12-REPAIR.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n'+(root/'docs/STAGE12.md').read_text()+'\n\n'+(root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
 parts = []
 i = 0
 while i < len(lines):
@@ -123,7 +126,8 @@ while i < len(lines):
         parts.append('<p>'+inline(line)+'</p>')
     i += 1
 
-drawings = '<h2>第12段階：共同街路・三段接続・収納（実データ図面）</h2><div class="drawings">'+''.join(f'<figure><figcaption>{n}</figcaption><img src="downloads/evidence/{n}.svg" alt="第12段階の実データ図面"></figure>' for n in ['stage12-market-plan','stage12-market-separated','stage12-B-atrium','stage12-B-section','stage12-A-section','stage12-C-section','stage12-storage'])+'</div>'
+repair_drawings = '<h2>修復前後・共用入口・三段接続</h2><div class="drawings">'+''.join(f'<figure><figcaption>{n}</figcaption><img src="downloads/evidence/{n}.svg" alt="修復版の実データ図面"></figure>' for n in ['stage12-market-plan','stage12-repair-market-plan','stage12-repair-market-separated','stage12-repair-entry-plan','stage12-repair-B-atrium','stage12-repair-B-section'])+'</div>'
+drawings = repair_drawings + '<h2>第12段階：共同街路・三段接続・収納（実データ図面）</h2><div class="drawings">'+''.join(f'<figure><figcaption>{n}</figcaption><img src="downloads/evidence/{n}.svg" alt="第12段階の実データ図面"></figure>' for n in ['stage12-market-plan','stage12-market-separated','stage12-B-atrium','stage12-B-section','stage12-A-section','stage12-C-section','stage12-storage'])+'</div>'
 drawings += '<h2>着手前・区域化後の図面比較（設計図・実画面ではありません）</h2>'
 drawings += '<h2>新しい建築の内部平面図</h2><div class="drawings">'+''.join(f'<figure><figcaption>{body} 内部 +{floor}m</figcaption><img src="downloads/evidence/stage11-{body}-floor-{floor}.svg" alt="{body}の設計平面図"></figure>' for body in ['RH1','MK1','SH1','SH2','CP1','LB1'] for floor in ([0,3] if body == 'CP1' else [0]))+'</div>'
 for phase in 'ABC':
@@ -143,7 +147,7 @@ drawings += '<h2>遠隔区域と泉の配置</h2>'+''.join(f'<h3>周期 {phase}<
 drawings += '<h2>各遷移の搬送経路・保管と一時退避</h2>'+''.join(f'<h3>{phase}→'+{'A':'B','B':'C','C':'A'}[phase]+f'</h3><img class="route" src="downloads/evidence/{phase}-transport.svg" alt="{phase}からの搬送経路">' for phase in 'ABC')
 page = '''<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>検証報告｜継ぎ目の部屋 建築・搬送実験</title><style>
 body{background:#f1f2e9;color:#334d40;font:14px/1.9 sans-serif;margin:0}article{max-width:1030px;margin:auto;padding:45px 28px}nav{display:flex;flex-wrap:wrap;gap:25px;border-bottom:1px solid #ccd5c3;padding-bottom:20px;font-size:12px}a{color:#557c57;text-underline-offset:3px}h1{font:28px/1.5 serif;margin-top:40px}h2{font-size:19px;margin-top:45px;border-top:1px solid #ccd5c3;padding-top:25px}h3{font-size:15px;margin-top:30px}p{color:#61715b}.bullet{margin:10px 0}strong{color:#3b5641}code{background:#e0e6d7;padding:2px 5px;border-radius:3px}.table{overflow:auto}table{border-collapse:collapse;font-size:12px;width:100%;margin:20px 0}th,td{padding:10px;border:1px solid #d4dccb;text-align:left}th{background:#e1e7d8}.drawings{display:grid;grid-template-columns:1fr 1fr;gap:20px}figure{margin:0}img{width:100%;border:1px solid #ccd5c3;background:#e4eadc}figcaption{font-size:12px;margin-bottom:7px}.route{max-width:470px}footer{margin-top:40px;font-size:11px;color:#88937d}@media(max-width:650px){.drawings{grid-template-columns:1fr}article{padding:25px 18px}h1{font-size:24px}}
-</style><article><nav><a href="index.html">← 第十二段階の3D実験</a><a href="stage10-redesign/index.html">着手前の第十段階修正版</a><a href="stage10/index.html">旧第十段階</a><a href="stage9/index.html">第九段階を比較</a><a href="stage8/index.html">第八段階を比較</a><a href="stage7/index.html">第七段階を比較</a><a href="stage6/index.html">第六段階を比較</a><a href="stage5/index.html">第五段階を比較</a><a href="stage4/index.html">第四段階を比較</a><a href="stage3/index.html">第三段階を比較</a><a href="stage2/index.html">第二段階を比較</a><a href="stage1/index.html">第一段階を比較</a><a data-hosted-source href="downloads/tsugime-lab-source.zip" download>第十二段階ソース一式 ZIP</a><a href="downloads/REPORT.md" download>検証報告 Markdown</a><a href="downloads/README.md" download>起動・操作 README</a></nav>'''+''.join(parts)+drawings+'''<footer>検証済みの範囲はこの小規模計画です。ブラウザ描画の確認制約は本文に明記しています。</footer></article><script>if(['localhost','127.0.0.1'].includes(location.hostname))document.querySelectorAll('[data-hosted-source]').forEach(a=>a.hidden=true)</script></html>'''
+</style><article><nav><a href="index.html">← 第12段階修復候補の3D実験</a><a href="stage10-redesign/index.html">着手前の第十段階修正版</a><a href="stage10/index.html">旧第十段階</a><a href="stage9/index.html">第九段階を比較</a><a href="stage8/index.html">第八段階を比較</a><a href="stage7/index.html">第七段階を比較</a><a href="stage6/index.html">第六段階を比較</a><a href="stage5/index.html">第五段階を比較</a><a href="stage4/index.html">第四段階を比較</a><a href="stage3/index.html">第三段階を比較</a><a href="stage2/index.html">第二段階を比較</a><a href="stage1/index.html">第一段階を比較</a><a data-hosted-source href="downloads/tsugime-lab-source.zip" download>第十二段階ソース一式 ZIP</a><a href="downloads/REPORT.md" download>検証報告 Markdown</a><a href="downloads/README.md" download>起動・操作 README</a></nav>'''+''.join(parts)+drawings+'''<footer>検証済みの範囲はこの小規模計画です。ブラウザ描画の確認制約は本文に明記しています。</footer></article><script>if(['localhost','127.0.0.1'].includes(location.hostname))document.querySelectorAll('[data-hosted-source]').forEach(a=>a.hidden=true)</script></html>'''
 (root/'dist/report.html').write_text(page)
 
 archive = downloads/'tsugime-lab-source.zip'

@@ -4,12 +4,13 @@ export const HOLE={x:6,z:6,w:4,d:4},SHAFT={x:12,z:2.8,w:2.4,d:5.7},BASE=.48;
 export const FLOOR_PANELS=[[6,6],[8,6],[6,8],[8,8]].map(([x,z],i)=>({id:i,x,z,w:2,d:2,dx:x===6?-2.4:0,floorDz:x===8?(z===6?-2.4:2.4):0,dz:z===6?-2.4:2.4}));
 export const GLASS=[{x:6,z:6,rotation:-Math.PI/2},{x:6,z:8,rotation:-Math.PI/2},{x:8,z:6,rotation:Math.PI},{x:10,z:6,rotation:Math.PI},{x:10,z:8,rotation:Math.PI/2},{x:10,z:10,rotation:Math.PI/2},{x:8,z:10,rotation:0},{x:6,z:10,rotation:0}];
 export const GLASS_BAYS=[{x:5.2,z:6,w:.8,d:2},{x:5.2,z:8,w:.8,d:2},{x:6,z:5.2,w:2,d:.8},{x:8,z:5.2,w:2,d:.8},{x:10,z:6,w:.8,d:2},{x:10,z:8,w:.8,d:2},{x:8,z:10,w:2,d:.8},{x:6,z:10,w:2,d:.8}];
+export const ENTRY_RAMP={x:0,z:6,w:5.4,d:1.8,landing:.6};
 const port=(id,face,a,b)=>({id,face,a,b,height:2.5,role:'boundary-connector'});
 export function addAtrium(bodies){
  bodies.find(b=>b.id==='P9').ports.push(port('atrium','E',5.6,7.6));
  const common={generation:12,use:'residential',zone:'housing',ceiling:5.6,roofAreas:[],solids:[],walls:[],doors:[],furniture:[],privateRooms:[],labels:[]};
- bodies.push({...structuredClone(common),id:'AC1',name:'吹き抜け住宅・導入廊下',color:'#99b2a7',ceiling:2.8,cells:[[0,0],[1,0]],ports:[port('west','W',5.6,7.6),port('east','E',3,5)],roofAreas:[{x:0,z:0,w:16,d:8,height:2.8}]});
- for(let tier=0;tier<3;tier++){const b={...structuredClone(common),id:ATRIUM_IDS[tier],name:['吹き抜け住宅・第二層','吹き抜け住宅・中間段','吹き抜け住宅・第三層'][tier],color:'#a6b7a0',atrium:tier,cells:[[0,0],[1,0],[0,1],[1,1]],ports:tier===0?[port('entry','W',3,5)]:[]};
+ bodies.push({...structuredClone(common),id:'AC1',name:'吹き抜け住宅・導入廊下',color:'#99b2a7',ceiling:2.8,cells:[[0,0],[1,0]],ports:[port('west','W',5.6,7.6),port('east','E',6,7.8)],roofAreas:[{x:0,z:0,w:16,d:8,height:2.8}]});
+ for(let tier=0;tier<3;tier++){const b={...structuredClone(common),id:ATRIUM_IDS[tier],name:['吹き抜け住宅・第二層','吹き抜け住宅・中間段','吹き抜け住宅・第三層'][tier],color:'#a6b7a0',atrium:tier,cells:[[0,0],[1,0],[0,1],[1,1]],ports:tier===0?[port('entry','W',6,7.8)]:[]};
   for(const z of[.8,11]){b.walls.push({a:[4.6,z],b:[4.6,z+1.1],role:'room-fixed'},{a:[4.6,z+2.3],b:[4.6,z+4.1],role:'room-fixed'},{a:[.2,z],b:[4.6,z],role:'room-fixed'},{a:[.2,z+4.1],b:[4.6,z+4.1],role:'room-fixed'});b.doors.push({id:b.id+'-'+z,a:[4.6,z+1.1],b:[4.6,z+2.3],kind:'hinge',hinge:'a',swing:90,open:false,label:'共用住戸',floor:BASE});b.furniture.push({x:.7,z:z+.6,w:1.2,d:2,h:.45,floor:BASE,color:'wood'});}
   b.walls=b.walls.map(w=>({...w,floor:BASE,height:3.4}));b.labels=[{name:b.name,x:3,z:8}];bodies.push(b);
  }

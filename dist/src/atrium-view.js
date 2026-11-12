@@ -1,5 +1,6 @@
+import{gateDefinitions,gateLeaves}from'./atrium-gates.js';
 import * as THREE from '../vendor/three.module.js';
-import {BASE,HOLE,SHAFT,FLOOR_PANELS,GLASS,GLASS_BAYS,subtractRects} from './atrium-layout.js';
+import {BASE,HOLE,SHAFT,FLOOR_PANELS,GLASS,GLASS_BAYS,ENTRY_RAMP,subtractRects} from './atrium-layout.js';
 import {atriumChannels,clamp} from './atrium-physics.js';
 import {boundaryWalls,portSegment} from './architecture.js';
 import {doorLeaf,doorJambEnds} from './doors.js';
@@ -9,9 +10,9 @@ function mechanism(parent,name){const g=new THREE.Group();g.userData.target='atr
 export function buildAtriumBody(v,b,g){
  const tier=b.atrium,row={id:b.id,tier,floors:[],ceilings:[],guards:[],wells:[],collars:[],gates:[]};(v.atriumRows??=[]).push(row);
  const slabs=(rects,y,h,mat,roof=false)=>{for(const r of rects){const m=v.cube(g,r.x,y,r.z,r.w,h,r.d,mat);if(roof)v.roofs.push(m);}};
- const holes=tier>0?[HOLE,SHAFT,...GLASS_BAYS]:[{x:0,z:3,w:1.6,d:2}];
+ const holes=tier>0?[HOLE,SHAFT,...GLASS_BAYS] :[ENTRY_RAMP];
  const fixed=subtractRects(WHOLE,holes),foundation=tier>0?subtractRects(WHOLE,[{x:5.94,z:5.94,w:4.12,d:4.12},SHAFT,...GLASS_BAYS]):fixed;slabs(foundation,0,.16,'concrete');slabs(fixed,.54,.1,b.color);
- if(tier===0)for(let i=0;i<4;i++)v.cube(g,i*.4,i*.16,3,.4,.16,2,b.color);
+ if(tier===0){const r={...ENTRY_RAMP,x:ENTRY_RAMP.landing,w:ENTRY_RAMP.w-ENTRY_RAMP.landing};v.cube(g,0,0,r.z,ENTRY_RAMP.landing,.16,r.d,b.color);const verts=[r.x,0,r.z,r.x+r.w,0,r.z,r.x+r.w,0,r.z+r.d,r.x,0,r.z+r.d,r.x,.16,r.z,r.x+r.w,BASE+.16,r.z,r.x+r.w,BASE+.16,r.z+r.d,r.x,.16,r.z+r.d],geom=new THREE.BufferGeometry();geom.setAttribute('position',new THREE.Float32BufferAttribute(verts,3));geom.setIndex([0,1,2,0,2,3,4,6,5,4,7,6,0,5,1,0,4,5,3,2,6,3,6,7,0,3,7,0,7,4,1,5,6,1,6,2]);geom.computeVertexNormals();const ramp=new THREE.Mesh(geom,v.material(b.color,b.color));ramp.userData.atriumRamp=true;g.add(ramp);}
  // Roof skins leave a real attic slot; sliding pieces never share an exposed plane.
  const roofHoles=tier<2?[HOLE,SHAFT]:[];slabs(subtractRects(WHOLE,roofHoles),5.76,.08,'concrete',true);slabs(subtractRects(WHOLE,tier<2?[{x:5.94,z:5.94,w:4.12,d:4.12},{x:11.94,z:2.74,w:2.52,d:5.82}]:[]),5.99,.01,'concrete',true);
  for(const l of boundaryWalls(b))v.wall(g,l,6,'wall',.12,0);
@@ -37,7 +38,7 @@ export function buildAtriumBody(v,b,g){
   // Side cheeks seal the transport gap without crossing the stair walking line.
   const sleeve=mechanism(g,'stair-collar');for(const a of[[11.94,2.74,.06,5.82],[14.4,2.74,.06,5.82],[12,2.74,2.4,.06],[12,8.5,2.4,.06]])v.cube(sleeve,a[0],0,a[1],a[2],.4,a[3],'metal');row.collars.push(sleeve);
  }
- const gate=(z,y,h)=>{const m=mechanism(g,'stair-gate');m.position.set(14.4,0,z);v.cube(m,-2.4,y,-.035,2.4,h,.07,'metal');row.gates.push(m);};if(tier<2)gate(8.4,3.2,2);if(tier>0)gate(2.6,BASE+.16,1.3);
+ for(const d of gateDefinitions(tier)){const root=mechanism(g,'stair-gate:'+d.id),leaves=[];for(let i=0;i<6;i++){const h=new THREE.Group();root.add(h);v.cube(h,.19,d.bottom,-.015,.02,d.height,.03,'metal');for(const dy of[0,d.height/2,d.height-.04])v.cube(h,.04,d.bottom+dy,-.015,.32,.04,.03,'metal');const pin=new THREE.Mesh(new THREE.CylinderGeometry(.0175,.0175,d.height+.02,12),v.mats.metal);pin.position.set(0,d.bottom+d.height/2,0);h.add(pin);exposeBoxSurfaces(h);leaves.push(h);}row.gates.push({root,d,leaves});}
  const label=v.text(g,b.name,7,BASE+.17,14,{size:.35});label.rotation.x=-Math.PI/2;v.labels.push(label);
  v.surfaceStats??=[];v.surfaceStats.push(exposeBoxSurfaces(g));
 }
@@ -50,5 +51,5 @@ export function renderAtrium(v){const c=atriumChannels(v.sim);for(const r of v.a
  for(const {root,lower,upper,i}of r.guards){const lift=clamp(c.guard/.5),unfold=clamp((c.guard-.5)/.5),theta=(1-unfold)*Math.PI/2,stored=i<2||i>=4&&i<6?.44:.50;root.position.y=stored+(.54-stored)*lift+.1*unfold;lower.rotation.x=theta;upper.position.set(0,.65,.04*Math.sin(theta));upper.rotation.x=-2*theta;}
  for(const g of r.collars){g.position.y=6-.1*(1-c.collar);g.scale.y=Math.max(.001,c.collar);}
  if(r.liner){r.liner.position.y=.16;r.liner.scale.y=Math.max(.001,c.stairs);}if(r.incoming)r.incoming.position.set(-3.8*(1-clamp(c.stairs/.5)),1.2*(1-clamp((c.stairs-.5)/.5)),0);
- for(const rail of r.stairRails??[])rail.h.rotation.z=rail.sign*(1-c.stairRails)*Math.PI/2;for(const g of r.gates)g.rotation.y=Math.PI/2*c.stairs;
+ for(const rail of r.stairRails??[])rail.h.rotation.z=rail.sign*(1-c.stairRails)*Math.PI/2;for(const gate of r.gates){const poses=gateLeaves(gate.d,c.gate);gate.leaves.forEach((g,i)=>{g.position.set(poses[i].x,0,poses[i].z);g.rotation.y=poses[i].rotation;});}
  }}

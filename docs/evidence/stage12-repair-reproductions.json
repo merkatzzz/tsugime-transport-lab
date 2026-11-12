@@ -1,0 +1,50 @@
+{
+  "tag": "stage12-before-repair",
+  "commit": "19f08e196e71f4188f430b84a3b2ee7daf4a1cc7",
+  "lowWall": {
+    "start": {
+      "x": 4,
+      "y": 0.16,
+      "z": 4
+    },
+    "wall": {
+      "x": 4.6,
+      "datum": 0.48,
+      "meshBottom": 0.64,
+      "meshTop": 4.04
+    },
+    "end": {
+      "x": 5.300000000000026,
+      "y": 0.16,
+      "z": 4
+    },
+    "crossedClosedWall": true
+  },
+  "stair": {
+    "phase": "B",
+    "startProgress": 0.99,
+    "endProgress": 0.9955555555555555,
+    "displayedPercent": 100,
+    "blocked": true,
+    "end": {
+      "x": 13.200000000000003,
+      "y": 3.2,
+      "z": 8.839999999999907
+    },
+    "renderedGateAngleDegrees": 90,
+    "renderedGateBox": {
+      "min": {
+        "x": 14.364999999850994,
+        "y": 3.2,
+        "z": 8.39999995231629
+      },
+      "max": {
+        "x": 14.435000000149017,
+        "y": 5.2,
+        "z": 10.80000004768372
+      }
+    },
+    "physicalGateClosed": true
+  },
+  "scope": "Historical CPU reproduction with real walk input/ticks. Not a WebGL playtest."
+}

@@ -1,0 +1,53 @@
+{
+  "scope": "Public G5→J9→P9→SH1 approach, actual controller replay; no private room or rear-store detour; CPU only.",
+  "rows": [
+    {
+      "phase": "A",
+      "ok": true,
+      "startBody": "G5",
+      "endBody": "SH1",
+      "distance": 21.70832611206831,
+      "bodies": [
+        "G5",
+        "joint:G5:E-life|J9:W",
+        "J9",
+        "joint:J9:E|P9:W",
+        "P9",
+        "joint:P9:market-south|SH1:north",
+        "SH1"
+      ]
+    },
+    {
+      "phase": "B",
+      "ok": true,
+      "startBody": "G5",
+      "endBody": "SH1",
+      "distance": 21.70832611206831,
+      "bodies": [
+        "G5",
+        "joint:G5:E-life|J9:W",
+        "J9",
+        "joint:J9:E|P9:W",
+        "P9",
+        "joint:P9:market-south|SH1:north",
+        "SH1"
+      ]
+    },
+    {
+      "phase": "C",
+      "ok": true,
+      "startBody": "G5",
+      "endBody": "SH1",
+      "distance": 21.70832611206831,
+      "bodies": [
+        "G5",
+        "joint:G5:E-life|J9:W",
+        "J9",
+        "joint:J9:E|P9:W",
+        "P9",
+        "joint:P9:market-south|SH1:north",
+        "SH1"
+      ]
+    }
+  ]
+}

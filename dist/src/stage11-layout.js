@@ -5,7 +5,7 @@ const wall=(a,b,extra={})=>({a,b,role:WALL_ROLE.ROOM,...extra});
 const box=(x,z,w,d,h=.5,extra={})=>({x,z,w,d,h,color:'wood',...extra});
 const root=(id,name,cells,use,zone)=>({id,name,generation:11,use,zone,color:zone==='housing'?'#a6b29e':zone==='research'?'#95aeb5':'#c2ad88',cells,ceiling:2.8,ports:[],walls:[],doors:[],solids:[],furniture:[],privateRooms:[],labels:[],roofAreas:cells.map(([x,z])=>({x:x*8,z:z*8,w:8,d:8,height:2.8}))});
 const door=(id,a,b,label,swing=-90,extra={})=>({id,a,b,label,kind:'hinge',hinge:'a',swing,open:false,...extra});
-export const DISTRICT_PURPOSE={RH1:'六室と廊下を持つ二連結住宅。Bで東へ移り共有廊下SH2を経由する居住街へ',CP1:'内部二層のカプセル棟。RH1と別々に搬送し上階の乗員も保持',MK1:'一チャンク三店舗・東西廊下と南北枝。Bでは住宅棟と別々に東へ搬送',SH1:'共有街路の西半。商業区の二経路を維持する可動設備の待機',SH2:'共有街路の東半。Bで第三層へ独立搬送して住宅群へ接続',LB1:'二連結研究所。Bでは東南へ運び入口を閉鎖し、Cで商店街へ再接続'};
+export const DISTRICT_PURPOSE={RH1:'六室と廊下を持つ二連結住宅。Bで東へ移り共有廊下SH2を経由する居住街へ',CP1:'内部二層のカプセル棟。RH1と別々に搬送し上階の乗員も保持',MK1:'一チャンク三店舗・東西廊下と南北枝。Bでは住宅棟と別々に東へ搬送',SH1:'店舗Aと共同街路の西半。BはP9の南入口に接続する第一層へ独立搬送',SH2:'共有街路の東半。Bで第三層へ独立搬送して住宅群へ接続',LB1:'二連結研究所。Bでは東南へ運び入口を閉鎖し、Cで商店街へ再接続'};
 export function expandStage11(bodies){
  const get=id=>bodies.find(b=>b.id===id);get('U4').ports.push(port('market','E',5.5,7.5));get('U2').ports.push(port('district','S',.3,1.9));
  const r=root('RH1','居住街・六つの扉と共用廊下',[[0,0],[1,0]],'residential','housing');r.ports=[port('entry','N',.3,1.9),port('capsule','E'),port('shops','S',.3,1.9)];
@@ -25,7 +25,7 @@ export function expandStage11(bodies){
  stabilizeBuildings(bodies);
  for(const b of bodies)if(!b.zone)b.zone=b.use==='commerce'?'commerce':b.use==='residential'||['G3','A3','P9'].includes(b.id)?'housing':'service';
 }
-export function districtPlacements(phase,p){const b=phase==='B';return Object.assign(p,{MK1:{x:b?58.8:50.4,y:12.8,z:25.2},SH1:{x:58.8,y:0,z:11.8},SH2:b?{x:58.8,y:12.8,z:8.4}:{x:67.2,y:0,z:10.8},RH1:{x:b?58.8:50.4,y:12.8,z:16.8},CP1:{x:b?75.6:67.2,y:12.8,z:16.8},LB1:b?{x:84,y:0,z:16.8}:{x:75.6,y:0,z:10.8}});}
+export function districtPlacements(phase,p){const b=phase==='B';return Object.assign(p,{MK1:{x:b?58.8:50.4,y:12.8,z:25.2},SH1:{x:58.8,y:b?-12.8:0,z:42},SH2:b?{x:58.8,y:12.8,z:8.4}:{x:67.2,y:0,z:42},RH1:{x:b?58.8:50.4,y:12.8,z:16.8},CP1:{x:b?75.6:67.2,y:12.8,z:16.8},LB1:b?{x:84,y:0,z:50.4,angle:90}:{x:66.8,y:0,z:50.4,angle:90}});}
 export const CAPSULE_FLOORS=[0,3];
 export const CAPSULE_SLABS=[{x:0,z:0,w:5.4,d:8},{x:7.8,z:0,w:.2,d:8},{x:5.4,z:0,w:2.4,d:1.2},{x:5.4,z:6.6,w:2.4,d:1.4}];
 export function capsuleSurface(x,z,fromY=0){if(x<0||x>8||z<0||z>8)return null;if(x>=5.4&&x<=7.8&&z>=1.2&&z<=6.6)return Math.max(0,Math.min(3,Math.ceil((6.6-z-1e-7)/.27)*.15));return fromY>1.5?3:0;}
