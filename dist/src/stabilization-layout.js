@@ -1,10 +1,10 @@
+import {marketPlan} from './market-plan.js';
 import {WALL_ROLE} from './wall-roles.js';
 const wall=(a,b)=>({a,b,role:WALL_ROLE.ROOM,height:2.35});
 export function stabilizeBuildings(bodies){
- for(const id of ['SH1','SH2']){const b=bodies.find(b=>b.id===id),right=id==='SH2',mirror=p=>[right?8-p[0]:p[0],p[1]];
-  const lines=[[[.4,.6],[5.8,.6]],[[.4,5.3],[5.8,5.3]],[[5.8,.6],[5.8,1.9]],[[5.8,4.3],[5.8,5.3]],[[.4,.6],[.4,1.9]],[[.4,4.3],[.4,5.3]]];
-  b.walls=lines.map(([a,c])=>wall(mirror(a),mirror(c)));
-  b.furniture=[{x:4.9,z:.8,w:.65,d:.8,h:.9,color:'wood'},{x:4.9,z:4.5,w:.65,d:.6,h:.9,color:'wood'}].map(r=>({...r,x:right?8-r.x-r.w:r.x}));
+ for(const id of ['SH1','SH2']){const b=bodies.find(b=>b.id===id),right=id==='SH2';
+  b.walls=marketPlan(right).walls;
+  b.furniture=marketPlan(right).furniture;
  }
  const b=bodies.find(b=>b.id==='LB1');
  b.walls=b.walls.filter(w=>w.exterior).concat([wall([10,5.2],[10.8,5.2]),wall([11.9,5.2],[14,5.2]),wall([15.1,5.2],[16,5.2]),wall([13.1,5.2],[13.1,8])].map(w=>({...w,height:3.4})));
