@@ -1,4 +1,8 @@
-import {toLocal} from './pose.js';
+import {toLocal,worldRect} from './pose.js';
 import {slatPoses} from './portal-geometry.js';
 export function wallSweepOccupied(s,b,p,from,to){if(!p.wideSafety)return false;const q=toLocal(s.positions[b.id],s.player),ew=p.face==='E'||p.face==='W',along=ew?q.z:q.x;if(along<p.a-.36||along>p.b+.36)return false;const plane=p.face==='E'||p.face==='S'?7.8:.2,inward=p.face==='E'||p.face==='S'?-1:1,distance=((ew?q.x:q.z)-plane)*inward,n=Math.max(1,Math.ceil(Math.abs(to-from)/.02));for(let k=0;k<=n;k++)for(const a of slatPoses(p.height,from+(to-from)*k/n,1,p.adaptiveRecess??.3)){const y=a.y+a.length*Math.cos(a.rotation),z=a.z+a.length*Math.sin(a.rotation);if(q.y+.16+1.70>Math.min(a.y,y)-.008&&q.y+.16<Math.max(a.y,y)+.008&&distance>=Math.min(a.z,z)-.37&&distance<=Math.max(a.z,z)+.37)return true;}return false;}
 export function wideClosureOccupied(s,bodies){return bodies.some(b=>b.ports.some(p=>wallSweepOccupied(s,b,p,0,1)));}
+
+// Conservative boxes of the ACTUAL tilted leaves, not a phantom closed plane.
+// They share slatPoses with rendering and are only used for these new wide banks.
+export function wideWallSolids(s,b,p){if(!p.wideSafety)return[];const amount=s.portalAmounts?.[b.id+':'+p.id+':'+p.a.toFixed(2)]??1,ew=['E','W'].includes(p.face),sign=['E','S'].includes(p.face)?-1:1,w=(Math.max(...b.cells.map(c=>c[0]))+1)*8,d=(Math.max(...b.cells.map(c=>c[1]))+1)*8,edge=p.plane??(p.face==='E'?w:p.face==='S'?d:0),plane=edge+sign*.2;return slatPoses(p.height,amount,1,p.adaptiveRecess??.3).map(a=>{const y=a.y+a.length*Math.cos(a.rotation),n=a.z+a.length*Math.sin(a.rotation),lo=Math.min(a.z,n)-.006,hi=Math.max(a.z,n)+.006,u=plane+sign*lo,v=plane+sign*hi,bottom=Math.min(a.y,y)-.006,top=Math.max(a.y,y)+.006,r=ew?{x:Math.min(u,v),z:p.a,w:Math.abs(v-u),d:p.b-p.a}:{x:p.a,z:Math.min(u,v),w:p.b-p.a,d:Math.abs(v-u)};return{...worldRect(s.positions[b.id],r),y:s.positions[b.id].y+bottom-.16,h:top-bottom,owner:b.id,wideWall:true};});}

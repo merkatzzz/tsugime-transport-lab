@@ -52,6 +52,10 @@
     {
       "name": "wide-walls",
       "exit": 0
+    },
+    {
+      "name": "final-partial-wall-collision",
+      "exit": 0
     }
   ],
   "testCounts": {
@@ -76,5 +80,14 @@
     "statesPerWall": 101,
     "collisions": 0,
     "envelopeFailures": 0
-  }
+  },
+  "finalContactTests": {
+    "ok": true,
+    "tests": 26,
+    "passed": 26,
+    "failed": 0,
+    "scope": "Final dynamic collision change, including all Stage 13 cases, adaptive wall meshes and the Stage 12 repair regressions. Overlaps previous runs; not a WebGL playtest."
+  },
+  "testCatalog": 238,
+  "executionsOverlap": true
 }

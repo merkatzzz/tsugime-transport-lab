@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "tests": 26,
+  "passed": 26,
+  "failed": 0,
+  "scope": "Final dynamic collision change, including all Stage 13 cases, adaptive wall meshes and the Stage 12 repair regressions. Overlaps previous runs; not a WebGL playtest."
+}

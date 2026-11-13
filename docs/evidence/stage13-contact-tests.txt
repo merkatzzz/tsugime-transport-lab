@@ -1,0 +1,34 @@
+✔ A: from the external P9 common hall directly into a 4.8m street, both open shop fronts, the lab end and split/rejoin (2135.660198ms)
+✔ B/C: one continuous walk AC1 → ramp → AT0 → both stairs → AT2 → same route down → AC1, without resetting the player between floors (4214.70889ms)
+✔ the entrance connects between the homes, walls collide with the whole body at low heights, and ramp foot heights match the actual slope (99.16302ms)
+✔ closed room doors and counters stop the player, an opened door admits walking, and shop walls remain solid (227.111427ms)
+✔ D: normal lab entry and E exit still work after relocation/rotation, saves retain facing, and no management panel exists in the exploration viewport (119.887633ms)
+✔ south expansion is certified transport space: two additional rows, real lab destinations/motions and empty slots, rather than a map-only grid (481.797713ms)
+✔ B approaching during 99% deployment never freezes a visually open gate: the real frame loop completes and climbs to the middle floor (422.883522ms)
+✔ folded gates stow as narrow stacks without same-normal overlaps, and a visibly cleared centre has no phantom closed collision plane (2796.858322ms)
+✔ an actor approaching during opening or closing pauses a partially moved mechanism, can walk away, and is never relocated (1398.026632ms)
+✔ three new single-cell bodies preserve all 57 existing completed poses, SH1/SH2 structure and all other unmodified definitions (6.118199ms)
+✔ ordinary input enters the full one-cell room from J9, then crosses the broad two-room opening and walks all room corners (3059.935751ms)
+✔ large wall waits for an occupant, resumes after ordinary retreat, independently transports both rooms, seals B and rejoins C with a rider (2198.776588ms)
+✔ opening also waits for the actual folding-wall sweep and remains physically blocked until fully stowed (489.878651ms)
+✔ all 18 real ABC plans validate new independent routes and preserve the expanded south bounds (2234.380774ms)
+✔ save/load restores every large room phase, broad-wall endpoints, local passenger coordinates and updated maps (117.325021ms)
+✔ expanded 40.8m² opening reaches between homes, remains surrounded by a continuous walkable circuit on both raised floors (1988.627952ms)
+✔ glass reaches full height before floors move; the floor closes before the thin guard bands retract (2.507901ms)
+✔ real expanded void is open upward/downward, thin transparent guards close all mitered corners, and old west-side stair cabinet is gone (1987.524222ms)
+✔ finishing a broad wall refreshes both the real joint-floor meshes and cached live maps without changing phase or camera (1734.321155ms)
+✔ wide closed walls meet their shallow side reveals and real oblique eye rays cannot see through a throat gap (1535.628521ms)
+✔ a player cannot walk into a stopped partly folded sheet, and can retreat normally without disabling wall collision (38.124697ms)
+✔ accordion banks physically stow and deploy without overlapping coplanar slat faces or escaping their owner (4156.166924ms)
+✔ adaptive profile cheeks seal the oblique throat between the joint collar and recessed wall bank in A/B/C (2823.786898ms)
+✔ wide-to-wide entrance stays physically passable across its full six metre profile (904.021096ms)
+✔ new permanent multi-cell interiors have genuine continuous walkable geometry across internal cell borders (765.014682ms)
+✔ all inward door sweeps clear fixed furnishings, and visible leaves remain opaque inside their owner (1919.141813ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27844.945845

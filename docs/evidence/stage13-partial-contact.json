@@ -1,0 +1,18 @@
+{
+  "beforeCommit": "4672f52afbb42595f33fade827c7aa66e037d40f",
+  "before": {
+    "localX": 7.269230769230802,
+    "isFree": true,
+    "insideStationarySheetSweep": true
+  },
+  "after": {
+    "local": {
+      "x": 7.038461538461561,
+      "y": 0,
+      "z": 4
+    },
+    "isFree": true,
+    "insideStationarySheetSweep": false
+  },
+  "scope": "CPU reproduction at a stopped 75%-closed wide wall. No WebGL."
+}
