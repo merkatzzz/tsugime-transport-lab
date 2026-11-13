@@ -1,0 +1,5155 @@
+{
+  "evacuation": [
+    {
+      "phase": "A",
+      "from": "SC0",
+      "toPhase": "B",
+      "endOwner": "G5",
+      "walked": true,
+      "maxStep": 2.0799999999999983,
+      "completed": true
+    },
+    {
+      "phase": "C",
+      "from": "SC1",
+      "toPhase": "A",
+      "endOwner": "SC0",
+      "walked": true,
+      "maxStep": 2.0799999999999983,
+      "completed": true
+    }
+  ],
+  "atriumOpenings": [
+    {
+      "phase": "A",
+      "body": "AT0",
+      "localProbe": {
+        "x": 8.4,
+        "z": 8
+      },
+      "hasTopWithinOuterBand": false,
+      "top": null
+    },
+    {
+      "phase": "A",
+      "body": "AT0",
+      "localProbe": {
+        "x": 4.3,
+        "z": 7.800000000000001
+      },
+      "hasTopWithinOuterBand": false,
+      "top": null
+    },
+    {
+      "phase": "A",
+      "body": "AT0",
+      "localProbe": {
+        "x": 13.2,
+        "z": 5.65
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 5.969999999664724
+    },
+    {
+      "phase": "A",
+      "body": "AT1",
+      "localProbe": {
+        "x": 8.4,
+        "z": 8
+      },
+      "hasTopWithinOuterBand": false,
+      "top": null
+    },
+    {
+      "phase": "A",
+      "body": "AT1",
+      "localProbe": {
+        "x": 4.3,
+        "z": 7.800000000000001
+      },
+      "hasTopWithinOuterBand": false,
+      "top": null
+    },
+    {
+      "phase": "A",
+      "body": "AT1",
+      "localProbe": {
+        "x": 13.2,
+        "z": 5.65
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 12.369999999664724
+    },
+    {
+      "phase": "A",
+      "body": "AT2",
+      "localProbe": {
+        "x": 8.4,
+        "z": 8
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 18.8
+    },
+    {
+      "phase": "A",
+      "body": "AT2",
+      "localProbe": {
+        "x": 4.3,
+        "z": 7.800000000000001
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 18.8
+    },
+    {
+      "phase": "A",
+      "body": "AT2",
+      "localProbe": {
+        "x": 13.2,
+        "z": 5.65
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 18.8
+    },
+    {
+      "phase": "B",
+      "body": "AT0",
+      "localProbe": {
+        "x": 8.4,
+        "z": 8
+      },
+      "hasTopWithinOuterBand": false,
+      "top": null
+    },
+    {
+      "phase": "B",
+      "body": "AT0",
+      "localProbe": {
+        "x": 4.3,
+        "z": 7.800000000000001
+      },
+      "hasTopWithinOuterBand": false,
+      "top": null
+    },
+    {
+      "phase": "B",
+      "body": "AT0",
+      "localProbe": {
+        "x": 13.2,
+        "z": 5.65
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 5.440000057220459
+    },
+    {
+      "phase": "B",
+      "body": "AT1",
+      "localProbe": {
+        "x": 8.4,
+        "z": 8
+      },
+      "hasTopWithinOuterBand": false,
+      "top": null
+    },
+    {
+      "phase": "B",
+      "body": "AT1",
+      "localProbe": {
+        "x": 4.3,
+        "z": 7.800000000000001
+      },
+      "hasTopWithinOuterBand": false,
+      "top": null
+    },
+    {
+      "phase": "B",
+      "body": "AT1",
+      "localProbe": {
+        "x": 13.2,
+        "z": 5.65
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 11.84000005722046
+    },
+    {
+      "phase": "B",
+      "body": "AT2",
+      "localProbe": {
+        "x": 8.4,
+        "z": 8
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 18.8
+    },
+    {
+      "phase": "B",
+      "body": "AT2",
+      "localProbe": {
+        "x": 4.3,
+        "z": 7.800000000000001
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 18.8
+    },
+    {
+      "phase": "B",
+      "body": "AT2",
+      "localProbe": {
+        "x": 13.2,
+        "z": 5.65
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 18.8
+    },
+    {
+      "phase": "C",
+      "body": "AT0",
+      "localProbe": {
+        "x": 8.4,
+        "z": 8
+      },
+      "hasTopWithinOuterBand": false,
+      "top": null
+    },
+    {
+      "phase": "C",
+      "body": "AT0",
+      "localProbe": {
+        "x": 4.3,
+        "z": 7.800000000000001
+      },
+      "hasTopWithinOuterBand": false,
+      "top": null
+    },
+    {
+      "phase": "C",
+      "body": "AT0",
+      "localProbe": {
+        "x": 13.2,
+        "z": 5.65
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 5.969999999664724
+    },
+    {
+      "phase": "C",
+      "body": "AT1",
+      "localProbe": {
+        "x": 8.4,
+        "z": 8
+      },
+      "hasTopWithinOuterBand": false,
+      "top": null
+    },
+    {
+      "phase": "C",
+      "body": "AT1",
+      "localProbe": {
+        "x": 4.3,
+        "z": 7.800000000000001
+      },
+      "hasTopWithinOuterBand": false,
+      "top": null
+    },
+    {
+      "phase": "C",
+      "body": "AT1",
+      "localProbe": {
+        "x": 13.2,
+        "z": 5.65
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 12.369999999664724
+    },
+    {
+      "phase": "C",
+      "body": "AT2",
+      "localProbe": {
+        "x": 8.4,
+        "z": 8
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 18.8
+    },
+    {
+      "phase": "C",
+      "body": "AT2",
+      "localProbe": {
+        "x": 4.3,
+        "z": 7.800000000000001
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 18.8
+    },
+    {
+      "phase": "C",
+      "body": "AT2",
+      "localProbe": {
+        "x": 13.2,
+        "z": 5.65
+      },
+      "hasTopWithinOuterBand": true,
+      "top": 18.8
+    }
+  ],
+  "scope": "Actual Three.js raycasts, existing support predicate and positionDuring sampling; no WebGL or roof traversal.",
+  "roofs": [
+    {
+      "phase": "A",
+      "body": "R1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "R2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "R3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "R4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "T1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "T1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "T2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "T2",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "H1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "H1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "L1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "L1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "L1",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "J1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "J2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "J3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "C0",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 12.399999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.3900000035762794,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "E1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "E2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "E3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "E4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "H2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "H2",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "K1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "K2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "M1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "U1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "U2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "U3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.3900000035762794,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "U4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "U5",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "N1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "N2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "N3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "N4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "S1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "D1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "D2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "D3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "D4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "V1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "V1",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "V1",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "V2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "V2",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "V3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "A3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "Q1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -0.40000000178813977,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "Q1",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": -0.40000000178813977,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "W1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.3900000035762794,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "G1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "G1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "G2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "G3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "G3",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "G3",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "G4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "G4",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "G5",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "J9",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "P9",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "P9",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "P9",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "P9",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "RH1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "RH1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "MK1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "SH1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "SH2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "CP1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "LB1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "LB1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "AC1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "AC1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "AT0",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999999888241,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "AT0",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.969999999664724,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "AT0",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999999888241,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "AT0",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999999888241,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "AT1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 12.39999999988824,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "AT1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 12.369999999664724,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "AT1",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 12.39999999988824,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "AT1",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": 12.39999999988824,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "AT2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.799999999888243,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999941512903,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "AT2",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.799999999888243,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999941512903,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "AT2",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 18.799999999888243,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999941512903,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "AT2",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": 18.799999999888243,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999941512903,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "A",
+      "body": "BR1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "BR2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "BR3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "SC0",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "SC1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 12.399999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "SM0",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "SM1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "SM2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "A",
+      "body": "SM3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "R1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "R2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "R3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "R4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "T1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "T1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "T2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "T2",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "H1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "H1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "L1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "L1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "L1",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "J1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "J2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "J3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "C0",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "E1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "E2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "E3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "E4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "H2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "H2",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "K1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "K2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "M1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "U1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "U2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "U3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "U4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "U5",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "N1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "N2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "N3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "N4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "S1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "D1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "D2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "D3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "D4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "V1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "V1",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "V1",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "V2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "V2",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "V3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "A3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "Q1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "Q1",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "W1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "G1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "G1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "G2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "G3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "G3",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "G3",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "G4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "G4",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "G5",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "J9",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "P9",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "P9",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "P9",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "P9",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "RH1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "RH1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "MK1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "SH1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "SH2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "CP1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "LB1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "LB1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "AC1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "AC1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "AT0",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999999888241,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.3900000018998986,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "AT0",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": null,
+      "flatGeometry": false,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": null,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "AT0",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999999888241,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.3900000018998986,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "AT0",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999999888241,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.3900000018998986,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "AT1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 12.39999999988824,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.3900000018998995,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "AT1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": null,
+      "flatGeometry": false,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": null,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "AT1",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 12.39999999988824,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.3900000018998995,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "AT1",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": 12.39999999988824,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.3900000018998995,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "AT2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.799999999888243,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999941512903,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "AT2",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.799999999888243,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999941512903,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "AT2",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 18.799999999888243,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999941512903,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "AT2",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": 18.799999999888243,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999941512903,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "B",
+      "body": "BR1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "BR2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "BR3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "SC0",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "SC1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 12.399999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "SM0",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "SM1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "SM2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "B",
+      "body": "SM3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "R1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "R2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "R3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "R4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "T1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "T1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "T2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "T2",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "H1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "H1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "L1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "L1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "L1",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "J1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "J2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "J3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "C0",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 12.399999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.3900000035762794,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "E1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "E2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "E3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "E4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "H2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "H2",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "K1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "K2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "M1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "U1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "U2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "U3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.3900000035762794,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "U4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "U5",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "N1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "N2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "N3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "N4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "S1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "D1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "D2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "D3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "D4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "V1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "V1",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "V1",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "V2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "V2",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "V3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "A3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "Q1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -0.40000000178813977,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "Q1",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": -0.40000000178813977,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "W1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.3900000035762794,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "G1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "G1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "G2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "G3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "G3",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "G3",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "G4",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "G4",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": -6.80000000178814,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "G5",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "J9",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "P9",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "P9",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "P9",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "P9",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "RH1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "RH1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "MK1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "SH1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "SH2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "CP1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.79999999821186,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999958276737,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "LB1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "LB1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "AC1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "AC1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "AT0",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999999888241,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "AT0",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 5.969999999664724,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "AT0",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999999888241,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "AT0",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": 5.999999999888241,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "AT1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 12.39999999988824,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "AT1",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 12.369999999664724,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "AT1",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 12.39999999988824,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "AT1",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": 12.39999999988824,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "AT2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 18.799999999888243,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999941512903,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "AT2",
+      "cell": [
+        1,
+        0
+      ],
+      "outerTopAtCellCentre": 18.799999999888243,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999941512903,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "AT2",
+      "cell": [
+        0,
+        1
+      ],
+      "outerTopAtCellCentre": 18.799999999888243,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999941512903,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "AT2",
+      "cell": [
+        1,
+        1
+      ],
+      "outerTopAtCellCentre": 18.799999999888243,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 0.9899999941512903,
+      "headroomAtLeast1_85": false
+    },
+    {
+      "phase": "C",
+      "body": "BR1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "BR2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "BR3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "SC0",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "SC1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "SM0",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "SM1",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "SM2",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    },
+    {
+      "phase": "C",
+      "body": "SM3",
+      "cell": [
+        0,
+        0
+      ],
+      "outerTopAtCellCentre": 5.999999998211861,
+      "flatGeometry": true,
+      "currentSupportAtRoof": false,
+      "headroomGeometry": 1.85,
+      "headroomAtLeast1_85": true
+    }
+  ],
+  "summary": {
+    "samples": 285,
+    "flatAtCentre": 283,
+    "currentRoofSupport": 0
+  },
+  "intermediate": [
+    {
+      "from": "A",
+      "to": "B",
+      "time": 4.380000000000001,
+      "duration": 29.866666666666667,
+      "status": {
+        "R2": "travelling",
+        "H1": "waiting",
+        "L1": "waiting",
+        "C0": "travelling",
+        "E1": "waiting",
+        "E3": "waiting",
+        "H2": "waiting",
+        "M1": "travelling",
+        "U2": "waiting",
+        "N4": "travelling",
+        "S1": "travelling",
+        "V1": "travelling",
+        "V2": "finished",
+        "V3": "travelling",
+        "Q1": "finished",
+        "G1": "waiting",
+        "G2": "waiting",
+        "G3": "waiting",
+        "G4": "travelling",
+        "G5": "travelling",
+        "J9": "finished",
+        "P9": "finished",
+        "RH1": "travelling",
+        "MK1": "travelling",
+        "SH1": "finished",
+        "SH2": "travelling",
+        "CP1": "travelling",
+        "LB1": "travelling",
+        "AT1": "travelling",
+        "BR1": "finished",
+        "BR2": "travelling",
+        "BR3": "finished",
+        "SM1": "finished",
+        "SM2": "travelling"
+      },
+      "positions": {
+        "R1": {
+          "x": 0,
+          "z": 0,
+          "y": 12.8
+        },
+        "R2": {
+          "x": 8.4,
+          "y": 6.4,
+          "z": 8.98666666666667
+        },
+        "R3": {
+          "x": 0,
+          "z": 16.8,
+          "y": 12.8
+        },
+        "R4": {
+          "x": 0,
+          "z": 0,
+          "y": 0
+        },
+        "T1": {
+          "x": 16.8,
+          "z": 0,
+          "y": 12.8
+        },
+        "T2": {
+          "x": 16.8,
+          "z": 0,
+          "y": 0
+        },
+        "H1": {
+          "x": 16.8,
+          "z": 8.4,
+          "y": 12.8
+        },
+        "L1": {
+          "x": 16.8,
+          "z": 8.4,
+          "y": 0
+        },
+        "J1": {
+          "x": 0,
+          "z": 8.4,
+          "y": 12.8
+        },
+        "J2": {
+          "x": 8.4,
+          "z": 8.4,
+          "y": 12.8
+        },
+        "J3": {
+          "x": 8.4,
+          "z": 0,
+          "y": 0
+        },
+        "C0": {
+          "x": 32.879999999999995,
+          "y": 6.4,
+          "z": 0
+        },
+        "E1": {
+          "x": 33.6,
+          "z": 0,
+          "y": 12.8
+        },
+        "E3": {
+          "x": 33.6,
+          "z": 0,
+          "y": 0
+        },
+        "E2": {
+          "x": 42,
+          "z": 0,
+          "y": 12.8
+        },
+        "E4": {
+          "x": 42,
+          "z": 0,
+          "y": 0
+        },
+        "H2": {
+          "x": 16.8,
+          "y": 12.8,
+          "z": 16.8
+        },
+        "K1": {
+          "x": 0,
+          "z": 0,
+          "y": -12.8
+        },
+        "K2": {
+          "x": 8.4,
+          "z": 0,
+          "y": -12.8
+        },
+        "M1": {
+          "x": 19.18666666666667,
+          "y": -6.4,
+          "z": 6.6
+        },
+        "U1": {
+          "x": 50.4,
+          "y": 12.8,
+          "z": 0
+        },
+        "U2": {
+          "x": 50.4,
+          "y": 12.8,
+          "z": 8.4
+        },
+        "U3": {
+          "x": 50.4,
+          "y": 0,
+          "z": 0
+        },
+        "U4": {
+          "x": 50.4,
+          "y": 0,
+          "z": 8.4
+        },
+        "U5": {
+          "x": 8.4,
+          "y": -12.8,
+          "z": 8.4
+        },
+        "N1": {
+          "x": 16.8,
+          "y": -12.8,
+          "z": 8.4,
+          "angle": 90
+        },
+        "N2": {
+          "x": 50.4,
+          "y": 0,
+          "z": 16.8
+        },
+        "N3": {
+          "x": 8.4,
+          "y": 12.8,
+          "z": 33.6,
+          "angle": 180
+        },
+        "N4": {
+          "x": 58.8,
+          "y": 6.4,
+          "z": 2,
+          "angle": 52.40000000000003
+        },
+        "S1": {
+          "x": 42,
+          "y": 6.4,
+          "z": 7.413333333333329
+        },
+        "D1": {
+          "x": 100.8,
+          "y": 12.8,
+          "z": 0
+        },
+        "D2": {
+          "x": 109.2,
+          "y": 12.8,
+          "z": 0
+        },
+        "D3": {
+          "x": 100.8,
+          "y": 12.8,
+          "z": 8.4
+        },
+        "D4": {
+          "x": 109.2,
+          "y": 12.8,
+          "z": 8.4
+        },
+        "V1": {
+          "x": 8.4,
+          "y": -6.8400000000000025,
+          "z": 25.2
+        },
+        "V2": {
+          "x": 16.8,
+          "y": 12.8,
+          "z": 25.2
+        },
+        "V3": {
+          "x": 8.4,
+          "y": -0.3400000000000032,
+          "z": 16.8
+        },
+        "A3": {
+          "x": 8.4,
+          "y": 12.8,
+          "z": 25.2
+        },
+        "Q1": {
+          "x": 0,
+          "y": -12.8,
+          "z": 16.8
+        },
+        "W1": {
+          "x": 0,
+          "y": -12.8,
+          "z": 33.6
+        },
+        "G1": {
+          "x": 25.2,
+          "y": -12.8,
+          "z": 0
+        },
+        "G2": {
+          "x": 42,
+          "y": -12.8,
+          "z": 0,
+          "angle": 0
+        },
+        "G3": {
+          "x": 33.6,
+          "y": -12.8,
+          "z": 25.2
+        },
+        "G4": {
+          "x": 50.4,
+          "y": -6.840000000000005,
+          "z": 8.4
+        },
+        "G5": {
+          "x": 41.6,
+          "y": -6.4,
+          "z": 42.186666666666675
+        },
+        "J9": {
+          "x": 50.4,
+          "y": -12.8,
+          "z": 33.2
+        },
+        "P9": {
+          "x": 58.8,
+          "y": -12.8,
+          "z": 25.2
+        },
+        "MK1": {
+          "x": 58.8,
+          "y": 6.840000000000005,
+          "z": 25.2
+        },
+        "SH1": {
+          "x": 58.8,
+          "y": -12.8,
+          "z": 42
+        },
+        "SH2": {
+          "x": 67.2,
+          "y": 6.4,
+          "z": 33.01333333333333
+        },
+        "RH1": {
+          "x": 58.8,
+          "y": 6.840000000000005,
+          "z": 16.8
+        },
+        "CP1": {
+          "x": 75.6,
+          "y": 6.8400000000000105,
+          "z": 16.8
+        },
+        "LB1": {
+          "x": 75.78666666666666,
+          "y": -6.4,
+          "z": 50.4,
+          "angle": 90
+        },
+        "AC1": {
+          "x": 75.6,
+          "y": 0,
+          "z": 25.2
+        },
+        "AT0": {
+          "x": 92.4,
+          "y": 0,
+          "z": 25.2
+        },
+        "AT1": {
+          "x": 100.07999999999998,
+          "y": 6.4,
+          "z": 25.2
+        },
+        "AT2": {
+          "x": 92.4,
+          "y": 12.8,
+          "z": 25.2
+        },
+        "BR1": {
+          "x": 50.4,
+          "y": -12.8,
+          "z": 41.6
+        },
+        "BR2": {
+          "x": 41.41333333333333,
+          "y": 6.4,
+          "z": 58.4
+        },
+        "BR3": {
+          "x": 50.4,
+          "y": -12.8,
+          "z": 50
+        },
+        "SC0": {
+          "x": 42,
+          "y": 0,
+          "z": 41.6
+        },
+        "SC1": {
+          "x": 33.6,
+          "y": 6.4,
+          "z": 50
+        },
+        "SM0": {
+          "x": 42,
+          "y": 0,
+          "z": 58.4
+        },
+        "SM1": {
+          "x": 50.4,
+          "y": -12.8,
+          "z": 58.4
+        },
+        "SM2": {
+          "x": 58.21333333333333,
+          "y": -6.4,
+          "z": 66.8
+        },
+        "SM3": {
+          "x": 42,
+          "y": 0,
+          "z": 66.8
+        }
+      }
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "time": 4.380000000000001,
+      "duration": 40.96666666666666,
+      "status": {
+        "R2": "waiting",
+        "R3": "waiting",
+        "H1": "travelling",
+        "L1": "waiting",
+        "J1": "waiting",
+        "J3": "waiting",
+        "C0": "travelling",
+        "E1": "waiting",
+        "E2": "waiting",
+        "E3": "waiting",
+        "E4": "waiting",
+        "H2": "waiting",
+        "M1": "travelling",
+        "U2": "travelling",
+        "N4": "waiting",
+        "S1": "waiting",
+        "V1": "travelling",
+        "V2": "travelling",
+        "V3": "waiting",
+        "Q1": "finished",
+        "G1": "waiting",
+        "G2": "waiting",
+        "G3": "waiting",
+        "G4": "waiting",
+        "G5": "travelling",
+        "J9": "finished",
+        "P9": "finished",
+        "RH1": "travelling",
+        "MK1": "travelling",
+        "SH1": "finished",
+        "SH2": "waiting",
+        "CP1": "travelling",
+        "LB1": "travelling",
+        "AT1": "travelling",
+        "BR1": "waiting",
+        "BR2": "travelling",
+        "BR3": "waiting",
+        "SC1": "finished",
+        "SM1": "finished",
+        "SM2": "finished"
+      },
+      "positions": {
+        "R1": {
+          "x": 0,
+          "z": 0,
+          "y": 12.8
+        },
+        "R2": {
+          "x": 8.4,
+          "z": 16.8,
+          "y": 12.8
+        },
+        "R3": {
+          "x": 0,
+          "z": 16.8,
+          "y": 12.8
+        },
+        "R4": {
+          "x": 0,
+          "z": 0,
+          "y": 0
+        },
+        "T1": {
+          "x": 16.8,
+          "z": 0,
+          "y": 12.8
+        },
+        "T2": {
+          "x": 16.8,
+          "z": 0,
+          "y": 0
+        },
+        "H1": {
+          "x": 8.98666666666667,
+          "y": 6.4,
+          "z": 8.4
+        },
+        "L1": {
+          "x": 16.8,
+          "z": 8.4,
+          "y": 12.8
+        },
+        "J1": {
+          "x": 0,
+          "z": 8.4,
+          "y": 12.8
+        },
+        "J2": {
+          "x": 8.4,
+          "z": 8.4,
+          "y": 12.8
+        },
+        "J3": {
+          "x": 8.4,
+          "z": 0,
+          "y": 0
+        },
+        "C0": {
+          "x": 17.38666666666667,
+          "y": 6.4,
+          "z": 0
+        },
+        "E1": {
+          "x": 33.6,
+          "z": 0,
+          "y": 0
+        },
+        "E3": {
+          "x": 33.6,
+          "z": 0,
+          "y": 12.8
+        },
+        "E2": {
+          "x": 42,
+          "z": 0,
+          "y": 12.8
+        },
+        "E4": {
+          "x": 42,
+          "z": 0,
+          "y": 0
+        },
+        "H2": {
+          "x": 33.6,
+          "y": 0,
+          "z": 8.4
+        },
+        "K1": {
+          "x": 0,
+          "z": 0,
+          "y": -12.8
+        },
+        "K2": {
+          "x": 8.4,
+          "z": 0,
+          "y": -12.8
+        },
+        "M1": {
+          "x": 33.6,
+          "y": -6.4,
+          "z": 7.813333333333331
+        },
+        "U1": {
+          "x": 50.4,
+          "y": 12.8,
+          "z": 0
+        },
+        "U2": {
+          "x": 58.21333333333333,
+          "y": 6.4,
+          "z": 8.4
+        },
+        "U3": {
+          "x": 50.4,
+          "y": 0,
+          "z": 0
+        },
+        "U4": {
+          "x": 50.4,
+          "y": 0,
+          "z": 8.4
+        },
+        "U5": {
+          "x": 8.4,
+          "y": -12.8,
+          "z": 8.4
+        },
+        "N1": {
+          "x": 16.8,
+          "y": -12.8,
+          "z": 8.4,
+          "angle": 90
+        },
+        "N2": {
+          "x": 50.4,
+          "y": 0,
+          "z": 16.8
+        },
+        "N3": {
+          "x": 8.4,
+          "y": 12.8,
+          "z": 33.6,
+          "angle": 180
+        },
+        "N4": {
+          "x": 58.8,
+          "y": 0,
+          "z": 0,
+          "angle": 90
+        },
+        "S1": {
+          "x": 92.4,
+          "y": 12.8,
+          "z": 0
+        },
+        "D1": {
+          "x": 100.8,
+          "y": 12.8,
+          "z": 0
+        },
+        "D2": {
+          "x": 109.2,
+          "y": 12.8,
+          "z": 0
+        },
+        "D3": {
+          "x": 100.8,
+          "y": 12.8,
+          "z": 8.4
+        },
+        "D4": {
+          "x": 109.2,
+          "y": 12.8,
+          "z": 8.4
+        },
+        "V1": {
+          "x": 8.4,
+          "y": -6.840000000000005,
+          "z": 16.8
+        },
+        "V2": {
+          "x": 8.4,
+          "y": 5.959999999999998,
+          "z": 25.2
+        },
+        "V3": {
+          "x": 0,
+          "y": -12.8,
+          "z": 8.4
+        },
+        "A3": {
+          "x": 8.4,
+          "y": 12.8,
+          "z": 25.2
+        },
+        "Q1": {
+          "x": 0,
+          "y": -6.4,
+          "z": 25.2
+        },
+        "W1": {
+          "x": 0,
+          "y": -12.8,
+          "z": 33.6
+        },
+        "G1": {
+          "x": 25.2,
+          "y": -12.8,
+          "z": 8.4
+        },
+        "G2": {
+          "x": 42,
+          "y": -12.8,
+          "z": 8.4,
+          "angle": 90
+        },
+        "G3": {
+          "x": 33.6,
+          "y": 0,
+          "z": 25.2
+        },
+        "G4": {
+          "x": 50.4,
+          "y": -12.8,
+          "z": 8.4
+        },
+        "G5": {
+          "x": 41.6,
+          "y": -6.4,
+          "z": 42.186666666666675
+        },
+        "J9": {
+          "x": 50.4,
+          "y": 0,
+          "z": 33.2
+        },
+        "P9": {
+          "x": 58.8,
+          "y": 0,
+          "z": 25.2
+        },
+        "MK1": {
+          "x": 50.4,
+          "y": 6.840000000000005,
+          "z": 25.2
+        },
+        "SH1": {
+          "x": 58.8,
+          "y": 0,
+          "z": 42
+        },
+        "SH2": {
+          "x": 58.8,
+          "y": 12.8,
+          "z": 8.4
+        },
+        "RH1": {
+          "x": 50.4,
+          "y": 6.840000000000005,
+          "z": 16.8
+        },
+        "CP1": {
+          "x": 67.2,
+          "y": 6.8400000000000105,
+          "z": 16.8
+        },
+        "LB1": {
+          "x": 75.01333333333334,
+          "y": -6.4,
+          "z": 50.4,
+          "angle": 90
+        },
+        "AC1": {
+          "x": 75.6,
+          "y": 0,
+          "z": 25.2
+        },
+        "AT0": {
+          "x": 92.4,
+          "y": 0,
+          "z": 25.2
+        },
+        "AT1": {
+          "x": 109.92,
+          "y": 6.4,
+          "z": 25.2
+        },
+        "AT2": {
+          "x": 92.4,
+          "y": 12.8,
+          "z": 25.2
+        },
+        "BR1": {
+          "x": 50.4,
+          "y": -12.8,
+          "z": 41.6
+        },
+        "BR2": {
+          "x": 25.2,
+          "y": 6.4,
+          "z": 58.98666666666667
+        },
+        "BR3": {
+          "x": 50.4,
+          "y": -12.8,
+          "z": 50
+        },
+        "SC0": {
+          "x": 42,
+          "y": 0,
+          "z": 41.6
+        },
+        "SC1": {
+          "x": 42,
+          "y": 0,
+          "z": 50
+        },
+        "SM0": {
+          "x": 42,
+          "y": 0,
+          "z": 58.4
+        },
+        "SM1": {
+          "x": 50.4,
+          "y": 0,
+          "z": 58.4
+        },
+        "SM2": {
+          "x": 50.4,
+          "y": 0,
+          "z": 66.8
+        },
+        "SM3": {
+          "x": 42,
+          "y": 0,
+          "z": 66.8
+        }
+      }
+    },
+    {
+      "from": "C",
+      "to": "A",
+      "time": 4.380000000000001,
+      "duration": 17.333333333333332,
+      "status": {
+        "R3": "waiting",
+        "L1": "travelling",
+        "J1": "travelling",
+        "J3": "travelling",
+        "E2": "waiting",
+        "E4": "travelling",
+        "M1": "travelling",
+        "V2": "travelling",
+        "G1": "travelling",
+        "BR1": "travelling",
+        "BR2": "travelling",
+        "BR3": "travelling",
+        "SC1": "finished",
+        "SM2": "travelling"
+      },
+      "positions": {
+        "R1": {
+          "x": 0,
+          "z": 0,
+          "y": 12.8
+        },
+        "R2": {
+          "x": 8.4,
+          "z": 0,
+          "y": 12.8
+        },
+        "R3": {
+          "x": 0,
+          "z": 8.4,
+          "y": 12.8
+        },
+        "R4": {
+          "x": 0,
+          "z": 0,
+          "y": 0
+        },
+        "T1": {
+          "x": 16.8,
+          "z": 0,
+          "y": 12.8
+        },
+        "T2": {
+          "x": 16.8,
+          "z": 0,
+          "y": 0
+        },
+        "H1": {
+          "x": 16.8,
+          "z": 8.4,
+          "y": 12.8
+        },
+        "L1": {
+          "x": 16.8,
+          "y": 5.959999999999997,
+          "z": 8.4
+        },
+        "J1": {
+          "x": 0,
+          "y": 6.840000000000005,
+          "z": 25.2
+        },
+        "J2": {
+          "x": 8.4,
+          "z": 8.4,
+          "y": 12.8
+        },
+        "J3": {
+          "x": 0.5866666666666712,
+          "y": 6.4,
+          "z": 0
+        },
+        "C0": {
+          "x": 50.4,
+          "y": 6.4,
+          "z": 0
+        },
+        "E1": {
+          "x": 33.6,
+          "z": 0,
+          "y": 12.8
+        },
+        "E3": {
+          "x": 33.6,
+          "z": 0,
+          "y": 0
+        },
+        "E2": {
+          "x": 42,
+          "z": 0,
+          "y": 0
+        },
+        "E4": {
+          "x": 42.586666666666666,
+          "y": 6.4,
+          "z": 8.4
+        },
+        "H2": {
+          "x": 16.8,
+          "y": 12.8,
+          "z": 16.8
+        },
+        "K1": {
+          "x": 0,
+          "z": 0,
+          "y": -12.8
+        },
+        "K2": {
+          "x": 8.4,
+          "z": 0,
+          "y": -12.8
+        },
+        "M1": {
+          "x": 32.61333333333333,
+          "y": -6.4,
+          "z": 0
+        },
+        "U1": {
+          "x": 50.4,
+          "y": 12.8,
+          "z": 0
+        },
+        "U2": {
+          "x": 50.4,
+          "y": 12.8,
+          "z": 8.4
+        },
+        "U3": {
+          "x": 50.4,
+          "y": 0,
+          "z": 0
+        },
+        "U4": {
+          "x": 50.4,
+          "y": 0,
+          "z": 8.4
+        },
+        "U5": {
+          "x": 8.4,
+          "y": -12.8,
+          "z": 8.4
+        },
+        "N1": {
+          "x": 16.8,
+          "y": -12.8,
+          "z": 8.4,
+          "angle": 90
+        },
+        "N2": {
+          "x": 50.4,
+          "y": 0,
+          "z": 16.8
+        },
+        "N3": {
+          "x": 8.4,
+          "y": 12.8,
+          "z": 33.6,
+          "angle": 180
+        },
+        "N4": {
+          "x": 58.8,
+          "y": 12.8,
+          "z": 0,
+          "angle": 0
+        },
+        "S1": {
+          "x": 42,
+          "y": 12.8,
+          "z": 8.4
+        },
+        "D1": {
+          "x": 100.8,
+          "y": 12.8,
+          "z": 0
+        },
+        "D2": {
+          "x": 109.2,
+          "y": 12.8,
+          "z": 0
+        },
+        "D3": {
+          "x": 100.8,
+          "y": 12.8,
+          "z": 8.4
+        },
+        "D4": {
+          "x": 109.2,
+          "y": 12.8,
+          "z": 8.4
+        },
+        "V1": {
+          "x": 8.4,
+          "y": -12.8,
+          "z": 16.8
+        },
+        "V2": {
+          "x": 16.8,
+          "y": 5.959999999999997,
+          "z": 25.2
+        },
+        "V3": {
+          "x": 8.4,
+          "y": 12.8,
+          "z": 16.8
+        },
+        "A3": {
+          "x": 8.4,
+          "y": 12.8,
+          "z": 25.2
+        },
+        "Q1": {
+          "x": 0,
+          "y": -6.4,
+          "z": 25.2
+        },
+        "W1": {
+          "x": 0,
+          "y": -12.8,
+          "z": 33.6
+        },
+        "G1": {
+          "x": 16.8,
+          "y": -6.4,
+          "z": 8.4
+        },
+        "G2": {
+          "x": 42,
+          "y": -12.8,
+          "z": 0,
+          "angle": 0
+        },
+        "G3": {
+          "x": 33.6,
+          "y": -12.8,
+          "z": 25.2
+        },
+        "G4": {
+          "x": 42,
+          "y": -12.8,
+          "z": 8.4
+        },
+        "G5": {
+          "x": 41.6,
+          "y": 0,
+          "z": 33.2
+        },
+        "J9": {
+          "x": 50.4,
+          "y": 0,
+          "z": 33.2
+        },
+        "P9": {
+          "x": 58.8,
+          "y": 0,
+          "z": 25.2
+        },
+        "MK1": {
+          "x": 50.4,
+          "y": 12.8,
+          "z": 25.2
+        },
+        "SH1": {
+          "x": 58.8,
+          "y": 0,
+          "z": 42
+        },
+        "SH2": {
+          "x": 67.2,
+          "y": 0,
+          "z": 42
+        },
+        "RH1": {
+          "x": 50.4,
+          "y": 12.8,
+          "z": 16.8
+        },
+        "CP1": {
+          "x": 67.2,
+          "y": 12.8,
+          "z": 16.8
+        },
+        "LB1": {
+          "x": 66.8,
+          "y": 0,
+          "z": 50.4,
+          "angle": 90
+        },
+        "AC1": {
+          "x": 75.6,
+          "y": 0,
+          "z": 25.2
+        },
+        "AT0": {
+          "x": 92.4,
+          "y": 0,
+          "z": 25.2
+        },
+        "AT1": {
+          "x": 117.6,
+          "y": 6.4,
+          "z": 25.2
+        },
+        "AT2": {
+          "x": 92.4,
+          "y": 12.8,
+          "z": 25.2
+        },
+        "BR1": {
+          "x": 33.6,
+          "y": -6.4,
+          "z": 49.41333333333333
+        },
+        "BR2": {
+          "x": 25.786666666666672,
+          "y": 6.4,
+          "z": 58.4
+        },
+        "BR3": {
+          "x": 42.58666666666667,
+          "y": -6.4,
+          "z": 66.8
+        },
+        "SC0": {
+          "x": 42,
+          "y": 0,
+          "z": 41.6
+        },
+        "SC1": {
+          "x": 33.6,
+          "y": 6.4,
+          "z": 50
+        },
+        "SM0": {
+          "x": 42,
+          "y": 0,
+          "z": 58.4
+        },
+        "SM1": {
+          "x": 50.4,
+          "y": 0,
+          "z": 58.4
+        },
+        "SM2": {
+          "x": 59.38666666666667,
+          "y": -6.4,
+          "z": 66.8
+        },
+        "SM3": {
+          "x": 42,
+          "y": 0,
+          "z": 66.8
+        }
+      }
+    }
+  ],
+  "terminal": {
+    "phase": "A",
+    "probeLocal": {
+      "x": 13.2,
+      "z": 6.7,
+      "footDatum": 4.48,
+      "eye": 6.290000000000001,
+      "head": 6.340000000000001
+    },
+    "ceilingUnderside": 5.940000000335276,
+    "clearBeyondExistingGate": true,
+    "gateDecision": "Retain the working terminal gate and all side guards. Current stairs do not have an independent closed-hatch head collision; removing the gate alone would permit head penetration. No gate removal in this update."
+  },
+  "nextWork": [
+    "Add explicit roof support surfaces distinct from interior floors; current controller has no roof support.",
+    "Design event-selected intermediate snapshot with continuous transforms and mechanism state, then hand it to a dedicated traversal state.",
+    "Keep empty transport cells empty; design specific bridges, edge/fall handling and body-height clearance after choosing the event stop.",
+    "A body on a transit deck can leave only 0.4m above its 6m envelope when a living-floor body is overhead: a person cannot automatically use that gap.",
+    "Retain attic/storage sweeps and roof openings. A selected roof route needs local guard/opening/support checks."
+  ],
+  "hiddenArea": "No A-side location, inhabitants or story is fixed here. Empty-space and transport-pose data remain available for a later authored design.",
+  "implementedFailureEvent": false,
+  "implementedRoofWalking": false
+}

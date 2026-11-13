@@ -1,0 +1,65 @@
+{
+  "cpuChecksPassed": true,
+  "rows": [
+    {
+      "name": "plans",
+      "exit": 0
+    },
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "mechanisms",
+      "exit": 0
+    },
+    {
+      "name": "wide-walls",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "moving-surfaces",
+      "exit": 0
+    },
+    {
+      "name": "surfaces",
+      "exit": 0
+    },
+    {
+      "name": "doors",
+      "exit": 0
+    },
+    {
+      "name": "walks",
+      "exit": 0
+    },
+    {
+      "name": "plans-and-maps",
+      "exit": 0
+    },
+    {
+      "name": "drawings",
+      "exit": 0
+    },
+    {
+      "name": "roof-study",
+      "exit": 0
+    },
+    {
+      "name": "drawing-xml",
+      "exit": 0
+    }
+  ],
+  "testCounts": {
+    "total": 248,
+    "passed": 248,
+    "failed": 0
+  },
+  "webglRendered": false,
+  "humanFirstPersonWalkVerified": false,
+  "completion": "CPU geometry, normal controller input replay and continuous transport validation; WebGL inspection remains separate."
+}

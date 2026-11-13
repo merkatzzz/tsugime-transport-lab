@@ -158,22 +158,22 @@
       "D1": {
         "x": 100.8,
         "y": 12.8,
-        "z": 8.4
+        "z": 0
       },
       "D2": {
         "x": 109.2,
         "y": 12.8,
-        "z": 8.4
+        "z": 0
       },
       "D3": {
         "x": 100.8,
         "y": 12.8,
-        "z": 16.8
+        "z": 8.4
       },
       "D4": {
         "x": 109.2,
         "y": 12.8,
-        "z": 16.8
+        "z": 8.4
       },
       "V1": {
         "x": 8.4,
@@ -306,6 +306,36 @@
         "x": 50.4,
         "y": 0,
         "z": 50
+      },
+      "SC0": {
+        "x": 42,
+        "y": 0,
+        "z": 41.6
+      },
+      "SC1": {
+        "x": 33.6,
+        "y": 6.4,
+        "z": 50
+      },
+      "SM0": {
+        "x": 42,
+        "y": 0,
+        "z": 58.4
+      },
+      "SM1": {
+        "x": 50.4,
+        "y": 0,
+        "z": 58.4
+      },
+      "SM2": {
+        "x": 67.2,
+        "y": 0,
+        "z": 66.8
+      },
+      "SM3": {
+        "x": 42,
+        "y": 0,
+        "z": 66.8
       }
     },
     "connections": [
@@ -1397,14 +1427,14 @@
         "gap": 0.4000000000000057,
         "permanent": true,
         "reason": "",
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "y": 12.8,
         "level": 1,
         "status": "pass",
         "bridge": {
           "x": 108.8,
-          "z": 11.4,
+          "z": 3,
           "w": 0.4000000000000057,
           "d": 2,
           "orientation": "EW",
@@ -1423,7 +1453,7 @@
         "faceB": "N",
         "width": 2,
         "height": 2.3,
-        "gap": 0.40000000000000213,
+        "gap": 0.40000000000000036,
         "permanent": true,
         "reason": "",
         "start": 112.2,
@@ -1433,9 +1463,9 @@
         "status": "pass",
         "bridge": {
           "x": 112.2,
-          "z": 16.4,
+          "z": 8,
           "w": 2,
-          "d": 0.40000000000000213,
+          "d": 0.40000000000000036,
           "orientation": "NS",
           "y": 12.8
         }
@@ -1455,14 +1485,14 @@
         "gap": 0.4000000000000057,
         "permanent": true,
         "reason": "",
-        "start": 19.8,
-        "end": 21.8,
+        "start": 11.4,
+        "end": 13.4,
         "y": 12.8,
         "level": 1,
         "status": "pass",
         "bridge": {
           "x": 108.8,
-          "z": 19.8,
+          "z": 11.4,
           "w": 0.4000000000000057,
           "d": 2,
           "orientation": "EW",
@@ -1669,6 +1699,35 @@
           "w": 0.7999999999999972,
           "d": 2,
           "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
+        "id": "G5:south-district|SC0:N",
+        "a": "G5/0",
+        "b": "SC0/0",
+        "bodyA": "G5",
+        "bodyB": "SC0",
+        "portA": "south-district",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 45,
+        "end": 47,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 45,
+          "z": 41.2,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
           "y": 0
         }
       },
@@ -2017,6 +2076,151 @@
           "w": 0.3999999999999986,
           "d": 6.799999999999997,
           "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
+        "id": "BR2:south|SM0:N",
+        "a": "BR2/0",
+        "b": "SM0/0",
+        "bodyA": "BR2",
+        "bodyB": "SM0",
+        "portA": "south",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 45,
+        "end": 47,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 45,
+          "z": 58,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
+        "id": "BR3:south|SM1:N",
+        "a": "BR3/0",
+        "b": "SM1/0",
+        "bodyA": "BR3",
+        "bodyB": "SM1",
+        "portA": "south",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 53.4,
+        "end": 55.4,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 53.4,
+          "z": 58,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
+        "id": "SC0:S|BR2:north",
+        "a": "SC0/0",
+        "b": "BR2/0",
+        "bodyA": "SC0",
+        "bodyB": "BR2",
+        "portA": "S",
+        "portB": "north",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 45,
+        "end": 47,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 45,
+          "z": 49.6,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
+        "id": "SM0:E|SM1:W",
+        "a": "SM0/0",
+        "b": "SM1/0",
+        "bodyA": "SM0",
+        "bodyB": "SM1",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 61.4,
+        "end": 63.4,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 50,
+          "z": 61.4,
+          "w": 0.3999999999999986,
+          "d": 2,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
+        "id": "SM0:S|SM3:N",
+        "a": "SM0/0",
+        "b": "SM3/0",
+        "bodyA": "SM0",
+        "bodyB": "SM3",
+        "portA": "S",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999915,
+        "permanent": false,
+        "reason": "",
+        "start": 45,
+        "end": 47,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 45,
+          "z": 66.4,
+          "w": 2,
+          "d": 0.3999999999999915,
+          "orientation": "NS",
           "y": 0
         }
       },
@@ -7389,8 +7593,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 108.8,
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "status": "pass",
         "matches": [
           {
@@ -7408,14 +7612,14 @@
             "gap": 0.4000000000000057,
             "permanent": true,
             "reason": "",
-            "start": 11.4,
-            "end": 13.4,
+            "start": 3,
+            "end": 5,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 108.8,
-              "z": 11.4,
+              "z": 3,
               "w": 0.4000000000000057,
               "d": 2,
               "orientation": "EW",
@@ -7449,8 +7653,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 100.8,
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "status": "blocked",
         "matches": [],
         "openings": [],
@@ -7476,7 +7680,7 @@
         "node": "D2/1",
         "level": 1,
         "y": 12.8,
-        "plane": 16.4,
+        "plane": 8,
         "start": 112.2,
         "end": 114.2,
         "status": "pass",
@@ -7493,7 +7697,7 @@
             "faceB": "N",
             "width": 2,
             "height": 2.3,
-            "gap": 0.40000000000000213,
+            "gap": 0.40000000000000036,
             "permanent": true,
             "reason": "",
             "start": 112.2,
@@ -7503,9 +7707,9 @@
             "status": "pass",
             "bridge": {
               "x": 112.2,
-              "z": 16.4,
+              "z": 8,
               "w": 2,
-              "d": 0.40000000000000213,
+              "d": 0.40000000000000036,
               "orientation": "NS",
               "y": 12.8
             }
@@ -7538,8 +7742,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 109.2,
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "status": "pass",
         "matches": [
           {
@@ -7557,14 +7761,14 @@
             "gap": 0.4000000000000057,
             "permanent": true,
             "reason": "",
-            "start": 11.4,
-            "end": 13.4,
+            "start": 3,
+            "end": 5,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 108.8,
-              "z": 11.4,
+              "z": 3,
               "w": 0.4000000000000057,
               "d": 2,
               "orientation": "EW",
@@ -7599,8 +7803,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 108.8,
-        "start": 19.8,
-        "end": 21.8,
+        "start": 11.4,
+        "end": 13.4,
         "status": "pass",
         "matches": [
           {
@@ -7618,14 +7822,14 @@
             "gap": 0.4000000000000057,
             "permanent": true,
             "reason": "",
-            "start": 19.8,
-            "end": 21.8,
+            "start": 11.4,
+            "end": 13.4,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 108.8,
-              "z": 19.8,
+              "z": 11.4,
               "w": 0.4000000000000057,
               "d": 2,
               "orientation": "EW",
@@ -7659,7 +7863,7 @@
         "node": "D4/0",
         "level": 1,
         "y": 12.8,
-        "plane": 16.8,
+        "plane": 8.4,
         "start": 112.2,
         "end": 114.2,
         "status": "pass",
@@ -7676,7 +7880,7 @@
             "faceB": "N",
             "width": 2,
             "height": 2.3,
-            "gap": 0.40000000000000213,
+            "gap": 0.40000000000000036,
             "permanent": true,
             "reason": "",
             "start": 112.2,
@@ -7686,9 +7890,9 @@
             "status": "pass",
             "bridge": {
               "x": 112.2,
-              "z": 16.4,
+              "z": 8,
               "w": 2,
-              "d": 0.40000000000000213,
+              "d": 0.40000000000000036,
               "orientation": "NS",
               "y": 12.8
             }
@@ -7721,8 +7925,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 109.2,
-        "start": 19.8,
-        "end": 21.8,
+        "start": 11.4,
+        "end": 13.4,
         "status": "pass",
         "matches": [
           {
@@ -7740,14 +7944,14 @@
             "gap": 0.4000000000000057,
             "permanent": true,
             "reason": "",
-            "start": 19.8,
-            "end": 21.8,
+            "start": 11.4,
+            "end": 13.4,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 108.8,
-              "z": 19.8,
+              "z": 11.4,
               "w": 0.4000000000000057,
               "d": 2,
               "orientation": "EW",
@@ -9298,6 +9502,66 @@
         "masked": []
       },
       {
+        "id": "south-district",
+        "face": "S",
+        "a": 3.4,
+        "b": 5.4,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "G5",
+        "key": "G5:south-district",
+        "node": "G5/0",
+        "level": 0,
+        "y": 0,
+        "plane": 41.2,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "G5:south-district|SC0:N",
+            "a": "G5/0",
+            "b": "SC0/0",
+            "bodyA": "G5",
+            "bodyB": "SC0",
+            "portA": "south-district",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 41.2,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3.3999999999999986,
+            "b": 5.399999999999999,
+            "height": 2.5,
+            "status": "pass",
+            "id": "G5:south-district|SC0:N"
+          }
+        ],
+        "masked": []
+      },
+      {
         "id": "W",
         "face": "W",
         "a": 4,
@@ -10691,6 +10955,33 @@
         "masked": []
       },
       {
+        "id": "market",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "E",
+        "reversed": false,
+        "body": "BR1",
+        "key": "BR1:market",
+        "node": "BR1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 58.4,
+        "start": 44.6,
+        "end": 46.6,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
         "id": "wide",
         "face": "E",
         "a": 0.6,
@@ -10698,6 +10989,7 @@
         "height": 5.2,
         "role": "boundary-connector",
         "adaptive": true,
+        "adaptiveRecess": 0.1,
         "wideSafety": true,
         "profiles": [
           [
@@ -10754,6 +11046,126 @@
             "height": 5.2,
             "status": "pass",
             "id": "BR2:wide|BR3:wide"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "north",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "BR2",
+        "key": "BR2:north",
+        "node": "BR2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SC0:S|BR2:north",
+            "a": "SC0/0",
+            "b": "BR2/0",
+            "bodyA": "SC0",
+            "bodyB": "BR2",
+            "portA": "S",
+            "portB": "north",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 49.6,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SC0:S|BR2:north"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "south",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "BR2",
+        "key": "BR2:south",
+        "node": "BR2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 58,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR2:south|SM0:N",
+            "a": "BR2/0",
+            "b": "SM0/0",
+            "bodyA": "BR2",
+            "bodyB": "SM0",
+            "portA": "south",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 58,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR2:south|SM0:N"
           }
         ],
         "masked": []
@@ -10826,6 +11238,7 @@
         "height": 5.2,
         "role": "boundary-connector",
         "adaptive": true,
+        "adaptiveRecess": 0.1,
         "wideSafety": true,
         "profiles": [
           [
@@ -10885,6 +11298,735 @@
           }
         ],
         "masked": []
+      },
+      {
+        "id": "south",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "BR3",
+        "key": "BR3:south",
+        "node": "BR3/0",
+        "level": 0,
+        "y": 0,
+        "plane": 58,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR3:south|SM1:N",
+            "a": "BR3/0",
+            "b": "SM1/0",
+            "bodyA": "BR3",
+            "bodyB": "SM1",
+            "portA": "south",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 58,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR3:south|SM1:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SC0",
+        "key": "SC0:N",
+        "node": "SC0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 41.6,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "G5:south-district|SC0:N",
+            "a": "G5/0",
+            "b": "SC0/0",
+            "bodyA": "G5",
+            "bodyB": "SC0",
+            "portA": "south-district",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 41.2,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "G5:south-district|SC0:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "S",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "SC0",
+        "key": "SC0:S",
+        "node": "SC0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 49.6,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SC0:S|BR2:north",
+            "a": "SC0/0",
+            "b": "BR2/0",
+            "bodyA": "SC0",
+            "bodyB": "BR2",
+            "portA": "S",
+            "portB": "north",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 49.6,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SC0:S|BR2:north"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SC1",
+        "key": "SC1:N",
+        "node": "SC1/0",
+        "level": -1,
+        "y": 6.4,
+        "plane": 50,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "S",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "SC1",
+        "key": "SC1:S",
+        "node": "SC1/0",
+        "level": -1,
+        "y": 6.4,
+        "plane": 58,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SM0",
+        "key": "SM0:N",
+        "node": "SM0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 58.4,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR2:south|SM0:N",
+            "a": "BR2/0",
+            "b": "SM0/0",
+            "bodyA": "BR2",
+            "bodyB": "SM0",
+            "portA": "south",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 58,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR2:south|SM0:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "E",
+        "reversed": false,
+        "body": "SM0",
+        "key": "SM0:E",
+        "node": "SM0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 61.4,
+        "end": 63.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM0:E|SM1:W",
+            "a": "SM0/0",
+            "b": "SM1/0",
+            "bodyA": "SM0",
+            "bodyB": "SM1",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 61.4,
+            "end": 63.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 50,
+              "z": 61.4,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM0:E|SM1:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "S",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "SM0",
+        "key": "SM0:S",
+        "node": "SM0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 66.4,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM0:S|SM3:N",
+            "a": "SM0/0",
+            "b": "SM3/0",
+            "bodyA": "SM0",
+            "bodyB": "SM3",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999915,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 66.4,
+              "w": 2,
+              "d": 0.3999999999999915,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM0:S|SM3:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "W",
+        "reversed": false,
+        "body": "SM0",
+        "key": "SM0:W",
+        "node": "SM0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 42,
+        "start": 61.4,
+        "end": 63.4,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SM1",
+        "key": "SM1:N",
+        "node": "SM1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 58.4,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR3:south|SM1:N",
+            "a": "BR3/0",
+            "b": "SM1/0",
+            "bodyA": "BR3",
+            "bodyB": "SM1",
+            "portA": "south",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 58,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR3:south|SM1:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "W",
+        "reversed": false,
+        "body": "SM1",
+        "key": "SM1:W",
+        "node": "SM1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50.4,
+        "start": 61.4,
+        "end": 63.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM0:E|SM1:W",
+            "a": "SM0/0",
+            "b": "SM1/0",
+            "bodyA": "SM0",
+            "bodyB": "SM1",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 61.4,
+            "end": 63.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 50,
+              "z": 61.4,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM0:E|SM1:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "S",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "SM1",
+        "key": "SM1:S",
+        "node": "SM1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 66.4,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SM2",
+        "key": "SM2:N",
+        "node": "SM2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 66.8,
+        "start": 70.2,
+        "end": 72.2,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "W",
+        "reversed": false,
+        "body": "SM2",
+        "key": "SM2:W",
+        "node": "SM2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 67.2,
+        "start": 69.8,
+        "end": 71.8,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SM3",
+        "key": "SM3:N",
+        "node": "SM3/0",
+        "level": 0,
+        "y": 0,
+        "plane": 66.8,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM0:S|SM3:N",
+            "a": "SM0/0",
+            "b": "SM3/0",
+            "bodyA": "SM0",
+            "bodyB": "SM3",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999915,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 66.4,
+              "w": 2,
+              "d": 0.3999999999999915,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM0:S|SM3:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "E",
+        "reversed": false,
+        "body": "SM3",
+        "key": "SM3:E",
+        "node": "SM3/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 69.8,
+        "end": 71.8,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
       },
       {
         "id": "E",
@@ -11218,6 +12360,7 @@
       "MK1/0",
       "G5/0",
       "J9/0",
+      "SC0/0",
       "P9/2",
       "BR1/0",
       "SH1/0",
@@ -11227,7 +12370,10 @@
       "LB1/0",
       "AT0/0",
       "BR3/0",
-      "BR2/0"
+      "BR2/0",
+      "SM0/0",
+      "SM1/0",
+      "SM3/0"
     ],
     "emptyDockCells": [
       {
@@ -11791,16 +12937,6 @@
         "floor": false
       },
       {
-        "col": 5,
-        "row": 5,
-        "x": 42,
-        "z": 42,
-        "y": 0,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
         "col": 9,
         "row": 5,
         "x": 75.60000000000001,
@@ -12041,10 +13177,140 @@
         "floor": false
       },
       {
-        "col": 5,
+        "col": 7,
         "row": 7,
-        "x": 42,
+        "x": 58.800000000000004,
         "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 7,
+        "x": 67.2,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 7,
+        "x": 75.60000000000001,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 7,
+        "x": 84,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 7,
+        "x": 92.4,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 7,
+        "x": 100.80000000000001,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 7,
+        "x": 109.2,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 7,
+        "x": 117.60000000000001,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 7,
+        "x": 126,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 8,
+        "x": 0,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 8,
+        "x": 8.4,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 8,
+        "x": 16.8,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 8,
+        "x": 25.200000000000003,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 8,
+        "x": 33.6,
+        "z": 67.2,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -12052,9 +13318,9 @@
       },
       {
         "col": 6,
-        "row": 7,
+        "row": 8,
         "x": 50.400000000000006,
-        "z": 58.800000000000004,
+        "z": 67.2,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -12062,19 +13328,9 @@
       },
       {
         "col": 7,
-        "row": 7,
+        "row": 8,
         "x": 58.800000000000004,
-        "z": 58.800000000000004,
-        "y": 0,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 8,
-        "row": 7,
-        "x": 67.2,
-        "z": 58.800000000000004,
+        "z": 67.2,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -12082,9 +13338,9 @@
       },
       {
         "col": 9,
-        "row": 7,
+        "row": 8,
         "x": 75.60000000000001,
-        "z": 58.800000000000004,
+        "z": 67.2,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -12092,9 +13348,9 @@
       },
       {
         "col": 10,
-        "row": 7,
+        "row": 8,
         "x": 84,
-        "z": 58.800000000000004,
+        "z": 67.2,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -12102,9 +13358,9 @@
       },
       {
         "col": 11,
-        "row": 7,
+        "row": 8,
         "x": 92.4,
-        "z": 58.800000000000004,
+        "z": 67.2,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -12112,9 +13368,9 @@
       },
       {
         "col": 12,
-        "row": 7,
+        "row": 8,
         "x": 100.80000000000001,
-        "z": 58.800000000000004,
+        "z": 67.2,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -12122,9 +13378,9 @@
       },
       {
         "col": 13,
-        "row": 7,
+        "row": 8,
         "x": 109.2,
-        "z": 58.800000000000004,
+        "z": 67.2,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -12132,9 +13388,9 @@
       },
       {
         "col": 14,
-        "row": 7,
+        "row": 8,
         "x": 117.60000000000001,
-        "z": 58.800000000000004,
+        "z": 67.2,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -12142,9 +13398,169 @@
       },
       {
         "col": 15,
-        "row": 7,
+        "row": 8,
         "x": 126,
-        "z": 58.800000000000004,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 9,
+        "x": 0,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 9,
+        "x": 8.4,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 9,
+        "x": 16.8,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 9,
+        "x": 25.200000000000003,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 9,
+        "x": 33.6,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 9,
+        "x": 42,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 9,
+        "x": 50.400000000000006,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 9,
+        "x": 58.800000000000004,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 9,
+        "x": 67.2,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 9,
+        "x": 75.60000000000001,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 9,
+        "x": 84,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 9,
+        "x": 92.4,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 9,
+        "x": 100.80000000000001,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 9,
+        "x": 109.2,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 9,
+        "x": 117.60000000000001,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 9,
+        "x": 126,
+        "z": 75.60000000000001,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -12174,26 +13590,6 @@
         "col": 11,
         "row": 0,
         "x": 92.4,
-        "z": 0,
-        "y": 12.8,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 12,
-        "row": 0,
-        "x": 100.80000000000001,
-        "z": 0,
-        "y": 12.8,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 13,
-        "row": 0,
-        "x": 109.2,
         "z": 0,
         "y": 12.8,
         "w": 8,
@@ -12344,6 +13740,26 @@
         "col": 11,
         "row": 2,
         "x": 92.4,
+        "z": 16.8,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 2,
+        "x": 100.80000000000001,
+        "z": 16.8,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 2,
+        "x": 109.2,
         "z": 16.8,
         "y": 12.8,
         "w": 8,
@@ -13091,6 +14507,326 @@
         "floor": false
       },
       {
+        "col": 0,
+        "row": 8,
+        "x": 0,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 8,
+        "x": 8.4,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 8,
+        "x": 16.8,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 8,
+        "x": 25.200000000000003,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 8,
+        "x": 33.6,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 8,
+        "x": 42,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 8,
+        "x": 50.400000000000006,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 8,
+        "x": 58.800000000000004,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 8,
+        "x": 67.2,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 8,
+        "x": 75.60000000000001,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 8,
+        "x": 84,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 8,
+        "x": 92.4,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 8,
+        "x": 100.80000000000001,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 8,
+        "x": 109.2,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 8,
+        "x": 117.60000000000001,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 8,
+        "x": 126,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 9,
+        "x": 0,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 9,
+        "x": 8.4,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 9,
+        "x": 16.8,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 9,
+        "x": 25.200000000000003,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 9,
+        "x": 33.6,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 9,
+        "x": 42,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 9,
+        "x": 50.400000000000006,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 9,
+        "x": 58.800000000000004,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 9,
+        "x": 67.2,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 9,
+        "x": 75.60000000000001,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 9,
+        "x": 84,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 9,
+        "x": 92.4,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 9,
+        "x": 100.80000000000001,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 9,
+        "x": 109.2,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 9,
+        "x": 117.60000000000001,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 9,
+        "x": 126,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
         "col": 6,
         "row": 0,
         "x": 50.400000000000006,
@@ -14175,6 +15911,326 @@
         "row": 7,
         "x": 126,
         "z": 58.800000000000004,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 8,
+        "x": 0,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 8,
+        "x": 8.4,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 8,
+        "x": 16.8,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 8,
+        "x": 25.200000000000003,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 8,
+        "x": 33.6,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 8,
+        "x": 42,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 8,
+        "x": 50.400000000000006,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 8,
+        "x": 58.800000000000004,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 8,
+        "x": 67.2,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 8,
+        "x": 75.60000000000001,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 8,
+        "x": 84,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 8,
+        "x": 92.4,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 8,
+        "x": 100.80000000000001,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 8,
+        "x": 109.2,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 8,
+        "x": 117.60000000000001,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 8,
+        "x": 126,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 9,
+        "x": 0,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 9,
+        "x": 8.4,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 9,
+        "x": 16.8,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 9,
+        "x": 25.200000000000003,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 9,
+        "x": 33.6,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 9,
+        "x": 42,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 9,
+        "x": 50.400000000000006,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 9,
+        "x": 58.800000000000004,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 9,
+        "x": 67.2,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 9,
+        "x": 75.60000000000001,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 9,
+        "x": 84,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 9,
+        "x": 92.4,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 9,
+        "x": 100.80000000000001,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 9,
+        "x": 109.2,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 9,
+        "x": 117.60000000000001,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 9,
+        "x": 126,
+        "z": 75.60000000000001,
         "y": -12.8,
         "w": 8,
         "d": 8,
@@ -14336,27 +16392,27 @@
       "S1": {
         "x": 92.4,
         "y": 12.8,
-        "z": 8.4
+        "z": 0
       },
       "D1": {
         "x": 100.8,
         "y": 12.8,
-        "z": 8.4
+        "z": 0
       },
       "D2": {
         "x": 109.2,
         "y": 12.8,
-        "z": 8.4
+        "z": 0
       },
       "D3": {
         "x": 100.8,
         "y": 12.8,
-        "z": 16.8
+        "z": 8.4
       },
       "D4": {
         "x": 109.2,
         "y": 12.8,
-        "z": 16.8
+        "z": 8.4
       },
       "V1": {
         "x": 8.4,
@@ -14481,7 +16537,7 @@
         "z": 41.6
       },
       "BR2": {
-        "x": 33.6,
+        "x": 25.2,
         "y": 0,
         "z": 50
       },
@@ -14489,6 +16545,36 @@
         "x": 50.4,
         "y": -12.8,
         "z": 50
+      },
+      "SC0": {
+        "x": 42,
+        "y": 0,
+        "z": 41.6
+      },
+      "SC1": {
+        "x": 33.6,
+        "y": 6.4,
+        "z": 50
+      },
+      "SM0": {
+        "x": 42,
+        "y": 0,
+        "z": 58.4
+      },
+      "SM1": {
+        "x": 50.4,
+        "y": -12.8,
+        "z": 58.4
+      },
+      "SM2": {
+        "x": 50.4,
+        "y": -12.8,
+        "z": 66.8
+      },
+      "SM3": {
+        "x": 42,
+        "y": 0,
+        "z": 66.8
       }
     },
     "connections": [
@@ -15609,14 +17695,14 @@
         "gap": 0.3999999999999915,
         "permanent": false,
         "reason": "",
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "y": 12.8,
         "level": 1,
         "status": "pass",
         "bridge": {
           "x": 100.4,
-          "z": 11.4,
+          "z": 3,
           "w": 0.3999999999999915,
           "d": 2,
           "orientation": "EW",
@@ -15638,14 +17724,14 @@
         "gap": 0.4000000000000057,
         "permanent": true,
         "reason": "",
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "y": 12.8,
         "level": 1,
         "status": "pass",
         "bridge": {
           "x": 108.8,
-          "z": 11.4,
+          "z": 3,
           "w": 0.4000000000000057,
           "d": 2,
           "orientation": "EW",
@@ -15664,7 +17750,7 @@
         "faceB": "N",
         "width": 2,
         "height": 2.3,
-        "gap": 0.40000000000000213,
+        "gap": 0.40000000000000036,
         "permanent": true,
         "reason": "",
         "start": 112.2,
@@ -15674,9 +17760,9 @@
         "status": "pass",
         "bridge": {
           "x": 112.2,
-          "z": 16.4,
+          "z": 8,
           "w": 2,
-          "d": 0.40000000000000213,
+          "d": 0.40000000000000036,
           "orientation": "NS",
           "y": 12.8
         }
@@ -15696,14 +17782,14 @@
         "gap": 0.4000000000000057,
         "permanent": true,
         "reason": "",
-        "start": 19.8,
-        "end": 21.8,
+        "start": 11.4,
+        "end": 13.4,
         "y": 12.8,
         "level": 1,
         "status": "pass",
         "bridge": {
           "x": 108.8,
-          "z": 19.8,
+          "z": 11.4,
           "w": 0.4000000000000057,
           "d": 2,
           "orientation": "EW",
@@ -16199,6 +18285,93 @@
           "z": 49.6,
           "w": 2,
           "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": -12.8
+        }
+      },
+      {
+        "id": "BR3:south|SM1:N",
+        "a": "BR3/0",
+        "b": "SM1/0",
+        "bodyA": "BR3",
+        "bodyB": "SM1",
+        "portA": "south",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 53.4,
+        "end": 55.4,
+        "y": -12.8,
+        "level": 2,
+        "status": "pass",
+        "bridge": {
+          "x": 53.4,
+          "z": 58,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": -12.8
+        }
+      },
+      {
+        "id": "SM0:S|SM3:N",
+        "a": "SM0/0",
+        "b": "SM3/0",
+        "bodyA": "SM0",
+        "bodyB": "SM3",
+        "portA": "S",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999915,
+        "permanent": false,
+        "reason": "",
+        "start": 45,
+        "end": 47,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 45,
+          "z": 66.4,
+          "w": 2,
+          "d": 0.3999999999999915,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
+        "id": "SM1:S|SM2:N",
+        "a": "SM1/0",
+        "b": "SM2/0",
+        "bodyA": "SM1",
+        "bodyB": "SM2",
+        "portA": "S",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999915,
+        "permanent": false,
+        "reason": "",
+        "start": 53.4,
+        "end": 55.4,
+        "y": -12.8,
+        "level": 2,
+        "status": "pass",
+        "bridge": {
+          "x": 53.4,
+          "z": 66.4,
+          "w": 2,
+          "d": 0.3999999999999915,
           "orientation": "NS",
           "y": -12.8
         }
@@ -21548,7 +23721,7 @@
         "node": "S1/0",
         "level": 1,
         "y": 12.8,
-        "plane": 8.4,
+        "plane": 0,
         "start": 96.4,
         "end": 98.4,
         "status": "blocked",
@@ -21576,8 +23749,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 100.4,
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "status": "pass",
         "matches": [
           {
@@ -21595,14 +23768,14 @@
             "gap": 0.3999999999999915,
             "permanent": false,
             "reason": "",
-            "start": 11.4,
-            "end": 13.4,
+            "start": 3,
+            "end": 5,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 100.4,
-              "z": 11.4,
+              "z": 3,
               "w": 0.3999999999999915,
               "d": 2,
               "orientation": "EW",
@@ -21635,7 +23808,7 @@
         "node": "S1/0",
         "level": 1,
         "y": 12.8,
-        "plane": 16.4,
+        "plane": 8,
         "start": 95.4,
         "end": 97.4,
         "status": "blocked",
@@ -21663,8 +23836,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 92.4,
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "status": "blocked",
         "matches": [],
         "openings": [],
@@ -21691,8 +23864,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 108.8,
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "status": "pass",
         "matches": [
           {
@@ -21710,14 +23883,14 @@
             "gap": 0.4000000000000057,
             "permanent": true,
             "reason": "",
-            "start": 11.4,
-            "end": 13.4,
+            "start": 3,
+            "end": 5,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 108.8,
-              "z": 11.4,
+              "z": 3,
               "w": 0.4000000000000057,
               "d": 2,
               "orientation": "EW",
@@ -21751,8 +23924,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 100.8,
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "status": "pass",
         "matches": [
           {
@@ -21770,14 +23943,14 @@
             "gap": 0.3999999999999915,
             "permanent": false,
             "reason": "",
-            "start": 11.4,
-            "end": 13.4,
+            "start": 3,
+            "end": 5,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 100.4,
-              "z": 11.4,
+              "z": 3,
               "w": 0.3999999999999915,
               "d": 2,
               "orientation": "EW",
@@ -21811,7 +23984,7 @@
         "node": "D2/1",
         "level": 1,
         "y": 12.8,
-        "plane": 16.4,
+        "plane": 8,
         "start": 112.2,
         "end": 114.2,
         "status": "pass",
@@ -21828,7 +24001,7 @@
             "faceB": "N",
             "width": 2,
             "height": 2.3,
-            "gap": 0.40000000000000213,
+            "gap": 0.40000000000000036,
             "permanent": true,
             "reason": "",
             "start": 112.2,
@@ -21838,9 +24011,9 @@
             "status": "pass",
             "bridge": {
               "x": 112.2,
-              "z": 16.4,
+              "z": 8,
               "w": 2,
-              "d": 0.40000000000000213,
+              "d": 0.40000000000000036,
               "orientation": "NS",
               "y": 12.8
             }
@@ -21873,8 +24046,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 109.2,
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "status": "pass",
         "matches": [
           {
@@ -21892,14 +24065,14 @@
             "gap": 0.4000000000000057,
             "permanent": true,
             "reason": "",
-            "start": 11.4,
-            "end": 13.4,
+            "start": 3,
+            "end": 5,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 108.8,
-              "z": 11.4,
+              "z": 3,
               "w": 0.4000000000000057,
               "d": 2,
               "orientation": "EW",
@@ -21934,8 +24107,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 108.8,
-        "start": 19.8,
-        "end": 21.8,
+        "start": 11.4,
+        "end": 13.4,
         "status": "pass",
         "matches": [
           {
@@ -21953,14 +24126,14 @@
             "gap": 0.4000000000000057,
             "permanent": true,
             "reason": "",
-            "start": 19.8,
-            "end": 21.8,
+            "start": 11.4,
+            "end": 13.4,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 108.8,
-              "z": 19.8,
+              "z": 11.4,
               "w": 0.4000000000000057,
               "d": 2,
               "orientation": "EW",
@@ -21994,7 +24167,7 @@
         "node": "D4/0",
         "level": 1,
         "y": 12.8,
-        "plane": 16.8,
+        "plane": 8.4,
         "start": 112.2,
         "end": 114.2,
         "status": "pass",
@@ -22011,7 +24184,7 @@
             "faceB": "N",
             "width": 2,
             "height": 2.3,
-            "gap": 0.40000000000000213,
+            "gap": 0.40000000000000036,
             "permanent": true,
             "reason": "",
             "start": 112.2,
@@ -22021,9 +24194,9 @@
             "status": "pass",
             "bridge": {
               "x": 112.2,
-              "z": 16.4,
+              "z": 8,
               "w": 2,
-              "d": 0.40000000000000213,
+              "d": 0.40000000000000036,
               "orientation": "NS",
               "y": 12.8
             }
@@ -22056,8 +24229,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 109.2,
-        "start": 19.8,
-        "end": 21.8,
+        "start": 11.4,
+        "end": 13.4,
         "status": "pass",
         "matches": [
           {
@@ -22075,14 +24248,14 @@
             "gap": 0.4000000000000057,
             "permanent": true,
             "reason": "",
-            "start": 19.8,
-            "end": 21.8,
+            "start": 11.4,
+            "end": 13.4,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 108.8,
-              "z": 19.8,
+              "z": 11.4,
               "w": 0.4000000000000057,
               "d": 2,
               "orientation": "EW",
@@ -23733,6 +25906,33 @@
         "masked": []
       },
       {
+        "id": "south-district",
+        "face": "S",
+        "a": 3.4,
+        "b": 5.4,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "G5",
+        "key": "G5:south-district",
+        "node": "G5/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 41.2,
+        "start": 45,
+        "end": 47,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3.4,
+            "b": 5.4
+          }
+        ]
+      },
+      {
         "id": "W",
         "face": "W",
         "a": 4,
@@ -24947,6 +27147,33 @@
         "masked": []
       },
       {
+        "id": "market",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "E",
+        "reversed": false,
+        "body": "BR1",
+        "key": "BR1:market",
+        "node": "BR1/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 58.4,
+        "start": 44.6,
+        "end": 46.6,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
         "id": "wide",
         "face": "E",
         "a": 0.6,
@@ -24954,6 +27181,7 @@
         "height": 5.2,
         "role": "boundary-connector",
         "adaptive": true,
+        "adaptiveRecess": 0.1,
         "wideSafety": true,
         "profiles": [
           [
@@ -24968,7 +27196,7 @@
         "node": "BR2/0",
         "level": 0,
         "y": 0,
-        "plane": 41.6,
+        "plane": 33.2,
         "start": 50.6,
         "end": 57.4,
         "status": "blocked",
@@ -24978,6 +27206,60 @@
           {
             "a": 0.6,
             "b": 7.4
+          }
+        ]
+      },
+      {
+        "id": "north",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "BR2",
+        "key": "BR2:north",
+        "node": "BR2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 28.2,
+        "end": 30.2,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "south",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "BR2",
+        "key": "BR2:south",
+        "node": "BR2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 58,
+        "start": 28.2,
+        "end": 30.2,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
           }
         ]
       },
@@ -25049,6 +27331,7 @@
         "height": 5.2,
         "role": "boundary-connector",
         "adaptive": true,
+        "adaptiveRecess": 0.1,
         "wideSafety": true,
         "profiles": [
           [
@@ -25073,6 +27356,636 @@
           {
             "a": 0.6,
             "b": 7.4
+          }
+        ]
+      },
+      {
+        "id": "south",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "BR3",
+        "key": "BR3:south",
+        "node": "BR3/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 58,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR3:south|SM1:N",
+            "a": "BR3/0",
+            "b": "SM1/0",
+            "bodyA": "BR3",
+            "bodyB": "SM1",
+            "portA": "south",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 58,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR3:south|SM1:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SC0",
+        "key": "SC0:N",
+        "node": "SC0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 41.6,
+        "start": 45,
+        "end": 47,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "S",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "SC0",
+        "key": "SC0:S",
+        "node": "SC0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 49.6,
+        "start": 45,
+        "end": 47,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SC1",
+        "key": "SC1:N",
+        "node": "SC1/0",
+        "level": -1,
+        "y": 6.4,
+        "plane": 50,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "S",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "SC1",
+        "key": "SC1:S",
+        "node": "SC1/0",
+        "level": -1,
+        "y": 6.4,
+        "plane": 58,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SM0",
+        "key": "SM0:N",
+        "node": "SM0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 58.4,
+        "start": 45,
+        "end": 47,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "E",
+        "reversed": false,
+        "body": "SM0",
+        "key": "SM0:E",
+        "node": "SM0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 61.4,
+        "end": 63.4,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "S",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "SM0",
+        "key": "SM0:S",
+        "node": "SM0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 66.4,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM0:S|SM3:N",
+            "a": "SM0/0",
+            "b": "SM3/0",
+            "bodyA": "SM0",
+            "bodyB": "SM3",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999915,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 66.4,
+              "w": 2,
+              "d": 0.3999999999999915,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM0:S|SM3:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "W",
+        "reversed": false,
+        "body": "SM0",
+        "key": "SM0:W",
+        "node": "SM0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 42,
+        "start": 61.4,
+        "end": 63.4,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SM1",
+        "key": "SM1:N",
+        "node": "SM1/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 58.4,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR3:south|SM1:N",
+            "a": "BR3/0",
+            "b": "SM1/0",
+            "bodyA": "BR3",
+            "bodyB": "SM1",
+            "portA": "south",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 58,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR3:south|SM1:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "W",
+        "reversed": false,
+        "body": "SM1",
+        "key": "SM1:W",
+        "node": "SM1/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 50.4,
+        "start": 61.4,
+        "end": 63.4,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "S",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "SM1",
+        "key": "SM1:S",
+        "node": "SM1/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 66.4,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM1:S|SM2:N",
+            "a": "SM1/0",
+            "b": "SM2/0",
+            "bodyA": "SM1",
+            "bodyB": "SM2",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999915,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 66.4,
+              "w": 2,
+              "d": 0.3999999999999915,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM1:S|SM2:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SM2",
+        "key": "SM2:N",
+        "node": "SM2/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 66.8,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM1:S|SM2:N",
+            "a": "SM1/0",
+            "b": "SM2/0",
+            "bodyA": "SM1",
+            "bodyB": "SM2",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999915,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 66.4,
+              "w": 2,
+              "d": 0.3999999999999915,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM1:S|SM2:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "W",
+        "reversed": false,
+        "body": "SM2",
+        "key": "SM2:W",
+        "node": "SM2/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 50.4,
+        "start": 69.8,
+        "end": 71.8,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SM3",
+        "key": "SM3:N",
+        "node": "SM3/0",
+        "level": 0,
+        "y": 0,
+        "plane": 66.8,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM0:S|SM3:N",
+            "a": "SM0/0",
+            "b": "SM3/0",
+            "bodyA": "SM0",
+            "bodyB": "SM3",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999915,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 66.4,
+              "w": 2,
+              "d": 0.3999999999999915,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM0:S|SM3:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "E",
+        "reversed": false,
+        "body": "SM3",
+        "key": "SM3:E",
+        "node": "SM3/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 69.8,
+        "end": 71.8,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
           }
         ]
       },
@@ -25986,16 +28899,6 @@
         "floor": false
       },
       {
-        "col": 5,
-        "row": 5,
-        "x": 42,
-        "z": 42,
-        "y": 0,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
         "col": 6,
         "row": 5,
         "x": 50.400000000000006,
@@ -26126,9 +29029,9 @@
         "floor": false
       },
       {
-        "col": 3,
+        "col": 4,
         "row": 6,
-        "x": 25.200000000000003,
+        "x": 33.6,
         "z": 50.400000000000006,
         "y": 0,
         "w": 8,
@@ -26276,16 +29179,6 @@
         "floor": false
       },
       {
-        "col": 5,
-        "row": 7,
-        "x": 42,
-        "z": 58.800000000000004,
-        "y": 0,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
         "col": 6,
         "row": 7,
         "x": 50.400000000000006,
@@ -26386,6 +29279,316 @@
         "floor": false
       },
       {
+        "col": 0,
+        "row": 8,
+        "x": 0,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 8,
+        "x": 8.4,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 8,
+        "x": 16.8,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 8,
+        "x": 25.200000000000003,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 8,
+        "x": 33.6,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 8,
+        "x": 50.400000000000006,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 8,
+        "x": 58.800000000000004,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 8,
+        "x": 67.2,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 8,
+        "x": 75.60000000000001,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 8,
+        "x": 84,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 8,
+        "x": 92.4,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 8,
+        "x": 100.80000000000001,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 8,
+        "x": 109.2,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 8,
+        "x": 117.60000000000001,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 8,
+        "x": 126,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 9,
+        "x": 0,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 9,
+        "x": 8.4,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 9,
+        "x": 16.8,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 9,
+        "x": 25.200000000000003,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 9,
+        "x": 33.6,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 9,
+        "x": 42,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 9,
+        "x": 50.400000000000006,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 9,
+        "x": 58.800000000000004,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 9,
+        "x": 67.2,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 9,
+        "x": 75.60000000000001,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 9,
+        "x": 84,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 9,
+        "x": 92.4,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 9,
+        "x": 100.80000000000001,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 9,
+        "x": 109.2,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 9,
+        "x": 117.60000000000001,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 9,
+        "x": 126,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
         "col": 9,
         "row": 0,
         "x": 75.60000000000001,
@@ -26399,36 +29602,6 @@
         "col": 10,
         "row": 0,
         "x": 84,
-        "z": 0,
-        "y": 12.8,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 11,
-        "row": 0,
-        "x": 92.4,
-        "z": 0,
-        "y": 12.8,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 12,
-        "row": 0,
-        "x": 100.80000000000001,
-        "z": 0,
-        "y": 12.8,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 13,
-        "row": 0,
-        "x": 109.2,
         "z": 0,
         "y": 12.8,
         "w": 8,
@@ -26516,6 +29689,16 @@
         "floor": false
       },
       {
+        "col": 11,
+        "row": 1,
+        "x": 92.4,
+        "z": 8.4,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
         "col": 14,
         "row": 1,
         "x": 117.60000000000001,
@@ -26589,6 +29772,26 @@
         "col": 11,
         "row": 2,
         "x": 92.4,
+        "z": 16.8,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 2,
+        "x": 100.80000000000001,
+        "z": 16.8,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 2,
+        "x": 109.2,
         "z": 16.8,
         "y": 12.8,
         "w": 8,
@@ -27316,6 +30519,326 @@
         "floor": false
       },
       {
+        "col": 0,
+        "row": 8,
+        "x": 0,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 8,
+        "x": 8.4,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 8,
+        "x": 16.8,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 8,
+        "x": 25.200000000000003,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 8,
+        "x": 33.6,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 8,
+        "x": 42,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 8,
+        "x": 50.400000000000006,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 8,
+        "x": 58.800000000000004,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 8,
+        "x": 67.2,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 8,
+        "x": 75.60000000000001,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 8,
+        "x": 84,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 8,
+        "x": 92.4,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 8,
+        "x": 100.80000000000001,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 8,
+        "x": 109.2,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 8,
+        "x": 117.60000000000001,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 8,
+        "x": 126,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 9,
+        "x": 0,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 9,
+        "x": 8.4,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 9,
+        "x": 16.8,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 9,
+        "x": 25.200000000000003,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 9,
+        "x": 33.6,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 9,
+        "x": 42,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 9,
+        "x": 50.400000000000006,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 9,
+        "x": 58.800000000000004,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 9,
+        "x": 67.2,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 9,
+        "x": 75.60000000000001,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 9,
+        "x": 84,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 9,
+        "x": 92.4,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 9,
+        "x": 100.80000000000001,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 9,
+        "x": 109.2,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 9,
+        "x": 117.60000000000001,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 9,
+        "x": 126,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
         "col": 2,
         "row": 0,
         "x": 16.8,
@@ -28226,16 +31749,6 @@
         "floor": false
       },
       {
-        "col": 6,
-        "row": 7,
-        "x": 50.400000000000006,
-        "z": 58.800000000000004,
-        "y": -12.8,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
         "col": 7,
         "row": 7,
         "x": 58.800000000000004,
@@ -28320,6 +31833,316 @@
         "row": 7,
         "x": 126,
         "z": 58.800000000000004,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 8,
+        "x": 0,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 8,
+        "x": 8.4,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 8,
+        "x": 16.8,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 8,
+        "x": 25.200000000000003,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 8,
+        "x": 33.6,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 8,
+        "x": 42,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 8,
+        "x": 58.800000000000004,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 8,
+        "x": 67.2,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 8,
+        "x": 75.60000000000001,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 8,
+        "x": 84,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 8,
+        "x": 92.4,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 8,
+        "x": 100.80000000000001,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 8,
+        "x": 109.2,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 8,
+        "x": 117.60000000000001,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 8,
+        "x": 126,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 9,
+        "x": 0,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 9,
+        "x": 8.4,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 9,
+        "x": 16.8,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 9,
+        "x": 25.200000000000003,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 9,
+        "x": 33.6,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 9,
+        "x": 42,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 9,
+        "x": 50.400000000000006,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 9,
+        "x": 58.800000000000004,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 9,
+        "x": 67.2,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 9,
+        "x": 75.60000000000001,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 9,
+        "x": 84,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 9,
+        "x": 92.4,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 9,
+        "x": 100.80000000000001,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 9,
+        "x": 109.2,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 9,
+        "x": 117.60000000000001,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 9,
+        "x": 126,
+        "z": 75.60000000000001,
         "y": -12.8,
         "w": 8,
         "d": 8,
@@ -28486,22 +32309,22 @@
       "D1": {
         "x": 100.8,
         "y": 12.8,
-        "z": 8.4
+        "z": 0
       },
       "D2": {
         "x": 109.2,
         "y": 12.8,
-        "z": 8.4
+        "z": 0
       },
       "D3": {
         "x": 100.8,
         "y": 12.8,
-        "z": 16.8
+        "z": 8.4
       },
       "D4": {
         "x": 109.2,
         "y": 12.8,
-        "z": 16.8
+        "z": 8.4
       },
       "V1": {
         "x": 8.4,
@@ -28621,19 +32444,49 @@
         "z": 25.2
       },
       "BR1": {
-        "x": 50.4,
+        "x": 33.6,
+        "y": 0,
+        "z": 58.4
+      },
+      "BR2": {
+        "x": 25.2,
+        "y": 0,
+        "z": 66.8
+      },
+      "BR3": {
+        "x": 33.6,
+        "y": 0,
+        "z": 66.8
+      },
+      "SC0": {
+        "x": 42,
         "y": 0,
         "z": 41.6
       },
-      "BR2": {
+      "SC1": {
         "x": 42,
         "y": 0,
         "z": 50
       },
-      "BR3": {
+      "SM0": {
+        "x": 42,
+        "y": 0,
+        "z": 58.4
+      },
+      "SM1": {
         "x": 50.4,
         "y": 0,
-        "z": 50
+        "z": 58.4
+      },
+      "SM2": {
+        "x": 50.4,
+        "y": 0,
+        "z": 66.8
+      },
+      "SM3": {
+        "x": 42,
+        "y": 0,
+        "z": 66.8
       }
     },
     "connections": [
@@ -29638,14 +33491,14 @@
         "gap": 0.4000000000000057,
         "permanent": true,
         "reason": "",
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "y": 12.8,
         "level": 1,
         "status": "pass",
         "bridge": {
           "x": 108.8,
-          "z": 11.4,
+          "z": 3,
           "w": 0.4000000000000057,
           "d": 2,
           "orientation": "EW",
@@ -29664,7 +33517,7 @@
         "faceB": "N",
         "width": 2,
         "height": 2.3,
-        "gap": 0.40000000000000213,
+        "gap": 0.40000000000000036,
         "permanent": true,
         "reason": "",
         "start": 112.2,
@@ -29674,9 +33527,9 @@
         "status": "pass",
         "bridge": {
           "x": 112.2,
-          "z": 16.4,
+          "z": 8,
           "w": 2,
-          "d": 0.40000000000000213,
+          "d": 0.40000000000000036,
           "orientation": "NS",
           "y": 12.8
         }
@@ -29696,14 +33549,14 @@
         "gap": 0.4000000000000057,
         "permanent": true,
         "reason": "",
-        "start": 19.8,
-        "end": 21.8,
+        "start": 11.4,
+        "end": 13.4,
         "y": 12.8,
         "level": 1,
         "status": "pass",
         "bridge": {
           "x": 108.8,
-          "z": 19.8,
+          "z": 11.4,
           "w": 0.4000000000000057,
           "d": 2,
           "orientation": "EW",
@@ -29914,6 +33767,35 @@
         }
       },
       {
+        "id": "G5:south-district|SC0:N",
+        "a": "G5/0",
+        "b": "SC0/0",
+        "bodyA": "G5",
+        "bodyB": "SC0",
+        "portA": "south-district",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 45,
+        "end": 47,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 45,
+          "z": 41.2,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
         "id": "J9:E|P9:W",
         "a": "J9/0",
         "b": "P9/2",
@@ -29939,35 +33821,6 @@
           "w": 0.3999999999999986,
           "d": 2,
           "orientation": "EW",
-          "y": 0
-        }
-      },
-      {
-        "id": "J9:large-rooms|BR1:entry",
-        "a": "J9/0",
-        "b": "BR1/0",
-        "bodyA": "J9",
-        "bodyB": "BR1",
-        "portA": "large-rooms",
-        "portB": "entry",
-        "faceA": "S",
-        "faceB": "N",
-        "width": 2,
-        "height": 2.5,
-        "gap": 0.3999999999999986,
-        "permanent": false,
-        "reason": "",
-        "start": 53.4,
-        "end": 55.4,
-        "y": 0,
-        "level": 0,
-        "status": "pass",
-        "bridge": {
-          "x": 53.4,
-          "z": 41.2,
-          "w": 2,
-          "d": 0.3999999999999986,
-          "orientation": "NS",
           "y": 0
         }
       },
@@ -30215,20 +34068,49 @@
         "faceB": "N",
         "width": 2,
         "height": 2.5,
-        "gap": 0.3999999999999986,
+        "gap": 0.3999999999999915,
         "permanent": false,
         "reason": "",
-        "start": 53.4,
-        "end": 55.4,
+        "start": 36.6,
+        "end": 38.6,
         "y": 0,
         "level": 0,
         "status": "pass",
         "bridge": {
-          "x": 53.4,
-          "z": 49.6,
+          "x": 36.6,
+          "z": 66.4,
           "w": 2,
-          "d": 0.3999999999999986,
+          "d": 0.3999999999999915,
           "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
+        "id": "BR1:market|SM0:W",
+        "a": "BR1/0",
+        "b": "SM0/0",
+        "bodyA": "BR1",
+        "bodyB": "SM0",
+        "portA": "market",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 61.4,
+        "end": 63.4,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 41.6,
+          "z": 61.4,
+          "w": 0.3999999999999986,
+          "d": 2,
+          "orientation": "EW",
           "y": 0
         }
       },
@@ -30242,21 +34124,195 @@
         "portB": "wide",
         "faceA": "E",
         "faceB": "W",
-        "width": 6.799999999999997,
+        "width": 6.800000000000011,
         "height": 5.2,
         "gap": 0.3999999999999986,
         "permanent": false,
         "reason": "",
-        "start": 50.6,
-        "end": 57.4,
+        "start": 67.39999999999999,
+        "end": 74.2,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 33.2,
+          "z": 67.39999999999999,
+          "w": 0.3999999999999986,
+          "d": 6.800000000000011,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
+        "id": "SC0:S|SC1:N",
+        "a": "SC0/0",
+        "b": "SC1/0",
+        "bodyA": "SC0",
+        "bodyB": "SC1",
+        "portA": "S",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 45,
+        "end": 47,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 45,
+          "z": 49.6,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
+        "id": "SC1:S|SM0:N",
+        "a": "SC1/0",
+        "b": "SM0/0",
+        "bodyA": "SC1",
+        "bodyB": "SM0",
+        "portA": "S",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 45,
+        "end": 47,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 45,
+          "z": 58,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
+        "id": "SM0:E|SM1:W",
+        "a": "SM0/0",
+        "b": "SM1/0",
+        "bodyA": "SM0",
+        "bodyB": "SM1",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 61.4,
+        "end": 63.4,
         "y": 0,
         "level": 0,
         "status": "pass",
         "bridge": {
           "x": 50,
-          "z": 50.6,
+          "z": 61.4,
           "w": 0.3999999999999986,
-          "d": 6.799999999999997,
+          "d": 2,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
+        "id": "SM0:S|SM3:N",
+        "a": "SM0/0",
+        "b": "SM3/0",
+        "bodyA": "SM0",
+        "bodyB": "SM3",
+        "portA": "S",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999915,
+        "permanent": false,
+        "reason": "",
+        "start": 45,
+        "end": 47,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 45,
+          "z": 66.4,
+          "w": 2,
+          "d": 0.3999999999999915,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
+        "id": "SM1:S|SM2:N",
+        "a": "SM1/0",
+        "b": "SM2/0",
+        "bodyA": "SM1",
+        "bodyB": "SM2",
+        "portA": "S",
+        "portB": "N",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999915,
+        "permanent": false,
+        "reason": "",
+        "start": 53.4,
+        "end": 55.4,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 53.4,
+          "z": 66.4,
+          "w": 2,
+          "d": 0.3999999999999915,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
+        "id": "SM3:E|SM2:W",
+        "a": "SM3/0",
+        "b": "SM2/0",
+        "bodyA": "SM3",
+        "bodyB": "SM2",
+        "portA": "E",
+        "portB": "W",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 69.8,
+        "end": 71.8,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 50,
+          "z": 69.8,
+          "w": 0.3999999999999986,
+          "d": 2,
           "orientation": "EW",
           "y": 0
         }
@@ -35465,8 +39521,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 108.8,
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "status": "pass",
         "matches": [
           {
@@ -35484,14 +39540,14 @@
             "gap": 0.4000000000000057,
             "permanent": true,
             "reason": "",
-            "start": 11.4,
-            "end": 13.4,
+            "start": 3,
+            "end": 5,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 108.8,
-              "z": 11.4,
+              "z": 3,
               "w": 0.4000000000000057,
               "d": 2,
               "orientation": "EW",
@@ -35525,8 +39581,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 100.8,
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "status": "blocked",
         "matches": [],
         "openings": [],
@@ -35552,7 +39608,7 @@
         "node": "D2/1",
         "level": 1,
         "y": 12.8,
-        "plane": 16.4,
+        "plane": 8,
         "start": 112.2,
         "end": 114.2,
         "status": "pass",
@@ -35569,7 +39625,7 @@
             "faceB": "N",
             "width": 2,
             "height": 2.3,
-            "gap": 0.40000000000000213,
+            "gap": 0.40000000000000036,
             "permanent": true,
             "reason": "",
             "start": 112.2,
@@ -35579,9 +39635,9 @@
             "status": "pass",
             "bridge": {
               "x": 112.2,
-              "z": 16.4,
+              "z": 8,
               "w": 2,
-              "d": 0.40000000000000213,
+              "d": 0.40000000000000036,
               "orientation": "NS",
               "y": 12.8
             }
@@ -35614,8 +39670,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 109.2,
-        "start": 11.4,
-        "end": 13.4,
+        "start": 3,
+        "end": 5,
         "status": "pass",
         "matches": [
           {
@@ -35633,14 +39689,14 @@
             "gap": 0.4000000000000057,
             "permanent": true,
             "reason": "",
-            "start": 11.4,
-            "end": 13.4,
+            "start": 3,
+            "end": 5,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 108.8,
-              "z": 11.4,
+              "z": 3,
               "w": 0.4000000000000057,
               "d": 2,
               "orientation": "EW",
@@ -35675,8 +39731,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 108.8,
-        "start": 19.8,
-        "end": 21.8,
+        "start": 11.4,
+        "end": 13.4,
         "status": "pass",
         "matches": [
           {
@@ -35694,14 +39750,14 @@
             "gap": 0.4000000000000057,
             "permanent": true,
             "reason": "",
-            "start": 19.8,
-            "end": 21.8,
+            "start": 11.4,
+            "end": 13.4,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 108.8,
-              "z": 19.8,
+              "z": 11.4,
               "w": 0.4000000000000057,
               "d": 2,
               "orientation": "EW",
@@ -35735,7 +39791,7 @@
         "node": "D4/0",
         "level": 1,
         "y": 12.8,
-        "plane": 16.8,
+        "plane": 8.4,
         "start": 112.2,
         "end": 114.2,
         "status": "pass",
@@ -35752,7 +39808,7 @@
             "faceB": "N",
             "width": 2,
             "height": 2.3,
-            "gap": 0.40000000000000213,
+            "gap": 0.40000000000000036,
             "permanent": true,
             "reason": "",
             "start": 112.2,
@@ -35762,9 +39818,9 @@
             "status": "pass",
             "bridge": {
               "x": 112.2,
-              "z": 16.4,
+              "z": 8,
               "w": 2,
-              "d": 0.40000000000000213,
+              "d": 0.40000000000000036,
               "orientation": "NS",
               "y": 12.8
             }
@@ -35797,8 +39853,8 @@
         "level": 1,
         "y": 12.8,
         "plane": 109.2,
-        "start": 19.8,
-        "end": 21.8,
+        "start": 11.4,
+        "end": 13.4,
         "status": "pass",
         "matches": [
           {
@@ -35816,14 +39872,14 @@
             "gap": 0.4000000000000057,
             "permanent": true,
             "reason": "",
-            "start": 19.8,
-            "end": 21.8,
+            "start": 11.4,
+            "end": 13.4,
             "y": 12.8,
             "level": 1,
             "status": "pass",
             "bridge": {
               "x": 108.8,
-              "z": 19.8,
+              "z": 11.4,
               "w": 0.4000000000000057,
               "d": 2,
               "orientation": "EW",
@@ -37333,6 +41389,66 @@
         "masked": []
       },
       {
+        "id": "south-district",
+        "face": "S",
+        "a": 3.4,
+        "b": 5.4,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "G5",
+        "key": "G5:south-district",
+        "node": "G5/0",
+        "level": 0,
+        "y": 0,
+        "plane": 41.2,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "G5:south-district|SC0:N",
+            "a": "G5/0",
+            "b": "SC0/0",
+            "bodyA": "G5",
+            "bodyB": "SC0",
+            "portA": "south-district",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 41.2,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3.3999999999999986,
+            "b": 5.399999999999999,
+            "height": 2.5,
+            "status": "pass",
+            "id": "G5:south-district|SC0:N"
+          }
+        ],
+        "masked": []
+      },
+      {
         "id": "W",
         "face": "W",
         "a": 4,
@@ -37469,48 +41585,15 @@
         "plane": 41.2,
         "start": 53.4,
         "end": 55.4,
-        "status": "pass",
-        "matches": [
-          {
-            "id": "J9:large-rooms|BR1:entry",
-            "a": "J9/0",
-            "b": "BR1/0",
-            "bodyA": "J9",
-            "bodyB": "BR1",
-            "portA": "large-rooms",
-            "portB": "entry",
-            "faceA": "S",
-            "faceB": "N",
-            "width": 2,
-            "height": 2.5,
-            "gap": 0.3999999999999986,
-            "permanent": false,
-            "reason": "",
-            "start": 53.4,
-            "end": 55.4,
-            "y": 0,
-            "level": 0,
-            "status": "pass",
-            "bridge": {
-              "x": 53.4,
-              "z": 41.2,
-              "w": 2,
-              "d": 0.3999999999999986,
-              "orientation": "NS",
-              "y": 0
-            }
-          }
-        ],
-        "openings": [
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
           {
             "a": 3,
-            "b": 5,
-            "height": 2.5,
-            "status": "pass",
-            "id": "J9:large-rooms|BR1:entry"
+            "b": 5
           }
-        ],
-        "masked": []
+        ]
       },
       {
         "id": "W",
@@ -38619,51 +42702,18 @@
         "node": "BR1/0",
         "level": 0,
         "y": 0,
-        "plane": 41.6,
-        "start": 53.4,
-        "end": 55.4,
-        "status": "pass",
-        "matches": [
-          {
-            "id": "J9:large-rooms|BR1:entry",
-            "a": "J9/0",
-            "b": "BR1/0",
-            "bodyA": "J9",
-            "bodyB": "BR1",
-            "portA": "large-rooms",
-            "portB": "entry",
-            "faceA": "S",
-            "faceB": "N",
-            "width": 2,
-            "height": 2.5,
-            "gap": 0.3999999999999986,
-            "permanent": false,
-            "reason": "",
-            "start": 53.4,
-            "end": 55.4,
-            "y": 0,
-            "level": 0,
-            "status": "pass",
-            "bridge": {
-              "x": 53.4,
-              "z": 41.2,
-              "w": 2,
-              "d": 0.3999999999999986,
-              "orientation": "NS",
-              "y": 0
-            }
-          }
-        ],
-        "openings": [
+        "plane": 58.4,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
           {
             "a": 3,
-            "b": 5,
-            "height": 2.5,
-            "status": "pass",
-            "id": "J9:large-rooms|BR1:entry"
+            "b": 5
           }
-        ],
-        "masked": []
+        ]
       },
       {
         "id": "south",
@@ -38679,9 +42729,9 @@
         "node": "BR1/0",
         "level": 0,
         "y": 0,
-        "plane": 49.6,
-        "start": 53.4,
-        "end": 55.4,
+        "plane": 66.4,
+        "start": 36.6,
+        "end": 38.6,
         "status": "pass",
         "matches": [
           {
@@ -38696,19 +42746,19 @@
             "faceB": "N",
             "width": 2,
             "height": 2.5,
-            "gap": 0.3999999999999986,
+            "gap": 0.3999999999999915,
             "permanent": false,
             "reason": "",
-            "start": 53.4,
-            "end": 55.4,
+            "start": 36.6,
+            "end": 38.6,
             "y": 0,
             "level": 0,
             "status": "pass",
             "bridge": {
-              "x": 53.4,
-              "z": 49.6,
+              "x": 36.6,
+              "z": 66.4,
               "w": 2,
-              "d": 0.3999999999999986,
+              "d": 0.3999999999999915,
               "orientation": "NS",
               "y": 0
             }
@@ -38726,6 +42776,66 @@
         "masked": []
       },
       {
+        "id": "market",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "E",
+        "reversed": false,
+        "body": "BR1",
+        "key": "BR1:market",
+        "node": "BR1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 41.6,
+        "start": 61.4,
+        "end": 63.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR1:market|SM0:W",
+            "a": "BR1/0",
+            "b": "SM0/0",
+            "bodyA": "BR1",
+            "bodyB": "SM0",
+            "portA": "market",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 61.4,
+            "end": 63.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 61.4,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR1:market|SM0:W"
+          }
+        ],
+        "masked": []
+      },
+      {
         "id": "wide",
         "face": "E",
         "a": 0.6,
@@ -38733,6 +42843,7 @@
         "height": 5.2,
         "role": "boundary-connector",
         "adaptive": true,
+        "adaptiveRecess": 0.1,
         "wideSafety": true,
         "profiles": [
           [
@@ -38747,9 +42858,9 @@
         "node": "BR2/0",
         "level": 0,
         "y": 0,
-        "plane": 50,
-        "start": 50.6,
-        "end": 57.4,
+        "plane": 33.2,
+        "start": 67.39999999999999,
+        "end": 74.2,
         "status": "pass",
         "matches": [
           {
@@ -38762,21 +42873,21 @@
             "portB": "wide",
             "faceA": "E",
             "faceB": "W",
-            "width": 6.799999999999997,
+            "width": 6.800000000000011,
             "height": 5.2,
             "gap": 0.3999999999999986,
             "permanent": false,
             "reason": "",
-            "start": 50.6,
-            "end": 57.4,
+            "start": 67.39999999999999,
+            "end": 74.2,
             "y": 0,
             "level": 0,
             "status": "pass",
             "bridge": {
-              "x": 50,
-              "z": 50.6,
+              "x": 33.2,
+              "z": 67.39999999999999,
               "w": 0.3999999999999986,
-              "d": 6.799999999999997,
+              "d": 6.800000000000011,
               "orientation": "EW",
               "y": 0
             }
@@ -38784,14 +42895,68 @@
         ],
         "openings": [
           {
-            "a": 0.6000000000000014,
-            "b": 7.399999999999999,
+            "a": 0.5999999999999943,
+            "b": 7.400000000000006,
             "height": 5.2,
             "status": "pass",
             "id": "BR2:wide|BR3:wide"
           }
         ],
         "masked": []
+      },
+      {
+        "id": "north",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "BR2",
+        "key": "BR2:north",
+        "node": "BR2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 66.8,
+        "start": 28.2,
+        "end": 30.2,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "south",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "BR2",
+        "key": "BR2:south",
+        "node": "BR2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 74.8,
+        "start": 28.2,
+        "end": 30.2,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
       },
       {
         "id": "entry",
@@ -38807,9 +42972,9 @@
         "node": "BR3/0",
         "level": 0,
         "y": 0,
-        "plane": 50,
-        "start": 53.4,
-        "end": 55.4,
+        "plane": 66.8,
+        "start": 36.6,
+        "end": 38.6,
         "status": "pass",
         "matches": [
           {
@@ -38824,19 +42989,19 @@
             "faceB": "N",
             "width": 2,
             "height": 2.5,
-            "gap": 0.3999999999999986,
+            "gap": 0.3999999999999915,
             "permanent": false,
             "reason": "",
-            "start": 53.4,
-            "end": 55.4,
+            "start": 36.6,
+            "end": 38.6,
             "y": 0,
             "level": 0,
             "status": "pass",
             "bridge": {
-              "x": 53.4,
-              "z": 49.6,
+              "x": 36.6,
+              "z": 66.4,
               "w": 2,
-              "d": 0.3999999999999986,
+              "d": 0.3999999999999915,
               "orientation": "NS",
               "y": 0
             }
@@ -38861,6 +43026,7 @@
         "height": 5.2,
         "role": "boundary-connector",
         "adaptive": true,
+        "adaptiveRecess": 0.1,
         "wideSafety": true,
         "profiles": [
           [
@@ -38875,9 +43041,9 @@
         "node": "BR3/0",
         "level": 0,
         "y": 0,
-        "plane": 50.4,
-        "start": 50.6,
-        "end": 57.4,
+        "plane": 33.6,
+        "start": 67.39999999999999,
+        "end": 74.2,
         "status": "pass",
         "matches": [
           {
@@ -38890,21 +43056,21 @@
             "portB": "wide",
             "faceA": "E",
             "faceB": "W",
-            "width": 6.799999999999997,
+            "width": 6.800000000000011,
             "height": 5.2,
             "gap": 0.3999999999999986,
             "permanent": false,
             "reason": "",
-            "start": 50.6,
-            "end": 57.4,
+            "start": 67.39999999999999,
+            "end": 74.2,
             "y": 0,
             "level": 0,
             "status": "pass",
             "bridge": {
-              "x": 50,
-              "z": 50.6,
+              "x": 33.2,
+              "z": 67.39999999999999,
               "w": 0.3999999999999986,
-              "d": 6.799999999999997,
+              "d": 6.800000000000011,
               "orientation": "EW",
               "y": 0
             }
@@ -38912,11 +43078,905 @@
         ],
         "openings": [
           {
-            "a": 0.6000000000000014,
-            "b": 7.399999999999999,
+            "a": 0.5999999999999943,
+            "b": 7.400000000000006,
             "height": 5.2,
             "status": "pass",
             "id": "BR2:wide|BR3:wide"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "south",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "BR3",
+        "key": "BR3:south",
+        "node": "BR3/0",
+        "level": 0,
+        "y": 0,
+        "plane": 74.8,
+        "start": 36.6,
+        "end": 38.6,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SC0",
+        "key": "SC0:N",
+        "node": "SC0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 41.6,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "G5:south-district|SC0:N",
+            "a": "G5/0",
+            "b": "SC0/0",
+            "bodyA": "G5",
+            "bodyB": "SC0",
+            "portA": "south-district",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 41.2,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "G5:south-district|SC0:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "S",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "SC0",
+        "key": "SC0:S",
+        "node": "SC0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 49.6,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SC0:S|SC1:N",
+            "a": "SC0/0",
+            "b": "SC1/0",
+            "bodyA": "SC0",
+            "bodyB": "SC1",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 49.6,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SC0:S|SC1:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SC1",
+        "key": "SC1:N",
+        "node": "SC1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SC0:S|SC1:N",
+            "a": "SC0/0",
+            "b": "SC1/0",
+            "bodyA": "SC0",
+            "bodyB": "SC1",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 49.6,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SC0:S|SC1:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "S",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "SC1",
+        "key": "SC1:S",
+        "node": "SC1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 58,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SC1:S|SM0:N",
+            "a": "SC1/0",
+            "b": "SM0/0",
+            "bodyA": "SC1",
+            "bodyB": "SM0",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 58,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SC1:S|SM0:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SM0",
+        "key": "SM0:N",
+        "node": "SM0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 58.4,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SC1:S|SM0:N",
+            "a": "SC1/0",
+            "b": "SM0/0",
+            "bodyA": "SC1",
+            "bodyB": "SM0",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 58,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SC1:S|SM0:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "E",
+        "reversed": false,
+        "body": "SM0",
+        "key": "SM0:E",
+        "node": "SM0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 61.4,
+        "end": 63.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM0:E|SM1:W",
+            "a": "SM0/0",
+            "b": "SM1/0",
+            "bodyA": "SM0",
+            "bodyB": "SM1",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 61.4,
+            "end": 63.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 50,
+              "z": 61.4,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM0:E|SM1:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "S",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "SM0",
+        "key": "SM0:S",
+        "node": "SM0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 66.4,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM0:S|SM3:N",
+            "a": "SM0/0",
+            "b": "SM3/0",
+            "bodyA": "SM0",
+            "bodyB": "SM3",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999915,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 66.4,
+              "w": 2,
+              "d": 0.3999999999999915,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM0:S|SM3:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "W",
+        "reversed": false,
+        "body": "SM0",
+        "key": "SM0:W",
+        "node": "SM0/0",
+        "level": 0,
+        "y": 0,
+        "plane": 42,
+        "start": 61.4,
+        "end": 63.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR1:market|SM0:W",
+            "a": "BR1/0",
+            "b": "SM0/0",
+            "bodyA": "BR1",
+            "bodyB": "SM0",
+            "portA": "market",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 61.4,
+            "end": 63.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 41.6,
+              "z": 61.4,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR1:market|SM0:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SM1",
+        "key": "SM1:N",
+        "node": "SM1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 58.4,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 3,
+            "b": 5
+          }
+        ]
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "W",
+        "reversed": false,
+        "body": "SM1",
+        "key": "SM1:W",
+        "node": "SM1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50.4,
+        "start": 61.4,
+        "end": 63.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM0:E|SM1:W",
+            "a": "SM0/0",
+            "b": "SM1/0",
+            "bodyA": "SM0",
+            "bodyB": "SM1",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 61.4,
+            "end": 63.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 50,
+              "z": 61.4,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM0:E|SM1:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "S",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "SM1",
+        "key": "SM1:S",
+        "node": "SM1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 66.4,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM1:S|SM2:N",
+            "a": "SM1/0",
+            "b": "SM2/0",
+            "bodyA": "SM1",
+            "bodyB": "SM2",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999915,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 66.4,
+              "w": 2,
+              "d": 0.3999999999999915,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM1:S|SM2:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SM2",
+        "key": "SM2:N",
+        "node": "SM2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 66.8,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM1:S|SM2:N",
+            "a": "SM1/0",
+            "b": "SM2/0",
+            "bodyA": "SM1",
+            "bodyB": "SM2",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999915,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 66.4,
+              "w": 2,
+              "d": 0.3999999999999915,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM1:S|SM2:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "W",
+        "face": "W",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "W",
+        "reversed": false,
+        "body": "SM2",
+        "key": "SM2:W",
+        "node": "SM2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50.4,
+        "start": 69.8,
+        "end": 71.8,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM3:E|SM2:W",
+            "a": "SM3/0",
+            "b": "SM2/0",
+            "bodyA": "SM3",
+            "bodyB": "SM2",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 69.8,
+            "end": 71.8,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 50,
+              "z": 69.8,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM3:E|SM2:W"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "N",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "SM3",
+        "key": "SM3:N",
+        "node": "SM3/0",
+        "level": 0,
+        "y": 0,
+        "plane": 66.8,
+        "start": 45,
+        "end": 47,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM0:S|SM3:N",
+            "a": "SM0/0",
+            "b": "SM3/0",
+            "bodyA": "SM0",
+            "bodyB": "SM3",
+            "portA": "S",
+            "portB": "N",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999915,
+            "permanent": false,
+            "reason": "",
+            "start": 45,
+            "end": 47,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 45,
+              "z": 66.4,
+              "w": 2,
+              "d": 0.3999999999999915,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM0:S|SM3:N"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "E",
+        "face": "E",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "E",
+        "reversed": false,
+        "body": "SM3",
+        "key": "SM3:E",
+        "node": "SM3/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 69.8,
+        "end": 71.8,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "SM3:E|SM2:W",
+            "a": "SM3/0",
+            "b": "SM2/0",
+            "bodyA": "SM3",
+            "bodyB": "SM2",
+            "portA": "E",
+            "portB": "W",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 69.8,
+            "end": 71.8,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 50,
+              "z": 69.8,
+              "w": 0.3999999999999986,
+              "d": 2,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "SM3:E|SM2:W"
           }
         ],
         "masked": []
@@ -39252,14 +44312,20 @@
       "LF0",
       "G5/0",
       "J9/0",
+      "SC0/0",
       "P9/2",
-      "BR1/0",
       "SH1/0",
       "AC1/0",
       "W2",
       "SH2/0",
       "LB1/0",
       "AT0/0",
+      "SC1/0",
+      "SM0/0",
+      "SM1/0",
+      "SM3/0",
+      "SM2/0",
+      "BR1/0",
       "BR3/0",
       "BR2/0"
     ],
@@ -39825,9 +44891,9 @@
         "floor": false
       },
       {
-        "col": 5,
+        "col": 6,
         "row": 5,
-        "x": 42,
+        "x": 50.400000000000006,
         "z": 42,
         "y": 0,
         "w": 8,
@@ -39955,6 +45021,16 @@
         "floor": false
       },
       {
+        "col": 6,
+        "row": 6,
+        "x": 50.400000000000006,
+        "z": 50.400000000000006,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
         "col": 7,
         "row": 6,
         "x": 58.800000000000004,
@@ -40065,9 +45141,9 @@
         "floor": false
       },
       {
-        "col": 4,
+        "col": 7,
         "row": 7,
-        "x": 33.6,
+        "x": 58.800000000000004,
         "z": 58.800000000000004,
         "y": 0,
         "w": 8,
@@ -40075,10 +45151,260 @@
         "floor": false
       },
       {
-        "col": 5,
+        "col": 8,
         "row": 7,
-        "x": 42,
+        "x": 67.2,
         "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 7,
+        "x": 75.60000000000001,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 7,
+        "x": 84,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 7,
+        "x": 92.4,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 7,
+        "x": 100.80000000000001,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 7,
+        "x": 109.2,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 7,
+        "x": 117.60000000000001,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 7,
+        "x": 126,
+        "z": 58.800000000000004,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 8,
+        "x": 0,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 8,
+        "x": 8.4,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 8,
+        "x": 16.8,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 8,
+        "x": 58.800000000000004,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 8,
+        "x": 67.2,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 8,
+        "x": 75.60000000000001,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 8,
+        "x": 84,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 8,
+        "x": 92.4,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 8,
+        "x": 100.80000000000001,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 8,
+        "x": 109.2,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 8,
+        "x": 117.60000000000001,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 8,
+        "x": 126,
+        "z": 67.2,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 9,
+        "x": 0,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 9,
+        "x": 8.4,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 9,
+        "x": 16.8,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 9,
+        "x": 25.200000000000003,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 9,
+        "x": 33.6,
+        "z": 75.60000000000001,
+        "y": 0,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 9,
+        "x": 42,
+        "z": 75.60000000000001,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -40086,9 +45412,9 @@
       },
       {
         "col": 6,
-        "row": 7,
+        "row": 9,
         "x": 50.400000000000006,
-        "z": 58.800000000000004,
+        "z": 75.60000000000001,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -40096,9 +45422,9 @@
       },
       {
         "col": 7,
-        "row": 7,
+        "row": 9,
         "x": 58.800000000000004,
-        "z": 58.800000000000004,
+        "z": 75.60000000000001,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -40106,9 +45432,9 @@
       },
       {
         "col": 8,
-        "row": 7,
+        "row": 9,
         "x": 67.2,
-        "z": 58.800000000000004,
+        "z": 75.60000000000001,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -40116,9 +45442,9 @@
       },
       {
         "col": 9,
-        "row": 7,
+        "row": 9,
         "x": 75.60000000000001,
-        "z": 58.800000000000004,
+        "z": 75.60000000000001,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -40126,9 +45452,9 @@
       },
       {
         "col": 10,
-        "row": 7,
+        "row": 9,
         "x": 84,
-        "z": 58.800000000000004,
+        "z": 75.60000000000001,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -40136,9 +45462,9 @@
       },
       {
         "col": 11,
-        "row": 7,
+        "row": 9,
         "x": 92.4,
-        "z": 58.800000000000004,
+        "z": 75.60000000000001,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -40146,9 +45472,9 @@
       },
       {
         "col": 12,
-        "row": 7,
+        "row": 9,
         "x": 100.80000000000001,
-        "z": 58.800000000000004,
+        "z": 75.60000000000001,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -40156,9 +45482,9 @@
       },
       {
         "col": 13,
-        "row": 7,
+        "row": 9,
         "x": 109.2,
-        "z": 58.800000000000004,
+        "z": 75.60000000000001,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -40166,9 +45492,9 @@
       },
       {
         "col": 14,
-        "row": 7,
+        "row": 9,
         "x": 117.60000000000001,
-        "z": 58.800000000000004,
+        "z": 75.60000000000001,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -40176,9 +45502,9 @@
       },
       {
         "col": 15,
-        "row": 7,
+        "row": 9,
         "x": 126,
-        "z": 58.800000000000004,
+        "z": 75.60000000000001,
         "y": 0,
         "w": 8,
         "d": 8,
@@ -40208,26 +45534,6 @@
         "col": 11,
         "row": 0,
         "x": 92.4,
-        "z": 0,
-        "y": 12.8,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 12,
-        "row": 0,
-        "x": 100.80000000000001,
-        "z": 0,
-        "y": 12.8,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 13,
-        "row": 0,
-        "x": 109.2,
         "z": 0,
         "y": 12.8,
         "w": 8,
@@ -40378,6 +45684,26 @@
         "col": 11,
         "row": 2,
         "x": 92.4,
+        "z": 16.8,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 2,
+        "x": 100.80000000000001,
+        "z": 16.8,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 2,
+        "x": 109.2,
         "z": 16.8,
         "y": 12.8,
         "w": 8,
@@ -41125,6 +46451,326 @@
         "floor": false
       },
       {
+        "col": 0,
+        "row": 8,
+        "x": 0,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 8,
+        "x": 8.4,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 8,
+        "x": 16.8,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 8,
+        "x": 25.200000000000003,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 8,
+        "x": 33.6,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 8,
+        "x": 42,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 8,
+        "x": 50.400000000000006,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 8,
+        "x": 58.800000000000004,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 8,
+        "x": 67.2,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 8,
+        "x": 75.60000000000001,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 8,
+        "x": 84,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 8,
+        "x": 92.4,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 8,
+        "x": 100.80000000000001,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 8,
+        "x": 109.2,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 8,
+        "x": 117.60000000000001,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 8,
+        "x": 126,
+        "z": 67.2,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 9,
+        "x": 0,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 9,
+        "x": 8.4,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 9,
+        "x": 16.8,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 9,
+        "x": 25.200000000000003,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 9,
+        "x": 33.6,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 9,
+        "x": 42,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 9,
+        "x": 50.400000000000006,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 9,
+        "x": 58.800000000000004,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 9,
+        "x": 67.2,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 9,
+        "x": 75.60000000000001,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 9,
+        "x": 84,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 9,
+        "x": 92.4,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 9,
+        "x": 100.80000000000001,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 9,
+        "x": 109.2,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 9,
+        "x": 117.60000000000001,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 9,
+        "x": 126,
+        "z": 75.60000000000001,
+        "y": 12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
         "col": 6,
         "row": 0,
         "x": 50.400000000000006,
@@ -42209,6 +47855,326 @@
         "row": 7,
         "x": 126,
         "z": 58.800000000000004,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 8,
+        "x": 0,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 8,
+        "x": 8.4,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 8,
+        "x": 16.8,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 8,
+        "x": 25.200000000000003,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 8,
+        "x": 33.6,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 8,
+        "x": 42,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 8,
+        "x": 50.400000000000006,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 8,
+        "x": 58.800000000000004,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 8,
+        "x": 67.2,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 8,
+        "x": 75.60000000000001,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 8,
+        "x": 84,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 8,
+        "x": 92.4,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 8,
+        "x": 100.80000000000001,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 8,
+        "x": 109.2,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 8,
+        "x": 117.60000000000001,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 8,
+        "x": 126,
+        "z": 67.2,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 0,
+        "row": 9,
+        "x": 0,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 1,
+        "row": 9,
+        "x": 8.4,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 2,
+        "row": 9,
+        "x": 16.8,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 3,
+        "row": 9,
+        "x": 25.200000000000003,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 4,
+        "row": 9,
+        "x": 33.6,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 5,
+        "row": 9,
+        "x": 42,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 6,
+        "row": 9,
+        "x": 50.400000000000006,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 7,
+        "row": 9,
+        "x": 58.800000000000004,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 8,
+        "row": 9,
+        "x": 67.2,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 9,
+        "row": 9,
+        "x": 75.60000000000001,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 10,
+        "row": 9,
+        "x": 84,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 11,
+        "row": 9,
+        "x": 92.4,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 12,
+        "row": 9,
+        "x": 100.80000000000001,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 13,
+        "row": 9,
+        "x": 109.2,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 14,
+        "row": 9,
+        "x": 117.60000000000001,
+        "z": 75.60000000000001,
+        "y": -12.8,
+        "w": 8,
+        "d": 8,
+        "floor": false
+      },
+      {
+        "col": 15,
+        "row": 9,
+        "x": 126,
+        "z": 75.60000000000001,
         "y": -12.8,
         "w": 8,
         "d": 8,

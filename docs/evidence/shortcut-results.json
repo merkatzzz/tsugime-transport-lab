@@ -868,10 +868,10 @@
       "cycles": [
         {
           "level": 0,
-          "edges": 22,
-          "nodes": 25,
+          "edges": 28,
+          "nodes": 29,
           "components": 3,
-          "cycles": 0
+          "cycles": 2
         },
         {
           "level": 1,
@@ -1467,9 +1467,9 @@
       "cycles": [
         {
           "level": 0,
-          "edges": 16,
-          "nodes": 18,
-          "components": 3,
+          "edges": 17,
+          "nodes": 20,
+          "components": 4,
           "cycles": 1
         },
         {
@@ -1481,8 +1481,8 @@
         },
         {
           "level": 2,
-          "edges": 19,
-          "nodes": 20,
+          "edges": 21,
+          "nodes": 22,
           "components": 2,
           "cycles": 1
         }
@@ -2340,10 +2340,10 @@
       "cycles": [
         {
           "level": 0,
-          "edges": 22,
-          "nodes": 25,
+          "edges": 29,
+          "nodes": 31,
           "components": 3,
-          "cycles": 0
+          "cycles": 1
         },
         {
           "level": 1,

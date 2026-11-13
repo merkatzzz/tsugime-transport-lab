@@ -20,6 +20,7 @@ export function buildAtriumBody(v,b,g){
  for(const l of boundaryWalls(b))v.wall(g,l,6,'wall',.12,0);
  for(const l of b.walls)v.wall(g,l,l.height,'wall',.12,BASE+.16);
  for(const f of b.furniture)v.cube(g,f.x,BASE+.16,f.z,f.w,f.h,f.d,'wood');
+ for(const r of b.roomCeilings??[]){const m=v.cube(g,r.x,r.y,r.z,r.w,r.h,r.d,'concrete');m.userData.privateCeiling=true;v.roofs.push(m);}
  for(const d of b.doors){const l=doorLeaf(d,0),len=Math.hypot(l.b[0]-l.a[0],l.b[1]-l.a[1]),h=mechanism(g,'door:'+d.id),angle=-Math.atan2(l.b[1]-l.a[1],l.b[0]-l.a[0]);h.position.set(l.a[0],BASE,l.a[1]);h.rotation.y=angle;const mesh=v.cube(h,0,.16,-.04,len,2.05,.08,'wood');v.doorMeshes.push({mesh,id:d.id,hinge:h,angle,swing:d.swing,definition:d});v.wall(g,d,1.35,'wall',.12,BASE+2.21);for(const p of doorJambEnds(b,d))v.cube(g,p[0]-.065,BASE+.16,p[1]-.065,.13,2.05,.13,'metal');}
  for(const p of b.ports){const l=portSegment(b,p),n=p.b-p.a,portal=new THREE.Group();portal.position.set((l.a[0]+l.b[0])/2,0,(l.a[1]+l.b[1])/2);portal.rotation.y=-Math.atan2(l.b[1]-l.a[1],l.b[0]-l.a[0]);g.add(portal);v.cube(portal,-n/2,p.height+.16,-.06,n,6-p.height-.16,.12,'wall');for(const x of[-n/2-.1,n/2])v.cube(portal,x,.16,-.14,.1,5.84,.28,'metal');v.cube(portal,-n/2-.1,p.height+.16,-.18,n+.2,.15,.36,'metal');const roll=mechanism(portal,'entry-shutter');v.cube(roll,-n/2,.16,-.045,n,p.height,.09,'metal');v.shutters.push({group:roll,id:b.id,port:p,height:p.height});}
  if(tier>0){

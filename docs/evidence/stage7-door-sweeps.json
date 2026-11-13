@@ -359,6 +359,38 @@
       "solidMin": 1.5000000000000018,
       "hinge": "a",
       "swing": 90
+    },
+    {
+      "body": "SM0",
+      "door": "SM0-shop",
+      "wallMin": 0.10175000000000001,
+      "solidMin": 0.04999999999999982,
+      "hinge": "a",
+      "swing": -90
+    },
+    {
+      "body": "SM1",
+      "door": "SM1-shop",
+      "wallMin": 0.10175000000000001,
+      "solidMin": 0.04999999999999982,
+      "hinge": "a",
+      "swing": -90
+    },
+    {
+      "body": "SM2",
+      "door": "SM2-shop",
+      "wallMin": 0.10175000000000001,
+      "solidMin": 0.04999999999999982,
+      "hinge": "a",
+      "swing": -90
+    },
+    {
+      "body": "SM3",
+      "door": "SM3-shop",
+      "wallMin": 0.10175000000000001,
+      "solidMin": 0.04999999999999982,
+      "hinge": "a",
+      "swing": -90
     }
   ]
 }

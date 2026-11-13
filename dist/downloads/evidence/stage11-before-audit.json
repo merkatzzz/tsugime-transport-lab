@@ -29325,6 +29325,7 @@
     "bodies": 47,
     "cells": 64,
     "transportable": 47,
+    "fixedBuildingBodies": 0,
     "fixedEquipment": 10,
     "moved": 27,
     "waiting": 20,

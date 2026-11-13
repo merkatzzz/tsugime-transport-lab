@@ -1,3 +1,4 @@
+import {addSouthDistrict} from './south-market-layout.js';
 import {addLargeRooms} from './large-room-layout.js';
 import {addAtrium} from './atrium-layout.js';
 import {expandStage11} from './stage11-layout.js';
@@ -17,8 +18,8 @@ import {extendBodies,extensionPlacements} from './stage6-layout.js';
 import {toWorld,toLocal,rotateFace,worldRect} from './pose.js';
 // Geometry conventions: east +X, south +Z, vertical +Y. Port intervals increase in X for N/S and Z for E/W.
 export const CELL=8,HEIGHT=6,DECK=6.4,LOWER_DECK=-6.4,LEVELS=[0,12.8,-12.8],RADIUS=.35,CLEAR_WIDTH=.82,CLEARANCE=.2,EYE=1.81,WALK_SPEED=3.6,RUN_SPEED=5.2;
-export const LIFE_BOUNDS={x:0,z:0,w:134,d:66.8};
-export const SIZES={same:{label:'拡張・基本搬送域',w:134,d:66.8},ring1:{label:'拡張・一回り',w:142.4,d:75.2},ring2:{label:'拡張・二回り',w:150.8,d:83.6}};
+export const LIFE_BOUNDS={x:0,z:0,w:134,d:83.6};
+export const SIZES={same:{label:'拡張・基本搬送域',w:134,d:83.6},ring1:{label:'拡張・一回り',w:142.4,d:92},ring2:{label:'拡張・二回り',w:150.8,d:100.4}};
 export const METHODS={serial:'空欄を再利用・順次',cooperative:'予約付き協調搬送'};
 export const DEFAULT_EXPERIMENT={size:'ring1',method:'cooperative'},NEXT={A:'B',B:'C',C:'A'};
 export const levelsFor=()=>LEVELS,decksFor=()=>[LOWER_DECK,DECK],LANDING={x:-2.4,z:2,w:2,d:4},SHAFT={x:-6.8,z:1.8,w:4.4,d:4.4};
@@ -74,11 +75,11 @@ for(const id of ['E1','E3'])BODIES.find(b=>b.id===id).ports.push(port('S','S',4,
 BODIES.push({...structuredClone(BODIES.find(b=>b.id==='R4')),id:'K1',name:'第一層・小居室と前廊下',color:'#aa9d8d',doors:[{id:'K1-door',a:[2.8,2.9],b:[4,2.9],open:false,label:'第一層の小居室'}],labels:[room('第一層 小居室',5.4,1.5),room('EV前廊下',4,4.2)]});
 BODIES.push({...structuredClone(BODIES.find(b=>b.id==='J3')),id:'K2',name:'第一層・交差通路',color:'#a3b58d',labels:[room('第一層 分岐',4,4)]});
 BODIES.push({id:'M1',name:'上下搬送・小交流室',use:'common',color:'#bba58d',cells:[[0,0]],ceiling:3,ports:[port('W','W',3,5,2.5),port('N','N',3,5,2.5),port('E','E',3,5,2.5)],walls:[],doors:[],solids:[],furniture:[box(1,1,1.5,1,.5),box(6,6,1,1,.8)],labels:[room('上下搬送 M1',4,4)],roofAreas:[roof(0,0,8,8,3)]});
-extendBodies(BODIES);redesign(BODIES);repairResidentialWalls(BODIES);expandStage8(BODIES);expandStage9(BODIES);furnishShops(BODIES);expandStage11(BODIES);addAtrium(BODIES);addLargeRooms(BODIES);redesignFacility(BODIES);BODIES.forEach(compilePartitions);
+extendBodies(BODIES);redesign(BODIES);repairResidentialWalls(BODIES);expandStage8(BODIES);expandStage9(BODIES);furnishShops(BODIES);expandStage11(BODIES);addAtrium(BODIES);addLargeRooms(BODIES);addSouthDistrict(BODIES);redesignFacility(BODIES);BODIES.forEach(compilePartitions);
 BODIES.find(b=>b.id==='P9').ports.push(port('water-east','E',11.6,14,2.5));
 BODIES.find(b=>b.id==='N3').ports.push(port('water-west','W',3,5,2.5));
 export const BY_ID=Object.fromEntries(BODIES.map(b=>[b.id,b]));
-export const PHASES={A:{label:'密集建築・住戸から店舗へ迂回'},B:{label:'予備廊下C0を挿入・近道と環状路'},C:{label:'近道を撤収・別の南北経路へ'}};
+export const PHASES={A:{label:'密集建築・住戸から店舗へ迂回'},B:{label:'予備廊下C0を挿入・近道と環状路'},C:{label:'南商店街の回遊路・大部屋へ南西接続'}};
 const dock=(x,z,level)=>({x:x*8.4,z:z*8.4,y:LEVELS[level]});
 export const storageFor=e=>({x:50.4,y:DECK,z:0});
 export function legacyPlacements(phase,e=DEFAULT_EXPERIMENT){const p={R1:dock(0,0,1),R2:dock(1,phase==='B'?2:0,1),R3:dock(0,phase==='C'?1:2,1),R4:dock(0,0,0),T1:dock(2,0,1),T2:dock(2,0,0),H1:phase==='B'?dock(0,1,0):dock(2,1,1),L1:phase==='B'?dock(2,1,1):dock(phase==='C'?1:2,1,0),J1:dock(0,phase==='C'?2:1,1),J2:dock(1,1,1),J3:phase==='C'?dock(0,1,0):dock(1,0,0),C0:phase==='B'?dock(1,0,1):storageFor(e)};p.E1=dock(4,0,phase==='B'?0:1);p.E3=dock(4,0,phase==='B'?1:0);p.E2=dock(5,0,phase==='C'?0:1);p.E4=dock(5,0,phase==='C'?1:0);p.H2=phase==='B'?{x:33.6,y:0,z:8.4}:{x:16.8,y:12.8,z:16.8};p.K1=dock(0,0,2);p.K2=dock(1,0,2);p.M1=phase==='B'?dock(4,2,0):dock(2,0,2);return stage9Placements(phase,stage8Placements(phase,redesignPlacements(phase,Object.assign(p,extensionPlacements(phase)))));}

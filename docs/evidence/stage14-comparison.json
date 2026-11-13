@@ -1,0 +1,76 @@
+{
+  "before": [
+    {
+      "from": "A",
+      "to": "B",
+      "movers": 32,
+      "dockChanges": 32,
+      "duration": 29.866666666666664,
+      "maxConcurrent": 23
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "movers": 37,
+      "dockChanges": 37,
+      "duration": 37.36666666666667,
+      "maxConcurrent": 19
+    },
+    {
+      "from": "C",
+      "to": "A",
+      "movers": 9,
+      "dockChanges": 9,
+      "duration": 17.333333333333332,
+      "maxConcurrent": 8
+    }
+  ],
+  "after": [
+    {
+      "from": "A",
+      "to": "B",
+      "movers": 34,
+      "duration": 29.866666666666667,
+      "maxConcurrent": 25,
+      "totalTravel": 940
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "movers": 40,
+      "duration": 40.96666666666666,
+      "maxConcurrent": 20,
+      "totalTravel": 1196.8
+    },
+    {
+      "from": "C",
+      "to": "A",
+      "movers": 14,
+      "duration": 17.333333333333332,
+      "maxConcurrent": 12,
+      "totalTravel": 454.3999999999999
+    }
+  ],
+  "sameAandC": {
+    "before": 51,
+    "after": 52,
+    "oldBodiesAfter": 48
+  },
+  "changedExisting": [
+    "S1",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "BR1",
+    "BR2",
+    "BR3"
+  ],
+  "fixedBuildings": [
+    "SC0",
+    "SM0",
+    "SM3"
+  ],
+  "roofWalkImplemented": false,
+  "failureEventImplemented": false
+}

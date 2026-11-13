@@ -1,0 +1,418 @@
+✖ extension keeps the two original levels and adds the first, adds four mobile rooms and creates physically walkable east paths (2.826564ms)
+✔ every added room has a usable animated door in all phases and cannot be entered when closed (2716.27183ms)
+✔ all added bodies carry a rider through complete physical cycle with no final coordinate replacement (31668.604231ms)
+✔ surface partition removes overlaps without deleting non-overlapping floor area (0.436921ms)
+✔ ordinary doors start closed and reset closes them (987.271049ms)
+✔ live 3D booth visit separates conversation and exit in all three phases (22591.030553ms)
+✔ normal room door opens into 3D space (32.500966ms)
+✔ shop conversation stays in 3D (29.530485ms)
+✔ mechanical audio retains transfer and pause synchronization (0.875798ms)
+✖ dense expanded architecture contains 60 bodies, 89 cells, corridor-only bodies and large permanent unions (2.460546ms)
+✔ four directions match, north-south edges exist, B has two true independent loops (8182.657ms)
+✔ same-face west A and B shutters are independent; R2 has three disconnected intrinsic components (7.195274ms)
+✔ partial 0.5m slit is visible but cannot pass the body; closed complementary widths remain blocked (2.038949ms)
+✔ all passable joints can actually be crossed by the body controller in their normal direction (648.030672ms)
+✔ same physical reference points and A/B/C shortest grid routes replay through movement collisions (5.207996ms)
+✔ 0.1m finer walking grid confirms shortcut size within 0.6m of 0.2m grid (24841.836145ms)
+✔ ordinary door changes intrinsic components and physical route together (186.624837ms)
+✔ large H1 and L1 move in plan, R2 and J1 change XY while remaining on their life floor (0.648667ms)
+✔ same/serial A→B continuous 0.2m full-envelope validation (880.043979ms)
+✔ same/serial B→C continuous 0.2m full-envelope validation (847.513509ms)
+✔ same/serial C→A continuous 0.2m full-envelope validation (587.492265ms)
+✔ same/cooperative A→B continuous 0.2m full-envelope validation (3912.019025ms)
+✔ same/cooperative B→C continuous 0.2m full-envelope validation (9624.228169ms)
+✔ same/cooperative C→A continuous 0.2m full-envelope validation (1093.707392ms)
+✔ ring1/serial A→B continuous 0.2m full-envelope validation (694.486538ms)
+✔ ring1/serial B→C continuous 0.2m full-envelope validation (1342.972991ms)
+✔ ring1/serial C→A continuous 0.2m full-envelope validation (429.624765ms)
+✔ ring1/cooperative A→B continuous 0.2m full-envelope validation (7122.361118ms)
+✔ ring1/cooperative B→C continuous 0.2m full-envelope validation (11266.252073ms)
+✔ ring1/cooperative C→A continuous 0.2m full-envelope validation (1178.748063ms)
+✔ ring2/serial A→B continuous 0.2m full-envelope validation (747.362367ms)
+✔ ring2/serial B→C continuous 0.2m full-envelope validation (1293.643632ms)
+✔ ring2/serial C→A continuous 0.2m full-envelope validation (547.136766ms)
+✔ ring2/cooperative A→B continuous 0.2m full-envelope validation (7174.241716ms)
+✔ ring2/cooperative B→C continuous 0.2m full-envelope validation (13821.047206ms)
+✔ ring2/cooperative C→A continuous 0.2m full-envelope validation (1330.311097ms)
+✔ real temporary docks and separate C0 storage are used; second expansion gives no duration improvement (91.236075ms)
+✔ continuous collision rejects paths crossing between clear endpoints and enforces clearance (0.476103ms)
+✔ small bounds fail with concrete errors (13.508938ms)
+✔ cooperative reservations perform simultaneous physical moves and finish whole cycle without snapping (705.076354ms)
+✔ rider stays local to large H1 through temporary deck storage and final XY relocation (401.721265ms)
+✔ named isolation exception reconnects J1 in A and can be removed (489.651493ms)
+✔ stored spare remains physical and isolated through C and A, reinserted in B with rider (745.531806ms)
+✔ joint straddling automatically evacuates and debug rescue remains explicitly distinct (536.949448ms)
+✔ empty docks have no walkable support; rolling shutters close all joint floors (24.494823ms)
+✔ walk 3.6m/s, shift 5.2m/s independently of transport speed; diagonal normalized (77.043753ms)
+✔ high speed cannot tunnel through ordinary walls or closed individual shutters (192.302466ms)
+✔ fixed EV continuously moves inside shaft and landing gates block absent cabin (25.514245ms)
+✔ all phase maps and deck render data are generated from live geometry with port IDs and routes (121.065981ms)
+✔ normal warning blocks new entry into J1 but lets an existing occupant walk out (906.552143ms)
+✔ even a stationary invalid initial overlap is rejected (275.622566ms)
+✔ resident fixed camera fits the room and sees the real head through the narrow booth opening in every phase (3811.366728ms)
+✔ all real vertices fit cell unions and six metre envelope, including merged L-shaped render batches (3470.352177ms)
+✔ real joint floors retract, empty docks have no rendered life floor (1781.708677ms)
+✔ all open joint tunnels are enclosed above and on both sides by actual meshes (2450.481587ms)
+✔ varied low and high ceilings remain real and unequal port heights receive solid reducers (854.854157ms)
+✔ view slit passes eye ray but the same physical opening blocks body (1156.067873ms)
+✔ EV cabin and fixed shaft occlude transport space at every sampled travel height (1692.066671ms)
+✔ landing doors open only for stationary cabin at that landing (876.361048ms)
+✔ adopted transport sweeps clear all rendered fixed hardware, shaft, enclosure and stationary cabin by 0.2m (13931.514944ms)
+✔ all fixed and moving rendered mesh bounds are finite (1927.155332ms)
+✔ joint collars enclose oblique eye rays at inset port boundaries, without seam leaks (31138.251344ms)
+✔ shortest paths also clear the actual visible 3D meshes at body height (15705.02107ms)
+✔ R1 W reveal also seals below the interior ceiling, not only in the upper shell (3254.535656ms)
+✔ opening side reveals seal the 20mm wall-to-recess gap above shutter headers in every face and phase (5107.640656ms)
+✔ floor grid is one filtered texture with UVs, never a layer of coplanar thin boxes (2834.819612ms)
+✔ joint floors exactly span mechanical gaps with flush top; local sides and roof seal every live joint in A/B/C (6823.05836ms)
+✔ cutaway, exploration and shutter reconnection invalidate geometry together (2284.078858ms)
+✔ shared storefront walls and furnishings are exact local mirrors (2.412842ms)
+✔ T2 slide opens from either approach, permits actual crossing and refuses closing on occupant (1034.346218ms)
+✔ lab entry sees a continuous main room, with two auxiliary rooms inside unchanged exterior (47.138199ms)
+✔ manual requests persist over automatic schedule and are saved without bypassing cover closure (627.582148ms)
+✔ manual departure waits for a 3D visit and never starts the ordinary swinging leaf afterward (16.683797ms)
+✔ special-event override still takes priority over debugging requests (4.86409ms)
+✔ both stalls have volumetric counters and rear shelves with separation from front cover (0.229799ms)
+✔ all 66 buildings have a phase purpose; 10 fixed systems are counted separately and the next new body cannot silently be omitted (1448.932273ms)
+✔ new phase roles change real neighbours: life wing changes host floor; east room changes entrance; northern residential order changes (251.765572ms)
+✔ adopted plans really use the expanded southern slots, and all target changes are physically covered (493.382687ms)
+✔ new movers carry a passenger and the same full rigid building through repeated physical ABC cycles (5266.327045ms)
+✔ W2 closes in B and its visitor evacuates by walking into the moving P9, with no water or fixed-equipment motion (845.348156ms)
+✔ old stage10 saves migrate in body-local coordinates; new saves retain exact phase anchors, NPC state and inventory (301.45766ms)
+✔ two-cell boundary supports exact 3m wall / 2m door / 3m wall, without a transport shutter (1.247742ms)
+✔ room envelopes cross cell seams in 3-cell, 4-cell and L-shaped bodies; authored openings remain exact under rotation (3820.041717ms)
+✔ V1 reproduces and closes the missing five-metre internal west wall while the common seam stays walkable (1942.392972ms)
+✔ both recessed canal exteriors are opaque below floor, including their four sides and culvert boundaries (2645.997633ms)
+✔ shop walls terminate at the small roof, and normal/talking shopkeepers face customers with bounded head motion (1549.836367ms)
+✔ diagnostic overlays reuse their geometry and never change exploration materials or physics (1793.170813ms)
+✔ fixed waterways have walking connections in approved phases and closed W2 access in B (12559.598371ms)
+✔ closed transport gates block entrance, while fixed tunnel stays safe through a full ABC cycle (14755.082264ms)
+✔ fixed water reservations reject both swept horizontal crossing and vertical crossing (0.524745ms)
+✔ expanded east and south margins accept an actual two-cell rigid transport route (280.417453ms)
+✔ water meshes are fixed, curved and do not intersect the walking route at body height; render reuses geometry (2293.695131ms)
+✔ water sound attenuates with distance and pauses (1.09712ms)
+✔ districts are six explicitly registered small buildings, not a rigid district; old 1/2/3/4-cell forms and two NPCs remain (2.378682ms)
+✔ A/C shared street really joins, B east half joins housing while laboratory seals; no fourth phase or fixed relocation (875.652614ms)
+✔ residential hallway and all six numbered rooms are walkable using the animated real doors; closed walls stop walking (2241.721832ms)
+✔ one-cell marketplace supports an open counter, room shop, stall and real transverse corridors (446.792127ms)
+✔ both shared halves remain independently walkable in B; A shared floor supports an actual cross-boundary walk (259.471255ms)
+✔ shared-half passengers survive two full split/rejoin cycles; boundary closes before any motion and transport gap remains .4m (2001.247565ms)
+✔ a passenger standing on the shared seam walks away before closure; no coordinate rescue is used (1130.682832ms)
+✔ capsule has twenty real stairs, upper support, rails and no fourth facility floor; ascent and descent use normal movement (93.468557ms)
+✔ upper capsule visits use the reused 3D model, correct local camera/floor, save and exact return to the original upper door (2827.419758ms)
+✔ upper capsule rider keeps relative height through real ABC motion and save/load on every phase (699.834337ms)
+✔ double-door transition loads a bounded freely walkable laboratory with a main room and two auxiliary rooms, real animated doors and no outside walk-through (1748.214113ms)
+✔ laboratory resident stays aboard in B, cannot exit sealed/moving entry, saves locally, reconnects C and exits at the current entrance (604.004662ms)
+✔ real generated meshes remain within the 6m transport envelope; laboratory renders a separate lazily built scene of the same 16×8m building (2757.530086ms)
+✔ new movers have real validated routes, 18 supported configurations and independent SH1/SH2 layer split; no new target is omitted (2800.48246ms)
+✔ separated shared boundary really occludes eye rays while the joined street has no central wall (2909.725372ms)
+✔ independent laboratory scene has no coplanar same-normal overlaps; exterior transition backing prevents an unloaded-space view (2088.838559ms)
+✔ district graph connections are backed by actual walks from existing U2 and P9 common corridors in each phase, not just adjacent floor plans (8905.511525ms)
+✔ an upper stairwell edge is an internal supported floor, not a detachable external seam; stair and rail-side riders do not deadlock transport (540.505189ms)
+✔ A: from the external P9 common hall directly into a 4.8m street, both open shop fronts, the lab end and split/rejoin (1736.969385ms)
+✔ B/C: one continuous walk AC1 → ramp → AT0 → both stairs → AT2 → same route down → AC1, without resetting the player between floors (3864.603206ms)
+✔ the entrance connects between the homes, walls collide with the whole body at low heights, and ramp foot heights match the actual slope (42.145066ms)
+✔ closed room doors and counters stop the player, an opened door admits walking, and shop walls remain solid (101.04169ms)
+✔ D: normal lab entry and E exit still work after relocation/rotation, saves retain facing, and no management panel exists in the exploration viewport (78.669025ms)
+✔ south expansion is certified transport space: two additional rows, real lab destinations/motions and empty slots, rather than a map-only grid (438.531762ms)
+✔ B approaching during 99% deployment never freezes a visually open gate: the real frame loop completes and climbs to the middle floor (392.089542ms)
+✔ folded gates stow as narrow stacks without same-normal overlaps, and a visibly cleared centre has no phantom closed collision plane (2663.297129ms)
+✔ shared street entrance reaches both half-corridors without crossing either shop; the direct longitudinal entrance and independent docking survive (1937.685127ms)
+✔ three four-cell rigid bodies add twelve atrium cells without a global fourth floor, and the B middle deck has a real independently validated round trip (1645.667743ms)
+✔ P9 new entrance is separate from the canal, AC1 is walkable, and the real controller climbs the entry ramp (467.514488ms)
+✔ both forty-step stair flights are traversed up and down by normal movement, with no change to X or discontinuous floor jump (283.649516ms)
+✔ closed floors support standing, opened central floors have no support, guards reject every edge/corner, lowest floor and top roof remain closed (4148.745785ms)
+✔ occupants pause opening and closure, can walk away without teleport, then mechanisms finish before any transport (704.050614ms)
+✔ unconnected flights end behind real gates; the walking controller cannot advance past them (177.704801ms)
+✔ actual moving floor/ceiling panels, glass and stairs retain geometry, keep distinct storage bands and retract inside six-metre envelopes (3185.394417ms)
+✔ telescopic glass uses distinct thin tracks and its actual mitered corners remain closed when deployed (1409.257127ms)
+✔ normal atrium doors keep animation and collision; live three-tier maps and schema-4 save restore floors, height and retained interior anchors (112.474143ms)
+✔ safe interior riders can take a full ABC cycle; the assembled body closes and the source doorway reconnects at C (601.85774ms)
+✔ the edge of the storage sweep includes the player radius, so a partial foot over a glass well pauses opening and can retreat (49.977501ms)
+✔ real central and stair collars seal all horizontal viewing directions through both 0.4m transport gaps, with underfloor reveals (1692.957882ms)
+✔ both stair flights have real head clearance at every tread and a supported incoming rail blocks sideways movement (2861.785826ms)
+✔ an actor approaching during opening or closing pauses a partially moved mechanism, can walk away, and is never relocated (1041.842951ms)
+✔ three new single-cell bodies preserve all 57 existing completed poses, SH1/SH2 structure and all other unmodified definitions (14.48243ms)
+✔ ordinary input enters the full one-cell room from J9, then crosses the broad two-room opening and walks all room corners (1982.048344ms)
+✔ large wall waits for an occupant, resumes after ordinary retreat, independently transports both rooms, seals B and rejoins C with a rider (1978.078288ms)
+✔ opening also waits for the actual folding-wall sweep and remains physically blocked until fully stowed (606.422088ms)
+✔ all 18 real ABC plans validate new independent routes and preserve the expanded south bounds (2946.128067ms)
+✔ save/load restores every large room phase, broad-wall endpoints, local passenger coordinates and updated maps (139.912089ms)
+✔ expanded 40.8m² opening reaches between homes, remains surrounded by a continuous walkable circuit on both raised floors (2291.444398ms)
+✔ glass reaches full height before floors move; the floor closes before the thin guard bands retract (1.742494ms)
+✔ real expanded void is open upward/downward, thin transparent guards close all mitered corners, and old west-side stair cabinet is gone (2099.287204ms)
+✔ finishing a broad wall refreshes both the real joint-floor meshes and cached live maps without changing phase or camera (2390.595119ms)
+✔ wide closed walls meet their shallow side reveals and real oblique eye rays cannot see through a throat gap (2130.876688ms)
+✔ a player cannot walk into a stopped partly folded sheet, and can retreat normally without disabling wall collision (22.25075ms)
+✔ south expansion is physical: new occupied buildings, empty deck rows, fixed anchors and no eastward increase (17.606671ms)
+✔ C creates a real southern ring with distinct entrances, while A has a branch and B a lower-level shop route (520.578682ms)
+✔ ordinary walking reaches and circles the new street, enters each shop, and follows the C connection to both broad rooms (10979.274115ms)
+✔ all 18 swept plans preserve local reservations and include meaningful C-to-A room and corridor changes (2197.232744ms)
+✔ a moving market passenger completes ABC and returns from isolation without a position warp; transfer shutters remain closed in motion (1478.002391ms)
+✔ intentional isolated areas retain empty spatial separation, rather than just a closed door beside new construction (1.051784ms)
+✔ private atrium ceilings block upward and oblique views into all six rooms while the central void remains open (2217.40612ms)
+✔ new C saves and old Stage13 room anchors restore both changing street connections and local room coordinates (206.747844ms)
+✔ intermediate poses include finished, waiting and partly travelling bodies and are reproducible without an event mode (29.599535ms)
+✔ the retained closed terminal gate stops walking before the ceiling and allows ordinary backward descent (112.153476ms)
+✔ automatic operation repeats cycles without duplicate transfers (19575.230493ms)
+✔ J1 occupant follows collision-checked evacuation route rather than preventing B to C (788.851208ms)
+✔ exception flag applies only to the named component (2.340538ms)
+✔ stationary EV occupant does not stop the automatic facility schedule (169.229339ms)
+✔ no physical escape route produces an explicit safe error and never warps coordinates (170.310622ms)
+✔ an exception in the current room cannot authorise entry into another unflagged closing component (192.9819ms)
+✔ isolated spare can request real two-leg reconnection without a long idle wait or a debug warp (334.621793ms)
+✔ held forward resumes through opening door from x=4 (1755.56832ms)
+✔ held forward resumes through opening door from x=4.2 (536.38367ms)
+✔ held forward resumes through opening door from x=4.3 (381.800498ms)
+✔ held oblique approach remains blocked when closed and resumes after opening -0.12 (292.547007ms)
+✔ held oblique approach remains blocked when closed and resumes after opening 0.12 (431.376622ms)
+✔ H1/H2 are independent two-cell bodies, joined in A/C and separated in B (17942.176598ms)
+✔ rider stays local in either independent half throughout complete cycle (1743.219588ms)
+✔ accordion partition stays within each half at every folding fraction and shuts before moving (8787.581189ms)
+✔ joined hall is physically walkable in A/C and both separated halves have solid boundaries in B (5815.670692ms)
+✔ first layer has a real room, a branching corridor, landing connection and a mobile room (1367.148451ms)
+✔ EV travels continuously to all three real landing floors and all landing gates match the cabin (52.011897ms)
+✔ M1 rider follows the lower deck physically across first/second layers and back without snapping (19835.171792ms)
+✔ booth reveal is short, adjustable and repeatable; exit restores body-local location and gaze (633.851251ms)
+✔ safe booth visit and shop dialogue do not prevent a complete transfer or desynchronise the visitor (5079.849416ms)
+✔ a booth visit is safely ended before actual evacuation if its current component becomes unsafe (226.361426ms)
+✔ visible 3D tentacles terminate inside real reservoir water and all fixed shells are sealed except their single mouth (3971.105558ms)
+✔ N4 rotated west passage agrees between real meshes, controller and graph; reservoir cannot be walked into (1616.456224ms)
+✔ actual rotating room meshes including wall organism and furnishings fit the certified full sweep (1271.517881ms)
+✖ 89 cells retain dense three-floor architecture, four remote cells, five fixed springs and four wall organisms (3.141659ms)
+✖ remote wing never has a walking graph connection to the main facility, but has validated return service in B (716.526559ms)
+✔ shuttle physically carries a rider to the remote wing and returns, with no isolation exception (20943.345054ms)
+✔ ordinary remote visitor is evacuated through a real route into the returning shuttle (8588.877023ms)
+✔ 90-degree rigid transforms rotate walls, local positions, ports and rider heading continuously (308.556364ms)
+✔ rotation uses a full-radius continuous envelope, including a blocker clear at both end orientations (21.281286ms)
+✔ adjacent and one-empty-cell tentacles are real directional unobstructed connections (101.008461ms)
+✔ wrong direction, occupied path, missing opening, insufficient length and occupied spring all fail concretely (2.63901ms)
+✔ whole reservoirs neutralise with excess capacity and become toxic again when detached; supply refuses unsafe liquid (44.743599ms)
+✔ long repeated cycles do not accumulate angles or detach riders and require tentacle retraction before every motion (1368.421595ms)
+✔ EV is called from its landing, boarded by walking, operated by selected floor and exited on all three levels (138.744804ms)
+✔ accordion banks physically stow and deploy without overlapping coplanar slat faces or escaping their owner (3491.735685ms)
+✔ adaptive profile cheeks seal the oblique throat between the joint collar and recessed wall bank in A/B/C (4515.141259ms)
+✔ wide-to-wide entrance stays physically passable across its full six metre profile (1631.081695ms)
+✔ new permanent multi-cell interiors have genuine continuous walkable geometry across internal cell borders (1506.856839ms)
+✔ all inward door sweeps clear fixed furnishings, and visible leaves remain opaque inside their owner (3149.375596ms)
+✖ new residences mix moving three-cell, two-cell and single bodies, with no mechanical internal boundaries (2.664899ms)
+✔ A residences physically connect to their floor EV and B changes both floor grouping and paths (5199.785935ms)
+✔ multi-cell residences carry their local rider continuously through a complete cycle (15240.541275ms)
+✔ wide portals open six metres in A/C, adapt to approved offset small ports and refuse arbitrary alignments (1.607207ms)
+✔ adaptive wall banks close fully before movement and finish deploying before free walking returns (129.296827ms)
+✔ fixed remote interiors keep permanent passages during transport; only the docking face needs a shutter (3.567117ms)
+✔ two-cell narrow corridor is stored physically, inserts in B and opens a real diagonal route to W1 (653.539277ms)
+✔ all ordinary doors are visible inward hinges and opening is refused inside their actual swept sector (34.93437ms)
+✔ EV closes first, only then permits floor selection, rejects outside control and can cancel at the same floor (20.55633ms)
+✔ remote departure gives eight real seconds of voluntary return before forced route replay (2014.31976ms)
+✔ local cabin and shaft actually occlude eye rays during travel; only its own landed gates open (2902.584471ms)
+✖ expansion adds varied 1/2/3-cell bodies north/central/south, not another repetitive eastern strip (1.105219ms)
+✔ new permanent internal borders are continuous real walkable space, without internal transport shutters (1363.550138ms)
+✔ all new residential regions connect in ABC, and actual walking reaches the local EV before using vertical service (28492.985609ms)
+✔ local EV uses the same close/select/travel/open workflow, keeps the main EV independent and supports calls/cancel (29.795349ms)
+✔ two-floor fixed shaft occupies the actual L-shaped void, reserves clearance and is not an empty walkable dock (69.16467ms)
+✔ G2 onsite/near rotations reserve all swept angles and keep a rider local over repeated complete cycles (15967.444859ms)
+✔ expanded common-space/house floor swap and every new mover follow continuous plans, not arrival snaps (322.174829ms)
+✔ room-fixed boundaries are not connection panels; wide and offset interfaces keep deliberate supported profiles (588.649563ms)
+✔ private enclosures keep their real opaque fixed wall from inside in every phase (6101.32733ms)
+✔ spatial and cached CSG is equivalent to forced global brute-force surfaces (3.938466ms)
+✔ body batches never mix owners, retain independent animated objects and avoid duplicate source drawing (1865.890845ms)
+✔ private-room / closed-transfer culling does not modify coordinates and full overview retains all bodies (1184.9205ms)
+✔ static map base is reused while player marker changes, and door/phase changes invalidate it (1549.800741ms)
+✔ compiled timeline positions exactly match original full physical replay at every boundary and midpoint (5560.522507ms)
+✖ validated-plan cache is invalidated by body geometry changes instead of blindly reusing an old route (7810.554544ms)
+✔ spatial walking broad phase exactly matches the brute-force owner and collision oracle (1005.383928ms)
+✔ browser profiler never manufactures FPS or draw calls without a real WebGL renderer (4.05405ms)
+✔ precomputed plan manifests are rejected on premise mismatch or wrong destinations (45.541836ms)
+✔ reference templates are rechecked against current exact collision state, not blindly displayed (572.480425ms)
+✔ Q1 is kept physically in a nearby full-size lower-deck slot, with no ordinary life-floor connection (4593.480941ms)
+✔ a safe current planar location rotates onsite, while an occupied near candidate falls back to a real reserved bay (97.370398ms)
+✔ rotation radius comes from actual occupied cells, including the missing corner of L1 (2.868291ms)
+✔ actual N4 rotation reservations include a certified location AND a non-zero time interval (7249.448309ms)
+✔ known ABC open/closed geometry states restore immutable buffers without repeated global rebuilds (5165.263663ms)
+✔ four-cell P9 carries player and home NPC through genuine complete ABC transport without local drift (16254.162407ms)
+✔ exact configurable 60 second schedule is 15 home / 45 work, with staggered phase and event override (1.331612ms)
+✔ two distinct NPCs each have exactly one location, with fully closed cover required for every commute (316.651682ms)
+✔ room presence opens a live 3D camera; absence reports the correct next home time and never unlocks a room (60.909723ms)
+✔ visits restore corridor body-local position and gaze after the hosting body moves (1.678803ms)
+✔ seen shopkeeper stays during conversation and a pending close refuses new transactions (130.613012ms)
+✔ player inside shop or overhead observation defers warp; transport closes covers without relocating NPCs (123.411577ms)
+✔ inventory browsing and wrong targets do not consume; correct use consumes exactly once with an auditable result (1.715241ms)
+✔ an already open transaction can finish after closing time without removing its NPC (75.380891ms)
+✔ versioned save restores actual whereabouts/covers/clock/flags/items/phase; old inventory and bad data are non-destructive (43.524914ms)
+✔ browser storage uses a dedicated new slot without clearing unrelated saves (6.968895ms)
+✖ new 4-cell common facility retains fixed private walls and no transport shutters on internal cell borders (3.84704ms)
+✔ sign normals point from private rooms toward the corridor and follow rigid body rotation (0.643974ms)
+✔ closed metal and curtain stalls actually hide the NPC from front, sides, rear and above (2356.859038ms)
+✔ world-level union handles perpendicular walls across groups and remains stable on rebuild (7.836796ms)
+✔ HTML controls and module initialization work with explicitly unavailable WebGL (46344.650927ms)
+ℹ tests 248
+ℹ suites 0
+ℹ pass 240
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 392940.988716
+
+✖ failing tests:
+
+test at tests/expansion.test.mjs:8:1
+✖ extension keeps the two original levels and adds the first, adds four mobile rooms and creates physically walkable east paths (2.826564ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  66 !== 60
+  
+      at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/expansion.test.mjs:8:176)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 66,
+    expected: 60,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/lab.test.mjs:13:1
+✖ dense expanded architecture contains 60 bodies, 89 cells, corridor-only bodies and large permanent unions (2.460546ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  66 !== 60
+  
+      at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/lab.test.mjs:13:126)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 66,
+    expected: 60,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/stage6.test.mjs:9:1
+✖ 89 cells retain dense three-floor architecture, four remote cells, five fixed springs and four wall organisms (3.141659ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  66 !== 60
+  
+      at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/stage6.test.mjs:9:130)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 66,
+    expected: 60,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/stage6.test.mjs:10:1
+✖ remote wing never has a walking graph connection to the main facility, but has validated return service in B (716.526559ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(route.ok)
+  
+      at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/stage6.test.mjs:10:593)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/stage7.test.mjs:7:1
+✖ new residences mix moving three-cell, two-cell and single bodies, with no mechanical internal boundaries (2.664899ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  66 !== 60
+  
+      at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/stage7.test.mjs:7:125)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 66,
+    expected: 60,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/stage8-expansion.test.mjs:11:1
+✖ expansion adds varied 1/2/3-cell bodies north/central/south, not another repetitive eastern strip (1.105219ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  66 !== 60
+  
+      at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/stage8-expansion.test.mjs:11:118)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 66,
+    expected: 60,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/stage8-performance.test.mjs:10:1
+✖ validated-plan cache is invalidated by body geometry changes instead of blindly reusing an old route (7810.554544ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/stage8-performance.test.mjs:10:321)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/stage9-life.test.mjs:16:1
+✖ new 4-cell common facility retains fixed private walls and no transport shutters on internal cell borders (3.84704ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  66 !== 60
+  
+      at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/stage9-life.test.mjs:16:126)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 66,
+    expected: 60,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

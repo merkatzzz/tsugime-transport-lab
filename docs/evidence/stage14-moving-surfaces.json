@@ -1,0 +1,46 @@
+{
+  "ok": true,
+  "rows": [
+    {
+      "p": 0,
+      "sameNormalOverlaps": 0,
+      "first": []
+    },
+    {
+      "p": 0.25,
+      "sameNormalOverlaps": 0,
+      "first": []
+    },
+    {
+      "p": 0.6,
+      "sameNormalOverlaps": 0,
+      "first": []
+    },
+    {
+      "p": 0.72,
+      "sameNormalOverlaps": 0,
+      "first": []
+    },
+    {
+      "p": 0.82,
+      "sameNormalOverlaps": 0,
+      "first": []
+    },
+    {
+      "p": 0.93,
+      "sameNormalOverlaps": 0,
+      "first": []
+    },
+    {
+      "p": 0.99,
+      "sameNormalOverlaps": 0,
+      "first": []
+    },
+    {
+      "p": 1,
+      "sameNormalOverlaps": 0,
+      "first": []
+    }
+  ],
+  "scope": "Axis-aligned exposed triangle planes, including changed moving atrium groups at eight states; existing ordinary door/gate mounting contacts remain excluded. No GPU flicker or transparency compositing claim."
+}

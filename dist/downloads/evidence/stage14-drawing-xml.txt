@@ -1,0 +1,1 @@
+{"ok": true, "drawings": 8, "method": "Standalone SVG XML and finite-coordinate validation; not WebGL."}

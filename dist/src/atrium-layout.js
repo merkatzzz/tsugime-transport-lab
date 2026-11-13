@@ -10,6 +10,7 @@ export function addAtrium(bodies){
  bodies.push({...structuredClone(common),id:'AC1',name:'吹き抜け住宅・導入廊下',color:'#99b2a7',ceiling:2.8,cells:[[0,0],[1,0]],ports:[port('west','W',5.6,7.6),port('east','E',6,7.8)],roofAreas:[{x:0,z:0,w:16,d:8,height:2.8}]});
  for(let tier=0;tier<3;tier++){const b={...structuredClone(common),id:ATRIUM_IDS[tier],name:['吹き抜け住宅・第二層','吹き抜け住宅・中間段','吹き抜け住宅・第三層'][tier],color:'#a6b7a0',atrium:tier,cells:[[0,0],[1,0],[0,1],[1,1]],ports:tier===0?[port('entry','W',6,7.8)]:[]};
   for(const z of[.8,11]){b.walls.push({a:[4.6,z],b:[4.6,z+1.1],role:'room-fixed'},{a:[4.6,z+2.3],b:[4.6,z+4.1],role:'room-fixed'},{a:[.2,z],b:[4.6,z],role:'room-fixed'},{a:[.2,z+4.1],b:[4.6,z+4.1],role:'room-fixed'});b.doors.push({id:b.id+'-'+z,a:[4.6,z+1.1],b:[4.6,z+2.3],kind:'hinge',hinge:'a',swing:90,open:false,label:'共用住戸',floor:BASE});b.furniture.push({x:.7,z:z+.6,w:1.2,d:2,h:.45,floor:BASE,color:'wood'});}
+  b.roomCeilings=[.8,11].map(z=>({x:.12,z:z-.06,w:4.54,d:4.22,y:BASE+.16+3.4,h:.08}));
   b.walls=b.walls.map(w=>({...w,floor:BASE,height:3.4}));b.labels=[{name:b.name,x:3,z:8}];bodies.push(b);
  }
 }

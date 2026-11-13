@@ -1,0 +1,21 @@
+{
+  "cpuChecksPassed": false,
+  "rows": [
+    {
+      "name": "plans",
+      "exit": 0
+    },
+    {
+      "name": "tests",
+      "exit": 1
+    }
+  ],
+  "testCounts": {
+    "total": 248,
+    "passed": 240,
+    "failed": 8
+  },
+  "webglRendered": false,
+  "humanFirstPersonWalkVerified": false,
+  "completion": "CPU geometry, normal controller input replay and continuous transport validation; WebGL inspection remains separate."
+}

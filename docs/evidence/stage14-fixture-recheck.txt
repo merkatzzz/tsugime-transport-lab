@@ -1,0 +1,16 @@
+✔ extension keeps the two original levels and adds the first, adds four mobile rooms and creates physically walkable east paths (9938.543428ms)
+✔ dense expanded architecture contains 66 bodies, 95 cells, corridor-only bodies and large permanent unions (36.398005ms)
+✔ 95 cells retain dense three-floor architecture, four remote cells, five fixed springs and four wall organisms (4.741926ms)
+✔ remote wing never has a walking graph connection to the main facility, but has validated return service in B (3309.979727ms)
+✔ new residences mix moving three-cell, two-cell and single bodies, with no mechanical internal boundaries (2.596308ms)
+✔ expansion adds varied 1/2/3-cell bodies north/central/south, not another repetitive eastern strip (2.99544ms)
+✔ validated-plan cache is invalidated by body geometry changes instead of blindly reusing an old route (12593.94175ms)
+✔ new 4-cell common facility retains fixed private walls and no transport shutters on internal cell borders (1009.800885ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17492.567449

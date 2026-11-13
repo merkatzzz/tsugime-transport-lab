@@ -1,3 +1,4 @@
+import {SOUTH_IDS,SOUTH_FIXED,SOUTH_PURPOSE,southPlacements} from './south-market-layout.js';
 import {ROOM_PURPOSE,largeRoomPlacements} from './large-room-layout.js';
 import {ATRIUM_PURPOSE,atriumPlacements} from './atrium-layout.js';
 import {DISTRICT_PURPOSE,districtPlacements} from './stage11-layout.js';
@@ -7,9 +8,9 @@ const groups=[
  [1,['R1','R2','R3','R4','T1','T2','H1','L1']], [3,['J1','J2','J3','C0']],
  [4,['E1','E2','E3','E4']], [5,['H2','K1','K2','M1']],
  [6,['U1','U2','U3','U4','U5','N1','N2','N3','N4','S1','D1','D2','D3','D4']],
- [7,['V1','V2','V3','A3','Q1','W1']], [8,['G1','G2','G3','G4','G5']], [9,['J9','P9']], [11,['RH1','CP1','MK1','SH1','SH2','LB1']], [12,['AT0','AT1','AT2','AC1']], [13,['BR1','BR2','BR3']]
+ [7,['V1','V2','V3','A3','Q1','W1']], [8,['G1','G2','G3','G4','G5']], [9,['J9','P9']], [11,['RH1','CP1','MK1','SH1','SH2','LB1']], [12,['AT0','AT1','AT2','AC1']], [13,['BR1','BR2','BR3']], [14,SOUTH_IDS]
 ];
-const purpose={...ROOM_PURPOSE,...DISTRICT_PURPOSE,...ATRIUM_PURPOSE,
+const purpose={...SOUTH_PURPOSE,...ROOM_PURPOSE,...DISTRICT_PURPOSE,...ATRIUM_PURPOSE,
  R1:'同じ住戸からの近道比較の基準として待機',R4:'第二層主EVの着床先と生活通路を維持',
  T1:'生活用品店と参照経路の目的地として待機',T2:'第二層店舗・東翼への接続を維持',
  J2:'C0挿入・撤収に対する分岐の基準点として待機',K1:'第一層主EVの着床先として待機',K2:'第一層探索水路・生活通路の基準点として待機',
@@ -25,7 +26,7 @@ const purpose={...ROOM_PURPOSE,...DISTRICT_PURPOSE,...ATRIUM_PURPOSE,
  G1:'CではM1と順序を交換し、K2から直接入る二連結住宅に変更',G2:'現地・近傍回転で住宅と生活通路を接続',G3:'三連結居間を二つの階へ運び居住区EVと生活棟を接続',G4:'折れ通路の平面位置を変更して北住宅を再接続',G5:'居住区EVの住戸を階交換。南の増設空欄を実際に退避利用',
  J9:'G5に接続する生活廊下をBで第一層へ移す',P9:'四連結生活棟をBで第一層へ運び、接続相手をG3からG5へ変更'
 };
-export const BODY_POLICY=Object.fromEntries(groups.flatMap(([generation,ids])=>ids.map(id=>[id,{generation,kind:'transportable',purpose:purpose[id]}])));
+export const BODY_POLICY=Object.fromEntries(groups.flatMap(([generation,ids])=>ids.map(id=>[id,{generation,kind:SOUTH_FIXED.includes(id)?'fixed':'transportable',purpose:purpose[id]}])));
 export function redesignFacility(bodies){
  for(const b of bodies){const p=BODY_POLICY[b.id];if(!p?.purpose)throw Error(b.id+': ABC設計と待機理由を登録してください');b.mobility=p;}
  for(const [id,port]of [['U1','S'],['U2','N']])bodies.find(b=>b.id===id).ports.find(p=>p.id===port).permanent=false;
@@ -33,9 +34,9 @@ export function redesignFacility(bodies){
 export function facilityPlacements(phase,p){
  if(phase==='B'){p.P9={x:58.8,y:-12.8,z:25.2};p.J9={x:50.4,y:-12.8,z:33.2};p.U2={x:58.8,y:12.8,z:0};}
  if(phase==='C'){p.G1={x:16.8,y:-12.8,z:0};p.M1={x:33.6,y:-12.8,z:0};}
- return largeRoomPlacements(phase,atriumPlacements(phase,districtPlacements(phase,p)));
+ return southPlacements(phase,largeRoomPlacements(phase,atriumPlacements(phase,districtPlacements(phase,p))));
 }
-export const transitDeck=(id,start)=>['M1','V1','Q1','G1','G2','G3','G4','G5','J9','P9','LB1','SH1','BR1','BR3'].includes(id)?-6.4:id==='V3'&&start.y<0?-6.4:6.4;
+export const transitDeck=(id,start)=>['M1','V1','Q1','G1','G2','G3','G4','G5','J9','P9','LB1','SH1','BR1','BR3','SM1','SM2'].includes(id)?-6.4:id==='V3'&&start.y<0?-6.4:6.4;
 export function facilityJobs(from,to,e,initial,target){
  if(!({A:'B',B:'C',C:'A'}[from]===to))throw Error('Supported sequence is A→B→C→A');
  for(const id of Object.keys(target))if(!BODY_POLICY[id]?.purpose)throw Error(id+': 施設全体の設計方針なし');
@@ -54,6 +55,7 @@ export function facilityJobs(from,to,e,initial,target){
   run(['J3','C0','R2']);at('J1',{x:0,y:12.8,z:25.2},'南の空欄で通路交換');run(['R3','J1']);swap('E3','E1');swap('E2','E4');
   run(['M1','H2','V1','V2','Q1','N4','S1','V3','G1','G2','G4']);housing();run(['J9','P9']);
  }else{
+  run(['SC1']);
   at('G1',{x:16.8,y:-6.4,z:8.4},'住宅と交流室の順序交換・近傍の空欄に退避');run(['M1','G1','L1','J3']);at('J1',{x:0,y:12.8,z:25.2},'南の空欄で通路交換');run(['R3','J1']);swap('E4','E2');
  }
  if(from==='A')run(['CP1','RH1','MK1','SH2','LB1']);else if(from==='B')run(['RH1','CP1','MK1','SH2','LB1']);

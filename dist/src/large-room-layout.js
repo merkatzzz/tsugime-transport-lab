@@ -1,6 +1,6 @@
 // Independent one-cell rooms; no internal hallway or room-partition rule.
 export const ROOM_IDS=['BR1','BR2','BR3'];
-export const ROOM_PURPOSE={BR1:'一チャンク一室。J9から直接入り、Bで第一層へ独立搬送',BR2:'大部屋西室。A/CはBR3と広い境界で接続し、Bは西へ独立搬送して閉鎖',BR3:'大部屋東室。A/CはBR2と接続し、BはBR1と第一層へ独立搬送'};
+export const ROOM_PURPOSE={BR1:'一チャンク一室。AはJ9から直接入り、Bは第一層、Cは南商店街の西へ独立搬送',BR2:'大部屋西室。A/CはBR3と広い境界で接続し、Cは南西へ移動。Bは西の空欄へ独立搬送して閉鎖',BR3:'大部屋東室。A/CはBR2と接続し、Cは南の回遊街路の西へ。BはBR1と第一層へ独立搬送'};
 const port=(id,face,a=3,b=5,height=2.5)=>({id,face,a,b,height,role:'boundary-connector'});
 const wide=face=>({...port('wide',face,.6,7.4,5.2),adaptive:true,adaptiveRecess:.1,wideSafety:true,profiles:[[.6,7.4]]});
 export function addLargeRooms(bodies){bodies.find(b=>b.id==='J9').ports.push(port('large-rooms','S'));

@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "statesPerWall": 101,
+  "walls": 2,
+  "collisions": [],
+  "envelope": [],
+  "scope": "Actual slat vertices versus fixed walls, frames, roof/floor and other slats with 3D SAT. Sampled poses; no GPU or continuous-time claim."
+}

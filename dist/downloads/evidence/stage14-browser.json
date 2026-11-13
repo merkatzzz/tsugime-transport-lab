@@ -1,0 +1,18 @@
+{
+  "attempted": true,
+  "webglRendered": false,
+  "humanFirstPersonWalkVerified": false,
+  "audioHeard": false,
+  "managedPreview": {
+    "command": "sites-preview start /workspace/work/tsugime-stage4",
+    "error": "relay could not open browser port 4173: timed out waiting for relay readiness",
+    "status": "stopped",
+    "explicitlyStoppedAfterAttempt": true
+  },
+  "sharedChrome": {
+    "url": "https://tsugime-architecture-transport-lab.merkatzzz.chatgpt.site",
+    "error": "Browser Use could not read requirements",
+    "pageContentObserved": false
+  },
+  "scope": "Infrastructure attempts only. Source-derived diagrams and CPU input replay are not WebGL screenshots or human walking verification. No network or sharing policy was changed."
+}

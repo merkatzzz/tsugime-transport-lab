@@ -32,6 +32,7 @@ if not frozen10.exists():
 frozen_redesign = downloads/'stage10-redesign-frozen-source.zip'
 if not frozen_redesign.exists():
     subprocess.run(['git','archive','--format=zip','--output='+str(frozen_redesign),'stage10-redesign-frozen'],cwd=root,check=True)
+shutil.copy2(root/'docs/STAGE14.md', downloads/'STAGE14.md')
 shutil.copy2(root/'docs/STAGE13.md', downloads/'STAGE13.md')
 shutil.copy2(root/'docs/STAGE12-REPAIR.md', downloads/'STAGE12-REPAIR.md')
 shutil.copy2(root/'docs/OPEN-ISSUES.md', downloads/'OPEN-ISSUES.md')
@@ -94,6 +95,7 @@ def inline(text):
     s = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', s)
     s = re.sub(r'`([^`]+)`', r'<code>\1</code>', s)
     s = s.replace('href="FACILITY-DESIGN.md"', 'href="downloads/FACILITY-DESIGN.md"').replace('href="PERFORMANCE-REDESIGN.md"', 'href="downloads/PERFORMANCE-REDESIGN.md"')
+    s = s.replace('href="STAGE14.md"', 'href="downloads/STAGE14.md"')
     s = s.replace('href="STAGE13.md"', 'href="downloads/STAGE13.md"')
     s = s.replace('href="STAGE12-REPAIR.md"', 'href="downloads/STAGE12-REPAIR.md"').replace('href="OPEN-ISSUES.md"', 'href="downloads/OPEN-ISSUES.md"')
     s = s.replace('href="STAGE12.md"', 'href="downloads/STAGE12.md"')
@@ -101,7 +103,7 @@ def inline(text):
     s = s.replace('href="STAGE11.md"', 'href="downloads/STAGE11.md"').replace('href="PERFORMANCE-STAGE11.md"', 'href="downloads/PERFORMANCE-STAGE11.md"')
     return s
 
-lines = ((root/'docs/STAGE13.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 過去の報告（以下は旧段階の記録）\n\n'+(root/'docs/STAGE12-REPAIR.md').read_text()+'\n\n'+(root/'docs/STAGE12.md').read_text()+'\n\n'+(root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
+lines = ((root/'docs/STAGE14.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 過去の報告（以下は旧段階の記録）\n\n'+(root/'docs/STAGE13.md').read_text()+'\n\n'+(root/'docs/STAGE12-REPAIR.md').read_text()+'\n\n'+(root/'docs/STAGE12.md').read_text()+'\n\n'+(root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
 parts = []
 i = 0
 while i < len(lines):
@@ -129,7 +131,8 @@ while i < len(lines):
     i += 1
 
 stage13_drawings = '<h2>拡張吹き抜け・独立連結大部屋（実データ図面）</h2><div class="drawings">'+''.join(f'<figure><figcaption>{n}</figcaption><img src="downloads/evidence/{n}.svg" alt="吹き抜けと大部屋の実データ図面"></figure>' for n in ['stage13-atrium-comparison','stage13-B-atrium','stage13-B-section','stage13-storage','stage13-large-rooms'])+'</div>'
-repair_drawings = stage13_drawings + '<h2>修復前後・共用入口・三段接続</h2><div class="drawings">'+''.join(f'<figure><figcaption>{n}</figcaption><img src="downloads/evidence/{n}.svg" alt="修復版の実データ図面"></figure>' for n in ['stage12-market-plan','stage12-repair-market-plan','stage12-repair-market-separated','stage12-repair-entry-plan','stage12-repair-B-atrium','stage12-repair-B-section'])+'</div>'
+stage14_drawings = '<h2>第14段階の全体図・南商店街・実搬送経路（実データ図面）</h2><div class="drawings">'+''.join(f'<figure><figcaption>{n}</figcaption><img src="downloads/evidence/{n}.svg" alt="施設再配置と南側拡張の実データ図面"></figure>' for n in ['stage14-before-C-overview','stage14-C-overview','stage14-A-overview','stage14-B-overview','stage14-market','stage14-routes'])+'</div>'
+repair_drawings = stage14_drawings + stage13_drawings + '<h2>修復前後・共用入口・三段接続</h2><div class="drawings">'+''.join(f'<figure><figcaption>{n}</figcaption><img src="downloads/evidence/{n}.svg" alt="修復版の実データ図面"></figure>' for n in ['stage12-market-plan','stage12-repair-market-plan','stage12-repair-market-separated','stage12-repair-entry-plan','stage12-repair-B-atrium','stage12-repair-B-section'])+'</div>'
 drawings = repair_drawings + '<h2>第12段階：共同街路・三段接続・収納（実データ図面）</h2><div class="drawings">'+''.join(f'<figure><figcaption>{n}</figcaption><img src="downloads/evidence/{n}.svg" alt="第12段階の実データ図面"></figure>' for n in ['stage12-market-plan','stage12-market-separated','stage12-B-atrium','stage12-B-section','stage12-A-section','stage12-C-section','stage12-storage'])+'</div>'
 drawings += '<h2>着手前・区域化後の図面比較（設計図・実画面ではありません）</h2>'
 drawings += '<h2>新しい建築の内部平面図</h2><div class="drawings">'+''.join(f'<figure><figcaption>{body} 内部 +{floor}m</figcaption><img src="downloads/evidence/stage11-{body}-floor-{floor}.svg" alt="{body}の設計平面図"></figure>' for body in ['RH1','MK1','SH1','SH2','CP1','LB1'] for floor in ([0,3] if body == 'CP1' else [0]))+'</div>'
