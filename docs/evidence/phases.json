@@ -291,6 +291,21 @@
         "x": 92.4,
         "y": 12.8,
         "z": 25.2
+      },
+      "BR1": {
+        "x": 50.4,
+        "y": 0,
+        "z": 41.6
+      },
+      "BR2": {
+        "x": 42,
+        "y": 0,
+        "z": 50
+      },
+      "BR3": {
+        "x": 50.4,
+        "y": 0,
+        "z": 50
       }
     },
     "connections": [
@@ -1687,6 +1702,35 @@
         }
       },
       {
+        "id": "J9:large-rooms|BR1:entry",
+        "a": "J9/0",
+        "b": "BR1/0",
+        "bodyA": "J9",
+        "bodyB": "BR1",
+        "portA": "large-rooms",
+        "portB": "entry",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 53.4,
+        "end": 55.4,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 53.4,
+          "z": 41.2,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
         "id": "P9:market-south|SH1:north",
         "a": "P9/2",
         "b": "SH1/0",
@@ -1914,6 +1958,64 @@
           "z": 31.2,
           "w": 0.8000000000000114,
           "d": 1.8000000000000007,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
+        "id": "BR1:south|BR3:entry",
+        "a": "BR1/0",
+        "b": "BR3/0",
+        "bodyA": "BR1",
+        "bodyB": "BR3",
+        "portA": "south",
+        "portB": "entry",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 53.4,
+        "end": 55.4,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 53.4,
+          "z": 49.6,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
+        "id": "BR2:wide|BR3:wide",
+        "a": "BR2/0",
+        "b": "BR3/0",
+        "bodyA": "BR2",
+        "bodyB": "BR3",
+        "portA": "wide",
+        "portB": "wide",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 6.799999999999997,
+        "height": 5.2,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 50.6,
+        "end": 57.4,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 50,
+          "z": 50.6,
+          "w": 0.3999999999999986,
+          "d": 6.799999999999997,
           "orientation": "EW",
           "y": 0
         }
@@ -9316,6 +9418,66 @@
         "masked": []
       },
       {
+        "id": "large-rooms",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "J9",
+        "key": "J9:large-rooms",
+        "node": "J9/0",
+        "level": 0,
+        "y": 0,
+        "plane": 41.2,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "J9:large-rooms|BR1:entry",
+            "a": "J9/0",
+            "b": "BR1/0",
+            "bodyA": "J9",
+            "bodyB": "BR1",
+            "portA": "large-rooms",
+            "portB": "entry",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 41.2,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "J9:large-rooms|BR1:entry"
+          }
+        ],
+        "masked": []
+      },
+      {
         "id": "W",
         "face": "W",
         "a": 11.6,
@@ -10409,6 +10571,322 @@
         "masked": []
       },
       {
+        "id": "entry",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "BR1",
+        "key": "BR1:entry",
+        "node": "BR1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 41.6,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "J9:large-rooms|BR1:entry",
+            "a": "J9/0",
+            "b": "BR1/0",
+            "bodyA": "J9",
+            "bodyB": "BR1",
+            "portA": "large-rooms",
+            "portB": "entry",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 41.2,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "J9:large-rooms|BR1:entry"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "south",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "BR1",
+        "key": "BR1:south",
+        "node": "BR1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 49.6,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR1:south|BR3:entry",
+            "a": "BR1/0",
+            "b": "BR3/0",
+            "bodyA": "BR1",
+            "bodyB": "BR3",
+            "portA": "south",
+            "portB": "entry",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 49.6,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR1:south|BR3:entry"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "wide",
+        "face": "E",
+        "a": 0.6,
+        "b": 7.4,
+        "height": 5.2,
+        "role": "boundary-connector",
+        "adaptive": true,
+        "wideSafety": true,
+        "profiles": [
+          [
+            0.6,
+            7.4
+          ]
+        ],
+        "localFace": "E",
+        "reversed": false,
+        "body": "BR2",
+        "key": "BR2:wide",
+        "node": "BR2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 50.6,
+        "end": 57.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR2:wide|BR3:wide",
+            "a": "BR2/0",
+            "b": "BR3/0",
+            "bodyA": "BR2",
+            "bodyB": "BR3",
+            "portA": "wide",
+            "portB": "wide",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 6.799999999999997,
+            "height": 5.2,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 50.6,
+            "end": 57.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 50,
+              "z": 50.6,
+              "w": 0.3999999999999986,
+              "d": 6.799999999999997,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 0.6000000000000014,
+            "b": 7.399999999999999,
+            "height": 5.2,
+            "status": "pass",
+            "id": "BR2:wide|BR3:wide"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "entry",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "BR3",
+        "key": "BR3:entry",
+        "node": "BR3/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR1:south|BR3:entry",
+            "a": "BR1/0",
+            "b": "BR3/0",
+            "bodyA": "BR1",
+            "bodyB": "BR3",
+            "portA": "south",
+            "portB": "entry",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 49.6,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR1:south|BR3:entry"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "wide",
+        "face": "W",
+        "a": 0.6,
+        "b": 7.4,
+        "height": 5.2,
+        "role": "boundary-connector",
+        "adaptive": true,
+        "wideSafety": true,
+        "profiles": [
+          [
+            0.6,
+            7.4
+          ]
+        ],
+        "localFace": "W",
+        "reversed": false,
+        "body": "BR3",
+        "key": "BR3:wide",
+        "node": "BR3/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50.4,
+        "start": 50.6,
+        "end": 57.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR2:wide|BR3:wide",
+            "a": "BR2/0",
+            "b": "BR3/0",
+            "bodyA": "BR2",
+            "bodyB": "BR3",
+            "portA": "wide",
+            "portB": "wide",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 6.799999999999997,
+            "height": 5.2,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 50.6,
+            "end": 57.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 50,
+              "z": 50.6,
+              "w": 0.3999999999999986,
+              "d": 6.799999999999997,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 0.6000000000000014,
+            "b": 7.399999999999999,
+            "height": 5.2,
+            "status": "pass",
+            "id": "BR2:wide|BR3:wide"
+          }
+        ],
+        "masked": []
+      },
+      {
         "id": "E",
         "body": "LF2",
         "key": "LF2:E",
@@ -10741,12 +11219,15 @@
       "G5/0",
       "J9/0",
       "P9/2",
+      "BR1/0",
       "SH1/0",
       "AC1/0",
       "W2",
       "SH2/0",
       "LB1/0",
-      "AT0/0"
+      "AT0/0",
+      "BR3/0",
+      "BR2/0"
     ],
     "emptyDockCells": [
       {
@@ -11320,16 +11801,6 @@
         "floor": false
       },
       {
-        "col": 6,
-        "row": 5,
-        "x": 50.400000000000006,
-        "z": 42,
-        "y": 0,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
         "col": 9,
         "row": 5,
         "x": 75.60000000000001,
@@ -11443,26 +11914,6 @@
         "col": 4,
         "row": 6,
         "x": 33.6,
-        "z": 50.400000000000006,
-        "y": 0,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 5,
-        "row": 6,
-        "x": 42,
-        "z": 50.400000000000006,
-        "y": 0,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 6,
-        "row": 6,
-        "x": 50.400000000000006,
         "z": 50.400000000000006,
         "y": 0,
         "w": 8,
@@ -14023,6 +14474,21 @@
         "x": 92.4,
         "y": 12.8,
         "z": 25.2
+      },
+      "BR1": {
+        "x": 50.4,
+        "y": -12.8,
+        "z": 41.6
+      },
+      "BR2": {
+        "x": 33.6,
+        "y": 0,
+        "z": 50
+      },
+      "BR3": {
+        "x": 50.4,
+        "y": -12.8,
+        "z": 50
       }
     },
     "connections": [
@@ -15535,6 +16001,35 @@
         }
       },
       {
+        "id": "J9:large-rooms|BR1:entry",
+        "a": "J9/0",
+        "b": "BR1/0",
+        "bodyA": "J9",
+        "bodyB": "BR1",
+        "portA": "large-rooms",
+        "portB": "entry",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 53.4,
+        "end": 55.4,
+        "y": -12.8,
+        "level": 2,
+        "status": "pass",
+        "bridge": {
+          "x": 53.4,
+          "z": 41.2,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": -12.8
+        }
+      },
+      {
         "id": "P9:market-south|SH1:north",
         "a": "P9/2",
         "b": "SH1/0",
@@ -15677,6 +16172,35 @@
           "d": 1.8000000000000007,
           "orientation": "EW",
           "y": 0
+        }
+      },
+      {
+        "id": "BR1:south|BR3:entry",
+        "a": "BR1/0",
+        "b": "BR3/0",
+        "bodyA": "BR1",
+        "bodyB": "BR3",
+        "portA": "south",
+        "portB": "entry",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 53.4,
+        "end": 55.4,
+        "y": -12.8,
+        "level": 2,
+        "status": "pass",
+        "bridge": {
+          "x": 53.4,
+          "z": 49.6,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": -12.8
         }
       },
       {
@@ -23329,6 +23853,66 @@
         "masked": []
       },
       {
+        "id": "large-rooms",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "J9",
+        "key": "J9:large-rooms",
+        "node": "J9/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 41.2,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "J9:large-rooms|BR1:entry",
+            "a": "J9/0",
+            "b": "BR1/0",
+            "bodyA": "J9",
+            "bodyB": "BR1",
+            "portA": "large-rooms",
+            "portB": "entry",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 41.2,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "J9:large-rooms|BR1:entry"
+          }
+        ],
+        "masked": []
+      },
+      {
         "id": "W",
         "face": "W",
         "a": 11.6,
@@ -24241,6 +24825,256 @@
           }
         ],
         "masked": []
+      },
+      {
+        "id": "entry",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "BR1",
+        "key": "BR1:entry",
+        "node": "BR1/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 41.6,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "J9:large-rooms|BR1:entry",
+            "a": "J9/0",
+            "b": "BR1/0",
+            "bodyA": "J9",
+            "bodyB": "BR1",
+            "portA": "large-rooms",
+            "portB": "entry",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 41.2,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "J9:large-rooms|BR1:entry"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "south",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "BR1",
+        "key": "BR1:south",
+        "node": "BR1/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 49.6,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR1:south|BR3:entry",
+            "a": "BR1/0",
+            "b": "BR3/0",
+            "bodyA": "BR1",
+            "bodyB": "BR3",
+            "portA": "south",
+            "portB": "entry",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 49.6,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR1:south|BR3:entry"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "wide",
+        "face": "E",
+        "a": 0.6,
+        "b": 7.4,
+        "height": 5.2,
+        "role": "boundary-connector",
+        "adaptive": true,
+        "wideSafety": true,
+        "profiles": [
+          [
+            0.6,
+            7.4
+          ]
+        ],
+        "localFace": "E",
+        "reversed": false,
+        "body": "BR2",
+        "key": "BR2:wide",
+        "node": "BR2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 41.6,
+        "start": 50.6,
+        "end": 57.4,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 0.6,
+            "b": 7.4
+          }
+        ]
+      },
+      {
+        "id": "entry",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "BR3",
+        "key": "BR3:entry",
+        "node": "BR3/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 50,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR1:south|BR3:entry",
+            "a": "BR1/0",
+            "b": "BR3/0",
+            "bodyA": "BR1",
+            "bodyB": "BR3",
+            "portA": "south",
+            "portB": "entry",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": -12.8,
+            "level": 2,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 49.6,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": -12.8
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR1:south|BR3:entry"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "wide",
+        "face": "W",
+        "a": 0.6,
+        "b": 7.4,
+        "height": 5.2,
+        "role": "boundary-connector",
+        "adaptive": true,
+        "wideSafety": true,
+        "profiles": [
+          [
+            0.6,
+            7.4
+          ]
+        ],
+        "localFace": "W",
+        "reversed": false,
+        "body": "BR3",
+        "key": "BR3:wide",
+        "node": "BR3/0",
+        "level": 2,
+        "y": -12.8,
+        "plane": 50.4,
+        "start": 50.6,
+        "end": 57.4,
+        "status": "blocked",
+        "matches": [],
+        "openings": [],
+        "masked": [
+          {
+            "a": 0.6,
+            "b": 7.4
+          }
+        ]
       },
       {
         "id": "E",
@@ -25302,16 +26136,6 @@
         "floor": false
       },
       {
-        "col": 4,
-        "row": 6,
-        "x": 33.6,
-        "z": 50.400000000000006,
-        "y": 0,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
         "col": 5,
         "row": 6,
         "x": 42,
@@ -27112,16 +27936,6 @@
         "floor": false
       },
       {
-        "col": 6,
-        "row": 5,
-        "x": 50.400000000000006,
-        "z": 42,
-        "y": -12.8,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
         "col": 8,
         "row": 5,
         "x": 67.2,
@@ -27255,16 +28069,6 @@
         "col": 5,
         "row": 6,
         "x": 42,
-        "z": 50.400000000000006,
-        "y": -12.8,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 6,
-        "row": 6,
-        "x": 50.400000000000006,
         "z": 50.400000000000006,
         "y": -12.8,
         "w": 8,
@@ -27815,6 +28619,21 @@
         "x": 92.4,
         "y": 12.8,
         "z": 25.2
+      },
+      "BR1": {
+        "x": 50.4,
+        "y": 0,
+        "z": 41.6
+      },
+      "BR2": {
+        "x": 42,
+        "y": 0,
+        "z": 50
+      },
+      "BR3": {
+        "x": 50.4,
+        "y": 0,
+        "z": 50
       }
     },
     "connections": [
@@ -29124,6 +29943,35 @@
         }
       },
       {
+        "id": "J9:large-rooms|BR1:entry",
+        "a": "J9/0",
+        "b": "BR1/0",
+        "bodyA": "J9",
+        "bodyB": "BR1",
+        "portA": "large-rooms",
+        "portB": "entry",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 53.4,
+        "end": 55.4,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 53.4,
+          "z": 41.2,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
         "id": "P9:market-south|SH1:north",
         "a": "P9/2",
         "b": "SH1/0",
@@ -29351,6 +30199,64 @@
           "z": 31.2,
           "w": 0.8000000000000114,
           "d": 1.8000000000000007,
+          "orientation": "EW",
+          "y": 0
+        }
+      },
+      {
+        "id": "BR1:south|BR3:entry",
+        "a": "BR1/0",
+        "b": "BR3/0",
+        "bodyA": "BR1",
+        "bodyB": "BR3",
+        "portA": "south",
+        "portB": "entry",
+        "faceA": "S",
+        "faceB": "N",
+        "width": 2,
+        "height": 2.5,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 53.4,
+        "end": 55.4,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 53.4,
+          "z": 49.6,
+          "w": 2,
+          "d": 0.3999999999999986,
+          "orientation": "NS",
+          "y": 0
+        }
+      },
+      {
+        "id": "BR2:wide|BR3:wide",
+        "a": "BR2/0",
+        "b": "BR3/0",
+        "bodyA": "BR2",
+        "bodyB": "BR3",
+        "portA": "wide",
+        "portB": "wide",
+        "faceA": "E",
+        "faceB": "W",
+        "width": 6.799999999999997,
+        "height": 5.2,
+        "gap": 0.3999999999999986,
+        "permanent": false,
+        "reason": "",
+        "start": 50.6,
+        "end": 57.4,
+        "y": 0,
+        "level": 0,
+        "status": "pass",
+        "bridge": {
+          "x": 50,
+          "z": 50.6,
+          "w": 0.3999999999999986,
+          "d": 6.799999999999997,
           "orientation": "EW",
           "y": 0
         }
@@ -36547,6 +37453,66 @@
         "masked": []
       },
       {
+        "id": "large-rooms",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "J9",
+        "key": "J9:large-rooms",
+        "node": "J9/0",
+        "level": 0,
+        "y": 0,
+        "plane": 41.2,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "J9:large-rooms|BR1:entry",
+            "a": "J9/0",
+            "b": "BR1/0",
+            "bodyA": "J9",
+            "bodyB": "BR1",
+            "portA": "large-rooms",
+            "portB": "entry",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 41.2,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "J9:large-rooms|BR1:entry"
+          }
+        ],
+        "masked": []
+      },
+      {
         "id": "W",
         "face": "W",
         "a": 11.6,
@@ -37640,6 +38606,322 @@
         "masked": []
       },
       {
+        "id": "entry",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "BR1",
+        "key": "BR1:entry",
+        "node": "BR1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 41.6,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "J9:large-rooms|BR1:entry",
+            "a": "J9/0",
+            "b": "BR1/0",
+            "bodyA": "J9",
+            "bodyB": "BR1",
+            "portA": "large-rooms",
+            "portB": "entry",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 41.2,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "J9:large-rooms|BR1:entry"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "south",
+        "face": "S",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "S",
+        "reversed": false,
+        "body": "BR1",
+        "key": "BR1:south",
+        "node": "BR1/0",
+        "level": 0,
+        "y": 0,
+        "plane": 49.6,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR1:south|BR3:entry",
+            "a": "BR1/0",
+            "b": "BR3/0",
+            "bodyA": "BR1",
+            "bodyB": "BR3",
+            "portA": "south",
+            "portB": "entry",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 49.6,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR1:south|BR3:entry"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "wide",
+        "face": "E",
+        "a": 0.6,
+        "b": 7.4,
+        "height": 5.2,
+        "role": "boundary-connector",
+        "adaptive": true,
+        "wideSafety": true,
+        "profiles": [
+          [
+            0.6,
+            7.4
+          ]
+        ],
+        "localFace": "E",
+        "reversed": false,
+        "body": "BR2",
+        "key": "BR2:wide",
+        "node": "BR2/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 50.6,
+        "end": 57.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR2:wide|BR3:wide",
+            "a": "BR2/0",
+            "b": "BR3/0",
+            "bodyA": "BR2",
+            "bodyB": "BR3",
+            "portA": "wide",
+            "portB": "wide",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 6.799999999999997,
+            "height": 5.2,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 50.6,
+            "end": 57.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 50,
+              "z": 50.6,
+              "w": 0.3999999999999986,
+              "d": 6.799999999999997,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 0.6000000000000014,
+            "b": 7.399999999999999,
+            "height": 5.2,
+            "status": "pass",
+            "id": "BR2:wide|BR3:wide"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "entry",
+        "face": "N",
+        "a": 3,
+        "b": 5,
+        "height": 2.5,
+        "role": "boundary-connector",
+        "localFace": "N",
+        "reversed": false,
+        "body": "BR3",
+        "key": "BR3:entry",
+        "node": "BR3/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50,
+        "start": 53.4,
+        "end": 55.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR1:south|BR3:entry",
+            "a": "BR1/0",
+            "b": "BR3/0",
+            "bodyA": "BR1",
+            "bodyB": "BR3",
+            "portA": "south",
+            "portB": "entry",
+            "faceA": "S",
+            "faceB": "N",
+            "width": 2,
+            "height": 2.5,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 53.4,
+            "end": 55.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 53.4,
+              "z": 49.6,
+              "w": 2,
+              "d": 0.3999999999999986,
+              "orientation": "NS",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 3,
+            "b": 5,
+            "height": 2.5,
+            "status": "pass",
+            "id": "BR1:south|BR3:entry"
+          }
+        ],
+        "masked": []
+      },
+      {
+        "id": "wide",
+        "face": "W",
+        "a": 0.6,
+        "b": 7.4,
+        "height": 5.2,
+        "role": "boundary-connector",
+        "adaptive": true,
+        "wideSafety": true,
+        "profiles": [
+          [
+            0.6,
+            7.4
+          ]
+        ],
+        "localFace": "W",
+        "reversed": false,
+        "body": "BR3",
+        "key": "BR3:wide",
+        "node": "BR3/0",
+        "level": 0,
+        "y": 0,
+        "plane": 50.4,
+        "start": 50.6,
+        "end": 57.4,
+        "status": "pass",
+        "matches": [
+          {
+            "id": "BR2:wide|BR3:wide",
+            "a": "BR2/0",
+            "b": "BR3/0",
+            "bodyA": "BR2",
+            "bodyB": "BR3",
+            "portA": "wide",
+            "portB": "wide",
+            "faceA": "E",
+            "faceB": "W",
+            "width": 6.799999999999997,
+            "height": 5.2,
+            "gap": 0.3999999999999986,
+            "permanent": false,
+            "reason": "",
+            "start": 50.6,
+            "end": 57.4,
+            "y": 0,
+            "level": 0,
+            "status": "pass",
+            "bridge": {
+              "x": 50,
+              "z": 50.6,
+              "w": 0.3999999999999986,
+              "d": 6.799999999999997,
+              "orientation": "EW",
+              "y": 0
+            }
+          }
+        ],
+        "openings": [
+          {
+            "a": 0.6000000000000014,
+            "b": 7.399999999999999,
+            "height": 5.2,
+            "status": "pass",
+            "id": "BR2:wide|BR3:wide"
+          }
+        ],
+        "masked": []
+      },
+      {
         "id": "E",
         "body": "LF2",
         "key": "LF2:E",
@@ -37971,12 +39253,15 @@
       "G5/0",
       "J9/0",
       "P9/2",
+      "BR1/0",
       "SH1/0",
       "AC1/0",
       "W2",
       "SH2/0",
       "LB1/0",
-      "AT0/0"
+      "AT0/0",
+      "BR3/0",
+      "BR2/0"
     ],
     "emptyDockCells": [
       {
@@ -38550,16 +39835,6 @@
         "floor": false
       },
       {
-        "col": 6,
-        "row": 5,
-        "x": 50.400000000000006,
-        "z": 42,
-        "y": 0,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
         "col": 9,
         "row": 5,
         "x": 75.60000000000001,
@@ -38673,26 +39948,6 @@
         "col": 4,
         "row": 6,
         "x": 33.6,
-        "z": 50.400000000000006,
-        "y": 0,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 5,
-        "row": 6,
-        "x": 42,
-        "z": 50.400000000000006,
-        "y": 0,
-        "w": 8,
-        "d": 8,
-        "floor": false
-      },
-      {
-        "col": 6,
-        "row": 6,
-        "x": 50.400000000000006,
         "z": 50.400000000000006,
         "y": 0,
         "w": 8,

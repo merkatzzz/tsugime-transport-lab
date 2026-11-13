@@ -1,0 +1,80 @@
+{
+  "cpuChecksPassed": true,
+  "rows": [
+    {
+      "name": "plans",
+      "exit": 0
+    },
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "mechanisms",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "moving-surfaces",
+      "exit": 0
+    },
+    {
+      "name": "surfaces",
+      "exit": 0
+    },
+    {
+      "name": "doors",
+      "exit": 0
+    },
+    {
+      "name": "walks",
+      "exit": 0
+    },
+    {
+      "name": "plans-and-maps",
+      "exit": 0
+    },
+    {
+      "name": "drawings",
+      "exit": 0
+    },
+    {
+      "name": "drawing-xml",
+      "exit": 0
+    },
+    {
+      "name": "final-affected-tests",
+      "exit": 0
+    },
+    {
+      "name": "wide-walls",
+      "exit": 0
+    }
+  ],
+  "testCounts": {
+    "total": 235,
+    "passed": 235,
+    "failed": 0
+  },
+  "webglRendered": false,
+  "humanFirstPersonWalkVerified": false,
+  "completion": "CPU checks and input replay only; actual WebGL route validation remains open.",
+  "finalAffectedTests": {
+    "ok": true,
+    "tests": 38,
+    "passed": 38,
+    "failed": 0,
+    "scope": "Final affected tests including broad-wall cache and shallow-reveal regression cases. Earlier complete run passed 235 cases; current catalog has 237 and these final 38 include both added cases. CPU only.",
+    "command": "node --test --test-concurrency=2 tests/stage13.test.mjs tests/stage10-water.test.mjs tests/stage9-life.test.mjs tests/ui.test.mjs tests/stage7-mesh.test.mjs"
+  },
+  "wideWallSweep": {
+    "ok": true,
+    "walls": 2,
+    "statesPerWall": 101,
+    "collisions": 0,
+    "envelopeFailures": 0
+  }
+}

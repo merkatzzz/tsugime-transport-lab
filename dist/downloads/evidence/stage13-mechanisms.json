@@ -1,0 +1,1827 @@
+{
+  "ok": true,
+  "states": 101,
+  "collisions": [],
+  "envelope": [],
+  "rows": [
+    {
+      "p": 0,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.01,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.01,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.01,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.02,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.02,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.02,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.03,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.03,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.03,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.04,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.04,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.04,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.05,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.05,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.05,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.06,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.06,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.06,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.07,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.07,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.07,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.08,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.08,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.08,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.09,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.09,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.09,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.1,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.1,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.1,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.11,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.11,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.11,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.12,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.12,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.12,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.13,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.13,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.13,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.14,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.14,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.14,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.15,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.15,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.15,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.16,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.16,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.16,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.17,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.17,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.17,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.18,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.18,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.18,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.19,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.19,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.19,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.2,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.2,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.2,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.21,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.21,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.21,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.22,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.22,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.22,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.23,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.23,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.23,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.24,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.24,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.24,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.25,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.25,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.25,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.26,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.26,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.26,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.27,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.27,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.27,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.28,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.28,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.28,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.29,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.29,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.29,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.3,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.3,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.3,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.31,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.31,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.31,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.32,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.32,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.32,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.33,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.33,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.33,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.34,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.34,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.34,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.35,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.35,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.35,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.36,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.36,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.36,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.37,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.37,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.37,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.38,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.38,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.38,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.39,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.39,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.39,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.4,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.4,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.4,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.41,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.41,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.41,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.42,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.42,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.42,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.43,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.43,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.43,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.44,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.44,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.44,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.45,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.45,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.45,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.46,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.46,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.46,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.47,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.47,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.47,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.48,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.48,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.48,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.49,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.49,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.49,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.5,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.5,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.5,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.51,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.51,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.51,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.52,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.52,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.52,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.53,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.53,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.53,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.54,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.54,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.54,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.55,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.55,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.55,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.56,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.56,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.56,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.57,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.57,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.57,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.58,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.58,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.58,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.59,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.59,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.59,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.6,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.6,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.6,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.61,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.61,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.61,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.62,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.62,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.62,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.63,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.63,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.63,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.64,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.64,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.64,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.65,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.65,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.65,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.66,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.66,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.66,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.67,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.67,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.67,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.68,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.68,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.68,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.69,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.69,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.69,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.7,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.7,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.7,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.71,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.71,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.71,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.72,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.72,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.72,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.73,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.73,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.73,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.74,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.74,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.74,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.75,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.75,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.75,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.76,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.76,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.76,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.77,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.77,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.77,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.78,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.78,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.78,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.79,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.79,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.79,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.8,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.8,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.8,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.81,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.81,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.81,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.82,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.82,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.82,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.83,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.83,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.83,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.84,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.84,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.84,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.85,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.85,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.85,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.86,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.86,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.86,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.87,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.87,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.87,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.88,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.88,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.88,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.89,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.89,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.89,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.9,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.9,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.9,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.91,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.91,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.91,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.92,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.92,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.92,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.93,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.93,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.93,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.94,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.94,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.94,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.95,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.95,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.95,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.96,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.96,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.96,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.97,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.97,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.97,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.98,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.98,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.98,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 0.99,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 0.99,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 0.99,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    },
+    {
+      "p": 1,
+      "id": "AT0",
+      "fixed": 152,
+      "moving": 42
+    },
+    {
+      "p": 1,
+      "id": "AT1",
+      "fixed": 208,
+      "moving": 165
+    },
+    {
+      "p": 1,
+      "id": "AT2",
+      "fixed": 95,
+      "moving": 123
+    }
+  ],
+  "scope": "Convex horizontal prism SAT for rigid translating floors, roofs, treads, telescopic glass and recessed sleeves. Hinged stair rails use full 3D convex SAT; gates have separate mesh/head-clearance tests. Sampled at 0.01 progress, Includes the two independently moving hatch leaves, telescopic collar sections and cross-body contacts; not a continuous-time proof or WebGL."
+}

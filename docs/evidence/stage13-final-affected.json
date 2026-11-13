@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "tests": 38,
+  "passed": 38,
+  "failed": 0,
+  "scope": "Final affected tests including broad-wall cache and shallow-reveal regression cases. Earlier complete run passed 235 cases; current catalog has 237 and these final 38 include both added cases. CPU only.",
+  "command": "node --test --test-concurrency=2 tests/stage13.test.mjs tests/stage10-water.test.mjs tests/stage9-life.test.mjs tests/ui.test.mjs tests/stage7-mesh.test.mjs"
+}

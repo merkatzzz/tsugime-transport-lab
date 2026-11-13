@@ -1,11 +1,11 @@
 {
   "stage": 11,
   "summary": {
-    "bodies": 57,
-    "cells": 86,
-    "transportable": 57,
+    "bodies": 60,
+    "cells": 89,
+    "transportable": 60,
     "fixedEquipment": 10,
-    "moved": 34,
+    "moved": 37,
     "waiting": 23,
     "duration": 84.5667,
     "transitions": [

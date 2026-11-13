@@ -1,0 +1,1 @@
+{"unchangedExistingDestinations":57,"counts":[60,89],"area":40.800000000000004,"plans":[{"phase":"A","valid":true,"duration":29.866666666666664},{"phase":"B","valid":true,"duration":37.36666666666667},{"phase":"C","valid":true,"duration":17.333333333333332}]}

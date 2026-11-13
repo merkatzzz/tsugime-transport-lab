@@ -1,0 +1,2 @@
+export const SLATS=12,SLAT_PITCH=.014,RECESS=.3;
+export function slatPoses(height,amount,inside=1,recess=RECESS){const len=height/SLATS,pitch=SLAT_PITCH+(len-SLAT_PITCH)*amount,angle=Math.acos(pitch/len),depth=Math.sin(angle)*len,spacing=pitch+.013*Math.sin(angle),top=.16+height+SLATS*(SLAT_PITCH+.013)*(1-amount),base=top-SLATS*spacing;return Array.from({length:SLATS},(_,i)=>({y:base+i*spacing,z:(recess+(i%2?depth:0))*inside,rotation:(i%2?-angle:angle)*inside,length:len}));}

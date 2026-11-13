@@ -1,3 +1,4 @@
+import {addLargeRooms} from './large-room-layout.js';
 import {addAtrium} from './atrium-layout.js';
 import {expandStage11} from './stage11-layout.js';
 import {compilePartitions} from './partitions.js';
@@ -73,7 +74,7 @@ for(const id of ['E1','E3'])BODIES.find(b=>b.id===id).ports.push(port('S','S',4,
 BODIES.push({...structuredClone(BODIES.find(b=>b.id==='R4')),id:'K1',name:'第一層・小居室と前廊下',color:'#aa9d8d',doors:[{id:'K1-door',a:[2.8,2.9],b:[4,2.9],open:false,label:'第一層の小居室'}],labels:[room('第一層 小居室',5.4,1.5),room('EV前廊下',4,4.2)]});
 BODIES.push({...structuredClone(BODIES.find(b=>b.id==='J3')),id:'K2',name:'第一層・交差通路',color:'#a3b58d',labels:[room('第一層 分岐',4,4)]});
 BODIES.push({id:'M1',name:'上下搬送・小交流室',use:'common',color:'#bba58d',cells:[[0,0]],ceiling:3,ports:[port('W','W',3,5,2.5),port('N','N',3,5,2.5),port('E','E',3,5,2.5)],walls:[],doors:[],solids:[],furniture:[box(1,1,1.5,1,.5),box(6,6,1,1,.8)],labels:[room('上下搬送 M1',4,4)],roofAreas:[roof(0,0,8,8,3)]});
-extendBodies(BODIES);redesign(BODIES);repairResidentialWalls(BODIES);expandStage8(BODIES);expandStage9(BODIES);furnishShops(BODIES);expandStage11(BODIES);addAtrium(BODIES);redesignFacility(BODIES);BODIES.forEach(compilePartitions);
+extendBodies(BODIES);redesign(BODIES);repairResidentialWalls(BODIES);expandStage8(BODIES);expandStage9(BODIES);furnishShops(BODIES);expandStage11(BODIES);addAtrium(BODIES);addLargeRooms(BODIES);redesignFacility(BODIES);BODIES.forEach(compilePartitions);
 BODIES.find(b=>b.id==='P9').ports.push(port('water-east','E',11.6,14,2.5));
 BODIES.find(b=>b.id==='N3').ports.push(port('water-west','W',3,5,2.5));
 export const BY_ID=Object.fromEntries(BODIES.map(b=>[b.id,b]));
@@ -88,7 +89,7 @@ export const insideBody=(b,x,z)=>b.cells.some(([cx,cz])=>x>=cx*8-1e-8&&x<=cx*8+8
 export function perimeter(b){const out=[],has=(x,z)=>b.cells.some(c=>c[0]===x&&c[1]===z);for(const[x,z]of b.cells){if(!has(x,z-1))out.push({face:'N',a:[x*8,z*8],b:[x*8+8,z*8]});if(!has(x,z+1))out.push({face:'S',a:[x*8,z*8+8],b:[x*8+8,z*8+8]});if(!has(x-1,z))out.push({face:'W',a:[x*8,z*8],b:[x*8,z*8+8]});if(!has(x+1,z))out.push({face:'E',a:[x*8+8,z*8],b:[x*8+8,z*8+8]});}return out;}
 export const planeFor=(b,p)=>p.plane??(p.face==='N'||p.face==='W'?0:p.face==='S'?footprint(b).d:footprint(b).w);
 export function portSegment(b,p,inset=.2){const f=planeFor(b,p);return p.face==='N'?line([p.a,f+inset],[p.b,f+inset]):p.face==='S'?line([p.a,f-inset],[p.b,f-inset]):p.face==='W'?line([f+inset,p.a],[f+inset,p.b]):line([f-inset,p.a],[f-inset,p.b]);}
-export function portalJambs(b,p){if(!p.adaptive)return[];const outer=portSegment(b,{...p,a:p.a-.05,b:p.b+.05},0),inner=portSegment(b,{...p,a:p.a-.05,b:p.b+.05},.9);const cuts=[...new Set((p.profiles??[]).flat())].filter(x=>x>p.a&&x<p.b),extra=cuts.map(x=>{const a=portSegment(b,{...p,a:x,b:x},0),c=portSegment(b,{...p,a:x,b:x},.9);return{a:a.a,b:c.a};});return[{a:outer.a,b:inner.a},{a:outer.b,b:inner.b},...extra];}
+export function portalJambs(b,p){if(!p.adaptive)return[];const outer=portSegment(b,{...p,a:p.a-.05,b:p.b+.05},0),inner=portSegment(b,{...p,a:p.a-.05,b:p.b+.05},p.wideSafety?.34:.9);const cuts=[...new Set((p.profiles??[]).flat())].filter(x=>x>p.a&&x<p.b),extra=cuts.map(x=>{const a=portSegment(b,{...p,a:x,b:x},0),c=portSegment(b,{...p,a:x,b:x},.9);return{a:a.a,b:c.a};});return[{a:outer.a,b:inner.a},{a:outer.b,b:inner.b},...extra];}
 export function boundaryWalls(b){const walls=[];for(const edge of perimeter(b)){const axis=edge.face==='N'||edge.face==='S'?0:1,other=1-axis,cuts=b.ports.filter(p=>p.face===edge.face&&Math.abs(planeFor(b,p)-edge.a[other])<1e-7).flatMap(p=>potentialOpenings(p).map(([a,b])=>[Math.max(edge.a[axis],a),Math.min(edge.b[axis],b)])).filter(([a,c])=>c>a).sort((a,c)=>a[0]-c[0]);let at=edge.a[axis];for(const[a,c]of[...cuts,[edge.b[axis],edge.b[axis]]]){if(a>at){const aa=[...edge.a],bb=[...edge.b];aa[axis]=at;bb[axis]=a;const v=edge.face==='N'||edge.face==='W'?.06:-.06;aa[other]+=v;bb[other]+=v;walls.push({...line(aa,bb),role:WALL_ROLE.SHELL});}at=Math.max(at,c);}}return walls;}
 export function segmentDistance(x,z,a,b){const dx=b[0]-a[0],dz=b[1]-a[1],t=Math.max(0,Math.min(1,((x-a[0])*dx+(z-a[1])*dz)/(dx*dx+dz*dz||1)));return Math.hypot(x-a[0]-t*dx,z-a[1]-t*dz);}
 export const defaultDoors=()=>Object.fromEntries(BODIES.flatMap(b=>b.doors.map(d=>[d.id,d.open])));

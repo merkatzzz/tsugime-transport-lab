@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "canonicalFilesMatched": 2422,
+  "zipCrcPassed": true,
+  "method": "SHA256 of every canonical file; reproducible dist comparison/download copies, archives and this output report excluded. Not a GPU test."
+}

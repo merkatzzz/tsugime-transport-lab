@@ -1,0 +1,96 @@
+{
+  "ok": true,
+  "preservedArchives": 18,
+  "files": [
+    {
+      "path": "dist/downloads/stage10-frozen-source.zip",
+      "bytes": 21009997,
+      "sha256": "7df16300d2bd7105baa2b3ffdaf589784a458bca9a6f9affe0cb61e02aa85186"
+    },
+    {
+      "path": "dist/downloads/stage10-redesign-frozen-source.zip",
+      "bytes": 23692593,
+      "sha256": "c62bb44bf47359c374409d62ced4ac7228567c7403afb58e297a4183b0220b8a"
+    },
+    {
+      "path": "dist/downloads/stage6-frozen-source.zip",
+      "bytes": 13155090,
+      "sha256": "d0ea064c1a4dae1a5bc9fbfabea734545dff506d1d49a9c15741ca31020416f5"
+    },
+    {
+      "path": "dist/downloads/stage7-frozen-source.zip",
+      "bytes": 14654257,
+      "sha256": "c23864156fb462f7c42ad4bff1e7e3baadd727878b8b1d7d05b74e09538bdd92"
+    },
+    {
+      "path": "dist/downloads/stage8-frozen-source.zip",
+      "bytes": 16551498,
+      "sha256": "80a5de7eb4d7bdf2d35c9f43527fd4f735436bf4e2ec1fad73d31e61d6c3f1bd"
+    },
+    {
+      "path": "dist/downloads/stage9-frozen-source.zip",
+      "bytes": 18686942,
+      "sha256": "695c035dd929cd823627ad1cdee2874ce9ba71bbe55b44372ab1c1e055add6d0"
+    },
+    {
+      "path": "dist/stage1/downloads/tsugime-lab-source.zip",
+      "bytes": 354487,
+      "sha256": "948ca49eacfd13cf1681dc5c1f878116215024d69de1efada05b6cd95cd25789"
+    },
+    {
+      "path": "dist/stage10/downloads/tsugime-lab-source.zip",
+      "bytes": 1210347,
+      "sha256": "7c94e4a978bb84a685c6ccb5bc403d3ba36cb29a775eca7177fcc03f9fada71a"
+    },
+    {
+      "path": "dist/stage10-redesign/downloads/tsugime-lab-source.zip",
+      "bytes": 23692593,
+      "sha256": "c62bb44bf47359c374409d62ced4ac7228567c7403afb58e297a4183b0220b8a"
+    },
+    {
+      "path": "dist/stage2/downloads/tsugime-lab-source.zip",
+      "bytes": 748481,
+      "sha256": "bdbb09cfd3f5adaeaa1e2e2363488310bef196c4468ae50eaa24b7657654d0bc"
+    },
+    {
+      "path": "dist/stage2/stage1/downloads/tsugime-lab-source.zip",
+      "bytes": 354487,
+      "sha256": "948ca49eacfd13cf1681dc5c1f878116215024d69de1efada05b6cd95cd25789"
+    },
+    {
+      "path": "dist/stage3/downloads/tsugime-lab-source.zip",
+      "bytes": 1487432,
+      "sha256": "6007158e0a24b2c911918be612697f8d68b867544bd6c9de1121923a20dca478"
+    },
+    {
+      "path": "dist/stage4/downloads/tsugime-lab-source.zip",
+      "bytes": 3111748,
+      "sha256": "84e880f0370ec96fd1c145ef168ac4e13d67989fb0c5187219e2c0f0e1e18515"
+    },
+    {
+      "path": "dist/stage5/downloads/tsugime-lab-source.zip",
+      "bytes": 583853,
+      "sha256": "9108529dec016dd2af0166745c69e592ce956ef935aa7ec5c972a5122c9a3e2a"
+    },
+    {
+      "path": "dist/stage6/downloads/tsugime-lab-source.zip",
+      "bytes": 679040,
+      "sha256": "ed640956f635f2154c455480c33ae6e771652188576e732e06bbf7e8fc580fc5"
+    },
+    {
+      "path": "dist/stage7/downloads/tsugime-lab-source.zip",
+      "bytes": 779360,
+      "sha256": "995f80f19ed7dcb3cb43059bee74049c87df2ff93c9d13bc6732d2675fc2f011"
+    },
+    {
+      "path": "dist/stage8/downloads/tsugime-lab-source.zip",
+      "bytes": 1036950,
+      "sha256": "ec4d527c21ff06b63b99c70c6561ec056685a9c84f2de201fcbfae7aa02652c7"
+    },
+    {
+      "path": "dist/stage9/downloads/tsugime-lab-source.zip",
+      "bytes": 1115775,
+      "sha256": "dedca6f3e90d9549df7965942a95fe68ba6fbc95abdf5b9359c0183c280e4a9c"
+    }
+  ]
+}

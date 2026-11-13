@@ -1,0 +1,4 @@
+import {toLocal} from './pose.js';
+import {slatPoses} from './portal-geometry.js';
+export function wallSweepOccupied(s,b,p,from,to){if(!p.wideSafety)return false;const q=toLocal(s.positions[b.id],s.player),ew=p.face==='E'||p.face==='W',along=ew?q.z:q.x;if(along<p.a-.36||along>p.b+.36)return false;const plane=p.face==='E'||p.face==='S'?7.8:.2,inward=p.face==='E'||p.face==='S'?-1:1,distance=((ew?q.x:q.z)-plane)*inward,n=Math.max(1,Math.ceil(Math.abs(to-from)/.02));for(let k=0;k<=n;k++)for(const a of slatPoses(p.height,from+(to-from)*k/n,1,p.adaptiveRecess??.3)){const y=a.y+a.length*Math.cos(a.rotation),z=a.z+a.length*Math.sin(a.rotation);if(q.y+.16+1.70>Math.min(a.y,y)-.008&&q.y+.16<Math.max(a.y,y)+.008&&distance>=Math.min(a.z,z)-.37&&distance<=Math.max(a.z,z)+.37)return true;}return false;}
+export function wideClosureOccupied(s,bodies){return bodies.some(b=>b.ports.some(p=>wallSweepOccupied(s,b,p,0,1)));}

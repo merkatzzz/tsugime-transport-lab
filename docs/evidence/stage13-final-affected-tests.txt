@@ -1,0 +1,46 @@
+✔ fixed waterways have walking connections in approved phases and closed W2 access in B (20576.450908ms)
+✔ closed transport gates block entrance, while fixed tunnel stays safe through a full ABC cycle (19901.394344ms)
+✔ fixed water reservations reject both swept horizontal crossing and vertical crossing (1.385481ms)
+✔ expanded east and south margins accept an actual two-cell rigid transport route (301.554307ms)
+✔ water meshes are fixed, curved and do not intersect the walking route at body height; render reuses geometry (2845.493054ms)
+✔ water sound attenuates with distance and pauses (2.048123ms)
+✔ an actor approaching during opening or closing pauses a partially moved mechanism, can walk away, and is never relocated (2419.312243ms)
+✔ three new single-cell bodies preserve all 57 existing completed poses, SH1/SH2 structure and all other unmodified definitions (7.785714ms)
+✔ ordinary input enters the full one-cell room from J9, then crosses the broad two-room opening and walks all room corners (5013.261765ms)
+✔ large wall waits for an occupant, resumes after ordinary retreat, independently transports both rooms, seals B and rejoins C with a rider (3098.264422ms)
+✔ opening also waits for the actual folding-wall sweep and remains physically blocked until fully stowed (1066.667598ms)
+✔ all 18 real ABC plans validate new independent routes and preserve the expanded south bounds (3604.486743ms)
+✔ save/load restores every large room phase, broad-wall endpoints, local passenger coordinates and updated maps (239.057449ms)
+✔ expanded 40.8m² opening reaches between homes, remains surrounded by a continuous walkable circuit on both raised floors (1383.172472ms)
+✔ glass reaches full height before floors move; the floor closes before the thin guard bands retract (3.492716ms)
+✔ real expanded void is open upward/downward, thin transparent guards close all mitered corners, and old west-side stair cabinet is gone (2368.683088ms)
+✔ finishing a broad wall refreshes both the real joint-floor meshes and cached live maps without changing phase or camera (1802.768524ms)
+✔ wide closed walls meet their shallow side reveals and real oblique eye rays cannot see through a throat gap (1302.49059ms)
+✔ accordion banks physically stow and deploy without overlapping coplanar slat faces or escaping their owner (3314.913756ms)
+✔ adaptive profile cheeks seal the oblique throat between the joint collar and recessed wall bank in A/B/C (5278.563031ms)
+✔ wide-to-wide entrance stays physically passable across its full six metre profile (1667.233845ms)
+✔ new permanent multi-cell interiors have genuine continuous walkable geometry across internal cell borders (1331.045798ms)
+✔ all inward door sweeps clear fixed furnishings, and visible leaves remain opaque inside their owner (3411.622453ms)
+✔ four-cell P9 carries player and home NPC through genuine complete ABC transport without local drift (15137.233311ms)
+✔ exact configurable 60 second schedule is 15 home / 45 work, with staggered phase and event override (1.311303ms)
+✔ two distinct NPCs each have exactly one location, with fully closed cover required for every commute (380.217101ms)
+✔ room presence opens a live 3D camera; absence reports the correct next home time and never unlocks a room (86.859028ms)
+✔ visits restore corridor body-local position and gaze after the hosting body moves (1.965189ms)
+✔ seen shopkeeper stays during conversation and a pending close refuses new transactions (131.149613ms)
+✔ player inside shop or overhead observation defers warp; transport closes covers without relocating NPCs (184.831563ms)
+✔ inventory browsing and wrong targets do not consume; correct use consumes exactly once with an auditable result (3.461019ms)
+✔ an already open transaction can finish after closing time without removing its NPC (81.270421ms)
+✔ versioned save restores actual whereabouts/covers/clock/flags/items/phase; old inventory and bad data are non-destructive (193.350174ms)
+✔ browser storage uses a dedicated new slot without clearing unrelated saves (53.854352ms)
+✔ new 4-cell common facility retains fixed private walls and no transport shutters on internal cell borders (53.805472ms)
+✔ sign normals point from private rooms toward the corridor and follow rigid body rotation (1.153848ms)
+✔ closed metal and curtain stalls actually hide the NPC from front, sides, rear and above (3431.126596ms)
+✔ HTML controls and module initialization work with explicitly unavailable WebGL (46401.34558ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 90676.96408

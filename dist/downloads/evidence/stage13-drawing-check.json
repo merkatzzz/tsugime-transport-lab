@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "standaloneSvgFiles": 9,
+  "xmlParser": "Python ElementTree",
+  "gpuVerified": false
+}

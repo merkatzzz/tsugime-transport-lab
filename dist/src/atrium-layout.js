@@ -1,9 +1,7 @@
 export const ATRIUM_IDS=['AT0','AT1','AT2'];
 export const ATRIUM_PURPOSE={AT0:'吹き抜け住宅の第二層基壇。外部通路と閉じた底床を保持して待機',AT1:'四連結の中間住宅。Bで上下段の間に集合し、A/Cでは東の専用ベイへ独立退避',AT2:'吹き抜け住宅の第三層。閉じた最上屋根と上階住戸を保持して待機',AC1:'既存生活棟から吹き抜け基壇へ至る入口廊下。Bは西入口を閉鎖して待機'};
-export const HOLE={x:6,z:6,w:4,d:4},SHAFT={x:12,z:2.8,w:2.4,d:5.7},BASE=.48;
-export const FLOOR_PANELS=[[6,6],[8,6],[6,8],[8,8]].map(([x,z],i)=>({id:i,x,z,w:2,d:2,dx:x===6?-2.4:0,floorDz:x===8?(z===6?-2.4:2.4):0,dz:z===6?-2.4:2.4}));
-export const GLASS=[{x:6,z:6,rotation:-Math.PI/2},{x:6,z:8,rotation:-Math.PI/2},{x:8,z:6,rotation:Math.PI},{x:10,z:6,rotation:Math.PI},{x:10,z:8,rotation:Math.PI/2},{x:10,z:10,rotation:Math.PI/2},{x:8,z:10,rotation:0},{x:6,z:10,rotation:0}];
-export const GLASS_BAYS=[{x:5.2,z:6,w:.8,d:2},{x:5.2,z:8,w:.8,d:2},{x:6,z:5.2,w:2,d:.8},{x:8,z:5.2,w:2,d:.8},{x:10,z:6,w:.8,d:2},{x:10,z:8,w:.8,d:2},{x:8,z:10,w:2,d:.8},{x:6,z:10,w:2,d:.8}];
+export {HOLE,HOLES,FLOOR_PANELS,GLASS,GLASS_BAYS} from './atrium-shape.js';
+export const SHAFT={x:12,z:2.8,w:2.4,d:5.7},BASE=.48;
 export const ENTRY_RAMP={x:0,z:6,w:5.4,d:1.8,landing:.6};
 const port=(id,face,a,b)=>({id,face,a,b,height:2.5,role:'boundary-connector'});
 export function addAtrium(bodies){
