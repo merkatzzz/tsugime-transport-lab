@@ -25,4 +25,3 @@ with zipfile.ZipFile(archive) as z:
 result = {'ok':True,'canonicalFilesMatched':len(expected),'zipCrcPassed':True,'method':'SHA256 of every canonical file; reproducible dist comparison/download copies, archives and this output report excluded. Not a GPU test.'}
 (root/own_report).write_text(json.dumps(result,indent=2))
 print(json.dumps(result))
-

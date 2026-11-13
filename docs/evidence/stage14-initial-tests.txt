@@ -260,9 +260,9 @@
 test at tests/expansion.test.mjs:8:1
 ✖ extension keeps the two original levels and adds the first, adds four mobile rooms and creates physically walkable east paths (2.826564ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   66 !== 60
-  
+
       at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/expansion.test.mjs:8:176)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -279,9 +279,9 @@ test at tests/expansion.test.mjs:8:1
 test at tests/lab.test.mjs:13:1
 ✖ dense expanded architecture contains 60 bodies, 89 cells, corridor-only bodies and large permanent unions (2.460546ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   66 !== 60
-  
+
       at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/lab.test.mjs:13:126)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -298,9 +298,9 @@ test at tests/lab.test.mjs:13:1
 test at tests/stage6.test.mjs:9:1
 ✖ 89 cells retain dense three-floor architecture, four remote cells, five fixed springs and four wall organisms (3.141659ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   66 !== 60
-  
+
       at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/stage6.test.mjs:9:130)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -317,9 +317,9 @@ test at tests/stage6.test.mjs:9:1
 test at tests/stage6.test.mjs:10:1
 ✖ remote wing never has a walking graph connection to the main facility, but has validated return service in B (716.526559ms)
   AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
-  
+
     assert.ok(route.ok)
-  
+
       at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/stage6.test.mjs:10:593)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -338,9 +338,9 @@ test at tests/stage6.test.mjs:10:1
 test at tests/stage7.test.mjs:7:1
 ✖ new residences mix moving three-cell, two-cell and single bodies, with no mechanical internal boundaries (2.664899ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   66 !== 60
-  
+
       at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/stage7.test.mjs:7:125)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -357,9 +357,9 @@ test at tests/stage7.test.mjs:7:1
 test at tests/stage8-expansion.test.mjs:11:1
 ✖ expansion adds varied 1/2/3-cell bodies north/central/south, not another repetitive eastern strip (1.105219ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   66 !== 60
-  
+
       at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/stage8-expansion.test.mjs:11:118)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -378,9 +378,9 @@ test at tests/stage8-expansion.test.mjs:11:1
 test at tests/stage8-performance.test.mjs:10:1
 ✖ validated-plan cache is invalidated by body geometry changes instead of blindly reusing an old route (7810.554544ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   true !== false
-  
+
       at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/stage8-performance.test.mjs:10:321)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -399,9 +399,9 @@ test at tests/stage8-performance.test.mjs:10:1
 test at tests/stage9-life.test.mjs:16:1
 ✖ new 4-cell common facility retains fixed private walls and no transport shutters on internal cell borders (3.84704ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   66 !== 60
-  
+
       at TestContext.<anonymous> (file:///workspace/work/tsugime-stage4/tests/stage9-life.test.mjs:16:126)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
