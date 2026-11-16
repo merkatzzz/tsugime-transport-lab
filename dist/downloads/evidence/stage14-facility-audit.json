@@ -44697,7 +44697,7 @@
           "node": "SM0/0",
           "body": "SM0",
           "level": 0,
-          "cells": 734,
+          "cells": 424,
           "reachable": true,
           "serviceReachable": true,
           "reason": "建築の仕切りと周期の接続で区分された通路成分"
@@ -44706,7 +44706,7 @@
           "node": "SM1/0",
           "body": "SM1",
           "level": 0,
-          "cells": 724,
+          "cells": 664,
           "reachable": true,
           "serviceReachable": true,
           "reason": "建築の仕切りと周期の接続で区分された通路成分"
@@ -44715,7 +44715,7 @@
           "node": "SM2/0",
           "body": "SM2",
           "level": 0,
-          "cells": 714,
+          "cells": 720,
           "reachable": false,
           "serviceReachable": false,
           "reason": "建築の仕切りと周期の接続で区分された通路成分"
@@ -44724,7 +44724,7 @@
           "node": "SM3/0",
           "body": "SM3",
           "level": 0,
-          "cells": 714,
+          "cells": 598,
           "reachable": true,
           "serviceReachable": true,
           "reason": "建築の仕切りと周期の接続で区分された通路成分"
@@ -45742,7 +45742,7 @@
           "node": "SM0/0",
           "body": "SM0",
           "level": 0,
-          "cells": 734,
+          "cells": 424,
           "reachable": false,
           "serviceReachable": false,
           "reason": "建築の仕切りと周期の接続で区分された通路成分"
@@ -45751,7 +45751,7 @@
           "node": "SM1/0",
           "body": "SM1",
           "level": 2,
-          "cells": 724,
+          "cells": 664,
           "reachable": true,
           "serviceReachable": true,
           "reason": "建築の仕切りと周期の接続で区分された通路成分"
@@ -45760,7 +45760,7 @@
           "node": "SM2/0",
           "body": "SM2",
           "level": 2,
-          "cells": 714,
+          "cells": 720,
           "reachable": true,
           "serviceReachable": true,
           "reason": "建築の仕切りと周期の接続で区分された通路成分"
@@ -45769,7 +45769,7 @@
           "node": "SM3/0",
           "body": "SM3",
           "level": 0,
-          "cells": 714,
+          "cells": 598,
           "reachable": false,
           "serviceReachable": false,
           "reason": "建築の仕切りと周期の接続で区分された通路成分"
@@ -46802,7 +46802,7 @@
           "node": "SM0/0",
           "body": "SM0",
           "level": 0,
-          "cells": 734,
+          "cells": 424,
           "reachable": true,
           "serviceReachable": true,
           "reason": "建築の仕切りと周期の接続で区分された通路成分"
@@ -46811,7 +46811,7 @@
           "node": "SM1/0",
           "body": "SM1",
           "level": 0,
-          "cells": 724,
+          "cells": 664,
           "reachable": true,
           "serviceReachable": true,
           "reason": "建築の仕切りと周期の接続で区分された通路成分"
@@ -46820,7 +46820,7 @@
           "node": "SM2/0",
           "body": "SM2",
           "level": 0,
-          "cells": 714,
+          "cells": 720,
           "reachable": true,
           "serviceReachable": true,
           "reason": "建築の仕切りと周期の接続で区分された通路成分"
@@ -46829,7 +46829,7 @@
           "node": "SM3/0",
           "body": "SM3",
           "level": 0,
-          "cells": 714,
+          "cells": 598,
           "reachable": true,
           "serviceReachable": true,
           "reason": "建築の仕切りと周期の接続で区分された通路成分"

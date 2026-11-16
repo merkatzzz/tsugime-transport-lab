@@ -1,0 +1,11 @@
+✔ SM0 and SM3 evacuate before A to B closes, using real walk steps and continuing transfer (45535.186649ms)
+✔ B to C is safe without unnecessary evacuation; C to A evacuates the closing SM2 branch (962.06018ms)
+✔ every southern phase connection is traversable with closed shop doors; C ring survives different interiors (1504.346042ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 52151.629287

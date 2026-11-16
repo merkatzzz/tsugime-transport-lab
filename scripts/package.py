@@ -32,6 +32,7 @@ if not frozen10.exists():
 frozen_redesign = downloads/'stage10-redesign-frozen-source.zip'
 if not frozen_redesign.exists():
     subprocess.run(['git','archive','--format=zip','--output='+str(frozen_redesign),'stage10-redesign-frozen'],cwd=root,check=True)
+shutil.copy2(root/'docs/MARKET-REPAIR.md', downloads/'MARKET-REPAIR.md')
 shutil.copy2(root/'docs/STAGE14.md', downloads/'STAGE14.md')
 shutil.copy2(root/'docs/STAGE13.md', downloads/'STAGE13.md')
 shutil.copy2(root/'docs/STAGE12-REPAIR.md', downloads/'STAGE12-REPAIR.md')
@@ -103,7 +104,7 @@ def inline(text):
     s = s.replace('href="STAGE11.md"', 'href="downloads/STAGE11.md"').replace('href="PERFORMANCE-STAGE11.md"', 'href="downloads/PERFORMANCE-STAGE11.md"')
     return s
 
-lines = ((root/'docs/STAGE14.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 過去の報告（以下は旧段階の記録）\n\n'+(root/'docs/STAGE13.md').read_text()+'\n\n'+(root/'docs/STAGE12-REPAIR.md').read_text()+'\n\n'+(root/'docs/STAGE12.md').read_text()+'\n\n'+(root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
+lines = ((root/'docs/MARKET-REPAIR.md').read_text()+'\n\n# 以下は第14段階の履歴\n\n'+(root/'docs/STAGE14.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 過去の報告（以下は旧段階の記録）\n\n'+(root/'docs/STAGE13.md').read_text()+'\n\n'+(root/'docs/STAGE12-REPAIR.md').read_text()+'\n\n'+(root/'docs/STAGE12.md').read_text()+'\n\n'+(root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
 parts = []
 i = 0
 while i < len(lines):

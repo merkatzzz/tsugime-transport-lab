@@ -13,6 +13,10 @@ export function addSouthDistrict(bodies){
  for(const id of SOUTH_IDS){const corridor=id.startsWith('SC'),b={id,name:{SC0:'南玄関・固定の折れ廊下',SC1:'C周期・挿入接続廊下',SM0:'南商店街・西玄関と小店舗',SM1:'南商店街・東通路と小店舗',SM2:'南商店街・可動の南東角',SM3:'南商店街・固定の南西角'}[id],generation:14,southMarket:!corridor,use:corridor?'corridor':'commerce',zone:'commerce',color:corridor?'#9cae9b':'#bca982',cells:[[0,0]],ceiling:3.1,ports:[],walls:[],doors:[],solids:[],furniture:[],privateRooms:[],roofAreas:[{x:0,z:0,w:8,d:8,height:3.1}],labels:[]};
  b.ports=(id==='SC0'||id==='SC1'?['N','S']:id==='SM0'?['N','E','S','W']:id==='SM1'?['N','W','S']:id==='SM2'?['N','W']:['N','E']).map(f=>port(f,f));
  if(!corridor){const r={x:5.3,z:.5,w:2.1,d:2.2};b.privateRooms.push(r);b.doors.push({id:id+'-shop',label:'小店舗入口',a:[5.3,1.05],b:[5.3,2.15],kind:'hinge',hinge:'a',swing:-90,open:false});b.furniture.push({x:6.65,z:.8,w:.4,d:1.3,h:.85,color:'wood'},{x:5.65,z:.7,w:.7,d:.3,h:1.2,color:'wood'});b.labels.push({name:'小店舗',x:6.3,z:1.7});}
+ if(id==='SM0'){b.privateRooms=[];b.doors=[];b.furniture=[];b.labels=[];b.solids=[0,5.3].flatMap(x=>[0,5.3].map(z=>({x,z,w:2.7,d:2.7,h:3.1,color:'concrete'})));}
+ if(id==='SM1')b.walls.push({a:[4,2.4],b:[4,5.6],height:3.1,role:'room-fixed'});
+ if(id==='SM2'){b.privateRooms=[{x:.5,z:5.3,w:2.2,d:2.2}];b.doors=[{id:'SM2-shop',label:'側面店舗',a:[2.7,5.85],b:[2.7,6.95],kind:'hinge',hinge:'a',swing:90,open:false}];b.furniture=[{x:.7,z:7,w:1.4,d:.3,h:.8,color:'wood'}];b.labels=[];}
+ if(id==='SM3'){b.privateRooms=[];b.doors=[];b.furniture=[{x:.7,z:6.4,w:5.8,d:.65,h:.5,color:'wood'},{x:.7,z:.6,w:1.2,d:1.6,h:1,color:'wood'}];b.labels=[];}
  b.labels.push({name:corridor?'南への共用廊下':'曲がる共用街路',x:3.9,z:4.1});bodies.push(b);
  }
 }

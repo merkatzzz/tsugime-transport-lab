@@ -1,0 +1,33 @@
+✔ A: from the external P9 common hall directly into a 4.8m street, both open shop fronts, the lab end and split/rejoin (2072.365552ms)
+✔ B/C: one continuous walk AC1 → ramp → AT0 → both stairs → AT2 → same route down → AC1, without resetting the player between floors (3767.955426ms)
+✔ the entrance connects between the homes, walls collide with the whole body at low heights, and ramp foot heights match the actual slope (104.858217ms)
+✔ closed room doors and counters stop the player, an opened door admits walking, and shop walls remain solid (130.521319ms)
+✔ D: normal lab entry and E exit still work after relocation/rotation, saves retain facing, and no management panel exists in the exploration viewport (124.416602ms)
+✔ south expansion is certified transport space: two additional rows, real lab destinations/motions and empty slots, rather than a map-only grid (846.531625ms)
+✔ B approaching during 99% deployment never freezes a visually open gate: the real frame loop completes and climbs to the middle floor (368.964016ms)
+✔ folded gates stow as narrow stacks without same-normal overlaps, and a visibly cleared centre has no phantom closed collision plane (4287.710749ms)
+✔ south expansion is physical: new occupied buildings, empty deck rows, fixed anchors and no eastward increase (51.657212ms)
+✔ C creates a real southern ring with distinct entrances, while A has a branch and B a lower-level shop route (476.446096ms)
+✔ ordinary walking reaches and circles the new street, enters each shop, and follows the C connection to both broad rooms (4351.716139ms)
+✔ all 18 swept plans preserve local reservations and include meaningful C-to-A room and corridor changes (3195.970006ms)
+✔ market repair retains every Stage14 docking pose (56.379607ms)
+✔ intentional isolated areas retain empty spatial separation, rather than just a closed door beside new construction (2.242155ms)
+✔ private atrium ceilings block upward and oblique views into all six rooms while the central void remains open (4447.66671ms)
+✔ new C saves and old Stage13 room anchors restore both changing street connections and local room coordinates (360.869198ms)
+✔ intermediate poses include finished, waiting and partly travelling bodies and are reproducible without an event mode (30.575013ms)
+✔ the retained closed terminal gate stops walking before the ceiling and allows ordinary backward descent (185.466731ms)
+✔ automatic operation repeats cycles without duplicate transfers (14820.253417ms)
+✔ J1 occupant follows collision-checked evacuation route rather than preventing B to C (477.924613ms)
+✔ exception flag applies only to the named component (1.578134ms)
+✔ stationary EV occupant does not stop the automatic facility schedule (138.278472ms)
+✔ no physical escape route produces an explicit safe error and never warps coordinates (240.116974ms)
+✔ an exception in the current room cannot authorise entry into another unflagged closing component (198.56765ms)
+✔ isolated spare can request real two-leg reconnection without a long idle wait or a debug warp (189.663135ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31712.344085
