@@ -1,0 +1,45 @@
+{
+  "cpuChecksPassed": true,
+  "testCounts": {
+    "total": 269,
+    "passed": 269,
+    "failed": 0
+  },
+  "rows": [
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "normal-surfaces",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "evidence",
+      "exit": 0
+    },
+    {
+      "name": "drawing-xml",
+      "exit": 0
+    },
+    {
+      "name": "fibre-comparison",
+      "exit": 0
+    },
+    {
+      "name": "organ-meshes",
+      "exit": 0
+    },
+    {
+      "name": "torch-direction",
+      "exit": 0
+    }
+  ],
+  "webglRendered": false,
+  "humanFirstPersonWalkVerified": false,
+  "completion": "Source mesh and controller replay, normal regression and fault-only organ/lighting checks; WebGL appearance, human operation and GPU load unverified."
+}

@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "rows": [
+    {
+      "id": "organ:fibre-L1-V3",
+      "closed": true,
+      "outwardWinding": true,
+      "triangles": 52,
+      "volume": 0.391276947666201
+    },
+    {
+      "id": "organ:fibre-V1-V3",
+      "closed": true,
+      "outwardWinding": true,
+      "triangles": 52,
+      "volume": 0.9170551639185656
+    }
+  ],
+  "webgl": false
+}
