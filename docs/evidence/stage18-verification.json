@@ -1,0 +1,44 @@
+{
+  "cpuChecksPassed": true,
+  "testCounts": {
+    "total": 277,
+    "passed": 277,
+    "failed": 0
+  },
+  "rows": [
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "normal-surfaces",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "climb-paths",
+      "exit": 0
+    },
+    {
+      "name": "evidence",
+      "exit": 0
+    },
+    {
+      "name": "drawing-xml",
+      "exit": 0
+    }
+  ],
+  "finalFocusedTests": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "overlapsFullSuite": true,
+    "scope": "Final actual path export and all shutters including store covers/water gates"
+  },
+  "webglRendered": false,
+  "humanFirstPersonWalkVerified": false,
+  "globalReachabilityExhaustive": false
+}

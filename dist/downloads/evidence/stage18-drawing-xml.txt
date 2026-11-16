@@ -1,0 +1,3 @@
+docs/evidence/stage18-comparison.svg valid XML
+docs/evidence/stage18-six-metre.svg valid XML
+docs/evidence/stage18-spatial.svg valid XML

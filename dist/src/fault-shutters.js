@@ -1,10 +1,14 @@
 import {tickPortals} from './portal-state.js';
-import {BODIES,portSegment} from './architecture.js';
-import {toWorld} from './pose.js';
+import {BODIES,portStates,portSegment,segmentDistance} from './architecture.js';
+import {toWorld,toLocal} from './pose.js';
 import {geometryView,worldFromView} from './fault-geometry.js';
+export function rebuildFaultWorld(s,apply,rollback){const f=s.fault;if(f.motion?.climbMove){s.message='昇降中は開閉できません。';return false;}let v,next;try{apply();s.invalidate();tickPortals(s,0,true);v=geometryView(s);next=worldFromView(v);if(!next.clear(s.player)){next.dispose();rollback();s.invalidate();tickPortals(s,0,true);s.message='身体に重なる閉鎖はできません。開口から離れてください。';return false;}f.motion.world.dispose();f.motion.world=next;return true;}catch(error){next?.dispose();rollback();s.invalidate();tickPortals(s,0,true);throw error;}finally{v?.dispose();}}
+export function setFaultShutters(s,all){if(!s.fault?.climbEnabled)return false;const f=s.fault,old={all:f.allShutters,ports:[...f.openPorts]};const ok=rebuildFaultWorld(s,()=>{f.allShutters=all;f.openPorts=all?portStates(s.phase,s.experiment).map(p=>p.key):[...f.specifiedPorts];},()=>{f.allShutters=old.all;f.openPorts=old.ports;});if(ok)s.message=all?'故障の全シャッター開放：足場・接続は実形状のまま。':'故障の指定開放へ戻しました。';return ok;}
+function ordinaryDoor(s){let near=null,dist=1.7;for(const b of BODIES){if(b.id!==s.owner)continue;const p=s.positions[b.id],q=toLocal(p,s.player);for(const d of b.doors){if(Math.abs(p.y+(d.floor??0)-s.player.y)>.08)continue;const n=segmentDistance(q.x,q.z,d.a,d.b);if(n<dist){near=d;dist=n;}}}if(!near)return false;const old=s.doors[near.id],progress=s.experience.doorProgress[near.id];const ok=rebuildFaultWorld(s,()=>{s.doors[near.id]=!old;s.experience.doorProgress[near.id]=old?0:1;},()=>{s.doors[near.id]=old;s.experience.doorProgress[near.id]=progress;});if(ok)s.message='故障時の通常扉：'+near.label+' '+(s.doors[near.id]?'開':'閉');return true;}
 export function faultInteract(s){
+ if(s.fault.motion?.climbMove){s.message='昇降中は開閉できません。';return false;}
  let selected=null,distance=2;
- for(const key of s.fault.manualPorts??[]){const [id,pid]=key.split(':'),b=BODIES.find(b=>b.id===id),p=b.ports.find(p=>p.id===pid),l=portSegment(b,p,0),at=toWorld(s.positions[id],{x:(l.a[0]+l.b[0])/2,z:(l.a[1]+l.b[1])/2});const d=Math.hypot(at.x-s.player.x,at.z-s.player.z);if(d<distance&&Math.abs(at.y-s.player.y)<.3){selected=key;distance=d;}}
- if(!selected){s.message='E：手動シャッターの近くで操作。その他は故障状態で固定。';return false;}
- const f=s.fault,old=[...f.openPorts];f.openPorts=f.openPorts.includes(selected)?f.openPorts.filter(k=>k!==selected):[...f.openPorts,selected];s.invalidate();tickPortals(s,0,true);let v,next;try{v=geometryView(s);next=worldFromView(v);if(!next.clear(s.player)){next.dispose();f.openPorts=old;s.invalidate();tickPortals(s,0,true);s.message='身体が開口内にあるため閉鎖できません。';return false;}f.motion.world.dispose();f.motion.world=next;s.message='手動シャッター '+selected+'：'+(f.openPorts.includes(selected)?'開放（足場は別途確認）':'閉鎖');return true;}catch(error){next?.dispose();f.openPorts=old;s.invalidate();tickPortals(s,0,true);throw error;}finally{v?.dispose();}
+ if(!s.fault.allShutters)for(const key of s.fault.manualPorts??[]){const [id,pid]=key.split(':'),b=BODIES.find(b=>b.id===id),p=b.ports.find(p=>p.id===pid),l=portSegment(b,p,0),at=toWorld(s.positions[id],{x:(l.a[0]+l.b[0])/2,z:(l.a[1]+l.b[1])/2});const d=Math.hypot(at.x-s.player.x,at.z-s.player.z);if(d<distance&&Math.abs(at.y-s.player.y)<.3){selected=key;distance=d;}}
+ if(!selected){if(s.fault.climbEnabled&&ordinaryDoor(s))return true;s.message='E：近くの通常扉・手動シャッターを操作。全開のシャッターは開放を維持。';return false;}
+ const f=s.fault,old=[...f.openPorts],ok=rebuildFaultWorld(s,()=>{f.openPorts=f.openPorts.includes(selected)?f.openPorts.filter(k=>k!==selected):[...f.openPorts,selected];},()=>{f.openPorts=old;});if(ok)s.message='手動シャッター '+selected+'：'+(f.openPorts.includes(selected)?'開放（足場は別途確認）':'閉鎖');return ok;
 }

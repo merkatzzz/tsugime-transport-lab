@@ -1,0 +1,31 @@
+{
+  "down": {
+    "target": "BR3:roof:453",
+    "height": 5.99999,
+    "gap": 0.3999999999999986,
+    "frames": 166,
+    "landing": {
+      "x": 54.4,
+      "y": -6.960000000000001,
+      "z": 57.35,
+      "yaw": 3.141592653589793,
+      "pitch": -1.1,
+      "owner": "roof:BR3"
+    }
+  },
+  "up": {
+    "target": "SM1:roof:479",
+    "height": 6,
+    "gap": 0.3999999999999986,
+    "frames": 166,
+    "landing": {
+      "x": 54.4,
+      "y": -0.9600000000000007,
+      "z": 59.05,
+      "yaw": 0,
+      "pitch": 1,
+      "owner": "roof:SM1"
+    }
+  },
+  "isolatedPlacementOnRealRoof": true
+}

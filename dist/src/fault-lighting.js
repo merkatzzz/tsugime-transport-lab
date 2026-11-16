@@ -16,7 +16,7 @@ export function updateFaultLighting(v){
 export function installFaultKeys(sim,changed,host=window){
  const held=new Set(),editable=e=>['INPUT','TEXTAREA','SELECT'].includes(e.target?.tagName)||e.target?.isContentEditable;
  const stop=()=>{held.clear();if(sim.fault)sim.fault.motion.axis=0;};
- host.addEventListener('keydown',e=>{if(!sim.fault||editable(e))return;if(['KeyR','KeyF'].includes(e.code)){e.preventDefault();held.add(e.code);sim.fault.motion.setAxis((held.has('KeyR')?1:0)-(held.has('KeyF')?1:0));}if(e.code==='KeyL'&&!e.repeat){e.preventDefault();sim.fault.flashlight=!sim.fault.flashlight;changed();}});
+ host.addEventListener('keydown',e=>{if(!sim.fault||editable(e)||e.ctrlKey||e.metaKey||e.altKey)return;if(['KeyR','KeyF'].includes(e.code)){e.preventDefault();held.add(e.code);sim.fault.motion.setAxis((held.has('KeyR')?1:0)-(held.has('KeyF')?1:0));}if(['KeyQ','KeyC'].includes(e.code)&&sim.fault.climbEnabled&&!e.repeat){e.preventDefault();sim.fault.motion.commandClimb(e.code==='KeyQ'?'up':'down');changed();}if(e.code==='KeyL'&&!e.repeat){e.preventDefault();sim.fault.flashlight=!sim.fault.flashlight;changed();}});
  host.addEventListener('keyup',e=>{if(!held.delete(e.code))return;if(sim.fault)sim.fault.motion.axis=(held.has('KeyR')?1:0)-(held.has('KeyF')?1:0);});
  host.addEventListener('blur',stop);globalThis.document?.addEventListener?.('visibilitychange',()=>{if(document.hidden)stop();});host.addEventListener('focusin',e=>{if(editable(e))stop();});return stop;
 }
