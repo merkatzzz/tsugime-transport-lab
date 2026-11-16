@@ -1,0 +1,1 @@
+{"ok": true, "drawings": 5, "scope": "Standalone SVG and finite coordinates; not WebGL screenshots."}

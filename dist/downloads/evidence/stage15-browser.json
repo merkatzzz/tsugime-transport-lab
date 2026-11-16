@@ -1,0 +1,10 @@
+{
+  "attempted": true,
+  "webglRendered": false,
+  "humanFirstPersonWalkVerified": false,
+  "screenshots": false,
+  "managedPreview": "relay could not open browser port 4173: timed out waiting for relay readiness",
+  "previewStopped": true,
+  "sharedChrome": "Browser Use could not read requirements",
+  "scope": "One attempt of each available route; no repeated retries, network changes or sharing changes. SVGs and controller replay are not WebGL screenshots."
+}

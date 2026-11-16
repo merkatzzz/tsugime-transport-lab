@@ -1,0 +1,39 @@
+{
+  "cpuChecksPassed": true,
+  "testCounts": {
+    "total": 260,
+    "passed": 260,
+    "failed": 0
+  },
+  "rows": [
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "normal-surfaces",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "evidence",
+      "exit": 0
+    },
+    {
+      "name": "drawing-xml",
+      "exit": 0
+    }
+  ],
+  "webglRendered": false,
+  "humanFirstPersonWalkVerified": false,
+  "completion": "CPU render geometry, controller input and swept transport validation; no WebGL completion claim.",
+  "finalFocusedTests": {
+    "total": 9,
+    "passed": 9,
+    "failed": 0,
+    "scope": "Final fault-only floor-support API, paused interaction guards and profile restoration; overlaps the full 260-case run."
+  }
+}

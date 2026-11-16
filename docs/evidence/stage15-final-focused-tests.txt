@@ -1,0 +1,17 @@
+✔ desktop/touch fault controls separate held vertical input, walk/gravity, recovery and normal-state return without hijacking E (4937.146476ms)
+✔ a fully swept valid A-B timing override has finished, waiting and multiple intermediate movers; normal plans stay byte-identical (3049.004326ms)
+✔ fault freezes the real geometry, gates, mechanisms and clocks and restores the normal C state without touching browser saves (3436.620772ms)
+✔ ordinary input exits a real room, sees the exposed roof, crosses the empty seam and lands on two actual roof heights (2734.462051ms)
+✔ development up/down collides with ceilings and roofs, releases on zero axis and resumes gravity rather than making a permanent ability (1500.620428ms)
+✔ real open atrium meshes permit falling through both intermediate openings to the bottom floor (1757.282947ms)
+✔ rotated physical triangles support a real roof and preserve an empty quadrant in an L-shaped rigid body (0.976464ms)
+✔ absence of surfaces allows continued finite free fall and explicit developer recovery, with no death or automatic teleport (118.715933ms)
+✔ fault maps use stopped poses and player height, not a completed A graph (1469.852546ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17935.272234

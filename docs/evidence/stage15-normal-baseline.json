@@ -1,0 +1,41 @@
+{
+  "before": "83d00139a2cdf18618198d76a34b5c771bed362a",
+  "files": [
+    {
+      "path": "dist/assets/transport-plans.json",
+      "sha256": "f77474667c2721e46f3a88626a258f941255e3e6096eb3375e3d7d6b24b42968"
+    },
+    {
+      "path": "dist/src/architecture.js",
+      "sha256": "3cf3624bde49afb1deac43053eedc376134f09223fa44323aff81c1b94bf0711"
+    },
+    {
+      "path": "dist/src/transport.js",
+      "sha256": "8763d21554595fac47285f42ee2081d593d178f6238a7e8bfc46b04efd40d300"
+    },
+    {
+      "path": "dist/src/transport-policy.js",
+      "sha256": "3c09e611131df55f81cfc6aa176894e7a100f5011278f6a0dad606405eada2be"
+    },
+    {
+      "path": "dist/src/facility-plan.js",
+      "sha256": "1c550ddb01b130291779c9d28e9434dd01943ccd021ca926da66643f2efd29af"
+    },
+    {
+      "path": "dist/src/south-market-layout.js",
+      "sha256": "1f106f5eeced830c95f758068d1b774fa7b6d45705a73dfd5ae5732807cf6914"
+    },
+    {
+      "path": "dist/src/atrium-layout.js",
+      "sha256": "6494fe3dc21060271e4f65cc8ab96314b47ae14311f27962436e2758a7db3072"
+    },
+    {
+      "path": "dist/src/atrium-shape.js",
+      "sha256": "caacaaa3b0e08628468b769808c1bfb33e7ffe9d5f821d1121bed7545e8ef6ed"
+    },
+    {
+      "path": "dist/src/large-room-layout.js",
+      "sha256": "11d28dad0e3c7aacfade2eddd5d949898a2dabb68de654041626568bf335c41d"
+    }
+  ]
+}
