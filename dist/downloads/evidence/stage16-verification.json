@@ -1,0 +1,37 @@
+{
+  "cpuChecksPassed": true,
+  "testCounts": {
+    "total": 264,
+    "passed": 264,
+    "failed": 0
+  },
+  "rows": [
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "normal-surfaces",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "evidence",
+      "exit": 0
+    },
+    {
+      "name": "drawing-xml",
+      "exit": 0
+    },
+    {
+      "name": "torch-direction",
+      "exit": 0
+    }
+  ],
+  "webglRendered": false,
+  "humanFirstPersonWalkVerified": false,
+  "completion": "Production triangle collision and actual controller replay; GPU visibility, performance and human PC/touch operation unverified."
+}

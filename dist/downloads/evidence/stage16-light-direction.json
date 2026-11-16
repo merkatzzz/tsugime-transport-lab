@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "rows": [
+    {
+      "position": [
+        46,
+        1.81,
+        62.4
+      ],
+      "directionAgreement": 1
+    },
+    {
+      "position": [
+        54,
+        -0.8,
+        60
+      ],
+      "directionAgreement": 0.9999999999999999
+    },
+    {
+      "position": [
+        52,
+        -5,
+        62
+      ],
+      "directionAgreement": 1.0000000000000002
+    }
+  ],
+  "webgl": false
+}

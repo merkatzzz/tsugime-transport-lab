@@ -1,0 +1,2 @@
+docs/evidence/stage16-plan.svg valid XML
+docs/evidence/stage16-spatial.svg valid XML
