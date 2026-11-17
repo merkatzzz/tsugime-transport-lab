@@ -20,7 +20,7 @@ test('unmanned base-to-entrance call traverses both junctions; all stations can 
 test('one-click trips rotate seat while stationary and keep free view/body lock on all return routes',()=>{
  const s=new IntegratedSession('rail',new Simulation());tick(s,100);s.call('entry');for(let i=0;i<6000&&s.cart.moving;i++)s.tick(1/60);go(s,0,2);assert.ok(s.interact('board'));const rows=[];
  for(const to of ['j1','observe','j1','j2','parasite','j2','base','j2','j1','entry']){trip(s,to);rows.push({node:to,seatAngle:s.seatAngle,yaw:s.player.yaw,heading:s.cart.pose.heading});}
- assert.ok(rows.some(r=>Math.abs(Math.abs(r.seatAngle)-Math.PI)<.001));s.player.yaw+=.4;s.player.pitch=.3;s.tick(1/60);assert.equal(s.player.pitch,.3);fs.writeFileSync('docs/evidence/stage22-seat.json',JSON.stringify(rows,null,2));s.dispose();
+ assert.ok(rows.some(r=>Math.abs(Math.abs(r.seatAngle)-Math.PI)<.001));s.chooseAndGo('j1');while(s.seatTurn)s.tick(1/60);s.player.yaw+=.4;s.player.pitch=.3;s.tick(1/60);assert.equal(s.player.pitch,.3);fs.writeFileSync('docs/evidence/stage22-seat.json',JSON.stringify(rows,null,2));s.dispose();
 });
 test('shared pickup, cart and event state survives reentry and existing save/load, without duplicating samples',()=>{
  const h=new Simulation();h.startTransfer();for(let i=0;i<2000&&h.mode!=='idle';i++)h.tick(.1);assert.equal(h.phase,'B');const original=JSON.stringify(h.positions),clock=h.clock;

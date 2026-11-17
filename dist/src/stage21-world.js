@@ -90,9 +90,16 @@ function railMap(result){
   }
   const a=RAIL_NODES.observe.p,os=groups.observe;
   // Front danger edge: solid low curb and open rails leave the view below unobstructed.
-  if(result.integrated){box(os,'observe',a[0]-4,a[1]+.12,a[2]+.85,8,.15,.12,0x434e47);
-  for(const x of [-4,-2,0,2,3.88])box(os,'observe',a[0]+x,a[1]+.27,a[2]+.85,.12,1.1,.12,0x85978a);
-  for(const h of [.65,1.25])box(os,'observe',a[0]-4,a[1]+h,a[2]+.82,8,.07,.1,0x85978a);}
+  if(result.integrated){
+   for(const [dx,w] of [[-4,3],[1,3]]){
+    box(os,'observe',a[0]+dx,a[1]+.12,a[2]+.85,w,.15,.12,0x434e47);
+    for(const h of [.65,1.25])box(os,'observe',a[0]+dx,a[1]+h,a[2]+.82,w,.07,.1,0x85978a);
+   }
+   for(const x of [-4,-2,-1,1,2,3.88])box(os,'observe',a[0]+x,a[1]+.27,a[2]+.85,.12,1.1,.12,0x85978a);
+   const gate=new THREE.Group();os.add(gate);result.observationGate=gate;
+   box(gate,'observe',a[0]-1,a[1]+.12,a[2]+.85,2,1.2,.12,0x667e70);
+   floor(os,'observe',a[0]-1,a[2]-.4,2,1.25,a[1]+.12);
+  }
   const ring=new THREE.Mesh(new THREE.TorusGeometry(6.2,.8,9,22),material(0x9b3b42));ring.rotation.x=Math.PI/2;ring.position.set(a[0],a[1]-6,a[2]-8);ring.userData.nonPhysical=true;os.add(ring);
   result.observation={center:[a[0],a[1]-6,a[2]-8],ringRadius:6.2,identity:'unconfirmed-organ'};
   const deep=new THREE.Mesh(new THREE.SphereGeometry(6.8,18,12),material(0x4a1725,{side:THREE.BackSide}));deep.position.set(a[0],a[1]-13,a[2]-8);deep.scale.y=1.8;deep.userData.nonPhysical=true;os.add(deep);

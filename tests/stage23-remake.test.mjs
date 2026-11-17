@@ -31,3 +31,12 @@ test('base station connects to the sump footbridge through real wall openings',(
 });
 
 test('dive is reachable from the dry bank on both approaches without entering water',()=>{const h=new Simulation();for(const x of [45.6,47.5,49.4])for(const z of [-3.3,-2.9,-2.65]){h.player={x,y:-12.8,z,yaw:0,pitch:0};assert.ok(h.isFree(x,z,-12.8));state22(h).diveEnhanced=false;assert.equal(operateGround(h),'inspect');state22(h).diveEnhanced=true;assert.equal(operateGround(h),'canal');}h.player={x:47.5,y:0,z:-2.9};assert.equal(operateGround(h),null);});
+test('stop focus turns in 250ms, holds a stable selection view, then restores moving free look',()=>{
+ const s=new IntegratedSession('rail',new Simulation());tick(s,60);s.cart.node='j1';s.cart.pose=railPose(edgeBetween('entry','j1'),edgeBetween('entry','j1').length);s.aboard=true;s.player.yaw=s.cart.pose.heading+Math.PI;s.player.pitch=.7;tick(s,16);assert.equal(s.stopFocus.turning,false);const yaw=s.player.yaw,pitch=s.player.pitch;tick(s,30);assert.equal(s.player.yaw,yaw);assert.equal(s.player.pitch,pitch);assert.equal(s.lookLocked,true);assert.ok(s.chooseAndGo('observe'));while(s.seatTurn)s.tick(1/60);assert.equal(s.lookLocked,false);s.player.pitch=.4;s.tick(1/60);assert.equal(s.player.pitch,.4);s.dispose();
+});
+test('observation gate opens only for a docked cart and supports a physical round trip between cart and platform',()=>{
+ const s=new IntegratedSession('rail',new Simulation());tick(s,60);assert.equal(s.observationGateOpen,false);const edge=edgeBetween('j1','observe');s.cart.node='observe';s.cart.route=null;s.cart.pose=railPose(edge,edge.length);s.tick(1/60);assert.equal(s.observationGateOpen,true);
+ const spawn=s.map.stations.observe,target=s.cart.pose;Object.assign(s.player,spawn);
+ for(const q of [target,spawn]){let n=0;while(Math.hypot(q.x-s.player.x,q.z-s.player.z)>.07&&n++<300){s.player.yaw=Math.atan2(q.x-s.player.x,q.z-s.player.z);s.walk(1,0,1/60);s.tick(1/60);}assert.ok(n<300,JSON.stringify(s.player));assert.ok(s.player.y>spawn.y-.05);}
+ s.cart.node='entry';s.tick(1/60);assert.equal(s.observationGateOpen,false);s.dispose();
+});

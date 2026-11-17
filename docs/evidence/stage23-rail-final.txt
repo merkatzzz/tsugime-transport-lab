@@ -1,0 +1,24 @@
+✔ ordinary facility E connects both regions and returns without using development launch/exit buttons (4444.031585ms)
+✔ F0 north extension is a real walk from the existing landing, with a closed door, entry and load-ready closure (804.490257ms)
+✔ new fixed extension lies outside every certified moving envelope in all 18 transport plans (1480.04106ms)
+✔ unmanned base-to-entrance call traverses both junctions; all stations can summon without teleport (515.584018ms)
+✔ one-click trips rotate seat while stationary and keep free view/body lock on all return routes (492.167907ms)
+✔ shared pickup, cart and event state survives reentry and existing save/load, without duplicating samples (271.156332ms)
+✔ actual W0 bank supplies a proximity-gated entry and upper dive returns instead of creating an independent home map (9.272383ms)
+✔ W0 long bank is walkable; no W2 dive; ability switch and unchanged item state survive save (478.87617ms)
+✔ hidden approach arrives quickly, visible cart is never relocated and moving calls are rejected (212.701443ms)
+✔ observation rails physically prevent falling while leaving station boarding accessible; sump has no collection (2305.72512ms)
+✔ new source contains no old stage23 collection or migration dependency (0.944215ms)
+✔ direction markers track real rail projections for free yaw; only stationary reachable routes appear (4.472761ms)
+✔ base station connects to the sump footbridge through real wall openings (64.650094ms)
+✔ dive is reachable from the dry bank on both approaches without entering water (9.630197ms)
+✔ stop focus turns in 250ms, holds a stable selection view, then restores moving free look (28.29083ms)
+✔ observation gate opens only for a docked cart and supports a physical round trip between cart and platform (54.127897ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13328.50288

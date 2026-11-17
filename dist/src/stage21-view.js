@@ -37,9 +37,12 @@ export class Stage21View {
     const used={};for(const button of root.querySelectorAll('[data-side-route]')){
       const id=button.dataset.sideRoute,edge=RAIL_EDGES.find(e=>(e.a===s.cart.node&&e.b===id)||(e.b===s.cart.node&&e.a===id));
       const point=edge.curve.getPointAt(edge.a===s.cart.node?.3:.7).clone().applyMatrix4(this.camera.matrixWorldInverse);
-      const direction=point.z>=0?'back':Math.abs(point.x/-point.z)<.3?'forward':point.x<0?'left':'right';
-      const slots={left:[20,55,'←'],forward:[50,32,'↑'],right:[80,55,'→'],back:[50,82,'↓']},slot=slots[direction],offset=(used[direction]??0)*12;used[direction]=(used[direction]??0)+1;
-      button.style.left=(slot[0]+offset)+'%';button.style.top=slot[1]+'%';button.style.rotate='0deg';button.textContent=slot[2];
+      const back=point.z>=0,ndc=edge.curve.getPointAt(edge.a===s.cart.node?.35:.65).clone().project(this.camera);
+      const offset=back?(used.back??0)*12:0;if(back)used.back=(used.back??0)+1;
+      button.style.left=(back?50+offset:Math.max(8,Math.min(92,(ndc.x+1)*50)))+'%';
+      button.style.top=(back?82:Math.max(18,Math.min(70,(1-ndc.y)*50)))+'%';button.style.rotate='0deg';
+      button.textContent=back?'↶':Math.abs(point.x/-point.z)<.18?'↑':point.x<0?'↖':'↗';
+      const direction=back?'back':'forward';
       button.title=RAIL_NODES[id].name+(direction==='back'?'：戻る':'');button.setAttribute('aria-label',button.title);
     }
   }
@@ -68,7 +71,7 @@ export class Stage21View {
     this.flash=map.flash;updateFaultLighting(this);map.flash=this.flash;
     this.camera.updateMatrixWorld();s.canStageCart=(a,b)=>[a,b].every(p=>[-.7,.4].every(dy=>[-.7,.7].every(dx=>[-.8,.8].every(dz=>this.hiddenCart({...p,y:p.y+dy,x:p.x+dx,z:p.z+dz})))));
     for(const m of map.callButtons??[])m.material.emissive.setHex(s.cart.moving?0x594b12:0x000000);
-    this.routeMarkers();this.renderer.render(this.scene,this.camera);
+    this.renderer.domElement.style.cursor=s.lookLocked?'default':'';this.routeMarkers();this.renderer.render(this.scene,this.camera);
   }
   dispose(){this.observer?.disconnect();this.renderer.dispose();this.renderer.forceContextLoss();this.renderer.domElement.remove();}
 }

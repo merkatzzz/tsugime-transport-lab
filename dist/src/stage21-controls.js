@@ -46,7 +46,7 @@ export function installStage21Controls({sim,$,getSide,onStart,onEnd,changed,host
     $('#side-go').textContent=s.cart.moving?'走行中 → 自動停止':'発進 / 折返し（Space）';
     let html='';if(s.kind==='rail'&&s.aboard&&!s.cart.moving&&!s.seatTurn)for(const id of s.cart.choices){const children=RAIL_NODES[s.cart.node].children,forward=children?.includes(id),label=children?(forward?(id===children[0]?'本線を進む':'支線へ入る'):'共通側へ戻る'):'折返し方向';html+='<button data-side-route="'+id+'" aria-pressed="'+(id===s.cart.selected)+'">'+(s.integrated?(id===s.cart.arrivals.at(-2)?'↶ 来た線路へ戻る':forward?(id===children[0]?'↑ 本線へ進む':'↗ 支線へ進む'):'↶ 帰還方向へ進む'):label)+(s.integrated?'':id===s.cart.selected?' ✓':'')+'</button>';}
     if(s.integrated)html=s.kind==='rail'&&s.aboard&&!s.cart.moving&&!s.seatTurn?s.cart.choices.map(id=>'<button data-side-route="'+id+'" aria-label="進路">➤</button>').join(''):'';
-    if($('#side-routes').innerHTML!==html)$('#side-routes').innerHTML=html;
+    const routeKey=s.integrated?JSON.stringify([s.aboard,s.cart.moving,!!s.seatTurn,!!s.stopFocus?.turning,s.cart.node,s.cart.choices]):html;if(s.integrated&&s.stopFocus?.turning)html='';if($('#side-routes')._routeKey!==routeKey){$('#side-routes').innerHTML=html;$('#side-routes')._routeKey=routeKey;}
     $('#side-map').innerHTML=stage21MapSVG(s);$('#side-inventory').textContent=(s.integrated?'共通所持品の回収部品 ':'試験内の回収部品 ')+(s.model.items.counts.scrap??0)+'点'+(s.collectedNames.length?'：'+s.collectedNames.join('、'):'');
     $('#side-replay').hidden=s.mapId!=='canal-upper';$('#side-replay').disabled=!!s.transition;
     $('#camera-caption').textContent=(s.integrated?'STAGE 22':'STAGE 21')+(s.kind==='rail'?' / FIXED UNDERGROUND RAIL':' / FIXED CANAL');
