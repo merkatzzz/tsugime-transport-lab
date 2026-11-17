@@ -1,0 +1,36 @@
+✔ both independent experiments freeze normal simulation/save state and restore it through real UI handlers (5938.619341ms)
+✔ rail graph has exactly two successive binary turnouts and mainline terminal, with curved graded tracks (17.724629ms)
+✔ temporary elevator is proximity-only and loads underground entrance with a safe return (173.442512ms)
+✔ one rider is locked to the vehicle while view remains free; foot departure and junction dismount are refused (72.632869ms)
+✔ actual branch A, branch B and mainline terminal round trips stop safely and use continuous reverse curves (75.382863ms)
+✔ all ordered station pairs are reachable by real edge traversal including changes between both branches (96.234836ms)
+✔ destinations contain an unidentified organ, three empty parasite rooms and separate base/recovery/hobby/salvage locations (36.057822ms)
+✔ after dismount the player walks through the base partitions, picks one sample, and returns to the waiting cart (241.037699ms)
+✔ the observation platform and all three parasite rooms are walkable after dismount and reconnect to the cart (270.651435ms)
+✔ diving requires a real inlet, sinks/fades/loads/surfaces, blocks swimming input and returns to the correct pose (11.679472ms)
+✔ real six-metre wall blocks walking, accepts the existing swept arm at six, supports walking and descent (51.37842ms)
+✔ upper traces include two collectible samples and static objects, with no evidence or economy rules added (146.229638ms)
+✔ ten-metre real wall is rejected at six and eight; walking, inertia and both side edges cannot bypass it (105.140225ms)
+✔ walking into the upper trigger drops real gravity objects once, leaves view/input free, and permits return (71.287434ms)
+✔ a fresh experiment resets temporary cart, samples and event while recovery never teleports the vehicle (39.370091ms)
+✔ ordinary facility E connects both regions and returns without using development launch/exit buttons (4741.596052ms)
+✔ F0 north extension is a real walk from the existing landing, with a closed door, entry and load-ready closure (800.7679ms)
+✔ new fixed extension lies outside every certified moving envelope in all 18 transport plans (1813.074867ms)
+✔ unmanned base-to-entrance call traverses both junctions; all stations can summon without teleport (749.941521ms)
+✔ one-click trips rotate seat while stationary and keep free view/body lock on all return routes (216.230204ms)
+✔ shared pickup, cart and event state survives reentry and existing save/load, without duplicating samples (251.306437ms)
+✔ actual W0 bank supplies a proximity-gated entry and upper dive returns instead of creating an independent home map (10.398382ms)
+✔ W0 long bank is walkable; no W2 dive; ability switch and unchanged item state survive save (700.311767ms)
+✔ hidden approach arrives quickly, visible cart is never relocated and moving calls are rejected (258.856406ms)
+✔ observation rails physically prevent falling while leaving station boarding accessible; sump has no collection (2497.903711ms)
+✔ new source contains no old stage23 collection or migration dependency (1.359789ms)
+✔ direction markers track real rail projections for free yaw; only stationary reachable routes appear (4.631389ms)
+✔ base station connects to the sump footbridge through real wall openings (101.171309ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 22439.758075

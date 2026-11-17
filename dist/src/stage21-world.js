@@ -82,7 +82,7 @@ function railMap(result){
     cavity.position.set(p.x+3,p.y+1,p.z+5);cavity.scale.set(id==='base'?18:15,11,id==='base'?21:16);cavity.userData.nonPhysical=true;group.add(cavity);
   }
   result.callButtons=[];
-  for(const id of ['entry','observe','parasite','base']){
+  if(result.integrated)for(const id of ['entry','observe','parasite','base']){
     const [x,y,z]=RAIL_NODES[id].p,g=groups[id];
     box(g,id,x+2.5,y+.12,z+3,.3,1.25,.3,0x526b62);
     const button=box(g,id,x+2.51,y+1.05,z+2.94,.28,.25,.07,0xd9b45c);
@@ -90,9 +90,9 @@ function railMap(result){
   }
   const a=RAIL_NODES.observe.p,os=groups.observe;
   // Front danger edge: solid low curb and open rails leave the view below unobstructed.
-  box(os,'observe',a[0]-4,a[1]+.12,a[2]+.85,8,.15,.12,0x434e47);
+  if(result.integrated){box(os,'observe',a[0]-4,a[1]+.12,a[2]+.85,8,.15,.12,0x434e47);
   for(const x of [-4,-2,0,2,3.88])box(os,'observe',a[0]+x,a[1]+.27,a[2]+.85,.12,1.1,.12,0x85978a);
-  for(const h of [.65,1.25])box(os,'observe',a[0]-4,a[1]+h,a[2]+.85,8,.07,.1,0x85978a);
+  for(const h of [.65,1.25])box(os,'observe',a[0]-4,a[1]+h,a[2]+.82,8,.07,.1,0x85978a);}
   const ring=new THREE.Mesh(new THREE.TorusGeometry(6.2,.8,9,22),material(0x9b3b42));ring.rotation.x=Math.PI/2;ring.position.set(a[0],a[1]-6,a[2]-8);ring.userData.nonPhysical=true;os.add(ring);
   result.observation={center:[a[0],a[1]-6,a[2]-8],ringRadius:6.2,identity:'unconfirmed-organ'};
   const deep=new THREE.Mesh(new THREE.SphereGeometry(6.8,18,12),material(0x4a1725,{side:THREE.BackSide}));deep.position.set(a[0],a[1]-13,a[2]-8);deep.scale.y=1.8;deep.userData.nonPhysical=true;os.add(deep);
@@ -114,8 +114,9 @@ function railMap(result){
   const c=RAIL_NODES.base.p,y=c[1]+.12;
   floor(s,'base',c[0]-4,c[2]+7,21,10,y);
   box(s,'base',c[0]-4,y,c[2]+16.85,21,2.8,.15,0x6a7770);
+  if(!result.integrated)box(s,'base',c[0]+16.85,y,c[2]+7,.15,2.8,10,0x6a7770);
   box(s,'base',c[0]-4,y,c[2]+7,.15,2.8,10,0x6a7770);
-  for(const [z,d] of [[7,2.5],[10.8,6.2]])box(s,'base',c[0]+16.85,y,c[2]+z,.15,2.8,d,0x6a7770);
+  if(result.integrated)for(const [z,d] of [[7,2.5],[10.8,6.2]])box(s,'base',c[0]+16.85,y,c[2]+z,.15,2.8,d,0x6a7770);
   for(const x of[2,9])for(const [z,d]of[[8,2],[12,5]])box(s,'base',c[0]+x,y,c[2]+z,.12,2.7,d,0x6a7770);
   box(s,'base',c[0]-2,y,c[2]+13,2,.5,2.6,0x99856e);
   box(s,'base',c[0]+4,y,c[2]+14,3,.9,1,0x788a7f);
@@ -124,6 +125,7 @@ function railMap(result){
   label(s,'回復設備の設置場所 / 供給設定未確定',c[0]+5,y+2,c[2]+16.7,Math.PI);
   label(s,'趣味・作業 / 仮配置',c[0]+12,y+2,c[2]+16.7,Math.PI);
   result.baseZones=[{id:'living',x:c[0]-3,z:c[2]+10},{id:'recovery-location',x:c[0]+5,z:c[2]+11},{id:'hobby-work',x:c[0]+12,z:c[2]+11},{id:'salvage',x:c[0]+14,z:c[2]+9}];
+  if(result.integrated){
   // Inlet and outlet surround a recessed sump alongside the existing base walkway.
   floor(s,'sump-bed',c[0]+17,c[2]+7,7,10,y-1.2);
   water(s,c[0]+17,c[2]+7,7,10,y-.45);
@@ -132,8 +134,9 @@ function railMap(result){
     box(s,'sump',c[0]+18.5,y+.65,c[2]+z,4,.2,.8,0x637e76);
   }
   box(s,'sump',c[0]+23.85,y-1.2,c[2]+7,.15,2,10,0x637e76);
-  floor(s,'base',c[0]+15,c[2]+9.5,4,1.3,y);
+  floor(s,'base',c[0]+17,c[2]+9.5,2,1.3,y);
   label(s,'用水路終着・集積槽 / 建築試験',c[0]+20,y+1.7,c[2]+16.7,Math.PI);
+  }else{pickup(result,'base-scrap','回収部品（試料）',c[0]+14,y+.35,c[2]+9);label(s,'回収場所',c[0]+14,y+1.8,c[2]+8,0);}
   result.entry={x:-2,z:3,y:-19.88};
   box(s,'entry',-3,-19.88,3.5,1,2,.3,0x667973);label(s,'地上へ / 仮の旧EV',-2.5,-17.7,3.4,0);
   for(const id of['j1','j2']){const p=RAIL_NODES[id].p;light(s,p[0]+2,p[1]+2,p[2],6);box(s,id,p[0]+2,p[1],p[2]+1,.2,1,.2,0xa7a18a,false);}
@@ -197,7 +200,7 @@ function canalMap(result,upper){
 export function buildStage21Map(id,{integrated=false}={}){
   const scene=new THREE.Scene();scene.background=new THREE.Color(0x0d1413);
   scene.add(new THREE.HemisphereLight(0xa5b8ae,0x241317,.24));
-  const result={id,scene,anchors:[],objects:[],stations:{}};
+  const result={id,scene,integrated,anchors:[],objects:[],stations:{}};
   if(id==='rail-ground'){
     floor(scene,'ground',-4,-2,8,9,0);
     for(const x of[-1.6,1.45])box(scene,'lift',x,0,-1.5,.15,3,3.5,0x61726c);

@@ -25,3 +25,7 @@ test('direction markers track real rail projections for free yaw; only stationar
  Stage21View.prototype.routeMarkers.call({side:{cart:{node}},camera});for(const b of buttons){assert.ok(parseFloat(b.style.left)>=4&&parseFloat(b.style.left)<=96);assert.ok(parseFloat(b.style.top)>0&&parseFloat(b.style.top)<100);assert.ok(b.title.includes(RAIL_NODES[b.dataset.sideRoute].name));}
  }}finally{globalThis.document=old;}
 });
+test('base station connects to the sump footbridge through real wall openings',()=>{
+ const s=new IntegratedSession('rail',new Simulation());tick(s,60);Object.assign(s.player,s.map.stations.base);s.motion.eyeY=s.player.y;
+ for(const [x,z] of [[100,38.4],[118,38.4]]){let n=0;while(Math.hypot(s.player.x-x,s.player.z-z)>.08&&n++<1000){s.player.yaw=Math.atan2(x-s.player.x,z-s.player.z);s.walk(1,0,1/60);s.tick(1/60);}assert.ok(n<1000,JSON.stringify(s.player));assert.ok(s.map.world.clear(s.player));assert.ok(s.map.world.support(s.player,.04));}s.dispose();
+});

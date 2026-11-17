@@ -11,6 +11,6 @@
 
 .stage21-active main{grid-template-columns:minmax(0,1fr) 386px}.stage21-active .workspace{max-width:none}.stage21-active aside{display:block;visibility:hidden}
 @media(min-width:1800px){.stage21-active main{grid-template-columns:minmax(0,1fr) 420px}}@media(max-width:1100px){.stage21-active main{grid-template-columns:minmax(0,1fr) 340px}}@media(max-width:800px){.stage21-active aside{display:none}}
-#side-routes{position:absolute!important;inset:0!important;pointer-events:none;z-index:5}
-#side-routes button{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;min-width:44px;min-height:44px;background:#e8eddde8;border:1px solid #819782;border-radius:50%;font-size:24px}
+.integrated22 #side-routes{position:absolute!important;inset:0!important;pointer-events:none;z-index:5}
+.integrated22 #side-routes button{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;min-width:44px;min-height:44px;background:#e8eddde8;border:1px solid #819782;border-radius:50%;font-size:24px}
 #drain23-ui{position:absolute;left:15px;bottom:70px;z-index:6;background:#e8eddd;padding:12px}
