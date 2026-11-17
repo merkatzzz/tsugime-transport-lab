@@ -26,5 +26,7 @@
   "webglRendered": false,
   "humanFirstPersonWalkVerified": false,
   "gpuFpsMeasured": false,
-  "completion": "CPU geometry, controller trajectories and normal transport regression; no WebGL completion claim."
+  "completion": "CPU geometry, controller trajectories and normal transport regression; no WebGL completion claim.",
+  "testedCommit": "f1eb21d4ee76d0f69ae4ba2f025bb3393b67b0f7",
+  "scope": "Original Stage20 release. Latest ground movement correction is covered by stage20-walk-verification.json."
 }

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "tests": 22,
+  "failed": 0,
+  "testFiles": [
+    "tests/stage20.test.mjs",
+    "tests/stage18.test.mjs",
+    "tests/stage19.test.mjs"
+  ],
+  "behavior": "Ground input starts, stops and reverses immediately; Shift speed is direct. Air inertia and weak correction remain. Real lower-roof landing and high-density WASD detour pass.",
+  "sourceSha256": {
+    "dist/src/fault-air.js": "180fef94e3d9b7bcd0591010659f383abc5c58cc6671e93e0a3000c0bc638eec"
+  },
+  "webglVerified": false,
+  "fullSuiteRerun": false,
+  "previousFullSuiteCommit": "f1eb21d4ee76d0f69ae4ba2f025bb3393b67b0f7",
+  "previousFullSuitePassed": 290
+}

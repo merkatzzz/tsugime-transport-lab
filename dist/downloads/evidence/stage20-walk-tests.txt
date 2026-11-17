@@ -1,0 +1,30 @@
+✔ all transport shutters open after fixed poses; specified/all switch leaves position and darkness intact and restores normal control (11352.566521ms)
+✔ R2 indoor → L1 roof → L1 interior → same roof → upper R2 indoor uses only walk and finite Q/C commands (2533.894021ms)
+✔ actual six metre SM1/BR3 roof descent and return, and an upper shutter-frame entry, obey independent bounds (2579.704141ms)
+✔ 6m and 1.5m endpoints are accepted; 6.01m, 1.51m, missing landing and a mid-path ceiling are rejected (33.440931ms)
+✔ closed frame, wrong gaze, unsupported free mode and a changed collision world do not cause ghost climbing (5464.794538ms)
+✔ woven fibre bundles preserve the walking route without an invisible skin floor (3787.854977ms)
+✔ E operates real ordinary doors in stage18 and refuses closing a leaf onto the capsule (5766.552372ms)
+✔ PC Q/C and conditional touch buttons share the verified command; slider starts at 8 and comparison preserves pose (4856.572725ms)
+✔ same real roof edge rejects 6.5m at six, accepts at eight, and returns without developer flight (4882.728535ms)
+✔ falling into real red bottom fails and returns to room, not underground; normal mode restores (2133.623674ms)
+✔ door geometry cache retains two states; frozen atrium stairs are not deployed (4096.328211ms)
+✔ ground input starts, stops and reverses immediately; Shift is direct and landing does not coast (11.197238ms)
+✔ 36cm endpoint passes; 37cm and low head clearance block; comparison retains 24cm (132.543711ms)
+✔ inertia coasts without input and cannot instantly reverse; legacy air can stop, weak control is adjustable (3.996019ms)
+✔ diagonal wall contact slides while capsule-too-narrow slots remain blocked (35.632788ms)
+✔ density levels reproduce, keep poses, reject embedding, and remove all growth on normal return (17975.20264ms)
+✔ middle blocks the straight roof route; east detour and high-density tear remain physically walkable (4860.391829ms)
+✔ soft torch has no hard inner plateau, monotonic edge falloff and independent intensity (0.826716ms)
+✔ real six-metre fall carries takeoff velocity onto the lower BR3 roof without air input (1204.021366ms)
+✔ north exit is open at low density and intentionally impassable at high while east route remains (2306.997965ms)
+✔ stage20 UI switches density, 24/36, inertia/legacy, air correction and torch independently (2082.840694ms)
+✔ high-density detour is traversed through the actual direct ground WASD input path (2528.393323ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 47761.019583
