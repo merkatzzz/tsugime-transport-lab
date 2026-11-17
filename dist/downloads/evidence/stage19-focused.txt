@@ -1,6 +1,6 @@
-✔ same real roof edge rejects 6.5m at six, accepts at eight, and returns without developer flight (4748.925795ms)
-✔ falling into real red bottom fails and returns to room, not underground; normal mode restores (2143.508814ms)
-✔ door geometry cache retains two states; frozen atrium stairs are not deployed (2950.724464ms)
+✔ same real roof edge rejects 6.5m at six, accepts at eight, and returns without developer flight (2655.048503ms)
+✔ falling into real red bottom fails and returns to room, not underground; normal mode restores (1738.285793ms)
+✔ door geometry cache retains two states; frozen atrium stairs are not deployed (2706.519639ms)
 ℹ tests 3
 ℹ suites 0
 ℹ pass 3
@@ -8,4 +8,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 11568.696883
+ℹ duration_ms 8858.09723
