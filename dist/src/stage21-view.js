@@ -17,7 +17,7 @@ export class Stage21View {
     this.renderer.domElement.tabIndex=0;this.renderer.domElement.className='stage21-canvas';container.appendChild(this.renderer.domElement);
     this.cart=makeCart();this.wasteMeshes=new Map();this.blades={};this.resize();this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(container);
   }
-  resize(){const w=this.container.clientWidth,h=this.container.clientHeight;this.renderer.setSize(w,h);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();}
+  resize(){const w=this.container.clientWidth,h=this.container.clientHeight;if(!w||!h)return;this.renderer.setSize(w,h,false);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();}
   setMode(){this.mode='explore';}
   pick(x,y){const r=this.renderer.domElement.getBoundingClientRect(),ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2((x-r.left)/r.width*2-1,-(y-r.top)/r.height*2+1),this.camera);const hit=ray.intersectObjects(this.side.map.scene.children,true).find(h=>h.object.userData.call23&&h.distance<3);if(hit)this.side.call(hit.object.userData.call23);else this.side.interact();}
   render(){
