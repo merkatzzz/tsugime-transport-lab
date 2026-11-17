@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "baseline": "73743d69c5ef50edf342c6fcb3a44d68a88cbed6",
+  "checks": [
+    {
+      "manifest": "stage15-normal-preserved.json",
+      "matched": 9
+    },
+    {
+      "manifest": "stage14-preserved-archives.json",
+      "matched": 18
+    },
+    {
+      "stage20GroundAndAirController": "unchanged"
+    }
+  ]
+}

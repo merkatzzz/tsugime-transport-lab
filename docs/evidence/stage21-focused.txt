@@ -1,0 +1,22 @@
+✔ rail graph has exactly two successive binary turnouts and mainline terminal, with curved graded tracks (15.110744ms)
+✔ temporary elevator is proximity-only and loads underground entrance with a safe return (193.651684ms)
+✔ one rider is locked to the vehicle while view remains free; foot departure and junction dismount are refused (98.84293ms)
+✔ actual branch A, branch B and mainline terminal round trips stop safely and use continuous reverse curves (136.968383ms)
+✔ all ordered station pairs are reachable by real edge traversal including changes between both branches (76.840074ms)
+✔ destinations contain an unidentified organ, three empty parasite rooms and separate base/recovery/hobby/salvage locations (39.688811ms)
+✔ after dismount the player walks through the base partitions, picks one sample, and returns to the waiting cart (269.4504ms)
+✔ the observation platform and all three parasite rooms are walkable after dismount and reconnect to the cart (229.316018ms)
+✔ diving requires a real inlet, sinks/fades/loads/surfaces, blocks swimming input and returns to the correct pose (9.863685ms)
+✔ real six-metre wall blocks walking, accepts the existing swept arm at six, supports walking and descent (35.294153ms)
+✔ upper traces include two collectible samples and static objects, with no evidence or economy rules added (21.49791ms)
+✔ ten-metre real wall is rejected at six and eight; walking, inertia and both side edges cannot bypass it (59.456681ms)
+✔ walking into the upper trigger drops real gravity objects once, leaves view/input free, and permits return (73.378513ms)
+✔ a fresh experiment resets temporary cart, samples and event while recovery never teleports the vehicle (34.815242ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1568.903725

@@ -1,0 +1,9 @@
+✔ both independent experiments freeze normal simulation/save state and restore it through real UI handlers (11146.331221ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11494.646706

@@ -1,0 +1,40 @@
+{
+  "cpuChecksPassed": true,
+  "testCounts": {
+    "total": 306,
+    "passed": 306,
+    "failed": 0
+  },
+  "finalFocused": {
+    "tests": 15,
+    "passed": 15,
+    "failed": 0,
+    "overlapsFullSuite": true
+  },
+  "rows": [
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "normal-surfaces",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "model",
+      "exit": 0
+    },
+    {
+      "name": "evidence",
+      "exit": 0
+    }
+  ],
+  "webglRendered": false,
+  "humanPcOrTouchInputVerified": false,
+  "gpuFpsMeasured": false,
+  "completion": "CPU rail trajectories, physical scene geometry, actual controller inputs and existing transport regression; no WebGL completion claim."
+}

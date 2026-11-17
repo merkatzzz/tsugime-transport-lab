@@ -1,0 +1,118 @@
+[
+  {
+    "from": "entry",
+    "to": "observe",
+    "path": [
+      "entry",
+      "j1",
+      "observe"
+    ]
+  },
+  {
+    "from": "entry",
+    "to": "parasite",
+    "path": [
+      "entry",
+      "j1",
+      "j2",
+      "parasite"
+    ]
+  },
+  {
+    "from": "entry",
+    "to": "base",
+    "path": [
+      "entry",
+      "j1",
+      "j2",
+      "base"
+    ]
+  },
+  {
+    "from": "observe",
+    "to": "entry",
+    "path": [
+      "observe",
+      "j1",
+      "entry"
+    ]
+  },
+  {
+    "from": "observe",
+    "to": "parasite",
+    "path": [
+      "observe",
+      "j1",
+      "j2",
+      "parasite"
+    ]
+  },
+  {
+    "from": "observe",
+    "to": "base",
+    "path": [
+      "observe",
+      "j1",
+      "j2",
+      "base"
+    ]
+  },
+  {
+    "from": "parasite",
+    "to": "entry",
+    "path": [
+      "parasite",
+      "j2",
+      "j1",
+      "entry"
+    ]
+  },
+  {
+    "from": "parasite",
+    "to": "observe",
+    "path": [
+      "parasite",
+      "j2",
+      "j1",
+      "observe"
+    ]
+  },
+  {
+    "from": "parasite",
+    "to": "base",
+    "path": [
+      "parasite",
+      "j2",
+      "base"
+    ]
+  },
+  {
+    "from": "base",
+    "to": "entry",
+    "path": [
+      "base",
+      "j2",
+      "j1",
+      "entry"
+    ]
+  },
+  {
+    "from": "base",
+    "to": "observe",
+    "path": [
+      "base",
+      "j2",
+      "j1",
+      "observe"
+    ]
+  },
+  {
+    "from": "base",
+    "to": "parasite",
+    "path": [
+      "base",
+      "j2",
+      "parasite"
+    ]
+  }
+]

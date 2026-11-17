@@ -1,0 +1,22 @@
+{
+  "webglVerified": false,
+  "screenshots": [],
+  "humanPcInputVerified": false,
+  "humanTouchInputVerified": false,
+  "gpuFpsMeasured": false,
+  "previewAttempt": {
+    "command": "sites-preview start /workspace/work/tsugime-stage4",
+    "result": "relay could not open browser port 4173: timed out waiting for relay readiness",
+    "followingStatus": "Sites preview stopped"
+  },
+  "repeatedWithoutRecovery": false,
+  "cpuIsNotWebgl": true,
+  "cloudBrowser": {
+    "selected": "Chrome cdp",
+    "url": "https://tsugime-architecture-transport-lab.merkatzzz.chatgpt.site",
+    "result": "Browser Use could not read requirements.",
+    "lastTab": "about:blank",
+    "siteContentObserved": false,
+    "recovery": "Read documented browser troubleshooting, retained valid tab and retried navigation once; same framework error."
+  }
+}

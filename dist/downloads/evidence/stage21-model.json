@@ -1,0 +1,253 @@
+{
+  "maps": [
+    {
+      "id": "rail-ground",
+      "spawn": {
+        "x": 0,
+        "y": -0.16,
+        "z": 3,
+        "yaw": 3.141592653589793,
+        "pitch": 0
+      },
+      "meshes": 5,
+      "triangles": 60,
+      "collisionTriangles": 60,
+      "anchors": [],
+      "objects": []
+    },
+    {
+      "id": "rail",
+      "spawn": {
+        "x": 0,
+        "y": -20.04,
+        "z": 2,
+        "yaw": 3.141592653589793,
+        "pitch": 0
+      },
+      "meshes": 260,
+      "triangles": 44904,
+      "collisionTriangles": 480,
+      "anchors": [],
+      "objects": [
+        {
+          "id": "base-scrap",
+          "name": "回収部品（試料）",
+          "x": 114,
+          "y": -18.529999999999998,
+          "z": 37,
+          "collectible": true
+        }
+      ],
+      "observation": {
+        "center": [
+          26.34239137992823,
+          -28,
+          -20.34390022169962
+        ],
+        "ringRadius": 6.2,
+        "identity": "unconfirmed-organ"
+      },
+      "parasiteRooms": {
+        "count": 3,
+        "cellMetres": 8,
+        "combatIntegrated": false
+      },
+      "baseZones": [
+        {
+          "id": "living",
+          "x": 97,
+          "z": 38
+        },
+        {
+          "id": "recovery-location",
+          "x": 105,
+          "z": 39
+        },
+        {
+          "id": "hobby-work",
+          "x": 112,
+          "z": 39
+        },
+        {
+          "id": "salvage",
+          "x": 114,
+          "z": 37
+        }
+      ]
+    },
+    {
+      "id": "canal-home",
+      "spawn": {
+        "x": 4,
+        "y": -0.16,
+        "z": 2.5,
+        "yaw": 1.5707963267948966,
+        "pitch": 0
+      },
+      "meshes": 9,
+      "triangles": 108,
+      "collisionTriangles": 72,
+      "anchors": [],
+      "objects": []
+    },
+    {
+      "id": "canal-upper",
+      "spawn": {
+        "x": 2,
+        "y": -0.16,
+        "z": 2.7,
+        "yaw": 1.5707963267948966,
+        "pitch": 0
+      },
+      "meshes": 20,
+      "triangles": 500,
+      "collisionTriangles": 132,
+      "anchors": [
+        {
+          "body": "lower",
+          "kind": "frame",
+          "key": "lower:wall-edge",
+          "y": 0,
+          "a": {
+            "x": 11,
+            "z": 0.6
+          },
+          "b": {
+            "x": 11,
+            "z": 4
+          },
+          "n": {
+            "x": 1,
+            "z": 0
+          }
+        },
+        {
+          "body": "upper",
+          "kind": "frame",
+          "key": "upper:six-metre-top",
+          "y": 6,
+          "a": {
+            "x": 11,
+            "z": 0.6
+          },
+          "b": {
+            "x": 11,
+            "z": 4
+          },
+          "n": {
+            "x": -1,
+            "z": 0
+          }
+        },
+        {
+          "body": "upper",
+          "kind": "frame",
+          "key": "upper:high-wall-foot",
+          "y": 6,
+          "a": {
+            "x": 32,
+            "z": 0.6
+          },
+          "b": {
+            "x": 32,
+            "z": 4
+          },
+          "n": {
+            "x": 1,
+            "z": 0
+          }
+        },
+        {
+          "body": "beyond",
+          "kind": "frame",
+          "key": "beyond:ten-metre-top",
+          "y": 16,
+          "a": {
+            "x": 32,
+            "z": 0.6
+          },
+          "b": {
+            "x": 32,
+            "z": 4
+          },
+          "n": {
+            "x": -1,
+            "z": 0
+          }
+        }
+      ],
+      "objects": [
+        {
+          "id": "shell",
+          "name": "寄生生物の殻",
+          "x": 18,
+          "y": 6.28,
+          "z": 2.7,
+          "collectible": false
+        },
+        {
+          "id": "canister",
+          "name": "空の携帯型順応気体容器（試料）",
+          "x": 21,
+          "y": 6.3,
+          "z": 2.5,
+          "collectible": true
+        },
+        {
+          "id": "feed",
+          "name": "餌を連想させる包材",
+          "x": 24,
+          "y": 6.2,
+          "z": 2.8,
+          "collectible": false
+        },
+        {
+          "id": "memo",
+          "name": "記録紙（仮の回収品）",
+          "x": 26,
+          "y": 6.14,
+          "z": 2.5,
+          "collectible": true
+        },
+        {
+          "id": "old-part",
+          "name": "古い部品",
+          "x": 28,
+          "y": 6.2,
+          "z": 3.3,
+          "collectible": false
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "entry-j1",
+      "length": 30.708099217390647,
+      "maxGrade": 1.1570454379827895e-12
+    },
+    {
+      "id": "j1-j2",
+      "length": 35.12182195324075,
+      "maxGrade": 0.09723634153495658
+    },
+    {
+      "id": "j1-observe",
+      "length": 39.87826074172466,
+      "maxGrade": 0.0776627899706379
+    },
+    {
+      "id": "j2-base",
+      "length": 39.81759009460544,
+      "maxGrade": 0.043944435049508714
+    },
+    {
+      "id": "j2-parasite",
+      "length": 40.162068040465,
+      "maxGrade": 0.08089557815206275
+    }
+  ],
+  "cartMeshes": 10,
+  "textLabelsOmittedInCpuExport": true,
+  "webglVerified": false
+}

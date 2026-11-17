@@ -1,0 +1,26 @@
+{
+  "topY": 16,
+  "approachY": 6,
+  "height": 10,
+  "rows": [
+    {
+      "limit": 6,
+      "diagnosis": "beyond:ten-metre-top / frame 高低差10.000m / 縁間0.00m / 上限6m / 床あり / 高さ超過",
+      "accepted": false
+    },
+    {
+      "limit": 8,
+      "diagnosis": "beyond:ten-metre-top / frame 高低差10.000m / 縁間0.00m / 上限8m / 床あり / 高さ超過",
+      "accepted": false
+    }
+  ],
+  "final": {
+    "x": 31.646666666666665,
+    "y": 5.83999009599682,
+    "z": 0.5066666666666624,
+    "yaw": 3.141592653589793,
+    "pitch": 1.1,
+    "owner": "upper"
+  },
+  "noIntermediateAnchor": true
+}
