@@ -1,0 +1,30 @@
+{
+  "cpuChecksPassed": true,
+  "testCounts": {
+    "total": 290,
+    "passed": 290,
+    "failed": 0
+  },
+  "rows": [
+    {
+      "name": "tests",
+      "exit": 0
+    },
+    {
+      "name": "normal-surfaces",
+      "exit": 0
+    },
+    {
+      "name": "seams",
+      "exit": 0
+    },
+    {
+      "name": "evidence",
+      "exit": 0
+    }
+  ],
+  "webglRendered": false,
+  "humanFirstPersonWalkVerified": false,
+  "gpuFpsMeasured": false,
+  "completion": "CPU geometry, controller trajectories and normal transport regression; no WebGL completion claim."
+}

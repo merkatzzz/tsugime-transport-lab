@@ -1,0 +1,17 @@
+✔ 36cm endpoint passes; 37cm and low head clearance block; comparison retains 24cm (73.314732ms)
+✔ inertia coasts without input and cannot instantly reverse; legacy air can stop, weak control is adjustable (4.836181ms)
+✔ diagonal wall contact slides while capsule-too-narrow slots remain blocked (49.640529ms)
+✔ density levels reproduce, keep poses, reject embedding, and remove all growth on normal return (13956.399696ms)
+✔ middle blocks the straight roof route; east detour and high-density tear remain physically walkable (3719.944295ms)
+✔ soft torch has no hard inner plateau, monotonic edge falloff and independent intensity (1.067128ms)
+✔ real six-metre fall carries takeoff velocity onto the lower BR3 roof without air input (1171.687997ms)
+✔ north exit is open at low density and intentionally impassable at high while east route remains (2310.231927ms)
+✔ stage20 UI switches density, 24/36, inertia/legacy, air correction and torch independently (2279.886581ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 25724.004045

@@ -2,13 +2,13 @@ import {ORGAN_START} from './fault-organs.js';
 import {FAULT_PRESET,faultPlan,faultPositions} from './fault-scenario.js';
 import {snapshot,restore} from './save-life.js';import {BODIES,portStates,connections,placements} from './architecture.js';
 import {tickPortals} from './portal-state.js';import {geometryView,worldFromView} from './fault-geometry.js';import {FaultMotion} from './fault-physics.js';
-export function startFault(s,{route=false,organic=false,climb=false,stage19=false}={}){
- if(s.fault)return false;climb=climb||stage19;organic=organic||climb;
+export function startFault(s,{route=false,organic=false,climb=false,stage19=false,stage20=false}={}){
+ if(s.fault)return false;stage19=stage19||stage20;climb=climb||stage19;organic=organic||climb;
  const normal=snapshot(s),runtime={speed:s.speed,automation:{enabled:s.automation.enabled,interval:s.automation.interval,idle:s.automation.idle,returnRequested:s.automation.returnRequested,returnRegion:s.automation.returnRegion,returnSteps:s.automation.returnSteps,exceptions:[...s.automation.exceptions]},transition:s.experience.transitionDuration};
  const plan=faultPlan(route||organic),positions=faultPositions(route||organic),initial=placements('A');
  const same=id=>['x','y','z','angle'].every(k=>Math.abs((positions[id][k]??0)-(initial[id][k]??0))<1e-7);
  s.reset({size:'ring1',method:'cooperative'});s.positions=positions;s.mode='fault';s.shutter=1;s.plan=plan;s.elapsed=FAULT_PRESET.time;s.player={...(organic?ORGAN_START:FAULT_PRESET.start)};
- s.fault={id:FAULT_PRESET.id+(stage19?'-climb19':climb?'-climb18':organic?'-organic17':route?'-route16':''),organic,stage19,climbHeight:6,climbDebug:false,climbEnabled:climb,allShutters:climb,lighting:organic?'B':'A',brightness:climb?8:organic?35:100,flashlight:false,manualPorts:organic?['V3:N']:route?['SM1:W']:[],time:FAULT_PRESET.time,openPorts:organic?['R2:E','V3:S']:[...FAULT_PRESET.openPorts,...(route?['SM1:N']:[])],normal,runtime,connections:connections('A',s.experiment,s.doors).filter(c=>c.permanent&&same(c.bodyA)&&same(c.bodyB)),motion:null};
+ s.fault={id:FAULT_PRESET.id+(stage20?'-growth20':stage19?'-climb19':climb?'-climb18':organic?'-organic17':route?'-route16':''),organic,stage19,stage20,density:'low',stepHeight:.36,airStyle:'inertia',airControl:.35,torchStrength:18,climbHeight:6,climbDebug:false,climbEnabled:climb,allShutters:climb,lighting:organic?'B':'A',brightness:climb?8:organic?35:100,flashlight:false,manualPorts:organic?['V3:N']:route?['SM1:W']:[],time:FAULT_PRESET.time,openPorts:organic?['R2:E','V3:S']:[...FAULT_PRESET.openPorts,...(route?['SM1:N']:[])],normal,runtime,connections:connections('A',s.experiment,s.doors).filter(c=>c.permanent&&same(c.bodyA)&&same(c.bodyB)),motion:null};
  s.fault.specifiedPorts=[...s.fault.openPorts];if(climb)s.fault.openPorts=portStates(s.phase,s.experiment,s.doors).map(p=>p.key);
  s.invalidate();tickPortals(s,0,true);
  let v,world;try{v=geometryView(s);world=worldFromView(v);if(!world.clear(s.player))throw Error('試験開始位置が建築に重なります');s.fault.motion=new FaultMotion(s,world,s.player);}catch(error){world?.dispose();s.fault=null;restore(s,normal);throw error;}finally{v?.dispose();}

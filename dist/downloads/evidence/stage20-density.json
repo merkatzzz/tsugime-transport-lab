@@ -1,0 +1,38 @@
+[
+  {
+    "density": "low",
+    "counts": {
+      "coatedBodies": 10,
+      "boneClusters": 2,
+      "membranes": 0,
+      "tubes": 89
+    },
+    "drawMeshes": 2,
+    "triangles": 9588,
+    "collisionTriangles": 408
+  },
+  {
+    "density": "medium",
+    "counts": {
+      "coatedBodies": 33,
+      "boneClusters": 9,
+      "membranes": 5,
+      "tubes": 456
+    },
+    "drawMeshes": 6,
+    "triangles": 49174,
+    "collisionTriangles": 2086
+  },
+  {
+    "density": "high",
+    "counts": {
+      "coatedBodies": 66,
+      "boneClusters": 20,
+      "membranes": 12,
+      "tubes": 1269
+    },
+    "drawMeshes": 6,
+    "triangles": 136860,
+    "collisionTriangles": 4344
+  }
+]

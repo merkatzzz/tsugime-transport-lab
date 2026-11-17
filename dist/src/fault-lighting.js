@@ -8,6 +8,7 @@ export function updateFaultLighting(v){
  for(const o of v.scene.children){if(o.isHemisphereLight)o.intensity=c.hemi;else if(o.isDirectionalLight)o.intensity=i++===0?c.key:c.fill;}
  v.scene.background??=new THREE.Color();v.scene.background.copy(c.color);v.scene.fog??=new THREE.Fog(c.color,c.near,c.far);v.scene.fog.color.copy(c.color);v.scene.fog.near=c.near;v.scene.fog.far=c.far;
  if(!v.flash){v.flash=new THREE.SpotLight(0xffedcf,45,30,Math.PI/7,.65,1);v.scene.add(v.flash,v.flash.target);}
+ const soft=!!v.sim.fault?.stage20;v.flash.intensity=soft?(v.sim.fault.torchStrength??18):45;v.flash.angle=soft?.55:Math.PI/7;v.flash.penumbra=soft?1:.65;v.flash.distance=soft?26:30;v.flash.decay=soft?1.4:1;
  v.flash.visible=!!v.sim.fault&&v.sim.fault.flashlight;
  v.flash.position.copy(v.camera.position);const direction=new THREE.Vector3();v.camera.getWorldDirection(direction);v.flash.target.position.copy(v.camera.position).addScaledVector(direction,10);
  if(v.sim.fault?.organic&&!v.residualLights){v.residualLights=new THREE.Group();v.residualLights.userData.nonPhysical=true;for(const[x,y,z,intensity,color]of[[14.7,8.3,12.5,9,0xffd7a5],[12.4,1.8,20.7,6,0xbfd6cd]]){const l=new THREE.PointLight(color,intensity,6,1);l.position.set(x,y,z);v.residualLights.add(l);const bulb=new THREE.Mesh(new THREE.SphereGeometry(.1,6,4),new THREE.MeshBasicMaterial({color}));bulb.position.copy(l.position);v.residualLights.add(bulb);}v.scene.add(v.residualLights);}if(v.residualLights)v.residualLights.visible=!!v.sim.fault?.organic;

@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "manifest": "stage15-normal-preserved.json",
+      "filesMatched": 9
+    },
+    {
+      "manifest": "stage14-preserved-archives.json",
+      "filesMatched": 18
+    }
+  ],
+  "baseline": "828ad0c0a0f7f1c0c86a132daa425803bb29a329",
+  "normalArchitectureOrTransportPlanChanged": false
+}

@@ -1,0 +1,10 @@
+{
+  "webglRendered": false,
+  "pcHumanInputVerified": false,
+  "mobileHumanInputVerified": false,
+  "screenshots": [],
+  "gpuFpsMeasured": false,
+  "audioListened": false,
+  "repeatedKnownPreviewFailure": false,
+  "reason": "Previously documented 4173 managed preview relay failure; no evidence of recovery. Did not repeat the same failed path. CPU tests and diagrams are not real WebGL evidence."
+}
