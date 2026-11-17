@@ -1,0 +1,27 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+import {Simulation} from '../dist/src/simulation.js';import {IntegratedSession} from '../dist/src/stage22-session.js';import {state22,ACCESS22,operateGround} from '../dist/src/stage22-access.js';import {DRAINS23,inspectDrain23} from '../dist/src/stage23-remake.js';import {snapshot,restore} from '../dist/src/save-life.js';import {edgeBetween,railPose} from '../dist/src/stage21-rail.js';
+const tick=(s,n)=>{for(let i=0;i<n;i++)s.tick(1/60);};
+test('W0 long bank is walkable; no W2 dive; ability switch and unchanged item state survive save',()=>{
+ const h=new Simulation(),before=JSON.stringify(h.items.counts);for(let x=9.3;x<55.6;x+=.3){assert.ok(h.isFree(x,-2.9,-12.8));}
+ h.player={x:9.3,y:-12.8,z:-2.9,yaw:Math.PI/2,pitch:0};for(let i=0;i<760;i++)h.move(.06,0);assert.ok(h.player.x>54);h.player={...ACCESS22.dive,yaw:0,pitch:0};assert.equal(operateGround(h),'inspect');state22(h).diveEnhanced=true;assert.equal(operateGround(h),'canal');h.player={x:76.8,y:0,z:39.9};assert.equal(operateGround(h),null);
+ for(const q of DRAINS23){h.player={...q,yaw:0,pitch:0};assert.ok(inspectDrain23(h));}assert.equal(JSON.stringify(h.items.counts),before);const n=new Simulation();restore(n,snapshot(h));assert.equal(state22(n).diveEnhanced,true);
+});
+test('hidden approach arrives quickly, visible cart is never relocated and moving calls are rejected',()=>{
+ const s=new IntegratedSession('rail',new Simulation());tick(s,60);s.canStageCart=()=>true;assert.ok(s.call('entry'));let frames=0;while(s.cart.moving&&frames++<1000)s.tick(1/60);assert.equal(s.cart.node,'entry');assert.ok(frames/60<8);s.dispose();
+ const v=new IntegratedSession('rail',new Simulation());tick(v,60);v.canStageCart=()=>false;const p={...v.cart.pose};assert.ok(v.call('entry'));assert.deepEqual(v.cart.pose,p);assert.equal(v.call('observe'),false);v.dispose();
+});
+test('observation rails physically prevent falling while leaving station boarding accessible; sump has no collection',()=>{
+ const s=new IntegratedSession('rail',new Simulation());tick(s,60);const p=s.map.stations.observe;Object.assign(s.player,p);s.model.fault.motion.eyeY=p.y;
+ // Try every outward heading from the guarded station spawn.
+ for(let j=0;j<16;j++){Object.assign(s.player,p);s.motion.vx=s.motion.vz=s.motion.vy=0;for(let i=0;i<150;i++){s.player.yaw=j*Math.PI/8;s.walk(1,0,1/60);s.tick(1/60);}assert.ok(s.player.y>p.y-.1);}
+ assert.ok(!s.map.objects.some(o=>o.id==='base-scrap'));assert.ok(s.map.callButtons.every(m=>m.parent));s.dispose();
+});
+test('new source contains no old stage23 collection or migration dependency',()=>{for(const p of ['main.js','stage23-remake.js','stage22-access.js','stage22-session.js']){const s=fs.readFileSync('dist/src/'+p,'utf8');assert.ok(!/from ['"].*stage23\.js|salvageKey|tickSalvage|state23/.test(s));}});
+test('direction markers track real rail projections for free yaw; only stationary reachable routes appear',async()=>{
+ const {Stage21View}=await import('../dist/src/stage21-view.js');const THREE=await import('../dist/vendor/three.module.js');const {RAIL_NODES}=await import('../dist/src/stage21-rail.js');
+ const old=globalThis.document;try{for(const node of ['entry','j1','j2','observe','parasite','base'])for(const yaw of [0,Math.PI/2,Math.PI,-Math.PI/2]){
+ const choices=['entry','j1','j2','observe','parasite','base'].filter(id=>edgeBetween(node,id)),buttons=choices.map(id=>({dataset:{sideRoute:id},style:{},setAttribute(){}}));globalThis.document={querySelector:()=>({querySelectorAll:()=>buttons})};
+ const camera=new THREE.PerspectiveCamera(54,16/9,.05,220),p=RAIL_NODES[node].p;camera.position.set(p[0],p[1]+2.1,p[2]);camera.rotation.order='YXZ';camera.rotation.set(0,yaw+Math.PI,0);camera.updateMatrixWorld();
+ Stage21View.prototype.routeMarkers.call({side:{cart:{node}},camera});for(const b of buttons){assert.ok(parseFloat(b.style.left)>=4&&parseFloat(b.style.left)<=96);assert.ok(parseFloat(b.style.top)>0&&parseFloat(b.style.top)<100);assert.ok(b.title.includes(RAIL_NODES[b.dataset.sideRoute].name));}
+ }}finally{globalThis.document=old;}
+});

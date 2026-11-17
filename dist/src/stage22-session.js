@@ -17,7 +17,7 @@ export class IntegratedSession extends Stage21Experiment {
     else{this.cart=new RailVehicle();this.cart.node='base';this.cart.selected='j2';const e=edgeBetween('j2','base');this.cart.pose=railPose(e,e.length);this.cart.arrivals=['base'];this.cart.visited=new Set(['entry']);}
     this.setMap(kind==='rail'?'rail':'canal-upper',kind==='rail'?{x:-6,y:-20.04,z:3.5,yaw:Math.PI/2,pitch:0}:undefined);
     this.gate=kind==='rail'?1:0;this.evPhase=kind==='rail'?'opening':'open';this.arrivalFade={time:0,y:this.player.y};this.syncGate();
-    this.message=kind==='rail'?'地下に着床。扉が開いたら徒歩で入口駅へ。呼出装置で車両を呼べます。':'W2の上流へ浮上。Q/Cで6mの堰を往復できます。';
+    this.message=kind==='rail'?'地下に着床。扉が開いたら徒歩で入口駅へ。呼出装置で車両を呼べます。':'第一層水路の上流へ浮上。Q/Cで6mの堰を往復できます。';
   }
   setMap(id,spawn){super.setMap(id,spawn);if(this.integrated)for(const o of this.map.objects)if(this.collected.has(o.id))o.mesh.visible=false;}
   nearby(){
@@ -26,7 +26,8 @@ export class IntegratedSession extends Stage21Experiment {
     const p=this.player;
     if(!this.aboard&&this.mapId==='rail'&&!this.transition){
       if(Math.hypot(p.x+5.6,p.z-3.5)<1.3)rows.push({id:'home-ev',name:'第一層へ（専用EV） E',distance:0});
-      const station=Object.entries(this.map.stations).find(([,q])=>Math.hypot(p.x-q.x,p.z-q.z)<1.8&&Math.abs(p.y-q.y)<.3)?.[0];
+      this.map.scene.updateMatrixWorld(true);
+      const station=this.map.callButtons?.find(m=>{const q=m.getWorldPosition(m.position.clone());return Math.hypot(p.x-q.x,p.z-q.z)<1.7&&Math.abs(p.y+1.2-q.y)<1;})?.userData.callStation;
       this.callStation=station;
       if(station&&(this.cart.node!==station||this.cart.moving))rows.push({id:'call',name:this.cart.moving?'車両は走行中':'無人トロッコを呼ぶ E',distance:1});
     }return rows;
@@ -42,6 +43,13 @@ export class IntegratedSession extends Stage21Experiment {
   }
   call(station){
     if(!RAIL_NODES[station]?.station||this.aboard||this.cart.moving||this.callQueue.length||this.cart.node===station)return false;
+    // Skip only a hidden, stationary remote section. Never relocate a moving/visible cart.
+    const edge=edgeBetween('entry','j1'),staged=railPose(edge,18);
+    if(station==='entry'&&this.canStageCart?.(this.cart.pose,staged)){
+      this.cart.node='j1';this.cart.selected='entry';this.cart.depart();
+      this.cart.route.distance=18;this.cart.pose=staged;this.cart.speed=3;
+      this.message='呼出受付：奥の待機区間から進入します。';this.persist();return true;
+    }
     this.callQueue=stationPath(this.cart.node,station).slice(1);this.advanceCall();this.message='無人呼出：線路と分岐を順に走行します。';return true;
   }
   advanceCall(){if(!this.cart.moving&&this.callQueue.length){this.cart.select(this.callQueue.shift());this.cart.depart();}}
@@ -68,7 +76,7 @@ export class IntegratedSession extends Stage21Experiment {
     }
     if(this.evPhase==='loading'){this.evLoad+=h;this.motion.eyeY=this.player.y-Math.min(.6,this.evLoad);if(this.evLoad>1.2)this.returnRequested=true;return;}
     if(this.seatTurn){const t=this.seatTurn,old=this.seatAngle;t.time+=h;const k=Math.min(1,t.time/.65),smooth=k*k*(3-2*k);this.seatAngle=t.from+t.delta*smooth;this.player.yaw+=t.yaw*(smooth-(t.last??0));t.last=smooth;this.attachPassenger();if(k===1){this.seatTurn=null;super.depart();}this.persist();return;}
-    if(!this.aboard){const moving=this.cart.moving;this.cart.tick(h);if(moving&&!this.cart.moving&&!this.callQueue.length)this.message='無人トロッコが到着しました。近づいて E で乗車できます。';this.advanceCall();}
+    if(!this.aboard){const moving=this.cart.moving;if(moving)for(let i=0;i<24&&this.cart.moving;i++){const r=this.cart.route,next=railPose(r.edge,Math.max(0,Math.min(r.edge.length,r.distance+r.direction*this.cart.speed*h)));if(!this.canStageCart?.(this.cart.pose,next))break;this.cart.tick(h);}this.cart.tick(h);if(moving&&!this.cart.moving&&!this.callQueue.length)this.message='無人トロッコが到着しました。近づいて E で乗車できます。';this.advanceCall();}
     super.tick(h);this.persist();
   }
   persist(){

@@ -1,0 +1,13 @@
+✔ W0 long bank is walkable; no W2 dive; ability switch and unchanged item state survive save (2314.024484ms)
+✔ hidden approach arrives quickly, visible cart is never relocated and moving calls are rejected (7473.13409ms)
+✔ observation rails physically prevent falling while leaving station boarding accessible; sump has no collection (17961.346487ms)
+✔ new source contains no old stage23 collection or migration dependency (1.139115ms)
+✔ direction markers track real rail projections for free yaw; only stationary reachable routes appear (6.461709ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 28658.137161

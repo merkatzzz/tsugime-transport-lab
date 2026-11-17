@@ -1,3 +1,4 @@
+import {state22} from './stage22-access.js';
 import {IntegratedSession} from './stage22-session.js';
 import {Stage21Experiment} from './stage21-experiment.js';
 import {stage21MapSVG} from './stage21-view.js';
@@ -5,6 +6,7 @@ import {RAIL_NODES} from './stage21-rail.js';
 
 export function installStage21Controls({sim,$,getSide,onStart,onEnd,changed,host=window}){
   const frozen=new Map();
+  $('#dive-enhanced23').onchange=e=>state22(sim).diveEnhanced=e.target.checked;
   const busy=()=>sim.mode!=='idle'||!!sim.fault||sim.anyLiftActive||sim.experience.blocking||!!sim.items.mode;
   function start(kind,integrated=false){
     if(getSide()||busy())return false;
@@ -33,7 +35,7 @@ export function installStage21Controls({sim,$,getSide,onStart,onEnd,changed,host
     }
   });
   function render(){
-    const s=getSide();$('#side-start-rail').disabled=!!s||busy();$('#side-start-canal').disabled=!!s||busy();$('#side-end').disabled=!s;$('#side-active').hidden=!s;
+    $('#dive-enhanced23').checked=!!state22(sim).diveEnhanced;const s=getSide();$('#side-start-rail').disabled=!!s||busy();$('#side-start-canal').disabled=!!s||busy();$('#side-end').disabled=!s;$('#side-active').hidden=!s;
     if(!s)return false;$('#side-end').textContent=s.integrated?'開発用：本施設へ復帰':'実験を終了・通常施設へ戻る';
     const f=s.model.fault,targets=s.motion.climbTargets(),near=s.nearby();
     $('#side-status').textContent=s.message;$('#side-interact').textContent=near[0]?.name??'E：近くの対象なし';$('#side-interact').disabled=!near.length;
@@ -43,6 +45,7 @@ export function installStage21Controls({sim,$,getSide,onStart,onEnd,changed,host
     $('#side-go').hidden=s.kind!=='rail'||s.integrated;$('#side-go').disabled=!s.aboard||s.cart.moving||!!s.transition;
     $('#side-go').textContent=s.cart.moving?'走行中 → 自動停止':'発進 / 折返し（Space）';
     let html='';if(s.kind==='rail'&&s.aboard&&!s.cart.moving&&!s.seatTurn)for(const id of s.cart.choices){const children=RAIL_NODES[s.cart.node].children,forward=children?.includes(id),label=children?(forward?(id===children[0]?'本線を進む':'支線へ入る'):'共通側へ戻る'):'折返し方向';html+='<button data-side-route="'+id+'" aria-pressed="'+(id===s.cart.selected)+'">'+(s.integrated?(id===s.cart.arrivals.at(-2)?'↶ 来た線路へ戻る':forward?(id===children[0]?'↑ 本線へ進む':'↗ 支線へ進む'):'↶ 帰還方向へ進む'):label)+(s.integrated?'':id===s.cart.selected?' ✓':'')+'</button>';}
+    if(s.integrated)html=s.kind==='rail'&&s.aboard&&!s.cart.moving&&!s.seatTurn?s.cart.choices.map(id=>'<button data-side-route="'+id+'" aria-label="進路">➤</button>').join(''):'';
     if($('#side-routes').innerHTML!==html)$('#side-routes').innerHTML=html;
     $('#side-map').innerHTML=stage21MapSVG(s);$('#side-inventory').textContent=(s.integrated?'共通所持品の回収部品 ':'試験内の回収部品 ')+(s.model.items.counts.scrap??0)+'点'+(s.collectedNames.length?'：'+s.collectedNames.join('、'):'');
     $('#side-replay').hidden=s.mapId!=='canal-upper';$('#side-replay').disabled=!!s.transition;

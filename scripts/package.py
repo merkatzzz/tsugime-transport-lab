@@ -32,6 +32,7 @@ if not frozen10.exists():
 frozen_redesign = downloads/'stage10-redesign-frozen-source.zip'
 if not frozen_redesign.exists():
     subprocess.run(['git','archive','--format=zip','--output='+str(frozen_redesign),'stage10-redesign-frozen'],cwd=root,check=True)
+shutil.copy2(root/'docs/STAGE23-REMAKE.md', downloads/'STAGE23-REMAKE.md')
 shutil.copy2(root/'docs/STAGE22.md', downloads/'STAGE22.md')
 shutil.copy2(root/'docs/STAGE21.md', downloads/'STAGE21.md')
 shutil.copy2(root/'docs/STAGE20.md', downloads/'STAGE20.md')

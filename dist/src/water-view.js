@@ -5,7 +5,11 @@ export function buildWater(view){
  view.waterRows=[];view.waterSurfaces=[];
  for(const q of WATER){const g=new THREE.Group();g.position.y=q.y;view.fixed.add(g);view.fixedFloors.push({g,y:q.y});
   const floorRects=waterWalkRects(q); // Union, with no coplanar overlap at the entrance.
-  for(const [i,r]of floorRects.entries()){const a=q.tunnel&&i===1?{...r,z:-2.15,d:1.75}:r;view.cube(g,a.x,0,a.z,a.w,.16,a.d,'#a4a598');}
+  for(const [i,r]of floorRects.entries()){const a=q.tunnel&&i===1?{...r,z:-2.15,d:1.75}:r;if(q.tunnel&&i===0){
+    view.cube(g,a.x,0,a.z,a.w,.16,1.41,'#a4a598');
+    view.cube(g,a.x,0,-2.21,a.w,.16,.06,'#a4a598');
+    for(const [x,w] of [[a.x,25.4-a.x],[26.6,a.x+a.w-26.6]])view.cube(g,x,0,-2.39,w,.16,.18,'#a4a598');
+   }else view.cube(g,a.x,0,a.z,a.w,.16,a.d,'#a4a598');}
   for(const l of waterWalls(q,true))view.wall(g,l,q.tunnel?.9:(Math.abs(l.a[0]-(q.x+2.4))<.01&&Math.abs(l.b[0]-(q.x+2.4))<.01?1:5.64),'#798e89',.12,.16);
   if(q.tunnel){
    // Circular barrel, axis X. Omit only the exact entry aperture; no whole missing bay.
@@ -17,6 +21,12 @@ export function buildWater(view){
    // Entry reveal extends into barrel: floor, sides and roof close the cut edges.
    for(const x of[q.x+2.9,q.x+5])view.cube(g,x,.16,-2.3,.1,2.8,1.9,'#798e89');
    view.cube(g,q.x+2.9,2.96,-2.3,2.2,.15,1.9,'#798e89');
+   // A real three-sided submerged culvert; the open front faces the walking bank.
+   view.cube(g,46.5,-1.05,-6.25,2,.12,2.25,'#384e49');
+   for(const x of[46.5,48.35])view.cube(g,x,-.93,-6.25,.15,.75,2.25,'#637e76');
+   view.cube(g,46.5,-.18,-6.25,2,.13,2.25,'#637e76');
+   view.cube(g,46.65,-.93,-6.25,1.7,.75,.08,'#162a27');
+   view.text(g,'水面下の開口 / E',47.5,1,-3.9,{size:.18});
    for(let x=q.x+2;x<q.x+q.w;x+=8){view.cube(g,x,2.4,-2,.3,.12,.15,'#c9e4cc');}
   }else{
    for(const z of[q.z,q.z+7.85])view.cube(g,q.x+2.7,1.8,z,5.3,4,.15,'#637e76');
@@ -29,7 +39,7 @@ export function buildWater(view){
    for(const z of[q.z,q.z+6.8]){view.cube(g,q.x+3,1.5,z,4,.3,1.2,'#667f78');for(const x of[q.x+2.7,q.x+7])view.cube(g,x,-.5,z,.3,2.3,1.2,'#667f78');}
   }
   const r=q.tunnel?{x:q.x+.2,z:-6.5,w:q.w-.4,d:2.6}:{x:q.x+2.6,z:q.z,w:5.2,d:8};
-  const material=new THREE.MeshStandardMaterial({color:'#438f99',roughness:.32,metalness:.2,side:THREE.DoubleSide});
+  const material=new THREE.MeshStandardMaterial({color:'#438f99',transparent:!!q.tunnel,opacity:q.tunnel?.65:1,depthWrite:!q.tunnel,roughness:.32,metalness:.2,side:THREE.DoubleSide});
   material.onBeforeCompile=shader=>{shader.uniforms.waterTime={value:0};material.userData.shader=shader;shader.vertexShader='uniform float waterTime;\n'+shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\ntransformed.z += .035*sin(position.x*3.0+waterTime*2.0)+.015*cos(position.y*5.0-waterTime*3.0);');};
   const mesh=new THREE.Mesh(new THREE.PlaneGeometry(r.w,r.d,48,8),material);mesh.rotation.x=-Math.PI/2;mesh.position.set(r.x+r.w/2,-.3,r.z+r.d/2);g.add(mesh);view.waterSurfaces.push(material);
   const streaks=new THREE.Group();g.add(streaks);for(let i=0;i<18;i++)view.cube(streaks,r.x+.6+(i*.173%1)*(r.w-2),-.275,r.z+.6+(i*.317%1)*Math.max(.2,r.d-2),q.tunnel?.65:.035,.006,q.tunnel?.035:.65,'#8bbab4');

@@ -17,9 +17,31 @@ export class Stage21View {
     this.renderer.domElement.tabIndex=0;this.renderer.domElement.className='stage21-canvas';container.appendChild(this.renderer.domElement);
     this.cart=makeCart();this.wasteMeshes=new Map();this.blades={};this.resize();this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(container);
   }
-  resize(){const w=this.container.clientWidth,h=this.container.clientHeight;this.renderer.setSize(w,h);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();}
+  resize(){const w=this.container.clientWidth,h=this.container.clientHeight;if(!w||!h)return;this.renderer.setSize(w,h,false);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();}
   setMode(){this.mode='explore';}
-  pick(){this.side.interact();}
+  pick(x,y){
+    const r=this.renderer.domElement.getBoundingClientRect(),ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2((x-r.left)/r.width*2-1,-(y-r.top)/r.height*2+1),this.camera);
+    const hit=ray.intersectObjects(this.side.map.scene.children,true).find(h=>h.object.userData.callStation&&h.distance<2.7);
+    if(hit){this.side.nearby();if(this.side.callStation===hit.object.userData.callStation)this.side.interact('call');}else this.side.interact();
+  }
+  hiddenCart(p){
+    const target=new THREE.Vector3(p.x,p.y+1,p.z),delta=target.clone().sub(this.camera.position),length=delta.length();
+    const ndc=target.clone().project(this.camera);
+    if(ndc.z< -1||ndc.z>1||Math.abs(ndc.x)>1.15||Math.abs(ndc.y)>1.15)return true;
+    // Require a real opaque occluder for the staged approach, even outside the current view.
+    const ray=new THREE.Raycaster(this.camera.position,delta.normalize(),.1,length-1.5);
+    return ray.intersectObjects(this.side.map.scene.children,true).some(h=>h.object.isMesh&&h.object.material?.transparent!==true&&!h.object.userData.callStation&&!this.cart.getObjectById(h.object.id));
+  }
+  routeMarkers(){
+    const s=this.side,root=document.querySelector('#side-routes');if(!root)return;
+    let fallback=0;for(const button of root.querySelectorAll('[data-side-route]')){
+      const id=button.dataset.sideRoute,edge=RAIL_EDGES.find(e=>(e.a===s.cart.node&&e.b===id)||(e.b===s.cart.node&&e.a===id));
+      const forward=edge.a===s.cart.node,point=edge.curve.getPointAt(forward?.3:.7).clone(),ndc=point.project(this.camera);
+      const visible=ndc.z<1&&ndc.z>-1&&Math.abs(ndc.x)<.92&&Math.abs(ndc.y)<.85;
+      button.style.left=(visible?(ndc.x+1)*50:ndc.x<0?8:92)+'%';button.style.top=(visible?(1-ndc.y)*50:40+fallback++*16)+'%';
+      button.textContent=visible?'↑':'↶';button.style.rotate=visible?Math.atan2(ndc.x,ndc.y)*180/Math.PI+'deg':'0deg';button.title=RAIL_NODES[id].name+(visible?'':'：後方へ転向');button.setAttribute('aria-label',button.title);
+    }
+  }
   render(){
     const s=this.side,map=s.map;this.scene=map.scene;this.sim=s.model;
     if(this.cart.userData.seat)this.cart.userData.seat.rotation.y=s.seatAngle??0;
@@ -43,7 +65,9 @@ export class Stage21View {
     }
     const p=s.player;this.camera.position.set(p.x,s.motion.eyeY+1.81,p.z);this.camera.rotation.order='YXZ';this.camera.rotation.set(p.pitch,p.yaw+Math.PI,0);
     this.flash=map.flash;updateFaultLighting(this);map.flash=this.flash;
-    this.renderer.render(this.scene,this.camera);
+    this.camera.updateMatrixWorld();s.canStageCart=(a,b)=>[a,b].every(p=>[-.7,.4].every(dy=>[-.7,.7].every(dx=>[-.8,.8].every(dz=>this.hiddenCart({...p,y:p.y+dy,x:p.x+dx,z:p.z+dz})))));
+    for(const m of map.callButtons??[])m.material.emissive.setHex(s.cart.moving?0x594b12:0x000000);
+    this.routeMarkers();this.renderer.render(this.scene,this.camera);
   }
   dispose(){this.observer?.disconnect();this.renderer.dispose();this.renderer.forceContextLoss();this.renderer.domElement.remove();}
 }
