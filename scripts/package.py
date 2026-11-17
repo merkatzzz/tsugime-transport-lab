@@ -32,6 +32,7 @@ if not frozen10.exists():
 frozen_redesign = downloads/'stage10-redesign-frozen-source.zip'
 if not frozen_redesign.exists():
     subprocess.run(['git','archive','--format=zip','--output='+str(frozen_redesign),'stage10-redesign-frozen'],cwd=root,check=True)
+shutil.copy2(root/'docs/STAGE19.md', downloads/'STAGE19.md')
 shutil.copy2(root/'docs/STAGE18.md', downloads/'STAGE18.md')
 shutil.copy2(root/'docs/STAGE17.md', downloads/'STAGE17.md')
 shutil.copy2(root/'docs/STAGE16.md', downloads/'STAGE16.md')
@@ -109,7 +110,7 @@ def inline(text):
     s = s.replace('href="STAGE11.md"', 'href="downloads/STAGE11.md"').replace('href="PERFORMANCE-STAGE11.md"', 'href="downloads/PERFORMANCE-STAGE11.md"')
     return s
 
-lines = ((root/'docs/STAGE18.md').read_text()+'\n\n# 第17段階の記録\n\n'+(root/'docs/STAGE17.md').read_text()+'\n\n# 第16段階の記録\n\n'+(root/'docs/STAGE16.md').read_text()+'\n\n# 第15段階の記録\n\n'+(root/'docs/STAGE15.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 以下は旧段階の記録\n\n'+(root/'docs/MARKET-REPAIR.md').read_text()+'\n\n# 以下は第14段階の履歴\n\n'+(root/'docs/STAGE14.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 過去の報告（以下は旧段階の記録）\n\n'+(root/'docs/STAGE13.md').read_text()+'\n\n'+(root/'docs/STAGE12-REPAIR.md').read_text()+'\n\n'+(root/'docs/STAGE12.md').read_text()+'\n\n'+(root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
+lines = ((root/'docs/STAGE19.md').read_text()+'\n\n# 第18段階の記録\n\n'+(root/'docs/STAGE18.md').read_text()+'\n\n# 第17段階の記録\n\n'+(root/'docs/STAGE17.md').read_text()+'\n\n# 第16段階の記録\n\n'+(root/'docs/STAGE16.md').read_text()+'\n\n# 第15段階の記録\n\n'+(root/'docs/STAGE15.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 以下は旧段階の記録\n\n'+(root/'docs/MARKET-REPAIR.md').read_text()+'\n\n# 以下は第14段階の履歴\n\n'+(root/'docs/STAGE14.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 過去の報告（以下は旧段階の記録）\n\n'+(root/'docs/STAGE13.md').read_text()+'\n\n'+(root/'docs/STAGE12-REPAIR.md').read_text()+'\n\n'+(root/'docs/STAGE12.md').read_text()+'\n\n'+(root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
 parts = []
 i = 0
 while i < len(lines):

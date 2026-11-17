@@ -1,0 +1,9 @@
+✔ a fully swept valid A-B timing override has finished, waiting and multiple intermediate movers; normal plans stay byte-identical (3461.241602ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6710.846806

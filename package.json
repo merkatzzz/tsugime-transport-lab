@@ -1,6 +1,6 @@
 {
   "name": "tsugime-architecture-transport-lab",
-  "version": "18.0.0",
+  "version": "19.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,7 +8,7 @@
     "precompute": "node scripts/precompute-stage8.mjs",
     "audit": "python3 scripts/export-stage18.py",
     "benchmark:diagnostics": "node scripts/benchmark-diagnostics.mjs",
-    "verify": "node scripts/verify-stage18.mjs",
+    "verify": "node --test tests/stage18.test.mjs tests/stage19.test.mjs tests/stage15.test.mjs",
     "start": "python3 -m http.server 8000 --directory dist",
     "test:stage1": "node --test stage1/tests/*.test.mjs",
     "evidence": "python3 scripts/export-stage18.py",

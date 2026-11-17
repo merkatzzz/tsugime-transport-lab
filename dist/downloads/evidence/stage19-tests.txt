@@ -1,0 +1,18 @@
+✔ all transport shutters open after fixed poses; specified/all switch leaves position and darkness intact and restores normal control (6389.696352ms)
+✔ R2 indoor → L1 roof → L1 interior → same roof → upper R2 indoor uses only walk and finite Q/C commands (2108.633691ms)
+✔ actual six metre SM1/BR3 roof descent and return, and an upper shutter-frame entry, obey independent bounds (1590.841257ms)
+✔ 6m and 1.5m endpoints are accepted; 6.01m, 1.51m, missing landing and a mid-path ceiling are rejected (14.314425ms)
+✔ closed frame, wrong gaze, unsupported free mode and a changed collision world do not cause ghost climbing (3005.532044ms)
+✔ woven fibre bundles preserve the walking route without an invisible skin floor (2703.291269ms)
+✔ E operates real ordinary doors in stage18 and refuses closing a leaf onto the capsule (2874.958992ms)
+✔ PC Q/C and conditional touch buttons share the verified command; slider starts at 8 and comparison preserves pose (2962.734565ms)
+✔ same real roof edge rejects 6.5m at six, accepts at eight, and returns without developer flight (2075.421904ms)
+✔ falling into real red bottom fails and returns to room, not underground; normal mode restores (1342.644076ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 29158.833696
