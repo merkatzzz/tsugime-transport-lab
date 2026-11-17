@@ -34,12 +34,13 @@ export class Stage21View {
   }
   routeMarkers(){
     const s=this.side,root=document.querySelector('#side-routes');if(!root)return;
-    let fallback=0;for(const button of root.querySelectorAll('[data-side-route]')){
+    const used={};for(const button of root.querySelectorAll('[data-side-route]')){
       const id=button.dataset.sideRoute,edge=RAIL_EDGES.find(e=>(e.a===s.cart.node&&e.b===id)||(e.b===s.cart.node&&e.a===id));
-      const forward=edge.a===s.cart.node,point=edge.curve.getPointAt(forward?.3:.7).clone(),ndc=point.project(this.camera);
-      const visible=ndc.z<1&&ndc.z>-1&&Math.abs(ndc.x)<.92&&Math.abs(ndc.y)<.85;
-      button.style.left=(visible?(ndc.x+1)*50:ndc.x<0?8:92)+'%';button.style.top=(visible?(1-ndc.y)*50:40+fallback++*16)+'%';
-      button.textContent=visible?'↑':'↶';button.style.rotate=visible?Math.atan2(ndc.x,ndc.y)*180/Math.PI+'deg':'0deg';button.title=RAIL_NODES[id].name+(visible?'':'：後方へ転向');button.setAttribute('aria-label',button.title);
+      const point=edge.curve.getPointAt(edge.a===s.cart.node?.3:.7).clone().applyMatrix4(this.camera.matrixWorldInverse);
+      const direction=point.z>=0?'back':Math.abs(point.x/-point.z)<.3?'forward':point.x<0?'left':'right';
+      const slots={left:[20,55,'←'],forward:[50,32,'↑'],right:[80,55,'→'],back:[50,82,'↓']},slot=slots[direction],offset=(used[direction]??0)*12;used[direction]=(used[direction]??0)+1;
+      button.style.left=(slot[0]+offset)+'%';button.style.top=slot[1]+'%';button.style.rotate='0deg';button.textContent=slot[2];
+      button.title=RAIL_NODES[id].name+(direction==='back'?'：戻る':'');button.setAttribute('aria-label',button.title);
     }
   }
   render(){

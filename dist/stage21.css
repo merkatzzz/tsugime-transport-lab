@@ -14,3 +14,6 @@
 .integrated22 #side-routes{position:absolute!important;inset:0!important;pointer-events:none;z-index:5}
 .integrated22 #side-routes button{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;min-width:44px;min-height:44px;background:#e8eddde8;border:1px solid #819782;border-radius:50%;font-size:24px}
 #drain23-ui{position:absolute;left:15px;bottom:70px;z-index:6;background:#e8eddd;padding:12px}
+
+.integrated22 #side-routes button{background:#14241eb3;color:#f4f2df;border:1px solid #e6edda99;border-radius:5px;font-size:32px;padding:2px 12px;box-shadow:0 2px 5px #0005}
+.integrated22 #side-routes button:hover,.integrated22 #side-routes button:focus-visible{background:#e8eddd;color:#24372f;outline:2px solid #e8eddd}
