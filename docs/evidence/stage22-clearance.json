@@ -1,0 +1,146 @@
+[
+  {
+    "size": "same",
+    "method": "cooperative",
+    "phase": "A",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "same",
+    "method": "cooperative",
+    "phase": "B",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "same",
+    "method": "cooperative",
+    "phase": "C",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "same",
+    "method": "serial",
+    "phase": "A",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "same",
+    "method": "serial",
+    "phase": "B",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "same",
+    "method": "serial",
+    "phase": "C",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "ring1",
+    "method": "cooperative",
+    "phase": "A",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "ring1",
+    "method": "cooperative",
+    "phase": "B",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "ring1",
+    "method": "cooperative",
+    "phase": "C",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "ring1",
+    "method": "serial",
+    "phase": "A",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "ring1",
+    "method": "serial",
+    "phase": "B",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "ring1",
+    "method": "serial",
+    "phase": "C",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "ring2",
+    "method": "cooperative",
+    "phase": "A",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "ring2",
+    "method": "cooperative",
+    "phase": "B",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "ring2",
+    "method": "cooperative",
+    "phase": "C",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "ring2",
+    "method": "serial",
+    "phase": "A",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "ring2",
+    "method": "serial",
+    "phase": "B",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  },
+  {
+    "size": "ring2",
+    "method": "serial",
+    "phase": "C",
+    "minMoverX": 0,
+    "extensionMaxX": -0.34,
+    "clearance": 0.34
+  }
+]

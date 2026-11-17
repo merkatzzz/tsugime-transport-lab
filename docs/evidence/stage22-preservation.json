@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "baseline": "9030b5fdb34715fda187effe52cc67ce94363059",
+  "checks": [
+    {
+      "manifest": "stage15-normal-preserved.json",
+      "matched": 9
+    },
+    {
+      "manifest": "stage14-preserved-archives.json",
+      "matched": 18
+    },
+    {
+      "unchanged": "dist/src/stage21-rail.js"
+    },
+    {
+      "unchanged": "dist/src/fault-air.js"
+    },
+    {
+      "redTunnelBuilder": "byte-identical"
+    }
+  ]
+}

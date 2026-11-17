@@ -27,7 +27,7 @@ function worldFromScene(scene){
   const triangles=[];scene.updateMatrixWorld(true);
   scene.traverse(m=>{
     if(!m.isMesh||!m.visible)return;
-    for(let p=m;p;p=p.parent)if(p.userData.nonPhysical)return;
+    for(let p=m;p;p=p.parent)if(p.userData.nonPhysical||!p.visible)return;
     const a=m.geometry.attributes.position,index=m.geometry.index;
     for(let i=0;i<(index?.count??a.count);i+=3){
       const points=[0,1,2].map(j=>new THREE.Vector3().fromBufferAttribute(a,index?index.getX(i+j):i+j).applyMatrix4(m.matrixWorld));
@@ -174,7 +174,7 @@ function canalMap(result,upper){
     result.eventZone={x:29.5,z:2.5,radius:1.3};result.water={x:11,z:4.4,w:20.95,d:1.35,y:5.7};
   }
 }
-export function buildStage21Map(id){
+export function buildStage21Map(id,{integrated=false}={}){
   const scene=new THREE.Scene();scene.background=new THREE.Color(0x0d1413);
   scene.add(new THREE.HemisphereLight(0xa5b8ae,0x241317,.24));
   const result={id,scene,anchors:[],objects:[],stations:{}};
@@ -188,6 +188,20 @@ export function buildStage21Map(id){
   }else if(id==='rail')railMap(result);
   else if(id==='canal-home'||id==='canal-upper')canalMap(result,id==='canal-upper');
   else throw Error('Unknown Stage21 map: '+id);
+  if(integrated&&id==='rail'){
+    // Keep the red tunnel geometry; add only the arrival cabin and a small room finish.
+    const railing=scene.children.flatMap(o=>o.isGroup?o.children:[]).find(o=>o.userData.owner==='entry'&&Math.abs(o.position.x+3.94)<.01);
+    if(railing){railing.visible=false;railing.userData.nonPhysical=true;}
+    for(const [z,d]of[[.85,1.45],[4.7,2.3]])box(scene,'entry',-4,-19.88,z,.12,1.1,d,0x434e47);
+    floor(scene,'entry',-7.4,2.3,3.4,2.4,-19.88);
+    box(scene,'entry',-7.4,-19.88,2.3,.12,2.8,2.4,0x7c8b82);
+    for(const z of[2.3,4.58])box(scene,'entry',-7.4,-19.88,z,3.4,2.8,.12,0x7c8b82);
+    box(scene,'entry',-7.4,-16.92,2.3,3.4,.12,2.4,0x939e91);
+    result.evGate=box(scene,'entry',-4.2,-19.88,2.5,.12,2.6,2,0x526b62);result.evGate.position.z=3.5;
+    // Three small ceiling/fascia panels preserve the existing footprint and circulation.
+    for(const x of[96,102.2,109.2])box(scene,'base',x,-16.05,40,6.2,.12,4.8,0xa1ac9d);
+    for(const x of[102,109])box(scene,'base',x,-16.4,38,.15,.35,2,0x516b5e);
+  }
   result.world=worldFromScene(scene);
   if(!result.world.clear(result.spawn)||!result.world.support(result.spawn,.03))throw Error('Invalid map spawn: '+id);
   return result;

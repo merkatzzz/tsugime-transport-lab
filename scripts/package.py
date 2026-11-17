@@ -32,6 +32,7 @@ if not frozen10.exists():
 frozen_redesign = downloads/'stage10-redesign-frozen-source.zip'
 if not frozen_redesign.exists():
     subprocess.run(['git','archive','--format=zip','--output='+str(frozen_redesign),'stage10-redesign-frozen'],cwd=root,check=True)
+shutil.copy2(root/'docs/STAGE22.md', downloads/'STAGE22.md')
 shutil.copy2(root/'docs/STAGE21.md', downloads/'STAGE21.md')
 shutil.copy2(root/'docs/STAGE20.md', downloads/'STAGE20.md')
 shutil.copy2(root/'docs/STAGE19.md', downloads/'STAGE19.md')
@@ -112,7 +113,7 @@ def inline(text):
     s = s.replace('href="STAGE11.md"', 'href="downloads/STAGE11.md"').replace('href="PERFORMANCE-STAGE11.md"', 'href="downloads/PERFORMANCE-STAGE11.md"')
     return s
 
-lines = ((root/'docs/STAGE21.md').read_text()+'\n\n# 第20段階の記録\n\n'+(root/'docs/STAGE20.md').read_text()+'\n\n# 第19段階の記録\n\n'+(root/'docs/STAGE19.md').read_text()+'\n\n# 第18段階の記録\n\n'+(root/'docs/STAGE18.md').read_text()+'\n\n# 第17段階の記録\n\n'+(root/'docs/STAGE17.md').read_text()+'\n\n# 第16段階の記録\n\n'+(root/'docs/STAGE16.md').read_text()+'\n\n# 第15段階の記録\n\n'+(root/'docs/STAGE15.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 以下は旧段階の記録\n\n'+(root/'docs/MARKET-REPAIR.md').read_text()+'\n\n# 以下は第14段階の履歴\n\n'+(root/'docs/STAGE14.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 過去の報告（以下は旧段階の記録）\n\n'+(root/'docs/STAGE13.md').read_text()+'\n\n'+(root/'docs/STAGE12-REPAIR.md').read_text()+'\n\n'+(root/'docs/STAGE12.md').read_text()+'\n\n'+(root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
+lines = ((root/'docs/STAGE22.md').read_text()+'\n\n# 第21段階の記録\n\n'+(root/'docs/STAGE21.md').read_text()+'\n\n# 第20段階の記録\n\n'+(root/'docs/STAGE20.md').read_text()+'\n\n# 第19段階の記録\n\n'+(root/'docs/STAGE19.md').read_text()+'\n\n# 第18段階の記録\n\n'+(root/'docs/STAGE18.md').read_text()+'\n\n# 第17段階の記録\n\n'+(root/'docs/STAGE17.md').read_text()+'\n\n# 第16段階の記録\n\n'+(root/'docs/STAGE16.md').read_text()+'\n\n# 第15段階の記録\n\n'+(root/'docs/STAGE15.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 以下は旧段階の記録\n\n'+(root/'docs/MARKET-REPAIR.md').read_text()+'\n\n# 以下は第14段階の履歴\n\n'+(root/'docs/STAGE14.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 過去の報告（以下は旧段階の記録）\n\n'+(root/'docs/STAGE13.md').read_text()+'\n\n'+(root/'docs/STAGE12-REPAIR.md').read_text()+'\n\n'+(root/'docs/STAGE12.md').read_text()+'\n\n'+(root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
 parts = []
 i = 0
 while i < len(lines):
@@ -147,7 +148,8 @@ stage17_drawings = '<h2>第17段階の経路と器官（実座標図）</h2>'+''
 stage18_drawings = '<h2>第18段階の昇降・探索比較（実座標図）</h2>'+''.join(f'<img src="downloads/evidence/stage18-{n}.svg" alt="昇降と探索範囲の座標図">' for n in ['comparison','spatial','six-metre'])
 stage20_drawings = '<h2>第20段階の実入力・落下軌跡（CPU座標図・実画面ではありません）</h2>'+''.join(f'<img src="downloads/evidence/{n}.svg" alt="第20段階の検証座標図">' for n in ['stage20-detour-plan','stage20-fall-section'])
 stage21_drawings = '<h2>第21段階の路線・用水路（CPU実座標図・画面キャプチャではありません）</h2>'+''.join(f'<img src="downloads/evidence/{n}.svg" alt="第21段階の実データ図面">' for n in ['stage21-rail-plan','stage21-canal-section'])
-repair_drawings = stage21_drawings + stage20_drawings + stage18_drawings + stage17_drawings + stage16_drawings + stage15_drawings + stage14_drawings + stage13_drawings + '<h2>修復前後・共用入口・三段接続</h2><div class="drawings">'+''.join(f'<figure><figcaption>{n}</figcaption><img src="downloads/evidence/{n}.svg" alt="修復版の実データ図面"></figure>' for n in ['stage12-market-plan','stage12-repair-market-plan','stage12-repair-market-separated','stage12-repair-entry-plan','stage12-repair-B-atrium','stage12-repair-B-section'])+'</div>'
+stage22_drawings = '<h2>第22段階の固定入口（CPU座標図・実画面ではありません）</h2><img src="downloads/evidence/stage22-access.svg" alt="第一層の地下専用EVとW2入口の座標図">'
+repair_drawings = stage22_drawings + stage21_drawings + stage20_drawings + stage18_drawings + stage17_drawings + stage16_drawings + stage15_drawings + stage14_drawings + stage13_drawings + '<h2>修復前後・共用入口・三段接続</h2><div class="drawings">'+''.join(f'<figure><figcaption>{n}</figcaption><img src="downloads/evidence/{n}.svg" alt="修復版の実データ図面"></figure>' for n in ['stage12-market-plan','stage12-repair-market-plan','stage12-repair-market-separated','stage12-repair-entry-plan','stage12-repair-B-atrium','stage12-repair-B-section'])+'</div>'
 drawings = repair_drawings + '<h2>第12段階：共同街路・三段接続・収納（実データ図面）</h2><div class="drawings">'+''.join(f'<figure><figcaption>{n}</figcaption><img src="downloads/evidence/{n}.svg" alt="第12段階の実データ図面"></figure>' for n in ['stage12-market-plan','stage12-market-separated','stage12-B-atrium','stage12-B-section','stage12-A-section','stage12-C-section','stage12-storage'])+'</div>'
 drawings += '<h2>着手前・区域化後の図面比較（設計図・実画面ではありません）</h2>'
 drawings += '<h2>新しい建築の内部平面図</h2><div class="drawings">'+''.join(f'<figure><figcaption>{body} 内部 +{floor}m</figcaption><img src="downloads/evidence/stage11-{body}-floor-{floor}.svg" alt="{body}の設計平面図"></figure>' for body in ['RH1','MK1','SH1','SH2','CP1','LB1'] for floor in ([0,3] if body == 'CP1' else [0]))+'</div>'

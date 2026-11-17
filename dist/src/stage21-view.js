@@ -5,7 +5,7 @@ import {RAIL_NODES,RAIL_EDGES} from './stage21-rail.js';
 function cube(g,x,y,z,w,h,d,color){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),new THREE.MeshStandardMaterial({color,roughness:.7}));m.position.set(x,y,z);g.add(m);return m;}
 export function makeCart(){
   const g=new THREE.Group();g.userData.nonPhysical=true;
-  cube(g,0,.3,0,1.05,.18,1.65,0x59675c);cube(g,0,.65,-.2,.65,.15,.6,0x958b6d);cube(g,0,.9,-.48,.65,.6,.1,0x958b6d);
+  cube(g,0,.3,0,1.05,.18,1.65,0x59675c);const seat=new THREE.Group();g.add(seat);g.userData.seat=seat;cube(seat,0,.65,-.2,.65,.15,.6,0x958b6d);cube(seat,0,.9,-.48,.65,.6,.1,0x958b6d);
   for(const x of[-.48,.48])for(const z of[-.55,.55]){const w=new THREE.Mesh(new THREE.CylinderGeometry(.19,.19,.12,10),new THREE.MeshStandardMaterial({color:0x353f3d,metalness:.6,roughness:.5}));w.rotation.z=Math.PI/2;w.position.set(x,.12,z);g.add(w);}
   for(const x of[-.5,.5])cube(g,x,.65,.68,.07,.65,.07,0x9c9c83);
   cube(g,0,.98,.68,1.05,.06,.06,0x9c9c83);return g;
@@ -22,6 +22,8 @@ export class Stage21View {
   pick(){this.side.interact();}
   render(){
     const s=this.side,map=s.map;this.scene=map.scene;this.sim=s.model;
+    if(this.cart.userData.seat)this.cart.userData.seat.rotation.y=s.seatAngle??0;
+    if(s.map.evGate){s.map.evGate.scale.z=Math.max(.001,s.gate??1);s.map.evGate.position.z=2.5+(s.gate??1);}
     if(s.mapId==='rail'){
       if(this.cart.parent!==this.scene)this.scene.add(this.cart);
       const p=s.cart.pose;this.cart.position.set(p.x,p.y,p.z);this.cart.rotation.order='YXZ';this.cart.rotation.set(-Math.asin(p.grade),p.heading,0);

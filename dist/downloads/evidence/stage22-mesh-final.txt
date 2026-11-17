@@ -1,0 +1,20 @@
+✔ resident fixed camera fits the room and sees the real head through the narrow booth opening in every phase (5388.312743ms)
+✔ all real vertices fit cell unions and six metre envelope, including merged L-shaped render batches (8006.788071ms)
+✔ real joint floors retract, empty docks have no rendered life floor (4163.660785ms)
+✔ all open joint tunnels are enclosed above and on both sides by actual meshes (6007.941156ms)
+✔ varied low and high ceilings remain real and unequal port heights receive solid reducers (3006.962787ms)
+✔ view slit passes eye ray but the same physical opening blocks body (2182.716484ms)
+✔ EV cabin and fixed shaft occlude transport space at every sampled travel height (2800.554645ms)
+✔ landing doors open only for stationary cabin at that landing (1722.494051ms)
+✔ adopted transport sweeps clear all rendered fixed hardware, shaft, enclosure and stationary cabin by 0.2m (44913.884808ms)
+✔ all fixed and moving rendered mesh bounds are finite (5885.682244ms)
+✔ joint collars enclose oblique eye rays at inset port boundaries, without seam leaks (63381.910957ms)
+✔ shortest paths also clear the actual visible 3D meshes at body height (29937.768778ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 178428.697414

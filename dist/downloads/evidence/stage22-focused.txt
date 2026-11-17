@@ -1,0 +1,14 @@
+✔ F0 north extension is a real walk from the existing landing, with a closed door, entry and load-ready closure (719.620228ms)
+✔ new fixed extension lies outside every certified moving envelope in all 18 transport plans (1842.36213ms)
+✔ unmanned base-to-entrance call traverses both junctions; all stations can summon without teleport (480.214511ms)
+✔ one-click trips rotate seat while stationary and keep free view/body lock on all return routes (151.431305ms)
+✔ shared pickup, cart and event state survives reentry and existing save/load, without duplicating samples (208.488386ms)
+✔ actual W2 bank supplies a proximity-gated entry and upper dive returns instead of creating an independent home map (9.119804ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5237.33824

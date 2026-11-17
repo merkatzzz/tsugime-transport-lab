@@ -22,7 +22,7 @@ export class Stage21Experiment {
   get message(){return this.model.message;}
   set message(text){this.model.message=text;}
   setMap(id,spawn){
-    if(!this.maps.has(id))this.maps.set(id,buildStage21Map(id));
+    if(!this.maps.has(id))this.maps.set(id,buildStage21Map(id,{integrated:this.integrated}));
     this.mapId=id;const map=this.map;
     this.model.player={...(spawn??map.spawn)};this.model.fault.climbAnchors=map.anchors;
     this.model.fault.motion=new FaultMotion(this.model,map.world,this.player);

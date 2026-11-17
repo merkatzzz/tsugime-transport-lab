@@ -1,0 +1,15 @@
+✔ ordinary facility E connects both regions and returns without using development launch/exit buttons (11546.50756ms)
+✔ F0 north extension is a real walk from the existing landing, with a closed door, entry and load-ready closure (1618.647401ms)
+✔ new fixed extension lies outside every certified moving envelope in all 18 transport plans (3369.316593ms)
+✔ unmanned base-to-entrance call traverses both junctions; all stations can summon without teleport (833.820381ms)
+✔ one-click trips rotate seat while stationary and keep free view/body lock on all return routes (324.055254ms)
+✔ shared pickup, cart and event state survives reentry and existing save/load, without duplicating samples (410.592954ms)
+✔ actual W2 bank supplies a proximity-gated entry and upper dive returns instead of creating an independent home map (10.649443ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 22251.316628
