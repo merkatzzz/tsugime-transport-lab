@@ -26,7 +26,8 @@ export function buildWater(view){
    for(const x of[46.5,48.35])view.cube(g,x,-.93,-6.25,.15,.75,2.25,'#637e76');
    view.cube(g,46.5,-.18,-6.25,2,.13,2.25,'#637e76');
    view.cube(g,46.65,-.93,-6.25,1.7,.75,.08,'#162a27');
-   view.text(g,'水面下の開口 / E',47.5,1,-3.9,{size:.18});
+   view.text(g,'E 潜水入口 / 岸から操作',47.5,1.25,-3.35,{size:.22});
+   view.cube(g,46.5,.165,-3.45,2,.015,.08,'#d3d8aa');
    for(let x=q.x+2;x<q.x+q.w;x+=8){view.cube(g,x,2.4,-2,.3,.12,.15,'#c9e4cc');}
   }else{
    for(const z of[q.z,q.z+7.85])view.cube(g,q.x+2.7,1.8,z,5.3,4,.15,'#637e76');

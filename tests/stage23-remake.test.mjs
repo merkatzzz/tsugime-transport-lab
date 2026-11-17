@@ -29,3 +29,5 @@ test('base station connects to the sump footbridge through real wall openings',(
  const s=new IntegratedSession('rail',new Simulation());tick(s,60);Object.assign(s.player,s.map.stations.base);s.motion.eyeY=s.player.y;
  for(const [x,z] of [[100,38.4],[118,38.4]]){let n=0;while(Math.hypot(s.player.x-x,s.player.z-z)>.08&&n++<1000){s.player.yaw=Math.atan2(x-s.player.x,z-s.player.z);s.walk(1,0,1/60);s.tick(1/60);}assert.ok(n<1000,JSON.stringify(s.player));assert.ok(s.map.world.clear(s.player));assert.ok(s.map.world.support(s.player,.04));}s.dispose();
 });
+
+test('dive is reachable from the dry bank on both approaches without entering water',()=>{const h=new Simulation();for(const x of [45.6,47.5,49.4])for(const z of [-3.3,-2.9,-2.65]){h.player={x,y:-12.8,z,yaw:0,pitch:0};assert.ok(h.isFree(x,z,-12.8));state22(h).diveEnhanced=false;assert.equal(operateGround(h),'inspect');state22(h).diveEnhanced=true;assert.equal(operateGround(h),'canal');}h.player={x:47.5,y:0,z:-2.9};assert.equal(operateGround(h),null);});

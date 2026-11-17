@@ -14,7 +14,7 @@ export function groundPortal(s){
   if(s.fault||s.mode!=='idle'||s.anyLiftActive||s.experience.blocking)return null;
   const p=s.player,a=ACCESS22;
   if(Math.abs(p.y-a.y)<.03&&Math.abs(p.x+1.4)<.75&&p.z<-.8&&p.z>-5.1)return p.z<-2.6?'地下へ（専用EV）':'地下専用EVの扉を開く';
-  if(s.owner==='W0'&&Math.hypot(p.x-a.dive.x,p.z-a.dive.z)<1.4)return '水面下の開口を調べる / 潜水';
+  if(s.owner==='W0'&&Math.abs(p.y-a.dive.y)<.1&&Math.abs(p.x-a.dive.x)<=2&&p.z>=-3.8&&p.z<=-2.15)return '水面下の開口を調べる / 潜水';
   return null;
 }
 export function operateGround(s){
