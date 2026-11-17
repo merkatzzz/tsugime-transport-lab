@@ -40,3 +40,12 @@ test('observation gate opens only for a docked cart and supports a physical roun
  for(const q of [target,spawn]){let n=0;while(Math.hypot(q.x-s.player.x,q.z-s.player.z)>.07&&n++<300){s.player.yaw=Math.atan2(q.x-s.player.x,q.z-s.player.z);s.walk(1,0,1/60);s.tick(1/60);}assert.ok(n<300,JSON.stringify(s.player));assert.ok(s.player.y>spawn.y-.05);}
  s.cart.node='entry';s.tick(1/60);assert.equal(s.observationGateOpen,false);s.dispose();
 });
+test('six approach stops preserve incoming travel direction and return arrows face the elevator',async()=>{
+ const THREE=await import('../dist/vendor/three.module.js'),{Stage21View}=await import('../dist/src/stage21-view.js');const s=new IntegratedSession('rail',new Simulation());tick(s,60);s.cart.node='entry';s.cart.pose=railPose(edgeBetween('entry','j1'),0);s.cart.arrivals=['entry'];s.aboard=true;const stops=new Set();
+ for(const to of ['j1','j2','base','j2','parasite','j2','j1','observe','j1','entry']){
+  assert.ok(s.chooseAndGo(to));let n=0;while((s.seatTurn||s.cart.moving)&&n++<3000)s.tick(1/60);assert.equal(s.cart.node,to);tick(s,16);
+  if(to==='j1'||to==='j2'){stops.add([to,s.cart.pose.x.toFixed(3),s.cart.pose.z.toFixed(3)].join(':'));if(s.cart.approach){assert.equal(s.cart.approach.distance,7);assert.ok(Math.cos(s.player.yaw-s.cart.pose.heading)<-.99);
+   const parent=to==='j2'?'j1':'entry',camera=new THREE.PerspectiveCamera(54,16/9,.05,220);camera.position.set(s.player.x,s.player.y+1.81,s.player.z);camera.rotation.order='YXZ';camera.rotation.set(s.player.pitch,s.player.yaw+Math.PI,0);camera.updateMatrixWorld();const button={dataset:{sideRoute:parent},style:{},setAttribute(){}};const old=globalThis.document;globalThis.document={querySelector:()=>({querySelectorAll:()=>[button]})};try{Stage21View.prototype.routeMarkers.call({side:s,camera});assert.notEqual(button.textContent,'↶');}finally{globalThis.document=old;}
+  }}
+ }assert.equal(stops.size,6);s.dispose();
+});

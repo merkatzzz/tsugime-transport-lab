@@ -41,25 +41,28 @@ export class RailVehicle {
   select(node){if(this.moving||!this.choices.includes(node))return false;this.selected=node;if(RAIL_NODES[this.node].children?.includes(node))this.switches[this.node]=node;return true;}
   depart(){
     if(this.moving)return false;
+    if(this.approach){const a=this.approach,e=RAIL_EDGES.find(e=>e.id===a.edge);if(this.selected!==e.b){this.route={edge:e,from:this.node,to:this.node,direction:-1,distance:a.distance,prefix:true,next:this.selected};this.speed=0;return true;}}
     const edge=edgeBetween(this.node,this.selected);if(!edge)return false;
     const direction=edge.a===this.node?1:-1;
     if(RAIL_NODES[edge.a].children?.includes(edge.b))this.switches[edge.a]=edge.b;
-    this.route={edge,from:this.node,to:this.selected,direction,distance:direction===1?0:edge.length};
-    this.speed=0;return true;
+    this.route={edge,from:this.node,to:this.selected,direction,distance:this.approach?.distance??(direction===1?0:edge.length)};
+    this.approach=null;this.speed=0;return true;
   }
   tick(dt){
     const r=this.route;if(!r)return;
     let left=Math.min(.1,Math.max(0,dt));
     while(left>1e-8&&this.route){
       const h=Math.min(1/120,left);left-=h;
-      const remaining=r.direction===1?r.edge.length-r.distance:r.distance;
+      const end=r.direction===1?r.edge.length:(this.directionalStops&&!r.prefix&&RAIL_NODES[r.to].children?7:0),remaining=Math.abs(end-r.distance);
       this.speed=Math.min(4.5,this.speed+2*h,Math.sqrt(4*remaining));
       const travel=Math.min(remaining,this.speed*h);
       r.distance+=r.direction*travel;
       this.pose=railPose(r.edge,r.distance);
       if(remaining-travel<.0001){
         // Stop at the common point, four metres before the turnout diverges.
-        this.pose=railPose(r.edge,r.direction===1?r.edge.length:0);
+        this.pose=railPose(r.edge,end);
+        if(r.prefix){this.route=null;this.speed=0;this.approach=null;this.selected=r.next;if(this.deferPrefixTurn)this.prefixTurn=r.next;else this.depart();return;}
+        this.approach=end===7?{edge:r.edge.id,distance:7}:null;
         this.node=r.to;this.speed=0;this.route=null;this.visited.add(this.node);this.arrivals.push(this.node);
         this.selected=RAIL_NODES[this.node].children?.[0]??r.from;
         if(RAIL_NODES[this.node].children)this.switches[this.node]=this.selected;
