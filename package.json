@@ -1,6 +1,6 @@
 {
   "name": "tsugime-architecture-transport-lab",
-  "version": "22.0.0",
+  "version": "23.0.0",
   "private": true,
   "type": "module",
   "scripts": {

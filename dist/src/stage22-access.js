@@ -1,5 +1,6 @@
+import {state23} from './stage23.js';
 // A fixed north extension of F0, wholly west of the moving construction.
-export const ACCESS22={y:-12.8,x:-2.4,w:2,z:-5.6,doorZ:-2.2,dive:{x:76.8,y:0,z:39.9,id:'W2'}};
+export const ACCESS22={y:-12.8,x:-2.4,w:2,z:-5.6,doorZ:-2.2,dive:{x:47.5,y:-12.8,z:-2.9,id:'W0'}};
 export function state22(s){return s.exploration22??= {version:1,gate:1,ev:'closed',collected:[],eventFired:false,eventCount:0,climbHeight:6,cart:null};}
 export function validateState22(f){
   if(f==null)return;const nodes=['entry','j1','j2','observe','parasite','base'],edges=['entry-j1','j1-j2','j1-observe','j2-base','j2-parasite'];
@@ -13,12 +14,12 @@ export function groundPortal(s){
   if(s.fault||s.mode!=='idle'||s.anyLiftActive||s.experience.blocking)return null;
   const p=s.player,a=ACCESS22;
   if(Math.abs(p.y-a.y)<.03&&Math.abs(p.x+1.4)<.75&&p.z<-.8&&p.z>-5.1)return p.z<-2.6?'地下へ（専用EV）':'地下専用EVの扉を開く';
-  if(s.owner==='W2'&&Math.hypot(p.x-a.dive.x,p.z-a.dive.z)<1.4)return '潜る：固定W2→上流水路';
+  if(s.owner==='W0'&&Math.hypot(p.x-a.dive.x,p.z-a.dive.z)<1.4)return '水面下の開口を調べる / 潜水';
   return null;
 }
 export function operateGround(s){
   const prompt=groundPortal(s);if(!prompt)return null;const f=state22(s);
-  if(s.owner==='W2')return 'canal';
+  if(s.owner==='W0'){if(!state23(s).enhanced){s.message='開口は奥へ続く。潜水には身体強化が必要です。';return 'inspect';}return 'canal';}
   if(s.player.z<-2.6&&f.ev==='open'){f.ev='closing';return 'closing';}
   if(f.ev==='closed'){f.ev='opening';return 'opening';}return 'wait';
 }
@@ -36,6 +37,6 @@ export function drawAccess(v){
   v.cube(g,-2.4,y+2.96,-5.6,2,.16,7.6,'concrete');
   v.accessGate22=v.cube(g,-2.4,y+.16,-2.26,2,2.6,.12,'metal');
   v.text(g,'地下専用EV / E',-1.4,y+2.4,-2.12,{size:.2});
-  v.text(g,'上流水路へ潜る E',76.8,1.8,40.5,{size:.22});
+
 }
 export function renderAccess(v){if(v.accessGate22){const g=v.sim.exploration22?.gate??1;v.accessGate22.scale.x=Math.max(.001,g);v.accessGate22.position.x=-2.4+g;}}

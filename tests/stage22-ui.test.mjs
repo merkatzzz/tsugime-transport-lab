@@ -24,7 +24,7 @@ test('ordinary facility E connects both regions and returns without using develo
     ids.get('#interact-button').onclick();frames(125);assert.ok(lab.side?.integrated);assert.equal(lab.side.cart.node,'base');assert.equal(lab.side.model.items,items);
     frames(100);const underground=lab.side;Object.assign(underground.player,{x:-5.6,y:-20.04,z:3.5});
     ids.get('#interact-button').onclick();frames(150);assert.equal(lab.side,null);assert.equal(sim.phase,phase);assert.equal(JSON.stringify(sim.positions),poses);assert.equal(sim.player.y,-12.8);assert.equal(ids.get('#side-transition').hidden,true);
-    sim.player={x:76.8,y:0,z:39.9,yaw:0,pitch:0};ids.get('#interact-button').onclick();frames(130);assert.ok(lab.side?.integrated);assert.equal(lab.side.mapId,'canal-upper');
-    frames(60);ids.get('#interact-button').onclick();frames(90);assert.equal(lab.side,null);assert.equal(sim.player.x,76.8);assert.equal(sim.player.z,39.9);assert.equal(sim.items,items);
+    sim.research23={enhanced:true,drains:{}};sim.player={x:47.5,y:-12.8,z:-2.9,yaw:0,pitch:0};ids.get('#interact-button').onclick();frames(130);assert.ok(lab.side?.integrated);assert.equal(lab.side.mapId,'canal-upper');
+    frames(60);ids.get('#interact-button').onclick();frames(90);assert.equal(lab.side,null);assert.equal(sim.player.x,47.5);assert.equal(sim.player.z,-2.9);assert.equal(sim.items,items);
   }finally{console.error=oldError;}
 });

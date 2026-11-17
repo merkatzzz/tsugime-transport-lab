@@ -19,7 +19,7 @@ export class Stage21View {
   }
   resize(){const w=this.container.clientWidth,h=this.container.clientHeight;this.renderer.setSize(w,h);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();}
   setMode(){this.mode='explore';}
-  pick(){this.side.interact();}
+  pick(x,y){const r=this.renderer.domElement.getBoundingClientRect(),ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2((x-r.left)/r.width*2-1,-(y-r.top)/r.height*2+1),this.camera);const hit=ray.intersectObjects(this.side.map.scene.children,true).find(h=>h.object.userData.call23&&h.distance<3);if(hit)this.side.call(hit.object.userData.call23);else this.side.interact();}
   render(){
     const s=this.side,map=s.map;this.scene=map.scene;this.sim=s.model;
     if(this.cart.userData.seat)this.cart.userData.seat.rotation.y=s.seatAngle??0;
@@ -43,6 +43,9 @@ export class Stage21View {
     }
     const p=s.player;this.camera.position.set(p.x,s.motion.eyeY+1.81,p.z);this.camera.rotation.order='YXZ';this.camera.rotation.set(p.pitch,p.yaw+Math.PI,0);
     this.flash=map.flash;updateFaultLighting(this);map.flash=this.flash;
+    if(s.integrated){this.scene.fog.near=10;this.scene.fog.far=18;}
+    if(globalThis.document&&s.aboard&&!s.cart.moving){this.camera.updateMatrixWorld(true);const buttons=document.querySelectorAll('[data-side-route]');buttons.forEach((b,i)=>{const id=b.dataset.sideRoute,e=RAIL_EDGES.find(e=>e.a===s.cart.node&&e.b===id||e.b===s.cart.node&&e.a===id);if(!e)return;const u=e.a===s.cart.node?.22:.78,p=e.curve.getPointAt(u);p.y+=1.3;const cameraPoint=p.clone().applyMatrix4(this.camera.matrixWorldInverse),q=p.project(this.camera);b.style.left=(cameraPoint.z<0?Math.max(12,Math.min(80,50+q.x*38)):12+i*28)+'%';b.style.top=(cameraPoint.z<0?Math.max(20,Math.min(65,50-q.y*35)):60)+'%';});}
+    this.scene.traverse(o=>{if(o.userData.call23)o.material.emissive.setHex(s.cart.moving?0x665000:s.cart.node===o.userData.call23?0x226633:0x331100);});
     this.renderer.render(this.scene,this.camera);
   }
   dispose(){this.observer?.disconnect();this.renderer.dispose();this.renderer.forceContextLoss();this.renderer.domElement.remove();}

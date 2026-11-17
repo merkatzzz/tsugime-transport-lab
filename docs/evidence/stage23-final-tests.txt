@@ -1,0 +1,38 @@
+✔ ground input starts, stops and reverses immediately; Shift is direct and landing does not coast (17.333362ms)
+✔ 36cm endpoint passes; 37cm and low head clearance block; comparison retains 24cm (77.333269ms)
+✔ inertia coasts without input and cannot instantly reverse; legacy air can stop, weak control is adjustable (3.354276ms)
+✔ diagonal wall contact slides while capsule-too-narrow slots remain blocked (37.535091ms)
+✔ density levels reproduce, keep poses, reject embedding, and remove all growth on normal return (18903.026688ms)
+✔ middle blocks the straight roof route; east detour and high-density tear remain physically walkable (3932.299532ms)
+✔ soft torch has no hard inner plateau, monotonic edge falloff and independent intensity (1.781527ms)
+✔ real six-metre fall carries takeoff velocity onto the lower BR3 roof without air input (1306.169277ms)
+✔ north exit is open at low density and intentionally impassable at high while east route remains (3145.604573ms)
+✔ stage20 UI switches density, 24/36, inertia/legacy, air correction and torch independently (4350.201944ms)
+✔ high-density detour is traversed through the actual direct ground WASD input path (8405.879711ms)
+✔ rail graph has exactly two successive binary turnouts and mainline terminal, with curved graded tracks (17.985128ms)
+✔ temporary elevator is proximity-only and loads underground entrance with a safe return (302.875629ms)
+✔ one rider is locked to the vehicle while view remains free; foot departure and junction dismount are refused (59.436949ms)
+✔ actual branch A, branch B and mainline terminal round trips stop safely and use continuous reverse curves (178.418073ms)
+✔ all ordered station pairs are reachable by real edge traversal including changes between both branches (139.002526ms)
+✔ destinations contain an unidentified organ, three empty parasite rooms and separate base/recovery/hobby/salvage locations (54.17525ms)
+✔ after dismount the player walks through the base partitions, picks one sample, and returns to the waiting cart (185.700082ms)
+✔ the observation platform and all three parasite rooms are walkable after dismount and reconnect to the cart (776.491413ms)
+✔ diving requires a real inlet, sinks/fades/loads/surfaces, blocks swimming input and returns to the correct pose (108.870079ms)
+✔ real six-metre wall blocks walking, accepts the existing swept arm at six, supports walking and descent (100.099292ms)
+✔ upper traces include two collectible samples and static objects, with no evidence or economy rules added (178.416635ms)
+✔ ten-metre real wall is rejected at six and eight; walking, inertia and both side edges cannot bypass it (97.959742ms)
+✔ walking into the upper trigger drops real gravity objects once, leaves view/input free, and permits return (204.357379ms)
+✔ a fresh experiment resets temporary cart, samples and event while recovery never teleports the vehicle (50.252369ms)
+✔ W0 dive is gated by upgrade; former W2 inlet is excluded (493.356674ms)
+✔ nets cap, harvest, refill, persist and follow mobile body local coordinates with phase gating (21.946217ms)
+✔ short unseen approach uses a single existing cart and real final segment (301.272247ms)
+✔ F/K recovery has both failure and success without creating an economy (3.129829ms)
+✔ a real 50cm ledge outside the old roof/frame whitelist supplies a safe arm target (5.907609ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 46755.83382

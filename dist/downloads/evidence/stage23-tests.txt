@@ -1,0 +1,14 @@
+✔ W0 dive is gated by upgrade; former W2 inlet is excluded (708.18296ms)
+✔ nets cap, harvest, refill, persist and follow mobile body local coordinates with phase gating (54.962643ms)
+✔ short unseen approach uses a single existing cart and real final segment (509.88761ms)
+✔ F/K recovery has both failure and success without creating an economy (4.528459ms)
+✔ a real 50cm ledge outside the old roof/frame whitelist supplies a safe arm target (13.82568ms)
+✔ observation front fence blocks normal walking toward the void without losing support (700.905204ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2436.601194

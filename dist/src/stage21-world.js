@@ -82,6 +82,11 @@ function railMap(result){
     cavity.position.set(p.x+3,p.y+1,p.z+5);cavity.scale.set(id==='base'?18:15,11,id==='base'?21:16);cavity.userData.nonPhysical=true;group.add(cavity);
   }
   const a=RAIL_NODES.observe.p,os=groups.observe;
+  // See-through front fence: vertical gaps narrower than the player's capsule.
+  for(let dx=-3.9;dx<4;dx+=.3)box(os,'observe',a[0]+dx,a[1]+.12,a[2]+.85,.065,1.25,.1,0x5b7267);
+  for(const h of[.12,1.3])box(os,'observe',a[0]-4,a[1]+h,a[2]+.85,8,.08,.1,0x8a9988);
+  for(const id of ['entry','observe','parasite','base']){const n=RAIL_NODES[id].p,g=groups[id];const button=box(g,'button',n[0]+.3,n[1]+1.1,n[2]+2.3,.25,.35,.2,0xd0aa60,false);button.userData.call23=id;}
+
   const ring=new THREE.Mesh(new THREE.TorusGeometry(6.2,.8,9,22),material(0x9b3b42));ring.rotation.x=Math.PI/2;ring.position.set(a[0],a[1]-6,a[2]-8);ring.userData.nonPhysical=true;os.add(ring);
   result.observation={center:[a[0],a[1]-6,a[2]-8],ringRadius:6.2,identity:'unconfirmed-organ'};
   const deep=new THREE.Mesh(new THREE.SphereGeometry(6.8,18,12),material(0x4a1725,{side:THREE.BackSide}));deep.position.set(a[0],a[1]-13,a[2]-8);deep.scale.y=1.8;deep.userData.nonPhysical=true;os.add(deep);
@@ -112,6 +117,7 @@ function railMap(result){
   label(s,'回復設備の設置場所 / 供給設定未確定',c[0]+5,y+2,c[2]+16.7,Math.PI);
   label(s,'趣味・作業 / 仮配置',c[0]+12,y+2,c[2]+16.7,Math.PI);
   result.baseZones=[{id:'living',x:c[0]-3,z:c[2]+10},{id:'recovery-location',x:c[0]+5,z:c[2]+11},{id:'hobby-work',x:c[0]+12,z:c[2]+11},{id:'salvage',x:c[0]+14,z:c[2]+9}];
+  box(s,'basin',c[0]+17,y-.7,c[2]+7,3,.15,4,0x536b60,false);water(s,c[0]+17,c[2]+7,3,4,y-.3);box(s,'basin',c[0]+19.9,y-.7,c[2]+7,.12,1,4,0x536b60,false);
   pickup(result,'base-scrap','回収部品（試料）',c[0]+14,y+.35,c[2]+9);
   label(s,'回収場所',c[0]+14,y+1.8,c[2]+8,0);
   result.entry={x:-2,z:3,y:-19.88};
@@ -202,6 +208,7 @@ export function buildStage21Map(id,{integrated=false}={}){
     for(const x of[96,102.2,109.2])box(scene,'base',x,-16.05,40,6.2,.12,4.8,0xa1ac9d);
     for(const x of[102,109])box(scene,'base',x,-16.4,38,.15,.35,2,0x516b5e);
   }
+  if(integrated&&id==='rail'){const sample=result.objects.find(o=>o.id==='base-scrap');sample.x=116.2;sample.z=37;sample.mesh.position.set(118,-19.1,37);}
   result.world=worldFromScene(scene);
   if(!result.world.clear(result.spawn)||!result.world.support(result.spawn,.03))throw Error('Invalid map spawn: '+id);
   return result;

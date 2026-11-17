@@ -1,3 +1,4 @@
+import {shortenCall,state23} from './stage23.js';
 import {Stage21Experiment} from './stage21-experiment.js';
 import {RailVehicle,RAIL_EDGES,RAIL_NODES,edgeBetween,railPose} from './stage21-rail.js';
 import {state22} from './stage22-access.js';
@@ -33,6 +34,7 @@ export class IntegratedSession extends Stage21Experiment {
   }
   interact(id=this.nearby()[0]?.id){
     if(id==='home-ev'&&this.nearby().some(o=>o.id===id)){if(this.evPhase==='open')this.evPhase='closing';return true;}
+    if(id==='base-scrap'&&this.integrated){state23(this.host).salvage={cursor:0,time:0,attempts:0};this.message='集積水路：F/Kで網を調整、Eで回収。';return true;}
     if(id==='call')return this.call(this.callStation);
     if(id==='dive'&&this.integrated&&this.mapId==='canal-upper'){
       if(!this.nearby().some(o=>o.id===id))return false;this.returnDive={time:0,from:{...this.player}};return true;
@@ -42,7 +44,7 @@ export class IntegratedSession extends Stage21Experiment {
   }
   call(station){
     if(!RAIL_NODES[station]?.station||this.aboard||this.cart.moving||this.callQueue.length||this.cart.node===station)return false;
-    this.callQueue=stationPath(this.cart.node,station).slice(1);this.advanceCall();this.message='無人呼出：線路と分岐を順に走行します。';return true;
+    if(station==='entry'&&!this.host.research23?.shortCallUsed&&this.cart.node==='base'){shortenCall(this,station);return true;}this.callQueue=stationPath(this.cart.node,station).slice(1);this.advanceCall();this.message='無人呼出：線路と分岐を順に走行します。';return true;
   }
   advanceCall(){if(!this.cart.moving&&this.callQueue.length){this.cart.select(this.callQueue.shift());this.cart.depart();}}
   chooseAndGo(node){

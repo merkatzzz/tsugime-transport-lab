@@ -32,6 +32,8 @@ if not frozen10.exists():
 frozen_redesign = downloads/'stage10-redesign-frozen-source.zip'
 if not frozen_redesign.exists():
     subprocess.run(['git','archive','--format=zip','--output='+str(frozen_redesign),'stage10-redesign-frozen'],cwd=root,check=True)
+shutil.copy2(root/'docs/STAGE23.md', downloads/'STAGE23.md')
+shutil.copy2(root/'docs/MAIN-MIGRATION-REVIEW.md', downloads/'MAIN-MIGRATION-REVIEW.md')
 shutil.copy2(root/'docs/STAGE22.md', downloads/'STAGE22.md')
 shutil.copy2(root/'docs/STAGE21.md', downloads/'STAGE21.md')
 shutil.copy2(root/'docs/STAGE20.md', downloads/'STAGE20.md')
@@ -111,9 +113,10 @@ def inline(text):
     s = s.replace('href="STAGE12.md"', 'href="downloads/STAGE12.md"')
     s = s.replace('href="STAGE11-STABILIZATION.md"', 'href="downloads/STAGE11-STABILIZATION.md"')
     s = s.replace('href="STAGE11.md"', 'href="downloads/STAGE11.md"').replace('href="PERFORMANCE-STAGE11.md"', 'href="downloads/PERFORMANCE-STAGE11.md"')
+    s = s.replace('href="MAIN-MIGRATION-REVIEW.md"','href="downloads/MAIN-MIGRATION-REVIEW.md"')
     return s
 
-lines = ((root/'docs/STAGE22.md').read_text()+'\n\n# 第21段階の記録\n\n'+(root/'docs/STAGE21.md').read_text()+'\n\n# 第20段階の記録\n\n'+(root/'docs/STAGE20.md').read_text()+'\n\n# 第19段階の記録\n\n'+(root/'docs/STAGE19.md').read_text()+'\n\n# 第18段階の記録\n\n'+(root/'docs/STAGE18.md').read_text()+'\n\n# 第17段階の記録\n\n'+(root/'docs/STAGE17.md').read_text()+'\n\n# 第16段階の記録\n\n'+(root/'docs/STAGE16.md').read_text()+'\n\n# 第15段階の記録\n\n'+(root/'docs/STAGE15.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 以下は旧段階の記録\n\n'+(root/'docs/MARKET-REPAIR.md').read_text()+'\n\n# 以下は第14段階の履歴\n\n'+(root/'docs/STAGE14.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 過去の報告（以下は旧段階の記録）\n\n'+(root/'docs/STAGE13.md').read_text()+'\n\n'+(root/'docs/STAGE12-REPAIR.md').read_text()+'\n\n'+(root/'docs/STAGE12.md').read_text()+'\n\n'+(root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
+lines = ((root/'docs/STAGE23.md').read_text()+'\n\n'+(root/'docs/MAIN-MIGRATION-REVIEW.md').read_text()+'\n\n# 第22段階の記録\n\n'+(root/'docs/STAGE22.md').read_text()+'\n\n# 第21段階の記録\n\n'+(root/'docs/STAGE21.md').read_text()+'\n\n# 第20段階の記録\n\n'+(root/'docs/STAGE20.md').read_text()+'\n\n# 第19段階の記録\n\n'+(root/'docs/STAGE19.md').read_text()+'\n\n# 第18段階の記録\n\n'+(root/'docs/STAGE18.md').read_text()+'\n\n# 第17段階の記録\n\n'+(root/'docs/STAGE17.md').read_text()+'\n\n# 第16段階の記録\n\n'+(root/'docs/STAGE16.md').read_text()+'\n\n# 第15段階の記録\n\n'+(root/'docs/STAGE15.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 以下は旧段階の記録\n\n'+(root/'docs/MARKET-REPAIR.md').read_text()+'\n\n# 以下は第14段階の履歴\n\n'+(root/'docs/STAGE14.md').read_text()+'\n\n'+(root/'docs/OPEN-ISSUES.md').read_text()+'\n\n# 過去の報告（以下は旧段階の記録）\n\n'+(root/'docs/STAGE13.md').read_text()+'\n\n'+(root/'docs/STAGE12-REPAIR.md').read_text()+'\n\n'+(root/'docs/STAGE12.md').read_text()+'\n\n'+(root/'docs/STAGE11-STABILIZATION.md').read_text()+'\n\n'+(root/'docs/REPORT.md').read_text()+'\n\n'+(root/'docs/STAGE11.md').read_text()+'\n\n'+(root/'docs/PERFORMANCE-STAGE11.md').read_text()).splitlines()
 parts = []
 i = 0
 while i < len(lines):
